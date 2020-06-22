@@ -18,7 +18,7 @@ Before getting started please be familiar with the stack below. Additionally it 
 1. install Node 12.16.2
 1. Enter the `client` directory and run `npm install`.
 1. Start the client app by running `npm start`, and wait for the app to start up. (`Starting the development server...` is not the final line).
-1. Finally, navigate to [localhost:3000](http://localhost:3000) in your browser - the page title should be "Fight Pandemics" and you should see a styled page.
+1. Finally, navigate to [localhost:3000](http://localhost:3000) in your browser - you should see a styled page.
 
 #### Backend
 Yet to be decided
