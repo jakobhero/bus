@@ -1,4 +1,3 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Technologies
 Before getting started please be familiar with the stack below. Additionally it is important to understand basic [Git](https://gist.github.com/blackfalcon/8428401) and [Github](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests) for smooth collaboration as a team.
