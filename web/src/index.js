@@ -3,11 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import ShowMap from './components/ShowMap';
+import SideMenu from './components/SideMenu';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ShowMap />
+    <App />
+
   </React.StrictMode>,
   document.getElementById('root')
 );
