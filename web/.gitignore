@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
@@ -22,9 +21,4 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-=======
-.gitgnore
-.vscode/settings.json
-node_modules/
-services/backend/api/__pycache__
->>>>>>> abcf86e212eddeba5f2804c38d1c0d4b0c7acf27
+services/web/app/__pycache__/__init__.cpython-38.pyc
