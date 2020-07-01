@@ -26,32 +26,6 @@ const options = {
 
 const libraries = ["geometry", "drawing", "places"];
 
-// class ShowMap extends React.Component {
-//   render() {
-//     const MapWithAMarker = withScriptjs(
-//       withGoogleMap((props) => (
-//         <GoogleMap
-//           defaultZoom={14}
-//           defaultCenter={{ lat: 53.35014, lng: -6.266155 }}
-//         >
-//           <Marker position={{ lat: 53.35014, lng: -6.266155 }} />
-//         </GoogleMap>
-//       ))
-//     );
-
-//     return (
-//       <MapWithAMarker
-//         googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIat_qIkzYE3is-s7gc9BQtNJdd3hQ-0g&v=3.exp&libraries=geometry,drawing,places"
-//         loadingElement={<div style={{ height: `100%` }} />}
-//         containerElement={<div style={{ height: `400px` }} />}
-//         mapElement={<div style={{ height: `100%` }} />}
-//       />
-//     );
-//   }
-// }
-
-// export default ShowMap;
-
 export default function ShowMap() {
   const { isLoaded, loadError } = useLoadScript({
     googleMapsApiKey: "AIzaSyBIat_qIkzYE3is-s7gc9BQtNJdd3hQ-0g",
@@ -96,7 +70,29 @@ export default function ShowMap() {
         options={options}
         onClick={onMapClick}
         onLoad={onMapLoad}
-      ></GoogleMap>
+      >
+        {markers.map((marker) => (
+          <Marker
+            key={marker.lat - marker.lng}
+            position={{ lat: marker.lat, lng: marker.lng }}
+            onClick={() => setSelected(marker)}
+          />
+        ))}
+        {selected ? (
+          <InfoWindow
+            position={{ lat: selected.lat, lng: selected.lng }}
+            onCloseClick={() => {
+              setSelected(null);
+            }}
+          >
+            <div>
+              <h2>
+                <p>Clicked</p>
+              </h2>
+            </div>
+          </InfoWindow>
+        ) : null}
+      </GoogleMap>
     </div>
   );
 }
@@ -117,7 +113,7 @@ function Locate({ panTo }) {
         );
       }}
     >
-      <img src="/compass.svg" alt="compass" />
+      <i class="fa fa-compass" aria-hidden="true"></i>
     </button>
   );
 }
