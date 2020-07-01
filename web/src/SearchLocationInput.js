@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import "./search.css";
 let autoComplete;
 let autoComplete2;
 
@@ -186,7 +187,6 @@ function handleScriptLoad(
 async function handlePlaceSelect(updateQuery) {
   const addressObject = autoComplete.getPlace();
   if (addressObject != null) {
-    console.log("passed");
     const query = addressObject.formatted_address;
 
     updateQuery(query);
@@ -202,45 +202,53 @@ async function handlePlaceSelect(updateQuery) {
   console.log(addressObject2);
 }
 
-function searchName(query) {
-  console.log("Search");
-  console.log(query);
+function searchName(query, num, func) {
   var filter, count, address;
   filter = query.toUpperCase();
   count = 0;
 
   if (filter.length !== 0) {
-    document.getElementsByClassName(
-      "pac-container pac-logo hdpi"
-    )[0].innerHTML = "";
-    for (var i = 0; i < bus_lines.length; i++) {
-      address = bus_lines[i];
-      // If entered letters are the prefix for the name of the station enter conditional
-      if (address.substr(0, query.length).toUpperCase() === filter) {
-        count += 1;
-        // Create a dropdown list of all the possible stations with letters being searched
-        var b = document.createElement("DIV");
-        b.setAttribute("class", "pac-item areasearch");
-        b.innerHTML =
-          '<span class="pac-icon pac-icon-areas"></span><span class="pac-item-query"><span class="pac-matched">' +
-          address +
-          "</span></span>";
-        b.innerHTML += "<span> Bus line</span>";
-        b.innerHTML += "<input type='hidden' value='" + bus_lines[i] + "'>";
-        /*execute a function when someone clicks on the item value (DIV element):*/
-        // document.getElementById(".pac-container").css('display', '')
-        document
-          .getElementsByClassName("pac-container pac-logo hdpi")[0]
-          .append(b);
-      }
-      if (count > 2) {
-        break;
+    document.getElementsByClassName("pac-container pac-logo hdpi")[
+      num
+    ].innerHTML = "";
+    if (num != 1) {
+      for (var i = 0; i < bus_lines.length; i++) {
+        document.getElementsByClassName("pac-container pac-logo hdpi")[
+          num
+        ].style.display = "";
+        address = bus_lines[i];
+        // If entered letters are the prefix for the name of the station enter conditional
+        if (address.substr(0, query.length).toUpperCase() === filter) {
+          count += 1;
+          // Create a dropdown list of all the possible stations with letters being searched
+          var b = document.createElement("DIV");
+          b.setAttribute("class", "pac-item areasearch");
+          b.innerHTML =
+            '<span class="pac-icon pac-icon-areas"></span><span class="pac-item-query"><span class="pac-matched">' +
+            address +
+            "</span></span>";
+          b.innerHTML += "<span> Bus line</span>";
+          b.innerHTML += "<input type='hidden' value='" + bus_lines[i] + "'>";
+          b.addEventListener("mouseenter", function (e) {
+            // insert the value for the autocomplete text field:
+            var value = this.getElementsByTagName("input")[0].value;
+            func(value);
+          });
+          document
+            .getElementsByClassName("pac-container pac-logo hdpi")
+            [num].append(b);
+        }
+        if (count > 2) {
+          break;
+        }
       }
     }
-
     count = 0;
     for (i = 0; i < stops.length; i++) {
-      address = stops[i].id;
+      document.getElementsByClassName("pac-container pac-logo hdpi")[
+        num
+      ].style.display = "";
+      address = stops[i].id.toUpperCase();
       // If entered letters are the prefix for the name of the station enter conditional
       if (address.includes(filter)) {
         count += 1;
@@ -253,9 +261,14 @@ function searchName(query) {
           "</span></span>";
         b.innerHTML += "<span>" + stops[i].address + "</span>";
         b.innerHTML += "<input type='hidden' value='" + stops[i].id + "'>";
+        b.addEventListener("mouseenter", function (e) {
+          // insert the value for the autocomplete text field:
+          var value = this.getElementsByTagName("input")[0].value;
+          func(value);
+        });
         document
-          .getElementsByClassName("pac-container pac-logo hdpi")[0]
-          .append(b);
+          .getElementsByClassName("pac-container pac-logo hdpi")
+          [num].append(b);
       }
       if (count > 2) {
         break;
@@ -297,6 +310,8 @@ function SearchLocationInput() {
   const autoCompleteRef = useRef(null);
   const autoCompleteRef2 = useRef(null);
 
+  const [showDestination, setShowDestination] = useState(false);
+
   useEffect(() => {
     loadScript(
       `https://maps.googleapis.com/maps/api/js?key=AIzaSyA_eCNDMfLDrxbweb-FbZ4TzaVJtnN1rHY&libraries=places`,
@@ -312,25 +327,31 @@ function SearchLocationInput() {
 
   return (
     <div className="search-location-input">
-      <input
-        className="search-input"
-        ref={autoCompleteRef}
-        onChange={(event) => setSource(event.target.value)}
-        placeholder="Enter a Location"
-        value={source}
-        onKeyUp={searchName(source)}
-      />
-      <br></br>
+      <div class="search">
+        <input
+          className="search-input"
+          ref={autoCompleteRef}
+          onChange={(event) => setSource(event.target.value)}
+          placeholder="Enter a Location"
+          value={source}
+          onKeyUp={() => searchName(source, 0, setSource)}
+        />
+        <span
+          class="fa fa-angle-double-down"
+          onClick={() => setShowDestination(!showDestination)}
+        ></span>
+      </div>
       <input
         className="search-input"
         ref={autoCompleteRef2}
         onChange={(event) => setDestination(event.target.value)}
         placeholder="Enter a Location"
         value={destination}
-        onKeyUp={searchName(destination)}
+        onKeyUp={() => searchName(destination, 1, setDestination)}
+        style={{ display: showDestination ? "" : "none" }}
       />
-      <DatePickerFunc></DatePickerFunc>
-      <TimePickerFunc></TimePickerFunc>
+      {showDestination && <DatePickerFunc></DatePickerFunc>}
+      {showDestination && <TimePickerFunc></TimePickerFunc>}
     </div>
   );
 }
