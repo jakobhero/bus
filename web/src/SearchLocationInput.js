@@ -1,7 +1,13 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { Component, useState, useEffect, useRef } from 'react';
+import { Button } from 'antd';
+import { Layout, Menu, Input, Breadcrumb, DatePicker } from 'antd';
+import { UserOutlined, LaptopOutlined, NotificationOutlined, SearchOutlined } from '@ant-design/icons';
+import './App.css';
+import { Tabs, Checkbox } from 'antd';
+import moment from 'moment';
 
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
+// import DatePicker from "react-datepicker";
+// import "react-datepicker/dist/react-datepicker.css";
 import "./search.css";
 let autoComplete;
 let autoComplete2;
@@ -277,32 +283,44 @@ function searchName(query, num, func) {
   }
 }
 
-function DatePickerFunc() {
-  const [startDate, setStartDate] = useState(new Date());
-  return (
-    <DatePicker
-      selected={startDate}
-      onChange={(date) => setStartDate(date)}
-      withPortal
-    />
-  );
-}
+// function DatePickerFunc() {
+//   const [startDate, setStartDate] = useState(new Date());
+//   return (
+//     <DatePicker
+//       selected={startDate}
+//       onChange={(date) => setStartDate(date)}
+//       withPortal
+//     />
+//   );
+// }
 
-function TimePickerFunc() {
-  const [startDate, setStartDate] = useState(new Date());
-  return (
-    <DatePicker
-      selected={startDate}
-      onChange={(date) => setStartDate(date)}
-      showTimeSelect
-      showTimeSelectOnly
-      timeIntervals={15}
-      timeCaption="Time"
-      dateFormat="h:mm aa"
-      withPortal
-    />
-  );
-}
+// function TimePickerFunc() {
+//   const [startDate, setStartDate] = useState(new Date());
+//   return (
+//     <DatePicker
+//       selected={startDate}
+//       onChange={(date) => setStartDate(date)}
+//       showTimeSelect
+//       showTimeSelectOnly
+//       timeIntervals={15}
+//       timeCaption="Time"
+//       dateFormat="h:mm aa"
+//       withPortal
+//     />
+//   );
+// }
+const { TabPane } = Tabs;
+const { SubMenu } = Menu;
+const { Header, Content, Sider } = Layout;
+
+function callback(key) {
+    console.log(key);
+  }
+  function onChange(e) {
+    console.log(`checked = ${e.target.checked}`);
+  }
+
+
 
 function SearchLocationInput() {
   const [source, setSource] = useState("");
@@ -311,7 +329,11 @@ function SearchLocationInput() {
   const autoCompleteRef2 = useRef(null);
 
   const [showDestination, setShowDestination] = useState(false);
-
+  
+  function handleSubmit (event)  {
+    alert(`${source}, ${destination}`)
+    event.preventDefault()
+}
   useEffect(() => {
     loadScript(
       `https://maps.googleapis.com/maps/api/js?key=AIzaSyA_eCNDMfLDrxbweb-FbZ4TzaVJtnN1rHY&libraries=places`,
@@ -326,8 +348,10 @@ function SearchLocationInput() {
   }, []);
 
   return (
-    <div className="search-location-input">
-      <div class="search">
+    <form >
+      
+        <div>
+      <div >
         <input
           className="search-input"
           ref={autoCompleteRef}
@@ -350,9 +374,32 @@ function SearchLocationInput() {
         onKeyUp={() => searchName(destination, 1, setDestination)}
         style={{ display: showDestination ? "" : "none" }}
       />
-      {showDestination && <DatePickerFunc></DatePickerFunc>}
-      {showDestination && <TimePickerFunc></TimePickerFunc>}
+      {showDestination }
+      {showDestination }
     </div>
+    <Button
+    style={{ margin: 20 }}
+     type="submit" onClick={handleSubmit}>Submit</Button>
+  <Tabs style={{ margin: 10 }}defaultActiveKey="1" onChange={callback}>
+      <TabPane tab="Map" key="1">
+    </TabPane>
+
+
+    <TabPane tab="Connections" key="2">
+      Connections
+    </TabPane>
+    <TabPane tab="Locations" key="3">
+    
+    
+      Locations
+    </TabPane>
+    <TabPane tab="Real Time" key="4">
+      Real Time
+    </TabPane>
+  </Tabs>
+  
+  </form>
+
   );
 }
 
