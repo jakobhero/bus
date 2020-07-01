@@ -1,0 +1,11 @@
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+.search {
+  position: relative;
+}
+
+.search .fa-angle-double-down {
+  position: absolute;
+  top: 11px;
+  right: 7px;
+  font-size: 25px;
+}
