@@ -1,6 +1,7 @@
 import "./App.css";
 import React, { Component } from "react";
 import SearchLocationInput from "./SearchLocationInput";
+import 'antd/dist/antd.css';
 
 class App extends Component {
   state = { val: "" };
