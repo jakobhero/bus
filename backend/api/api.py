@@ -16,6 +16,7 @@ class Stops(Resource):
 class Directions(Resource):
     """API endpoint for transit directions from A to B in Dublin from Google's directions API.
     Expects the parameters "dep", "arr" (both required) and "time" (optional).
+    Locations can be provided as address strings (spaces replaced by "+" in request) or coordinates in format "lat,lng".
     Response from Google API is processed for Frontend display."""
     def get(self):
 
@@ -43,7 +44,7 @@ class Directions(Resource):
         if "time" in frontend_params: #overwrite default value if time is specified
             params["departure_time"]=frontend_params["time"]
 
-        #make request
+        #make request-
         url="https://maps.googleapis.com/maps/api/directions/json?"
         req = requests.get(url, params=params)
         res = req.json()
@@ -51,8 +52,12 @@ class Directions(Resource):
         #NEXT BLOCK ONLY FOR DEVELOPMENT PURPOSES
         #store results for debugging purposes
         now=str(int(datetime.datetime.now().timestamp()))
-        with open('debugging/'+now+'.json', 'w') as outfile:
+        with open('api/debugging/'+now+'.json', 'w') as outfile:
             json.dump(res, outfile, sort_keys=True, indent=8)
+
+        #check response status
+        if res["status"]!="OK":
+            return "Error: Google request failed due to the following reason: "+res["status"]
 
         #process response
         res=directions_parser(res)
