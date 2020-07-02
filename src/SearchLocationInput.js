@@ -1,14 +1,14 @@
 import React, { Component, useState, useEffect, useRef } from 'react';
 import { Button } from 'antd';
+import { FontAwesome } from "react-icons/fa";
+import { MaterialDesign } from "react-icons/md";
+import {FaTwitter} from "react-icons/fa"
+import {font_download} from "react-icons/md";
 import { Layout, Menu, Input, Breadcrumb, DatePicker } from 'antd';
 import { UserOutlined, LaptopOutlined, NotificationOutlined, SearchOutlined } from '@ant-design/icons';
 import './App.css';
 import { Tabs, Checkbox } from 'antd';
 import moment from 'moment';
-
-// import DatePicker from "react-datepicker";
-// import "react-datepicker/dist/react-datepicker.css";
-import "./search.css";
 let autoComplete;
 let autoComplete2;
 
@@ -193,6 +193,7 @@ function handleScriptLoad(
 async function handlePlaceSelect(updateQuery) {
   const addressObject = autoComplete.getPlace();
   if (addressObject != null) {
+    console.log("passed");
     const query = addressObject.formatted_address;
 
     updateQuery(query);
@@ -208,53 +209,46 @@ async function handlePlaceSelect(updateQuery) {
   console.log(addressObject2);
 }
 
-function searchName(query, num, func) {
+function searchName(query) {
+
+  console.log("Search");
+  console.log(query);
   var filter, count, address;
   filter = query.toUpperCase();
   count = 0;
 
   if (filter.length !== 0) {
-    document.getElementsByClassName("pac-container pac-logo hdpi")[
-      num
-    ].innerHTML = "";
-    if (num != 1) {
-      for (var i = 0; i < bus_lines.length; i++) {
-        document.getElementsByClassName("pac-container pac-logo hdpi")[
-          num
-        ].style.display = "";
-        address = bus_lines[i];
-        // If entered letters are the prefix for the name of the station enter conditional
-        if (address.substr(0, query.length).toUpperCase() === filter) {
-          count += 1;
-          // Create a dropdown list of all the possible stations with letters being searched
-          var b = document.createElement("DIV");
-          b.setAttribute("class", "pac-item areasearch");
-          b.innerHTML =
-            '<span class="pac-icon pac-icon-areas"></span><span class="pac-item-query"><span class="pac-matched">' +
-            address +
-            "</span></span>";
-          b.innerHTML += "<span> Bus line</span>";
-          b.innerHTML += "<input type='hidden' value='" + bus_lines[i] + "'>";
-          b.addEventListener("mouseenter", function (e) {
-            // insert the value for the autocomplete text field:
-            var value = this.getElementsByTagName("input")[0].value;
-            func(value);
-          });
-          document
-            .getElementsByClassName("pac-container pac-logo hdpi")
-            [num].append(b);
-        }
-        if (count > 2) {
-          break;
-        }
+    document.getElementsByClassName(
+      "pac-container pac-logo hdpi"
+    )[0].innerHTML = "";
+    for (var i = 0; i < bus_lines.length; i++) {
+      address = bus_lines[i];
+      // If entered letters are the prefix for the name of the station enter conditional
+      if (address.substr(0, query.length).toUpperCase() === filter) {
+        count += 1;
+        // Create a dropdown list of all the possible stations with letters being searched
+        var b = document.createElement("DIV");
+        b.setAttribute("class", "pac-item areasearch");
+        b.innerHTML =
+          '<span class="pac-icon pac-icon-areas"></span><span class="pac-item-query"><span class="pac-matched">' +
+          address +
+          "</span></span>";
+        b.innerHTML += "<span> Bus line</span>";
+        b.innerHTML += "<input type='hidden' value='" + bus_lines[i] + "'>";
+        /*execute a function when someone clicks on the item value (DIV element):*/
+        // document.getElementById(".pac-container").css('display', '')
+        document
+          .getElementsByClassName("pac-container pac-logo hdpi")[0]
+          .append(b);
+      }
+      if (count > 2) {
+        break;
       }
     }
+
     count = 0;
     for (i = 0; i < stops.length; i++) {
-      document.getElementsByClassName("pac-container pac-logo hdpi")[
-        num
-      ].style.display = "";
-      address = stops[i].id.toUpperCase();
+      address = stops[i].id;
       // If entered letters are the prefix for the name of the station enter conditional
       if (address.includes(filter)) {
         count += 1;
@@ -267,14 +261,9 @@ function searchName(query, num, func) {
           "</span></span>";
         b.innerHTML += "<span>" + stops[i].address + "</span>";
         b.innerHTML += "<input type='hidden' value='" + stops[i].id + "'>";
-        b.addEventListener("mouseenter", function (e) {
-          // insert the value for the autocomplete text field:
-          var value = this.getElementsByTagName("input")[0].value;
-          func(value);
-        });
         document
-          .getElementsByClassName("pac-container pac-logo hdpi")
-          [num].append(b);
+          .getElementsByClassName("pac-container pac-logo hdpi")[0]
+          .append(b);
       }
       if (count > 2) {
         break;
@@ -282,33 +271,14 @@ function searchName(query, num, func) {
     }
   }
 }
+const { RangePicker } = DatePicker;
 
-// function DatePickerFunc() {
-//   const [startDate, setStartDate] = useState(new Date());
-//   return (
-//     <DatePicker
-//       selected={startDate}
-//       onChange={(date) => setStartDate(date)}
-//       withPortal
-//     />
-//   );
-// }
+const dateFormat = 'YYYY/MM/DD';
+const monthFormat = 'YYYY/MM';
 
-// function TimePickerFunc() {
-//   const [startDate, setStartDate] = useState(new Date());
-//   return (
-//     <DatePicker
-//       selected={startDate}
-//       onChange={(date) => setStartDate(date)}
-//       showTimeSelect
-//       showTimeSelectOnly
-//       timeIntervals={15}
-//       timeCaption="Time"
-//       dateFormat="h:mm aa"
-//       withPortal
-//     />
-//   );
-// }
+const dateFormatList = ['DD/MM/YYYY', 'DD/MM/YY'];
+
+
 const { TabPane } = Tabs;
 const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
@@ -320,20 +290,19 @@ function callback(key) {
     console.log(`checked = ${e.target.checked}`);
   }
 
-
-
-function SearchLocationInput() {
+  
+function SearchLocationInput(props) {
+  const[station, setStation] = useState("");
   const [source, setSource] = useState("");
   const [destination, setDestination] = useState("");
   const autoCompleteRef = useRef(null);
   const autoCompleteRef2 = useRef(null);
 
-  const [showDestination, setShowDestination] = useState(false);
-  
   function handleSubmit (event)  {
     alert(`${source}, ${destination}`)
     event.preventDefault()
 }
+
   useEffect(() => {
     loadScript(
       `https://maps.googleapis.com/maps/api/js?key=AIzaSyA_eCNDMfLDrxbweb-FbZ4TzaVJtnN1rHY&libraries=places`,
@@ -346,41 +315,51 @@ function SearchLocationInput() {
         )
     );
   }, []);
-
+    
+           
+    
+  
   return (
-    <form >
+      <form >
       
         <div>
-      <div >
-        <input
-          className="search-input"
-          ref={autoCompleteRef}
-          onChange={(event) => setSource(event.target.value)}
-          placeholder="Enter a Location"
-          value={source}
-          onKeyUp={() => searchName(source, 0, setSource)}
-        />
-        <span
-          class="fa fa-angle-double-down"
-          onClick={() => setShowDestination(!showDestination)}
-        ></span>
-      </div>
-      <input
+      <input 
+    className="search-input"
+    ref={autoCompleteRef}
+    onChange={(event) => setSource(event.target.value)}
+    placeholder="Enter a Location"
+    value={source}
+    onKeyDown={searchName(source)}
+    style={{ margin: 20 }}
+      
+      />
+<br />
+    <br />
+    <input
         className="search-input"
         ref={autoCompleteRef2}
         onChange={(event) => setDestination(event.target.value)}
         placeholder="Enter a Location"
         value={destination}
-        onKeyUp={() => searchName(destination, 1, setDestination)}
-        style={{ display: showDestination ? "" : "none" }}
+        onKeyUp={searchName(destination)}
+        style={{ margin: 20 }}
       />
-      {showDestination }
-      {showDestination }
+      </div>
+      
+      
+    <br />
+    <br />
+    <div>
+            <label style={{ margin: 10 }}>Enter a date for your journey  </label>
+    <DatePicker defaultValue={moment('2015/01/01', dateFormat)} format={dateFormat} />
     </div>
+    <br />
+    <br />
+    <Checkbox style={{ margin: 10 }} onChange={onChange}>Show Map</Checkbox>
     <Button
     style={{ margin: 20 }}
      type="submit" onClick={handleSubmit}>Submit</Button>
-  <Tabs style={{ margin: 10 }}defaultActiveKey="1" onChange={callback}>
+    <Tabs style={{ margin: 10 }}defaultActiveKey="1" onChange={callback}>
       <TabPane tab="Map" key="1">
     </TabPane>
 
@@ -389,8 +368,13 @@ function SearchLocationInput() {
       Connections
     </TabPane>
     <TabPane tab="Locations" key="3">
-    
-    
+    <div>
+      <FaTwitter />
+      
+    </div>
+    <div>
+      <font_download />
+    </div>
       Locations
     </TabPane>
     <TabPane tab="Real Time" key="4">
@@ -399,15 +383,10 @@ function SearchLocationInput() {
   </Tabs>
   
   </form>
-
+  
   );
+  
 }
 
-export default SearchLocationInput;
 
-// apiKey="AIzaSyA_eCNDMfLDrxbweb-FbZ4TzaVJtnN1rHY"
-// autocompletionRequest={{
-//   location: { lat: 53.350140, lng: -6.266155 },
-//   radius: 100,
-//   types: ['establishment']
-// }}
+export default SearchLocationInput;
