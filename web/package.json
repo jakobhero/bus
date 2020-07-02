@@ -1,18 +1,24 @@
 {
-  "name": "react-google-map",
+  "name": "my-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@react-google-maps/api": "^1.9.7",
+    "@craco/craco": "^5.6.4",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "antd": "4.3.5",
+    "babel-plugin-import": "^1.13.0",
+    "customize-cra": "^1.0.0",
+    "less": "^3.11.3",
+    "less-loader": "^6.1.2",
+    "rc-textarea": "0.2.0",
     "react": "^16.13.1",
-    "react-autocomplete": "^1.8.1",
+    "react-app-rewired": "^2.1.6",
     "react-dom": "^16.13.1",
-    "react-geocode": "^0.2.1",
-    "react-google-autocomplete": "^1.2.6",
-    "react-google-maps": "^9.4.5",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "semantic-ui-react": "^0.88.2"
   },
   "scripts": {
     "start": "react-scripts start",
