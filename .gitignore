@@ -1,4 +1,6 @@
 .gitgnore
 .vscode/settings.json
 node_modules/
-services/backend/api/__pycache__
+backend/api/__pycache__
+backend/venv
+backend/db/__pycache__
