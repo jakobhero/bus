@@ -29,9 +29,9 @@ class Directions(Resource):
 
         #check for required params
         if "dep" not in frontend_params:
-            return "Error: No starting coords provided."
+            return {"status":"NO_START"}
         elif "arr" not in frontend_params:
-            return "Error: No destination coords provided."
+            return {"status":"NO_DESTINATION"}
         
         #set params
         params={
@@ -39,7 +39,8 @@ class Directions(Resource):
             "destination":frontend_params["arr"],
             "key":os.environ.get('GOOGLE_KEY'),
             "mode":"transit",
-            "departure_time":"now"
+            "departure_time":"now",
+            "alternatives":"true"
         }
         if "time" in frontend_params: #overwrite default value if time is specified
             params["departure_time"]=frontend_params["time"]
@@ -55,10 +56,6 @@ class Directions(Resource):
         with open('api/debugging/'+now+'.json', 'w') as outfile:
             json.dump(res, outfile, sort_keys=True, indent=8)
 
-        #check response status
-        if res["status"]!="OK":
-            return "Error: Google request failed due to the following reason: "+res["status"]
-
         #process response
         res=directions_parser(res)
 
@@ -68,6 +65,11 @@ class Directions(Resource):
 def directions_parser(directions):
     """transforms response of Google's direction service into frontend-friendly format."""
     
+    #check status of response
+    status=directions["status"]
+    if status!="OK":
+        return directions
+
     routes=directions["routes"]
 
     #the response will be an array of routes
@@ -90,7 +92,7 @@ def directions_parser(directions):
                 "time":route["arrival_time"]["value"],
                 "address":route["end_address"],
                 "location":route["end_location"]
-            }
+            },
         }
         
         bus_index=[] #holds index of bus travel(s) in leg array
@@ -136,7 +138,7 @@ def directions_parser(directions):
         curr["steps"]=steps
         connections.append(curr)
     
-    return connections
+    return {"connections": connections, "status": status}
 
 api.add_resource(Directions, '/directions', endpoint='direction')
 api.add_resource(Stops, '/stops', endpoint='stops')
