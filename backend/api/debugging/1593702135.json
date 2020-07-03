@@ -1,0 +1,30 @@
+{
+        "available_travel_modes": [
+                "DRIVING",
+                "WALKING",
+                "BICYCLING"
+        ],
+        "geocoded_waypoints": [
+                {
+                        "geocoder_status": "OK",
+                        "place_id": "ChIJYzrIIDEJZ0gRz78kFPMqdjY",
+                        "types": [
+                                "establishment",
+                                "point_of_interest",
+                                "university"
+                        ]
+                },
+                {
+                        "geocoder_status": "OK",
+                        "place_id": "ChIJ3Y7HLZsOZ0gRZ2FxjA3-ACc",
+                        "types": [
+                                "establishment",
+                                "point_of_interest",
+                                "tourist_attraction",
+                                "university"
+                        ]
+                }
+        ],
+        "routes": [],
+        "status": "ZERO_RESULTS"
+}
