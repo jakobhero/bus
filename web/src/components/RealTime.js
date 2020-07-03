@@ -9,19 +9,20 @@ const dueTimes = [
 
 function RealTimeInfo() {
   const [stop, setStop] = useState("");
-  const [dueTimes2, setDueTimes] = useState("");
+  // const [dueTimes2, setDueTimes] = useState("");
   const stopRef = useRef(null);
 
-  //   function hey() {
-  //     fetch(
-  //       "https://data.smartdublin.ie/cgi-bin/rtpi/realtimebusinformation?stopid=1899"
-  //     )
-  //       .then((res) => res.json())
-  //       .then((data) => {
-  //         setDueTimes(data);
-  //       })
-  //       .catch(console.log);
-  //   }
+  // function hey() {
+  //   fetch(
+  //     "https://data.smartdublin.ie/cgi-bin/rtpi/realtimebusinformation?stopid=1899"
+  //   )
+  //     .then((res) => console.log(res))
+  //     .then((data) => {
+  //       console.log(data);
+  //       // setDueTimes(data);
+  //     })
+  //     .catch(console.log);
+  // }
 
   return (
     <div className="search-location-input">
