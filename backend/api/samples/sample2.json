@@ -1,0 +1,336 @@
+{
+    "connections": [
+        {
+            "distance": 8955,
+            "start": {
+                "time": 1593770803,
+                "address": "32 Blackhall Pl, Northside, Dublin 7, D07 P2W7, Ireland",
+                "location": {
+                    "lat": 53.34917610000001,
+                    "lng": -6.2818628
+                }
+            },
+            "end": {
+                "time": 1593773194,
+                "address": "University College Dublin, Belfield, Dublin 4, Ireland",
+                "location": {
+                    "lat": 53.30713120000001,
+                    "lng": -6.220312
+                }
+            },
+            "bus_index": [
+                1
+            ],
+            "steps": [
+                {
+                    "distance": 165,
+                    "duration": 118,
+                    "start": {
+                        "lat": 53.34917610000001,
+                        "lng": -6.2818628
+                    },
+                    "stop": {
+                        "lat": 53.3477145,
+                        "lng": -6.2822356
+                    },
+                    "mode": "WALKING"
+                },
+                {
+                    "distance": 8309,
+                    "duration": 1917,
+                    "start": {
+                        "lat": 53.34770409999999,
+                        "lng": -6.2821238
+                    },
+                    "stop": {
+                        "lat": 53.30531449999999,
+                        "lng": -6.2166348
+                    },
+                    "mode": "TRANSIT",
+                    "transit": {
+                        "dep": {
+                            "name": "Smithfield, Blackhall Street ->S",
+                            "time": 1593770922
+                        },
+                        "arr": {
+                            "name": "Belfield, University College Dublin",
+                            "time": 1593772839
+                        },
+                        "headsign": "UCD",
+                        "type": "Dublin Bus",
+                        "route": "39a"
+                    }
+                },
+                {
+                    "distance": 481,
+                    "duration": 351,
+                    "start": {
+                        "lat": 53.30527000000001,
+                        "lng": -6.2165893
+                    },
+                    "stop": {
+                        "lat": 53.30713120000001,
+                        "lng": -6.220312
+                    },
+                    "mode": "WALKING"
+                }
+            ]
+        },
+        {
+            "distance": 8530,
+            "start": {
+                "time": 1593770789,
+                "address": "32 Blackhall Pl, Northside, Dublin 7, D07 P2W7, Ireland",
+                "location": {
+                    "lat": 53.34917610000001,
+                    "lng": -6.2818628
+                }
+            },
+            "end": {
+                "time": 1593773066,
+                "address": "University College Dublin, Belfield, Dublin 4, Ireland",
+                "location": {
+                    "lat": 53.30713120000001,
+                    "lng": -6.220312
+                }
+            },
+            "bus_index": [
+                1
+            ],
+            "steps": [
+                {
+                    "distance": 414,
+                    "duration": 304,
+                    "start": {
+                        "lat": 53.34917610000001,
+                        "lng": -6.2818628
+                    },
+                    "stop": {
+                        "lat": 53.3470186,
+                        "lng": -6.2847789
+                    },
+                    "mode": "WALKING"
+                },
+                {
+                    "distance": 7614,
+                    "duration": 1536,
+                    "start": {
+                        "lat": 53.3470947,
+                        "lng": -6.2847662
+                    },
+                    "stop": {
+                        "lat": 53.3088746,
+                        "lng": -6.2160812
+                    },
+                    "mode": "TRANSIT",
+                    "transit": {
+                        "dep": {
+                            "name": "Wolfe Tone Quay, Ellis Street",
+                            "time": 1593771094
+                        },
+                        "arr": {
+                            "name": "Booterstown, Woodbine Road",
+                            "time": 1593772630
+                        },
+                        "headsign": "Ballywaltrim",
+                        "type": "Dublin Bus",
+                        "route": "145"
+                    }
+                },
+                {
+                    "distance": 502,
+                    "duration": 436,
+                    "start": {
+                        "lat": 53.308889,
+                        "lng": -6.2158789
+                    },
+                    "stop": {
+                        "lat": 53.30713120000001,
+                        "lng": -6.220312
+                    },
+                    "mode": "WALKING"
+                }
+            ]
+        },
+        {
+            "distance": 8955,
+            "start": {
+                "time": 1593771403,
+                "address": "32 Blackhall Pl, Northside, Dublin 7, D07 P2W7, Ireland",
+                "location": {
+                    "lat": 53.34917610000001,
+                    "lng": -6.2818628
+                }
+            },
+            "end": {
+                "time": 1593773794,
+                "address": "University College Dublin, Belfield, Dublin 4, Ireland",
+                "location": {
+                    "lat": 53.30713120000001,
+                    "lng": -6.220312
+                }
+            },
+            "bus_index": [
+                1
+            ],
+            "steps": [
+                {
+                    "distance": 165,
+                    "duration": 118,
+                    "start": {
+                        "lat": 53.34917610000001,
+                        "lng": -6.2818628
+                    },
+                    "stop": {
+                        "lat": 53.3477145,
+                        "lng": -6.2822356
+                    },
+                    "mode": "WALKING"
+                },
+                {
+                    "distance": 8309,
+                    "duration": 1917,
+                    "start": {
+                        "lat": 53.34770409999999,
+                        "lng": -6.2821238
+                    },
+                    "stop": {
+                        "lat": 53.30531449999999,
+                        "lng": -6.2166348
+                    },
+                    "mode": "TRANSIT",
+                    "transit": {
+                        "dep": {
+                            "name": "Smithfield, Blackhall Street ->S",
+                            "time": 1593771522
+                        },
+                        "arr": {
+                            "name": "Belfield, University College Dublin",
+                            "time": 1593773439
+                        },
+                        "headsign": "UCD",
+                        "type": "Dublin Bus",
+                        "route": "39a"
+                    }
+                },
+                {
+                    "distance": 481,
+                    "duration": 351,
+                    "start": {
+                        "lat": 53.30527000000001,
+                        "lng": -6.2165893
+                    },
+                    "stop": {
+                        "lat": 53.30713120000001,
+                        "lng": -6.220312
+                    },
+                    "mode": "WALKING"
+                }
+            ]
+        },
+        {
+            "distance": 8235,
+            "start": {
+                "time": 1593770874,
+                "address": "32 Blackhall Pl, Northside, Dublin 7, D07 P2W7, Ireland",
+                "location": {
+                    "lat": 53.34917610000001,
+                    "lng": -6.2818628
+                }
+            },
+            "end": {
+                "time": 1593773465,
+                "address": "University College Dublin, Belfield, Dublin 4, Ireland",
+                "location": {
+                    "lat": 53.30713120000001,
+                    "lng": -6.220312
+                }
+            },
+            "bus_index": [
+                1,
+                2
+            ],
+            "steps": [
+                {
+                    "distance": 165,
+                    "duration": 118,
+                    "start": {
+                        "lat": 53.34917610000001,
+                        "lng": -6.2818628
+                    },
+                    "stop": {
+                        "lat": 53.3477145,
+                        "lng": -6.2822356
+                    },
+                    "mode": "WALKING"
+                },
+                {
+                    "distance": 2904,
+                    "duration": 799,
+                    "start": {
+                        "lat": 53.34770409999999,
+                        "lng": -6.2821238
+                    },
+                    "stop": {
+                        "lat": 53.3399308,
+                        "lng": -6.255723499999999
+                    },
+                    "mode": "TRANSIT",
+                    "transit": {
+                        "dep": {
+                            "name": "Smithfield, Blackhall Street ->S",
+                            "time": 1593770993
+                        },
+                        "arr": {
+                            "name": "Kildare Street, stop 747",
+                            "time": 1593771792
+                        },
+                        "headsign": "Wilton Terrace",
+                        "type": "Dublin Bus",
+                        "route": "37"
+                    }
+                },
+                {
+                    "distance": 4664,
+                    "duration": 783,
+                    "start": {
+                        "lat": 53.3399308,
+                        "lng": -6.255723499999999
+                    },
+                    "stop": {
+                        "lat": 53.3088746,
+                        "lng": -6.2160812
+                    },
+                    "mode": "TRANSIT",
+                    "transit": {
+                        "dep": {
+                            "name": "Kildare Street, stop 747",
+                            "time": 1593772246
+                        },
+                        "arr": {
+                            "name": "Booterstown, Woodbine Road",
+                            "time": 1593773029
+                        },
+                        "headsign": "Bray",
+                        "type": "Dublin Bus",
+                        "route": "155"
+                    }
+                },
+                {
+                    "distance": 502,
+                    "duration": 436,
+                    "start": {
+                        "lat": 53.308889,
+                        "lng": -6.2158789
+                    },
+                    "stop": {
+                        "lat": 53.30713120000001,
+                        "lng": -6.220312
+                    },
+                    "mode": "WALKING"
+                }
+            ]
+        }
+    ],
+    "status": "OK"
+}
