@@ -34,7 +34,7 @@ function searchLocal(query) {
   }
 }
 
-const PlacesAutocomplete = () => {
+const PlacesAutocomplete = ({ id, handleChange }) => {
   const {
     ready,
     value,
@@ -55,6 +55,7 @@ const PlacesAutocomplete = () => {
 
   const handleSelect = (val) => {
     setValue(val, false);
+    handleChange(val, id);
   };
 
   return (

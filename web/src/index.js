@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-import ShowMap from "./components/ShowMap";
+
 // import SideMenu from './components/SideMenu';
 import * as serviceWorker from "./serviceWorker";
 

@@ -5,6 +5,8 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import "../search.css";
 
+import { Button } from "antd";
+
 function DatePickerFunc() {
   const [startDate, setStartDate] = useState(new Date());
   return (
@@ -32,22 +34,42 @@ function TimePickerFunc() {
   );
 }
 
-const SearchForm = () => {
+const SearchForm = ({ fields }) => {
   const [showDestination, setShowDestination] = useState(false);
 
+  const [fieldsValues, setFieldsValues] = React.useState({});
+  const handleChange = (value, fieldId) => {
+    let newFields = { ...fieldsValues };
+    newFields[fieldId] = value;
+
+    setFieldsValues(newFields);
+  };
+
+  function handleSubmit(event) {
+    console.log(fieldsValues);
+    event.preventDefault();
+  }
+
   return (
-    <div>
-      <div class="search">
-        <PlacesAutocomplete></PlacesAutocomplete>
-        <span
-          class="fa fa-angle-double-down"
-          onClick={() => setShowDestination(!showDestination)}
-        ></span>
-      </div>
-      <PlacesAutocomplete></PlacesAutocomplete>
+    <form>
+      {fields.map((field) => (
+        <PlacesAutocomplete
+          key={field}
+          id={field}
+          handleChange={handleChange}
+          value={fieldsValues[field]}
+        />
+      ))}
+      <span
+        className="fa fa-angle-double-down"
+        onClick={() => setShowDestination(!showDestination)}
+      ></span>
       {showDestination && <DatePickerFunc></DatePickerFunc>}
       {showDestination && <TimePickerFunc></TimePickerFunc>}
-    </div>
+      <Button style={{ margin: 20 }} type="submit" onClick={handleSubmit}>
+        Submit
+      </Button>
+    </form>
   );
 };
 

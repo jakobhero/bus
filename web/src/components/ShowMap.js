@@ -113,7 +113,7 @@ function Locate({ panTo }) {
         );
       }}
     >
-      <i class="fa fa-compass" aria-hidden="true"></i>
+      <i className="fa fa-compass" aria-hidden="true"></i>
     </button>
   );
 }
