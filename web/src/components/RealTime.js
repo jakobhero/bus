@@ -1,40 +1,28 @@
-import React, { useState, useEffect, useRef } from "react";
-
-const dueTimes = [
-  { route: "39A", duetime: "5", destination: "Ongar" },
-  { route: "39A", duetime: "14", destination: "Ongar" },
-  { route: "39A", duetime: "28", destination: "Ongar" },
-  { route: "39", duetime: "29", destination: "Ongar" },
-];
+import React, { useState } from "react";
+import axios from "axios";
 
 function RealTimeInfo() {
   const [stop, setStop] = useState("");
-  // const [dueTimes2, setDueTimes] = useState("");
-  const stopRef = useRef(null);
+  const [dueTimes, setDueTimes] = useState([]);
 
-  // function hey() {
-  //   fetch(
-  //     "https://data.smartdublin.ie/cgi-bin/rtpi/realtimebusinformation?stopid=1899"
-  //   )
-  //     .then((res) => console.log(res))
-  //     .then((data) => {
-  //       console.log(data);
-  //       // setDueTimes(data);
-  //     })
-  //     .catch(console.log);
-  // }
-
+  function getData() {
+    axios
+      .get("http://localhost/realtime?stopid=" + stop)
+      .then((res) => {
+        setDueTimes(res.data);
+      })
+      .catch(console.log);
+  }
   return (
     <div className="search-location-input">
       <div className="search">
         <input
           className="search-input"
-          ref={stopRef}
           onChange={(event) => setStop(event.target.value)}
           placeholder="Enter a bus stop"
           value={stop}
         />
-        {/* <button onClick={hey}>Click here</button> */}
+        <button onClick={getData}>Click here</button>
       </div>
 
       <table>

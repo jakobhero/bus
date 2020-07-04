@@ -9,7 +9,7 @@ import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import { Card } from "antd";
 import "antd/dist/antd.css";
 
-const Route = (dueTimes) => {
+const Route = (dueTimes, test) => {
   const dueTime = dueTimes.dueTimes;
   const [showMore, setShowMore] = useState(false);
   let startTime = new Date(dueTime.start.time * 1000);
