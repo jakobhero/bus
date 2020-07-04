@@ -34,7 +34,7 @@ function TimePickerFunc() {
   );
 }
 
-const SearchForm = ({ fields }) => {
+const SearchForm = ({ fields, handleSubmitApp }) => {
   const [showDestination, setShowDestination] = useState(false);
 
   const [fieldsValues, setFieldsValues] = React.useState({});
@@ -48,22 +48,31 @@ const SearchForm = ({ fields }) => {
   function handleSubmit(event) {
     console.log(fieldsValues);
     event.preventDefault();
+    handleSubmitApp(fieldsValues.source, fieldsValues.destination);
   }
 
   return (
     <form>
-      {fields.map((field) => (
+      <h3>Search for a bus stop number</h3>
+      <div className="search">
         <PlacesAutocomplete
-          key={field}
-          id={field}
+          key={"source"}
+          id={"source"}
           handleChange={handleChange}
-          value={fieldsValues[field]}
+          value={fieldsValues["source"]}
         />
-      ))}
-      <span
-        className="fa fa-angle-double-down"
-        onClick={() => setShowDestination(!showDestination)}
-      ></span>
+
+        <span
+          className="fa fa-angle-double-down"
+          onClick={() => setShowDestination(!showDestination)}
+        ></span>
+      </div>
+      <PlacesAutocomplete
+        key={"destination"}
+        id={"destination"}
+        handleChange={handleChange}
+        value={fieldsValues["destination"]}
+      />
       {showDestination && <DatePickerFunc></DatePickerFunc>}
       {showDestination && <TimePickerFunc></TimePickerFunc>}
       <Button style={{ margin: 20 }} type="submit" onClick={handleSubmit}>

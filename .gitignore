@@ -4,3 +4,4 @@ node_modules/
 backend/api/__pycache__
 backend/venv
 backend/db/__pycache__
+backend/env

@@ -26,7 +26,7 @@ function RealTimeInfo() {
 
   return (
     <div className="search-location-input">
-      <div class="search">
+      <div className="search">
         <input
           className="search-input"
           ref={stopRef}
@@ -46,9 +46,10 @@ function RealTimeInfo() {
           </tr>
         </thead>
         <tbody>
-          {dueTimes.map((dueTime) => (
+          {dueTimes.map((dueTime, i) => (
             <tr
               className="routes"
+              key={i}
               // onClick={(event) => onSelectSuggestion(suggestion, event)}
             >
               <td>{dueTime.route}</td>

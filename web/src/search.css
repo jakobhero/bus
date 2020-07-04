@@ -5,7 +5,12 @@
 
 .search .fa-angle-double-down {
   position: absolute;
-  top: 11px;
+  top: 4px;
   right: 7px;
   font-size: 25px;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
 }

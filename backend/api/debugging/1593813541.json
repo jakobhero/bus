@@ -1,0 +1,118 @@
+{
+        "geocoded_waypoints": [
+                {
+                        "geocoder_status": "OK",
+                        "place_id": "ChIJB25KC5G5woARI5FWS9eErWU",
+                        "types": [
+                                "establishment",
+                                "point_of_interest"
+                        ]
+                },
+                {
+                        "geocoder_status": "OK",
+                        "place_id": "ChIJB25KC5G5woARI5FWS9eErWU",
+                        "types": [
+                                "establishment",
+                                "point_of_interest"
+                        ]
+                }
+        ],
+        "routes": [
+                {
+                        "bounds": {
+                                "northeast": {
+                                        "lat": 34.2106875,
+                                        "lng": -118.3624838
+                                },
+                                "southwest": {
+                                        "lat": 34.2106875,
+                                        "lng": -118.3624838
+                                }
+                        },
+                        "copyrights": "Map data \u00a92020",
+                        "legs": [
+                                {
+                                        "distance": {
+                                                "text": "1 ft",
+                                                "value": 0
+                                        },
+                                        "duration": {
+                                                "text": "1 min",
+                                                "value": 0
+                                        },
+                                        "end_address": "10623 Keswick St, Sun Valley, CA 91352, USA",
+                                        "end_location": {
+                                                "lat": 34.2106875,
+                                                "lng": -118.3624838
+                                        },
+                                        "start_address": "10623 Keswick St, Sun Valley, CA 91352, USA",
+                                        "start_location": {
+                                                "lat": 34.2106875,
+                                                "lng": -118.3624838
+                                        },
+                                        "steps": [
+                                                {
+                                                        "distance": {
+                                                                "text": "1 ft",
+                                                                "value": 0
+                                                        },
+                                                        "duration": {
+                                                                "text": "1 min",
+                                                                "value": 0
+                                                        },
+                                                        "end_location": {
+                                                                "lat": 34.2106875,
+                                                                "lng": -118.3624838
+                                                        },
+                                                        "html_instructions": "Walk to 10623 Keswick St, Sun Valley, CA 91352, USA",
+                                                        "polyline": {
+                                                                "points": "ywxoEntlqU"
+                                                        },
+                                                        "start_location": {
+                                                                "lat": 34.2106875,
+                                                                "lng": -118.3624838
+                                                        },
+                                                        "steps": [
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "1 ft",
+                                                                                "value": 0
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "1 min",
+                                                                                "value": 0
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 34.2106875,
+                                                                                "lng": -118.3624838
+                                                                        },
+                                                                        "html_instructions": "Head<div style=\"font-size:0.9em\">Restricted usage road</div>",
+                                                                        "polyline": {
+                                                                                "points": "ywxoEntlqU"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 34.2106875,
+                                                                                "lng": -118.3624838
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                }
+                                                        ],
+                                                        "travel_mode": "WALKING"
+                                                }
+                                        ],
+                                        "traffic_speed_entry": [],
+                                        "via_waypoint": []
+                                }
+                        ],
+                        "overview_polyline": {
+                                "points": "ywxoEntlqU"
+                        },
+                        "summary": "",
+                        "warnings": [
+                                "Walking directions are in beta. Use caution \u2013 This route may be missing sidewalks or pedestrian paths."
+                        ],
+                        "waypoint_order": []
+                }
+        ],
+        "status": "OK"
+}
