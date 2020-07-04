@@ -1,5 +1,8 @@
 import React from "react";
-import usePlacesAutocomplete from "use-places-autocomplete";
+import usePlacesAutocomplete, {
+  getGeocode,
+  getLatLng,
+} from "use-places-autocomplete";
 import {
   Combobox,
   ComboboxInput,
@@ -44,6 +47,7 @@ const PlacesAutocomplete = ({ id, handleChange }) => {
     requestOptions: {
       location: { lat: () => 53.35014, lng: () => -6.266155 },
       radius: 100 * 1000,
+      componentRestrictions: { country: "ie" },
     },
   });
 
@@ -54,14 +58,42 @@ const PlacesAutocomplete = ({ id, handleChange }) => {
   };
 
   const handleSelect = (val) => {
+    let lat, lng;
     setValue(val, false);
-    handleChange(val, id);
+    if (val.includes("STOP")) {
+      for (var i = 0; i < stops.length; i++) {
+        let stop_id = stops[i].id.toUpperCase();
+        if (stop_id === val) {
+          lat = stops[i].stop_lat;
+          lng = stops[i].stop_lon;
+          handleChange({ val, lat, lng }, id);
+        }
+      }
+    } else {
+      getGeocode({ address: val })
+        .then((results) => getLatLng(results[0]))
+        .then((coords) => {
+          console.log("📍 Coordinates: ", coords);
+          lat = coords.lat;
+          lng = coords.lng;
+          handleChange({ val, lat, lng }, id);
+        })
+        .catch((error) => {
+          console.log("😱 Error: ", error);
+        });
+    }
   };
 
   return (
     <div>
-      <Combobox onSelect={handleSelect} aria-labelledby="demo">
-        <ComboboxInput value={value} onChange={handleInput} disabled={!ready} />
+      <Combobox onSelect={handleSelect} aria-label="Choose a location">
+        <ComboboxInput
+          value={value}
+          onChange={handleInput}
+          disabled={!ready}
+          placeholder="Choose a location"
+          style={{ width: "100%" }}
+        />
         <ComboboxPopover>
           <ComboboxList>
             {stop_data.length > 0 &&

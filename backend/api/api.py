@@ -13,6 +13,24 @@ class Stops(Resource):
             stops.append({'id': stop.stop_id, 'name':stop.name, 'coords':{'lat':stop.lat,'lon':stop.lon}})
         return json.dumps(stops)
 
+class realTime(Resource):
+    def get(self):
+
+        parser = reqparse.RequestParser()
+        parser.add_argument('stopid', type=str)
+
+        frontend_params=parser.parse_args()
+        if "stopid" not in frontend_params:
+            return {"status":"NO_STOP"}
+
+        stop_id = frontend_params['stopid']
+        URL = 'https://data.smartdublin.ie/cgi-bin/rtpi/realtimebusinformation'
+        req_items = {'stopid': stop_id}  
+        resp = requests.get(URL, params=req_items)
+        parsed_json = (json.loads(resp.text))
+        return parsed_json['results']
+
+
 class Directions(Resource):
     """API endpoint for transit directions from A to B in Dublin from Google's directions API.
     Expects the parameters "dep", "arr" (both required) and "time" (optional).
@@ -142,3 +160,4 @@ def directions_parser(directions):
 
 api.add_resource(Directions, '/directions', endpoint='direction')
 api.add_resource(Stops, '/stops', endpoint='stops')
+api.add_resource(realTime, '/realtime', endpoint='realtime')
