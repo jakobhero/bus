@@ -6,6 +6,9 @@ import DirectionsBusIcon from "@material-ui/icons/DirectionsBus";
 import DirectionsWalkIcon from "@material-ui/icons/DirectionsWalk";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 
+import { Card } from "antd";
+import "antd/dist/antd.css";
+
 const Route = (dueTimes) => {
   const dueTime = dueTimes.dueTimes;
   const [showMore, setShowMore] = useState(false);
@@ -29,7 +32,7 @@ const Route = (dueTimes) => {
     endTime.getMinutes();
 
   return (
-    <div>
+    <Card onClick={() => setShowMore(!showMore)} hoverable>
       <span>
         {departTime}
         <span> - </span>
@@ -40,7 +43,7 @@ const Route = (dueTimes) => {
           m)
         </span>
       </span>
-      <div onClick={() => setShowMore(!showMore)}>
+      <div>
         <DirectionsWalkIcon style={{ color: "blue" }} />
         <ArrowForwardIosIcon />
         <DirectionsBusIcon style={{ color: "blue" }} />
@@ -63,9 +66,12 @@ const Route = (dueTimes) => {
                   <td>
                     {i < 1 ? dueTime.start.address : ""}
                     {dueTime.bus_index.includes(i) ? step.transit.dep.name : ""}
-                    {dueTime.bus_index.includes(i - 1)
+                    {dueTime.bus_index.includes(i - 1) &
+                    !dueTime.bus_index.includes(i)
                       ? dueTime.steps[i - 1].transit.arr.name
                       : ""}
+
+                    {/* both can be called if bus indexs are within one, if that is the case, only can the first one */}
                   </td>
                 </tr>
               ))}
@@ -77,7 +83,7 @@ const Route = (dueTimes) => {
           </table>
         </div>
       )}
-    </div>
+    </Card>
   );
 };
 

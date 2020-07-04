@@ -1,20 +1,15 @@
 import React from "react";
 
-import {
-  GoogleMap,
-  useLoadScript,
-  Marker,
-  InfoWindow,
-} from "@react-google-maps/api";
+import { GoogleMap, Marker, InfoWindow } from "@react-google-maps/api";
 import mapStyles from "./mapStyles";
 
-const center = {
-  lat: 53.35014,
-  lng: -6.266155,
-};
+// const center = {
+//   lat: 53.35014,
+//   lng: -6.266155,
+// };
 
 const mapContainerStyle = {
-  height: "50vh",
+  height: "70vh",
   width: "100vw",
 };
 
@@ -24,13 +19,9 @@ const options = {
   zoomControl: true,
 };
 
-const libraries = ["geometry", "drawing", "places"];
+// const libraries = ["geometry", "drawing", "places"];
 
-export default function ShowMap() {
-  const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: "AIzaSyBIat_qIkzYE3is-s7gc9BQtNJdd3hQ-0g",
-    libraries,
-  });
+function ShowMap({ source, destination, stops, centreON }) {
   const [markers, setMarkers] = React.useState([]);
   const [selected, setSelected] = React.useState(null);
 
@@ -55,22 +46,33 @@ export default function ShowMap() {
     mapRef.current.setZoom(14);
   }, []);
 
-  if (loadError) return "Error";
-  if (!isLoaded) return "Loading...";
+  // let bounds = new window.google.maps.LatLngBounds();
+  // for (var i = 0; i < markers.length; i++) {
+  //   bounds.extend({ lat: markers[i].lat, lng: markers[i].lng });
+  // }
+  // mapRef.current.fitBounds(bounds);
+
+  // Centre and zoom will need to be done properly in sprint 3
 
   return (
     <div>
       <Locate panTo={panTo} />
-      {/* <Search panTo={panTo} /> */}
       <GoogleMap
         id="map"
         mapContainerStyle={mapContainerStyle}
         zoom={14}
-        center={center}
+        center={centreON}
         options={options}
         onClick={onMapClick}
         onLoad={onMapLoad}
       >
+        {source && (
+          <Marker
+            // key={source.lat - marker.lng}
+            position={{ lat: source.lat, lng: source.lng }}
+            // onClick={() => setSelected(marker)}
+          />
+        )}
         {markers.map((marker) => (
           <Marker
             key={marker.lat - marker.lng}
@@ -78,6 +80,14 @@ export default function ShowMap() {
             onClick={() => setSelected(marker)}
           />
         ))}
+
+        {destination && (
+          <Marker
+            // key={source.lat - marker.lng}
+            position={{ lat: destination.lat, lng: destination.lng }}
+            // onClick={() => setSelected(marker)}
+          />
+        )}
         {selected ? (
           <InfoWindow
             position={{ lat: selected.lat, lng: selected.lng }}
@@ -118,57 +128,4 @@ function Locate({ panTo }) {
   );
 }
 
-// function Search({ panTo }) {
-//   const {
-//     ready,
-//     value,
-//     suggestions: { status, data },
-//     setValue,
-//     clearSuggestions,
-//   } = usePlacesAutocomplete({
-//     requestOptions: {
-//       location: { lat: () => 43.6532, lng: () => -79.3832 },
-//       radius: 100 * 1000,
-//     },
-//   });
-
-//   // https://developers.google.com/maps/documentation/javascript/reference/places-autocomplete-service#AutocompletionRequest
-
-//   const handleInput = (e) => {
-//     setValue(e.target.value);
-//   };
-
-//   const handleSelect = async (address) => {
-//     setValue(address, false);
-//     clearSuggestions();
-
-//     try {
-//       const results = await getGeocode({ address });
-//       const { lat, lng } = await getLatLng(results[0]);
-//       panTo({ lat, lng });
-//     } catch (error) {
-//       console.log("😱 Error: ", error);
-//     }
-//   };
-
-//   return (
-//     <div className="search">
-//       <Combobox onSelect={handleSelect}>
-//         <ComboboxInput
-//           value={value}
-//           onChange={handleInput}
-//           disabled={!ready}
-//           placeholder="Search your location"
-//         />
-//         <ComboboxPopover>
-//           <ComboboxList>
-//             {status === "OK" &&
-//               data.map(({ id, description }) => (
-//                 <ComboboxOption key={id} value={description} />
-//               ))}
-//           </ComboboxList>
-//         </ComboboxPopover>
-//       </Combobox>
-//     </div>
-//   );
-// }
+export default ShowMap;
