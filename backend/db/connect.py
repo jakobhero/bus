@@ -1,9 +1,10 @@
 #!/usr/bin/python
 import psycopg2
+import pandas as pd
 from config import config
 
-def connect():
-    """ Connect to the PostgreSQL database server """
+def insert_stops(stops):
+    """ Insert data of dataframe into stop table """
     conn = None
     try:
         # read connection parameters
@@ -16,16 +17,22 @@ def connect():
         # create a cursor
         cur = conn.cursor()
         
-	# execute a statement
-        print('PostgreSQL database version:')
-        cur.execute('SELECT version()')
+        # delete old data
+        cur.execute("DELETE FROM stops;")
 
-        # display the PostgreSQL database server version
-        db_version = cur.fetchone()
-        print(db_version)
+	    # include new data
+        for i in range(stops.shape[0]):
+            row=stops.iloc[i]
+            db_string="INSERT INTO stops VALUES ('"+row[0]+"','"+row[1].replace("'","''")+"',"+str(row[2])+","+str(row[3])+");"
+            print(db_string)
+            cur.execute(db_string)
        
 	    # close the communication with the PostgreSQL
         cur.close()
+
+        # commit the changes
+        conn.commit()
+        
     except (Exception, psycopg2.DatabaseError) as error:
         print(error)
     finally:
@@ -35,4 +42,5 @@ def connect():
 
 
 if __name__ == '__main__':
-    connect()
+    stops_df=pd.read_csv("stops.txt")
+    insert_stops(stops_df)
