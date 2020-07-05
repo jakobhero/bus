@@ -2,21 +2,20 @@ import React from "react";
 
 import { GoogleMap, Marker, InfoWindow } from "@react-google-maps/api";
 import mapStyles from "./mapStyles";
+import mapStylesIcons from "./mapStylesIcons";
 
+// import { DirectionsService, DirectionsRenderer } from "@react-google-maps/api";
+import Switch from "react-switch";
 // const center = {
 //   lat: 53.35014,
 //   lng: -6.266155,
 // };
 
+// https://www.youtube.com/watch?v=SySVBV_jcCM
+
 const mapContainerStyle = {
   height: "70vh",
   width: "100vw",
-};
-
-const options = {
-  styles: mapStyles,
-  disableDefaultUI: true,
-  zoomControl: true,
 };
 
 // const libraries = ["geometry", "drawing", "places"];
@@ -24,6 +23,22 @@ const options = {
 function ShowMap({ source, destination, stops, centreON }) {
   const [markers, setMarkers] = React.useState([]);
   const [selected, setSelected] = React.useState(null);
+
+  const [mapSettings, setMapSettings] = React.useState({
+    styles: mapStyles,
+    disableDefaultUI: true,
+    zoomControl: true,
+  });
+  const [touristModeBool, setTouristModeBool] = React.useState(false);
+
+  const touristMode = () => {
+    setMapSettings({
+      styles: touristModeBool ? mapStyles : mapStylesIcons,
+      disableDefaultUI: true,
+      zoomControl: true,
+    });
+    setTouristModeBool(!touristModeBool);
+  };
 
   const onMapClick = React.useCallback((e) => {
     setMarkers((current) => [
@@ -46,6 +61,21 @@ function ShowMap({ source, destination, stops, centreON }) {
     mapRef.current.setZoom(14);
   }, []);
 
+  // const [response, setResponse] = React.useState(null);
+  // const directionsCallback = (response) => {
+  //   console.log(response);
+
+  //   if (response !== null) {
+  //     if (response.status === "OK") {
+  //       setResponse(() => ({
+  //         response,
+  //       }));
+  //     } else {
+  //       console.log("response: ", response);
+  //     }
+  //   }
+  // };
+
   // let bounds = new window.google.maps.LatLngBounds();
   // for (var i = 0; i < markers.length; i++) {
   //   bounds.extend({ lat: markers[i].lat, lng: markers[i].lng });
@@ -57,12 +87,13 @@ function ShowMap({ source, destination, stops, centreON }) {
   return (
     <div>
       <Locate panTo={panTo} />
+      <Switch onChange={touristMode} checked={touristModeBool} />
       <GoogleMap
         id="map"
         mapContainerStyle={mapContainerStyle}
         zoom={14}
         center={centreON}
-        options={options}
+        options={mapSettings}
         onClick={onMapClick}
         onLoad={onMapLoad}
       >
@@ -102,6 +133,28 @@ function ShowMap({ source, destination, stops, centreON }) {
             </div>
           </InfoWindow>
         ) : null}
+
+        {/* {destination !== "" && source !== "" && (
+          <DirectionsService
+            // required
+            options={{
+              destination: destination,
+              origin: source,
+              travelMode: "DRIVING",
+            }}
+            // required
+            callback={directionsCallback}
+          />
+        )} */}
+
+        {/* {response !== null && (
+          <DirectionsRenderer
+            // required
+            options={{
+              directions: response,
+            }}
+          />
+        )} */}
       </GoogleMap>
     </div>
   );
@@ -109,8 +162,10 @@ function ShowMap({ source, destination, stops, centreON }) {
 
 function Locate({ panTo }) {
   return (
-    <button
-      className="locate"
+    <i
+      className="fa fa-compass"
+      aria-hidden="true"
+      style={{ "font-size": "30px" }}
       onClick={() => {
         navigator.geolocation.getCurrentPosition(
           (position) => {
@@ -122,9 +177,7 @@ function Locate({ panTo }) {
           () => null
         );
       }}
-    >
-      <i className="fa fa-compass" aria-hidden="true"></i>
-    </button>
+    ></i>
   );
 }
 

@@ -181,15 +181,6 @@ export default [
   },
   {
     featureType: "poi",
-    elementType: "all",
-    stylers: [
-      {
-        visibility: "off",
-      },
-    ],
-  },
-  {
-    featureType: "poi",
     elementType: "geometry",
     stylers: [
       {
@@ -197,6 +188,87 @@ export default [
       },
       {
         lightness: 21,
+      },
+    ],
+  },
+  {
+    featureType: "poi.attraction",
+    elementType: "all",
+    stylers: [
+      {
+        visibility: "on",
+      },
+    ],
+  },
+  {
+    featureType: "poi.attraction",
+    elementType: "geometry.fill",
+    stylers: [
+      {
+        visibility: "on",
+      },
+    ],
+  },
+  {
+    featureType: "poi.attraction",
+    elementType: "labels.text",
+    stylers: [
+      {
+        visibility: "on",
+      },
+    ],
+  },
+  {
+    featureType: "poi.business",
+    elementType: "all",
+    stylers: [
+      {
+        visibility: "on",
+      },
+    ],
+  },
+  {
+    featureType: "poi.government",
+    elementType: "all",
+    stylers: [
+      {
+        visibility: "on",
+      },
+    ],
+  },
+  {
+    featureType: "poi.medical",
+    elementType: "all",
+    stylers: [
+      {
+        visibility: "on",
+      },
+    ],
+  },
+  {
+    featureType: "poi.park",
+    elementType: "all",
+    stylers: [
+      {
+        visibility: "on",
+      },
+    ],
+  },
+  {
+    featureType: "poi.place_of_worship",
+    elementType: "all",
+    stylers: [
+      {
+        visibility: "on",
+      },
+    ],
+  },
+  {
+    featureType: "poi.school",
+    elementType: "all",
+    stylers: [
+      {
+        visibility: "off",
       },
     ],
   },
