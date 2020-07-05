@@ -33,7 +33,11 @@ const DatePickerFunc = ({ handleChange }) => {
 const SearchForm = ({ fields, handleSubmitApp }) => {
   const [showDestination, setShowDestination] = useState(false);
 
-  const [fieldsValues, setFieldsValues] = React.useState({});
+  const [fieldsValues, setFieldsValues] = React.useState({
+    source: "",
+    destination: "",
+    time: new Date(),
+  });
   const handleChange = (value, fieldId) => {
     let newFields = { ...fieldsValues };
     newFields[fieldId] = value;
@@ -42,37 +46,45 @@ const SearchForm = ({ fields, handleSubmitApp }) => {
   };
 
   function handleSubmit(event) {
-    console.log(fieldsValues);
-    event.preventDefault();
-    handleSubmitApp(fieldsValues.source, fieldsValues.destination);
+    if (fieldsValues.source !== "") {
+      console.log(fieldsValues);
+      event.preventDefault();
+      handleSubmitApp(fieldsValues.source, fieldsValues.destination);
+    } else {
+      alert("Please enter a source!");
+    }
   }
 
   return (
     <form>
-      <h3>Search for a bus stop number</h3>
-      <div className="search">
-        <PlacesAutocomplete
-          id={"source"}
-          handleChange={handleChange}
-          value={fieldsValues["source"]}
-        />
+      <div className="mainForm">
+        <h3>Search for a bus stop number</h3>
+        <div className="search">
+          <PlacesAutocomplete
+            id={"source"}
+            handleChange={handleChange}
+            value={fieldsValues["source"]}
+          />
 
-        <span
-          className="fa fa-angle-double-down"
-          onClick={() => setShowDestination(!showDestination)}
-        ></span>
+          <span
+            className="fa fa-angle-double-down"
+            onClick={() => setShowDestination(!showDestination)}
+          ></span>
+        </div>
+        {showDestination && (
+          <PlacesAutocomplete
+            id={"destination"}
+            handleChange={handleChange}
+            value={fieldsValues["destination"]}
+          />
+        )}
+        {showDestination && (
+          <DatePickerFunc handleChange={handleChange} id={"time"} />
+        )}
+        <Button style={{ margin: 20 }} type="submit" onClick={handleSubmit}>
+          Submit
+        </Button>
       </div>
-      <PlacesAutocomplete
-        id={"destination"}
-        handleChange={handleChange}
-        value={fieldsValues["destination"]}
-      />
-      {showDestination && (
-        <DatePickerFunc handleChange={handleChange} id={"time"} />
-      )}
-      <Button style={{ margin: 20 }} type="submit" onClick={handleSubmit}>
-        Submit
-      </Button>
     </form>
   );
 };

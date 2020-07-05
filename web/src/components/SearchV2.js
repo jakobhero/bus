@@ -93,6 +93,7 @@ const PlacesAutocomplete = ({ id, handleChange }) => {
           disabled={!ready}
           placeholder="Choose a location"
           style={{ width: "100%" }}
+          data-lpignore="true"
         />
         <ComboboxPopover>
           <ComboboxList>

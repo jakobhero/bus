@@ -27,11 +27,13 @@ function RealTimeInfo() {
 
       <table>
         <thead>
-          <tr>
-            <td>Route</td>
-            <td>Destination</td>
-            <td>Due</td>
-          </tr>
+          {dueTimes.length > 1 && (
+            <tr>
+              <td>Route</td>
+              <td>Destination</td>
+              <td>Due</td>
+            </tr>
+          )}
         </thead>
         <tbody>
           {dueTimes.map((dueTime, i) => (
