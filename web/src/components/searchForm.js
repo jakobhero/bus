@@ -7,32 +7,28 @@ import "../search.css";
 
 import { Button } from "antd";
 
-function DatePickerFunc() {
+const DatePickerFunc = ({ handleChange }) => {
   const [startDate, setStartDate] = useState(new Date());
-  return (
-    <DatePicker
-      selected={startDate}
-      onChange={(date) => setStartDate(date)}
-      withPortal
-    />
-  );
-}
 
-function TimePickerFunc() {
-  const [startDate, setStartDate] = useState(new Date());
+  const handleSelect = (date) => {
+    setStartDate(date);
+    handleChange({ date }, "time");
+  };
+
   return (
     <DatePicker
       selected={startDate}
-      onChange={(date) => setStartDate(date)}
-      showTimeSelect
-      showTimeSelectOnly
-      timeIntervals={15}
-      timeCaption="Time"
-      dateFormat="h:mm aa"
+      onChange={handleSelect}
       withPortal
+      timeIntervals={15}
+      showTimeSelect
+      // isClearable
+      // minTime={setHours(setMinutes(new Date(), 0), 5)}
+      dateFormat="MMMM d, yyyy h:mm aa"
+      // maxTime={setHours(setMinutes(new Date(), 30), 20)}
     />
   );
-}
+};
 
 const SearchForm = ({ fields, handleSubmitApp }) => {
   const [showDestination, setShowDestination] = useState(false);
@@ -56,7 +52,6 @@ const SearchForm = ({ fields, handleSubmitApp }) => {
       <h3>Search for a bus stop number</h3>
       <div className="search">
         <PlacesAutocomplete
-          key={"source"}
           id={"source"}
           handleChange={handleChange}
           value={fieldsValues["source"]}
@@ -68,13 +63,13 @@ const SearchForm = ({ fields, handleSubmitApp }) => {
         ></span>
       </div>
       <PlacesAutocomplete
-        key={"destination"}
         id={"destination"}
         handleChange={handleChange}
         value={fieldsValues["destination"]}
       />
-      {showDestination && <DatePickerFunc></DatePickerFunc>}
-      {showDestination && <TimePickerFunc></TimePickerFunc>}
+      {showDestination && (
+        <DatePickerFunc handleChange={handleChange} id={"time"} />
+      )}
       <Button style={{ margin: 20 }} type="submit" onClick={handleSubmit}>
         Submit
       </Button>

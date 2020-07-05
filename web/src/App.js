@@ -54,13 +54,13 @@ const App = () => {
     setCentre(newCentre);
   };
 
-  const Sort = () => {
+  const Sort = (num) => {
     const dueTimesCopy = [...dueTimes];
     dueTimesCopy.sort((a, b) =>
       a.steps.length > b.steps.length
-        ? 1
+        ? num
         : b.steps.length > a.steps.length
-        ? -1
+        ? -num
         : 0
     );
     // console.log(dueTimes);
@@ -84,7 +84,20 @@ const App = () => {
         </TabPane>
         <TabPane tab="Connections" key="2">
           {dueTimes && (
-            <Button style={{ margin: 20 }} type="submit" onClick={Sort}>
+            <Button
+              style={{ margin: 20 }}
+              type="submit"
+              onClick={() => Sort(1)}
+            >
+              Sort by steps
+            </Button>
+          )}
+          {dueTimes && (
+            <Button
+              style={{ margin: 20 }}
+              type="submit"
+              onClick={() => Sort(-1)}
+            >
               Sort by steps
             </Button>
           )}
