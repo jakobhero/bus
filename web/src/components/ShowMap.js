@@ -165,7 +165,7 @@ function Locate({ panTo }) {
     <i
       className="fa fa-compass"
       aria-hidden="true"
-      style={{ "font-size": "30px" }}
+      style={{ fontSize: "30px" }}
       onClick={() => {
         navigator.geolocation.getCurrentPosition(
           (position) => {

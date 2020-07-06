@@ -6,10 +6,10 @@ import DirectionsBusIcon from "@material-ui/icons/DirectionsBus";
 import DirectionsWalkIcon from "@material-ui/icons/DirectionsWalk";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 
-import { Card } from "antd";
+import { Card, Timeline } from "antd";
 import "antd/dist/antd.css";
 
-const Route = (dueTimes, test) => {
+const Route = (dueTimes) => {
   const dueTime = dueTimes.dueTimes;
   const [showMore, setShowMore] = useState(false);
   let startTime = new Date(dueTime.start.time * 1000);
@@ -39,48 +39,74 @@ const Route = (dueTimes, test) => {
         {arriveTime}
         <span>
           (duration
-          {" " + Math.round((dueTime.end.time - dueTime.start.time) / 60)}
+          {" " + Math.round(dueTime.duration / 60)}
           m)
         </span>
       </span>
       <div>
         <DirectionsWalkIcon style={{ color: "blue" }} />
-        <ArrowForwardIosIcon />
-        <DirectionsBusIcon style={{ color: "blue" }} />
-        {dueTime.steps[1].transit.route}
+        {dueTime.bus_index.map((index) => (
+          <span key={index}>
+            <ArrowForwardIosIcon />
+            <DirectionsBusIcon style={{ color: "blue" }} />
+            {dueTime.steps[index].transit.route}
+          </span>
+        ))}
         <ArrowForwardIosIcon />
         <DirectionsWalkIcon style={{ color: "blue" }} />
       </div>
       {showMore && (
         <div>
-          <table>
-            <tbody>
-              {dueTime.steps.map((step, i) => (
-                <tr key={i}>
-                  <td>
-                    {new Date(step.time).getHours() +
-                      ":" +
-                      (new Date(step.time).getMinutes() < 10 ? "0" : "") +
-                      new Date(step.time).getMinutes()}
-                  </td>
-                  <td>
-                    {i < 1 ? dueTime.start.address : ""}
-                    {dueTime.bus_index.includes(i) ? step.transit.dep.name : ""}
-                    {dueTime.bus_index.includes(i - 1) &
-                    !dueTime.bus_index.includes(i)
-                      ? dueTime.steps[i - 1].transit.arr.name
-                      : ""}
+          <Timeline mode={"left"}>
+            {dueTime.steps.map((step, i) => (
+              <Timeline.Item
+                key={i}
+                label={
+                  new Date(step.time).getHours() +
+                  ":" +
+                  (new Date(step.time).getMinutes() < 10 ? "0" : "") +
+                  new Date(step.time).getMinutes()
+                }
+                color={dueTime.bus_index.includes(i) ? "blue" : "green"}
+              >
+                <p>
+                  {i < 1 ? dueTime.start.address : ""}
 
-                    {/* both can be called if bus indexs are within one, if that is the case, only can the first one */}
-                  </td>
-                </tr>
-              ))}
-              <tr>
-                <td>{arriveTime}</td>
-                <td>{dueTime.end.address}</td>
-              </tr>
-            </tbody>
-          </table>
+                  {dueTime.bus_index.includes(i) &
+                  !dueTime.bus_index.includes(i - 1)
+                    ? step.transit.dep.name
+                    : ""}
+
+                  {dueTime.bus_index.includes(i) &
+                  dueTime.bus_index.includes(i - 1)
+                    ? step.transit.dep.name
+                    : ""}
+
+                  {!dueTime.bus_index.includes(i) &
+                  dueTime.bus_index.includes(i - 1)
+                    ? dueTime.steps[i - 1].transit.arr.name
+                    : ""}
+                </p>
+                <p>
+                  {dueTime.bus_index.includes(i) ? (
+                    <DirectionsBusIcon style={{ color: "blue" }} />
+                  ) : (
+                    ""
+                  )}
+                  {dueTime.bus_index.includes(i) ? step.transit.route : ""}
+
+                  {!dueTime.bus_index.includes(i) ? (
+                    <DirectionsWalkIcon style={{ color: "blue" }} />
+                  ) : (
+                    ""
+                  )}
+                </p>
+              </Timeline.Item>
+            ))}
+            <Timeline.Item label={arriveTime}>
+              {dueTime.end.address}
+            </Timeline.Item>
+          </Timeline>
         </div>
       )}
     </Card>
@@ -88,59 +114,3 @@ const Route = (dueTimes, test) => {
 };
 
 export default Route;
-// {var time = dueTime.start.time}
-// dueTime.steps.map((step, i) => {
-//           <tr key={i}>
-//             {time += step.duration * 1000}
-//                 <td>
-//                   {new Date(
-//                     time
-//                   ).getHours() +
-//                     ":" +
-//                     new Date(
-//                       time
-//                     ).getMinutes()}
-//                 </td>
-//                 <td>Help</td>
-//               </tr>
-
-// })
-
-{
-  /* <tr>
-<td>{departTime}</td>
-<td>{dueTime.start.address}</td>
-</tr>
-<tr>
-<td>
-  {new Date(
-    dueTime.start.time + dueTime.steps[0].duration * 1000
-  ).getHours() +
-    ":" +
-    new Date(
-      dueTime.start.time + dueTime.steps[0].duration * 1000
-    ).getMinutes()}
-</td>
-<td>{dueTime.steps[1].transit.dep.name}</td>
-</tr>
-<tr>
-<td>
-  {new Date(
-    dueTime.start.time +
-      dueTime.steps[0].duration * 1000 +
-      dueTime.steps[1].duration * 1000
-  ).getHours() +
-    ":" +
-    new Date(
-      dueTime.start.time +
-        dueTime.steps[0].duration * 1000 +
-        dueTime.steps[1].duration * 1000
-    ).getMinutes()}
-</td>
-<td>{dueTime.steps[1].transit.arr.name}</td>
-</tr>
-<tr>
-<td>{arriveTime}</td>
-<td>{dueTime.end.address}</td>
-</tr> */
-}

@@ -1,0 +1,22 @@
+{
+        "geocoded_waypoints": [
+                {
+                        "geocoder_status": "OK",
+                        "place_id": "EitDb3JrIFN0LCBTYWludCBDYXRoZXJpbmUncywgRHVibGluLCBJcmVsYW5kIi4qLAoUChIJtXrgwDwMZ0gRPtwKHpwZVlcSFAoSCdevLds-DGdIEdFVtLqnxwAm",
+                        "types": [
+                                "route"
+                        ]
+                },
+                {
+                        "geocoder_status": "OK",
+                        "place_id": "ChIJ5_sEMgNdkFQRukSzxsG25Qs",
+                        "types": [
+                                "beauty_salon",
+                                "establishment",
+                                "point_of_interest"
+                        ]
+                }
+        ],
+        "routes": [],
+        "status": "ZERO_RESULTS"
+}
