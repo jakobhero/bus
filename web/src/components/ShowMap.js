@@ -6,11 +6,8 @@ import mapStylesIcons from "./mapStylesIcons";
 
 // import { DirectionsService, DirectionsRenderer } from "@react-google-maps/api";
 import Switch from "react-switch";
-// const center = {
-//   lat: 53.35014,
-//   lng: -6.266155,
-// };
 
+import { Button } from "antd";
 // https://www.youtube.com/watch?v=SySVBV_jcCM
 
 const mapContainerStyle = {
@@ -20,7 +17,7 @@ const mapContainerStyle = {
 
 // const libraries = ["geometry", "drawing", "places"];
 
-function ShowMap({ source, destination, stops, centreON }) {
+function ShowMap({ source, destination, stops, centreON, setRealTime }) {
   const [markers, setMarkers] = React.useState([]);
   const [selected, setSelected] = React.useState(null);
 
@@ -134,6 +131,14 @@ function ShowMap({ source, destination, stops, centreON }) {
             <div>
               <h2>
                 <p>{`Stop ${selected.id}`}</p>
+                <Button
+                  style={{ margin: 20 }}
+                  onClick={() =>
+                    setRealTime(selected.id, selected.lat, selected.lng)
+                  }
+                >
+                  Due Times
+                </Button>
               </h2>
             </div>
           </InfoWindow>
