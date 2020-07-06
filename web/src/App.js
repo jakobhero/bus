@@ -68,16 +68,20 @@ const App = () => {
       .catch(console.log);
   };
 
+  const setRealTime = (route) => {
+    getData(route);
+    setActiveKey("4");
+  };
+
   const handleSubmitApp = (source, dest, time) => {
     let newFields = { ...state };
     newFields["source"] = source;
     newFields["destination"] = dest;
     newFields["time"] = time;
 
-    if (source.busNum) {
-      getData(source.busNum);
+    if (source.stopID) {
+      setRealTime(source.stopID);
       setCentre({ lat: source.lat, lng: source.lng });
-      setActiveKey("4");
     } else if (!dest.val) {
       setCentre({ lat: source.lat, lng: source.lng });
       setStopsForMap(findStopsRadius(source.lat, source.lng));
@@ -140,6 +144,7 @@ const App = () => {
             destination={state.destination}
             stops={stopsForMap}
             centreON={centre}
+            setRealTime={setRealTime}
           />
         </TabPane>
 

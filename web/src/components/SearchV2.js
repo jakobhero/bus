@@ -58,18 +58,18 @@ const PlacesAutocomplete = ({ id, handleChange }) => {
   };
 
   const handleSelect = (val) => {
-    const busNum = val.slice(0, val.length - 10);
+    const stopID = val.slice(0, val.length - 10);
     let lat, lng;
 
-    if (!isNaN(busNum)) {
+    if (!isNaN(stopID)) {
       setValue(val, false);
       for (var i = 0; i < stops.length; i++) {
         let stop_id = stops[i].id;
 
-        if (stop_id === busNum) {
+        if (stop_id === stopID) {
           lat = stops[i].stop_lat;
           lng = stops[i].stop_lon;
-          handleChange({ busNum, lat, lng }, id);
+          handleChange({ stopID, lat, lng }, id);
         }
       }
     } else {
