@@ -136,8 +136,10 @@ def directions_parser(directions):
                     "headsign":step["transit_details"]["headsign"],
                     "type":step["transit_details"]["line"]["agencies"][0]["name"]
                 }
-                if transit["type"]=="Dublin Bus":
-                    db_index.append(index)
+
+                if transit["type"] in ["Dublin Bus","Go-Ahead"]:
+                    if transit["type"]=="Dublin Bus":
+                        db_index.append(index)
                     transit["route"]=step["transit_details"]["line"]["short_name"]
                 if step["transit_details"]["line"]["vehicle"]["type"]=="BUS":
                     bus_index.append(index)
