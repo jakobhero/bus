@@ -68,10 +68,11 @@ const App = () => {
       .catch(console.log);
   };
 
-  const handleSubmitApp = (source, dest) => {
+  const handleSubmitApp = (source, dest, time) => {
     let newFields = { ...state };
     newFields["source"] = source;
     newFields["destination"] = dest;
+    newFields["time"] = time;
 
     if (source.busNum) {
       getData(source.busNum);
@@ -83,7 +84,12 @@ const App = () => {
     } else {
       axios
         .get(
-          "http://localhost/directions?dep=" + source.val + "&arr=" + dest.val
+          "http://localhost/directions?dep=" +
+            source.val +
+            "&arr=" +
+            dest.val +
+            "&time=" +
+            time / 1000
         )
         .then((res) => {
           if (res.data.status === "OK") {

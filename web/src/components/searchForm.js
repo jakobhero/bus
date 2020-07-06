@@ -36,12 +36,16 @@ const SearchForm = ({ fields, handleSubmitApp }) => {
   const [fieldsValues, setFieldsValues] = React.useState({
     source: "",
     destination: "",
-    time: new Date(),
+    time: new Date().getTime(),
   });
   const handleChange = (value, fieldId) => {
     let newFields = { ...fieldsValues };
-    newFields[fieldId] = value;
-
+    if (fieldId === "time") {
+      console.log();
+      newFields[fieldId] = new Date(value.date).getTime();
+    } else {
+      newFields[fieldId] = value;
+    }
     setFieldsValues(newFields);
   };
 
@@ -49,7 +53,11 @@ const SearchForm = ({ fields, handleSubmitApp }) => {
     if (fieldsValues.source !== "") {
       console.log(fieldsValues);
       event.preventDefault();
-      handleSubmitApp(fieldsValues.source, fieldsValues.destination);
+      handleSubmitApp(
+        fieldsValues.source,
+        fieldsValues.destination,
+        fieldsValues.time
+      );
     } else {
       alert("Please enter a source!");
     }
