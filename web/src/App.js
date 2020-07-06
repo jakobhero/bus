@@ -16,15 +16,13 @@ const { TabPane } = Tabs;
 // const { SubMenu } = Menu;
 // const { Header, Content, Sider } = Layout;
 
-function callback(key) {
-  console.log(key);
-}
 // function onChange(e) {
 //   console.log(`checked = ${e.target.checked}`);
 // }
 
 const App = () => {
   const [state, setState] = React.useState({});
+  const [activeKey, setActiveKey] = React.useState("1");
   const [dueTimes, setDueTimes] = React.useState([]);
   const [centre, setCentre] = React.useState({
     lat: 53.35014,
@@ -52,7 +50,12 @@ const App = () => {
       lng: (source.lng + dest.lng) / 2,
     };
     setCentre(newCentre);
+    setActiveKey("2");
   };
+
+  function callback(key) {
+    setActiveKey(key);
+  }
 
   const Sort = (num) => {
     const dueTimesCopy = [...dueTimes];
@@ -73,7 +76,7 @@ const App = () => {
         fields={["source", "destination"]}
         handleSubmitApp={handleSubmitApp}
       />
-      <Tabs style={{ margin: 10 }} defaultActiveKey="1" onChange={callback}>
+      <Tabs style={{ margin: 10 }} onChange={callback} activeKey={activeKey}>
         <TabPane tab="Map" key="1">
           <ShowMap
             source={state.source}

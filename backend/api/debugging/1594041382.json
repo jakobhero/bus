@@ -1,0 +1,1450 @@
+{
+        "geocoded_waypoints": [
+                {
+                        "geocoder_status": "OK",
+                        "place_id": "ChIJ3Y7HLZsOZ0gRZ2FxjA3-ACc",
+                        "types": [
+                                "establishment",
+                                "point_of_interest",
+                                "tourist_attraction",
+                                "university"
+                        ]
+                },
+                {
+                        "geocoder_status": "OK",
+                        "place_id": "ChIJz1yvijYJZ0gR3k_zyAZxjCQ",
+                        "types": [
+                                "establishment",
+                                "gym",
+                                "health",
+                                "point_of_interest"
+                        ]
+                }
+        ],
+        "routes": [
+                {
+                        "bounds": {
+                                "northeast": {
+                                        "lat": 53.3443633,
+                                        "lng": -6.2287064
+                                },
+                                "southwest": {
+                                        "lat": 53.3077748,
+                                        "lng": -6.2593112
+                                }
+                        },
+                        "copyrights": "Map data \u00a92020",
+                        "legs": [
+                                {
+                                        "arrival_time": {
+                                                "text": "2:47pm",
+                                                "time_zone": "Europe/Dublin",
+                                                "value": 1594043226
+                                        },
+                                        "departure_time": {
+                                                "text": "2:19pm",
+                                                "time_zone": "Europe/Dublin",
+                                                "value": 1594041546
+                                        },
+                                        "distance": {
+                                                "text": "5.9 km",
+                                                "value": 5913
+                                        },
+                                        "duration": {
+                                                "text": "28 mins",
+                                                "value": 1680
+                                        },
+                                        "end_address": "UCD Sports Centre, Belfield, Dublin, Ireland",
+                                        "end_location": {
+                                                "lat": 53.3079853,
+                                                "lng": -6.2287064
+                                        },
+                                        "start_address": "College Green, Dublin 2, Ireland",
+                                        "start_location": {
+                                                "lat": 53.3443633,
+                                                "lng": -6.2593112
+                                        },
+                                        "steps": [
+                                                {
+                                                        "distance": {
+                                                                "text": "0.3 km",
+                                                                "value": 302
+                                                        },
+                                                        "duration": {
+                                                                "text": "4 mins",
+                                                                "value": 223
+                                                        },
+                                                        "end_location": {
+                                                                "lat": 53.3426683,
+                                                                "lng": -6.25672
+                                                        },
+                                                        "html_instructions": "Walk to Trinity College, Nassau St. (Opp. Frederick St)",
+                                                        "polyline": {
+                                                                "points": "gyqdItoee@FCDEPMHENANAR@R@^@J?N@H?LAH?FEDI@MBW@A?A@CJ?TaCD[@MBS?ED[F[DMJu@P}@DW?ABQ"
+                                                        },
+                                                        "start_location": {
+                                                                "lat": 53.3443633,
+                                                                "lng": -6.2593112
+                                                        },
+                                                        "steps": [
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "0.2 km",
+                                                                                "value": 150
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "2 mins",
+                                                                                "value": 114
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.34314329999999,
+                                                                                "lng": -6.2588576
+                                                                        },
+                                                                        "html_instructions": "Head <b>southeast</b> toward <b>Nassau St</b>/<wbr/><b>R138</b>",
+                                                                        "polyline": {
+                                                                                "points": "gyqdItoee@FCDEPMHENANAR@R@^@J?N@H?LAH?FEDI@MBW@A?A@CJ?"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.3443633,
+                                                                                "lng": -6.2593112
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                },
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "0.2 km",
+                                                                                "value": 152
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "2 mins",
+                                                                                "value": 109
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3426683,
+                                                                                "lng": -6.25672
+                                                                        },
+                                                                        "html_instructions": "Slight <b>left</b> onto <b>Nassau St</b>/<wbr/><b>R138</b><div style=\"font-size:0.9em\">Destination will be on the left</div>",
+                                                                        "maneuver": "turn-slight-left",
+                                                                        "polyline": {
+                                                                                "points": "sqqdIzlee@TaCD[@MBS?ED[F[DMJu@P}@DW?ABQ"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.34314329999999,
+                                                                                "lng": -6.2588576
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                }
+                                                        ],
+                                                        "travel_mode": "WALKING"
+                                                },
+                                                {
+                                                        "distance": {
+                                                                "text": "5.0 km",
+                                                                "value": 5002
+                                                        },
+                                                        "duration": {
+                                                                "text": "17 mins",
+                                                                "value": 1020
+                                                        },
+                                                        "end_location": {
+                                                                "lat": 53.3081869,
+                                                                "lng": -6.2369241
+                                                        },
+                                                        "html_instructions": "Bus towards Sandyford B.D.",
+                                                        "polyline": {
+                                                                "points": "snqdIb}de@LFBQXwBDa@h@cE\\NjBz@hClAb@R~At@h@X?AxCfB~@t@He@PuAP_@^c@`@AZPlDhCh@`@vBbBd@VN@VMt@kAnAsAn@o@~A_Bz@iAbEkE@AAC\\c@b@c@NOHIf@k@b@e@`AkAHGDCHGROL[HEr@k@PIHEDGf@i@@A@CBK@G@GAg@?K@O@Ch@]TMPSV[Zu@`@}@r@gBb@qAPg@`@_ALY`@y@Te@FSRs@BGFUBCBC@ADAZ{@L[J[Ts@h@v@VZJPb@v@PXXd@rApBn@~@d@v@`CrFHRRlAF^HVHPd@dAfAtCjAhDBH`@fAVl@Pe@^wA\\eAPo@Rw@Z{Ah@aCNk@Tw@HUDOX}@Lc@JYZ}@DMJWDOb@iA`@}@b@cA@?d@cAN]Zs@Ra@d@mAd@cALULWVe@tAgCjAqB|@{Ah@eAFKd@_At@eBVe@\\g@DGBEpAaBHKX_@JO`A{AnBuCJSfAkBFMdAcDTu@Pk@ZeAFQ@CZy@FOFKJOLMFIJGFCLGNAF?H@H@PBbBfAPFx@T|A\\d@JnBd@nAVZDh@@ZETEVENCXGn@I\\EPCx@MjAO`BY^Kb@Mf@Qd@SBAl@YhAo@b@SjB}@v@[JECO"
+                                                        },
+                                                        "start_location": {
+                                                                "lat": 53.3426561,
+                                                                "lng": -6.256341099999999
+                                                        },
+                                                        "transit_details": {
+                                                                "arrival_stop": {
+                                                                        "location": {
+                                                                                "lat": 53.3081869,
+                                                                                "lng": -6.2369241
+                                                                        },
+                                                                        "name": "Wynnsward Drive, stop 860"
+                                                                },
+                                                                "arrival_time": {
+                                                                        "text": "2:39pm",
+                                                                        "time_zone": "Europe/Dublin",
+                                                                        "value": 1594042789
+                                                                },
+                                                                "departure_stop": {
+                                                                        "location": {
+                                                                                "lat": 53.3426561,
+                                                                                "lng": -6.256341099999999
+                                                                        },
+                                                                        "name": "Trinity College, Nassau St. (Opp. Frederick St)"
+                                                                },
+                                                                "departure_time": {
+                                                                        "text": "2:22pm",
+                                                                        "time_zone": "Europe/Dublin",
+                                                                        "value": 1594041769
+                                                                },
+                                                                "headsign": "Sandyford B.D.",
+                                                                "line": {
+                                                                        "agencies": [
+                                                                                {
+                                                                                        "name": "Dublin Bus",
+                                                                                        "url": "http://www.transportforireland.ie/"
+                                                                                }
+                                                                        ],
+                                                                        "short_name": "11",
+                                                                        "vehicle": {
+                                                                                "icon": "//maps.gstatic.com/mapfiles/transit/iw2/6/bus2.png",
+                                                                                "name": "Bus",
+                                                                                "type": "BUS"
+                                                                        }
+                                                                },
+                                                                "num_stops": 18
+                                                        },
+                                                        "travel_mode": "TRANSIT"
+                                                },
+                                                {
+                                                        "distance": {
+                                                                "text": "0.6 km",
+                                                                "value": 609
+                                                        },
+                                                        "duration": {
+                                                                "text": "7 mins",
+                                                                "value": 436
+                                                        },
+                                                        "end_location": {
+                                                                "lat": 53.3079853,
+                                                                "lng": -6.2287064
+                                                        },
+                                                        "html_instructions": "Walk to UCD Sports Centre, Belfield, Dublin, Ireland",
+                                                        "polyline": {
+                                                                "points": "awjdIfdae@`@ORIFAHAA_@GiAGoAGiAEy@G_AA]AO?K?[?e@?Q@k@@SBQ@QFk@Hk@D_@B]@[?W@k@?Y?WCsBA{EASBA@??A@??A@??A@??A@A?A@A?A?A?A@??A?A?A?A?C?C?A?AA??A?A?AAA?AAA?AAAAAAAA??AC??mA?eA@_@?q@@_@SICCA?AA?A?AA??A?C"
+                                                        },
+                                                        "start_location": {
+                                                                "lat": 53.308174,
+                                                                "lng": -6.2370014
+                                                        },
+                                                        "steps": [
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "42 m",
+                                                                                "value": 42
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "1 min",
+                                                                                "value": 31
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3078109,
+                                                                                "lng": -6.236851
+                                                                        },
+                                                                        "html_instructions": "Head <b>south</b> on <b>Clonskeagh Rd</b>/<wbr/><b>R825</b> toward <b>Wynnsward Dr</b>",
+                                                                        "polyline": {
+                                                                                "points": "awjdIfdae@`@ORIFAHA"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.308174,
+                                                                                "lng": -6.2370014
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                },
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "0.4 km",
+                                                                                "value": 429
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "5 mins",
+                                                                                "value": 304
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3078568,
+                                                                                "lng": -6.2304678
+                                                                        },
+                                                                        "html_instructions": "Turn <b>left</b> onto <b>Wynnsward Dr</b>",
+                                                                        "maneuver": "turn-left",
+                                                                        "polyline": {
+                                                                                "points": "ytjdIhcae@A_@GiAGoAGiAEy@G_AA]AO?K?[?e@?Q@k@@SBQ@QFk@Hk@D_@B]@[?W@k@?Y?WCsBA{EAS"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.3078109,
+                                                                                "lng": -6.236851
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                },
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "0.1 km",
+                                                                                "value": 118
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "1 min",
+                                                                                "value": 86
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3078399,
+                                                                                "lng": -6.2288438
+                                                                        },
+                                                                        "html_instructions": "At the roundabout, take the <b>1st</b> exit",
+                                                                        "maneuver": "roundabout-left",
+                                                                        "polyline": {
+                                                                                "points": "cujdIl{_e@BA@??A@??A@??A@??A@A?A@A?A?A?A@??A?A?A?A?C?C?A?AA??A?A?AAA?AAA?AAAAAAAA??AC??mA?eA@_@?q@@_@"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.3078568,
+                                                                                "lng": -6.2304678
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                },
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "20 m",
+                                                                                "value": 20
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "1 min",
+                                                                                "value": 15
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3079853,
+                                                                                "lng": -6.2287064
+                                                                        },
+                                                                        "html_instructions": "Turn <b>left</b><div style=\"font-size:0.9em\">Destination will be on the left</div>",
+                                                                        "maneuver": "turn-left",
+                                                                        "polyline": {
+                                                                                "points": "_ujdIfq_e@SICCA?AA?A?AA??A?C"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.3078399,
+                                                                                "lng": -6.2288438
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                }
+                                                        ],
+                                                        "travel_mode": "WALKING"
+                                                }
+                                        ],
+                                        "traffic_speed_entry": [],
+                                        "via_waypoint": []
+                                }
+                        ],
+                        "overview_polyline": {
+                                "points": "gyqdItoee@h@]^Cf@BdABVALOFi@LCZ}CJcALi@\\sBDYD}ALFBQ^yCh@cE\\NtFhClD`BxCfB~@t@Z{BP_@^c@`@AZPvEjDvBbBd@VN@VMt@kAnAsAnCoCz@iAbEkE?E`AgAdBkBjAsANKROL[|@q@ZOl@q@HY?o@@[rAcAV[Zu@tAeDt@yBn@yAv@_BZgARe@FCh@wA`@oA`ArAzAhCbCpDd@v@`CrF\\`BPv@n@vAfAtCjAhDd@pAVl@Pe@|@}Cd@gBdA}Ed@cBv@gCx@}Bh@yAdAaCrAuCx@oBr@yAfEwHfBaDl@kAlAkCb@o@xBsChEuGnAyBzAyEv@gCb@iAR[TWRK\\IP@ZDtBnAvCr@tCp@jB\\h@@ZEl@Kh@KxCa@lDi@bAYlAe@p@[lBcAbDyAJECOBN`@OZKHAA_@OyCMcCKyB@_CNcBNkADy@@uBEoI@U@ABABGBGAYIMEA@eF@_@SIECCE?E"
+                        },
+                        "summary": "",
+                        "warnings": [
+                                "Walking directions are in beta. Use caution \u2013 This route may be missing sidewalks or pedestrian paths."
+                        ],
+                        "waypoint_order": []
+                },
+                {
+                        "bounds": {
+                                "northeast": {
+                                        "lat": 53.3443633,
+                                        "lng": -6.222776
+                                },
+                                "southwest": {
+                                        "lat": 53.30855,
+                                        "lng": -6.2593112
+                                }
+                        },
+                        "copyrights": "Map data \u00a92020",
+                        "legs": [
+                                {
+                                        "arrival_time": {
+                                                "text": "2:47pm",
+                                                "time_zone": "Europe/Dublin",
+                                                "value": 1594043264
+                                        },
+                                        "departure_time": {
+                                                "text": "2:17pm",
+                                                "time_zone": "Europe/Dublin",
+                                                "value": 1594041450
+                                        },
+                                        "distance": {
+                                                "text": "5.4 km",
+                                                "value": 5445
+                                        },
+                                        "duration": {
+                                                "text": "30 mins",
+                                                "value": 1814
+                                        },
+                                        "end_address": "UCD Sports Centre, Belfield, Dublin, Ireland",
+                                        "end_location": {
+                                                "lat": 53.30855,
+                                                "lng": -6.2269459
+                                        },
+                                        "start_address": "College Green, Dublin 2, Ireland",
+                                        "start_location": {
+                                                "lat": 53.3443633,
+                                                "lng": -6.2593112
+                                        },
+                                        "steps": [
+                                                {
+                                                        "distance": {
+                                                                "text": "0.3 km",
+                                                                "value": 342
+                                                        },
+                                                        "duration": {
+                                                                "text": "4 mins",
+                                                                "value": 252
+                                                        },
+                                                        "end_location": {
+                                                                "lat": 53.3425407,
+                                                                "lng": -6.256158
+                                                        },
+                                                        "html_instructions": "Walk to Nassau Street, stop 406",
+                                                        "polyline": {
+                                                                "points": "gyqdItoee@FCDEPMHENANAR@R@^@J?N@H?LAH?FEDI@MBW@A?A@CJ?TaCD[@MBS?ED[F[DMJu@P}@DW?APkAD[DY"
+                                                        },
+                                                        "start_location": {
+                                                                "lat": 53.3443633,
+                                                                "lng": -6.2593112
+                                                        },
+                                                        "steps": [
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "0.2 km",
+                                                                                "value": 150
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "2 mins",
+                                                                                "value": 114
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.34314329999999,
+                                                                                "lng": -6.2588576
+                                                                        },
+                                                                        "html_instructions": "Head <b>southeast</b> toward <b>Nassau St</b>/<wbr/><b>R138</b>",
+                                                                        "polyline": {
+                                                                                "points": "gyqdItoee@FCDEPMHENANAR@R@^@J?N@H?LAH?FEDI@MBW@A?A@CJ?"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.3443633,
+                                                                                "lng": -6.2593112
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                },
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "0.2 km",
+                                                                                "value": 192
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "2 mins",
+                                                                                "value": 138
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3425407,
+                                                                                "lng": -6.256158
+                                                                        },
+                                                                        "html_instructions": "Slight <b>left</b> onto <b>Nassau St</b>/<wbr/><b>R138</b><div style=\"font-size:0.9em\">Destination will be on the left</div>",
+                                                                        "maneuver": "turn-slight-left",
+                                                                        "polyline": {
+                                                                                "points": "sqqdIzlee@TaCD[@MBS?ED[F[DMJu@P}@DW?APkAD[DY"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.34314329999999,
+                                                                                "lng": -6.2588576
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                }
+                                                        ],
+                                                        "travel_mode": "WALKING"
+                                                },
+                                                {
+                                                        "distance": {
+                                                                "text": "4.2 km",
+                                                                "value": 4189
+                                                        },
+                                                        "duration": {
+                                                                "text": "14 mins",
+                                                                "value": 839
+                                                        },
+                                                        "end_location": {
+                                                                "lat": 53.3145171,
+                                                                "lng": -6.224370899999999
+                                                        },
+                                                        "html_instructions": "Bus towards Ballywaltrim",
+                                                        "polyline": {
+                                                                "points": "inqdIv{de@LFR}ADa@h@cE\\NjBz@hClAb@R~At@h@X?AxCfB~@t@He@PuAP_@^c@`@AZPlDhCh@`@vBbBd@VN@VMt@kAnAsAn@o@~A_Bz@iAbEkE@AAC\\c@b@c@NOHIf@k@b@e@`AkAHGDCHGROL[HEr@k@PIHEDGf@i@@A@CBK@G@GAg@?K@O@Ch@]TMPSV[Zu@`@}@r@gBb@qAPg@`@_ALY`@y@Te@FSRs@BGFUBCBC@ADAZ{@L[J[Ts@Rs@XaA?CNe@Le@DQVy@Lg@?AVaAFOJ]HUDMHUBIb@w@h@u@r@gAl@y@b@k@v@cAV]HKtAqB@Ap@kANUPUVa@l@{@FIFI`BcCXc@t@iAb@m@Z_@PUHKFILSFGHOzAsBTc@Xg@BIR_@BGNULYHSN_@H_@P_CNk@HSHQNYf@{@Zi@v@oAFKJMp@gAXk@j@y@DGb@o@|@oAJONQf@q@PYBQ@CDKFM`@q@LUj@u@Xa@HMBEdBoCHOZg@PW`DeFHKNWlAiBLOx@oA^k@PYXe@^k@h@{@Xe@FMP]n@{AL_@L_@HUDOhAwEKI"
+                                                        },
+                                                        "start_location": {
+                                                                "lat": 53.3426053,
+                                                                "lng": -6.2561202
+                                                        },
+                                                        "transit_details": {
+                                                                "arrival_stop": {
+                                                                        "location": {
+                                                                                "lat": 53.3145171,
+                                                                                "lng": -6.224370899999999
+                                                                        },
+                                                                        "name": "Rte"
+                                                                },
+                                                                "arrival_time": {
+                                                                        "text": "2:36pm",
+                                                                        "time_zone": "Europe/Dublin",
+                                                                        "value": 1594042565
+                                                                },
+                                                                "departure_stop": {
+                                                                        "location": {
+                                                                                "lat": 53.3426053,
+                                                                                "lng": -6.2561202
+                                                                        },
+                                                                        "name": "Nassau Street, stop 406"
+                                                                },
+                                                                "departure_time": {
+                                                                        "text": "2:22pm",
+                                                                        "time_zone": "Europe/Dublin",
+                                                                        "value": 1594041726
+                                                                },
+                                                                "headsign": "Ballywaltrim",
+                                                                "line": {
+                                                                        "agencies": [
+                                                                                {
+                                                                                        "name": "Dublin Bus",
+                                                                                        "url": "http://www.transportforireland.ie/"
+                                                                                }
+                                                                        ],
+                                                                        "short_name": "145",
+                                                                        "vehicle": {
+                                                                                "icon": "//maps.gstatic.com/mapfiles/transit/iw2/6/bus2.png",
+                                                                                "name": "Bus",
+                                                                                "type": "BUS"
+                                                                        }
+                                                                },
+                                                                "num_stops": 14
+                                                        },
+                                                        "travel_mode": "TRANSIT"
+                                                },
+                                                {
+                                                        "distance": {
+                                                                "text": "0.9 km",
+                                                                "value": 914
+                                                        },
+                                                        "duration": {
+                                                                "text": "12 mins",
+                                                                "value": 699
+                                                        },
+                                                        "end_location": {
+                                                                "lat": 53.30855,
+                                                                "lng": -6.2269459
+                                                        },
+                                                        "html_instructions": "Walk to UCD Sports Centre, Belfield, Dublin, Ireland",
+                                                        "polyline": {
+                                                                "points": "k~kdIru~d@BOZmAFSRy@nA{CNXj@tAh@vAVr@Xn@b@fA^x@DHFLXl@P\\Rf@Nb@tAlEj@jBDJDFFGDCFCFDlB_BjAkAZZXd@DBLH^Hh@LZJtA\\JMBKJgA`@LB@b@JD?"
+                                                        },
+                                                        "start_location": {
+                                                                "lat": 53.3144637,
+                                                                "lng": -6.224422
+                                                        },
+                                                        "steps": [
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "0.1 km",
+                                                                                "value": 135
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "2 mins",
+                                                                                "value": 98
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3137639,
+                                                                                "lng": -6.222776
+                                                                        },
+                                                                        "html_instructions": "Head <b>southeast</b> on <b>Stillorgan Rd</b>/<wbr/><b>R138</b> toward <b>Nutley Ln</b>",
+                                                                        "polyline": {
+                                                                                "points": "k~kdIru~d@BOZmAFSRy@nA{C"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.3144637,
+                                                                                "lng": -6.224422
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                },
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "0.4 km",
+                                                                                "value": 403
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "5 mins",
+                                                                                "value": 321
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3114839,
+                                                                                "lng": -6.2274845
+                                                                        },
+                                                                        "html_instructions": "Turn <b>right</b> onto <b>Greenfield Park</b>",
+                                                                        "maneuver": "turn-right",
+                                                                        "polyline": {
+                                                                                "points": "_zkdIjk~d@NXj@tAh@vAVr@Xn@b@fA^x@DHFLXl@P\\Rf@Nb@tAlEj@jBDJDF"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.3137639,
+                                                                                "lng": -6.222776
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                },
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "0.1 km",
+                                                                                "value": 137
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "2 mins",
+                                                                                "value": 99
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3103959,
+                                                                                "lng": -6.2265681
+                                                                        },
+                                                                        "html_instructions": "Turn <b>left</b>",
+                                                                        "maneuver": "turn-left",
+                                                                        "polyline": {
+                                                                                "points": "wkkdIvh_e@FGDCFCFDlB_BjAkA"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.3114839,
+                                                                                "lng": -6.2274845
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                },
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "0.2 km",
+                                                                                "value": 162
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "2 mins",
+                                                                                "value": 125
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3090276,
+                                                                                "lng": -6.227231499999999
+                                                                        },
+                                                                        "html_instructions": "Turn <b>right</b>",
+                                                                        "maneuver": "turn-right",
+                                                                        "polyline": {
+                                                                                "points": "_ekdI`c_e@ZZXd@DBLH^Hh@LZJtA\\JM"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.3103959,
+                                                                                "lng": -6.2265681
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                },
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "31 m",
+                                                                                "value": 31
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "1 min",
+                                                                                "value": 22
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3089518,
+                                                                                "lng": -6.226807900000001
+                                                                        },
+                                                                        "html_instructions": "Turn <b>left</b>",
+                                                                        "maneuver": "turn-left",
+                                                                        "polyline": {
+                                                                                "points": "m|jdIdg_e@BKJgA"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.3090276,
+                                                                                "lng": -6.227231499999999
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                },
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "46 m",
+                                                                                "value": 46
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "1 min",
+                                                                                "value": 34
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.30855,
+                                                                                "lng": -6.2269459
+                                                                        },
+                                                                        "html_instructions": "Turn <b>right</b><div style=\"font-size:0.9em\">Destination will be on the right</div>",
+                                                                        "maneuver": "turn-right",
+                                                                        "polyline": {
+                                                                                "points": "}{jdIpd_e@`@LB@b@JD?"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.3089518,
+                                                                                "lng": -6.226807900000001
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                }
+                                                        ],
+                                                        "travel_mode": "WALKING"
+                                                }
+                                        ],
+                                        "traffic_speed_entry": [],
+                                        "via_waypoint": []
+                                }
+                        ],
+                        "overview_polyline": {
+                                "points": "gyqdItoee@h@]^Cf@BdABVALOFi@LCZ}CJcALi@\\sB\\aCDYMGLFR}An@eFhCjAvHpDxCdB~@t@He@PuAP_@^c@`@AZPlDhC`DdCd@VN@VMt@kA~BcC~A_Bz@iAdEmEAC\\c@r@s@p@u@dBqBNK\\WL[HEdAu@NMh@k@DOBOAs@BS~@k@h@o@|@sBvAyDr@gBn@sA\\y@b@uADEDAZ{@Xw@h@gBv@qCj@uBt@eCNc@f@aA|A}BpAeBnD_FtAyBjHqK~@kAzB_DfAuBj@kAX_AP_CNk@Re@v@uAfBsCjAsBp@aAlBoCv@cAPYBQFOh@_A|A{B|IoNzAyBxA{BtBgDr@qAtAqDnAgFKIJH^}AZmAnA{CNXtAlDtBdFx@bBb@jA`CxHJRLKFCFDlB_BjAkAZZXd@RLzD`AJMBKJgA`@Lf@LD?"
+                        },
+                        "summary": "",
+                        "warnings": [
+                                "Walking directions are in beta. Use caution \u2013 This route may be missing sidewalks or pedestrian paths."
+                        ],
+                        "waypoint_order": []
+                },
+                {
+                        "bounds": {
+                                "northeast": {
+                                        "lat": 53.3443633,
+                                        "lng": -6.222776
+                                },
+                                "southwest": {
+                                        "lat": 53.30855,
+                                        "lng": -6.2593112
+                                }
+                        },
+                        "copyrights": "Map data \u00a92020",
+                        "legs": [
+                                {
+                                        "arrival_time": {
+                                                "text": "2:52pm",
+                                                "time_zone": "Europe/Dublin",
+                                                "value": 1594043559
+                                        },
+                                        "departure_time": {
+                                                "text": "2:21pm",
+                                                "time_zone": "Europe/Dublin",
+                                                "value": 1594041668
+                                        },
+                                        "distance": {
+                                                "text": "5.5 km",
+                                                "value": 5537
+                                        },
+                                        "duration": {
+                                                "text": "32 mins",
+                                                "value": 1891
+                                        },
+                                        "end_address": "UCD Sports Centre, Belfield, Dublin, Ireland",
+                                        "end_location": {
+                                                "lat": 53.30855,
+                                                "lng": -6.2269459
+                                        },
+                                        "start_address": "College Green, Dublin 2, Ireland",
+                                        "start_location": {
+                                                "lat": 53.3443633,
+                                                "lng": -6.2593112
+                                        },
+                                        "steps": [
+                                                {
+                                                        "distance": {
+                                                                "text": "0.3 km",
+                                                                "value": 302
+                                                        },
+                                                        "duration": {
+                                                                "text": "4 mins",
+                                                                "value": 223
+                                                        },
+                                                        "end_location": {
+                                                                "lat": 53.3426683,
+                                                                "lng": -6.25672
+                                                        },
+                                                        "html_instructions": "Walk to Trinity College, Nassau St. (Opp. Frederick St)",
+                                                        "polyline": {
+                                                                "points": "gyqdItoee@FCDEPMHENANAR@R@^@J?N@H?LAH?FEDI@MBW@A?A@CJ?TaCD[@MBS?ED[F[DMJu@P}@DW?ABQ"
+                                                        },
+                                                        "start_location": {
+                                                                "lat": 53.3443633,
+                                                                "lng": -6.2593112
+                                                        },
+                                                        "steps": [
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "0.2 km",
+                                                                                "value": 150
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "2 mins",
+                                                                                "value": 114
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.34314329999999,
+                                                                                "lng": -6.2588576
+                                                                        },
+                                                                        "html_instructions": "Head <b>southeast</b> toward <b>Nassau St</b>/<wbr/><b>R138</b>",
+                                                                        "polyline": {
+                                                                                "points": "gyqdItoee@FCDEPMHENANAR@R@^@J?N@H?LAH?FEDI@MBW@A?A@CJ?"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.3443633,
+                                                                                "lng": -6.2593112
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                },
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "0.2 km",
+                                                                                "value": 152
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "2 mins",
+                                                                                "value": 109
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3426683,
+                                                                                "lng": -6.25672
+                                                                        },
+                                                                        "html_instructions": "Slight <b>left</b> onto <b>Nassau St</b>/<wbr/><b>R138</b><div style=\"font-size:0.9em\">Destination will be on the left</div>",
+                                                                        "maneuver": "turn-slight-left",
+                                                                        "polyline": {
+                                                                                "points": "sqqdIzlee@TaCD[@MBS?ED[F[DMJu@P}@DW?ABQ"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.34314329999999,
+                                                                                "lng": -6.2588576
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                }
+                                                        ],
+                                                        "travel_mode": "WALKING"
+                                                },
+                                                {
+                                                        "distance": {
+                                                                "text": "4.3 km",
+                                                                "value": 4321
+                                                        },
+                                                        "duration": {
+                                                                "text": "16 mins",
+                                                                "value": 969
+                                                        },
+                                                        "end_location": {
+                                                                "lat": 53.3145171,
+                                                                "lng": -6.224370899999999
+                                                        },
+                                                        "html_instructions": "Bus towards UCD",
+                                                        "polyline": {
+                                                                "points": "snqdIb}de@LFBQXwBDa@h@cE\\NjBz@hClAb@R~At@h@X\\NZPx@h@JFlA~@^}BTqAF_@F[N}@Lo@T{AXaBBOf@qC?CDWJ}@LaABSNkADi@@MF]DWLe@@Ex@gD\\sAZeAJe@R_@Xi@JUFKDM@AJQNWfAqBb@y@FKd@{@JQZg@PUf@o@LQtAaBTWJMZQDGf@u@rAkC@AHUh@eBb@cBBKhA^PDn@Rx@XH@bDfA|Af@HDv@VtHbCXJPHd@NtAx@Lg@?AVaAFOJ]HUDMHUBIb@w@h@u@r@gAl@y@b@k@v@cAV]HKtAqB@Ap@kANUPUVa@l@{@FIFI`BcCXc@t@iAb@m@Z_@PUHKFILSFGHOzAsBTc@Xg@BIR_@BGNULYHSN_@H_@P_CNk@HSHQNYf@{@Zi@v@oAFKJMp@gAXk@j@y@DGb@o@|@oAJONQf@q@PYBQ@CDKFM`@q@LUj@u@Xa@HMBEdBoCHOZg@PW`DeFHKNWlAiBLOx@oA^k@PYXe@^k@h@{@Xe@FMP]n@{AL_@L_@HUDOhAwEKI"
+                                                        },
+                                                        "start_location": {
+                                                                "lat": 53.3426561,
+                                                                "lng": -6.256341099999999
+                                                        },
+                                                        "transit_details": {
+                                                                "arrival_stop": {
+                                                                        "location": {
+                                                                                "lat": 53.3145171,
+                                                                                "lng": -6.224370899999999
+                                                                        },
+                                                                        "name": "Rte"
+                                                                },
+                                                                "arrival_time": {
+                                                                        "text": "2:41pm",
+                                                                        "time_zone": "Europe/Dublin",
+                                                                        "value": 1594042860
+                                                                },
+                                                                "departure_stop": {
+                                                                        "location": {
+                                                                                "lat": 53.3426561,
+                                                                                "lng": -6.256341099999999
+                                                                        },
+                                                                        "name": "Trinity College, Nassau St. (Opp. Frederick St)"
+                                                                },
+                                                                "departure_time": {
+                                                                        "text": "2:24pm",
+                                                                        "time_zone": "Europe/Dublin",
+                                                                        "value": 1594041891
+                                                                },
+                                                                "headsign": "UCD",
+                                                                "line": {
+                                                                        "agencies": [
+                                                                                {
+                                                                                        "name": "Dublin Bus",
+                                                                                        "url": "http://www.transportforireland.ie/"
+                                                                                }
+                                                                        ],
+                                                                        "short_name": "39a",
+                                                                        "vehicle": {
+                                                                                "icon": "//maps.gstatic.com/mapfiles/transit/iw2/6/bus2.png",
+                                                                                "name": "Bus",
+                                                                                "type": "BUS"
+                                                                        }
+                                                                },
+                                                                "num_stops": 16
+                                                        },
+                                                        "travel_mode": "TRANSIT"
+                                                },
+                                                {
+                                                        "distance": {
+                                                                "text": "0.9 km",
+                                                                "value": 914
+                                                        },
+                                                        "duration": {
+                                                                "text": "12 mins",
+                                                                "value": 699
+                                                        },
+                                                        "end_location": {
+                                                                "lat": 53.30855,
+                                                                "lng": -6.2269459
+                                                        },
+                                                        "html_instructions": "Walk to UCD Sports Centre, Belfield, Dublin, Ireland",
+                                                        "polyline": {
+                                                                "points": "k~kdIru~d@BOZmAFSRy@nA{CNXj@tAh@vAVr@Xn@b@fA^x@DHFLXl@P\\Rf@Nb@tAlEj@jBDJDFFGDCFCFDlB_BjAkAZZXd@DBLH^Hh@LZJtA\\JMBKJgA`@LB@b@JD?"
+                                                        },
+                                                        "start_location": {
+                                                                "lat": 53.3144637,
+                                                                "lng": -6.224422
+                                                        },
+                                                        "steps": [
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "0.1 km",
+                                                                                "value": 135
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "2 mins",
+                                                                                "value": 98
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3137639,
+                                                                                "lng": -6.222776
+                                                                        },
+                                                                        "html_instructions": "Head <b>southeast</b> on <b>Stillorgan Rd</b>/<wbr/><b>R138</b> toward <b>Nutley Ln</b>",
+                                                                        "polyline": {
+                                                                                "points": "k~kdIru~d@BOZmAFSRy@nA{C"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.3144637,
+                                                                                "lng": -6.224422
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                },
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "0.4 km",
+                                                                                "value": 403
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "5 mins",
+                                                                                "value": 321
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3114839,
+                                                                                "lng": -6.2274845
+                                                                        },
+                                                                        "html_instructions": "Turn <b>right</b> onto <b>Greenfield Park</b>",
+                                                                        "maneuver": "turn-right",
+                                                                        "polyline": {
+                                                                                "points": "_zkdIjk~d@NXj@tAh@vAVr@Xn@b@fA^x@DHFLXl@P\\Rf@Nb@tAlEj@jBDJDF"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.3137639,
+                                                                                "lng": -6.222776
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                },
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "0.1 km",
+                                                                                "value": 137
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "2 mins",
+                                                                                "value": 99
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3103959,
+                                                                                "lng": -6.2265681
+                                                                        },
+                                                                        "html_instructions": "Turn <b>left</b>",
+                                                                        "maneuver": "turn-left",
+                                                                        "polyline": {
+                                                                                "points": "wkkdIvh_e@FGDCFCFDlB_BjAkA"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.3114839,
+                                                                                "lng": -6.2274845
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                },
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "0.2 km",
+                                                                                "value": 162
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "2 mins",
+                                                                                "value": 125
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3090276,
+                                                                                "lng": -6.227231499999999
+                                                                        },
+                                                                        "html_instructions": "Turn <b>right</b>",
+                                                                        "maneuver": "turn-right",
+                                                                        "polyline": {
+                                                                                "points": "_ekdI`c_e@ZZXd@DBLH^Hh@LZJtA\\JM"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.3103959,
+                                                                                "lng": -6.2265681
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                },
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "31 m",
+                                                                                "value": 31
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "1 min",
+                                                                                "value": 22
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3089518,
+                                                                                "lng": -6.226807900000001
+                                                                        },
+                                                                        "html_instructions": "Turn <b>left</b>",
+                                                                        "maneuver": "turn-left",
+                                                                        "polyline": {
+                                                                                "points": "m|jdIdg_e@BKJgA"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.3090276,
+                                                                                "lng": -6.227231499999999
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                },
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "46 m",
+                                                                                "value": 46
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "1 min",
+                                                                                "value": 34
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.30855,
+                                                                                "lng": -6.2269459
+                                                                        },
+                                                                        "html_instructions": "Turn <b>right</b><div style=\"font-size:0.9em\">Destination will be on the right</div>",
+                                                                        "maneuver": "turn-right",
+                                                                        "polyline": {
+                                                                                "points": "}{jdIpd_e@`@LB@b@JD?"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.3089518,
+                                                                                "lng": -6.226807900000001
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                }
+                                                        ],
+                                                        "travel_mode": "WALKING"
+                                                }
+                                        ],
+                                        "traffic_speed_entry": [],
+                                        "via_waypoint": []
+                                }
+                        ],
+                        "overview_polyline": {
+                                "points": "gyqdItoee@h@]^Cf@BdABVALOFi@LCZ}CJcALi@\\sBDYD}ALFBQ^yCh@cE\\NtFhCjErBtAz@xAfAdAkG~BiNl@_FFw@Lu@fBgHf@kBl@iAZq@fCuEtAaC|CyD`@e@`@Yf@u@rAkCJWlAiEBKhA^`AXbAZbIlCfKhDtAx@Lg@VcAb@qAL_@lAmB`BaCzAoBxB}CjByC~CsEnAmB~@mAp@_APWzAsBTc@\\q@Vg@\\o@Xs@H_@P_CX_A|AqC|BqDXk@j@y@h@w@xAqBx@kADU|@aBrAkBfLsQfA_Bp@eAbBmC`@s@`AyBj@eBhAwEKIJHBOb@aBRy@nA{Cz@nB`AjCbBzDfA`CvChJDFFGLGFDlB_BjAkAZZ^h@l@RdAXtA\\JMNsAd@Nh@J"
+                        },
+                        "summary": "",
+                        "warnings": [
+                                "Walking directions are in beta. Use caution \u2013 This route may be missing sidewalks or pedestrian paths."
+                        ],
+                        "waypoint_order": []
+                },
+                {
+                        "bounds": {
+                                "northeast": {
+                                        "lat": 53.3465812,
+                                        "lng": -6.222776
+                                },
+                                "southwest": {
+                                        "lat": 53.30855,
+                                        "lng": -6.2595337
+                                }
+                        },
+                        "copyrights": "Map data \u00a92020",
+                        "legs": [
+                                {
+                                        "arrival_time": {
+                                                "text": "2:57pm",
+                                                "time_zone": "Europe/Dublin",
+                                                "value": 1594043841
+                                        },
+                                        "departure_time": {
+                                                "text": "2:22pm",
+                                                "time_zone": "Europe/Dublin",
+                                                "value": 1594041743
+                                        },
+                                        "distance": {
+                                                "text": "6.1 km",
+                                                "value": 6109
+                                        },
+                                        "duration": {
+                                                "text": "35 mins",
+                                                "value": 2098
+                                        },
+                                        "end_address": "UCD Sports Centre, Belfield, Dublin, Ireland",
+                                        "end_location": {
+                                                "lat": 53.30855,
+                                                "lng": -6.2269459
+                                        },
+                                        "start_address": "College Green, Dublin 2, Ireland",
+                                        "start_location": {
+                                                "lat": 53.3443633,
+                                                "lng": -6.2593112
+                                        },
+                                        "steps": [
+                                                {
+                                                        "distance": {
+                                                                "text": "0.3 km",
+                                                                "value": 329
+                                                        },
+                                                        "duration": {
+                                                                "text": "4 mins",
+                                                                "value": 242
+                                                        },
+                                                        "end_location": {
+                                                                "lat": 53.3465171,
+                                                                "lng": -6.2582432
+                                                        },
+                                                        "html_instructions": "Walk to D'Olier Street, stop 334",
+                                                        "polyline": {
+                                                                "points": "gyqdItoee@IBC?G@IAGAGEEEGEEGGIEGECECEAGCIAK?_@u@Uo@IKMi@Mi@Oq@G[AMCKISAGEGEECAEAC?C?E@EBGH]h@QXIPQZi@|@"
+                                                        },
+                                                        "start_location": {
+                                                                "lat": 53.3443633,
+                                                                "lng": -6.2593112
+                                                        },
+                                                        "steps": [
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "77 m",
+                                                                                "value": 77
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "1 min",
+                                                                                "value": 55
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3450098,
+                                                                                "lng": -6.259019299999999
+                                                                        },
+                                                                        "html_instructions": "Head <b>north</b> toward <b>College St</b>",
+                                                                        "polyline": {
+                                                                                "points": "gyqdItoee@IBC?G@IAGAGEEEGEEGGIEGECECEAGCIAK?"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.3443633,
+                                                                                "lng": -6.2593112
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                },
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "0.2 km",
+                                                                                "value": 159
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "2 mins",
+                                                                                "value": 116
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3458882,
+                                                                                "lng": -6.257314
+                                                                        },
+                                                                        "html_instructions": "Slight <b>right</b> onto <b>College St</b>",
+                                                                        "maneuver": "turn-slight-right",
+                                                                        "polyline": {
+                                                                                "points": "i}qdIzmee@_@u@Uo@IKMi@Mi@Oq@G[AMCKISAGEGEECAEAC?C?E@EB"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.3450098,
+                                                                                "lng": -6.259019299999999
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                },
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "93 m",
+                                                                                "value": 93
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "1 min",
+                                                                                "value": 71
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3465171,
+                                                                                "lng": -6.2582432
+                                                                        },
+                                                                        "html_instructions": "Continue onto <b>D'Olier Street</b><div style=\"font-size:0.9em\">Destination will be on the right</div>",
+                                                                        "polyline": {
+                                                                                "points": "ybrdIdcee@GH]h@QXIPQZi@|@"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.3458882,
+                                                                                "lng": -6.257314
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                }
+                                                        ],
+                                                        "travel_mode": "WALKING"
+                                                },
+                                                {
+                                                        "distance": {
+                                                                "text": "4.9 km",
+                                                                "value": 4866
+                                                        },
+                                                        "duration": {
+                                                                "text": "19 mins",
+                                                                "value": 1146
+                                                        },
+                                                        "end_location": {
+                                                                "lat": 53.3145171,
+                                                                "lng": -6.224370899999999
+                                                        },
+                                                        "html_instructions": "Bus towards Bray",
+                                                        "polyline": {
+                                                                "points": "cgrdIhhee@LXrBgDNOV@FHbAdEz@rBb@j@pAbAjA{@PCt@Af@LV@ZWHWbC}P?A@?R}ADa@h@cE\\NjBz@hClAb@R~At@h@X?AxCfB~@t@He@PuAP_@^c@`@AZPlDhCh@`@vBbBd@VN@VMt@kAnAsAn@o@~A_Bz@iAbEkE@AAC\\c@b@c@NOHIf@k@b@e@`AkAHGDCHGROL[HEr@k@PIHEDGf@i@@A@CBK@G@GAg@?K@O@Ch@]TMPSV[Zu@`@}@r@gBb@qAPg@`@_ALY`@y@Te@FSRs@BGFUBCBC@ADAZ{@L[J[Ts@Rs@XaA?CNe@Le@DQVy@Lg@?AVaAFOJ]HUDMHUBIb@w@h@u@r@gAl@y@b@k@v@cAV]HKtAqB@Ap@kANUPUVa@l@{@FIFI`BcCXc@t@iAb@m@Z_@PUHKFILSFGHOzAsBTc@Xg@BIR_@BGNULYHSN_@H_@P_CNk@HSHQNYf@{@Zi@v@oAFKJMp@gAXk@j@y@DGb@o@|@oAJONQf@q@PYBQ@CDKFM`@q@LUj@u@Xa@HMBEdBoCHOZg@PW`DeFHKNWlAiBLOx@oA^k@PYXe@^k@h@{@Xe@FMP]n@{AL_@L_@HUDOhAwEKI"
+                                                        },
+                                                        "start_location": {
+                                                                "lat": 53.3465812,
+                                                                "lng": -6.2581256
+                                                        },
+                                                        "transit_details": {
+                                                                "arrival_stop": {
+                                                                        "location": {
+                                                                                "lat": 53.3145171,
+                                                                                "lng": -6.224370899999999
+                                                                        },
+                                                                        "name": "Rte"
+                                                                },
+                                                                "arrival_time": {
+                                                                        "text": "2:45pm",
+                                                                        "time_zone": "Europe/Dublin",
+                                                                        "value": 1594043142
+                                                                },
+                                                                "departure_stop": {
+                                                                        "location": {
+                                                                                "lat": 53.3465812,
+                                                                                "lng": -6.2581256
+                                                                        },
+                                                                        "name": "D'Olier Street, stop 334"
+                                                                },
+                                                                "departure_time": {
+                                                                        "text": "2:26pm",
+                                                                        "time_zone": "Europe/Dublin",
+                                                                        "value": 1594041996
+                                                                },
+                                                                "headsign": "Bray",
+                                                                "line": {
+                                                                        "agencies": [
+                                                                                {
+                                                                                        "name": "Dublin Bus",
+                                                                                        "url": "http://www.transportforireland.ie/"
+                                                                                }
+                                                                        ],
+                                                                        "short_name": "155",
+                                                                        "vehicle": {
+                                                                                "icon": "//maps.gstatic.com/mapfiles/transit/iw2/6/bus2.png",
+                                                                                "name": "Bus",
+                                                                                "type": "BUS"
+                                                                        }
+                                                                },
+                                                                "num_stops": 15
+                                                        },
+                                                        "travel_mode": "TRANSIT"
+                                                },
+                                                {
+                                                        "distance": {
+                                                                "text": "0.9 km",
+                                                                "value": 914
+                                                        },
+                                                        "duration": {
+                                                                "text": "12 mins",
+                                                                "value": 699
+                                                        },
+                                                        "end_location": {
+                                                                "lat": 53.30855,
+                                                                "lng": -6.2269459
+                                                        },
+                                                        "html_instructions": "Walk to UCD Sports Centre, Belfield, Dublin, Ireland",
+                                                        "polyline": {
+                                                                "points": "k~kdIru~d@BOZmAFSRy@nA{CNXj@tAh@vAVr@Xn@b@fA^x@DHFLXl@P\\Rf@Nb@tAlEj@jBDJDFFGDCFCFDlB_BjAkAZZXd@DBLH^Hh@LZJtA\\JMBKJgA`@LB@b@JD?"
+                                                        },
+                                                        "start_location": {
+                                                                "lat": 53.3144637,
+                                                                "lng": -6.224422
+                                                        },
+                                                        "steps": [
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "0.1 km",
+                                                                                "value": 135
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "2 mins",
+                                                                                "value": 98
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3137639,
+                                                                                "lng": -6.222776
+                                                                        },
+                                                                        "html_instructions": "Head <b>southeast</b> on <b>Stillorgan Rd</b>/<wbr/><b>R138</b> toward <b>Nutley Ln</b>",
+                                                                        "polyline": {
+                                                                                "points": "k~kdIru~d@BOZmAFSRy@nA{C"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.3144637,
+                                                                                "lng": -6.224422
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                },
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "0.4 km",
+                                                                                "value": 403
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "5 mins",
+                                                                                "value": 321
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3114839,
+                                                                                "lng": -6.2274845
+                                                                        },
+                                                                        "html_instructions": "Turn <b>right</b> onto <b>Greenfield Park</b>",
+                                                                        "maneuver": "turn-right",
+                                                                        "polyline": {
+                                                                                "points": "_zkdIjk~d@NXj@tAh@vAVr@Xn@b@fA^x@DHFLXl@P\\Rf@Nb@tAlEj@jBDJDF"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.3137639,
+                                                                                "lng": -6.222776
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                },
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "0.1 km",
+                                                                                "value": 137
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "2 mins",
+                                                                                "value": 99
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3103959,
+                                                                                "lng": -6.2265681
+                                                                        },
+                                                                        "html_instructions": "Turn <b>left</b>",
+                                                                        "maneuver": "turn-left",
+                                                                        "polyline": {
+                                                                                "points": "wkkdIvh_e@FGDCFCFDlB_BjAkA"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.3114839,
+                                                                                "lng": -6.2274845
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                },
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "0.2 km",
+                                                                                "value": 162
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "2 mins",
+                                                                                "value": 125
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3090276,
+                                                                                "lng": -6.227231499999999
+                                                                        },
+                                                                        "html_instructions": "Turn <b>right</b>",
+                                                                        "maneuver": "turn-right",
+                                                                        "polyline": {
+                                                                                "points": "_ekdI`c_e@ZZXd@DBLH^Hh@LZJtA\\JM"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.3103959,
+                                                                                "lng": -6.2265681
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                },
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "31 m",
+                                                                                "value": 31
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "1 min",
+                                                                                "value": 22
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3089518,
+                                                                                "lng": -6.226807900000001
+                                                                        },
+                                                                        "html_instructions": "Turn <b>left</b>",
+                                                                        "maneuver": "turn-left",
+                                                                        "polyline": {
+                                                                                "points": "m|jdIdg_e@BKJgA"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.3090276,
+                                                                                "lng": -6.227231499999999
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                },
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "46 m",
+                                                                                "value": 46
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "1 min",
+                                                                                "value": 34
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.30855,
+                                                                                "lng": -6.2269459
+                                                                        },
+                                                                        "html_instructions": "Turn <b>right</b><div style=\"font-size:0.9em\">Destination will be on the right</div>",
+                                                                        "maneuver": "turn-right",
+                                                                        "polyline": {
+                                                                                "points": "}{jdIpd_e@`@LB@b@JD?"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.3089518,
+                                                                                "lng": -6.226807900000001
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                }
+                                                        ],
+                                                        "travel_mode": "WALKING"
+                                                }
+                                        ],
+                                        "traffic_speed_entry": [],
+                                        "via_waypoint": []
+                                }
+                        ],
+                        "overview_polyline": {
+                                "points": "gyqdItoee@UDQCMK[_@YMUAu@eBIKMi@]{AIi@M_@GOIGS?MLo@bA[l@i@|@KULXrBgDNOV@FHbAdEz@rBb@j@pAbAjA{@PCt@Af@LV@ZWHWbC_QT}An@eFhCjAvHpDxCdB~@t@He@PuAP_@^c@`@AZPlDhC`DdCd@VN@VMt@kA~BcC~A_Bz@iAdEmEAC\\c@r@s@p@u@dBqBNK\\WL[HEdAu@NMh@k@DOBOAs@BS~@k@h@o@|@sBvAyDr@gBn@sA\\y@b@uADEDAZ{@Xw@h@gBv@qCj@uBt@eCNc@f@aA|A}BpAeBnD_FtAyBjHqK~@kAzB_DfAuBj@kAX_AP_CNk@Re@v@uAfBsCjAsBp@aAlBoCv@cAPYBQFOh@_A|A{B|IoNzAyBxA{BtBgDr@qAtAqDnAgFKIJH^}AZmAnA{CNXtAlDtBdFx@bBb@jA`CxHJRLKFCFDlB_BjAkAZZXd@RLzD`AJMBKJgA`@Lf@LD?"
+                        },
+                        "summary": "",
+                        "warnings": [
+                                "Walking directions are in beta. Use caution \u2013 This route may be missing sidewalks or pedestrian paths."
+                        ],
+                        "waypoint_order": []
+                }
+        ],
+        "status": "OK"
+}
