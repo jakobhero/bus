@@ -11,7 +11,7 @@ class Stops(Resource):
         stops=[]
         for stop in StopsModel.query.all():
             stops.append({'id': stop.stop_id, 'name':stop.name, 'coords':{'lat':stop.lat,'lon':stop.lon}})
-        return json.dumps(stops)
+        return stops
 
 class realTime(Resource):
     def get(self):
@@ -101,19 +101,11 @@ def directions_parser(directions):
         #route specific information is stored in variable curr
         curr={
             "distance":route["distance"]["value"],
-            "start":{
-                "time":route["departure_time"]["value"],
-                "address":route["start_address"],
-                "location":route['start_location']
-            },
-            "end":{
-                "time":route["arrival_time"]["value"],
-                "address":route["end_address"],
-                "location":route["end_location"]
-            },
+            "duration":route["duration"]["value"]
         }
         
-        bus_index=[] #holds index of bus travel(s) in leg array
+        db_index=[] #holds index of dublin bus travel(s) in leg array
+        bus_index=[] #holds index of all bus travel(s) in leg array
         steps=[]
         index=0
 
@@ -145,15 +137,32 @@ def directions_parser(directions):
                     "type":step["transit_details"]["line"]["agencies"][0]["name"]
                 }
                 if transit["type"]=="Dublin Bus":
+                    db_index.append(index)
+                    transit["route"]=step["transit_details"]["line"]["short_name"]
+                if step["transit_details"]["line"]["vehicle"]["type"]=="BUS":
                     bus_index.append(index)
-                transit["route"]=step["transit_details"]["line"]["short_name"]
                 curr_step["transit"]=transit
             
             steps.append(curr_step)
             index+=1
 
+        curr["db_index"]=db_index
         curr["bus_index"]=bus_index
         curr["steps"]=steps
+
+        #times are only specified if transit is involved
+        if len(curr["bus_index"])>=1:
+            curr["start"]={
+                "time":route["departure_time"]["value"],
+                "address":route["start_address"],
+                "location":route['start_location']
+            }
+            curr["end"]={
+                "time":route["arrival_time"]["value"],
+                "address":route["end_address"],
+                "location":route["end_location"]
+            }
+
         connections.append(curr)
     
     return {"connections": connections, "status": status}
