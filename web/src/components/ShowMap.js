@@ -99,36 +99,41 @@ function ShowMap({ source, destination, stops, centreON }) {
       >
         {source && (
           <Marker
-            // key={source.lat - marker.lng}
             position={{ lat: source.lat, lng: source.lng }}
             // onClick={() => setSelected(marker)}
           />
         )}
-        {markers.map((marker) => (
+        {stops.map((marker) => (
           <Marker
-            key={marker.lat - marker.lng}
-            position={{ lat: marker.lat, lng: marker.lng }}
+            key={marker.stop_lat - marker.stop_lon}
+            position={{ lat: marker.stop_lat, lng: marker.stop_lon }}
             onClick={() => setSelected(marker)}
+            icon={{
+              url: `./bus.svg`,
+              origin: new window.google.maps.Point(0, 0),
+              anchor: new window.google.maps.Point(15, 15),
+              scaledSize: new window.google.maps.Size(30, 30),
+            }}
           />
         ))}
-
         {destination && (
           <Marker
             // key={source.lat - marker.lng}
             position={{ lat: destination.lat, lng: destination.lng }}
+
             // onClick={() => setSelected(marker)}
           />
         )}
         {selected ? (
           <InfoWindow
-            position={{ lat: selected.lat, lng: selected.lng }}
+            position={{ lat: selected.stop_lat, lng: selected.stop_lon }}
             onCloseClick={() => {
               setSelected(null);
             }}
           >
             <div>
               <h2>
-                <p>Clicked</p>
+                <p>{`Stop ${selected.id}`}</p>
               </h2>
             </div>
           </InfoWindow>
