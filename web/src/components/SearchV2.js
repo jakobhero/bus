@@ -58,18 +58,22 @@ const PlacesAutocomplete = ({ id, handleChange }) => {
   };
 
   const handleSelect = (val) => {
+    const busNum = val.slice(0, val.length - 10);
     let lat, lng;
-    setValue(val, false);
-    if (val.includes("STOP")) {
+
+    if (!isNaN(busNum)) {
+      setValue(val, false);
       for (var i = 0; i < stops.length; i++) {
-        let stop_id = stops[i].id.toUpperCase();
-        if (stop_id === val) {
+        let stop_id = stops[i].id;
+
+        if (stop_id === busNum) {
           lat = stops[i].stop_lat;
           lng = stops[i].stop_lon;
-          handleChange({ val, lat, lng }, id);
+          handleChange({ busNum, lat, lng }, id);
         }
       }
     } else {
+      setValue(val, false);
       getGeocode({ address: val })
         .then((results) => getLatLng(results[0]))
         .then((coords) => {
@@ -94,12 +98,13 @@ const PlacesAutocomplete = ({ id, handleChange }) => {
           placeholder="Choose a location"
           style={{ width: "100%" }}
           data-lpignore="true"
+          selectOnClick
         />
         <ComboboxPopover>
           <ComboboxList>
             {stop_data.length > 0 &&
               stop_data.map(({ stop_id, key }) => (
-                <ComboboxOption key={key} value={stop_id} />
+                <ComboboxOption key={key} value={`${stop_id}, Bus Stop`} />
               ))}
             {status === "OK" &&
               data.map(({ id, description }) => (
