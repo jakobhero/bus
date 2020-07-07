@@ -24,16 +24,14 @@ const columns = [
 const RealTimeInfo = (realTimeData) => {
   const stopid = realTimeData.realTimeData.stopid;
   realTimeData = realTimeData.realTimeData.data;
-
-  console.log(stopid);
   return (
     <div className="realTime">
+      <h2>{`Stop ${stopid}`}</h2>
       <Table
         dataSource={realTimeData}
         columns={columns}
         pagination={false}
         rowKey={(record) => record.arrivaldatetime + record.route}
-        title={() => `Stop ${stopid}`}
       />
       ;
     </div>

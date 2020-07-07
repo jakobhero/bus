@@ -27,7 +27,6 @@ function ShowMap({ source, destination, stops, centreON, setRealTime }) {
     mapRef.current.panTo({ lat, lng });
     mapRef.current.setZoom(14);
   }, []);
-
   // let bounds = new window.google.maps.LatLngBounds();
   // for (var i = 0; i < markers.length; i++) {
   //   bounds.extend({ lat: markers[i].lat, lng: markers[i].lng });

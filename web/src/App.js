@@ -71,9 +71,6 @@ const App = () => {
         // return res;
         setRealTimeData(res);
         console.log(res);
-        // })
-        // .then((res) => {
-        //   console.log(res);
       })
       .catch(console.log);
   };
@@ -92,6 +89,13 @@ const App = () => {
     if (source.stopID) {
       setRealTime(source.stopID);
       setCentre({ lat: source.lat, lng: source.lng });
+      let tempStop = [];
+      for (var j = 0; j < stops.length; j++) {
+        if (stops[j].id === source.stopID) {
+          tempStop.push(stops[j]);
+        }
+      }
+      setStopsForMap(tempStop);
     } else if (!dest.val) {
       setCentre({ lat: source.lat, lng: source.lng });
       setStopsForMap(findStopsRadius(source.lat, source.lng));
@@ -108,12 +112,9 @@ const App = () => {
         .then((res) => {
           if (res.data.status === "OK") {
             setDueTimes(res.data.connections);
-            console.log(dueTimes);
           }
-          console.log(res.data);
         })
         .catch(console.log);
-
       setState(newFields);
       let newCentre = {
         lat: (source.lat + dest.lat) / 2,
@@ -140,7 +141,6 @@ const App = () => {
         ? -sortStepsNum
         : 0
     );
-    // console.log(dueTimes);
     setDueTimes(dueTimesCopy);
     setSortStepsNum(-sortStepsNum);
   };
@@ -154,7 +154,6 @@ const App = () => {
         ? -sortTimeNum
         : 0
     );
-    // console.log(dueTimes);
     setDueTimes(dueTimesCopy);
     setSortTimeNum(-sortTimeNum);
   };
