@@ -93,7 +93,7 @@ const App = () => {
             "&arr=" +
             dest.val +
             "&time=" +
-            time / 1000
+            Math.round(time / 1000)
         )
         .then((res) => {
           if (res.data.status === "OK") {
