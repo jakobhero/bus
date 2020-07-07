@@ -4,7 +4,6 @@ import { GoogleMap, Marker, InfoWindow } from "@react-google-maps/api";
 import mapStyles from "./mapStyles";
 import mapStylesIcons from "./mapStylesIcons";
 
-// import { DirectionsService, DirectionsRenderer } from "@react-google-maps/api";
 import Switch from "react-switch";
 
 import { Button } from "antd";
@@ -15,38 +14,9 @@ const mapContainerStyle = {
   width: "100vw",
 };
 
-// const libraries = ["geometry", "drawing", "places"];
-
 function ShowMap({ source, destination, stops, centreON, setRealTime }) {
-  const [markers, setMarkers] = React.useState([]);
   const [selected, setSelected] = React.useState(null);
-
-  const [mapSettings, setMapSettings] = React.useState({
-    styles: mapStyles,
-    disableDefaultUI: true,
-    zoomControl: true,
-  });
   const [touristModeBool, setTouristModeBool] = React.useState(false);
-
-  const touristMode = () => {
-    setMapSettings({
-      styles: touristModeBool ? mapStyles : mapStylesIcons,
-      disableDefaultUI: true,
-      zoomControl: true,
-    });
-    setTouristModeBool(!touristModeBool);
-  };
-
-  const onMapClick = React.useCallback((e) => {
-    setMarkers((current) => [
-      ...current,
-      {
-        lat: e.latLng.lat(),
-        lng: e.latLng.lng(),
-        time: new Date(),
-      },
-    ]);
-  }, []);
 
   const mapRef = React.useRef();
   const onMapLoad = React.useCallback((map) => {
@@ -57,21 +27,6 @@ function ShowMap({ source, destination, stops, centreON, setRealTime }) {
     mapRef.current.panTo({ lat, lng });
     mapRef.current.setZoom(14);
   }, []);
-
-  // const [response, setResponse] = React.useState(null);
-  // const directionsCallback = (response) => {
-  //   console.log(response);
-
-  //   if (response !== null) {
-  //     if (response.status === "OK") {
-  //       setResponse(() => ({
-  //         response,
-  //       }));
-  //     } else {
-  //       console.log("response: ", response);
-  //     }
-  //   }
-  // };
 
   // let bounds = new window.google.maps.LatLngBounds();
   // for (var i = 0; i < markers.length; i++) {
@@ -84,14 +39,20 @@ function ShowMap({ source, destination, stops, centreON, setRealTime }) {
   return (
     <div>
       <Locate panTo={panTo} />
-      <Switch onChange={touristMode} checked={touristModeBool} />
+      <Switch
+        onChange={() => setTouristModeBool(!touristModeBool)}
+        checked={touristModeBool}
+      />
       <GoogleMap
         id="map"
         mapContainerStyle={mapContainerStyle}
         zoom={14}
         center={centreON}
-        options={mapSettings}
-        onClick={onMapClick}
+        options={{
+          styles: touristModeBool ? mapStylesIcons : mapStyles,
+          disableDefaultUI: true,
+          zoomControl: true,
+        }}
         onLoad={onMapLoad}
       >
         {source && (
@@ -143,28 +104,6 @@ function ShowMap({ source, destination, stops, centreON, setRealTime }) {
             </div>
           </InfoWindow>
         ) : null}
-
-        {/* {destination !== "" && source !== "" && (
-          <DirectionsService
-            // required
-            options={{
-              destination: destination,
-              origin: source,
-              travelMode: "DRIVING",
-            }}
-            // required
-            callback={directionsCallback}
-          />
-        )} */}
-
-        {/* {response !== null && (
-          <DirectionsRenderer
-            // required
-            options={{
-              directions: response,
-            }}
-          />
-        )} */}
       </GoogleMap>
     </div>
   );
