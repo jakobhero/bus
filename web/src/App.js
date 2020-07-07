@@ -67,7 +67,13 @@ const App = () => {
     axios
       .get("http://localhost/realtime?stopid=" + stop)
       .then((res) => {
-        setRealTimeData(res.data);
+        res["stopid"] = stop;
+        // return res;
+        setRealTimeData(res);
+        console.log(res);
+        // })
+        // .then((res) => {
+        //   console.log(res);
       })
       .catch(console.log);
   };
@@ -197,10 +203,10 @@ const App = () => {
           Locations
         </TabPane>
         <TabPane tab="Real Time" key="4">
-          {realTimeData.length >= 1 && (
+          {realTimeData.data && (
             <RealTimeInfo realTimeData={realTimeData}></RealTimeInfo>
           )}
-          {realTimeData.length < 1 && <p>Select a bus stop</p>}
+          {/* {realTimeData.data && <p>Select a bus stop</p>} */}
         </TabPane>
       </Tabs>
     </div>
