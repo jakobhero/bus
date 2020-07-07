@@ -6,11 +6,15 @@ import SearchForm from "./components/searchForm";
 import ShowMap from "./components/ShowMap";
 import RealTimeInfo from "./components/RealTime";
 
-// import { Layout, Menu, Input, Breadcrumb, DatePicker } from "antd";
 import { Tabs, Button } from "antd";
 import "antd/dist/antd.css";
 
 import axios from "axios";
+
+import AccessTimeIcon from "@material-ui/icons/AccessTime";
+import SortIcon from "@material-ui/icons/Sort";
+import DirectionsBusIcon from "@material-ui/icons/DirectionsBus";
+import Tooltip from "@material-ui/core/Tooltip";
 
 const { TabPane } = Tabs;
 
@@ -118,17 +122,35 @@ const App = () => {
     setActiveKey(key);
   }
 
-  const Sort = (num) => {
+  const [sortStepsNum, setSortStepsNum] = useState(1);
+  const [sortTimeNum, setSortTimeNum] = useState(1);
+
+  const sortSteps = () => {
     const dueTimesCopy = [...dueTimes];
     dueTimesCopy.sort((a, b) =>
       a.steps.length > b.steps.length
-        ? num
+        ? sortStepsNum
         : b.steps.length > a.steps.length
-        ? -num
+        ? -sortStepsNum
         : 0
     );
     // console.log(dueTimes);
     setDueTimes(dueTimesCopy);
+    setSortStepsNum(-sortStepsNum);
+  };
+
+  const sortTime = () => {
+    const dueTimesCopy = [...dueTimes];
+    dueTimesCopy.sort((a, b) =>
+      a.end.time > b.end.time
+        ? sortTimeNum
+        : b.end.time > a.end.time
+        ? -sortTimeNum
+        : 0
+    );
+    // console.log(dueTimes);
+    setDueTimes(dueTimesCopy);
+    setSortTimeNum(-sortTimeNum);
   };
 
   return (
@@ -149,35 +171,36 @@ const App = () => {
         </TabPane>
 
         <TabPane tab="Connections" key="2">
-          {dueTimes && (
-            <Button
-              style={{ margin: 20 }}
-              type="submit"
-              onClick={() => Sort(1)}
-            >
-              Sort by steps
-            </Button>
+          {dueTimes.length > 0 && (
+            <Tooltip title="Sort by arrival time">
+              <Button style={{ margin: 20 }} type="submit" onClick={sortTime}>
+                <AccessTimeIcon></AccessTimeIcon>
+                <SortIcon></SortIcon>
+              </Button>
+            </Tooltip>
           )}
-          {dueTimes && (
-            <Button
-              style={{ margin: 20 }}
-              type="submit"
-              onClick={() => Sort(-1)}
-            >
-              Sort by steps
-            </Button>
+          {dueTimes.length > 0 && (
+            <Tooltip title="Sort by bus changes">
+              <Button style={{ margin: 20 }} type="submit" onClick={sortSteps}>
+                <DirectionsBusIcon></DirectionsBusIcon>
+                <SortIcon></SortIcon>
+              </Button>
+            </Tooltip>
           )}
-          {dueTimes &&
-            dueTimes.map((dueTime, i) => <Route key={i} dueTimes={dueTime} />)}
+          {dueTimes.map((dueTime, i) => (
+            <Route key={i} dueTimes={dueTime} />
+          ))}
+          {dueTimes.length < 1 && <p>Choose a source and destination</p>}
         </TabPane>
 
         <TabPane tab="Locations" key="3">
           Locations
         </TabPane>
         <TabPane tab="Real Time" key="4">
-          {realTimeData.length > 1 && (
+          {realTimeData.length >= 1 && (
             <RealTimeInfo realTimeData={realTimeData}></RealTimeInfo>
           )}
+          {realTimeData.length < 1 && <p>Select a bus stop</p>}
         </TabPane>
       </Tabs>
     </div>
