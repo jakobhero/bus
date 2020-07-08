@@ -62,8 +62,8 @@ function ShowMap({ source, destination, stops, centreON, setRealTime }) {
         )}
         {stops.map((marker) => (
           <Marker
-            key={marker.stop_lat - marker.stop_lon}
-            position={{ lat: marker.stop_lat, lng: marker.stop_lon }}
+            key={marker.lat - marker.lng}
+            position={{ lat: marker.lat, lng: marker.lng }}
             onClick={() => setSelected(marker)}
             icon={{
               url: `./bus.svg`,
@@ -83,18 +83,18 @@ function ShowMap({ source, destination, stops, centreON, setRealTime }) {
         )}
         {selected ? (
           <InfoWindow
-            position={{ lat: selected.stop_lat, lng: selected.stop_lon }}
+            position={{ lat: selected.lat, lng: selected.lng }}
             onCloseClick={() => {
               setSelected(null);
             }}
           >
             <div>
               <h2>
-                <p>{`Stop ${selected.id}`}</p>
+                <p>{`Stop ${selected.stopid}`}</p>
                 <Button
                   style={{ margin: 20 }}
                   onClick={() =>
-                    setRealTime(selected.id, selected.lat, selected.lng)
+                    setRealTime(selected.stopid, selected.lat, selected.lng)
                   }
                 >
                   Due Times

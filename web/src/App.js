@@ -44,7 +44,7 @@ function getDistance(latitude1, longitude1, latitude2, longitude2) {
 function findStopsRadius(lat, lng) {
   let showMarkers = [];
   for (var i = 0; i < stops.length; i++) {
-    let dist = getDistance(stops[i].stop_lat, stops[i].stop_lon, lat, lng);
+    let dist = getDistance(stops[i].lat, stops[i].lng, lat, lng);
     if (dist < 0.5) {
       showMarkers.push(stops[i]);
     }
@@ -96,6 +96,16 @@ const App = () => {
         }
       }
       setStopsForMap(tempStop);
+    } else if (source.bus_id) {
+      axios
+        .get("http://localhost/routeinfo?routeid=" + source.bus_id)
+        .then((res) => {
+          console.log(res);
+          if (res.statusText === "OK") {
+            setStopsForMap(res.data[0]);
+          }
+        })
+        .catch(console.log);
     } else if (!dest.val) {
       setCentre({ lat: source.lat, lng: source.lng });
       setStopsForMap(findStopsRadius(source.lat, source.lng));
