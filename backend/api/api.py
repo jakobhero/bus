@@ -206,6 +206,12 @@ def directions_parser(directions):
                 "mode":step["travel_mode"]
             }
             
+            #directions for walking are stored in array of polylines
+            if curr_step["mode"]=="WALKING":
+                polylines=[]
+                for poly_elem in step["steps"]:
+                    polylines.append(poly_elem["polyline"]["points"])
+                curr_step["polyline"]=polylines
             #transic specific information is stored in variable transit, which will be addedd to curr_step
             if curr_step["mode"]=="TRANSIT":
                 transit={
@@ -228,6 +234,7 @@ def directions_parser(directions):
                 if step["transit_details"]["line"]["vehicle"]["type"]=="BUS":
                     bus_index.append(index)
                 curr_step["transit"]=transit
+                curr_step["polyline"]=step["polyline"]["points"]
             
             steps.append(curr_step)
             index+=1
