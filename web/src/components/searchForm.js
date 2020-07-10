@@ -41,7 +41,6 @@ const SearchForm = ({ fields, handleSubmitApp }) => {
   const handleChange = (value, fieldId) => {
     let newFields = { ...fieldsValues };
     if (fieldId === "time") {
-      console.log();
       newFields[fieldId] = new Date(value.date).getTime();
     } else {
       newFields[fieldId] = value;
