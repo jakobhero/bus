@@ -7,6 +7,8 @@ import mapStylesIcons from "./mapStylesIcons";
 import Switch from "react-switch";
 
 import { Button } from "antd";
+import { HistoryOutlined, StarFilled, StarOutlined } from "@ant-design/icons";
+
 // https://www.youtube.com/watch?v=SySVBV_jcCM
 
 const mapContainerStyle = {
@@ -91,15 +93,22 @@ function ShowMap({ source, destination, stops, centreON, setRealTime }) {
             <div>
               <h2>
                 <p>{`Stop ${selected.stopid}`}</p>
-                <Button
-                  style={{ margin: 20 }}
-                  onClick={() =>
-                    setRealTime(selected.stopid, selected.lat, selected.lng)
-                  }
-                >
-                  Due Times
-                </Button>
               </h2>
+              <p>{selected.fullname}</p>
+              <Button
+                style={{ margin: 10 }}
+                onClick={() =>
+                  setRealTime(selected.stopid, selected.lat, selected.lng)
+                }
+              >
+                <HistoryOutlined />
+              </Button>
+              <Button style={{ margin: 10 }}>
+                <StarOutlined />
+              </Button>
+              <Button style={{ margin: 10 }}>
+                <StarFilled />
+              </Button>
             </div>
           </InfoWindow>
         ) : null}
