@@ -44,7 +44,7 @@ function getDistance(latitude1, longitude1, latitude2, longitude2) {
 function findStopsRadius(lat, lng) {
   let showMarkers = [];
   for (var i = 0; i < stops.length; i++) {
-    let dist = getDistance(stops[i].stop_lat, stops[i].stop_lon, lat, lng);
+    let dist = getDistance(stops[i].lat, stops[i].lng, lat, lng);
     if (dist < 0.5) {
       showMarkers.push(stops[i]);
     }
@@ -67,7 +67,10 @@ const App = () => {
     axios
       .get("http://localhost/realtime?stopid=" + stop)
       .then((res) => {
-        setRealTimeData(res.data);
+        res["stopid"] = stop;
+        // return res;
+        setRealTimeData(res);
+        console.log(res);
       })
       .catch(console.log);
   };
@@ -86,6 +89,23 @@ const App = () => {
     if (source.stopID) {
       setRealTime(source.stopID);
       setCentre({ lat: source.lat, lng: source.lng });
+      let tempStop = [];
+      for (var j = 0; j < stops.length; j++) {
+        if (stops[j].id === source.stopID) {
+          tempStop.push(stops[j]);
+        }
+      }
+      setStopsForMap(tempStop);
+    } else if (source.bus_id) {
+      axios
+        .get("http://localhost/routeinfo?routeid=" + source.bus_id)
+        .then((res) => {
+          console.log(res);
+          if (res.statusText === "OK") {
+            setStopsForMap(res.data[0]);
+          }
+        })
+        .catch(console.log);
     } else if (!dest.val) {
       setCentre({ lat: source.lat, lng: source.lng });
       setStopsForMap(findStopsRadius(source.lat, source.lng));
@@ -102,12 +122,9 @@ const App = () => {
         .then((res) => {
           if (res.data.status === "OK") {
             setDueTimes(res.data.connections);
-            console.log(dueTimes);
           }
-          console.log(res.data);
         })
         .catch(console.log);
-
       setState(newFields);
       let newCentre = {
         lat: (source.lat + dest.lat) / 2,
@@ -134,7 +151,6 @@ const App = () => {
         ? -sortStepsNum
         : 0
     );
-    // console.log(dueTimes);
     setDueTimes(dueTimesCopy);
     setSortStepsNum(-sortStepsNum);
   };
@@ -148,7 +164,6 @@ const App = () => {
         ? -sortTimeNum
         : 0
     );
-    // console.log(dueTimes);
     setDueTimes(dueTimesCopy);
     setSortTimeNum(-sortTimeNum);
   };
@@ -197,10 +212,10 @@ const App = () => {
           Locations
         </TabPane>
         <TabPane tab="Real Time" key="4">
-          {realTimeData.length >= 1 && (
+          {realTimeData.data && (
             <RealTimeInfo realTimeData={realTimeData}></RealTimeInfo>
           )}
-          {realTimeData.length < 1 && <p>Select a bus stop</p>}
+          {/* {realTimeData.data && <p>Select a bus stop</p>} */}
         </TabPane>
       </Tabs>
     </div>
