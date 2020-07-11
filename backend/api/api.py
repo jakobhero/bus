@@ -31,10 +31,8 @@ class realTime(Resource):
         return parsed_json['results']
 
 class routeInfo(Resource):
-    def match(self, x, y):
-        """Takes in two lists and returns amount of elements in both lists
-        """
-        return max(len(x),len(y)) - len(set(x) - set(y))
+    def match(self,list1,list2):
+        return len(list(set(list1).intersection(list2)))
 
     def get_stops(self, stopsObj):
         """Iterates through object and extracts stopid for place in list"""
@@ -57,9 +55,9 @@ class routeInfo(Resource):
             dir1, dir2 = [], []
             count = 0
             for i, result in enumerate(results):
-                # print(len(result['stops']))
                 match_dir1 = self.match(self.get_stops(results[start]['stops']), self.get_stops(result['stops']))
                 match_dir2 = self.match(self.get_stops(results[-start-1]['stops']), self.get_stops(result['stops']))
+                # print(i, " matches with dir1 ", match_dir1, " and with dir2 ", match_dir2, " num of stops in i ", len(self.get_stops(result['stops'])))
                 if match_dir1 > match_dir2:
                     dir1.append(i)
                 elif match_dir1 < match_dir2:
@@ -110,6 +108,7 @@ class routeInfo(Resource):
         req_items = {'routeid': route_id, 'operator':'Dublin Bus'}  
         resp = requests.get(URL, params=req_items)
         parsed_json = (json.loads(resp.text))
+        # print(len(parsed_json))
 
         return self.process_route_info(parsed_json['results'])
 
