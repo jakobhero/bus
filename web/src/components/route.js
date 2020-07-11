@@ -16,6 +16,7 @@ const Route = (dueTimes) => {
   let endTime = new Date(dueTime.end.time * 1000);
   let time = dueTime.start.time * 1000;
 
+  // loops through json and adds a time value to each step, should be moved to backend
   for (var i = 0; i < dueTime.steps.length; i++) {
     dueTime.steps[i]["time"] = time;
     time += dueTime.steps[i].duration * 1000;
