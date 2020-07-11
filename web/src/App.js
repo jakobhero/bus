@@ -102,7 +102,11 @@ const App = () => {
         .then((res) => {
           console.log(res);
           if (res.statusText === "OK") {
-            setStopsForMap(res.data[0]);
+            setStopsForMap(
+              res.data[0].length > res.data[1].length
+                ? res.data[0]
+                : res.data[1]
+            );
           }
         })
         .catch(console.log);

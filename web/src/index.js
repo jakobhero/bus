@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
 import App from "./App";
 
 // import SideMenu from './components/SideMenu';
@@ -9,7 +8,6 @@ import * as serviceWorker from "./serviceWorker";
 ReactDOM.render(
   <React.StrictMode>
     <App />
-    {/* <ShowMap></ShowMap> */}
   </React.StrictMode>,
   document.getElementById("root")
 );

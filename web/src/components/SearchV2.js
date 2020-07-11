@@ -20,17 +20,22 @@ let stop_data = [];
 let route_data = [];
 
 function searchLocalStop(query) {
-  var filter, count, stop_id, key;
+  var filter, count, stop_id, key, fullname;
   filter = query.toUpperCase();
   count = 0;
 
   if (filter.length !== 0) {
     for (var i = 0; i < stops.length; i++) {
-      stop_id = stops[i].stopid.toUpperCase();
+      stop_id = stops[i].stopid;
+      fullname = stops[i].fullname ? stops[i].fullname.toUpperCase() : "";
       // If entered letters are the prefix for the name of the station enter conditional
-      if (stop_id.includes(filter)) {
+      if (stop_id.includes(filter) || fullname.includes(filter)) {
         key = stops[i].lat - stops[i].lng;
-        stop_data.push({ stop_id: stop_id, key: key });
+        stop_data.push({
+          stop_id: stop_id,
+          key: key,
+          fullname: stops[i].fullname,
+        });
         count += 1;
       }
       if (count > 2) {
@@ -50,7 +55,7 @@ function searchLocalRoute(query) {
       route_id = routes[i].toUpperCase();
       // If entered letters are the prefix for the name of the station enter conditional
       if (route_id.includes(filter)) {
-        key = route_id;
+        key = route_id + count;
         route_data.push({ route_id: route_id, key: key });
         count += 1;
       }
@@ -70,28 +75,28 @@ const PlacesAutocomplete = ({ id, handleChange }) => {
   } = usePlacesAutocomplete({
     requestOptions: {
       location: { lat: () => 53.35014, lng: () => -6.266155 },
-      radius: 100 * 1000,
+      radius: 100000, //100 km
       componentRestrictions: { country: "ie" },
     },
   });
 
   const handleInput = (e) => {
-    stop_data = [];
-    route_data = [];
-    searchLocalStop(e.target.value);
-    searchLocalRoute(e.target.value);
-    setValue(e.target.value);
+    try {
+      stop_data = [];
+      route_data = [];
+      searchLocalStop(e.target.value);
+      searchLocalRoute(e.target.value);
+      setValue(e.target.value);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   const handleSelect = (val) => {
-    const stopID = val.slice(0, val.length - 10);
-    let lat, lng;
-
-    if (val.includes(", Bus Route")) {
-      console.log("Activate me");
-      const bus_id = val.slice(0, val.length - 11);
-      handleChange({ bus_id }, id);
-    } else if (!isNaN(stopID)) {
+    let lat, lng, stopID;
+    if (val.includes(", Bus Stop")) {
+      stopID = val.split("(")[1];
+      stopID = stopID.split(")")[0];
       for (var i = 0; i < stops.length; i++) {
         let stop_id = stops[i].stopid;
         if (stop_id === stopID) {
@@ -100,11 +105,13 @@ const PlacesAutocomplete = ({ id, handleChange }) => {
           handleChange({ stopID, lat, lng }, id);
         }
       }
+    } else if (val.includes(", Bus Route")) {
+      const bus_id = val.slice(0, val.length - 11);
+      handleChange({ bus_id }, id);
     } else {
       getGeocode({ address: val })
         .then((results) => getLatLng(results[0]))
         .then((coords) => {
-          console.log("📍 Coordinates: ", coords);
           lat = coords.lat;
           lng = coords.lng;
           handleChange({ val, lat, lng }, id);
@@ -131,8 +138,11 @@ const PlacesAutocomplete = ({ id, handleChange }) => {
         <ComboboxPopover>
           <ComboboxList>
             {stop_data.length > 0 &&
-              stop_data.map(({ stop_id, key }) => (
-                <ComboboxOption key={key} value={`${stop_id}, Bus Stop`} />
+              stop_data.map(({ stop_id, key, fullname }) => (
+                <ComboboxOption
+                  key={key}
+                  value={`${fullname} (${stop_id}), Bus Stop`}
+                />
               ))}
             {route_data.length > 0 &&
               route_data.map(({ route_id, key }) => (
