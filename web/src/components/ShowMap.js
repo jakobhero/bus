@@ -9,11 +9,11 @@ import Switch from "react-switch";
 import { Button } from "antd";
 import { HistoryOutlined, StarFilled, StarOutlined } from "@ant-design/icons";
 
+import "../css/map.css";
 // https://www.youtube.com/watch?v=SySVBV_jcCM
 
 const mapContainerStyle = {
   height: "70vh",
-  width: "100vw",
 };
 
 function ShowMap({ source, destination, stops, centreON, setRealTime }) {
@@ -39,11 +39,6 @@ function ShowMap({ source, destination, stops, centreON, setRealTime }) {
 
   return (
     <div>
-      <Locate panTo={panTo} />
-      <Switch
-        onChange={() => setTouristModeBool(!touristModeBool)}
-        checked={touristModeBool}
-      />
       <GoogleMap
         id="map"
         mapContainerStyle={mapContainerStyle}
@@ -56,12 +51,17 @@ function ShowMap({ source, destination, stops, centreON, setRealTime }) {
         }}
         onLoad={onMapLoad}
       >
-        {source && (
-          <Marker
-            position={{ lat: source.lat, lng: source.lng }}
-            // onClick={() => setSelected(marker)}
+        <Locate panTo={panTo} />
+        <div className="switch mapUI">
+          <Switch
+            width={35}
+            height={22}
+            onChange={() => setTouristModeBool(!touristModeBool)}
+            checked={touristModeBool}
+            className="tSwitch"
           />
-        )}
+        </div>
+        {source && <Marker position={{ lat: source.lat, lng: source.lng }} />}
         {stops.map((marker) => (
           <Marker
             key={marker.lat - marker.lng}
@@ -76,12 +76,7 @@ function ShowMap({ source, destination, stops, centreON, setRealTime }) {
           />
         ))}
         {destination && (
-          <Marker
-            // key={source.lat - marker.lng}
-            position={{ lat: destination.lat, lng: destination.lng }}
-
-            // onClick={() => setSelected(marker)}
-          />
+          <Marker position={{ lat: destination.lat, lng: destination.lng }} />
         )}
         {selected ? (
           <InfoWindow
@@ -119,10 +114,8 @@ function ShowMap({ source, destination, stops, centreON, setRealTime }) {
 
 function Locate({ panTo }) {
   return (
-    <i
-      className="fa fa-compass"
-      aria-hidden="true"
-      style={{ fontSize: "30px" }}
+    <div
+      className="mapUI locate"
       onClick={() => {
         navigator.geolocation.getCurrentPosition(
           (position) => {
@@ -134,7 +127,14 @@ function Locate({ panTo }) {
           () => null
         );
       }}
-    ></i>
+    >
+      <i
+        className="fa fa-compass"
+        id="innerLocate"
+        aria-hidden="true"
+        style={{ fontSize: "35px" }}
+      />
+    </div>
   );
 }
 

@@ -65,7 +65,6 @@ const SearchForm = ({ fields, handleSubmitApp }) => {
   return (
     <form>
       <div className="mainForm">
-        <h3>Search for a bus stop number</h3>
         <div className="search">
           <PlacesAutocomplete
             id={"source"}
