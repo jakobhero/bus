@@ -1,4 +1,6 @@
 import json, os, requests, datetime
+import numpy as np
+from sklearn.neighbors import KDTree
 from flask_restful import Resource, Api, reqparse
 
 from .models import Stops as StopsModel
@@ -6,12 +8,51 @@ from .models import Stops as StopsModel
 api = Api()
 
 class Stops(Resource):
-    """API endpoint for Dublin Bus stop information. Returns a JSON containing all stops."""
+    """API endpoint for Dublin Bus stop information. Returns the k nearest bus stops to the coordinates specified in request.
+    If k is not specified in request, the a default of 10 closest stops is returned. If coordinates are not specified in request,
+    all bus stops are returned. For the calculation of the closest stops, a KD tree is used to find results in O(log(n))."""
     def get(self):
+
+        #parse arguments "lat", "lon", "k" in request
+        parser = reqparse.RequestParser()
+        parser.add_argument('lat', type=str)
+        parser.add_argument('lon', type=str)
+        parser.add_argument('k',type=int)
+        frontend_params=parser.parse_args()
+
         stops=[]
+        coords=np.empty([0,2]) #necessary for KD tree data structure
         for stop in StopsModel.query.all():
             stops.append({'id': stop.stop_id, 'name':stop.name, 'coords':{'lat':stop.lat,'lon':stop.lon}})
-        return stops
+            coords=np.append(coords,[[stop.lat,stop.lon]],axis=0)
+    
+        #check for required params
+        if frontend_params["lat"] == None or frontend_params["lon"] == None:
+            return {"stops":stops,"status":"OK"}
+        
+        k=10 #set default value for nearest neighbors to be returned
+
+        if frontend_params["k"]!=None:
+            k=frontend_params["k"]
+
+        #set coordinates for nearest neighbor search
+        try: 
+            target=[[float(frontend_params["lat"]),float(frontend_params["lon"])]]
+        except:
+            return {"status":"Error: Coordinates could not be parsed to float"}
+        
+        #set up KD tree
+        tree=KDTree(coords)
+
+        #calculate the nearest neighbours
+        nearest_dist,nearest_ind=tree.query(target,k=k)
+
+        #populate response with rows from stops specified by calculated indices
+        response=[]
+        for ind in nearest_ind[0]:
+            response.append(stops[ind])
+        
+        return {"stops":response,"status":"OK"}
 
 class realTime(Resource):
     def get(self):
@@ -20,7 +61,7 @@ class realTime(Resource):
         parser.add_argument('stopid', type=str)
 
         frontend_params=parser.parse_args()
-        if "stopid" not in frontend_params:
+        if frontend_params["stopid"]==None:
             return {"status":"NO_STOP"}
 
         stop_id = frontend_params['stopid']
@@ -129,9 +170,9 @@ class Directions(Resource):
         frontend_params=parser.parse_args()
 
         #check for required params
-        if "dep" not in frontend_params:
+        if frontend_params["dep"]==None:
             return {"status":"NO_START"}
-        elif "arr" not in frontend_params:
+        elif frontend_params["arr"]==None:
             return {"status":"NO_DESTINATION"}
         
         #set params
