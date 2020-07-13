@@ -23,7 +23,7 @@ def insert_stops(stops):
 	    # include new data, if stop_id exists, update DB
         for i in range(stops.shape[0]):
             row=stops.iloc[i]
-            db_string="INSERT INTO stops VALUES ('"+row[0]+"','"+row[1].replace("'","''")+"',"+str(row[2])+","+str(row[3])+")"\
+            db_string="INSERT INTO stops VALUES ('"+str(row[0])+"','"+str(row[1]).replace("'","''")+"',"+str(row[2])+","+str(row[3])+")"\
                 "ON CONFLICT (stop_id) DO UPDATE SET name=excluded.name, lat=excluded.lat, lon=excluded.lon;"
             print(db_string)
             cur.execute(db_string)
@@ -43,5 +43,5 @@ def insert_stops(stops):
 
 
 if __name__ == '__main__':
-    stops_df=pd.read_csv("stops.txt")
+    stops_df=pd.read_csv("stops_cleaned.txt")
     insert_stops(stops_df)
