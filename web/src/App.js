@@ -62,6 +62,7 @@ const App = () => {
 
   const [realTimeData, setRealTimeData] = useState([]);
   const [stopsForMap, setStopsForMap] = useState([]);
+  const [otherRoute, setOtherRoute] = useState([]);
 
   const getData = (stop) => {
     axios
@@ -102,11 +103,8 @@ const App = () => {
         .then((res) => {
           console.log(res);
           if (res.statusText === "OK") {
-            setStopsForMap(
-              res.data[0].length > res.data[1].length
-                ? res.data[0]
-                : res.data[1]
-            );
+            setStopsForMap(res.data[0]);
+            setOtherRoute(res.data[1]);
           }
         })
         .catch(console.log);
@@ -186,6 +184,7 @@ const App = () => {
             stops={stopsForMap}
             centreON={centre}
             setRealTime={setRealTime}
+            otherRoute={otherRoute}
           />
         </TabPane>
 

@@ -19,8 +19,13 @@
   width: 40px;
   height: 40px;
 }
-.switch {
+.switch1 {
   bottom: 140px;
+  width: 40px;
+  height: 40px;
+}
+.switch2 {
+  bottom: 190px;
   width: 40px;
   height: 40px;
 }
@@ -31,7 +36,7 @@
   line-height: 38px;
   vertical-align: middle;
 }
-.tSwitch {
+.Switch {
   vertical-align: middle;
   margin-top: 5px;
 }

@@ -16,10 +16,17 @@ const mapContainerStyle = {
   height: "70vh",
 };
 
-function ShowMap({ source, destination, stops, centreON, setRealTime }) {
+function ShowMap({
+  source,
+  destination,
+  stops,
+  centreON,
+  setRealTime,
+  otherRoute,
+}) {
   const [selected, setSelected] = React.useState(null);
   const [touristModeBool, setTouristModeBool] = React.useState(false);
-
+  const [otherRouteBool, setOherRouteBool] = React.useState(false);
   const mapRef = React.useRef();
   const onMapLoad = React.useCallback((map) => {
     mapRef.current = map;
@@ -52,17 +59,28 @@ function ShowMap({ source, destination, stops, centreON, setRealTime }) {
         onLoad={onMapLoad}
       >
         <Locate panTo={panTo} />
-        <div className="switch mapUI">
+        <div className="switch1 mapUI">
           <Switch
             width={35}
             height={22}
             onChange={() => setTouristModeBool(!touristModeBool)}
             checked={touristModeBool}
-            className="tSwitch"
+            className="Switch"
           />
         </div>
+        {otherRoute.length > 1 && (
+          <div className="switch2 mapUI">
+            <Switch
+              width={35}
+              height={22}
+              onChange={() => setOherRouteBool(!otherRouteBool)}
+              checked={otherRouteBool}
+              className="Switch"
+            />
+          </div>
+        )}
         {source && <Marker position={{ lat: source.lat, lng: source.lng }} />}
-        {stops.map((marker) => (
+        {(otherRouteBool ? otherRoute : stops).map((marker) => (
           <Marker
             key={marker.lat - marker.lng}
             position={{ lat: marker.lat, lng: marker.lng }}

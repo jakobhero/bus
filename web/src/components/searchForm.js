@@ -81,7 +81,7 @@ const SearchForm = ({ fields, handleSubmitApp }) => {
           borderWidth="2px"
           borderRadius="15px"
           borderType="solid"
-          innerPadding="35px"
+          innerPadding="20px"
           topElement={icon}
           topPosition={0.05}
           topOffset="22px"

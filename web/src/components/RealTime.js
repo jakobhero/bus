@@ -81,7 +81,7 @@ const RealTimeInfo = (realTimeData) => {
       />
       ;
       <Modal
-        title="Basic Modal"
+        title="Set Alert"
         visible={visible}
         onOk={handleOk}
         onCancel={handleCancel}
