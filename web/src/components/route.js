@@ -5,6 +5,7 @@ import "../search.css";
 import DirectionsBusIcon from "@material-ui/icons/DirectionsBus";
 import DirectionsWalkIcon from "@material-ui/icons/DirectionsWalk";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
+import TramIcon from "@material-ui/icons/Tram";
 
 import { Card, Timeline } from "antd";
 import "antd/dist/antd.css";
@@ -46,11 +47,17 @@ const Route = (tripTimes) => {
       </span>
       <div>
         <DirectionsWalkIcon style={{ color: "blue" }} />
-        {tripTime.bus_index.map((index) => (
+        {tripTime.transit_index.map((index) => (
           <span key={index}>
             <ArrowForwardIosIcon />
-            <DirectionsBusIcon style={{ color: "blue" }} />
-            {tripTime.steps[index].transit.route}
+            {tripTime.steps[index].transit.type === "BUS" ? (
+              <DirectionsBusIcon style={{ color: "blue" }} />
+            ) : (
+              <TramIcon style={{ color: "blue" }} />
+            )}
+            {tripTime.steps[index].transit.type === "BUS"
+              ? tripTime.steps[index].transit.route
+              : ""}
           </span>
         ))}
         <ArrowForwardIosIcon />
@@ -68,35 +75,35 @@ const Route = (tripTimes) => {
                   (new Date(step.time).getMinutes() < 10 ? "0" : "") +
                   new Date(step.time).getMinutes()
                 }
-                color={tripTime.bus_index.includes(i) ? "blue" : "green"}
+                color={tripTime.transit_index.includes(i) ? "blue" : "green"}
               >
                 <p>
                   {i < 1 ? tripTime.start.address : ""}
 
-                  {tripTime.bus_index.includes(i) &
-                  !tripTime.bus_index.includes(i - 1)
+                  {tripTime.transit_index.includes(i) &
+                  !tripTime.transit_index.includes(i - 1)
                     ? step.transit.dep.name
                     : ""}
 
-                  {tripTime.bus_index.includes(i) &
-                  tripTime.bus_index.includes(i - 1)
+                  {tripTime.transit_index.includes(i) &
+                  tripTime.transit_index.includes(i - 1)
                     ? step.transit.dep.name
                     : ""}
 
-                  {!tripTime.bus_index.includes(i) &
-                  tripTime.bus_index.includes(i - 1)
+                  {!tripTime.transit_index.includes(i) &
+                  tripTime.transit_index.includes(i - 1)
                     ? tripTime.steps[i - 1].transit.arr.name
                     : ""}
                 </p>
                 <p>
-                  {tripTime.bus_index.includes(i) ? (
+                  {tripTime.transit_index.includes(i) ? (
                     <DirectionsBusIcon style={{ color: "blue" }} />
                   ) : (
                     ""
                   )}
-                  {tripTime.bus_index.includes(i) ? step.transit.route : ""}
+                  {tripTime.transit_index.includes(i) ? step.transit.route : ""}
 
-                  {!tripTime.bus_index.includes(i) ? (
+                  {!tripTime.transit_index.includes(i) ? (
                     <DirectionsWalkIcon style={{ color: "blue" }} />
                   ) : (
                     ""

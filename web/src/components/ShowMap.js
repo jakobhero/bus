@@ -140,7 +140,7 @@ function ShowMap({
           directions.map((marker, index) =>
             marker.map((mrk) => (
               // console.log(mrk)
-              <div>
+              <div key={mrk[0].lat - mrk[0].lng}>
                 {busIndex.includes(index) &&
                   [1, mrk.length - 1].map((idx) => (
                     <Marker
