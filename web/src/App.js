@@ -51,10 +51,54 @@ function findStopsRadius(lat, lng) {
   }
   return showMarkers;
 }
+
+const decode = (encoded) => {
+  var points = [];
+  var index = 0,
+    len = encoded.length;
+  var lat = 0,
+    lng = 0;
+  while (index < len) {
+    var b,
+      shift = 0,
+      result = 0;
+    do {
+      b = encoded.charAt(index++).charCodeAt(0) - 63; //finds ascii
+      result |= (b & 0x1f) << shift;
+      shift += 5;
+    } while (b >= 0x20);
+    var dlat = (result & 1) !== 0 ? ~(result >> 1) : result >> 1;
+    lat += dlat;
+    shift = 0;
+    result = 0;
+    do {
+      b = encoded.charAt(index++).charCodeAt(0) - 63;
+      result |= (b & 0x1f) << shift;
+      shift += 5;
+    } while (b >= 0x20);
+    var dlng = (result & 1) !== 0 ? ~(result >> 1) : result >> 1;
+    lng += dlng;
+
+    points.push({ lat: lat / 1e5, lng: lng / 1e5 });
+  }
+  return points;
+};
+
+const findPoly = (route) => {
+  let full_route = [];
+  route.steps.forEach((step, index) => {
+    full_route[index] = [];
+    step.polyline.forEach((line, idx) => {
+      full_route[index][idx] = decode(line);
+    });
+  });
+  return full_route;
+};
+
 const App = () => {
   const [state, setState] = React.useState({});
   const [activeKey, setActiveKey] = React.useState("1");
-  const [dueTimes, setDueTimes] = React.useState([]);
+  const [tripTimes, setTripTimes] = React.useState([]);
   const [centre, setCentre] = React.useState({
     lat: 53.35014,
     lng: -6.266155,
@@ -64,6 +108,9 @@ const App = () => {
   const [stopsForMap, setStopsForMap] = useState([]);
   const [otherRoute, setOtherRoute] = useState([]);
 
+  const [busIndex, setBusIndex] = useState([]);
+  const [directions, setDirections] = useState([]);
+
   const getData = (stop) => {
     axios
       .get("http://localhost/realtime?stopid=" + stop)
@@ -71,7 +118,6 @@ const App = () => {
         res["stopid"] = stop;
         // return res;
         setRealTimeData(res);
-        console.log(res);
       })
       .catch(console.log);
   };
@@ -87,7 +133,21 @@ const App = () => {
     newFields["destination"] = dest;
     newFields["time"] = time;
 
-    if (source.stopID) {
+    if (source.bus_id) {
+      axios
+        .get("http://localhost/routeinfo?routeid=" + source.bus_id)
+        .then((res) => {
+          if (res.statusText === "OK") {
+            setStopsForMap(res.data[0]);
+            setOtherRoute(res.data[1]);
+            setActiveKey("1");
+          }
+        })
+        .catch(console.log);
+    } else if (!dest.val && !dest.stopID && !source.stopID) {
+      setCentre({ lat: source.lat, lng: source.lng });
+      setStopsForMap(findStopsRadius(source.lat, source.lng));
+    } else if (!dest.val && source.stopID) {
       setRealTime(source.stopID);
       setCentre({ lat: source.lat, lng: source.lng });
       let tempStop = [];
@@ -97,33 +157,25 @@ const App = () => {
         }
       }
       setStopsForMap(tempStop);
-    } else if (source.bus_id) {
-      axios
-        .get("http://localhost/routeinfo?routeid=" + source.bus_id)
-        .then((res) => {
-          console.log(res);
-          if (res.statusText === "OK") {
-            setStopsForMap(res.data[0]);
-            setOtherRoute(res.data[1]);
-          }
-        })
-        .catch(console.log);
-    } else if (!dest.val) {
-      setCentre({ lat: source.lat, lng: source.lng });
-      setStopsForMap(findStopsRadius(source.lat, source.lng));
     } else {
       axios
         .get(
           "http://localhost/directions?dep=" +
-            source.val +
+            source.lat +
+            "," +
+            source.lng +
             "&arr=" +
-            dest.val +
+            dest.lat +
+            "," +
+            dest.lng +
             "&time=" +
             Math.round(time / 1000)
         )
         .then((res) => {
           if (res.data.status === "OK") {
-            setDueTimes(res.data.connections);
+            setTripTimes(res.data.connections);
+            setDirections(findPoly(res.data.connections[0]));
+            setBusIndex(res.data.connections[0].transit_index);
           }
         })
         .catch(console.log);
@@ -145,28 +197,28 @@ const App = () => {
   const [sortTimeNum, setSortTimeNum] = useState(1);
 
   const sortSteps = () => {
-    const dueTimesCopy = [...dueTimes];
-    dueTimesCopy.sort((a, b) =>
+    const tripTimesCopy = [...tripTimes];
+    tripTimesCopy.sort((a, b) =>
       a.steps.length > b.steps.length
         ? sortStepsNum
         : b.steps.length > a.steps.length
         ? -sortStepsNum
         : 0
     );
-    setDueTimes(dueTimesCopy);
+    setTripTimes(tripTimesCopy);
     setSortStepsNum(-sortStepsNum);
   };
 
   const sortTime = () => {
-    const dueTimesCopy = [...dueTimes];
-    dueTimesCopy.sort((a, b) =>
+    const tripTimesCopy = [...tripTimes];
+    tripTimesCopy.sort((a, b) =>
       a.end.time > b.end.time
         ? sortTimeNum
         : b.end.time > a.end.time
         ? -sortTimeNum
         : 0
     );
-    setDueTimes(dueTimesCopy);
+    setTripTimes(tripTimesCopy);
     setSortTimeNum(-sortTimeNum);
   };
 
@@ -185,11 +237,13 @@ const App = () => {
             centreON={centre}
             setRealTime={setRealTime}
             otherRoute={otherRoute}
+            directions={directions}
+            busIndex={busIndex}
           />
         </TabPane>
 
         <TabPane tab="Connections" key="2">
-          {dueTimes.length > 0 && (
+          {tripTimes.length > 0 && (
             <Tooltip title="Sort by arrival time">
               <Button style={{ margin: 20 }} type="submit" onClick={sortTime}>
                 <AccessTimeIcon></AccessTimeIcon>
@@ -197,7 +251,7 @@ const App = () => {
               </Button>
             </Tooltip>
           )}
-          {dueTimes.length > 0 && (
+          {tripTimes.length > 0 && (
             <Tooltip title="Sort by bus changes">
               <Button style={{ margin: 20 }} type="submit" onClick={sortSteps}>
                 <DirectionsBusIcon></DirectionsBusIcon>
@@ -205,10 +259,10 @@ const App = () => {
               </Button>
             </Tooltip>
           )}
-          {dueTimes.map((dueTime, i) => (
-            <Route key={i} dueTimes={dueTime} />
+          {tripTimes.map((dueTime, i) => (
+            <Route key={i} tripTimes={dueTime} />
           ))}
-          {dueTimes.length < 1 && <p>Choose a source and destination</p>}
+          {tripTimes.length < 1 && <p>Choose a source and destination</p>}
         </TabPane>
 
         <TabPane tab="Locations" key="3">

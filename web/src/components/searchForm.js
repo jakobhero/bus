@@ -77,7 +77,7 @@ const SearchForm = ({ fields, handleSubmitApp }) => {
     <form>
       <div className="mainForm">
         <BorderWrapper
-          borderColour="#00bcf1"
+          borderColour="#1b55db"
           borderWidth="2px"
           borderRadius="15px"
           borderType="solid"

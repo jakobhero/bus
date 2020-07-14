@@ -1,6 +1,11 @@
 import React from "react";
 
-import { GoogleMap, Marker, InfoWindow } from "@react-google-maps/api";
+import {
+  GoogleMap,
+  Marker,
+  InfoWindow,
+  Polyline,
+} from "@react-google-maps/api";
 import mapStyles from "./mapStyles";
 import mapStylesIcons from "./mapStylesIcons";
 
@@ -23,6 +28,8 @@ function ShowMap({
   centreON,
   setRealTime,
   otherRoute,
+  directions,
+  busIndex,
 }) {
   const [selected, setSelected] = React.useState(null);
   const [touristModeBool, setTouristModeBool] = React.useState(false);
@@ -36,6 +43,9 @@ function ShowMap({
     mapRef.current.panTo({ lat, lng });
     mapRef.current.setZoom(14);
   }, []);
+
+  // return full_route;
+  // }
   // let bounds = new window.google.maps.LatLngBounds();
   // for (var i = 0; i < markers.length; i++) {
   //   bounds.extend({ lat: markers[i].lat, lng: markers[i].lng });
@@ -125,6 +135,39 @@ function ShowMap({
             </div>
           </InfoWindow>
         ) : null}
+
+        {directions.length > 1 &&
+          directions.map((marker, index) =>
+            marker.map((mrk) => (
+              // console.log(mrk)
+              <div key={mrk[0].lat - mrk[0].lng}>
+                {busIndex.includes(index) &&
+                  [1, mrk.length - 1].map((idx) => (
+                    <Marker
+                      key={mrk[idx].lat - mrk[idx].lng}
+                      position={{ lat: mrk[idx].lat, lng: mrk[idx].lng }}
+                      icon={{
+                        url: `./bus_1.svg`,
+                        origin: new window.google.maps.Point(0, 0),
+                        anchor: new window.google.maps.Point(15, 15),
+                        scaledSize: new window.google.maps.Size(30, 30),
+                      }}
+                    />
+                  ))}
+                <Polyline
+                  path={mrk}
+                  geodesic={true}
+                  options={{
+                    strokeColor: busIndex.includes(index)
+                      ? "#fea100"
+                      : "#1b55db",
+                    strokeOpacity: 1,
+                    strokeWeight: 4,
+                  }}
+                />
+              </div>
+            ))
+          )}
       </GoogleMap>
     </div>
   );
