@@ -1,3 +1,30 @@
+
+## Technologies
+Before getting started please be familiar with the stack below. Additionally it is important to understand basic [Git](https://gist.github.com/blackfalcon/8428401) and [Github](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests) for smooth collaboration as a team.
+
+- **Frontend**
+    - React Hooks, Ant Design, Ant Design Mobile,  styled-components (Yet to be decided)
+- **Backend**
+    - Flask/Node.js (Yet to be decided)
+    - Google Maps API
+- **DevOps**
+    - Docker, Terraform, Nginx, AWS (Yet to be decided)
+    
+
+#### Client
+
+1. Fork or Clone this repository 'git clone https://github.com/jakobhero/bus.git'
+1. install Node 12.16.2
+1. Enter the `client` directory and run `npm install`.
+1. Start the client app by running `npm start`, and wait for the app to start up. (`Starting the development server...` is not the final line).
+1. Finally, navigate to [localhost:3000](http://localhost:3000) in your browser - you should see a styled page.
+
+#### Backend
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
