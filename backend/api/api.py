@@ -229,7 +229,7 @@ def directions_parser(directions):
         }
         
         db_index=[] #holds index of dublin bus travel(s) in leg array
-        bus_index=[] #holds index of all bus travel(s) in leg array
+        transit_index=[] #holds index of all transit travel(s) in leg array
         steps=[]
         index=0
 
@@ -264,15 +264,17 @@ def directions_parser(directions):
                         "time":step["transit_details"]["arrival_time"]["value"]
                     },
                     "headsign":step["transit_details"]["headsign"],
-                    "type":step["transit_details"]["line"]["agencies"][0]["name"]
+                    "type":step["transit_details"]["line"]["vehicle"]["type"],
+                    "operator":step["transit_details"]["line"]["agencies"][0]["name"]
                 }
 
-                if transit["type"] in ["Dublin Bus","Go-Ahead"]:
-                    if transit["type"]=="Dublin Bus":
+                if transit["operator"] in ["Dublin Bus","Go-Ahead"]:
+                    if transit["operator"]=="Dublin Bus":
                         db_index.append(index)
                     transit["route"]=step["transit_details"]["line"]["short_name"]
-                if step["transit_details"]["line"]["vehicle"]["type"]=="BUS":
-                    bus_index.append(index)
+                if transit["type"] == "LUAS":
+                    transit["route"]=step["transit_details"]["line"]["name"]
+                transit_index.append(index)
                 curr_step["transit"]=transit
                 curr_step["polyline"]=step["polyline"]["points"]
             
@@ -280,11 +282,11 @@ def directions_parser(directions):
             index+=1
 
         curr["db_index"]=db_index
-        curr["bus_index"]=bus_index
+        curr["transit_index"]=transit_index
         curr["steps"]=steps
 
         #times are only specified if transit is involved
-        if len(curr["bus_index"])>=1:
+        if len(curr["transit_index"])>=1:
             curr["start"]={
                 "time":route["departure_time"]["value"],
                 "address":route["start_address"],
