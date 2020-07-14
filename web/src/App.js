@@ -84,6 +84,17 @@ const decode = (encoded) => {
   return points;
 };
 
+const findPoly = (route) => {
+  let full_route = [];
+  route.steps.forEach((step, index) => {
+    full_route[index] = [];
+    step.polyline.forEach((line, idx) => {
+      full_route[index][idx] = decode(line);
+    });
+  });
+  return full_route;
+};
+
 const App = () => {
   const [state, setState] = React.useState({});
   const [activeKey, setActiveKey] = React.useState("1");
@@ -122,7 +133,21 @@ const App = () => {
     newFields["destination"] = dest;
     newFields["time"] = time;
 
-    if (source.stopID) {
+    if (source.bus_id) {
+      axios
+        .get("http://localhost/routeinfo?routeid=" + source.bus_id)
+        .then((res) => {
+          if (res.statusText === "OK") {
+            setStopsForMap(res.data[0]);
+            setOtherRoute(res.data[1]);
+            setActiveKey("1");
+          }
+        })
+        .catch(console.log);
+    } else if (!dest.val && !dest.stopID && !source.stopID) {
+      setCentre({ lat: source.lat, lng: source.lng });
+      setStopsForMap(findStopsRadius(source.lat, source.lng));
+    } else if (!dest.val && source.stopID) {
       setRealTime(source.stopID);
       setCentre({ lat: source.lat, lng: source.lng });
       let tempStop = [];
@@ -132,41 +157,25 @@ const App = () => {
         }
       }
       setStopsForMap(tempStop);
-    } else if (source.bus_id) {
-      axios
-        .get("http://localhost/routeinfo?routeid=" + source.bus_id)
-        .then((res) => {
-          if (res.statusText === "OK") {
-            setStopsForMap(res.data[0]);
-            setOtherRoute(res.data[1]);
-          }
-        })
-        .catch(console.log);
-    } else if (!dest.val) {
-      setCentre({ lat: source.lat, lng: source.lng });
-      setStopsForMap(findStopsRadius(source.lat, source.lng));
     } else {
       axios
         .get(
           "http://localhost/directions?dep=" +
-            source.val +
+            source.lat +
+            "," +
+            source.lng +
             "&arr=" +
-            dest.val +
+            dest.lat +
+            "," +
+            dest.lng +
             "&time=" +
             Math.round(time / 1000)
         )
         .then((res) => {
           if (res.data.status === "OK") {
             setTripTimes(res.data.connections);
-            let full_route = [];
-            res.data.connections[0].steps.forEach((step, index) => {
-              full_route[index] = [];
-              step.polyline.forEach((line, idx) => {
-                full_route[index][idx] = decode(line);
-              });
-            });
-            setDirections(full_route);
-            setBusIndex(res.data.connections[0].bus_index);
+            setDirections(findPoly(res.data.connections[0]));
+            setBusIndex(res.data.connections[0].transit_index);
           }
         })
         .catch(console.log);
