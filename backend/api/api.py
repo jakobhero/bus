@@ -275,8 +275,10 @@ def directions_parser(directions):
                 if transit["type"] == "LUAS":
                     transit["route"]=step["transit_details"]["line"]["name"]
                 transit_index.append(index)
+                polyline=[]
+                polyline.append(step["polyline"]["points"])
+                curr_step["polyline"]=polyline
                 curr_step["transit"]=transit
-                curr_step["polyline"]=step["polyline"]["points"]
             
             steps.append(curr_step)
             index+=1
