@@ -20,12 +20,14 @@ class test_api(unittest.TestCase):
         for i in range(len(lengths)):
             self.assertEqual(len(result["connections"][i]["steps"]),lengths[i])
 
-        #check that transit_index points to correct transit options
+        #check that transit_index points to correct transit options, routes
         transits=[["Dublin Bus"],["Dublin Bus"],["Dublin Bus","Luas"],["Luas"]]
+        routes=[["46a"],["11"],["145","Green Line"],["Green Line"]]
         for i in range(len(transits)):
             for j in range(len(transits[i])):
                 index=result["connections"][i]["transit_index"][j]
                 self.assertEqual(result["connections"][i]["steps"][index]["transit"]["operator"],transits[i][j])
+                self.assertEqual(result["connections"][i]["steps"][index]["transit"]["route"],routes[i][j])
         
 def json_loader(file_name):
     with open("api/debugging/"+file_name+".json") as f:
