@@ -272,7 +272,7 @@ def directions_parser(directions):
                     if transit["operator"]=="Dublin Bus":
                         db_index.append(index)
                     transit["route"]=step["transit_details"]["line"]["short_name"]
-                if transit["type"] == "LUAS":
+                if transit["operator"] == "Luas":
                     transit["route"]=step["transit_details"]["line"]["name"]
                 transit_index.append(index)
                 polyline=[]
