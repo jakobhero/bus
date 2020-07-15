@@ -94,11 +94,13 @@ const SearchForm = ({ handleSubmitApp }) => {
               handleChange={handleChange}
               value={fieldsValues["source"]}
               placeholder={"Enter a location, stop or bus route"}
+              route
             />
 
             <DirectionsIcon
               className="directionsButton"
               onClick={() => setShowDestination(!showDestination)}
+              //consider making it clear destination state
             />
             <br />
           </div>

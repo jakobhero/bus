@@ -5,12 +5,12 @@ import { Table, Modal, Radio } from "antd";
 import "antd/dist/antd.css";
 import { HistoryOutlined } from "@ant-design/icons";
 
-const RealTimeInfo = (realTimeData) => {
+const RealTimeInfo = ({ realTimeData }) => {
   const [visible, setVisible] = useState(false);
   const [state, setState] = useState({});
   const [alertTime, setAlertTime] = useState(1);
-  const stopid = realTimeData.realTimeData.stopid;
-  realTimeData = realTimeData.realTimeData.data;
+  const stopid = realTimeData.stopid;
+  realTimeData = realTimeData.data;
 
   const columns = [
     {
@@ -72,14 +72,13 @@ const RealTimeInfo = (realTimeData) => {
 
   return (
     <div className="realTime">
-      <h2>{`Stop ${stopid}`}</h2>
+      <h2>{realTimeData ? `Stop ${stopid}` : "Select a bus stop"}</h2>
       <Table
         dataSource={realTimeData}
         columns={columns}
         pagination={false}
         rowKey={(record) => record.arrivaldatetime + record.route}
       />
-      ;
       <Modal
         title="Set Alert"
         visible={visible}

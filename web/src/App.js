@@ -70,6 +70,9 @@ const App = () => {
   const [busIndex, setBusIndex] = useState([]);
   const [directions, setDirections] = useState([]);
 
+  const [sortStepsNum, setSortStepsNum] = useState(1);
+  const [sortTimeNum, setSortTimeNum] = useState(1);
+
   const getData = (stop) => {
     axios
       .get("http://localhost/realtime?stopid=" + stop)
@@ -93,6 +96,7 @@ const App = () => {
     newFields["time"] = time;
 
     if (source.bus_id) {
+      // if source is a bus route
       axios
         .get("http://localhost/routeinfo?routeid=" + source.bus_id)
         .then((res) => {
@@ -104,12 +108,14 @@ const App = () => {
         })
         .catch(console.log);
     } else if (!dest.val && !dest.stopID && !source.stopID) {
+      // if source is a place and no destination
       setCentre({ lat: source.lat, lng: source.lng });
       setDirections([]);
       setOtherRoute([]);
       setStopsForMap(findStopsRadius(source.lat, source.lng));
       setActiveKey("1");
-    } else if (!dest.val && source.stopID) {
+    } else if (!dest.val && !dest.stopID && source.stopID) {
+      // if source is a bus stop and no destination
       setRealTime(source.stopID);
       setCentre({ lat: source.lat, lng: source.lng });
       let tempStop = [];
@@ -120,6 +126,7 @@ const App = () => {
       }
       setStopsForMap(tempStop);
     } else {
+      // otherwise
       axios
         .get(
           "http://localhost/directions?dep=" +
@@ -157,10 +164,8 @@ const App = () => {
     setActiveKey(key);
   }
 
-  const [sortStepsNum, setSortStepsNum] = useState(1);
-  const [sortTimeNum, setSortTimeNum] = useState(1);
-
   const sortSteps = () => {
+    // Sort route alternatives by number of steps(bus changeovers)
     const tripTimesCopy = [...tripTimes];
     tripTimesCopy.sort((a, b) =>
       a.steps.length > b.steps.length
@@ -174,6 +179,7 @@ const App = () => {
   };
 
   const sortTime = () => {
+    // sort by arrival time
     const tripTimesCopy = [...tripTimes];
     tripTimesCopy.sort((a, b) =>
       a.end.time > b.end.time
@@ -230,10 +236,7 @@ const App = () => {
           Locations
         </TabPane>
         <TabPane tab="Real Time" key="4">
-          {realTimeData.data && (
-            <RealTimeInfo realTimeData={realTimeData}></RealTimeInfo>
-          )}
-          {/* {realTimeData.data && <p>Select a bus stop</p>} */}
+          <RealTimeInfo realTimeData={realTimeData}></RealTimeInfo>
         </TabPane>
       </Tabs>
     </div>

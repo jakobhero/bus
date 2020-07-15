@@ -66,7 +66,7 @@ function searchLocalRoute(query) {
   }
 }
 
-const PlacesAutocomplete = ({ id, handleChange, placeholder }) => {
+const PlacesAutocomplete = ({ id, handleChange, placeholder, route }) => {
   const {
     ready,
     value,
@@ -81,11 +81,14 @@ const PlacesAutocomplete = ({ id, handleChange, placeholder }) => {
   });
 
   const handleInput = (e) => {
+    // when characters are added to the input, then functions are run with the input, if there is a match then add that match to the array, the array is displayed in the dropdown
     try {
       stop_data = [];
       route_data = [];
       searchLocalStop(e.target.value);
-      searchLocalRoute(e.target.value);
+      if (route) {
+        searchLocalRoute(e.target.value);
+      }
       setValue(e.target.value);
     } catch (error) {
       console.error(error);
@@ -93,6 +96,9 @@ const PlacesAutocomplete = ({ id, handleChange, placeholder }) => {
   };
 
   const handleSelect = (val) => {
+    //Firstly if the option was a bus stop, then find the corresponding info for the stop and send the data to the parent via handleChange.
+    //Then if it was a route, send bus_id to parent
+    // Lastly if it was a place, find the co ords, then send them along with value to parent
     let lat, lng, stopID;
     if (val.includes(", Bus Stop")) {
       stopID = val.split("(")[1];
