@@ -1,0 +1,295 @@
+{
+  "connections": [
+    {
+      "distance": 6186,
+      "duration": 2331,
+      "db_index": [1],
+      "transit_index": [1],
+      "steps": [
+        {
+          "distance": 837,
+          "duration": 630,
+          "start": { "lat": 53.3158725, "lng": -6.2399646 },
+          "stop": { "lat": 53.3199888, "lng": -6.2331146 },
+          "mode": "WALKING",
+          "polyline": [
+            "egldIvvae@?w@@_B",
+            "cgldI~qae@MGKGIG][]]MM_@a@",
+            "qkldI|mae@FQ\\}@",
+            "kjldIlkae@Hg@DSHYHWDKBEBA",
+            "yhldIjgae@CK?G@E?I@M@M@M@G?E@MKCGCAAIECAWQKIKKYSSOAC?AAE?EAG?CCGCIKYGUKQGKCGQ]MUQYEKISMYS[EIEICEGK",
+            "irldIrv`e@i@}@O[KOOWYa@Wc@EIECGCE?a@F_@D[Bo@P",
+            "y{ldI|p`e@gAaESu@",
+            "u~ldIdi`e@g@p@OPKNCB"
+          ]
+        },
+        {
+          "distance": 4784,
+          "duration": 1245,
+          "start": { "lat": 53.3199076, "lng": -6.2332887 },
+          "stop": { "lat": 53.3522444, "lng": -6.263723199999999 },
+          "mode": "TRANSIT",
+          "transit": {
+            "dep": {
+              "name": "Donnybrook, Donnybrook Road ->NW1",
+              "time": 1594729870
+            },
+            "arr": {
+              "name": "Parnell Square West, stop 2",
+              "time": 1594731115
+            },
+            "headsign": "Phoenix Pk",
+            "type": "BUS",
+            "operator": "Dublin Bus",
+            "route": "46a"
+          },
+          "polyline": "m`mdI`m`e@Oc@}AzBEFk@x@Yj@q@fAKLGJw@nA[h@GJ_@n@OXIPIROj@Q~BI^O^IRMXOTCFS^]p@Ub@{ArBINGFMRGHIJQT[^c@l@u@hAYb@aBbCGHGHm@z@W`@QTOTKRe@v@A@uApBIJUXy@fAc@j@m@x@s@fAi@t@c@v@CHITELITK\\GNW`A?@Mf@Wx@EPMd@Od@YdASr@Ur@KZMZA@Yx@AJ?BABIVK\\Of@Kb@AJG`@_@zDM~@Mn@On@K\\?B]~@U`@Ud@U\\Y^MNMLa@Xu@f@SHEBC@g@RGD]NA@aAn@KDSASNIFEBIFaAjAc@d@g@j@IHONONSRsBdCw@v@QPe@d@[\\i@f@g@h@m@p@FVGWOP[^EDkAnA_@h@KVEHEFIX[Si@_@KGy@i@YScAs@SQwB{A[Y[YGACAE?G?MDGBED?@EFCFGVEXAD]pBI`@GPUv@i@jDWnAYjAqAWu@Ow@Q?EkNkC[dC[xBIV[VWAg@Mu@@QBkAz@aBwAs@CsAFC?DH[@M?w@Ay@?y@C]CU?KBA@IBe@R[LMDMDSF}Br@IB]JKFI@mA`@SFkC|@{Af@aEtAa@Nk@PaA\\UHm@R]NOFH^~@pCPZR\\R\\]r@U`@g@|@HN"
+        },
+        {
+          "distance": 565,
+          "duration": 454,
+          "start": { "lat": 53.3522896, "lng": -6.2636427 },
+          "stop": { "lat": 53.3558415, "lng": -6.2622956 },
+          "mode": "WALKING",
+          "polyline": [
+            "yjsdIvjfe@a@t@uBbD_BnC",
+            "qrsdI`vfe@i@_AGMIQkAeEMYSg@EKACGECAEE",
+            "uxsdIzife@KKEGGMeAuBKY",
+            "a|sdIhdfe@aAkCKY",
+            "o~sdIb_fe@oAfB"
+          ]
+        }
+      ],
+      "start": {
+        "time": 1594729239,
+        "address": "6 Bóthar Chluain Sceach, An Halla Chnocán an Imill, Rath Maonais, Dublin 6, D06 V6R2, Ireland",
+        "location": { "lat": 53.3158725, "lng": -6.2399646 }
+      },
+      "end": {
+        "time": 1594731570,
+        "address": "6 Great Denmark Street, Northside, Dublin 1, Ireland",
+        "location": { "lat": 53.3558415, "lng": -6.2622956 }
+      }
+    },
+    {
+      "distance": 6213,
+      "duration": 1889,
+      "db_index": [1],
+      "transit_index": [1],
+      "steps": [
+        {
+          "distance": 182,
+          "duration": 128,
+          "start": { "lat": 53.3158725, "lng": -6.2399646 },
+          "stop": { "lat": 53.3167786, "lng": -6.239069499999999 },
+          "mode": "WALKING",
+          "polyline": [
+            "egldIvvae@?w@@_B",
+            "cgldI~qae@MGKGIG][]]MM_@a@",
+            "qkldI|mae@[dAM`@"
+          ]
+        },
+        {
+          "distance": 5633,
+          "duration": 1439,
+          "start": { "lat": 53.3167047, "lng": -6.239154699999999 },
+          "stop": { "lat": 53.3533921, "lng": -6.2653891 },
+          "mode": "TRANSIT",
+          "transit": {
+            "dep": {
+              "name": "Clonskeagh Hospital, stop 882",
+              "time": 1594730540
+            },
+            "arr": { "name": "Parnell Square West", "time": 1594731979 },
+            "headsign": "St Pappin's Rd",
+            "type": "BUS",
+            "operator": "Dublin Bus",
+            "route": "11"
+          },
+          "polyline": "klldItqae@OOCHUt@eAbDGLsA~BABmBpCaAzAKNY^IJuAfBEF]f@Wd@u@dBa@v@CFGJi@dA}@zAkApBcAhBQ\\Wd@[l@e@bAe@lAS`@[r@O\\e@bASb@Q^a@|@c@hAENKVEL[|@KXMb@Y|@ENITUv@Oj@i@`CYnAAJSv@o@tB_@vAQd@Wm@a@gAoAsDAAeAsCe@eASi@G_@SmAISaCsFe@w@o@_AsAqBYe@QYc@w@KQW[i@w@Ur@KZMZA@Yx@AJ?BABIVK\\Of@Kb@AJG`@_@zDM~@Mn@On@K\\?B]~@U`@Ud@U\\Y^MNMLa@Xu@f@SHEBC@g@RGD]NA@aAn@KDSASNIFEBIFaAjAc@d@g@j@IHONONSRsBdCw@v@QPe@d@[\\i@f@g@h@m@p@FVGWOP[^EDkAnA_@h@KVEHEFIX[Si@_@KGy@i@YScAs@SQwB{A[Y[YGACAE?G?MDGBED?@EFCFGVEXAD]pBI`@GPUv@i@jDWnAYjAqAWu@Ow@Q?GYGs@Mr@LqMaC[dC[xBIV[VWAg@Mu@@QBkAz@aBwAs@CsAFC?DH[@M?w@Ay@?y@C]CU?KBA@IBe@R[LMDMDSF}Br@IB]JKFI@mA`@SFkC|@{Af@aEtAa@Nk@PaA\\UHm@R]NOFH^~@pCPZR\\R\\]r@U`@iArBuBbDmApBHP"
+        },
+        {
+          "distance": 398,
+          "duration": 321,
+          "start": { "lat": 53.3534255, "lng": -6.2652886 },
+          "stop": { "lat": 53.3558415, "lng": -6.2622956 },
+          "mode": "WALKING",
+          "polyline": [
+            "}qsdI`ufe@S^",
+            "qrsdI`vfe@i@_AGMIQkAeEMYSg@EKACGECAEE",
+            "uxsdIzife@KKEGGMeAuBKY",
+            "a|sdIhdfe@aAkCKY",
+            "o~sdIb_fe@oAfB"
+          ]
+        }
+      ],
+      "start": {
+        "time": 1594730411,
+        "address": "6 Bóthar Chluain Sceach, An Halla Chnocán an Imill, Rath Maonais, Dublin 6, D06 V6R2, Ireland",
+        "location": { "lat": 53.3158725, "lng": -6.2399646 }
+      },
+      "end": {
+        "time": 1594732300,
+        "address": "6 Great Denmark Street, Northside, Dublin 1, Ireland",
+        "location": { "lat": 53.3558415, "lng": -6.2622956 }
+      }
+    },
+    {
+      "distance": 5761,
+      "duration": 2809,
+      "db_index": [1],
+      "transit_index": [1, 3],
+      "steps": [
+        {
+          "distance": 837,
+          "duration": 630,
+          "start": { "lat": 53.3158725, "lng": -6.2399646 },
+          "stop": { "lat": 53.3199888, "lng": -6.2331146 },
+          "mode": "WALKING",
+          "polyline": [
+            "egldIvvae@?w@@_B",
+            "cgldI~qae@MGKGIG][]]MM_@a@",
+            "qkldI|mae@FQ\\}@",
+            "kjldIlkae@Hg@DSHYHWDKBEBA",
+            "yhldIjgae@CK?G@E?I@M@M@M@G?E@MKCGCAAIECAWQKIKKYSSOAC?AAE?EAG?CCGCIKYGUKQGKCGQ]MUQYEKISMYS[EIEICEGK",
+            "irldIrv`e@i@}@O[KOOWYa@Wc@EIECGCE?a@F_@D[Bo@P",
+            "y{ldI|p`e@gAaESu@",
+            "u~ldIdi`e@g@p@OPKNCB"
+          ]
+        },
+        {
+          "distance": 3147,
+          "duration": 730,
+          "start": { "lat": 53.3199076, "lng": -6.2332887 },
+          "stop": { "lat": 53.3404818, "lng": -6.2585706 },
+          "mode": "TRANSIT",
+          "transit": {
+            "dep": {
+              "name": "Donnybrook, Donnybrook Road ->NW1",
+              "time": 1594729460
+            },
+            "arr": { "name": "Dawson Street, stop 792", "time": 1594730190 },
+            "headsign": "Heuston Station",
+            "type": "BUS",
+            "operator": "Dublin Bus",
+            "route": "145"
+          },
+          "polyline": "m`mdI`m`e@Oc@}AzBEFk@x@Yj@q@fAKLGJw@nA[h@GJ_@n@OXIPIROj@Q~BI^O^IRMXOTCFS^]p@Ub@{ArBINGFMRGHIJQT[^c@l@u@hAYb@aBbCGHGHm@z@W`@QTOTKRe@v@A@uApBIJUXy@fAc@j@m@x@s@fAi@t@c@v@CHITELITK\\GNW`A?@Mf@Wx@EPMd@Od@YdASr@Ur@KZMZA@Yx@AJ?BABIVK\\Of@Kb@AJG`@_@zDM~@Mn@On@K\\?B]~@U`@Ud@U\\Y^MNMLa@Xu@f@SHEBC@g@RGD]NA@aAn@KDSASNIFEBIFaAjAc@d@g@j@IHONONSRsBdCw@v@QPe@d@[\\i@f@g@h@m@p@FVGWOP[^EDkAnA_@h@KVEHEFIX[Si@_@KGy@i@YScAs@SQwB{A[Y[YGACAE?G?MDGBED?@EFCFGVEXAD]pBI`@GPUv@i@jDWnAYjAqAWu@Ow@QAN"
+        },
+
+        {
+          "distance": 12,
+          "duration": 8,
+          "start": { "lat": 53.34212669999999, "lng": -6.258003599999999 },
+          "stop": { "lat": 53.3422306, "lng": -6.2579712 },
+          "mode": "WALKING",
+          "polyline": ["ikqdIngee@SE"]
+        },
+
+        {
+          "distance": 1349,
+          "duration": 618,
+          "start": { "lat": 53.3421898, "lng": -6.258047899999999 },
+          "stop": { "lat": 53.3531053, "lng": -6.2605035 },
+          "mode": "TRANSIT",
+          "transit": {
+            "dep": { "name": "Dawson", "time": 1594730682 },
+            "arr": { "name": "Parnell Luas Stop", "time": 1594731300 },
+            "headsign": "Parnell",
+            "type": "TRAM",
+            "operator": "Luas"
+          },
+          "polyline": "ukqdIxgee@@]wCc@}@`GWXe@JiASi@LaAr@i@Sq@k@WMeGCoBF_KfDA@ePjFoDnAk@w@iAwCGH"
+        },
+
+        {
+          "distance": 416,
+          "duration": 338,
+          "start": { "lat": 53.3530527, "lng": -6.260394499999999 },
+          "stop": { "lat": 53.3558415, "lng": -6.2622956 },
+          "mode": "WALKING",
+          "polyline": [
+            "qosdIlvee@_@aAIUY{@Uo@",
+            "krsdIhpee@k@x@aAvAiG`J",
+            "c~sdI|_fe@KY",
+            "o~sdIb_fe@oAfB"
+          ]
+        }
+      ],
+      "start": {
+        "time": 1594728829,
+        "address": "6 Bóthar Chluain Sceach, An Halla Chnocán an Imill, Rath Maonais, Dublin 6, D06 V6R2, Ireland",
+        "location": { "lat": 53.3158725, "lng": -6.2399646 }
+      },
+      "end": {
+        "time": 1594731638,
+        "address": "6 Great Denmark Street, Northside, Dublin 1, Ireland",
+        "location": { "lat": 53.3558415, "lng": -6.2622956 }
+      }
+    },
+
+    {
+      "distance": 6265,
+      "duration": 2864,
+      "db_index": [],
+      "transit_index": [1],
+      "steps": [
+        {
+          "distance": 1683,
+          "duration": 1265,
+          "start": { "lat": 53.3158725, "lng": -6.2399646 },
+          "stop": { "lat": 53.3211344, "lng": -6.2546032 },
+          "mode": "WALKING",
+          "polyline": [
+            "egldIvvae@?w@@_B",
+            "cgldI~qae@MGKGIG][]]MM_@a@",
+            "qkldI|mae@[dAQj@Ut@eAbDGLsA~BoBtCaAzAKN",
+            "uxldIxdbe@Y^IJuAfBEF]f@Wd@u@dBe@~@GJi@dA}@zAkApBuAfCWd@[l@e@bAe@lAS`@[r@O\\e@bAe@bAa@|@c@hAENKVEL[|@KX",
+            "kvmdIhvce@f@l@f@b@nF~D|B~ADD",
+            "ghmdI`bde@FbEFvE",
+            "wgmdI|nde@IhB"
+          ]
+        },
+        {
+          "distance": 4166,
+          "duration": 1260,
+          "start": { "lat": 53.3208498, "lng": -6.2545633 },
+          "stop": { "lat": 53.3531053, "lng": -6.2605035 },
+          "mode": "TRANSIT",
+          "transit": {
+            "dep": { "name": "Beechwood", "time": 1594730040 },
+            "arr": { "name": "Parnell Luas Stop", "time": 1594731300 },
+            "headsign": "Parnell",
+            "type": "TRAM",
+            "operator": "Luas"
+          },
+          "polyline": "ifmdI~qde@@Js@LG@MBG@}@PkGhA{B`@mATYFwCh@E@WDeARgARcAR[Fk@Jm@Jm@Jk@J}@PeATA?YH[HWHc@NUL_@NA@SJm@Vi@\\o@^UPGFIFm@f@]ZQRGD]^]\\YVWRUNSLQHYLm@P]HOFKHIJKNCJGLGTId@G\\GVCFIPIJMNONQH]FK@MBOBGBGDIDEJCDCFAJAFAF?F?ZDpD@Z?^ALCHCHCDGJEBEB[Hw@V}Ad@[HQFOF]J_@LWFa@F]Di@DG@_AFm@BU?U?KASCs@G_@Gi@O[Ko@WCA]Oo@c@CESWGIIIOQ]Ue@]UQSOEEEGGCSQe@]a@Ua@YBIGa@EBUF_BeAKg@Di@ZiBt@iEAa@oPwCC?wCc@}@`GWXe@JiASi@LaAr@i@Sq@k@WMeGCoBF_KfDA@ePjFoDnAk@w@iAwCGH"
+        },
+        {
+          "distance": 416,
+          "duration": 338,
+          "start": { "lat": 53.3530527, "lng": -6.260394499999999 },
+          "stop": { "lat": 53.3558415, "lng": -6.2622956 },
+          "mode": "WALKING",
+          "polyline": [
+            "qosdIlvee@_@aAIUY{@Uo@",
+            "krsdIhpee@k@x@aAvAiG`J",
+            "c~sdI|_fe@KY",
+            "o~sdIb_fe@oAfB"
+          ]
+        }
+      ],
+      "start": {
+        "time": 1594728774,
+        "address": "6 Bóthar Chluain Sceach, An Halla Chnocán an Imill, Rath Maonais, Dublin 6, D06 V6R2, Ireland",
+        "location": { "lat": 53.3158725, "lng": -6.2399646 }
+      },
+      "end": {
+        "time": 1594731638,
+        "address": "6 Great Denmark Street, Northside, Dublin 1, Ireland",
+        "location": { "lat": 53.3558415, "lng": -6.2622956 }
+      }
+    }
+  ],
+  "status": "OK"
+}

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import "../search.css";
+import "../css/search.css";
 
 import DirectionsBusIcon from "@material-ui/icons/DirectionsBus";
 import DirectionsWalkIcon from "@material-ui/icons/DirectionsWalk";
@@ -10,8 +10,9 @@ import TramIcon from "@material-ui/icons/Tram";
 import { Card, Timeline } from "antd";
 import "antd/dist/antd.css";
 
-const Route = (tripTimes) => {
-  const tripTime = tripTimes.tripTimes;
+import { findPoly } from "./polylines.js";
+
+const Route = ({ tripTime, setDirections }) => {
   const [showMore, setShowMore] = useState(false);
   let startTime = new Date(tripTime.start.time * 1000);
   let endTime = new Date(tripTime.end.time * 1000);
@@ -33,8 +34,12 @@ const Route = (tripTimes) => {
     (endTime.getMinutes() < 10 ? "0" : "") +
     endTime.getMinutes();
 
+  const handleClick = () => {
+    setShowMore(!showMore);
+    setDirections(findPoly(tripTime));
+  };
   return (
-    <Card onClick={() => setShowMore(!showMore)} hoverable>
+    <Card onClick={handleClick} hoverable>
       <span>
         {departTime}
         <span> - </span>
