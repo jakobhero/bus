@@ -13,6 +13,7 @@ import Switch from "react-switch";
 
 import { Button } from "antd";
 import { HistoryOutlined, StarFilled, StarOutlined } from "@ant-design/icons";
+import Tooltip from "@material-ui/core/Tooltip";
 
 import "../css/map.css";
 // https://www.youtube.com/watch?v=SySVBV_jcCM
@@ -70,13 +71,15 @@ function ShowMap({
       >
         <Locate panTo={panTo} />
         <div className="switch1 mapUI">
-          <Switch
-            width={35}
-            height={22}
-            onChange={() => setTouristModeBool(!touristModeBool)}
-            checked={touristModeBool}
-            className="Switch"
-          />
+          <Tooltip className="tooltip" title="Sort by bus changes">
+            <Switch
+              width={35}
+              height={22}
+              onChange={() => setTouristModeBool(!touristModeBool)}
+              checked={touristModeBool}
+              className="Switch"
+            />
+          </Tooltip>
         </div>
         {otherRoute.length > 1 && (
           <div className="switch2 mapUI">
@@ -90,6 +93,7 @@ function ShowMap({
           </div>
         )}
         {source && <Marker position={{ lat: source.lat, lng: source.lng }} />}
+        {/* Loop through either array and add markers, based on switch that appears when another route is provided */}
         {(otherRouteBool ? otherRoute : stops).map((marker) => (
           <Marker
             key={marker.lat - marker.lng}
@@ -135,12 +139,13 @@ function ShowMap({
             </div>
           </InfoWindow>
         ) : null}
-
+        {/* If directions array is populated that loop through the array of arrays and draw polylines, if thatcurrent array corresponds to a bus array, then place a stop marker
+        at the first waypoint. */}
         {directions.length > 1 &&
           directions.map((marker, index) =>
             marker.map((mrk) => (
               // console.log(mrk)
-              <div key={mrk[0].lat - mrk[0].lng}>
+              <div key={(mrk[0].lat - mrk[0].lng) * (index + 1)}>
                 {busIndex.includes(index) &&
                   [1, mrk.length - 1].map((idx) => (
                     <Marker

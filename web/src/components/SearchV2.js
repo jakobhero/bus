@@ -66,7 +66,7 @@ function searchLocalRoute(query) {
   }
 }
 
-const PlacesAutocomplete = ({ id, handleChange }) => {
+const PlacesAutocomplete = ({ id, handleChange, placeholder }) => {
   const {
     ready,
     value,
@@ -130,7 +130,7 @@ const PlacesAutocomplete = ({ id, handleChange }) => {
           value={value}
           onChange={handleInput}
           disabled={!ready}
-          placeholder="Choose a location"
+          placeholder={placeholder}
           style={{ width: "100%" }}
           data-lpignore="true"
           selectOnClick

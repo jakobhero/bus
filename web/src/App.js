@@ -1,4 +1,4 @@
-import "./App.css";
+import "./css/App.css";
 import React, { useState } from "react";
 import Route from "./components/route";
 import SearchForm from "./components/searchForm";
@@ -15,6 +15,8 @@ import AccessTimeIcon from "@material-ui/icons/AccessTime";
 import SortIcon from "@material-ui/icons/Sort";
 import DirectionsBusIcon from "@material-ui/icons/DirectionsBus";
 import Tooltip from "@material-ui/core/Tooltip";
+
+import { findPoly } from "./components/polylines.js";
 
 const { TabPane } = Tabs;
 
@@ -51,49 +53,6 @@ function findStopsRadius(lat, lng) {
   }
   return showMarkers;
 }
-
-const decode = (encoded) => {
-  var points = [];
-  var index = 0,
-    len = encoded.length;
-  var lat = 0,
-    lng = 0;
-  while (index < len) {
-    var b,
-      shift = 0,
-      result = 0;
-    do {
-      b = encoded.charAt(index++).charCodeAt(0) - 63; //finds ascii
-      result |= (b & 0x1f) << shift;
-      shift += 5;
-    } while (b >= 0x20);
-    var dlat = (result & 1) !== 0 ? ~(result >> 1) : result >> 1;
-    lat += dlat;
-    shift = 0;
-    result = 0;
-    do {
-      b = encoded.charAt(index++).charCodeAt(0) - 63;
-      result |= (b & 0x1f) << shift;
-      shift += 5;
-    } while (b >= 0x20);
-    var dlng = (result & 1) !== 0 ? ~(result >> 1) : result >> 1;
-    lng += dlng;
-
-    points.push({ lat: lat / 1e5, lng: lng / 1e5 });
-  }
-  return points;
-};
-
-const findPoly = (route) => {
-  let full_route = [];
-  route.steps.forEach((step, index) => {
-    full_route[index] = [];
-    step.polyline.forEach((line, idx) => {
-      full_route[index][idx] = decode(line);
-    });
-  });
-  return full_route;
-};
 
 const App = () => {
   const [state, setState] = React.useState({});
@@ -146,7 +105,10 @@ const App = () => {
         .catch(console.log);
     } else if (!dest.val && !dest.stopID && !source.stopID) {
       setCentre({ lat: source.lat, lng: source.lng });
+      setDirections([]);
+      setOtherRoute([]);
       setStopsForMap(findStopsRadius(source.lat, source.lng));
+      setActiveKey("1");
     } else if (!dest.val && source.stopID) {
       setRealTime(source.stopID);
       setCentre({ lat: source.lat, lng: source.lng });
@@ -175,6 +137,8 @@ const App = () => {
           if (res.data.status === "OK") {
             setTripTimes(res.data.connections);
             setDirections(findPoly(res.data.connections[0]));
+            setStopsForMap([]);
+            setOtherRoute([]);
             setBusIndex(res.data.connections[0].transit_index);
           }
         })
@@ -224,10 +188,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <SearchForm
-        fields={["source", "destination"]}
-        handleSubmitApp={handleSubmitApp}
-      />
+      <SearchForm handleSubmitApp={handleSubmitApp} />
       <Tabs style={{ margin: 10 }} onChange={callback} activeKey={activeKey}>
         <TabPane tab="Map" key="1">
           <ShowMap
@@ -260,7 +221,7 @@ const App = () => {
             </Tooltip>
           )}
           {tripTimes.map((dueTime, i) => (
-            <Route key={i} tripTimes={dueTime} />
+            <Route key={i} tripTime={dueTime} setDirections={setDirections} />
           ))}
           {tripTimes.length < 1 && <p>Choose a source and destination</p>}
         </TabPane>

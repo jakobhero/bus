@@ -10,11 +10,12 @@
   margin-right: auto;
 }
 
-.search .fa-angle-double-down {
+.search .directionsButton {
   position: absolute;
-  top: 4px;
+  top: 2px;
   right: 7px;
   font-size: 25px;
+  color: #1b55db;
 }
 
 table {

@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import PlacesAutocomplete from "./SearchV2";
-
+import DirectionsIcon from "@material-ui/icons/Directions";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import BorderWrapper from "react-border-wrapper";
-import "../search.css";
+import "../css/search.css";
 
 import { Button } from "antd";
 
@@ -31,7 +31,7 @@ const DatePickerFunc = ({ handleChange }) => {
   );
 };
 
-const SearchForm = ({ fields, handleSubmitApp }) => {
+const SearchForm = ({ handleSubmitApp }) => {
   const [showDestination, setShowDestination] = useState(false);
 
   const [fieldsValues, setFieldsValues] = React.useState({
@@ -93,12 +93,13 @@ const SearchForm = ({ fields, handleSubmitApp }) => {
               id={"source"}
               handleChange={handleChange}
               value={fieldsValues["source"]}
+              placeholder={"Enter a location, stop or bus route"}
             />
 
-            <span
-              className="fa fa-angle-double-down"
+            <DirectionsIcon
+              className="directionsButton"
               onClick={() => setShowDestination(!showDestination)}
-            ></span>
+            />
             <br />
           </div>
           {showDestination && (
@@ -107,6 +108,7 @@ const SearchForm = ({ fields, handleSubmitApp }) => {
                 id={"destination"}
                 handleChange={handleChange}
                 value={fieldsValues["destination"]}
+                placeholder={"Enter a destination"}
               />
               <br />
               <DatePickerFunc handleChange={handleChange} id={"time"} />
