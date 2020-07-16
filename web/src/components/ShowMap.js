@@ -22,16 +22,21 @@ const mapContainerStyle = {
   height: "70vh",
 };
 
+const centre = {
+  lat: 53.35014,
+  lng: -6.266155,
+};
+
 function ShowMap({
   source,
   destination,
   stops,
-  centreON,
   setRealTime,
   otherRoute,
   directions,
   busIndex,
 }) {
+  console.log(stops);
   const [selected, setSelected] = React.useState(null);
   const [touristModeBool, setTouristModeBool] = React.useState(false);
   const [otherRouteBool, setOherRouteBool] = React.useState(false);
@@ -45,23 +50,40 @@ function ShowMap({
     mapRef.current.setZoom(14);
   }, []);
 
-  // return full_route;
-  // }
-  // let bounds = new window.google.maps.LatLngBounds();
-  // for (var i = 0; i < markers.length; i++) {
-  //   bounds.extend({ lat: markers[i].lat, lng: markers[i].lng });
-  // }
-  // mapRef.current.fitBounds(bounds);
+  let bounds = new window.google.maps.LatLngBounds();
 
-  // Centre and zoom will need to be done properly in sprint 3
+  if (stops.length > 0) {
+    for (var i = 0; i < stops.length; i++) {
+      var myLatLng = new window.google.maps.LatLng(stops[i].lat, stops[i].lng);
+      bounds.extend(myLatLng);
+    }
+    if (stops.length > 1) {
+      mapRef.current.fitBounds(bounds);
+    } else {
+      mapRef.current.setZoom(16);
+    }
+    mapRef.current.panTo(bounds.getCenter());
+  }
 
+  if (source && destination) {
+    var sLatLng = new window.google.maps.LatLng(source.lat, source.lng);
+    var dLatLng = new window.google.maps.LatLng(
+      destination.lat,
+      destination.lng
+    );
+    bounds.extend(sLatLng);
+    bounds.extend(dLatLng);
+
+    mapRef.current.fitBounds(bounds);
+    mapRef.current.panTo(bounds.getCenter());
+  }
   return (
     <div>
       <GoogleMap
         id="map"
         mapContainerStyle={mapContainerStyle}
         zoom={14}
-        center={centreON}
+        center={centre}
         options={{
           styles: touristModeBool ? mapStylesIcons : mapStyles,
           disableDefaultUI: true,
