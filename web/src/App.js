@@ -58,10 +58,6 @@ const App = () => {
   const [state, setState] = React.useState({});
   const [activeKey, setActiveKey] = React.useState("1");
   const [tripTimes, setTripTimes] = React.useState([]);
-  const [centre, setCentre] = React.useState({
-    lat: 53.35014,
-    lng: -6.266155,
-  });
 
   const [realTimeData, setRealTimeData] = useState([]);
   const [stopsForMap, setStopsForMap] = useState([]);
@@ -78,7 +74,6 @@ const App = () => {
       .get("http://localhost/realtime?stopid=" + stop)
       .then((res) => {
         res["stopid"] = stop;
-        // return res;
         setRealTimeData(res);
       })
       .catch(console.log);
@@ -109,7 +104,6 @@ const App = () => {
         .catch(console.log);
     } else if (!dest.val && !dest.stopID && !source.stopID) {
       // if source is a place and no destination
-      setCentre({ lat: source.lat, lng: source.lng });
       setDirections([]);
       setOtherRoute([]);
       setStopsForMap(findStopsRadius(source.lat, source.lng));
@@ -117,16 +111,11 @@ const App = () => {
     } else if (!dest.val && !dest.stopID && source.stopID) {
       // if source is a bus stop and no destination
       setRealTime(source.stopID);
-      setCentre({ lat: source.lat, lng: source.lng });
-      let tempStop = [];
-      for (var j = 0; j < stops.length; j++) {
-        if (stops[j].id === source.stopID) {
-          tempStop.push(stops[j]);
-        }
-      }
-      setStopsForMap(tempStop);
+      setStopsForMap([
+        { stopid: source.stopID, lat: source.lat, lng: source.lng },
+      ]);
     } else {
-      // otherwise
+      // otherwise - directions
       axios
         .get(
           "http://localhost/directions?dep=" +
@@ -151,11 +140,6 @@ const App = () => {
         })
         .catch(console.log);
       setState(newFields);
-      let newCentre = {
-        lat: (source.lat + dest.lat) / 2,
-        lng: (source.lng + dest.lng) / 2,
-      };
-      setCentre(newCentre);
       setActiveKey("2");
     }
   };
@@ -201,7 +185,6 @@ const App = () => {
             source={state.source}
             destination={state.destination}
             stops={stopsForMap}
-            centreON={centre}
             setRealTime={setRealTime}
             otherRoute={otherRoute}
             directions={directions}

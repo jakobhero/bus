@@ -23,10 +23,7 @@ const DatePickerFunc = ({ handleChange }) => {
       withPortal
       timeIntervals={15}
       showTimeSelect
-      // isClearable
-      // minTime={setHours(setMinutes(new Date(), 0), 5)}
       dateFormat="MMMM d, yyyy h:mm aa"
-      // maxTime={setHours(setMinutes(new Date(), 30), 20)}
     />
   );
 };
