@@ -16,28 +16,28 @@ class Stops(Resource):
         #parse arguments "lat", "lon", "k" in request
         parser = reqparse.RequestParser()
         parser.add_argument('lat', type=str)
-        parser.add_argument('lon', type=str)
+        parser.add_argument('lng', type=str)
         parser.add_argument('k',type=int)
         frontend_params=parser.parse_args()
 
         stops=[]
         coords=np.empty([0,2]) #necessary for KD tree data structure
         for stop in StopsModel.query.all():
-            stops.append({'id': stop.stop_id, 'name':stop.name, 'coords':{'lat':stop.lat,'lon':stop.lon}})
+            stops.append({'stopid': stop.stop_id, 'fullname':stop.name, 'lat':stop.lat,'lng':stop.lon})
             coords=np.append(coords,[[stop.lat,stop.lon]],axis=0)
     
         #check for required params
-        if frontend_params["lat"] == None or frontend_params["lon"] == None:
+        if frontend_params["lat"] == None or frontend_params["lng"] == None:
             return {"stops":stops,"status":"OK"}
         
-        k=10 #set default value for nearest neighbors to be returned
+        k=20 #set default value for nearest neighbors to be returned
 
         if frontend_params["k"]!=None:
             k=frontend_params["k"]
 
         #set coordinates for nearest neighbor search
         try: 
-            target=[[float(frontend_params["lat"]),float(frontend_params["lon"])]]
+            target=[[float(frontend_params["lat"]),float(frontend_params["lng"])]]
         except:
             return {"status":"Error: Coordinates could not be parsed to float"}
         
@@ -53,6 +53,7 @@ class Stops(Resource):
             response.append(stops[ind])
         
         return {"stops":response,"status":"OK"}
+        #http://localhost/stops?lat=53.305544&lon=-6.237866&k=10
 
 class realTime(Resource):
     def get(self):

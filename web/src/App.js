@@ -20,40 +20,6 @@ import { findPoly } from "./components/polylines.js";
 
 const { TabPane } = Tabs;
 
-let stops = require("./components/stops.json");
-
-function degrees_to_radians(degrees) {
-  var pi = Math.PI;
-  return degrees * (pi / 180);
-}
-
-function getDistance(latitude1, longitude1, latitude2, longitude2) {
-  const earth_radius = 6371;
-
-  const dLat = degrees_to_radians(latitude2 - latitude1);
-  const dLon = degrees_to_radians(longitude2 - longitude1);
-
-  const a =
-    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-    Math.cos(degrees_to_radians(latitude1)) *
-      Math.cos(degrees_to_radians(latitude2)) *
-      Math.sin(dLon / 2) *
-      Math.sin(dLon / 2);
-  const c = 2 * Math.asin(Math.sqrt(a));
-
-  return earth_radius * c;
-}
-function findStopsRadius(lat, lng) {
-  let showMarkers = [];
-  for (var i = 0; i < stops.length; i++) {
-    let dist = getDistance(stops[i].lat, stops[i].lng, lat, lng);
-    if (dist < 0.5) {
-      showMarkers.push(stops[i]);
-    }
-  }
-  return showMarkers;
-}
-
 const App = () => {
   const [state, setState] = React.useState({});
   const [activeKey, setActiveKey] = React.useState("map");
@@ -106,8 +72,16 @@ const App = () => {
       // if source is a place and no destination
       setDirections([]);
       setOtherRoute([]);
-      setStopsForMap(findStopsRadius(source.lat, source.lng));
-      setActiveKey("map");
+      axios
+        .get("http://localhost/stops?lat=" + source.lat + "&lng=" + source.lng)
+        .then((res) => {
+          console.log(res);
+          if (res.statusText === "OK") {
+            setStopsForMap(res.data.stops);
+            setActiveKey("map");
+          }
+        })
+        .catch(console.log);
     } else if (!dest.val && !dest.stopID && source.stopID) {
       // if source is a bus stop and no destination
       setRealTime(source.stopID);
