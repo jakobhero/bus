@@ -1,10 +1,10 @@
 import "./css/App.css";
 import React, { useState } from "react";
-import Route from "./components/route";
 import SearchForm from "./components/searchForm";
 
 import ShowMap from "./components/ShowMap";
 import RealTimeInfo from "./components/RealTime";
+import AllRoutes from "./components/allRoutes";
 
 import { Tabs, Button } from "antd";
 import "antd/dist/antd.css";
@@ -56,7 +56,7 @@ function findStopsRadius(lat, lng) {
 
 const App = () => {
   const [state, setState] = React.useState({});
-  const [activeKey, setActiveKey] = React.useState("1");
+  const [activeKey, setActiveKey] = React.useState("map");
   const [tripTimes, setTripTimes] = React.useState([]);
 
   const [realTimeData, setRealTimeData] = useState([]);
@@ -69,7 +69,7 @@ const App = () => {
   const [sortStepsNum, setSortStepsNum] = useState(1);
   const [sortTimeNum, setSortTimeNum] = useState(1);
 
-  const getData = (stop) => {
+  const getRealTimeData = (stop) => {
     axios
       .get("http://localhost/realtime?stopid=" + stop)
       .then((res) => {
@@ -80,8 +80,8 @@ const App = () => {
   };
 
   const setRealTime = (route) => {
-    getData(route);
-    setActiveKey("4");
+    getRealTimeData(route);
+    setActiveKey("realTime");
   };
 
   const handleSubmitApp = (source, dest, time) => {
@@ -98,7 +98,7 @@ const App = () => {
           if (res.statusText === "OK") {
             setStopsForMap(res.data[0]);
             setOtherRoute(res.data[1]);
-            setActiveKey("1");
+            setActiveKey("map");
           }
         })
         .catch(console.log);
@@ -107,7 +107,7 @@ const App = () => {
       setDirections([]);
       setOtherRoute([]);
       setStopsForMap(findStopsRadius(source.lat, source.lng));
-      setActiveKey("1");
+      setActiveKey("map");
     } else if (!dest.val && !dest.stopID && source.stopID) {
       // if source is a bus stop and no destination
       setRealTime(source.stopID);
@@ -140,11 +140,11 @@ const App = () => {
         })
         .catch(console.log);
       setState(newFields);
-      setActiveKey("2");
+      setActiveKey("connections");
     }
   };
 
-  function callback(key) {
+  function changeActiveTab(key) {
     setActiveKey(key);
   }
 
@@ -179,8 +179,12 @@ const App = () => {
   return (
     <div className="App">
       <SearchForm handleSubmitApp={handleSubmitApp} />
-      <Tabs style={{ margin: 10 }} onChange={callback} activeKey={activeKey}>
-        <TabPane tab="Map" key="1">
+      <Tabs
+        style={{ margin: 10 }}
+        onChange={changeActiveTab}
+        activeKey={activeKey}
+      >
+        <TabPane tab="Map" key="map">
           <ShowMap
             source={state.source}
             destination={state.destination}
@@ -192,7 +196,7 @@ const App = () => {
           />
         </TabPane>
 
-        <TabPane tab="Connections" key="2">
+        <TabPane tab="Connections" key="connections">
           {tripTimes.length > 0 && (
             <Tooltip title="Sort by arrival time">
               <Button style={{ margin: 20 }} type="submit" onClick={sortTime}>
@@ -209,16 +213,16 @@ const App = () => {
               </Button>
             </Tooltip>
           )}
-          {tripTimes.map((dueTime, i) => (
-            <Route key={i} tripTime={dueTime} setDirections={setDirections} />
-          ))}
-          {tripTimes.length < 1 && <p>Choose a source and destination</p>}
+          <AllRoutes
+            tripTimes={tripTimes}
+            setDirections={setDirections}
+          ></AllRoutes>
         </TabPane>
 
-        <TabPane tab="Locations" key="3">
+        <TabPane tab="Favourites" key="favourites">
           Locations
         </TabPane>
-        <TabPane tab="Real Time" key="4">
+        <TabPane tab="Real Time" key="realTime">
           <RealTimeInfo realTimeData={realTimeData}></RealTimeInfo>
         </TabPane>
       </Tabs>

@@ -36,7 +36,6 @@ function ShowMap({
   directions,
   busIndex,
 }) {
-  console.log(stops);
   const [selected, setSelected] = React.useState(null);
   const [touristModeBool, setTouristModeBool] = React.useState(false);
   const [otherRouteBool, setOherRouteBool] = React.useState(false);
@@ -166,7 +165,6 @@ function ShowMap({
         {directions.length > 1 &&
           directions.map((marker, index) =>
             marker.map((mrk) => (
-              // console.log(mrk)
               <div key={(mrk[0].lat - mrk[0].lng) * (index + 1)}>
                 {busIndex.includes(index) &&
                   [1, mrk.length - 1].map((idx) => (
