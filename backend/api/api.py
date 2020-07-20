@@ -2,12 +2,38 @@ import json, os, requests, datetime
 import numpy as np
 from sklearn.neighbors import KDTree
 from flask_restful import Resource, Api, reqparse
+from sqlalchemy.types import String
 
 from .models import Stops as StopsModel
 
 api = Api()
 
 class Stops(Resource):
+    """API Endpoint for Dublin Bus stop information. Returns all stops that contain specified substring in either
+    ID or name."""
+    def get(self):
+        parser = reqparse.RequestParser()
+        parser.add_argument('substring', type=str)
+        frontend_params=parser.parse_args()
+
+        if frontend_params["substring"]==None:
+            return {"status":"Error! No substring specified."}
+        
+        response=[]
+        looking_for=frontend_params["substring"]+'%'
+
+        #if the length of substring is shorter than 3, only the beginning of stopid, name is checked.
+        if (len(frontend_params["substring"])>2):
+            looking_for='%'+looking_for #if substring is longer than 2 chars, it is checked whether substring is contained. 
+        print(looking_for)
+        for row in StopsModel.query.filter(StopsModel.stop_id.ilike(looking_for)).all():
+            response.append([row.stop_id,row.name,row.lat,row.lon])
+        for row in StopsModel.query.filter(StopsModel.name.ilike(looking_for)).all():
+            response.append([row.stop_id,row.name,row.lat,row.lon])
+        return {"stops":response,"status":"OK"}
+
+
+class NearestNeighbor(Resource):
     """API endpoint for Dublin Bus stop information. Returns the k nearest bus stops to the coordinates specified in request.
     If k is not specified in request, the a default of 10 closest stops is returned. If coordinates are not specified in request,
     all bus stops are returned. For the calculation of the closest stops, a KD tree is used to find results in O(log(n))."""
@@ -305,6 +331,7 @@ def directions_parser(directions):
     return {"connections": connections, "status": status}
 
 api.add_resource(Directions, '/directions', endpoint='direction')
-api.add_resource(Stops, '/stops', endpoint='stops')
+api.add_resource(NearestNeighbor, '/nearestneighbor', endpoint='nearestneighbor')
 api.add_resource(realTime, '/realtime', endpoint='realtime')
 api.add_resource(routeInfo, '/routeinfo', endpoint='routeinfo')
+api.add_resource(Stops, '/stops', endpoint='stops')
