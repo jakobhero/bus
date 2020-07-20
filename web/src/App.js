@@ -49,6 +49,13 @@ const App = () => {
     getRealTimeData(route);
     setActiveKey("realTime");
   };
+  const clearMap = () => {
+    // setState({})
+    setStopsForMap([]);
+    setDirections([]);
+    setOtherRoute([]);
+    setBusIndex([]);
+  };
 
   const handleSubmitApp = (source, dest, time) => {
     let newFields = { ...state };
@@ -58,6 +65,8 @@ const App = () => {
 
     if (source.bus_id) {
       // if source is a bus route
+      // can still see markers
+      clearMap();
       axios
         .get("http://localhost/routeinfo?routeid=" + source.bus_id)
         .then((res) => {
@@ -70,8 +79,7 @@ const App = () => {
         .catch(console.log);
     } else if (!dest.val && !dest.stopID && !source.stopID) {
       // if source is a place and no destination
-      setDirections([]);
-      setOtherRoute([]);
+      clearMap();
       axios
         .get("http://localhost/stops?lat=" + source.lat + "&lng=" + source.lng)
         .then((res) => {
@@ -84,12 +92,15 @@ const App = () => {
         .catch(console.log);
     } else if (!dest.val && !dest.stopID && source.stopID) {
       // if source is a bus stop and no destination
+      clearMap();
       setRealTime(source.stopID);
       setStopsForMap([
         { stopid: source.stopID, lat: source.lat, lng: source.lng },
       ]);
+      //marker doesnt show name
     } else {
       // otherwise - directions
+      clearMap();
       axios
         .get(
           "http://localhost/directions?dep=" +
