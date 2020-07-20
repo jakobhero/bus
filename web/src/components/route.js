@@ -8,6 +8,7 @@ import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import TramIcon from "@material-ui/icons/Tram";
 
 import { Card, Timeline } from "antd";
+import { ClockCircleOutlined } from "@ant-design/icons";
 import "antd/dist/antd.css";
 
 import { findPoly } from "./polylines.js";
@@ -45,7 +46,7 @@ const Route = ({ tripTime, setDirections }) => {
         <span> - </span>
         {arriveTime}
         <span>
-          (duration
+          (<ClockCircleOutlined style={{ fontSize: "14px" }} />
           {" " + Math.round(tripTime.duration / 60)}
           m)
         </span>
@@ -86,7 +87,8 @@ const Route = ({ tripTime, setDirections }) => {
                   {i < 1 ? tripTime.start.address : ""}
 
                   {tripTime.transit_index.includes(i) &
-                  !tripTime.transit_index.includes(i - 1)
+                  !tripTime.transit_index.includes(i - 1) &
+                  (i > 0)
                     ? step.transit.dep.name
                     : ""}
 
@@ -102,7 +104,11 @@ const Route = ({ tripTime, setDirections }) => {
                 </p>
                 <p>
                   {tripTime.transit_index.includes(i) ? (
-                    <DirectionsBusIcon style={{ color: "blue" }} />
+                    step.transit.type === "BUS" ? (
+                      <DirectionsBusIcon style={{ color: "blue" }} />
+                    ) : (
+                      <TramIcon style={{ color: "blue" }} />
+                    )
                   ) : (
                     ""
                   )}
@@ -116,7 +122,10 @@ const Route = ({ tripTime, setDirections }) => {
                 </p>
               </Timeline.Item>
             ))}
-            <Timeline.Item label={arriveTime}>
+            <Timeline.Item
+              label={arriveTime}
+              dot={<ClockCircleOutlined style={{ fontSize: "16px" }} />}
+            >
               {tripTime.end.address}
             </Timeline.Item>
           </Timeline>

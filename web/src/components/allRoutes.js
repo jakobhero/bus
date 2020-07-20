@@ -2,6 +2,7 @@ import React from "react";
 import Route from "./route";
 
 const AllRoutes = ({ tripTimes, setDirections }) => {
+  // breaks if only walking
   return (
     <div>
       {tripTimes.length > 0 &&

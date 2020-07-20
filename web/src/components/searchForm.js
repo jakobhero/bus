@@ -47,6 +47,7 @@ const SearchForm = ({ handleSubmitApp }) => {
   };
 
   function handleSubmit(event) {
+    console.log(fieldsValues);
     if (fieldsValues.source !== "") {
       console.log(fieldsValues);
       event.preventDefault();

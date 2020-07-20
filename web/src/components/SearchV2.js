@@ -10,39 +10,23 @@ import {
   ComboboxList,
   ComboboxOption,
 } from "@reach/combobox";
-
+import axios from "axios";
 import "@reach/combobox/styles.css";
 
 import routes from "./routesInfo";
-let stops = require("./stops.json");
 
 let stop_data = [];
 let route_data = [];
 
 function searchLocalStop(query) {
-  var filter, count, stop_id, key, fullname;
-  filter = query.toUpperCase();
-  count = 0;
-
-  if (filter.length !== 0) {
-    for (var i = 0; i < stops.length; i++) {
-      stop_id = stops[i].stopid;
-      fullname = stops[i].fullname ? stops[i].fullname.toUpperCase() : "";
-      // If entered letters are the prefix for the name of the station enter conditional
-      if (stop_id.includes(filter) || fullname.includes(filter)) {
-        key = stops[i].lat - stops[i].lng;
-        stop_data.push({
-          stop_id: stop_id,
-          key: key,
-          fullname: stops[i].fullname,
-        });
-        count += 1;
+  axios
+    .get("http://localhost/stops?substring=" + query)
+    .then((res) => {
+      if (res.statusText === "OK") {
+        stop_data = res.data.stops;
       }
-      if (count > 2) {
-        break;
-      }
-    }
-  }
+    })
+    .catch(console.log);
 }
 
 function searchLocalRoute(query) {
@@ -103,11 +87,11 @@ const PlacesAutocomplete = ({ id, handleChange, placeholder, route }) => {
     if (val.includes(", Bus Stop")) {
       stopID = val.split("(")[1];
       stopID = stopID.split(")")[0];
-      for (var i = 0; i < stops.length; i++) {
-        let stop_id = stops[i].stopid;
+      for (var i = 0; i < stop_data.length; i++) {
+        let stop_id = stop_data[i].stop_id;
         if (stop_id === stopID) {
-          lat = stops[i].lat;
-          lng = stops[i].lng;
+          lat = stop_data[i].lat;
+          lng = stop_data[i].lng;
           handleChange({ stopID, lat, lng }, id);
         }
       }

@@ -51,7 +51,9 @@ function ShowMap({
 
   const directionsBusMarker = (lat, lng) => {
     axios
-      .get("http://localhost/stops?lat=" + lat + "&lng=" + lng + "&k=1")
+      .get(
+        "http://localhost/nearestneighbor?lat=" + lat + "&lng=" + lng + "&k=1"
+      )
       .then((res) => {
         console.log(res);
         if (res.statusText === "OK") {
