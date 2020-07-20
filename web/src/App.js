@@ -81,7 +81,12 @@ const App = () => {
       // if source is a place and no destination
       clearMap();
       axios
-        .get("http://localhost/stops?lat=" + source.lat + "&lng=" + source.lng)
+        .get(
+          "http://localhost/nearestneighbor?lat=" +
+            source.lat +
+            "&lng=" +
+            source.lng
+        )
         .then((res) => {
           console.log(res);
           if (res.statusText === "OK") {
@@ -116,6 +121,7 @@ const App = () => {
         )
         .then((res) => {
           if (res.data.status === "OK") {
+            console.log(res.data.connections);
             setTripTimes(res.data.connections);
             setDirections(findPoly(res.data.connections[0]));
             setStopsForMap([]);
