@@ -14,7 +14,7 @@ import Switch from "react-switch";
 import { Button } from "antd";
 import { HistoryOutlined, StarFilled, StarOutlined } from "@ant-design/icons";
 import Tooltip from "@material-ui/core/Tooltip";
-
+import axios from "axios";
 import "../css/map.css";
 // https://www.youtube.com/watch?v=SySVBV_jcCM
 
@@ -48,6 +48,18 @@ function ShowMap({
     mapRef.current.panTo({ lat, lng });
     mapRef.current.setZoom(14);
   }, []);
+
+  const directionsBusMarker = (lat, lng) => {
+    axios
+      .get("http://localhost/stops?lat=" + lat + "&lng=" + lng + "&k=1")
+      .then((res) => {
+        console.log(res);
+        if (res.statusText === "OK") {
+          setSelected(res.data.stops[0]);
+        }
+      })
+      .catch(console.log);
+  };
 
   let bounds = new window.google.maps.LatLngBounds();
 
@@ -113,7 +125,9 @@ function ShowMap({
             />
           </div>
         )}
-        {source && <Marker position={{ lat: source.lat, lng: source.lng }} />}
+        {source && otherRoute.length < 1 && (
+          <Marker position={{ lat: source.lat, lng: source.lng }} />
+        )}
         {/* Loop through either array and add markers, based on switch that appears when another route is provided */}
         {(otherRouteBool ? otherRoute : stops).map((marker) => (
           <Marker
@@ -128,7 +142,7 @@ function ShowMap({
             }}
           />
         ))}
-        {destination && (
+        {destination && otherRoute.length < 1 && (
           <Marker position={{ lat: destination.lat, lng: destination.lng }} />
         )}
         {selected ? (
@@ -171,6 +185,9 @@ function ShowMap({
                     <Marker
                       key={mrk[idx].lat - mrk[idx].lng}
                       position={{ lat: mrk[idx].lat, lng: mrk[idx].lng }}
+                      onClick={() =>
+                        directionsBusMarker(mrk[idx].lat, mrk[idx].lng)
+                      }
                       icon={{
                         url: `./bus_1.svg`,
                         origin: new window.google.maps.Point(0, 0),
