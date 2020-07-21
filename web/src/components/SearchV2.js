@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import usePlacesAutocomplete, {
   getGeocode,
   getLatLng,
@@ -15,42 +15,10 @@ import "@reach/combobox/styles.css";
 
 import routes from "./routesInfo";
 
-let stop_data = [];
-let route_data = [];
-
-function searchLocalStop(query) {
-  axios
-    .get("http://localhost/stops?substring=" + query)
-    .then((res) => {
-      if (res.statusText === "OK") {
-        stop_data = res.data.stops;
-      }
-    })
-    .catch(console.log);
-}
-
-function searchLocalRoute(query) {
-  var filter, count, route_id, key;
-  filter = query.toUpperCase();
-  count = 0;
-
-  if (filter.length !== 0) {
-    for (var i = 0; i < routes.length; i++) {
-      route_id = routes[i].toUpperCase();
-      // If entered letters are the prefix for the name of the station enter conditional
-      if (route_id.includes(filter)) {
-        key = route_id + count;
-        route_data.push({ route_id: route_id, key: key });
-        count += 1;
-      }
-      if (count > 2) {
-        break;
-      }
-    }
-  }
-}
-
 const PlacesAutocomplete = ({ id, handleChange, placeholder, route }) => {
+  const [stopData, setStopData] = useState([]);
+  const [routeData, setRouteData] = useState([]);
+
   const {
     ready,
     value,
@@ -63,12 +31,48 @@ const PlacesAutocomplete = ({ id, handleChange, placeholder, route }) => {
       componentRestrictions: { country: "ie" },
     },
   });
+  function searchLocalStop(query) {
+    axios
+      .get("http://localhost/stops?substring=" + query)
+      .then((res) => {
+        if (res.statusText === "OK") {
+          setStopData(res.data.stops);
+        }
+      })
+      .catch(console.log);
+  }
+
+  function searchLocalRoute(query) {
+    var filter,
+      count,
+      route_id,
+      key,
+      route_data = [];
+    filter = query.toUpperCase();
+    count = 0;
+
+    if (filter.length !== 0) {
+      for (var i = 0; i < routes.length; i++) {
+        route_id = routes[i].toUpperCase();
+        // If entered letters are the prefix for the name of the station enter conditional
+        if (route_id.includes(filter)) {
+          key = route_id + count;
+          route_data.push({ route_id: route_id, key: key });
+          count += 1;
+        }
+        if (count > 2) {
+          break;
+        }
+      }
+      setRouteData(route_data);
+    }
+  }
 
   const handleInput = (e) => {
     // when characters are added to the input, then functions are run with the input, if there is a match then add that match to the array, the array is displayed in the dropdown
     try {
-      stop_data = [];
-      route_data = [];
+      setRouteData([]);
+      setStopData([]);
       searchLocalStop(e.target.value);
       if (route) {
         searchLocalRoute(e.target.value);
@@ -87,11 +91,11 @@ const PlacesAutocomplete = ({ id, handleChange, placeholder, route }) => {
     if (val.includes(", Bus Stop")) {
       stopID = val.split("(")[1];
       stopID = stopID.split(")")[0];
-      for (var i = 0; i < stop_data.length; i++) {
-        let stop_id = stop_data[i].stop_id;
+      for (var i = 0; i < stopData.length; i++) {
+        let stop_id = stopData[i].stop_id;
         if (stop_id === stopID) {
-          lat = stop_data[i].lat;
-          lng = stop_data[i].lng;
+          lat = stopData[i].lat;
+          lng = stopData[i].lng;
           handleChange({ stopID, lat, lng }, id);
         }
       }
@@ -127,15 +131,15 @@ const PlacesAutocomplete = ({ id, handleChange, placeholder, route }) => {
         />
         <ComboboxPopover>
           <ComboboxList>
-            {stop_data.length > 0 &&
-              stop_data.map(({ stop_id, key, fullname }) => (
+            {stopData.length > 0 &&
+              stopData.map(({ stop_id, key, fullname }) => (
                 <ComboboxOption
                   key={key}
                   value={`${fullname} (${stop_id}), Bus Stop`}
                 />
               ))}
-            {route_data.length > 0 &&
-              route_data.map(({ route_id, key }) => (
+            {routeData.length > 0 &&
+              routeData.map(({ route_id, key }) => (
                 <ComboboxOption key={key} value={`${route_id}, Bus Route`} />
               ))}
             {status === "OK" &&
