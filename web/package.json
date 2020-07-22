@@ -24,6 +24,7 @@
     "react-border-wrapper": "^1.0.3",
     "react-datepicker": "^3.0.0",
     "react-dom": "^16.13.1",
+    "react-open-weather": "0.5.2",
     "react-scripts": "3.4.1",
     "react-switch": "^5.0.1",
     "semantic-ui-react": "^0.88.2",
