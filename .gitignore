@@ -6,3 +6,5 @@ backend/venv
 backend/db/__pycache__
 backend/env
 data_analytics/46a_1.csv
+backend/db/rt_leavetimes_DB_2018.txt
+data_analytics/jakob/rt_trips_DB_2018.txt

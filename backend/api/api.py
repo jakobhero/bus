@@ -3,6 +3,7 @@ import os
 import requests
 import datetime
 import numpy as np
+import time
 from sklearn.neighbors import KDTree
 from flask_restful import Resource, Api, reqparse
 from sqlalchemy.types import String
@@ -227,7 +228,7 @@ class Directions(Resource):
             "destination": frontend_params["arr"],
             "key": os.environ.get('GOOGLE_KEY'),
             "mode": "transit",
-            "departure_time": "now",
+            "departure_time": int(time.time()),
             "alternatives": "true"
         }
         if "time" in frontend_params:  # overwrite default value if time is specified
@@ -245,12 +246,12 @@ class Directions(Resource):
             json.dump(res, outfile, sort_keys=True, indent=8)
 
         # process response
-        res = directions_parser(res)
+        res = directions_parser(res, params["departure_time"])
 
         return res
 
 
-def directions_parser(directions):
+def directions_parser(directions, time):
     """transforms response of Google's direction service into frontend-friendly format."""
 
     # check status of response
@@ -333,19 +334,25 @@ def directions_parser(directions):
         curr["transit_index"] = transit_index
         curr["steps"] = steps
 
-        # times are only specified if transit is involved
-        if len(curr["transit_index"]) >= 1:
-            curr["start"] = {
-                "time": route["departure_time"]["value"],
-                "address": route["start_address"],
-                "location": route['start_location']
-            }
-            curr["end"] = {
-                "time": route["arrival_time"]["value"],
-                "address": route["end_address"],
-                "location": route["end_location"]
-            }
+        curr["start"] = {
+            "address": route["start_address"],
+            "location": route['start_location']
+        }
+        curr["end"] = {
+            "address": route["end_address"],
+            "location": route["end_location"]
+        }
 
+        # arrival and departures times are taken from transit info if available and computed else.
+        if len(curr["transit_index"]) >= 1:
+            curr["start"]["time"] = route["departure_time"]["value"]
+            curr["end"]["time"] = route["arrival_time"]["value"]
+        else:
+            curr["start"]["time"] = time
+            total_duration = 0
+            for step in curr["steps"]:
+                total_duration += step["duration"]
+            curr["end"]["time"] = time+total_duration
         connections.append(curr)
 
     return {"connections": connections, "status": status}
