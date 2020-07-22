@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import {
   GoogleMap,
@@ -11,11 +11,17 @@ import mapStylesIcons from "./mapStylesIcons";
 
 import Switch from "react-switch";
 
-import { Button } from "antd";
+import { Button, Modal } from "antd";
 import { HistoryOutlined, StarFilled, StarOutlined } from "@ant-design/icons";
 import Tooltip from "@material-ui/core/Tooltip";
-
+import WeatherIcon from 'react-icons-weather';
+import ReactWeather from "react-open-weather";
+//Optional include of the default css styles
+import "react-open-weather/lib/css/ReactWeather.css";
 import "../css/map.css";
+
+
+
 // https://www.youtube.com/watch?v=SySVBV_jcCM
 
 const mapContainerStyle = {
@@ -77,6 +83,22 @@ function ShowMap({
     mapRef.current.fitBounds(bounds);
     mapRef.current.panTo(bounds.getCenter());
   }
+  const [ visible, setVisible] = useState(false);
+  
+
+  const showModal = () => {
+    setVisible(true);
+  };
+
+  const handleOk = e => {
+    console.log(e);
+    setVisible(false);
+  };
+
+  const handleCancel = e => {
+    console.log(e);
+    setVisible(false);
+  };
   return (
     <div>
       <GoogleMap
@@ -155,6 +177,31 @@ function ShowMap({
               <Button style={{ margin: 10 }}>
                 <StarOutlined />
               </Button>
+              <Button style={{ margin: 10 }} onClick={showModal}>
+              <WeatherIcon name="owm" iconId="200" flip="horizontal" rotate="90" />
+
+              </Button>
+              <Modal
+          title="Today's Weather"
+          visible={visible}
+          onOk={handleOk}
+          onCancel={handleCancel}
+        >
+          <p>Today's Weather</p>
+          {/* <ReactWeather
+        forecast="5days"
+        apikey="7ad07aac9b0943040a4abdd2c23dfc4e"
+        type="city"
+        city="Dublin"
+      /> */}
+      <ReactWeather
+  forecast="today"
+  apikey="7ad07aac9b0943040a4abdd2c23dfc4e"
+  type="geo"
+  lat={selected.lat}
+  lon={selected.lng}
+/>
+        </Modal>
               <Button style={{ margin: 10 }}>
                 <StarFilled />
               </Button>
