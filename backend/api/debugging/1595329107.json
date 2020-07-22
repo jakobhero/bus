@@ -1,0 +1,792 @@
+{
+        "geocoded_waypoints": [
+                {
+                        "geocoder_status": "OK",
+                        "place_id": "ChIJ6VU-drQOZ0gRDYdl5-8aHVg",
+                        "types": [
+                                "establishment",
+                                "point_of_interest",
+                                "transit_station"
+                        ]
+                },
+                {
+                        "geocoder_status": "OK",
+                        "place_id": "ChIJfbkNf6UOZ0gRZKInEytmwVc",
+                        "types": [
+                                "establishment",
+                                "point_of_interest",
+                                "transit_station"
+                        ]
+                }
+        ],
+        "routes": [
+                {
+                        "bounds": {
+                                "northeast": {
+                                        "lat": 53.3244293,
+                                        "lng": -6.2409393
+                                },
+                                "southwest": {
+                                        "lat": 53.3176852,
+                                        "lng": -6.2528581
+                                }
+                        },
+                        "copyrights": "Map data \u00a92020",
+                        "legs": [
+                                {
+                                        "arrival_time": {
+                                                "text": "12:16pm",
+                                                "time_zone": "Europe/Dublin",
+                                                "value": 1595330183
+                                        },
+                                        "departure_time": {
+                                                "text": "12:12pm",
+                                                "time_zone": "Europe/Dublin",
+                                                "value": 1595329921
+                                        },
+                                        "distance": {
+                                                "text": "1.1 km",
+                                                "value": 1111
+                                        },
+                                        "duration": {
+                                                "text": "4 mins",
+                                                "value": 262
+                                        },
+                                        "end_address": "Ranelagh, Ranelagh (SE-bound), Ranelagh, Dublin, Co. Dublin, Ireland",
+                                        "end_location": {
+                                                "lat": 53.3244293,
+                                                "lng": -6.2528581
+                                        },
+                                        "start_address": "Clonskeagh Road, stop 856, Rathmines, Dublin, Co. Dublin, Ireland",
+                                        "start_location": {
+                                                "lat": 53.3176852,
+                                                "lng": -6.2410356
+                                        },
+                                        "steps": [
+                                                {
+                                                        "distance": {
+                                                                "text": "1.1 km",
+                                                                "value": 1070
+                                                        },
+                                                        "duration": {
+                                                                "text": "4 mins",
+                                                                "value": 232
+                                                        },
+                                                        "end_location": {
+                                                                "lat": 53.3241751,
+                                                                "lng": -6.252406499999999
+                                                        },
+                                                        "html_instructions": "Bus towards St Pappin's Rd",
+                                                        "polyline": {
+                                                                "points": "qrldIn}ae@GSmBpCaAzAKNY^IJuAfBEF]f@Wd@u@dBa@v@CFGJi@dA}@zAkApBcAhBQ\\Wd@[l@e@bAe@lAS`@[r@O\\e@bASb@Q^a@|@c@hAENKVEL[|@KXMb@Y|@ENITUv@Oj@i@`CYnAHH"
+                                                        },
+                                                        "start_location": {
+                                                                "lat": 53.3176852,
+                                                                "lng": -6.2410356
+                                                        },
+                                                        "transit_details": {
+                                                                "arrival_stop": {
+                                                                        "location": {
+                                                                                "lat": 53.3241751,
+                                                                                "lng": -6.252406499999999
+                                                                        },
+                                                                        "name": "Ranelagh, Ranelagh"
+                                                                },
+                                                                "arrival_time": {
+                                                                        "text": "12:15pm",
+                                                                        "time_zone": "Europe/Dublin",
+                                                                        "value": 1595330153
+                                                                },
+                                                                "departure_stop": {
+                                                                        "location": {
+                                                                                "lat": 53.3176852,
+                                                                                "lng": -6.2410356
+                                                                        },
+                                                                        "name": "Eglinton Road, stop 883"
+                                                                },
+                                                                "departure_time": {
+                                                                        "text": "12:12pm",
+                                                                        "time_zone": "Europe/Dublin",
+                                                                        "value": 1595329921
+                                                                },
+                                                                "headsign": "St Pappin's Rd",
+                                                                "line": {
+                                                                        "agencies": [
+                                                                                {
+                                                                                        "name": "Dublin Bus",
+                                                                                        "url": "http://www.transportforireland.ie/"
+                                                                                }
+                                                                        ],
+                                                                        "short_name": "11",
+                                                                        "vehicle": {
+                                                                                "icon": "//maps.gstatic.com/mapfiles/transit/iw2/6/bus2.png",
+                                                                                "name": "Bus",
+                                                                                "type": "BUS"
+                                                                        }
+                                                                },
+                                                                "num_stops": 4
+                                                        },
+                                                        "travel_mode": "TRANSIT"
+                                                },
+                                                {
+                                                        "distance": {
+                                                                "text": "41 m",
+                                                                "value": 41
+                                                        },
+                                                        "duration": {
+                                                                "text": "1 min",
+                                                                "value": 30
+                                                        },
+                                                        "end_location": {
+                                                                "lat": 53.3244293,
+                                                                "lng": -6.2528581
+                                                        },
+                                                        "html_instructions": "Walk to Ranelagh, Ranelagh (SE-bound), Ranelagh, Dublin, Co. Dublin, Ireland",
+                                                        "polyline": {
+                                                                "points": "a{mdIpdde@s@xA"
+                                                        },
+                                                        "start_location": {
+                                                                "lat": 53.3241704,
+                                                                "lng": -6.2524106
+                                                        },
+                                                        "steps": [
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "41 m",
+                                                                                "value": 41
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "1 min",
+                                                                                "value": 30
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3244293,
+                                                                                "lng": -6.2528581
+                                                                        },
+                                                                        "polyline": {
+                                                                                "points": "a{mdIpdde@s@xA"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.3241704,
+                                                                                "lng": -6.2524106
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                }
+                                                        ],
+                                                        "travel_mode": "WALKING"
+                                                }
+                                        ],
+                                        "traffic_speed_entry": [],
+                                        "via_waypoint": []
+                                }
+                        ],
+                        "overview_polyline": {
+                                "points": "qrldIn}ae@GSmBpCmAjB_CzCu@lAwA|CsBtDyD~GaApBy@nBeBxD}AvDy@|Bw@fCe@bBcApEJHs@xA"
+                        },
+                        "summary": "",
+                        "warnings": [
+                                "Walking directions are in beta. Use caution \u2013 This route may be missing sidewalks or pedestrian paths."
+                        ],
+                        "waypoint_order": []
+                },
+                {
+                        "bounds": {
+                                "northeast": {
+                                        "lat": 53.3244293,
+                                        "lng": -6.240825
+                                },
+                                "southwest": {
+                                        "lat": 53.317656,
+                                        "lng": -6.2528581
+                                }
+                        },
+                        "copyrights": "Map data \u00a92020",
+                        "legs": [
+                                {
+                                        "arrival_time": {
+                                                "text": "12:11pm",
+                                                "time_zone": "Europe/Dublin",
+                                                "value": 1595329919
+                                        },
+                                        "departure_time": {
+                                                "text": "12:04pm",
+                                                "time_zone": "Europe/Dublin",
+                                                "value": 1595329477
+                                        },
+                                        "distance": {
+                                                "text": "1.1 km",
+                                                "value": 1117
+                                        },
+                                        "duration": {
+                                                "text": "7 mins",
+                                                "value": 442
+                                        },
+                                        "end_address": "Ranelagh, Ranelagh (SE-bound), Ranelagh, Dublin, Co. Dublin, Ireland",
+                                        "end_location": {
+                                                "lat": 53.3244293,
+                                                "lng": -6.2528581
+                                        },
+                                        "start_address": "Clonskeagh Road, stop 856, Rathmines, Dublin, Co. Dublin, Ireland",
+                                        "start_location": {
+                                                "lat": 53.317656,
+                                                "lng": -6.240825
+                                        },
+                                        "steps": [
+                                                {
+                                                        "distance": {
+                                                                "text": "0.3 km",
+                                                                "value": 345
+                                                        },
+                                                        "duration": {
+                                                                "text": "4 mins",
+                                                                "value": 269
+                                                        },
+                                                        "end_location": {
+                                                                "lat": 53.3200204,
+                                                                "lng": -6.2441752
+                                                        },
+                                                        "html_instructions": "Walk to Norwood Park, stop 884",
+                                                        "polyline": {
+                                                                "points": "krldIb|ae@KRoBtCaAzAKNY^IJuAfBEF]f@Wd@u@dBa@x@"
+                                                        },
+                                                        "start_location": {
+                                                                "lat": 53.317656,
+                                                                "lng": -6.240825
+                                                        },
+                                                        "steps": [
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "0.1 km",
+                                                                                "value": 145
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "2 mins",
+                                                                                "value": 119
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3186699,
+                                                                                "lng": -6.242207
+                                                                        },
+                                                                        "html_instructions": "Head <b>northwest</b> on <b>Clonskeagh Rd</b>/<wbr/><b>St James's Terrace</b>/<wbr/><b>R825</b> toward <b>Milltown Rd</b>/<wbr/><b>R117</b><div style=\"font-size:0.9em\">Continue to follow R825</div>",
+                                                                        "polyline": {
+                                                                                "points": "krldIb|ae@KRoBtCaAzAKN"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.317656,
+                                                                                "lng": -6.240825
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                },
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "0.2 km",
+                                                                                "value": 200
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "3 mins",
+                                                                                "value": 150
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3200204,
+                                                                                "lng": -6.2441752
+                                                                        },
+                                                                        "html_instructions": "Continue onto <b>Sandford Rd</b>/<wbr/><b>R117</b><div style=\"font-size:0.9em\">Destination will be on the left</div>",
+                                                                        "polyline": {
+                                                                                "points": "uxldIxdbe@Y^IJuAfBEF]f@Wd@u@dBa@x@"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.3186699,
+                                                                                "lng": -6.242207
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                }
+                                                        ],
+                                                        "travel_mode": "WALKING"
+                                                },
+                                                {
+                                                        "distance": {
+                                                                "text": "0.7 km",
+                                                                "value": 731
+                                                        },
+                                                        "duration": {
+                                                                "text": "2 mins",
+                                                                "value": 143
+                                                        },
+                                                        "end_location": {
+                                                                "lat": 53.3241751,
+                                                                "lng": -6.252406499999999
+                                                        },
+                                                        "html_instructions": "Bus towards DCU",
+                                                        "polyline": {
+                                                                "points": "_amdIhqbe@CGCFGJi@dA}@zAkApBcAhBQ\\Wd@[l@e@bAe@lAS`@[r@O\\e@bASb@Q^a@|@c@hAENKVEL[|@KXMb@Y|@ENITUv@Oj@i@`CYnAHH"
+                                                        },
+                                                        "start_location": {
+                                                                "lat": 53.31999700000001,
+                                                                "lng": -6.2442128
+                                                        },
+                                                        "transit_details": {
+                                                                "arrival_stop": {
+                                                                        "location": {
+                                                                                "lat": 53.3241751,
+                                                                                "lng": -6.252406499999999
+                                                                        },
+                                                                        "name": "Ranelagh, Ranelagh"
+                                                                },
+                                                                "arrival_time": {
+                                                                        "text": "12:11pm",
+                                                                        "time_zone": "Europe/Dublin",
+                                                                        "value": 1595329889
+                                                                },
+                                                                "departure_stop": {
+                                                                        "location": {
+                                                                                "lat": 53.31999700000001,
+                                                                                "lng": -6.2442128
+                                                                        },
+                                                                        "name": "Norwood Park, stop 884"
+                                                                },
+                                                                "departure_time": {
+                                                                        "text": "12:09pm",
+                                                                        "time_zone": "Europe/Dublin",
+                                                                        "value": 1595329746
+                                                                },
+                                                                "headsign": "DCU",
+                                                                "line": {
+                                                                        "agencies": [
+                                                                                {
+                                                                                        "name": "Dublin Bus",
+                                                                                        "url": "http://www.transportforireland.ie/"
+                                                                                }
+                                                                        ],
+                                                                        "short_name": "44",
+                                                                        "vehicle": {
+                                                                                "icon": "//maps.gstatic.com/mapfiles/transit/iw2/6/bus2.png",
+                                                                                "name": "Bus",
+                                                                                "type": "BUS"
+                                                                        }
+                                                                },
+                                                                "num_stops": 3
+                                                        },
+                                                        "travel_mode": "TRANSIT"
+                                                },
+                                                {
+                                                        "distance": {
+                                                                "text": "41 m",
+                                                                "value": 41
+                                                        },
+                                                        "duration": {
+                                                                "text": "1 min",
+                                                                "value": 30
+                                                        },
+                                                        "end_location": {
+                                                                "lat": 53.3244293,
+                                                                "lng": -6.2528581
+                                                        },
+                                                        "html_instructions": "Walk to Ranelagh, Ranelagh (SE-bound), Ranelagh, Dublin, Co. Dublin, Ireland",
+                                                        "polyline": {
+                                                                "points": "a{mdIpdde@s@xA"
+                                                        },
+                                                        "start_location": {
+                                                                "lat": 53.3241704,
+                                                                "lng": -6.2524106
+                                                        },
+                                                        "steps": [
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "41 m",
+                                                                                "value": 41
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "1 min",
+                                                                                "value": 30
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3244293,
+                                                                                "lng": -6.2528581
+                                                                        },
+                                                                        "polyline": {
+                                                                                "points": "a{mdIpdde@s@xA"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.3241704,
+                                                                                "lng": -6.2524106
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                }
+                                                        ],
+                                                        "travel_mode": "WALKING"
+                                                }
+                                        ],
+                                        "traffic_speed_entry": [],
+                                        "via_waypoint": []
+                                }
+                        ],
+                        "overview_polyline": {
+                                "points": "krldIb|ae@iEtG_CzCu@lAwA~CBDCGKRgB`DoCzEkBtDeB`EmBdE{@~Bg@vAg@`Bu@hCcApEJHs@xA"
+                        },
+                        "summary": "",
+                        "warnings": [
+                                "Walking directions are in beta. Use caution \u2013 This route may be missing sidewalks or pedestrian paths."
+                        ],
+                        "waypoint_order": []
+                },
+                {
+                        "bounds": {
+                                "northeast": {
+                                        "lat": 53.3244108,
+                                        "lng": -6.240825
+                                },
+                                "southwest": {
+                                        "lat": 53.317656,
+                                        "lng": -6.2528792
+                                }
+                        },
+                        "copyrights": "Map data \u00a92020",
+                        "legs": [
+                                {
+                                        "distance": {
+                                                "text": "1.1 km",
+                                                "value": 1107
+                                        },
+                                        "duration": {
+                                                "text": "14 mins",
+                                                "value": 837
+                                        },
+                                        "end_address": "Ranelagh, Ranelagh (SE-bound), Ranelagh, Dublin, Co. Dublin, Ireland",
+                                        "end_location": {
+                                                "lat": 53.3244108,
+                                                "lng": -6.2528792
+                                        },
+                                        "start_address": "Clonskeagh Road, stop 856, Rathmines, Dublin, Co. Dublin, Ireland",
+                                        "start_location": {
+                                                "lat": 53.317656,
+                                                "lng": -6.240825
+                                        },
+                                        "steps": [
+                                                {
+                                                        "distance": {
+                                                                "text": "1.1 km",
+                                                                "value": 1107
+                                                        },
+                                                        "duration": {
+                                                                "text": "14 mins",
+                                                                "value": 837
+                                                        },
+                                                        "end_location": {
+                                                                "lat": 53.3244108,
+                                                                "lng": -6.2528792
+                                                        },
+                                                        "html_instructions": "Walk to Ranelagh, Ranelagh (SE-bound), Ranelagh, Dublin, Co. Dublin, Ireland",
+                                                        "polyline": {
+                                                                "points": "krldIb|ae@KRoBtCaAzAKNY^IJuAfBEF]f@Wd@u@dBe@~@GJi@dA}@zAkApBuAfCWd@[l@e@bAe@lAS`@[r@O\\e@bAe@bAa@|@c@hAENKVEL[|@KXMb@Y|@ENITUv@Oj@i@`C[zASv@Mb@"
+                                                        },
+                                                        "start_location": {
+                                                                "lat": 53.317656,
+                                                                "lng": -6.240825
+                                                        },
+                                                        "steps": [
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "0.1 km",
+                                                                                "value": 145
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "2 mins",
+                                                                                "value": 119
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3186699,
+                                                                                "lng": -6.242207
+                                                                        },
+                                                                        "html_instructions": "Head <b>northwest</b> on <b>Clonskeagh Rd</b>/<wbr/><b>St James's Terrace</b>/<wbr/><b>R825</b> toward <b>Milltown Rd</b>/<wbr/><b>R117</b><div style=\"font-size:0.9em\">Continue to follow R825</div>",
+                                                                        "polyline": {
+                                                                                "points": "krldIb|ae@KRoBtCaAzAKN"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.317656,
+                                                                                "lng": -6.240825
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                },
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "1.0 km",
+                                                                                "value": 962
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "12 mins",
+                                                                                "value": 718
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3244108,
+                                                                                "lng": -6.2528792
+                                                                        },
+                                                                        "html_instructions": "Continue onto <b>Sandford Rd</b>/<wbr/><b>R117</b><div style=\"font-size:0.9em\">Continue to follow R117</div><div style=\"font-size:0.9em\">Destination will be on the right</div>",
+                                                                        "polyline": {
+                                                                                "points": "uxldIxdbe@Y^IJuAfBEF]f@Wd@u@dBe@~@GJi@dA}@zAkApBuAfCWd@[l@e@bAe@lAS`@[r@O\\e@bAe@bAa@|@c@hAENKVEL[|@KXMb@Y|@ENITUv@Oj@i@`C[zASv@Mb@"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.3186699,
+                                                                                "lng": -6.242207
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                }
+                                                        ],
+                                                        "travel_mode": "WALKING"
+                                                }
+                                        ],
+                                        "traffic_speed_entry": [],
+                                        "via_waypoint": []
+                                }
+                        ],
+                        "overview_polyline": {
+                                "points": "krldIb|ae@iEtG_CzCu@lA{AdD{D~GmBlDaApBeB`EkAfCeAfCs@rBy@jC_@lAy@lDo@rCMb@"
+                        },
+                        "summary": "R117",
+                        "warnings": [
+                                "Walking directions are in beta. Use caution \u2013 This route may be missing sidewalks or pedestrian paths."
+                        ],
+                        "waypoint_order": []
+                },
+                {
+                        "bounds": {
+                                "northeast": {
+                                        "lat": 53.3244293,
+                                        "lng": -6.240825
+                                },
+                                "southwest": {
+                                        "lat": 53.317656,
+                                        "lng": -6.2528581
+                                }
+                        },
+                        "copyrights": "Map data \u00a92020",
+                        "legs": [
+                                {
+                                        "arrival_time": {
+                                                "text": "12:26pm",
+                                                "time_zone": "Europe/Dublin",
+                                                "value": 1595330766
+                                        },
+                                        "departure_time": {
+                                                "text": "12:18pm",
+                                                "time_zone": "Europe/Dublin",
+                                                "value": 1595330321
+                                        },
+                                        "distance": {
+                                                "text": "1.1 km",
+                                                "value": 1117
+                                        },
+                                        "duration": {
+                                                "text": "7 mins",
+                                                "value": 445
+                                        },
+                                        "end_address": "Ranelagh, Ranelagh (SE-bound), Ranelagh, Dublin, Co. Dublin, Ireland",
+                                        "end_location": {
+                                                "lat": 53.3244293,
+                                                "lng": -6.2528581
+                                        },
+                                        "start_address": "Clonskeagh Road, stop 856, Rathmines, Dublin, Co. Dublin, Ireland",
+                                        "start_location": {
+                                                "lat": 53.317656,
+                                                "lng": -6.240825
+                                        },
+                                        "steps": [
+                                                {
+                                                        "distance": {
+                                                                "text": "0.3 km",
+                                                                "value": 345
+                                                        },
+                                                        "duration": {
+                                                                "text": "4 mins",
+                                                                "value": 269
+                                                        },
+                                                        "end_location": {
+                                                                "lat": 53.3200204,
+                                                                "lng": -6.2441752
+                                                        },
+                                                        "html_instructions": "Walk to Norwood Park, stop 884",
+                                                        "polyline": {
+                                                                "points": "krldIb|ae@KRoBtCaAzAKNY^IJuAfBEF]f@Wd@u@dBa@x@"
+                                                        },
+                                                        "start_location": {
+                                                                "lat": 53.317656,
+                                                                "lng": -6.240825
+                                                        },
+                                                        "steps": [
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "0.1 km",
+                                                                                "value": 145
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "2 mins",
+                                                                                "value": 119
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3186699,
+                                                                                "lng": -6.242207
+                                                                        },
+                                                                        "html_instructions": "Head <b>northwest</b> on <b>Clonskeagh Rd</b>/<wbr/><b>St James's Terrace</b>/<wbr/><b>R825</b> toward <b>Milltown Rd</b>/<wbr/><b>R117</b><div style=\"font-size:0.9em\">Continue to follow R825</div>",
+                                                                        "polyline": {
+                                                                                "points": "krldIb|ae@KRoBtCaAzAKN"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.317656,
+                                                                                "lng": -6.240825
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                },
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "0.2 km",
+                                                                                "value": 200
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "3 mins",
+                                                                                "value": 150
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3200204,
+                                                                                "lng": -6.2441752
+                                                                        },
+                                                                        "html_instructions": "Continue onto <b>Sandford Rd</b>/<wbr/><b>R117</b><div style=\"font-size:0.9em\">Destination will be on the left</div>",
+                                                                        "polyline": {
+                                                                                "points": "uxldIxdbe@Y^IJuAfBEF]f@Wd@u@dBa@x@"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.3186699,
+                                                                                "lng": -6.242207
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                }
+                                                        ],
+                                                        "travel_mode": "WALKING"
+                                                },
+                                                {
+                                                        "distance": {
+                                                                "text": "0.7 km",
+                                                                "value": 731
+                                                        },
+                                                        "duration": {
+                                                                "text": "2 mins",
+                                                                "value": 146
+                                                        },
+                                                        "end_location": {
+                                                                "lat": 53.3241751,
+                                                                "lng": -6.252406499999999
+                                                        },
+                                                        "html_instructions": "Bus towards Eden Quay",
+                                                        "polyline": {
+                                                                "points": "_amdIhqbe@CGCFGJi@dA}@zAkApBcAhBQ\\Wd@[l@e@bAe@lAS`@[r@O\\e@bASb@Q^a@|@c@hAENKVEL[|@KXMb@Y|@ENITUv@Oj@i@`CYnAHH"
+                                                        },
+                                                        "start_location": {
+                                                                "lat": 53.31999700000001,
+                                                                "lng": -6.2442128
+                                                        },
+                                                        "transit_details": {
+                                                                "arrival_stop": {
+                                                                        "location": {
+                                                                                "lat": 53.3241751,
+                                                                                "lng": -6.252406499999999
+                                                                        },
+                                                                        "name": "Ranelagh, Ranelagh"
+                                                                },
+                                                                "arrival_time": {
+                                                                        "text": "12:25pm",
+                                                                        "time_zone": "Europe/Dublin",
+                                                                        "value": 1595330736
+                                                                },
+                                                                "departure_stop": {
+                                                                        "location": {
+                                                                                "lat": 53.31999700000001,
+                                                                                "lng": -6.2442128
+                                                                        },
+                                                                        "name": "Norwood Park, stop 884"
+                                                                },
+                                                                "departure_time": {
+                                                                        "text": "12:23pm",
+                                                                        "time_zone": "Europe/Dublin",
+                                                                        "value": 1595330590
+                                                                },
+                                                                "headsign": "Eden Quay",
+                                                                "line": {
+                                                                        "agencies": [
+                                                                                {
+                                                                                        "name": "Dublin Bus",
+                                                                                        "url": "http://www.transportforireland.ie/"
+                                                                                }
+                                                                        ],
+                                                                        "short_name": "61",
+                                                                        "vehicle": {
+                                                                                "icon": "//maps.gstatic.com/mapfiles/transit/iw2/6/bus2.png",
+                                                                                "name": "Bus",
+                                                                                "type": "BUS"
+                                                                        }
+                                                                },
+                                                                "num_stops": 3
+                                                        },
+                                                        "travel_mode": "TRANSIT"
+                                                },
+                                                {
+                                                        "distance": {
+                                                                "text": "41 m",
+                                                                "value": 41
+                                                        },
+                                                        "duration": {
+                                                                "text": "1 min",
+                                                                "value": 30
+                                                        },
+                                                        "end_location": {
+                                                                "lat": 53.3244293,
+                                                                "lng": -6.2528581
+                                                        },
+                                                        "html_instructions": "Walk to Ranelagh, Ranelagh (SE-bound), Ranelagh, Dublin, Co. Dublin, Ireland",
+                                                        "polyline": {
+                                                                "points": "a{mdIpdde@s@xA"
+                                                        },
+                                                        "start_location": {
+                                                                "lat": 53.3241704,
+                                                                "lng": -6.2524106
+                                                        },
+                                                        "steps": [
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "41 m",
+                                                                                "value": 41
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "1 min",
+                                                                                "value": 30
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3244293,
+                                                                                "lng": -6.2528581
+                                                                        },
+                                                                        "polyline": {
+                                                                                "points": "a{mdIpdde@s@xA"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.3241704,
+                                                                                "lng": -6.2524106
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                }
+                                                        ],
+                                                        "travel_mode": "WALKING"
+                                                }
+                                        ],
+                                        "traffic_speed_entry": [],
+                                        "via_waypoint": []
+                                }
+                        ],
+                        "overview_polyline": {
+                                "points": "krldIb|ae@iEtG_CzCu@lAwA~CBDCGKRgB`DoCzEkBtDeB`EmBdE{@~Bg@vAg@`Bu@hCcApEJHs@xA"
+                        },
+                        "summary": "",
+                        "warnings": [
+                                "Walking directions are in beta. Use caution \u2013 This route may be missing sidewalks or pedestrian paths."
+                        ],
+                        "waypoint_order": []
+                }
+        ],
+        "status": "OK"
+}
