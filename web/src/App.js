@@ -1,10 +1,10 @@
 import "./css/App.css";
 import React, { useState } from "react";
-import Route from "./components/route";
 import SearchForm from "./components/searchForm";
 
 import ShowMap from "./components/ShowMap";
 import RealTimeInfo from "./components/RealTime";
+import AllRoutes from "./components/allRoutes";
 
 import { Tabs, Button, Modal } from "antd";
 import "antd/dist/antd.css";
@@ -24,43 +24,9 @@ import "react-open-weather/lib/css/ReactWeather.css";
 
 const { TabPane } = Tabs;
 
-let stops = require("./components/stops.json");
-
-function degrees_to_radians(degrees) {
-  var pi = Math.PI;
-  return degrees * (pi / 180);
-}
-
-function getDistance(latitude1, longitude1, latitude2, longitude2) {
-  const earth_radius = 6371;
-
-  const dLat = degrees_to_radians(latitude2 - latitude1);
-  const dLon = degrees_to_radians(longitude2 - longitude1);
-
-  const a =
-    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-    Math.cos(degrees_to_radians(latitude1)) *
-      Math.cos(degrees_to_radians(latitude2)) *
-      Math.sin(dLon / 2) *
-      Math.sin(dLon / 2);
-  const c = 2 * Math.asin(Math.sqrt(a));
-
-  return earth_radius * c;
-}
-function findStopsRadius(lat, lng) {
-  let showMarkers = [];
-  for (var i = 0; i < stops.length; i++) {
-    let dist = getDistance(stops[i].lat, stops[i].lng, lat, lng);
-    if (dist < 0.5) {
-      showMarkers.push(stops[i]);
-    }
-  }
-  return showMarkers;
-}
-
 const App = () => {
   const [state, setState] = React.useState({});
-  const [activeKey, setActiveKey] = React.useState("1");
+  const [activeKey, setActiveKey] = React.useState("map");
   const [tripTimes, setTripTimes] = React.useState([]);
 
   const [realTimeData, setRealTimeData] = useState([]);
@@ -84,11 +50,7 @@ const App = () => {
   //   setVisible(false);
   // };
 
-  // const handleCancel = e => {
-  //   console.log(e);
-  //   setVisible(false);
-  // };
-  const getData = (stop) => {
+  const getRealTimeData = (stop) => {
     axios
       .get("http://localhost/realtime?stopid=" + stop)
       .then((res) => {
@@ -99,8 +61,15 @@ const App = () => {
   };
 
   const setRealTime = (route) => {
-    getData(route);
-    setActiveKey("4");
+    getRealTimeData(route);
+    setActiveKey("realTime");
+  };
+  const clearMap = () => {
+    // setState({})
+    setStopsForMap([]);
+    setDirections([]);
+    setOtherRoute([]);
+    setBusIndex([]);
   };
 
   const handleSubmitApp = (source, dest, time) => {
@@ -111,30 +80,47 @@ const App = () => {
 
     if (source.bus_id) {
       // if source is a bus route
+      // can still see markers
+      clearMap();
       axios
         .get("http://localhost/routeinfo?routeid=" + source.bus_id)
         .then((res) => {
           if (res.statusText === "OK") {
             setStopsForMap(res.data[0]);
             setOtherRoute(res.data[1]);
-            setActiveKey("1");
+            setActiveKey("map");
           }
         })
         .catch(console.log);
     } else if (!dest.val && !dest.stopID && !source.stopID) {
       // if source is a place and no destination
-      setDirections([]);
-      setOtherRoute([]);
-      setStopsForMap(findStopsRadius(source.lat, source.lng));
-      setActiveKey("1");
+      clearMap();
+      axios
+        .get(
+          "http://localhost/nearestneighbor?lat=" +
+            source.lat +
+            "&lng=" +
+            source.lng
+        )
+        .then((res) => {
+          console.log(res);
+          if (res.statusText === "OK") {
+            setStopsForMap(res.data.stops);
+            setActiveKey("map");
+          }
+        })
+        .catch(console.log);
     } else if (!dest.val && !dest.stopID && source.stopID) {
       // if source is a bus stop and no destination
+      clearMap();
       setRealTime(source.stopID);
       setStopsForMap([
         { stopid: source.stopID, lat: source.lat, lng: source.lng },
       ]);
+      //marker doesnt show name
     } else {
       // otherwise - directions
+      clearMap();
       axios
         .get(
           "http://localhost/directions?dep=" +
@@ -150,6 +136,7 @@ const App = () => {
         )
         .then((res) => {
           if (res.data.status === "OK") {
+            console.log(res.data.connections);
             setTripTimes(res.data.connections);
             setDirections(findPoly(res.data.connections[0]));
             setStopsForMap([]);
@@ -159,11 +146,11 @@ const App = () => {
         })
         .catch(console.log);
       setState(newFields);
-      setActiveKey("2");
+      setActiveKey("connections");
     }
   };
 
-  function callback(key) {
+  function changeActiveTab(key) {
     setActiveKey(key);
   }
 
@@ -218,8 +205,12 @@ const App = () => {
         </Modal>
       </div> */}
       <SearchForm handleSubmitApp={handleSubmitApp} />
-      <Tabs style={{ margin: 10 }} onChange={callback} activeKey={activeKey}>
-        <TabPane tab="Map" key="1">
+      <Tabs
+        style={{ margin: 10 }}
+        onChange={changeActiveTab}
+        activeKey={activeKey}
+      >
+        <TabPane tab="Map" key="map">
           <ShowMap
             source={state.source}
             destination={state.destination}
@@ -231,7 +222,7 @@ const App = () => {
           />
         </TabPane>
 
-        <TabPane tab="Connections" key="2">
+        <TabPane tab="Connections" key="connections">
           {tripTimes.length > 0 && (
             <Tooltip title="Sort by arrival time">
               <Button style={{ margin: 20 }} type="submit" onClick={sortTime}>
@@ -248,20 +239,20 @@ const App = () => {
               </Button>
             </Tooltip>
           )}
-          {tripTimes.map((dueTime, i) => (
-            <Route key={i} tripTime={dueTime} setDirections={setDirections} />
-          ))}
-          {tripTimes.length < 1 && <p>Choose a source and destination</p>}
+          <AllRoutes
+            tripTimes={tripTimes}
+            setDirections={setDirections}
+          ></AllRoutes>
         </TabPane>
 
-        <TabPane tab="Locations" key="3">
+        <TabPane tab="Favourites" key="favourites">
           Locations
           
             {/* < GetWeather /> */}
             
           
         </TabPane>
-        <TabPane tab="Real Time" key="4">
+        <TabPane tab="Real Time" key="realTime">
           <RealTimeInfo realTimeData={realTimeData}></RealTimeInfo>
         </TabPane>
       </Tabs>

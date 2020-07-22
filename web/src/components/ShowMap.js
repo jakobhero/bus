@@ -18,6 +18,7 @@ import WeatherIcon from 'react-icons-weather';
 import ReactWeather from "react-open-weather";
 //Optional include of the default css styles
 import "react-open-weather/lib/css/ReactWeather.css";
+import axios from "axios";
 import "../css/map.css";
 
 
@@ -42,7 +43,6 @@ function ShowMap({
   directions,
   busIndex,
 }) {
-  console.log(stops);
   const [selected, setSelected] = React.useState(null);
   const [touristModeBool, setTouristModeBool] = React.useState(false);
   const [otherRouteBool, setOherRouteBool] = React.useState(false);
@@ -55,6 +55,20 @@ function ShowMap({
     mapRef.current.panTo({ lat, lng });
     mapRef.current.setZoom(14);
   }, []);
+
+  const directionsBusMarker = (lat, lng) => {
+    axios
+      .get(
+        "http://localhost/nearestneighbor?lat=" + lat + "&lng=" + lng + "&k=1"
+      )
+      .then((res) => {
+        console.log(res);
+        if (res.statusText === "OK") {
+          setSelected(res.data.stops[0]);
+        }
+      })
+      .catch(console.log);
+  };
 
   let bounds = new window.google.maps.LatLngBounds();
 
@@ -136,7 +150,9 @@ function ShowMap({
             />
           </div>
         )}
-        {source && <Marker position={{ lat: source.lat, lng: source.lng }} />}
+        {source && otherRoute.length < 1 && (
+          <Marker position={{ lat: source.lat, lng: source.lng }} />
+        )}
         {/* Loop through either array and add markers, based on switch that appears when another route is provided */}
         {(otherRouteBool ? otherRoute : stops).map((marker) => (
           <Marker
@@ -151,7 +167,7 @@ function ShowMap({
             }}
           />
         ))}
-        {destination && (
+        {destination && otherRoute.length < 1 && (
           <Marker position={{ lat: destination.lat, lng: destination.lng }} />
         )}
         {selected ? (
@@ -213,13 +229,15 @@ function ShowMap({
         {directions.length > 1 &&
           directions.map((marker, index) =>
             marker.map((mrk) => (
-              // console.log(mrk)
               <div key={(mrk[0].lat - mrk[0].lng) * (index + 1)}>
                 {busIndex.includes(index) &&
                   [1, mrk.length - 1].map((idx) => (
                     <Marker
                       key={mrk[idx].lat - mrk[idx].lng}
                       position={{ lat: mrk[idx].lat, lng: mrk[idx].lng }}
+                      onClick={() =>
+                        directionsBusMarker(mrk[idx].lat, mrk[idx].lng)
+                      }
                       icon={{
                         url: `./bus_1.svg`,
                         origin: new window.google.maps.Point(0, 0),
