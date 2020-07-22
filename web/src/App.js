@@ -6,17 +6,21 @@ import ShowMap from "./components/ShowMap";
 import RealTimeInfo from "./components/RealTime";
 import AllRoutes from "./components/allRoutes";
 
-import { Tabs, Button } from "antd";
+import { Tabs, Button, Modal } from "antd";
 import "antd/dist/antd.css";
 
 import axios from "axios";
-
+import GetWeather from "./components/OpenWeather";
 import AccessTimeIcon from "@material-ui/icons/AccessTime";
 import SortIcon from "@material-ui/icons/Sort";
 import DirectionsBusIcon from "@material-ui/icons/DirectionsBus";
 import Tooltip from "@material-ui/core/Tooltip";
 
 import { findPoly } from "./components/polylines.js";
+import ReactWeather from "react-open-weather";
+//Optional include of the default css styles
+import "react-open-weather/lib/css/ReactWeather.css";
+
 
 const { TabPane } = Tabs;
 
@@ -34,6 +38,17 @@ const App = () => {
 
   const [sortStepsNum, setSortStepsNum] = useState(1);
   const [sortTimeNum, setSortTimeNum] = useState(1);
+  // const [ visible, setVisible] = useState(false);
+  
+
+  // const showModal = () => {
+  //   setVisible(true);
+  // };
+
+  // const handleOk = e => {
+  //   console.log(e);
+  //   setVisible(false);
+  // };
 
   const getRealTimeData = (stop) => {
     axios
@@ -169,6 +184,26 @@ const App = () => {
 
   return (
     <div className="App">
+      
+      {/* <div>
+        <Button type="primary" onClick={showModal}>
+          Open Modal
+        </Button>
+        <Modal
+          title="Basic Modal"
+          visible={visible}
+          onOk={handleOk}
+          onCancel={handleCancel}
+        >
+          <p>Today's Weather</p>
+          <ReactWeather
+        forecast="5days"
+        apikey="7ad07aac9b0943040a4abdd2c23dfc4e"
+        type="city"
+        city="Dublin"
+      />
+        </Modal>
+      </div> */}
       <SearchForm handleSubmitApp={handleSubmitApp} />
       <Tabs
         style={{ margin: 10 }}
@@ -212,6 +247,10 @@ const App = () => {
 
         <TabPane tab="Favourites" key="favourites">
           Locations
+          
+            {/* < GetWeather /> */}
+            
+          
         </TabPane>
         <TabPane tab="Real Time" key="realTime">
           <RealTimeInfo realTimeData={realTimeData}></RealTimeInfo>

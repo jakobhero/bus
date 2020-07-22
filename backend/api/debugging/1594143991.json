@@ -1,0 +1,122 @@
+{
+        "geocoded_waypoints": [
+                {
+                        "geocoder_status": "OK",
+                        "place_id": "ChIJ3Y7HLZsOZ0gRZ2FxjA3-ACc",
+                        "types": [
+                                "establishment",
+                                "point_of_interest",
+                                "tourist_attraction",
+                                "university"
+                        ]
+                },
+                {
+                        "geocoder_status": "OK",
+                        "place_id": "ChIJ3Y7HLZsOZ0gRZ2FxjA3-ACc",
+                        "types": [
+                                "establishment",
+                                "point_of_interest",
+                                "tourist_attraction",
+                                "university"
+                        ]
+                }
+        ],
+        "routes": [
+                {
+                        "bounds": {
+                                "northeast": {
+                                        "lat": 53.3443633,
+                                        "lng": -6.2593112
+                                },
+                                "southwest": {
+                                        "lat": 53.3443633,
+                                        "lng": -6.2593112
+                                }
+                        },
+                        "copyrights": "Map data \u00a92020 Google",
+                        "legs": [
+                                {
+                                        "distance": {
+                                                "text": "1 m",
+                                                "value": 0
+                                        },
+                                        "duration": {
+                                                "text": "1 min",
+                                                "value": 0
+                                        },
+                                        "end_address": "College Green, Dublin 2, Ireland",
+                                        "end_location": {
+                                                "lat": 53.3443633,
+                                                "lng": -6.2593112
+                                        },
+                                        "start_address": "College Green, Dublin 2, Ireland",
+                                        "start_location": {
+                                                "lat": 53.3443633,
+                                                "lng": -6.2593112
+                                        },
+                                        "steps": [
+                                                {
+                                                        "distance": {
+                                                                "text": "1 m",
+                                                                "value": 0
+                                                        },
+                                                        "duration": {
+                                                                "text": "1 min",
+                                                                "value": 0
+                                                        },
+                                                        "end_location": {
+                                                                "lat": 53.3443633,
+                                                                "lng": -6.2593112
+                                                        },
+                                                        "html_instructions": "Walk to College Green, Dublin 2, Ireland",
+                                                        "polyline": {
+                                                                "points": "gyqdItoee@"
+                                                        },
+                                                        "start_location": {
+                                                                "lat": 53.3443633,
+                                                                "lng": -6.2593112
+                                                        },
+                                                        "steps": [
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "1 m",
+                                                                                "value": 0
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "1 min",
+                                                                                "value": 0
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3443633,
+                                                                                "lng": -6.2593112
+                                                                        },
+                                                                        "html_instructions": "Head",
+                                                                        "polyline": {
+                                                                                "points": "gyqdItoee@"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.3443633,
+                                                                                "lng": -6.2593112
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                }
+                                                        ],
+                                                        "travel_mode": "WALKING"
+                                                }
+                                        ],
+                                        "traffic_speed_entry": [],
+                                        "via_waypoint": []
+                                }
+                        ],
+                        "overview_polyline": {
+                                "points": "gyqdItoee@"
+                        },
+                        "summary": "",
+                        "warnings": [
+                                "Walking directions are in beta. Use caution \u2013 This route may be missing sidewalks or pedestrian paths."
+                        ],
+                        "waypoint_order": []
+                }
+        ],
+        "status": "OK"
+}
