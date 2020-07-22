@@ -27,10 +27,10 @@ class Stops(Resource):
         if (len(frontend_params["substring"])>2):
             looking_for='%'+looking_for #if substring is longer than 2 chars, it is checked whether substring is contained. 
         print(looking_for)
-        for row in StopsModel.query.filter(StopsModel.stop_id.ilike(looking_for)).all():
-            response.append([row.stop_id,row.name,row.lat,row.lon])
-        for row in StopsModel.query.filter(StopsModel.name.ilike(looking_for)).all():
-            response.append([row.stop_id,row.name,row.lat,row.lon])
+        for count, row in enumerate(StopsModel.query.filter(StopsModel.stop_id.ilike(looking_for)).all()[:3]):
+            response.append({'stop_id':row.stop_id,'fullname':row.name,'lat':row.lat,'lng':row.lon,'key':count + row.lat-row.lon})
+        for count, row in enumerate(StopsModel.query.filter(StopsModel.name.ilike(looking_for)).all()[:3]):
+            response.append({'stop_id':row.stop_id,'fullname':row.name,'lat':row.lat,'lng':row.lon,'key':count + row.lat-row.lon})
         return {"stops":response,"status":"OK"}
 
 
@@ -229,7 +229,7 @@ class Directions(Resource):
         #process response
         res=directions_parser(res,params["departure_time"])
 
-        return res        
+        return res
         
 
 def directions_parser(directions,time):
