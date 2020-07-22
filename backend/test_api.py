@@ -1,13 +1,14 @@
 import unittest
 import api.api as api
 import json
+import time
 
 class test_api(unittest.TestCase):
 
     def test_directions_parser(self):
         #load sample response that features several edge cases - mutliple BUS journeys, and a LUAS journey
         sample1=json_loader("1594728742")
-        result=api.directions_parser(sample1)
+        result=api.directions_parser(sample1,time.time())
 
         #make sure that the parsing was successful
         self.assertEqual(result["status"], "OK")
