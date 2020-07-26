@@ -13,6 +13,7 @@ CREATE TABLE public.trips
     departure_time_p bigint,
     arrival_time_a double precision,
     departure_time_a double precision,
+    suppressed smallint,
     CONSTRAINT trips_pkey PRIMARY KEY (daystamp, trip_id)
 )
 

@@ -13,6 +13,7 @@ CREATE TABLE public.leavetimes
     arrival_time_a bigint,
     departure_time_a bigint,
     weather_id bigint,
+    suppressed smallint,
     CONSTRAINT leavetimes_pkey PRIMARY KEY (daystamp, trip_id, progr_number)
 )
 
