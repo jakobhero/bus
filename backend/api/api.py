@@ -14,7 +14,7 @@ class Stops(Resource):
     ID or name."""
     def get(self):
         parser = reqparse.RequestParser()
-        parser.add_argument('substring', type=str)
+        parser.add_argument('q', type=str)
         frontend_params=parser.parse_args()
 
         if frontend_params["substring"]==None:
@@ -39,7 +39,6 @@ class NearestNeighbor(Resource):
     If k is not specified in request, the a default of 10 closest stops is returned. If coordinates are not specified in request,
     all bus stops are returned. For the calculation of the closest stops, a KD tree is used to find results in O(log(n))."""
     def get(self):
-
         #parse arguments "lat", "lon", "k" in request
         parser = reqparse.RequestParser()
         parser.add_argument('lat', type=str)

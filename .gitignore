@@ -7,4 +7,12 @@ backend/db/__pycache__
 backend/env
 data_analytics/46a_1.csv
 backend/db/rt_leavetimes_DB_2018.txt
+backend/db/leavetimes_cleaned.csv
+backend/db/weather_cleaned.csv
+backend/db/rt_trips_DB_2018.txt
+backend/db/trips_cleaned.csv
 data_analytics/jakob/rt_trips_DB_2018.txt
+data_analytics/jakob/trips_cleaned.csv
+data_analytics/jakob/2018_historic_weather.csv
+data_analytics/jakob/weather_clean.csv
+
