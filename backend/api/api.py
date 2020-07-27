@@ -14,7 +14,7 @@ class Stops(Resource):
     ID or name."""
     def get(self):
         parser = reqparse.RequestParser()
-        parser.add_argument('q', type=str)
+        parser.add_argument('substring', type=str)
         frontend_params=parser.parse_args()
 
         if frontend_params["substring"]==None:
