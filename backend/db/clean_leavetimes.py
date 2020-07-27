@@ -26,11 +26,11 @@ def clean_leavetimes(data):
     return data.astype("int64")
 
 if __name__=='__main__':
-    leavetimes = pd.read_csv('rt_leavetimes_DB_2018.txt', delimiter=';', chunksize=10**6)
+    leavetimes = pd.read_csv('data/rt_leavetimes_DB_2018.txt', delimiter=';', chunksize=10**6)
     header=True
     count=0
     for chunk in leavetimes:
-        clean_leavetimes(chunk).to_csv("leavetimes_cleaned.csv",mode='a',header=header)
+        clean_leavetimes(chunk).to_csv("data/leavetimes_cleaned.csv",mode='a',header=header)
         header=False
         count+=1
         print(f"Finished cleaning chunk {count}.")

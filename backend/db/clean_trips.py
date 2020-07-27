@@ -3,7 +3,7 @@ import datetime
 
 #script automates cleaning of trip data. for detailed info and comments, refer to data_analytics/jakob/trips_prep.ipynb
 
-trips=pd.read_csv("rt_trips_DB_2018.txt",sep=";")
+trips=pd.read_csv("data/rt_trips_DB_2018.txt",sep=";")
 trips["DAYSTAMP"]=trips["DAYOFSERVICE"].apply((lambda x:int(datetime.datetime.strptime(x.split(" ")[0], "%d-%b-%y").timestamp())))
 trips["DAYSTAMP"].astype("int64",copy=False)
 trips["ROUTE"]=trips["ROUTEID"].apply(lambda x:x.split("_")[1])
@@ -22,4 +22,4 @@ column_dict={
 }
 trips.rename(columns=column_dict,inplace=True)
 trips["suppressed"]=trips["suppressed"].fillna(0)
-trips.to_csv("trips_cleaned.csv")
+trips.to_csv("data/trips_cleaned.csv")

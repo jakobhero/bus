@@ -29,19 +29,19 @@ if __name__=='__main__':
     engine=create_engine("postgresql://"+config["user"]+":"+config["password"]+"@"+config["host"]+"/"+config["database"])
 
     #populate leavetimes
-    leavetimes_df=pd.read_csv("leavetimes_cleaned.csv",index_col=0,chunksize=10**6)
+    leavetimes_df=pd.read_csv("data/leavetimes_cleaned.csv",index_col=0,chunksize=10**6)
     pop_leavetimes(leavetimes_df)
 
     #populate trips
-    trips_df=pd.read_csv("trips_cleaned.csv",index_col=0)
+    trips_df=pd.read_csv("data/trips_cleaned.csv",index_col=0)
     pop_trips(trips_df)
 
     #populate weather
-    weather_df=pd.read_csv("weather_cleaned.csv",index_col=0)
+    weather_df=pd.read_csv("data/weather_cleaned.csv",index_col=0)
     pop_weather(weather_df)
 
     #populate stops
-    stops_df=pd.read_csv("stops_cleaned.csv",index_col=0)
+    stops_df=pd.read_csv("data/stops_cleaned.csv",index_col=0)
     pop_stops(stops_df)
 
 
