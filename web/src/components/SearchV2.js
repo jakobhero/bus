@@ -33,7 +33,7 @@ const PlacesAutocomplete = ({ id, handleChange, placeholder, route }) => {
   });
   function searchLocalStop(query) {
     axios
-      .get("http://localhost/stops?substring=" + query)
+      .get("http://localhost/api/stops?substring=" + query)
       .then((res) => {
         if (res.statusText === "OK") {
           setStopData(res.data.stops);
@@ -87,7 +87,7 @@ const PlacesAutocomplete = ({ id, handleChange, placeholder, route }) => {
     //Firstly if the option was a bus stop, then find the corresponding info for the stop and send the data to the parent via handleChange.
     //Then if it was a route, send bus_id to parent
     // Lastly if it was a place, find the co ords, then send them along with value to parent
-    let lat, lng, stopID;
+    let lat, lng, stopID, fullname;
     if (val.includes(", Bus Stop")) {
       stopID = val.split("(")[1];
       stopID = stopID.split(")")[0];
@@ -96,7 +96,8 @@ const PlacesAutocomplete = ({ id, handleChange, placeholder, route }) => {
         if (stop_id === stopID) {
           lat = stopData[i].lat;
           lng = stopData[i].lng;
-          handleChange({ stopID, lat, lng }, id);
+          fullname = stopData[i].fullname;
+          handleChange({ stopID, lat, lng, fullname }, id);
         }
       }
     } else if (val.includes(", Bus Route")) {
