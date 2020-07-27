@@ -10,18 +10,16 @@ import mapStyles from "./mapStyles";
 import mapStylesIcons from "./mapStylesIcons";
 
 import Switch from "react-switch";
-
+import Replay from "@material-ui/icons/Replay";
 import { Button, Modal } from "antd";
 import { HistoryOutlined, StarFilled, StarOutlined } from "@ant-design/icons";
 import Tooltip from "@material-ui/core/Tooltip";
-import WeatherIcon from 'react-icons-weather';
+import WeatherIcon from "react-icons-weather";
 import ReactWeather from "react-open-weather";
 //Optional include of the default css styles
 import "react-open-weather/lib/css/ReactWeather.css";
 import axios from "axios";
 import "../css/map.css";
-
-
 
 // https://www.youtube.com/watch?v=SySVBV_jcCM
 
@@ -46,6 +44,8 @@ function ShowMap({
   const [selected, setSelected] = React.useState(null);
   const [touristModeBool, setTouristModeBool] = React.useState(false);
   const [otherRouteBool, setOherRouteBool] = React.useState(false);
+  const [visible, setVisible] = useState(false);
+
   const mapRef = React.useRef();
   const onMapLoad = React.useCallback((map) => {
     mapRef.current = map;
@@ -59,7 +59,11 @@ function ShowMap({
   const directionsBusMarker = (lat, lng) => {
     axios
       .get(
-        "http://localhost/nearestneighbor?lat=" + lat + "&lng=" + lng + "&k=1"
+        "http://localhost/api/nearestneighbor?lat=" +
+          lat +
+          "&lng=" +
+          lng +
+          "&k=1"
       )
       .then((res) => {
         console.log(res);
@@ -97,20 +101,16 @@ function ShowMap({
     mapRef.current.fitBounds(bounds);
     mapRef.current.panTo(bounds.getCenter());
   }
-  const [ visible, setVisible] = useState(false);
-  
 
   const showModal = () => {
     setVisible(true);
   };
 
-  const handleOk = e => {
-    console.log(e);
+  const handleOk = (e) => {
     setVisible(false);
   };
 
-  const handleCancel = e => {
-    console.log(e);
+  const handleCancel = (e) => {
     setVisible(false);
   };
   return (
@@ -139,15 +139,13 @@ function ShowMap({
             />
           </Tooltip>
         </div>
+
         {otherRoute.length > 1 && (
-          <div className="switch2 mapUI">
-            <Switch
-              width={35}
-              height={22}
-              onChange={() => setOherRouteBool(!otherRouteBool)}
-              checked={otherRouteBool}
-              className="Switch"
-            />
+          <div
+            className="switch2 mapUI"
+            onClick={() => setOherRouteBool(!otherRouteBool)}
+          >
+            <Replay className="Switch"></Replay>
           </div>
         )}
         {source && otherRoute.length < 1 && (
@@ -194,30 +192,26 @@ function ShowMap({
                 <StarOutlined />
               </Button>
               <Button style={{ margin: 10 }} onClick={showModal}>
-              <WeatherIcon name="owm" iconId="200" flip="horizontal" rotate="90" />
-
+                <WeatherIcon
+                  name="owm"
+                  iconId="200"
+                  flip="horizontal"
+                  rotate="90"
+                />
               </Button>
               <Modal
-          title="Today's Weather"
-          visible={visible}
-          onOk={handleOk}
-          onCancel={handleCancel}
-        >
-          <p>Today's Weather</p>
-          {/* <ReactWeather
-        forecast="5days"
-        apikey="7ad07aac9b0943040a4abdd2c23dfc4e"
-        type="city"
-        city="Dublin"
-      /> */}
-      <ReactWeather
-  forecast="today"
-  apikey="7ad07aac9b0943040a4abdd2c23dfc4e"
-  type="geo"
-  lat={selected.lat}
-  lon={selected.lng}
-/>
-        </Modal>
+                title="Today's Weather"
+                visible={visible}
+                onOk={handleOk}
+                onCancel={handleCancel}
+              >
+                <ReactWeather
+                  forecast="today"
+                  apikey="7ad07aac9b0943040a4abdd2c23dfc4e"
+                  type="city"
+                  city="Dublin"
+                />
+              </Modal>
               <Button style={{ margin: 10 }}>
                 <StarFilled />
               </Button>
