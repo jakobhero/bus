@@ -1,0 +1,481 @@
+Training model 1/84 for (46A,1).
+1 most common route(s) cover 97.63% of the routes.
+Score of schedule prediction: 0.96.
+Score of duration prediction: 0.93.
+
+Training model 2/84 for (40,1).
+1 most common route(s) cover 98.13% of the routes.
+Score of schedule prediction: 0.97.
+Score of duration prediction: 0.95.
+
+Training model 3/84 for (15,2).
+1 most common route(s) cover 98.38% of the routes.
+Score of schedule prediction: 0.96.
+Score of duration prediction: 0.94.
+
+Training model 4/84 for (15,1).
+1 most common route(s) cover 79.64% of the routes.
+2 most common route(s) cover 99.18% of the routes.
+Score of schedule prediction: 0.97.
+Score of duration prediction: 0.95.
+
+Training model 5/84 for (13,1).
+1 most common route(s) cover 38.04% of the routes.
+2 most common route(s) cover 73.60% of the routes.
+3 most common route(s) cover 82.54% of the routes.
+4 most common route(s) cover 90.39% of the routes.
+Score of schedule prediction: 0.97.
+Score of duration prediction: 0.95.
+
+Training model 6/84 for (16,2).
+1 most common route(s) cover 100.00% of the routes.
+Score of schedule prediction: 0.97.
+Score of duration prediction: 0.95.
+
+Training model 7/84 for (77A,1).
+1 most common route(s) cover 81.62% of the routes.
+2 most common route(s) cover 100.00% of the routes.
+Score of schedule prediction: 0.95.
+Score of duration prediction: 0.89.
+
+Training model 8/84 for (77A,2).
+1 most common route(s) cover 81.67% of the routes.
+2 most common route(s) cover 100.00% of the routes.
+Score of schedule prediction: 0.97.
+Score of duration prediction: 0.94.
+
+Training model 9/84 for (39,2).
+1 most common route(s) cover 95.83% of the routes.
+Score of schedule prediction: 0.97.
+Score of duration prediction: 0.96.
+
+Training model 10/84 for (130,2).
+1 most common route(s) cover 100.00% of the routes.
+Score of schedule prediction: 0.96.
+Score of duration prediction: 0.92.
+
+Training model 11/84 for (140,1).
+1 most common route(s) cover 99.07% of the routes.
+Score of schedule prediction: 0.97.
+Score of duration prediction: 0.95.
+
+Training model 12/84 for (122,2).
+1 most common route(s) cover 51.45% of the routes.
+2 most common route(s) cover 98.92% of the routes.
+Score of schedule prediction: 0.98.
+Score of duration prediction: 0.95.
+
+Training model 13/84 for (41,2).
+1 most common route(s) cover 93.08% of the routes.
+Score of schedule prediction: 0.97.
+Score of duration prediction: 0.93.
+
+Training model 14/84 for (17A,2).
+1 most common route(s) cover 67.77% of the routes.
+2 most common route(s) cover 88.32% of the routes.
+3 most common route(s) cover 96.16% of the routes.
+Score of schedule prediction: 0.98.
+Score of duration prediction: 0.95.
+
+Training model 15/84 for (18,2).
+1 most common route(s) cover 95.79% of the routes.
+Score of schedule prediction: 0.95.
+Score of duration prediction: 0.93.
+
+Training model 16/84 for (151,2).
+1 most common route(s) cover 84.77% of the routes.
+2 most common route(s) cover 98.26% of the routes.
+Score of schedule prediction: 0.97.
+Score of duration prediction: 0.95.
+
+Training model 17/84 for (41,1).
+1 most common route(s) cover 89.46% of the routes.
+2 most common route(s) cover 95.98% of the routes.
+Score of schedule prediction: 0.97.
+Score of duration prediction: 0.92.
+
+Training model 18/84 for (11,1).
+1 most common route(s) cover 99.09% of the routes.
+Score of schedule prediction: 0.96.
+Score of duration prediction: 0.91.
+
+Training model 19/84 for (75,2).
+1 most common route(s) cover 87.91% of the routes.
+2 most common route(s) cover 97.90% of the routes.
+Score of schedule prediction: 0.96.
+Score of duration prediction: 0.91.
+
+Training model 20/84 for (7A,2).
+1 most common route(s) cover 54.29% of the routes.
+2 most common route(s) cover 87.61% of the routes.
+3 most common route(s) cover 100.00% of the routes.
+Score of schedule prediction: 0.97.
+Score of duration prediction: 0.94.
+
+Training model 21/84 for (75,1).
+1 most common route(s) cover 87.82% of the routes.
+2 most common route(s) cover 100.00% of the routes.
+Score of schedule prediction: 0.96.
+Score of duration prediction: 0.94.
+
+Training model 22/84 for (7A,1).
+1 most common route(s) cover 74.44% of the routes.
+2 most common route(s) cover 100.00% of the routes.
+Score of schedule prediction: 0.95.
+Score of duration prediction: 0.90.
+
+Training model 23/84 for (42,1).
+1 most common route(s) cover 100.00% of the routes.
+Score of schedule prediction: 0.96.
+Score of duration prediction: 0.93.
+
+Training model 24/84 for (1,1).
+1 most common route(s) cover 91.72% of the routes.
+Score of schedule prediction: 0.97.
+Score of duration prediction: 0.94.
+
+Training model 25/84 for (15A,1).
+1 most common route(s) cover 100.00% of the routes.
+Score of schedule prediction: -2809103618336350.50.
+Score of duration prediction: 0.88.
+
+Training model 26/84 for (38,2).
+1 most common route(s) cover 88.28% of the routes.
+2 most common route(s) cover 97.15% of the routes.
+Score of schedule prediction: 0.96.
+Score of duration prediction: 0.94.
+
+Training model 27/84 for (150,2).
+1 most common route(s) cover 89.65% of the routes.
+2 most common route(s) cover 100.00% of the routes.
+Score of schedule prediction: 0.97.
+Score of duration prediction: 0.94.
+
+Training model 28/84 for (25A,2).
+1 most common route(s) cover 100.00% of the routes.
+Score of schedule prediction: 0.96.
+Score of duration prediction: 0.94.
+
+Training model 29/84 for (25B,2).
+1 most common route(s) cover 99.71% of the routes.
+Score of schedule prediction: 0.96.
+Score of duration prediction: 0.91.
+
+Training model 30/84 for (150,1).
+1 most common route(s) cover 100.00% of the routes.
+Score of schedule prediction: 0.95.
+Score of duration prediction: 0.88.
+
+Training model 31/84 for (102,1).
+1 most common route(s) cover 100.00% of the routes.
+Score of schedule prediction: 0.98.
+Score of duration prediction: 0.95.
+
+Training model 32/84 for (49,1).
+1 most common route(s) cover 100.00% of the routes.
+Score of schedule prediction: 0.94.
+Score of duration prediction: 0.91.
+
+Training model 33/84 for (38A,2).
+1 most common route(s) cover 82.61% of the routes.
+2 most common route(s) cover 96.61% of the routes.
+Score of schedule prediction: 0.97.
+Score of duration prediction: 0.92.
+
+Training model 34/84 for (45A,1).
+1 most common route(s) cover 75.78% of the routes.
+2 most common route(s) cover 97.04% of the routes.
+Score of schedule prediction: 0.97.
+Score of duration prediction: 0.94.
+
+Training model 35/84 for (43,1).
+1 most common route(s) cover 97.00% of the routes.
+Score of schedule prediction: 0.96.
+Score of duration prediction: 0.92.
+
+Training model 36/84 for (68,1).
+1 most common route(s) cover 56.07% of the routes.
+2 most common route(s) cover 72.22% of the routes.
+3 most common route(s) cover 87.35% of the routes.
+4 most common route(s) cover 100.00% of the routes.
+Score of schedule prediction: 0.96.
+Score of duration prediction: 0.91.
+
+Training model 37/84 for (76,1).
+1 most common route(s) cover 100.00% of the routes.
+Score of schedule prediction: 0.95.
+Score of duration prediction: 0.92.
+
+Training model 38/84 for (65,2).
+1 most common route(s) cover 52.64% of the routes.
+2 most common route(s) cover 89.29% of the routes.
+3 most common route(s) cover 100.00% of the routes.
+Score of schedule prediction: 0.96.
+Score of duration prediction: 0.91.
+
+Training model 39/84 for (27A,1).
+1 most common route(s) cover 100.00% of the routes.
+Score of schedule prediction: 0.94.
+Score of duration prediction: 0.88.
+
+Training model 40/84 for (65,1).
+1 most common route(s) cover 49.54% of the routes.
+2 most common route(s) cover 88.59% of the routes.
+3 most common route(s) cover 100.00% of the routes.
+Score of schedule prediction: 0.97.
+Score of duration prediction: 0.89.
+
+Training model 41/84 for (184,2).
+1 most common route(s) cover 100.00% of the routes.
+Score of schedule prediction: 0.98.
+Score of duration prediction: 0.96.
+
+Training model 42/84 for (184,1).
+1 most common route(s) cover 100.00% of the routes.
+Score of schedule prediction: 0.98.
+Score of duration prediction: 0.93.
+
+Training model 43/84 for (69,1).
+1 most common route(s) cover 56.74% of the routes.
+2 most common route(s) cover 100.00% of the routes.
+Score of schedule prediction: 0.95.
+Score of duration prediction: 0.84.
+
+Training model 44/84 for (83A,2).
+1 most common route(s) cover 84.89% of the routes.
+2 most common route(s) cover 100.00% of the routes.
+Score of schedule prediction: 0.98.
+Score of duration prediction: 0.93.
+
+Training model 45/84 for (63,2).
+1 most common route(s) cover 71.81% of the routes.
+2 most common route(s) cover 96.83% of the routes.
+Score of schedule prediction: 0.97.
+Score of duration prediction: 0.89.
+
+Training model 46/84 for (61,1).
+1 most common route(s) cover 91.65% of the routes.
+Score of schedule prediction: 0.91.
+Score of duration prediction: 0.86.
+
+Training model 47/84 for (220,2).
+1 most common route(s) cover 92.53% of the routes.
+Score of schedule prediction: 0.95.
+Score of duration prediction: 0.91.
+
+Training model 48/84 for (220,1).
+1 most common route(s) cover 91.09% of the routes.
+Score of schedule prediction: 0.97.
+Score of duration prediction: 0.96.
+
+Training model 49/84 for (25,2).
+1 most common route(s) cover 100.00% of the routes.
+Score of schedule prediction: 0.96.
+Score of duration prediction: 0.88.
+
+Training model 50/84 for (26,1).
+1 most common route(s) cover 61.99% of the routes.
+2 most common route(s) cover 100.00% of the routes.
+Score of schedule prediction: 0.95.
+Score of duration prediction: 0.88.
+
+Training model 51/84 for (33B,2).
+1 most common route(s) cover 98.42% of the routes.
+Score of schedule prediction: 0.97.
+Score of duration prediction: 0.92.
+
+Training model 52/84 for (33B,1).
+1 most common route(s) cover 98.19% of the routes.
+Score of schedule prediction: 0.96.
+Score of duration prediction: 0.89.
+
+Training model 53/84 for (33A,2).
+1 most common route(s) cover 80.65% of the routes.
+2 most common route(s) cover 98.26% of the routes.
+Score of schedule prediction: 0.99.
+Score of duration prediction: 0.92.
+
+Training model 54/84 for (67X,2).
+1 most common route(s) cover 47.45% of the routes.
+2 most common route(s) cover 85.95% of the routes.
+3 most common route(s) cover 93.81% of the routes.
+Score of schedule prediction: 0.98.
+Score of duration prediction: 0.95.
+
+Training model 55/84 for (239,1).
+1 most common route(s) cover 100.00% of the routes.
+Score of schedule prediction: 0.96.
+Score of duration prediction: 0.91.
+
+Training model 56/84 for (238,1).
+1 most common route(s) cover 95.23% of the routes.
+Score of schedule prediction: 0.97.
+Score of duration prediction: 0.90.
+
+Training model 57/84 for (84X,2).
+1 most common route(s) cover 46.63% of the routes.
+2 most common route(s) cover 79.88% of the routes.
+3 most common route(s) cover 88.89% of the routes.
+4 most common route(s) cover 95.75% of the routes.
+Score of schedule prediction: 0.98.
+Score of duration prediction: 0.94.
+
+Training model 58/84 for (66X,2).
+1 most common route(s) cover 30.67% of the routes.
+2 most common route(s) cover 51.85% of the routes.
+3 most common route(s) cover 69.65% of the routes.
+4 most common route(s) cover 78.12% of the routes.
+5 most common route(s) cover 86.34% of the routes.
+6 most common route(s) cover 91.26% of the routes.
+Score of schedule prediction: 0.99.
+Score of duration prediction: 0.95.
+
+Training model 59/84 for (84A,2).
+1 most common route(s) cover 68.03% of the routes.
+2 most common route(s) cover 100.00% of the routes.
+Score of schedule prediction: 0.95.
+Score of duration prediction: 0.82.
+
+Training model 60/84 for (41B,1).
+1 most common route(s) cover 83.66% of the routes.
+2 most common route(s) cover 99.66% of the routes.
+Score of schedule prediction: 0.89.
+Score of duration prediction: 0.84.
+
+Training model 61/84 for (53,2).
+1 most common route(s) cover 100.00% of the routes.
+Score of schedule prediction: 0.95.
+Score of duration prediction: 0.82.
+
+Training model 62/84 for (40B,2).
+1 most common route(s) cover 100.00% of the routes.
+Score of schedule prediction: 0.95.
+Score of duration prediction: 0.86.
+
+Training model 63/84 for (33X,2).
+1 most common route(s) cover 86.14% of the routes.
+2 most common route(s) cover 100.00% of the routes.
+Score of schedule prediction: 0.99.
+Score of duration prediction: 0.97.
+
+Training model 64/84 for (84A,1).
+1 most common route(s) cover 86.95% of the routes.
+2 most common route(s) cover 100.00% of the routes.
+Score of schedule prediction: 0.95.
+Score of duration prediction: 0.90.
+
+Training model 65/84 for (41X,2).
+1 most common route(s) cover 35.02% of the routes.
+2 most common route(s) cover 52.47% of the routes.
+3 most common route(s) cover 68.78% of the routes.
+4 most common route(s) cover 82.84% of the routes.
+5 most common route(s) cover 88.31% of the routes.
+6 most common route(s) cover 92.23% of the routes.
+Score of schedule prediction: 0.98.
+Score of duration prediction: 0.95.
+
+Training model 66/84 for (41X,1).
+1 most common route(s) cover 41.80% of the routes.
+2 most common route(s) cover 62.62% of the routes.
+3 most common route(s) cover 81.35% of the routes.
+4 most common route(s) cover 88.87% of the routes.
+5 most common route(s) cover 92.52% of the routes.
+Score of schedule prediction: 0.99.
+Score of duration prediction: 0.95.
+
+Training model 67/84 for (7D,2).
+1 most common route(s) cover 53.77% of the routes.
+2 most common route(s) cover 98.90% of the routes.
+Score of schedule prediction: 0.97.
+Score of duration prediction: 0.94.
+
+Training model 68/84 for (25X,2).
+1 most common route(s) cover 56.88% of the routes.
+2 most common route(s) cover 86.28% of the routes.
+3 most common route(s) cover 95.38% of the routes.
+Score of schedule prediction: 0.98.
+Score of duration prediction: 0.97.
+
+Training model 69/84 for (16C,2).
+1 most common route(s) cover 100.00% of the routes.
+Score of schedule prediction: 0.95.
+Score of duration prediction: 0.89.
+
+Training model 70/84 for (41A,2).
+1 most common route(s) cover 100.00% of the routes.
+Score of schedule prediction: 0.98.
+Score of duration prediction: 0.96.
+
+Training model 71/84 for (32X,1).
+1 most common route(s) cover 86.54% of the routes.
+2 most common route(s) cover 100.00% of the routes.
+Score of schedule prediction: 0.99.
+Score of duration prediction: 0.97.
+
+Training model 72/84 for (27X,2).
+1 most common route(s) cover 100.00% of the routes.
+Score of schedule prediction: 0.99.
+Score of duration prediction: 0.96.
+
+Training model 73/84 for (161,1).
+1 most common route(s) cover 100.00% of the routes.
+Score of schedule prediction: 0.98.
+Score of duration prediction: 0.64.
+
+Training model 74/84 for (46E,2).
+1 most common route(s) cover 77.12% of the routes.
+2 most common route(s) cover 100.00% of the routes.
+Score of schedule prediction: 0.97.
+Score of duration prediction: 0.93.
+
+Training model 75/84 for (40E,2).
+1 most common route(s) cover 100.00% of the routes.
+Score of schedule prediction: 0.94.
+Score of duration prediction: 0.91.
+
+Training model 76/84 for (77X,2).
+1 most common route(s) cover 82.06% of the routes.
+2 most common route(s) cover 100.00% of the routes.
+Score of schedule prediction: 0.99.
+Score of duration prediction: 0.96.
+
+Training model 77/84 for (7D,1).
+1 most common route(s) cover 100.00% of the routes.
+Score of schedule prediction: 0.99.
+Score of duration prediction: 0.94.
+
+Training model 78/84 for (51X,2).
+1 most common route(s) cover 86.24% of the routes.
+2 most common route(s) cover 100.00% of the routes.
+Score of schedule prediction: 0.99.
+Score of duration prediction: 0.96.
+
+Training model 79/84 for (38D,1).
+1 most common route(s) cover 100.00% of the routes.
+Score of schedule prediction: -789907007119398928384.00.
+Score of duration prediction: 0.92.
+
+Training model 80/84 for (70D,2).
+1 most common route(s) cover 100.00% of the routes.
+Score of schedule prediction: 0.99.
+Score of duration prediction: 0.97.
+
+Training model 81/84 for (31D,1).
+1 most common route(s) cover 100.00% of the routes.
+Score of schedule prediction: 0.93.
+Score of duration prediction: 0.79.
+
+Training model 82/84 for (42D,2).
+1 most common route(s) cover 100.00% of the routes.
+Score of schedule prediction: 0.98.
+Score of duration prediction: 0.90.
+
+Training model 83/84 for (69X,2).
+1 most common route(s) cover 100.00% of the routes.
+Score of schedule prediction: 0.98.
+Score of duration prediction: 0.97.
+
+Training model 84/84 for (33E,1).
+1 most common route(s) cover 100.00% of the routes.
+Score of schedule prediction: 1.00.
+Score of duration prediction: 0.98.
