@@ -37,15 +37,15 @@ if __name__=='__main__':
     config=config()
     engine=create_engine("postgresql://"+config["user"]+":"+config["password"]+"@"+config["host"]+"/"+config["database"])
 
-    count=1
+    count=0
     length=len(models)
 
     #train each model in the assignment
     for model in models:
         #For more details on the modelling procedure, please refer to pipeline_test.ipynb.
         line,direction=model[:2]
+        count+=1
         print(f"Training model {count}/{length} for ({line},{direction}).")
-
         #assemble sql query.
         sql=("SELECT lt.daystamp, lt.trip_id, lt.stoppoint_id,lt.departure_time_p,"
             "lt.departure_time_a,trips.departure_time_p,trips.departure_time_a,"
