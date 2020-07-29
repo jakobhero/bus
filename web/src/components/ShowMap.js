@@ -10,16 +10,18 @@ import mapStyles from "./mapStyles";
 import mapStylesIcons from "./mapStylesIcons";
 
 import Switch from "react-switch";
-import Replay from "@material-ui/icons/Replay";
+import {setCookie, saveAddress, delCookie, getStopNums, getAddressByVal} from "./cookies";
 import { Button, Modal } from "antd";
-import { HistoryOutlined, StarFilled, StarOutlined } from "@ant-design/icons";
+import { HistoryOutlined, StarFilled, StarOutlined, TrophyOutlined } from "@ant-design/icons";
 import Tooltip from "@material-ui/core/Tooltip";
-import WeatherIcon from "react-icons-weather";
+import WeatherIcon from 'react-icons-weather';
 import ReactWeather from "react-open-weather";
 //Optional include of the default css styles
 import "react-open-weather/lib/css/ReactWeather.css";
 import axios from "axios";
 import "../css/map.css";
+
+
 
 // https://www.youtube.com/watch?v=SySVBV_jcCM
 
@@ -42,10 +44,9 @@ function ShowMap({
   busIndex,
 }) {
   const [selected, setSelected] = React.useState(null);
+  const [address, setAddress] = React.useState(false);
   const [touristModeBool, setTouristModeBool] = React.useState(false);
   const [otherRouteBool, setOherRouteBool] = React.useState(false);
-  const [visible, setVisible] = useState(false);
-
   const mapRef = React.useRef();
   const onMapLoad = React.useCallback((map) => {
     mapRef.current = map;
@@ -56,14 +57,32 @@ function ShowMap({
     mapRef.current.setZoom(14);
   }, []);
 
+  let test = getStopNums();
+  function icoStatusData() {
+    console.log('star clicked');
+    if ((Object.values(getStopNums()).includes(parseInt(selected.stopid))) ){
+      console.log('deleteing')
+      delCookie(selected.stopid);
+      console.log((Object.values(getStopNums()).includes(parseInt(selected.stopid))))
+    }
+    else{
+      console.log('adding')
+      setCookie(selected.stopid, selected.stopid);
+    }
+  };
+  const saveAddOnMap = (Val) => {
+    console.log('address icon clicked');
+      console.log('adding')
+      saveAddress(Val, address.val);
+      saveAddress(Val+'Lat',address.lat);
+      saveAddress(Val+'Lng',address.lng);
+
+  };
+
   const directionsBusMarker = (lat, lng) => {
     axios
       .get(
-        "http://localhost/api/nearestneighbor?lat=" +
-          lat +
-          "&lng=" +
-          lng +
-          "&k=1"
+        "http://localhost/nearestneighbor?lat=" + lat + "&lng=" + lng + "&k=1"
       )
       .then((res) => {
         console.log(res);
@@ -101,16 +120,20 @@ function ShowMap({
     mapRef.current.fitBounds(bounds);
     mapRef.current.panTo(bounds.getCenter());
   }
+  const [ visible, setVisible] = useState(false);
+  
 
   const showModal = () => {
     setVisible(true);
   };
 
-  const handleOk = (e) => {
+  const handleOk = e => {
+    console.log(e);
     setVisible(false);
   };
 
-  const handleCancel = (e) => {
+  const handleCancel = e => {
+    console.log(e);
     setVisible(false);
   };
   return (
@@ -139,18 +162,21 @@ function ShowMap({
             />
           </Tooltip>
         </div>
-
         {otherRoute.length > 1 && (
-          <div
-            className="switch2 mapUI"
-            onClick={() => setOherRouteBool(!otherRouteBool)}
-          >
-            <Replay className="Switch"></Replay>
+          <div className="switch2 mapUI">
+            <Switch
+              width={35}
+              height={22}
+              onChange={() => setOherRouteBool(!otherRouteBool)}
+              checked={otherRouteBool}
+              className="Switch"
+            />
           </div>
         )}
         {source && otherRoute.length < 1 && (
-          <Marker position={{ lat: source.lat, lng: source.lng }} />
-        )}
+          <Marker position={{ lat: source.lat, lng: source.lng }} onClick={() => setAddress(source)}/>
+         )}
+        
         {/* Loop through either array and add markers, based on switch that appears when another route is provided */}
         {(otherRouteBool ? otherRoute : stops).map((marker) => (
           <Marker
@@ -168,6 +194,55 @@ function ShowMap({
         {destination && otherRoute.length < 1 && (
           <Marker position={{ lat: destination.lat, lng: destination.lng }} />
         )}
+        {address ? (
+          <InfoWindow
+            position={{ lat: address.lat, lng: address.lng }}
+            onCloseClick={() => {
+              setAddress(null);
+            }}
+          >
+          <div>
+          <h4>
+          <p>{address.val}</p>
+          </h4>
+          <Button style={{ margin: 10 }} onClick={showModal}>
+              <WeatherIcon name="owm" iconId="200" flip="horizontal" rotate="90" />
+
+              </Button>
+              <Modal
+          title="Today's Weather"
+          visible={visible}
+          onOk={handleOk}
+          onCancel={handleCancel}
+        >
+          <p>Today's Weather</p>
+          {/* <ReactWeather
+        forecast="5days"
+        apikey="7ad07aac9b0943040a4abdd2c23dfc4e"
+        type="city"
+        city="Dublin"
+      /> */}
+      <ReactWeather
+  forecast="today"
+  apikey="7ad07aac9b0943040a4abdd2c23dfc4e"
+  type="geo"
+  lat={address.lat}
+  lon={address.lng}
+/>
+</Modal>
+          <Button style={{ margin: 10 }} onClick={() => saveAddOnMap('Home')}>
+          <span className={(getAddressByVal('Home') === (address.val))  ? "fa fa-home" : "fa fa-hospital-o"}></span>
+            </Button>
+
+            <Button style={{ margin: 10 }} onClick={() =>saveAddOnMap('Work')}>
+          <span className={(getAddressByVal('Work') === (address.val)) ? "fa fa-file" : "fa fa-file-o"}></span>
+            </Button> 
+            </div>
+            </InfoWindow>
+          
+            
+) : null}
+
         {selected ? (
           <InfoWindow
             position={{ lat: selected.lat, lng: selected.lng }}
@@ -188,9 +263,6 @@ function ShowMap({
               >
                 <HistoryOutlined />
               </Button>
-              <Button style={{ margin: 10 }}>
-                <StarOutlined />
-              </Button>
               <Button style={{ margin: 10 }} onClick={showModal}>
                 <WeatherIcon
                   name="owm"
@@ -200,20 +272,30 @@ function ShowMap({
                 />
               </Button>
               <Modal
-                title="Today's Weather"
-                visible={visible}
-                onOk={handleOk}
-                onCancel={handleCancel}
-              >
-                <ReactWeather
-                  forecast="today"
-                  apikey="7ad07aac9b0943040a4abdd2c23dfc4e"
-                  type="city"
-                  city="Dublin"
-                />
-              </Modal>
-              <Button style={{ margin: 10 }}>
-                <StarFilled />
+          title="Today's Weather"
+          visible={visible}
+          onOk={handleOk}
+          onCancel={handleCancel}
+        >
+          <p>Today's Weather</p>
+          {/* <ReactWeather
+        forecast="5days"
+        apikey="7ad07aac9b0943040a4abdd2c23dfc4e"
+        type="city"
+        city="Dublin"
+      /> */}
+      <ReactWeather
+  forecast="today"
+  apikey="7ad07aac9b0943040a4abdd2c23dfc4e"
+  type="geo"
+  lat={selected.lat}
+  lon={selected.lng}
+/>
+        </Modal>
+              <Button style={{ margin: 10 }} onClick={icoStatusData}>
+              <span className={(Object.values(getStopNums()).includes(parseInt(selected.stopid))) ? "fa fa-star" : "fa fa-star-o"}></span>
+              {console.log('testing cookies',(parseInt(selected.stopid) in Object.values(test)))};
+
               </Button>
             </div>
           </InfoWindow>
