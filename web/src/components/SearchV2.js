@@ -1,8 +1,5 @@
 import React, { useState } from "react";
-import usePlacesAutocomplete, {
-  getGeocode,
-  getLatLng,
-} from "use-places-autocomplete";
+import usePlacesAutocomplete from "use-places-autocomplete";
 import {
   Combobox,
   ComboboxInput,
@@ -103,16 +100,7 @@ const PlacesAutocomplete = ({ id, handleChange, placeholder, route }) => {
       const bus_id = val.slice(0, val.length - 11);
       handleChange({ bus_id }, id);
     } else {
-      getGeocode({ address: val })
-        .then((results) => getLatLng(results[0]))
-        .then((coords) => {
-          lat = coords.lat;
-          lng = coords.lng;
-          handleChange({ val, lat, lng }, id);
-        })
-        .catch((error) => {
-          console.log("😱 Error: ", error);
-        });
+      handleChange({ val }, id);
     }
     setValue(val, false);
   };
