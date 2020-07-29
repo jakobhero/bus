@@ -1,0 +1,41 @@
+<svg width="561" height="561" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="563" width="563" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <ellipse stroke="null" ry="276.500004" rx="274.999975" id="svg_34" cy="280.953151" cx="278.499998" stroke-opacity="null" stroke-width="null" fill="#fe9f00"/>
+  <circle stroke="null" id="svg_1" fill="#1B56DB" r="251" cy="279" cx="277"/>
+  <path id="svg_2" fill="#1149AA" d="m81.924,328.92l192.765,192.766c121.885,-5.95 221.366,-97.141 240.117,-215.226l-135.776,-135.776l-297.106,158.236z"/>
+  <path id="svg_3" fill="#FEC007" d="m386.952,239.336l0,-47.146c0,-15.937 -12.919,-28.856 -28.856,-28.856l-241.587,0c-17.996,0 -32.585,14.589 -32.585,32.585l0,137.001l364.825,0l0,-64.727c0,-15.937 -12.919,-28.856 -28.856,-28.856l-32.941,0l0,-0.001z"/>
+  <rect id="svg_4" fill="#FE9F00" height="57.25" width="364.82" y="266.67" x="83.924"/>
+  <circle id="svg_5" fill="#212121" r="37.29" cy="319.99" cx="141.53"/>
+  <circle id="svg_6" fill="#616161" r="19.18" cy="319.99" cx="141.53"/>
+  <circle id="svg_7" fill="#0C0C0C" r="37.29" cy="319.99" cx="381.26"/>
+  <circle id="svg_8" fill="#424242" r="19.18" cy="319.99" cx="381.26"/>
+  <g id="svg_9">
+   <rect id="svg_10" fill="#47D7FD" height="50.08" width="69.46" y="197.34" x="89.44"/>
+   <rect id="svg_11" fill="#47D7FD" height="45.993" width="43.506" y="197.34" x="336.45"/>
+   <rect id="svg_12" fill="#47D7FD" height="50.08" width="69.46" y="197.34" x="175.89"/>
+  </g>
+  <rect id="svg_13" fill="#37474F" height="139.58" width="62.862" y="179.34" x="259.26"/>
+  <rect id="svg_14" fill="#263238" height="57.25" width="62.862" y="261.67" x="259.26"/>
+  <g id="svg_15"/>
+  <g id="svg_16"/>
+  <g id="svg_17"/>
+  <g id="svg_18"/>
+  <g id="svg_19"/>
+  <g id="svg_20"/>
+  <g id="svg_21"/>
+  <g id="svg_22"/>
+  <g id="svg_23"/>
+  <g id="svg_24"/>
+  <g id="svg_25"/>
+  <g id="svg_26"/>
+  <g id="svg_27"/>
+  <g id="svg_28"/>
+  <g id="svg_29"/>
+ </g>
+</svg>

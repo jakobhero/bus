@@ -1,0 +1,1140 @@
+{
+        "geocoded_waypoints": [
+                {
+                        "geocoder_status": "OK",
+                        "place_id": "ChIJdXp1GIcMZ0gRscWnj-bE3Cg",
+                        "types": [
+                                "establishment",
+                                "point_of_interest",
+                                "transit_station"
+                        ]
+                },
+                {
+                        "geocoder_status": "OK",
+                        "place_id": "ChIJlzDQxH0OZ0gRAykoNMQ84ns",
+                        "types": [
+                                "establishment",
+                                "point_of_interest",
+                                "transit_station"
+                        ]
+                }
+        ],
+        "routes": [
+                {
+                        "bounds": {
+                                "northeast": {
+                                        "lat": 53.3578455,
+                                        "lng": -6.2590724
+                                },
+                                "southwest": {
+                                        "lat": 53.3121906,
+                                        "lng": -6.320691099999999
+                                }
+                        },
+                        "copyrights": "Map data \u00a92020",
+                        "legs": [
+                                {
+                                        "arrival_time": {
+                                                "text": "5:01pm",
+                                                "time_zone": "Europe/Dublin",
+                                                "value": 1595260900
+                                        },
+                                        "departure_time": {
+                                                "text": "4:17pm",
+                                                "time_zone": "Europe/Dublin",
+                                                "value": 1595258253
+                                        },
+                                        "distance": {
+                                                "text": "8.7 km",
+                                                "value": 8659
+                                        },
+                                        "duration": {
+                                                "text": "44 mins",
+                                                "value": 2647
+                                        },
+                                        "end_address": "Upper Dorset St (Temple Street), Northside, Dublin 1, Co. Dublin, Ireland",
+                                        "end_location": {
+                                                "lat": 53.3578455,
+                                                "lng": -6.263348499999999
+                                        },
+                                        "start_address": "Cherry Grove, stop 2433, Crumlin, Dublin, Co. Dublin, Ireland",
+                                        "start_location": {
+                                                "lat": 53.3165862,
+                                                "lng": -6.320691099999999
+                                        },
+                                        "steps": [
+                                                {
+                                                        "distance": {
+                                                                "text": "7.5 km",
+                                                                "value": 7501
+                                                        },
+                                                        "duration": {
+                                                                "text": "31 mins",
+                                                                "value": 1852
+                                                        },
+                                                        "end_location": {
+                                                                "lat": 53.35091,
+                                                                "lng": -6.260968399999999
+                                                        },
+                                                        "html_instructions": "Bus towards Charlestown",
+                                                        "polyline": {
+                                                                "points": "ukldIhoqe@B??[DiB@c@BiAFoB@KBq@D{AFyB@U@Y?MFw@@MBIBSDORu@Ru@BCNi@DMFWnCoKhAcEv@{Cb@_BJ_@T}@DSLm@Z_BT_BXsBDUDc@XwBd@}DT}BLeAVsCBc@R}CLmBB]F{@FaABq@HyAFiAFaA@U@QHe@Fk@Fa@NoABYHo@BQDUCi@?O?MAMAOAICOAKAMMUIOACaAeBYi@iAuAu@cAa@g@i@s@EGeA{Ay@gAW]OSQUs@y@aAiAo@u@mAuAa@i@WYg@m@{@eAo@y@g@s@Ye@OWW]W[[Y]YWWIKIKQWW[Y_@e@m@]_@QS[[EEOQKOKMMYWqBI{@Im@Go@KgBGaAEy@Aa@?i@Co@Eo@Oq@y@gCY{@CIIWCIWy@[kAK_@KYIUKQY[y@}@u@w@IIW]EGSe@M_@GWCIS}@c@wB_@gBMa@K]Sc@Ua@AAyBsDIMIGGEQIw@a@QK_@SuAw@oAq@_Ai@uAy@KIGEkAy@OOECKIMMECYUMIUQg@]ECaAu@_@[iAaAUOqAiA_@YOMMIQOWSc@[QMCCIEWMQGIE[GKAYG[GYCUEIAA?UAUC_@Cm@A]EG?GAq@GeA?a@@k@BDyABaC?k@@eA@yB@g@Ag@AYGo@Iy@AUAOC_ACaBAe@EgBA}@EiBAa@Au@EqBCyAAkAAiBGyEAe@AaAAcBc@Lq@J{ATk@Pa@HM?MBYHYAO?SAw@Ao@A{@EI?U?KAY?ODa@FMBQD[Fu@Rk@FcAV_ANu@LMBe@L_@LoA\\]?aC[mAQEAw@Ke@GqAQe@O}Ca@_@a@kBkBKG]QKGSGA?KAGAICE?u@Gq@?C?u@@}@F_A??g@C{AC{AAiAAaAASI]Ak@AeACe@?MCe@ACDAK}AMmDm@iCq@k@[CiBB?L[@M?w@Ay@?y@C]CU?KBA@IBe@R[LMDMDSF}Br@IB]JKFI@mA`@SFkC|@{Af@kC|@BT"
+                                                        },
+                                                        "start_location": {
+                                                                "lat": 53.3165862,
+                                                                "lng": -6.320691099999999
+                                                        },
+                                                        "transit_details": {
+                                                                "arrival_stop": {
+                                                                        "location": {
+                                                                                "lat": 53.35091,
+                                                                                "lng": -6.260968399999999
+                                                                        },
+                                                                        "name": "Rotunda, Dublin Bus Head Office"
+                                                                },
+                                                                "arrival_time": {
+                                                                        "text": "4:48pm",
+                                                                        "time_zone": "Europe/Dublin",
+                                                                        "value": 1595260105
+                                                                },
+                                                                "departure_stop": {
+                                                                        "location": {
+                                                                                "lat": 53.3165862,
+                                                                                "lng": -6.320691099999999
+                                                                        },
+                                                                        "name": "Cherry Grove, stop 2433"
+                                                                },
+                                                                "departure_time": {
+                                                                        "text": "4:17pm",
+                                                                        "time_zone": "Europe/Dublin",
+                                                                        "value": 1595258253
+                                                                },
+                                                                "headsign": "Charlestown",
+                                                                "line": {
+                                                                        "agencies": [
+                                                                                {
+                                                                                        "name": "Dublin Bus",
+                                                                                        "url": "http://www.transportforireland.ie/"
+                                                                                }
+                                                                        ],
+                                                                        "short_name": "9",
+                                                                        "vehicle": {
+                                                                                "icon": "//maps.gstatic.com/mapfiles/transit/iw2/6/bus2.png",
+                                                                                "name": "Bus",
+                                                                                "type": "BUS"
+                                                                        }
+                                                                },
+                                                                "num_stops": 24
+                                                        },
+                                                        "travel_mode": "TRANSIT"
+                                                },
+                                                {
+                                                        "distance": {
+                                                                "text": "49 m",
+                                                                "value": 49
+                                                        },
+                                                        "duration": {
+                                                                "text": "1 min",
+                                                                "value": 35
+                                                        },
+                                                        "end_location": {
+                                                                "lat": 53.3513592,
+                                                                "lng": -6.2610516
+                                                        },
+                                                        "html_instructions": "Walk to O'Connell St Upper",
+                                                        "polyline": {
+                                                                "points": "kbsdIjyee@s@V_@L"
+                                                        },
+                                                        "start_location": {
+                                                                "lat": 53.350937,
+                                                                "lng": -6.2608643
+                                                        },
+                                                        "steps": [
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "49 m",
+                                                                                "value": 49
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "1 min",
+                                                                                "value": 35
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3513592,
+                                                                                "lng": -6.2610516
+                                                                        },
+                                                                        "html_instructions": "Head <b>north</b> on <b>O'Connell Street Upper</b><div style=\"font-size:0.9em\">Destination will be on the left</div>",
+                                                                        "polyline": {
+                                                                                "points": "kbsdIjyee@s@V_@L"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.350937,
+                                                                                "lng": -6.2608643
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                }
+                                                        ],
+                                                        "travel_mode": "WALKING"
+                                                },
+                                                {
+                                                        "distance": {
+                                                                "text": "1.0 km",
+                                                                "value": 1003
+                                                        },
+                                                        "duration": {
+                                                                "text": "6 mins",
+                                                                "value": 335
+                                                        },
+                                                        "end_location": {
+                                                                "lat": 53.35710750000001,
+                                                                "lng": -6.2643819
+                                                        },
+                                                        "html_instructions": "Bus towards Shanard Road",
+                                                        "polyline": {
+                                                                "points": "}dsdIf{ee@CSk@PaA\\UHm@R]NOFH^~@pCPZR\\R\\]r@U`@iArBuBbDmApBQ\\u@tAEFKTCFOj@k@~BmAqAII_@_@OOYWw@q@m@e@a@]s@g@MKw@u@EC{@y@o@m@e@c@GT"
+                                                        },
+                                                        "start_location": {
+                                                                "lat": 53.3513532,
+                                                                "lng": -6.2611607
+                                                        },
+                                                        "transit_details": {
+                                                                "arrival_stop": {
+                                                                        "location": {
+                                                                                "lat": 53.35710750000001,
+                                                                                "lng": -6.2643819
+                                                                        },
+                                                                        "name": "Upper Dorset Street, stop 12"
+                                                                },
+                                                                "arrival_time": {
+                                                                        "text": "5:00pm",
+                                                                        "time_zone": "Europe/Dublin",
+                                                                        "value": 1595260817
+                                                                },
+                                                                "departure_stop": {
+                                                                        "location": {
+                                                                                "lat": 53.3513532,
+                                                                                "lng": -6.2611607
+                                                                        },
+                                                                        "name": "O'Connell St Upper"
+                                                                },
+                                                                "departure_time": {
+                                                                        "text": "4:54pm",
+                                                                        "time_zone": "Europe/Dublin",
+                                                                        "value": 1595260482
+                                                                },
+                                                                "headsign": "Shanard Road",
+                                                                "line": {
+                                                                        "agencies": [
+                                                                                {
+                                                                                        "name": "Dublin Bus",
+                                                                                        "url": "http://www.transportforireland.ie/"
+                                                                                }
+                                                                        ],
+                                                                        "short_name": "1",
+                                                                        "vehicle": {
+                                                                                "icon": "//maps.gstatic.com/mapfiles/transit/iw2/6/bus2.png",
+                                                                                "name": "Bus",
+                                                                                "type": "BUS"
+                                                                        }
+                                                                },
+                                                                "num_stops": 2
+                                                        },
+                                                        "travel_mode": "TRANSIT"
+                                                },
+                                                {
+                                                        "distance": {
+                                                                "text": "0.1 km",
+                                                                "value": 106
+                                                        },
+                                                        "duration": {
+                                                                "text": "1 min",
+                                                                "value": 81
+                                                        },
+                                                        "end_location": {
+                                                                "lat": 53.3578455,
+                                                                "lng": -6.263348499999999
+                                                        },
+                                                        "html_instructions": "Walk to Upper Dorset St (Temple Street), Northside, Dublin 1, Co. Dublin, Ireland",
+                                                        "polyline": {
+                                                                "points": "uhtdItnfe@IKCGIMy@{@Y_@Y_@IIKO"
+                                                        },
+                                                        "start_location": {
+                                                                "lat": 53.3570662,
+                                                                "lng": -6.264265399999999
+                                                        },
+                                                        "steps": [
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "7 m",
+                                                                                "value": 7
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "1 min",
+                                                                                "value": 5
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.357119,
+                                                                                "lng": -6.2642129
+                                                                        },
+                                                                        "html_instructions": "Head <b>northeast</b> on <b>Dorset Street Upper</b>/<wbr/><b>N1</b>",
+                                                                        "polyline": {
+                                                                                "points": "uhtdItnfe@IK"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.3570662,
+                                                                                "lng": -6.264265399999999
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                },
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "0.1 km",
+                                                                                "value": 99
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "1 min",
+                                                                                "value": 76
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3578455,
+                                                                                "lng": -6.263348499999999
+                                                                        },
+                                                                        "html_instructions": "Slight <b>right</b> to stay on <b>Dorset Street Upper</b>/<wbr/><b>N1</b><div style=\"font-size:0.9em\">Continue to follow N1</div><div style=\"font-size:0.9em\">Destination will be on the right</div>",
+                                                                        "maneuver": "turn-slight-right",
+                                                                        "polyline": {
+                                                                                "points": "_itdIhnfe@CGIMy@{@Y_@Y_@IIKO"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.357119,
+                                                                                "lng": -6.2642129
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                }
+                                                        ],
+                                                        "travel_mode": "WALKING"
+                                                }
+                                        ],
+                                        "traffic_speed_entry": [],
+                                        "via_waypoint": []
+                                }
+                        ],
+                        "overview_polyline": {
+                                "points": "ukldIhoqe@B[FmCPwFPeGL}Ap@oC`@sAtHoYt@_Dp@_E^iC^{Cz@{Hd@yEVaE`@iG\\wGTyBd@{DHg@Cy@Eu@E[Oc@gBcDkEuF}CiEwCmDwDoEcBsBwAmBi@}@o@y@y@s@a@c@mA_BuAaB}@cAYg@a@mDQ}ASiDG{ACyAEo@Oq@sAcEi@eB}@{Ce@m@oBuBa@g@Ym@Uw@WgAcA_FY_Ai@eA{BuDSUYO_EyBoC{AaBcAiBsAkCoBaEcDoC{B_BmAw@_@kAWuASiDSq@GeA?mADH{E@qBBaDCaAUoC[oP[gXuAX{ATk@Pa@HM?g@LuBEkCGe@Aq@LqBd@k@FcAVuB\\cD|@]?aC[sAS}ASqAQe@O}Ca@_@a@wBsB_Aa@c@Gu@Gq@?y@@}BFCcCI{FI]Ak@EkBCs@BEK}AMmDm@iCq@k@[CiBB?L[@eAAsBCs@CMDyAj@iDdAiObFBTEUsAd@@TCSmBn@cA\\m@VH^~@pCd@x@R\\]r@U`@iArBuBbD_BnCkAzB{@jDwA{AaCyBqCwBiDaDe@c@GTFUIKMUsA{Ao@y@"
+                        },
+                        "summary": "",
+                        "warnings": [
+                                "Walking directions are in beta. Use caution \u2013 This route may be missing sidewalks or pedestrian paths."
+                        ],
+                        "waypoint_order": []
+                },
+                {
+                        "bounds": {
+                                "northeast": {
+                                        "lat": 53.3578455,
+                                        "lng": -6.2590724
+                                },
+                                "southwest": {
+                                        "lat": 53.3121906,
+                                        "lng": -6.320691099999999
+                                }
+                        },
+                        "copyrights": "Map data \u00a92020",
+                        "legs": [
+                                {
+                                        "arrival_time": {
+                                                "text": "5:02pm",
+                                                "time_zone": "Europe/Dublin",
+                                                "value": 1595260924
+                                        },
+                                        "departure_time": {
+                                                "text": "4:17pm",
+                                                "time_zone": "Europe/Dublin",
+                                                "value": 1595258253
+                                        },
+                                        "distance": {
+                                                "text": "9.1 km",
+                                                "value": 9097
+                                        },
+                                        "duration": {
+                                                "text": "45 mins",
+                                                "value": 2671
+                                        },
+                                        "end_address": "Upper Dorset St (Temple Street), Northside, Dublin 1, Co. Dublin, Ireland",
+                                        "end_location": {
+                                                "lat": 53.3578455,
+                                                "lng": -6.263348499999999
+                                        },
+                                        "start_address": "Cherry Grove, stop 2433, Crumlin, Dublin, Co. Dublin, Ireland",
+                                        "start_location": {
+                                                "lat": 53.3165862,
+                                                "lng": -6.320691099999999
+                                        },
+                                        "steps": [
+                                                {
+                                                        "distance": {
+                                                                "text": "8.4 km",
+                                                                "value": 8401
+                                                        },
+                                                        "duration": {
+                                                                "text": "35 mins",
+                                                                "value": 2129
+                                                        },
+                                                        "end_location": {
+                                                                "lat": 53.3550406,
+                                                                "lng": -6.2699793
+                                                        },
+                                                        "html_instructions": "Bus towards Charlestown",
+                                                        "polyline": {
+                                                                "points": "ukldIhoqe@B??[DiB@c@BiAFoB@KBq@D{AFyB@U@Y?MFw@@MBIBSDORu@Ru@BCNi@DMFWnCoKhAcEv@{Cb@_BJ_@T}@DSLm@Z_BT_BXsBDUDc@XwBd@}DT}BLeAVsCBc@R}CLmBB]F{@FaABq@HyAFiAFaA@U@QHe@Fk@Fa@NoABYHo@BQDUCi@?O?MAMAOAICOAKAMMUIOACaAeBYi@iAuAu@cAa@g@i@s@EGeA{Ay@gAW]OSQUs@y@aAiAo@u@mAuAa@i@WYg@m@{@eAo@y@g@s@Ye@OWW]W[[Y]YWWIKIKQWW[Y_@e@m@]_@QS[[EEOQKOKMMYWqBI{@Im@Go@KgBGaAEy@Aa@?i@Co@Eo@Oq@y@gCY{@CIIWCIWy@[kAK_@KYIUKQY[y@}@u@w@IIW]EGSe@M_@GWCIS}@c@wB_@gBMa@K]Sc@Ua@AAyBsDIMIGGEQIw@a@QK_@SuAw@oAq@_Ai@uAy@KIGEkAy@OOECKIMMECYUMIUQg@]ECaAu@_@[iAaAUOqAiA_@YOMMIQOWSc@[QMCCIEWMQGIE[GKAYG[GYCUEIAA?UAUC_@Cm@A]EG?GAq@GeA?a@@k@BDyABaC?k@@eA@yB@g@Ag@AYGo@Iy@AUAOC_ACaBAe@EgBA}@EiBAa@Au@EqBCyAAkAAiBGyEAe@AaAAcBc@Lq@J{ATk@Pa@HM?MBYHYAO?SAw@Ao@A{@EI?U?KAY?ODa@FMBQD[Fu@Rk@FcAV_ANu@LMBe@L_@LoA\\]?aC[mAQEAw@Ke@GqAQe@O}Ca@_@a@kBkBKG]QKGSGA?KAGAICE?u@Gq@?C?u@@}@F_A??g@C{AC{AAiAAaAASI]Ak@AeACe@?MCe@ACDAK}AMmDm@iCq@k@[CiBB?L[@M?w@Ay@?y@C]CU?KBA@IBe@R[LMDMDSF}Br@IB]JKFI@mA`@SFkC|@{Af@kC|@u@VmA`@aA\\UHm@R]NOFH^~@pCPZR\\R\\]r@U`@iArB]f@wAzB_BnCu@tAEFKTCFOj@k@~Ba@vAI`@ETCLAHCTC^CRe@|Bq@lBANMbAEh@JD"
+                                                        },
+                                                        "start_location": {
+                                                                "lat": 53.3165862,
+                                                                "lng": -6.320691099999999
+                                                        },
+                                                        "transit_details": {
+                                                                "arrival_stop": {
+                                                                        "location": {
+                                                                                "lat": 53.3550406,
+                                                                                "lng": -6.2699793
+                                                                        },
+                                                                        "name": "Western Way, stop 194"
+                                                                },
+                                                                "arrival_time": {
+                                                                        "text": "4:53pm",
+                                                                        "time_zone": "Europe/Dublin",
+                                                                        "value": 1595260382
+                                                                },
+                                                                "departure_stop": {
+                                                                        "location": {
+                                                                                "lat": 53.3165862,
+                                                                                "lng": -6.320691099999999
+                                                                        },
+                                                                        "name": "Cherry Grove, stop 2433"
+                                                                },
+                                                                "departure_time": {
+                                                                        "text": "4:17pm",
+                                                                        "time_zone": "Europe/Dublin",
+                                                                        "value": 1595258253
+                                                                },
+                                                                "headsign": "Charlestown",
+                                                                "line": {
+                                                                        "agencies": [
+                                                                                {
+                                                                                        "name": "Dublin Bus",
+                                                                                        "url": "http://www.transportforireland.ie/"
+                                                                                }
+                                                                        ],
+                                                                        "short_name": "9",
+                                                                        "vehicle": {
+                                                                                "icon": "//maps.gstatic.com/mapfiles/transit/iw2/6/bus2.png",
+                                                                                "name": "Bus",
+                                                                                "type": "BUS"
+                                                                        }
+                                                                },
+                                                                "num_stops": 26
+                                                        },
+                                                        "travel_mode": "TRANSIT"
+                                                },
+                                                {
+                                                        "distance": {
+                                                                "text": "0.7 km",
+                                                                "value": 696
+                                                        },
+                                                        "duration": {
+                                                                "text": "9 mins",
+                                                                "value": 542
+                                                        },
+                                                        "end_location": {
+                                                                "lat": 53.3578455,
+                                                                "lng": -6.263348499999999
+                                                        },
+                                                        "html_instructions": "Walk to Upper Dorset St (Temple Street), Northside, Dublin 1, Co. Dublin, Ireland",
+                                                        "polyline": {
+                                                                "points": "k|sdIdrge@Di@LcA@Op@mBd@}BBSB_@BU@IBMDUHa@`@wAmAqAII_@_@OOYWw@q@m@e@a@]s@g@MKw@u@EC{@y@o@k@o@q@CGIMy@{@Y_@Y_@IIKO"
+                                                        },
+                                                        "start_location": {
+                                                                "lat": 53.3551048,
+                                                                "lng": -6.2699475
+                                                        },
+                                                        "steps": [
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "44 m",
+                                                                                "value": 44
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "1 min",
+                                                                                "value": 32
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3549866,
+                                                                                "lng": -6.2693156
+                                                                        },
+                                                                        "html_instructions": "Head <b>east</b> on <b>Western Way</b>/<wbr/><b>R135</b>",
+                                                                        "polyline": {
+                                                                                "points": "k|sdIdrge@Di@LcA@O"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.3551048,
+                                                                                "lng": -6.2699475
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                },
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "0.2 km",
+                                                                                "value": 182
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "2 mins",
+                                                                                "value": 139
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.35420999999999,
+                                                                                "lng": -6.2669334
+                                                                        },
+                                                                        "html_instructions": "Slight <b>right</b> to stay on <b>Western Way</b>/<wbr/><b>R135</b><div style=\"font-size:0.9em\">Continue to follow R135</div>",
+                                                                        "maneuver": "turn-slight-right",
+                                                                        "polyline": {
+                                                                                "points": "u{sdIfnge@p@mBd@}BBSB_@BU@IBMDUHa@`@wA"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.3549866,
+                                                                                "lng": -6.2693156
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                },
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "0.4 km",
+                                                                                "value": 371
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "5 mins",
+                                                                                "value": 295
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.357119,
+                                                                                "lng": -6.2642129
+                                                                        },
+                                                                        "html_instructions": "Turn <b>left</b> onto <b>Dorset Street Upper</b>/<wbr/><b>N1</b>",
+                                                                        "maneuver": "turn-left",
+                                                                        "polyline": {
+                                                                                "points": "yvsdIh_ge@mAqAII_@_@OOYWw@q@m@e@a@]s@g@MKw@u@EC{@y@o@k@o@q@"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.35420999999999,
+                                                                                "lng": -6.2669334
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                },
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "0.1 km",
+                                                                                "value": 99
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "1 min",
+                                                                                "value": 76
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3578455,
+                                                                                "lng": -6.263348499999999
+                                                                        },
+                                                                        "html_instructions": "Slight <b>right</b> to stay on <b>Dorset Street Upper</b>/<wbr/><b>N1</b><div style=\"font-size:0.9em\">Continue to follow N1</div><div style=\"font-size:0.9em\">Destination will be on the right</div>",
+                                                                        "maneuver": "turn-slight-right",
+                                                                        "polyline": {
+                                                                                "points": "_itdIhnfe@CGIMy@{@Y_@Y_@IIKO"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.357119,
+                                                                                "lng": -6.2642129
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                }
+                                                        ],
+                                                        "travel_mode": "WALKING"
+                                                }
+                                        ],
+                                        "traffic_speed_entry": [],
+                                        "via_waypoint": []
+                                }
+                        ],
+                        "overview_polyline": {
+                                "points": "ukldIhoqe@B[FmCPwFPeGL}Ap@oC`@sAtHoYt@_Dp@_E^iC^{Cz@{Hd@yEVaE`@iG\\wGTyBd@{DHg@Cy@Eu@E[Oc@gBcDkEuF}CiEwCmDwDoEcBsBwAmBi@}@o@y@y@s@a@c@mA_BuAaB}@cAYg@a@mDQ}ASiDG{ACyAEo@Oq@sAcEi@eB}@{Ce@m@oBuBa@g@Ym@Uw@WgAcA_FY_Ai@eA{BuDSUYO_EyBoC{AaBcAiBsAkCoBaEcDoC{B_BmAw@_@kAWuASiDSq@GeA?mADH{E@qBBaDCaAUoC[oP[gXuAX{ATk@Pa@HM?g@LuBEkCGe@Aq@LqBd@k@FcAVuB\\cD|@]?aC[sAS}ASqAQe@O}Ca@_@a@wBsB_Aa@c@Gu@Gq@?y@@}BFCcCI{FI]Ak@EkBCs@BEK}AMmDm@iCq@k@[CiBB?L[@eAAsBCs@CMDyAj@iDdAiObF{E`BkAb@OFH^~@pCPZf@z@}BhEuBbDuCdFQ\\Sr@mAvEOv@MlAi@pCq@lBANSlBJDKERmB@Op@mBh@qCFu@ToA`@wAmAqAi@i@oC_CuAeAeAaAaD{CMUsA{Ao@y@"
+                        },
+                        "summary": "",
+                        "warnings": [
+                                "Walking directions are in beta. Use caution \u2013 This route may be missing sidewalks or pedestrian paths."
+                        ],
+                        "waypoint_order": []
+                },
+                {
+                        "bounds": {
+                                "northeast": {
+                                        "lat": 53.3578455,
+                                        "lng": -6.259059499999999
+                                },
+                                "southwest": {
+                                        "lat": 53.3121906,
+                                        "lng": -6.320691099999999
+                                }
+                        },
+                        "copyrights": "Map data \u00a92020",
+                        "legs": [
+                                {
+                                        "arrival_time": {
+                                                "text": "5:03pm",
+                                                "time_zone": "Europe/Dublin",
+                                                "value": 1595261033
+                                        },
+                                        "departure_time": {
+                                                "text": "4:17pm",
+                                                "time_zone": "Europe/Dublin",
+                                                "value": 1595258253
+                                        },
+                                        "distance": {
+                                                "text": "8.7 km",
+                                                "value": 8657
+                                        },
+                                        "duration": {
+                                                "text": "46 mins",
+                                                "value": 2780
+                                        },
+                                        "end_address": "Upper Dorset St (Temple Street), Northside, Dublin 1, Co. Dublin, Ireland",
+                                        "end_location": {
+                                                "lat": 53.3578455,
+                                                "lng": -6.263348499999999
+                                        },
+                                        "start_address": "Cherry Grove, stop 2433, Crumlin, Dublin, Co. Dublin, Ireland",
+                                        "start_location": {
+                                                "lat": 53.3165862,
+                                                "lng": -6.320691099999999
+                                        },
+                                        "steps": [
+                                                {
+                                                        "distance": {
+                                                                "text": "6.0 km",
+                                                                "value": 5956
+                                                        },
+                                                        "duration": {
+                                                                "text": "21 mins",
+                                                                "value": 1272
+                                                        },
+                                                        "end_location": {
+                                                                "lat": 53.3400962,
+                                                                "lng": -6.2658388
+                                                        },
+                                                        "html_instructions": "Bus towards Charlestown",
+                                                        "polyline": {
+                                                                "points": "ukldIhoqe@B??[DiB@c@BiAFoB@KBq@D{AFyB@U@Y?MFw@@MBIBSDORu@Ru@BCNi@DMFWnCoKhAcEv@{Cb@_BJ_@T}@DSLm@Z_BT_BXsBDUDc@XwBd@}DT}BLeAVsCBc@R}CLmBB]F{@FaABq@HyAFiAFaA@U@QHe@Fk@Fa@NoABYHo@BQDUCi@?O?MAMAOAICOAKAMMUIOACaAeBYi@iAuAu@cAa@g@i@s@EGeA{Ay@gAW]OSQUs@y@aAiAo@u@mAuAa@i@WYg@m@{@eAo@y@g@s@Ye@OWW]W[[Y]YWWIKIKQWW[Y_@e@m@]_@QS[[EEOQKOKMMYWqBI{@Im@Go@KgBGaAEy@Aa@?i@Co@Eo@Oq@y@gCY{@CIIWCIWy@[kAK_@KYIUKQY[y@}@u@w@IIW]EGSe@M_@GWCIS}@c@wB_@gBMa@K]Sc@Ua@AAyBsDIMIGGEQIw@a@QK_@SuAw@oAq@_Ai@uAy@KIGEkAy@OOECKIMMECYUMIUQg@]ECaAu@_@[iAaAUOqAiA_@YOMMIQOWSc@[QMCCIEWMQGIE[GKAYG[GYCUEIAA?UAUC_@Cm@A]EG?GAq@GeA?a@@k@BDyABaC?k@@eA@yB@g@Ag@AYGo@Iy@AUAOC_ACaBAe@EgBA}@EiBAa@Au@EqBCyAAkAAiBGyEAe@AaAAcBc@Lq@J{ATk@Pa@HM?MBYHYAO?SAw@Ao@A{@EI?U?KAY?ODa@FMBQD[Fu@Rk@FcAV_ANu@LMBe@L_@LoA\\]?aC[mAQEAw@Ke@GAP"
+                                                        },
+                                                        "start_location": {
+                                                                "lat": 53.3165862,
+                                                                "lng": -6.320691099999999
+                                                        },
+                                                        "transit_details": {
+                                                                "arrival_stop": {
+                                                                        "location": {
+                                                                                "lat": 53.3400962,
+                                                                                "lng": -6.2658388
+                                                                        },
+                                                                        "name": "Whitefriars Street, stop 1355"
+                                                                },
+                                                                "arrival_time": {
+                                                                        "text": "4:38pm",
+                                                                        "time_zone": "Europe/Dublin",
+                                                                        "value": 1595259525
+                                                                },
+                                                                "departure_stop": {
+                                                                        "location": {
+                                                                                "lat": 53.3165862,
+                                                                                "lng": -6.320691099999999
+                                                                        },
+                                                                        "name": "Cherry Grove, stop 2433"
+                                                                },
+                                                                "departure_time": {
+                                                                        "text": "4:17pm",
+                                                                        "time_zone": "Europe/Dublin",
+                                                                        "value": 1595258253
+                                                                },
+                                                                "headsign": "Charlestown",
+                                                                "line": {
+                                                                        "agencies": [
+                                                                                {
+                                                                                        "name": "Dublin Bus",
+                                                                                        "url": "http://www.transportforireland.ie/"
+                                                                                }
+                                                                        ],
+                                                                        "short_name": "9",
+                                                                        "vehicle": {
+                                                                                "icon": "//maps.gstatic.com/mapfiles/transit/iw2/6/bus2.png",
+                                                                                "name": "Bus",
+                                                                                "type": "BUS"
+                                                                        }
+                                                                },
+                                                                "num_stops": 20
+                                                        },
+                                                        "travel_mode": "TRANSIT"
+                                                },
+                                                {
+                                                        "distance": {
+                                                                "text": "2.6 km",
+                                                                "value": 2595
+                                                        },
+                                                        "duration": {
+                                                                "text": "15 mins",
+                                                                "value": 915
+                                                        },
+                                                        "end_location": {
+                                                                "lat": 53.35710750000001,
+                                                                "lng": -6.2643819
+                                                        },
+                                                        "html_instructions": "Bus towards Ashington",
+                                                        "polyline": {
+                                                                "points": "s~pdInxfe@@QqAQe@O}Ca@_@a@kBkBKG]QKGSGA?KAGAICE?u@Gq@?C?u@@}@F_A??g@C{AC{AAiAAaAASI]Ak@AeACe@?MCe@BEK}AMmDE[g@mBq@k@s@C}BHqDA]IaAV}@b@mO`FA?@DODaEtAmA`@aA\\UHm@R]NOFH^~@pCPZR\\R\\]r@U`@s@pAU`@uBbD_BnCu@tAEFKTCFOj@k@~BmAqAII_@_@OOYWw@q@m@e@a@]s@g@MKw@u@EC{@y@o@m@e@c@GT"
+                                                        },
+                                                        "start_location": {
+                                                                "lat": 53.3400962,
+                                                                "lng": -6.2658388
+                                                        },
+                                                        "transit_details": {
+                                                                "arrival_stop": {
+                                                                        "location": {
+                                                                                "lat": 53.35710750000001,
+                                                                                "lng": -6.2643819
+                                                                        },
+                                                                        "name": "Upper Dorset Street, stop 12"
+                                                                },
+                                                                "arrival_time": {
+                                                                        "text": "5:02pm",
+                                                                        "time_zone": "Europe/Dublin",
+                                                                        "value": 1595260950
+                                                                },
+                                                                "departure_stop": {
+                                                                        "location": {
+                                                                                "lat": 53.3400962,
+                                                                                "lng": -6.2658388
+                                                                        },
+                                                                        "name": "Whitefriars Street, stop 1355"
+                                                                },
+                                                                "departure_time": {
+                                                                        "text": "4:47pm",
+                                                                        "time_zone": "Europe/Dublin",
+                                                                        "value": 1595260035
+                                                                },
+                                                                "headsign": "Ashington",
+                                                                "line": {
+                                                                        "agencies": [
+                                                                                {
+                                                                                        "name": "Dublin Bus",
+                                                                                        "url": "http://www.transportforireland.ie/"
+                                                                                }
+                                                                        ],
+                                                                        "short_name": "122",
+                                                                        "vehicle": {
+                                                                                "icon": "//maps.gstatic.com/mapfiles/transit/iw2/6/bus2.png",
+                                                                                "name": "Bus",
+                                                                                "type": "BUS"
+                                                                        }
+                                                                },
+                                                                "num_stops": 5
+                                                        },
+                                                        "travel_mode": "TRANSIT"
+                                                },
+                                                {
+                                                        "distance": {
+                                                                "text": "0.1 km",
+                                                                "value": 106
+                                                        },
+                                                        "duration": {
+                                                                "text": "1 min",
+                                                                "value": 81
+                                                        },
+                                                        "end_location": {
+                                                                "lat": 53.3578455,
+                                                                "lng": -6.263348499999999
+                                                        },
+                                                        "html_instructions": "Walk to Upper Dorset St (Temple Street), Northside, Dublin 1, Co. Dublin, Ireland",
+                                                        "polyline": {
+                                                                "points": "uhtdItnfe@IKCGIMy@{@Y_@Y_@IIKO"
+                                                        },
+                                                        "start_location": {
+                                                                "lat": 53.3570662,
+                                                                "lng": -6.264265399999999
+                                                        },
+                                                        "steps": [
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "7 m",
+                                                                                "value": 7
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "1 min",
+                                                                                "value": 5
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.357119,
+                                                                                "lng": -6.2642129
+                                                                        },
+                                                                        "html_instructions": "Head <b>northeast</b> on <b>Dorset Street Upper</b>/<wbr/><b>N1</b>",
+                                                                        "polyline": {
+                                                                                "points": "uhtdItnfe@IK"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.3570662,
+                                                                                "lng": -6.264265399999999
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                },
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "0.1 km",
+                                                                                "value": 99
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "1 min",
+                                                                                "value": 76
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3578455,
+                                                                                "lng": -6.263348499999999
+                                                                        },
+                                                                        "html_instructions": "Slight <b>right</b> to stay on <b>Dorset Street Upper</b>/<wbr/><b>N1</b><div style=\"font-size:0.9em\">Continue to follow N1</div><div style=\"font-size:0.9em\">Destination will be on the right</div>",
+                                                                        "maneuver": "turn-slight-right",
+                                                                        "polyline": {
+                                                                                "points": "_itdIhnfe@CGIMy@{@Y_@Y_@IIKO"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.357119,
+                                                                                "lng": -6.2642129
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                }
+                                                        ],
+                                                        "travel_mode": "WALKING"
+                                                }
+                                        ],
+                                        "traffic_speed_entry": [],
+                                        "via_waypoint": []
+                                }
+                        ],
+                        "overview_polyline": {
+                                "points": "ukldIhoqe@B[FmCPwFPeGL}Ap@oC`@sAtHoYt@_Dp@_E^iC^{Cz@{Hd@yEVaE`@iG\\wGTyBd@{DHg@Cy@Eu@E[Oc@gBcDkEuF}CiEwCmDwDoEcBsBwAmBi@}@o@y@y@s@a@c@mA_BuAaB}@cAYg@a@mDQ}ASiDG{ACyAEo@Oq@sAcEi@eB}@{Ce@m@oBuBa@g@Ym@Uw@WgAcA_FY_Ai@eA{BuDSUYO_EyBoC{AaBcAiBsAkCoBaEcDoC{B_BmAw@_@kAWuASiDSq@GeA?mADH{E@qBBaDCaAUoC[oP[gXuAX{ATk@Pa@HM?g@LuBEkCGe@Aq@LqBd@k@FcAVuB\\cD|@]?aC[sAS}ASAP@QqAQe@O}Ca@_@a@wBsBi@Yi@KOCu@Gq@?y@@}BFIiHCuAI]Ak@EkBCs@BEK}AMmDE[g@mBq@k@s@C}BHqDA]IaAV}@b@oO`F@DODoGvBwAf@kAb@OFH^~@pCPZf@z@gBfDkCdEuCdFQ\\Sr@k@~BmAqAi@i@oC_CuAeAeAaAwCoCGTFUMScAiAs@_AUY"
+                        },
+                        "summary": "",
+                        "warnings": [
+                                "Walking directions are in beta. Use caution \u2013 This route may be missing sidewalks or pedestrian paths."
+                        ],
+                        "waypoint_order": []
+                },
+                {
+                        "bounds": {
+                                "northeast": {
+                                        "lat": 53.3578455,
+                                        "lng": -6.2590724
+                                },
+                                "southwest": {
+                                        "lat": 53.3121906,
+                                        "lng": -6.320691099999999
+                                }
+                        },
+                        "copyrights": "Map data \u00a92020",
+                        "legs": [
+                                {
+                                        "arrival_time": {
+                                                "text": "5:04pm",
+                                                "time_zone": "Europe/Dublin",
+                                                "value": 1595261064
+                                        },
+                                        "departure_time": {
+                                                "text": "4:17pm",
+                                                "time_zone": "Europe/Dublin",
+                                                "value": 1595258253
+                                        },
+                                        "distance": {
+                                                "text": "9.0 km",
+                                                "value": 8975
+                                        },
+                                        "duration": {
+                                                "text": "47 mins",
+                                                "value": 2811
+                                        },
+                                        "end_address": "Upper Dorset St (Temple Street), Northside, Dublin 1, Co. Dublin, Ireland",
+                                        "end_location": {
+                                                "lat": 53.3578455,
+                                                "lng": -6.263348499999999
+                                        },
+                                        "start_address": "Cherry Grove, stop 2433, Crumlin, Dublin, Co. Dublin, Ireland",
+                                        "start_location": {
+                                                "lat": 53.3165862,
+                                                "lng": -6.320691099999999
+                                        },
+                                        "steps": [
+                                                {
+                                                        "distance": {
+                                                                "text": "6.9 km",
+                                                                "value": 6897
+                                                        },
+                                                        "duration": {
+                                                                "text": "27 mins",
+                                                                "value": 1615
+                                                        },
+                                                        "end_location": {
+                                                                "lat": 53.3456223,
+                                                                "lng": -6.259291999999999
+                                                        },
+                                                        "html_instructions": "Bus towards Charlestown",
+                                                        "polyline": {
+                                                                "points": "ukldIhoqe@B??[DiB@c@BiAFoB@KBq@D{AFyB@U@Y?MFw@@MBIBSDORu@Ru@BCNi@DMFWnCoKhAcEv@{Cb@_BJ_@T}@DSLm@Z_BT_BXsBDUDc@XwBd@}DT}BLeAVsCBc@R}CLmBB]F{@FaABq@HyAFiAFaA@U@QHe@Fk@Fa@NoABYHo@BQDUCi@?O?MAMAOAICOAKAMMUIOACaAeBYi@iAuAu@cAa@g@i@s@EGeA{Ay@gAW]OSQUs@y@aAiAo@u@mAuAa@i@WYg@m@{@eAo@y@g@s@Ye@OWW]W[[Y]YWWIKIKQWW[Y_@e@m@]_@QS[[EEOQKOKMMYWqBI{@Im@Go@KgBGaAEy@Aa@?i@Co@Eo@Oq@y@gCY{@CIIWCIWy@[kAK_@KYIUKQY[y@}@u@w@IIW]EGSe@M_@GWCIS}@c@wB_@gBMa@K]Sc@Ua@AAyBsDIMIGGEQIw@a@QK_@SuAw@oAq@_Ai@uAy@KIGEkAy@OOECKIMMECYUMIUQg@]ECaAu@_@[iAaAUOqAiA_@YOMMIQOWSc@[QMCCIEWMQGIE[GKAYG[GYCUEIAA?UAUC_@Cm@A]EG?GAq@GeA?a@@k@BDyABaC?k@@eA@yB@g@Ag@AYGo@Iy@AUAOC_ACaBAe@EgBA}@EiBAa@Au@EqBCyAAkAAiBGyEAe@AaAAcBc@Lq@J{ATk@Pa@HM?MBYHYAO?SAw@Ao@A{@EI?U?KAY?ODa@FMBQD[Fu@Rk@FcAV_ANu@LMBe@L_@LoA\\]?aC[mAQEAw@Ke@GqAQe@O}Ca@_@a@kBkBKG]QKGSGA?KAGAICE?u@Gq@?C?u@@}@F_A??g@C{AC{AAiAAaAASI]Ak@AeACe@?MCe@ACDAK}AMmDm@iCq@k@[CiBB?f@"
+                                                        },
+                                                        "start_location": {
+                                                                "lat": 53.3165862,
+                                                                "lng": -6.320691099999999
+                                                        },
+                                                        "transit_details": {
+                                                                "arrival_stop": {
+                                                                        "location": {
+                                                                                "lat": 53.3456223,
+                                                                                "lng": -6.259291999999999
+                                                                        },
+                                                                        "name": "Dublin City South, Westmoreland Street"
+                                                                },
+                                                                "arrival_time": {
+                                                                        "text": "4:44pm",
+                                                                        "time_zone": "Europe/Dublin",
+                                                                        "value": 1595259868
+                                                                },
+                                                                "departure_stop": {
+                                                                        "location": {
+                                                                                "lat": 53.3165862,
+                                                                                "lng": -6.320691099999999
+                                                                        },
+                                                                        "name": "Cherry Grove, stop 2433"
+                                                                },
+                                                                "departure_time": {
+                                                                        "text": "4:17pm",
+                                                                        "time_zone": "Europe/Dublin",
+                                                                        "value": 1595258253
+                                                                },
+                                                                "headsign": "Charlestown",
+                                                                "line": {
+                                                                        "agencies": [
+                                                                                {
+                                                                                        "name": "Dublin Bus",
+                                                                                        "url": "http://www.transportforireland.ie/"
+                                                                                }
+                                                                        ],
+                                                                        "short_name": "9",
+                                                                        "vehicle": {
+                                                                                "icon": "//maps.gstatic.com/mapfiles/transit/iw2/6/bus2.png",
+                                                                                "name": "Bus",
+                                                                                "type": "BUS"
+                                                                        }
+                                                                },
+                                                                "num_stops": 23
+                                                        },
+                                                        "travel_mode": "TRANSIT"
+                                                },
+                                                {
+                                                        "distance": {
+                                                                "text": "1.6 km",
+                                                                "value": 1602
+                                                        },
+                                                        "duration": {
+                                                                "text": "9 mins",
+                                                                "value": 543
+                                                        },
+                                                        "end_location": {
+                                                                "lat": 53.3563972,
+                                                                "lng": -6.268076499999999
+                                                        },
+                                                        "html_instructions": "Bus towards Phoenix Pk",
+                                                        "polyline": {
+                                                                "points": "cardIpoee@?Y[@M?w@Ay@?y@C]CU?KBA@IBe@R[LMDMDSF}Br@IB]JKFI@mA`@SFkC|@{Af@aEtAa@Nk@PaA\\UHm@R]NOFH^~@pCPZR\\R\\]r@U`@g@|@a@t@uBbD_BnCu@tAEFKTCFOj@k@~Ba@vAi@jACFCDA@A@A?A?A@A?IFCBA@A@ADe@~BiAe@e@SKC_Bs@GAWEEAOCI??V"
+                                                        },
+                                                        "start_location": {
+                                                                "lat": 53.3456223,
+                                                                "lng": -6.259291999999999
+                                                        },
+                                                        "transit_details": {
+                                                                "arrival_stop": {
+                                                                        "location": {
+                                                                                "lat": 53.3563972,
+                                                                                "lng": -6.268076499999999
+                                                                        },
+                                                                        "name": "Mountjoy Street"
+                                                                },
+                                                                "arrival_time": {
+                                                                        "text": "4:58pm",
+                                                                        "time_zone": "Europe/Dublin",
+                                                                        "value": 1595260707
+                                                                },
+                                                                "departure_stop": {
+                                                                        "location": {
+                                                                                "lat": 53.3456223,
+                                                                                "lng": -6.259291999999999
+                                                                        },
+                                                                        "name": "Dublin City South, Westmoreland Street"
+                                                                },
+                                                                "departure_time": {
+                                                                        "text": "4:49pm",
+                                                                        "time_zone": "Europe/Dublin",
+                                                                        "value": 1595260164
+                                                                },
+                                                                "headsign": "Phoenix Pk",
+                                                                "line": {
+                                                                        "agencies": [
+                                                                                {
+                                                                                        "name": "Dublin Bus",
+                                                                                        "url": "http://www.transportforireland.ie/"
+                                                                                }
+                                                                        ],
+                                                                        "short_name": "46a",
+                                                                        "vehicle": {
+                                                                                "icon": "//maps.gstatic.com/mapfiles/transit/iw2/6/bus2.png",
+                                                                                "name": "Bus",
+                                                                                "type": "BUS"
+                                                                        }
+                                                                },
+                                                                "num_stops": 3
+                                                        },
+                                                        "travel_mode": "TRANSIT"
+                                                },
+                                                {
+                                                        "distance": {
+                                                                "text": "0.5 km",
+                                                                "value": 476
+                                                        },
+                                                        "duration": {
+                                                                "text": "6 mins",
+                                                                "value": 357
+                                                        },
+                                                        "end_location": {
+                                                                "lat": 53.3578455,
+                                                                "lng": -6.263348499999999
+                                                        },
+                                                        "html_instructions": "Walk to Upper Dorset St (Temple Street), Northside, Dublin 1, Co. Dublin, Ireland",
+                                                        "polyline": {
+                                                                "points": "odtdIvege@M?a@CW?PaARgAl@aEL{@F_@TwAPWw@u@EC{@y@o@k@o@q@CGIMy@{@Y_@Y_@IIKO"
+                                                        },
+                                                        "start_location": {
+                                                                "lat": 53.3563953,
+                                                                "lng": -6.2679627
+                                                        },
+                                                        "steps": [
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "41 m",
+                                                                                "value": 41
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "1 min",
+                                                                                "value": 32
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.35675999999999,
+                                                                                "lng": -6.267939999999999
+                                                                        },
+                                                                        "html_instructions": "Head <b>north</b> on <b>Mountjoy St</b> toward <b>Blessington Ln</b>",
+                                                                        "polyline": {
+                                                                                "points": "odtdIvege@M?a@CW?"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.3563953,
+                                                                                "lng": -6.2679627
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                },
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "0.2 km",
+                                                                                "value": 197
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "2 mins",
+                                                                                "value": 142
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.35603159999999,
+                                                                                "lng": -6.2652573
+                                                                        },
+                                                                        "html_instructions": "Turn <b>right</b> onto <b>Blessington St</b>",
+                                                                        "maneuver": "turn-right",
+                                                                        "polyline": {
+                                                                                "points": "wftdIrege@PaARgAl@aEL{@F_@TwAPW"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.35675999999999,
+                                                                                "lng": -6.267939999999999
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                },
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "0.1 km",
+                                                                                "value": 139
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "2 mins",
+                                                                                "value": 107
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.357119,
+                                                                                "lng": -6.2642129
+                                                                        },
+                                                                        "html_instructions": "Turn <b>left</b> onto <b>Dorset Street Upper</b>/<wbr/><b>N1</b>",
+                                                                        "maneuver": "turn-left",
+                                                                        "polyline": {
+                                                                                "points": "ebtdIztfe@w@u@EC{@y@o@k@o@q@"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.35603159999999,
+                                                                                "lng": -6.2652573
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                },
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "0.1 km",
+                                                                                "value": 99
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "1 min",
+                                                                                "value": 76
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3578455,
+                                                                                "lng": -6.263348499999999
+                                                                        },
+                                                                        "html_instructions": "Slight <b>right</b> to stay on <b>Dorset Street Upper</b>/<wbr/><b>N1</b><div style=\"font-size:0.9em\">Continue to follow N1</div><div style=\"font-size:0.9em\">Destination will be on the right</div>",
+                                                                        "maneuver": "turn-slight-right",
+                                                                        "polyline": {
+                                                                                "points": "_itdIhnfe@CGIMy@{@Y_@Y_@IIKO"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.357119,
+                                                                                "lng": -6.2642129
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                }
+                                                        ],
+                                                        "travel_mode": "WALKING"
+                                                }
+                                        ],
+                                        "traffic_speed_entry": [],
+                                        "via_waypoint": []
+                                }
+                        ],
+                        "overview_polyline": {
+                                "points": "ukldIhoqe@B[FmCPwFPeGL}Ap@oC`@sAtHoYt@_Dp@_E^iC^{Cz@{Hd@yEVaE`@iG\\wGTyBd@{DHg@Cy@Eu@E[Oc@gBcDkEuF}CiEwCmDwDoEcBsBwAmBi@}@o@y@y@s@a@c@mA_BuAaB}@cAYg@a@mDQ}ASiDG{ACyAEo@Oq@sAcEi@eB}@{Ce@m@oBuBa@g@Ym@Uw@WgAcA_FY_Ai@eA{BuDSUYO_EyBoC{AaBcAiBsAkCoBaEcDoC{B_BmAw@_@kAWuASiDSq@GeA?mADH{E@qBBaDCaAUoC[oP[gXuAX{ATk@Pa@HM?g@LuBEkCGe@Aq@LqBd@k@FcAVuB\\cD|@]?aC[sAS}ASqAQe@O}Ca@_@a@wBsB_Aa@c@Gu@Gq@?y@@}BFCcCI{FI]Ak@EkBCs@BEK}AMmDm@iCq@k@[CiBB?f@?Yi@@qBAwAGa@BmAf@mDfAgKhDqItCcA\\m@VH^~@pCd@x@R\\]r@U`@iArBuErHkAzB{@jDa@vAi@jAGLCBG@QNg@dCoBy@kBw@_@GUEI??V?WM?y@Cd@iCz@}F\\wBPWw@u@aA}@_B}AMUsA{Ao@y@"
+                        },
+                        "summary": "",
+                        "warnings": [
+                                "Walking directions are in beta. Use caution \u2013 This route may be missing sidewalks or pedestrian paths."
+                        ],
+                        "waypoint_order": []
+                }
+        ],
+        "status": "OK"
+}

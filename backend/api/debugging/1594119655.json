@@ -1,0 +1,24 @@
+{
+        "geocoded_waypoints": [
+                {
+                        "geocoder_status": "OK",
+                        "place_id": "ChIJw6ecz4IJsYcRcRFGcBugqAY",
+                        "types": [
+                                "establishment",
+                                "point_of_interest",
+                                "veterinary_care"
+                        ]
+                },
+                {
+                        "geocoder_status": "OK",
+                        "place_id": "ChIJYzrIIDEJZ0gRz78kFPMqdjY",
+                        "types": [
+                                "establishment",
+                                "point_of_interest",
+                                "university"
+                        ]
+                }
+        ],
+        "routes": [],
+        "status": "ZERO_RESULTS"
+}
