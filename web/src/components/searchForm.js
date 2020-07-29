@@ -49,6 +49,7 @@ const SearchForm = ({ handleSubmitApp }) => {
   };
 
   function handleSubmit(event) {
+
     event.preventDefault();
     let newFields = { ...fieldsValues };
     if (newFields.source.val) {
@@ -89,6 +90,7 @@ const SearchForm = ({ handleSubmitApp }) => {
             );
           }
         });
+
     } else {
       handleSubmitApp(newFields.source, newFields.destination, newFields.time);
     }

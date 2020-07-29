@@ -1,0 +1,1271 @@
+{
+        "geocoded_waypoints": [
+                {
+                        "geocoder_status": "OK",
+                        "place_id": "ChIJKUksHHQOZ0gR3S5MSx2A6PM",
+                        "types": [
+                                "establishment",
+                                "point_of_interest",
+                                "transit_station"
+                        ]
+                },
+                {
+                        "geocoder_status": "OK",
+                        "place_id": "ChIJMy-2c5kOZ0gRY0DRreL2b80",
+                        "types": [
+                                "street_address"
+                        ]
+                }
+        ],
+        "routes": [
+                {
+                        "bounds": {
+                                "northeast": {
+                                        "lat": 53.3719219,
+                                        "lng": -6.2545366
+                                },
+                                "southwest": {
+                                        "lat": 53.33885189999999,
+                                        "lng": -6.2735942
+                                }
+                        },
+                        "copyrights": "Map data \u00a92020",
+                        "legs": [
+                                {
+                                        "arrival_time": {
+                                                "text": "7:01pm",
+                                                "time_zone": "Europe/Dublin",
+                                                "value": 1595872891
+                                        },
+                                        "departure_time": {
+                                                "text": "6:34pm",
+                                                "time_zone": "Europe/Dublin",
+                                                "value": 1595871256
+                                        },
+                                        "distance": {
+                                                "text": "5.4 km",
+                                                "value": 5352
+                                        },
+                                        "duration": {
+                                                "text": "27 mins",
+                                                "value": 1635
+                                        },
+                                        "end_address": "24 St Stephen's Green, Dublin 2, D02 EK82, Ireland",
+                                        "end_location": {
+                                                "lat": 53.3391734,
+                                                "lng": -6.2570406
+                                        },
+                                        "start_address": "Botanic Gardens, Northside, Dublin, Co. Dublin, Ireland",
+                                        "start_location": {
+                                                "lat": 53.3719219,
+                                                "lng": -6.2691984
+                                        },
+                                        "steps": [
+                                                {
+                                                        "distance": {
+                                                                "text": "0.3 km",
+                                                                "value": 272
+                                                        },
+                                                        "duration": {
+                                                                "text": "3 mins",
+                                                                "value": 209
+                                                        },
+                                                        "end_location": {
+                                                                "lat": 53.3697212,
+                                                                "lng": -6.269047899999999
+                                                        },
+                                                        "html_instructions": "Walk to Botanic Road, stop 184",
+                                                        "polyline": {
+                                                                "points": "oewdInmge@@@PLJHJDB@JBH@L?FCVMZYdAcAd@a@TUDCDANCNCFHNPXXJJLJl@`@"
+                                                        },
+                                                        "start_location": {
+                                                                "lat": 53.3719219,
+                                                                "lng": -6.2691984
+                                                        },
+                                                        "steps": [
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "0.2 km",
+                                                                                "value": 195
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "2 mins",
+                                                                                "value": 149
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3703254,
+                                                                                "lng": -6.2684921
+                                                                        },
+                                                                        "html_instructions": "Head <b>southwest</b> on <b>B\u00f3thar Gharraithe Na Lus</b> toward <b>Botanic Villas</b>",
+                                                                        "polyline": {
+                                                                                "points": "oewdInmge@@@PLJHJDB@JBH@L?FCVMZYdAcAd@a@TUDCDANCNC"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.3719219,
+                                                                                "lng": -6.2691984
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                },
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "77 m",
+                                                                                "value": 77
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "1 min",
+                                                                                "value": 60
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3697212,
+                                                                                "lng": -6.269047899999999
+                                                                        },
+                                                                        "html_instructions": "Turn <b>right</b> onto <b>Botanic Rd</b>/<wbr/><b>R108</b><div style=\"font-size:0.9em\">Destination will be on the left</div>",
+                                                                        "maneuver": "turn-right",
+                                                                        "polyline": {
+                                                                                "points": "q{vdI`ige@FHNPXXJJLJl@`@"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.3703254,
+                                                                                "lng": -6.2684921
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                }
+                                                        ],
+                                                        "travel_mode": "WALKING"
+                                                },
+                                                {
+                                                        "distance": {
+                                                                "text": "4.5 km",
+                                                                "value": 4544
+                                                        },
+                                                        "duration": {
+                                                                "text": "17 mins",
+                                                                "value": 1004
+                                                        },
+                                                        "end_location": {
+                                                                "lat": 53.34250489999999,
+                                                                "lng": -6.2556484
+                                                        },
+                                                        "html_instructions": "Bus towards Monkstown Ave",
+                                                        "polyline": {
+                                                                "points": "swvdIblge@CL@?TJTL`Ad@bAr@B@f@\\d@Z`@RRJLHz@f@dBt@PHp@\\JFJFz@b@fAj@b@VVJ^LLDZHL@FBTHVBJ@N@\\@b@B\\DB?@?H@L@RDj@Tp@VZJf@Pz@^FBb@P\\LB@XJPFVDJBH@D@P?X?~BEX?f@Ax@CtAEb@AL?t@@R@HBH@HDFBLFVLf@VPJLF~@\\`@L\\HPBXDRBd@DN@`CTT@D@R?@?L@F?p@?NAP?VAdAEt@C~@CXAD?\\CXCD?DAF?DCb@QZOE_@Ea@Ge@CKGSCIACMGOKc@MOGGGIMIOK]CSCMCQAa@Cq@@}@B[Fm@JcAPgBLcA@OFo@HsAOKiAe@e@SKC_Bs@GAWEEAOCW?a@CW?PaARgAl@aEJu@DDj@yCvC~Bb@kBXe@t@y@_@wAa@uAzC{CfAyA~D}Ez@kAbBk@xHiC@JB?ZMpBs@|C_A^MRIh@SREDADCB?LEvB_ARINEHIFCj@U?ErA{@n@u@zBqDNOJARLbAdEz@rBb@j@pAbAjA{@PCt@Af@LV@LIVe@xC}SKG"
+                                                        },
+                                                        "start_location": {
+                                                                "lat": 53.3697037,
+                                                                "lng": -6.2689794
+                                                        },
+                                                        "transit_details": {
+                                                                "arrival_stop": {
+                                                                        "location": {
+                                                                                "lat": 53.34250489999999,
+                                                                                "lng": -6.2556484
+                                                                        },
+                                                                        "name": "Trinity College, South Frederick's Street"
+                                                                },
+                                                                "arrival_time": {
+                                                                        "text": "6:54pm",
+                                                                        "time_zone": "Europe/Dublin",
+                                                                        "value": 1595872469
+                                                                },
+                                                                "departure_stop": {
+                                                                        "location": {
+                                                                                "lat": 53.3697037,
+                                                                                "lng": -6.2689794
+                                                                        },
+                                                                        "name": "Botanic Road, stop 184"
+                                                                },
+                                                                "departure_time": {
+                                                                        "text": "6:37pm",
+                                                                        "time_zone": "Europe/Dublin",
+                                                                        "value": 1595871465
+                                                                },
+                                                                "headsign": "Monkstown Ave",
+                                                                "line": {
+                                                                        "agencies": [
+                                                                                {
+                                                                                        "name": "Dublin Bus",
+                                                                                        "url": "http://www.transportforireland.ie/"
+                                                                                }
+                                                                        ],
+                                                                        "short_name": "4",
+                                                                        "vehicle": {
+                                                                                "icon": "//maps.gstatic.com/mapfiles/transit/iw2/6/bus2.png",
+                                                                                "name": "Bus",
+                                                                                "type": "BUS"
+                                                                        }
+                                                                },
+                                                                "num_stops": 11
+                                                        },
+                                                        "travel_mode": "TRANSIT"
+                                                },
+                                                {
+                                                        "distance": {
+                                                                "text": "0.5 km",
+                                                                "value": 536
+                                                        },
+                                                        "duration": {
+                                                                "text": "7 mins",
+                                                                "value": 422
+                                                        },
+                                                        "end_location": {
+                                                                "lat": 53.3391734,
+                                                                "lng": -6.2570406
+                                                        },
+                                                        "html_instructions": "Walk to 24 St Stephen's Green, Dublin 2, D02 EK82, Ireland",
+                                                        "polyline": {
+                                                                "points": "gmqdI`yde@Da@h@cE\\NjBz@hClAb@R~At@fAh@ZPx@h@JFlA~@LHI`@GPUv@WS"
+                                                        },
+                                                        "start_location": {
+                                                                "lat": 53.3424406,
+                                                                "lng": -6.255688
+                                                        },
+                                                        "steps": [
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "81 m",
+                                                                                "value": 81
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "1 min",
+                                                                                "value": 58
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3421967,
+                                                                                "lng": -6.2545366
+                                                                        },
+                                                                        "html_instructions": "Head <b>east</b> on <b>Nassau St</b>/<wbr/><b>R138</b> toward <b>Kildare St</b>",
+                                                                        "polyline": {
+                                                                                "points": "gmqdI`yde@Da@h@cE"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.3424406,
+                                                                                "lng": -6.255688
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                },
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "0.4 km",
+                                                                                "value": 397
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "5 mins",
+                                                                                "value": 316
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.33885189999999,
+                                                                                "lng": -6.256598299999999
+                                                                        },
+                                                                        "html_instructions": "Turn <b>right</b> onto <b>Kildare St</b>/<wbr/><b>R138</b>",
+                                                                        "maneuver": "turn-right",
+                                                                        "polyline": {
+                                                                                "points": "wkqdIzqde@\\NjBz@hClAb@R~At@fAh@ZPx@h@JFlA~@LH"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.3421967,
+                                                                                "lng": -6.2545366
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                },
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "43 m",
+                                                                                "value": 43
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "1 min",
+                                                                                "value": 36
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3390488,
+                                                                                "lng": -6.2571435
+                                                                        },
+                                                                        "html_instructions": "Turn <b>right</b> onto <b>St Stephen's Green</b>/<wbr/><b>R138</b>",
+                                                                        "maneuver": "turn-right",
+                                                                        "polyline": {
+                                                                                "points": "yvpdIv~de@I`@GPUv@"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.33885189999999,
+                                                                                "lng": -6.256598299999999
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                },
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "15 m",
+                                                                                "value": 15
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "1 min",
+                                                                                "value": 12
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3391734,
+                                                                                "lng": -6.2570406
+                                                                        },
+                                                                        "html_instructions": "Turn <b>right</b><div style=\"font-size:0.9em\">Destination will be on the right</div>",
+                                                                        "maneuver": "turn-right",
+                                                                        "polyline": {
+                                                                                "points": "axpdIbbee@WS"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.3390488,
+                                                                                "lng": -6.2571435
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                }
+                                                        ],
+                                                        "travel_mode": "WALKING"
+                                                }
+                                        ],
+                                        "traffic_speed_entry": [],
+                                        "via_waypoint": []
+                                }
+                        ],
+                        "overview_polyline": {
+                                "points": "oewdInmge@j@^NDV@^Q`B}Az@w@JE^GVZd@d@z@l@BMCLVJvAr@fAt@lAx@t@^hAp@vB~@dCpAjBbAv@X~@TTHVBZBbBJl@HfHnC\\Lh@LTDV@zEG`EKhABRDv@^x@b@lAd@~@Vj@HjE`@p@BvA?dDK|BIl@Eh@UZOE_@Ea@Kq@K]OKs@YWOS]Oq@G_@EsADyARqBh@kFHsAOKoBy@kBw@_@GUEy@CW?PaA`AiGJu@DDj@yCvC~Bb@kBXe@t@y@_@wAa@uAzC{CfAyA~D}Ez@kAbBk@xHiC@J^MnGsBpBq@\\KjCiAXOr@Y?ErA{@n@u@zBqDNOJARLbAdEz@rBb@j@pAbAjA{@PCt@Af@LV@LIVe@xC}SKGJFn@eFhCjAtI`EtAz@xAfALHI`@]hAWS"
+                        },
+                        "summary": "",
+                        "warnings": [
+                                "Walking directions are in beta. Use caution \u2013 This route may be missing sidewalks or pedestrian paths."
+                        ],
+                        "waypoint_order": []
+                },
+                {
+                        "bounds": {
+                                "northeast": {
+                                        "lat": 53.3719219,
+                                        "lng": -6.2545366
+                                },
+                                "southwest": {
+                                        "lat": 53.33885189999999,
+                                        "lng": -6.2735942
+                                }
+                        },
+                        "copyrights": "Map data \u00a92020",
+                        "legs": [
+                                {
+                                        "arrival_time": {
+                                                "text": "7:12pm",
+                                                "time_zone": "Europe/Dublin",
+                                                "value": 1595873574
+                                        },
+                                        "departure_time": {
+                                                "text": "6:48pm",
+                                                "time_zone": "Europe/Dublin",
+                                                "value": 1595872103
+                                        },
+                                        "distance": {
+                                                "text": "5.4 km",
+                                                "value": 5351
+                                        },
+                                        "duration": {
+                                                "text": "25 mins",
+                                                "value": 1471
+                                        },
+                                        "end_address": "24 St Stephen's Green, Dublin 2, D02 EK82, Ireland",
+                                        "end_location": {
+                                                "lat": 53.3391734,
+                                                "lng": -6.2570406
+                                        },
+                                        "start_address": "Botanic Gardens, Northside, Dublin, Co. Dublin, Ireland",
+                                        "start_location": {
+                                                "lat": 53.3719219,
+                                                "lng": -6.2691984
+                                        },
+                                        "steps": [
+                                                {
+                                                        "distance": {
+                                                                "text": "0.3 km",
+                                                                "value": 272
+                                                        },
+                                                        "duration": {
+                                                                "text": "3 mins",
+                                                                "value": 209
+                                                        },
+                                                        "end_location": {
+                                                                "lat": 53.3697212,
+                                                                "lng": -6.269047899999999
+                                                        },
+                                                        "html_instructions": "Walk to Botanic Road, stop 184",
+                                                        "polyline": {
+                                                                "points": "oewdInmge@@@PLJHJDB@JBH@L?FCVMZYdAcAd@a@TUDCDANCNCFHNPXXJJLJl@`@"
+                                                        },
+                                                        "start_location": {
+                                                                "lat": 53.3719219,
+                                                                "lng": -6.2691984
+                                                        },
+                                                        "steps": [
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "0.2 km",
+                                                                                "value": 195
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "2 mins",
+                                                                                "value": 149
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3703254,
+                                                                                "lng": -6.2684921
+                                                                        },
+                                                                        "html_instructions": "Head <b>southwest</b> on <b>B\u00f3thar Gharraithe Na Lus</b> toward <b>Botanic Villas</b>",
+                                                                        "polyline": {
+                                                                                "points": "oewdInmge@@@PLJHJDB@JBH@L?FCVMZYdAcAd@a@TUDCDANCNC"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.3719219,
+                                                                                "lng": -6.2691984
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                },
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "77 m",
+                                                                                "value": 77
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "1 min",
+                                                                                "value": 60
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3697212,
+                                                                                "lng": -6.269047899999999
+                                                                        },
+                                                                        "html_instructions": "Turn <b>right</b> onto <b>Botanic Rd</b>/<wbr/><b>R108</b><div style=\"font-size:0.9em\">Destination will be on the left</div>",
+                                                                        "maneuver": "turn-right",
+                                                                        "polyline": {
+                                                                                "points": "q{vdI`ige@FHNPXXJJLJl@`@"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.3703254,
+                                                                                "lng": -6.2684921
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                }
+                                                        ],
+                                                        "travel_mode": "WALKING"
+                                                },
+                                                {
+                                                        "distance": {
+                                                                "text": "4.9 km",
+                                                                "value": 4888
+                                                        },
+                                                        "duration": {
+                                                                "text": "18 mins",
+                                                                "value": 1090
+                                                        },
+                                                        "end_location": {
+                                                                "lat": 53.3399308,
+                                                                "lng": -6.255723499999999
+                                                        },
+                                                        "html_instructions": "Bus towards Bray",
+                                                        "polyline": {
+                                                                "points": "swvdIblge@CL@?TJTL`Ad@bAr@B@f@\\d@Z`@RRJLHz@f@dBt@PHp@\\JFJFz@b@fAj@b@VVJ^LLDZHL@FBTHVBJ@N@\\@b@B\\DB?@?H@L@RDj@Tp@VZJf@Pz@^FBb@P\\LB@XJPFVDJBH@D@P?X?~BEX?f@Ax@CtAEb@AL?t@@R@HBH@HDFBLFVLf@VPJLF~@\\`@L\\HPBXDRBd@DN@`CTT@D@R?@?L@F?p@?NAP?VAdAEt@C~@CXAD?\\CXCD?DAF?DCb@QZOE_@Ea@Ge@CKGSCIACMGOKc@MOGGGIMIOK]CSCMCQAa@Cq@@}@B[Fm@JcAPgBLcA@OFo@HsAOKiAe@e@SKC_Bs@GAWEEAOCW?a@CW?PaARgAl@aEJu@DDj@yCvC~Bb@kBXe@t@y@_@wAa@uAbDeD~@oAjAwAAENSNOb@i@b@g@NYFGDGDGFEHIDAXAdAc@t@UjC}@jCaAB?ZMpBs@|C_A^MRIh@SREDADCB?LEvB_ARINEHIFCz@]JGJERGJGLOJOVe@NW?A@BrBgDNOV@FHbAdEz@rBb@j@pAbAjA{@PCt@Af@LV@ZWHWbC}P?A@?R}ADa@h@cE\\NjBz@hClAb@R~At@h@XBQ"
+                                                        },
+                                                        "start_location": {
+                                                                "lat": 53.3697037,
+                                                                "lng": -6.2689794
+                                                        },
+                                                        "transit_details": {
+                                                                "arrival_stop": {
+                                                                        "location": {
+                                                                                "lat": 53.3399308,
+                                                                                "lng": -6.255723499999999
+                                                                        },
+                                                                        "name": "Kildare Street, stop 747"
+                                                                },
+                                                                "arrival_time": {
+                                                                        "text": "7:10pm",
+                                                                        "time_zone": "Europe/Dublin",
+                                                                        "value": 1595873402
+                                                                },
+                                                                "departure_stop": {
+                                                                        "location": {
+                                                                                "lat": 53.3697037,
+                                                                                "lng": -6.2689794
+                                                                        },
+                                                                        "name": "Botanic Road, stop 184"
+                                                                },
+                                                                "departure_time": {
+                                                                        "text": "6:51pm",
+                                                                        "time_zone": "Europe/Dublin",
+                                                                        "value": 1595872312
+                                                                },
+                                                                "headsign": "Bray",
+                                                                "line": {
+                                                                        "agencies": [
+                                                                                {
+                                                                                        "name": "Dublin Bus",
+                                                                                        "url": "http://www.transportforireland.ie/"
+                                                                                }
+                                                                        ],
+                                                                        "short_name": "155",
+                                                                        "vehicle": {
+                                                                                "icon": "//maps.gstatic.com/mapfiles/transit/iw2/6/bus2.png",
+                                                                                "name": "Bus",
+                                                                                "type": "BUS"
+                                                                        }
+                                                                },
+                                                                "num_stops": 13
+                                                        },
+                                                        "travel_mode": "TRANSIT"
+                                                },
+                                                {
+                                                        "distance": {
+                                                                "text": "0.2 km",
+                                                                "value": 191
+                                                        },
+                                                        "duration": {
+                                                                "text": "3 mins",
+                                                                "value": 151
+                                                        },
+                                                        "end_location": {
+                                                                "lat": 53.3391734,
+                                                                "lng": -6.2570406
+                                                        },
+                                                        "html_instructions": "Walk to 24 St Stephen's Green, Dublin 2, D02 EK82, Ireland",
+                                                        "polyline": {
+                                                                "points": "u}pdIxyde@\\NZPx@h@JFlA~@LHI`@GPUv@WS"
+                                                        },
+                                                        "start_location": {
+                                                                "lat": 53.33994870000001,
+                                                                "lng": -6.2558067
+                                                        },
+                                                        "steps": [
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "0.1 km",
+                                                                                "value": 133
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "2 mins",
+                                                                                "value": 103
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.33885189999999,
+                                                                                "lng": -6.256598299999999
+                                                                        },
+                                                                        "html_instructions": "Head <b>south</b> on <b>Kildare St</b>/<wbr/><b>R138</b> toward <b>St Stephen's Green</b>",
+                                                                        "polyline": {
+                                                                                "points": "u}pdIxyde@\\NZPx@h@JFlA~@LH"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.33994870000001,
+                                                                                "lng": -6.2558067
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                },
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "43 m",
+                                                                                "value": 43
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "1 min",
+                                                                                "value": 36
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3390488,
+                                                                                "lng": -6.2571435
+                                                                        },
+                                                                        "html_instructions": "Turn <b>right</b> onto <b>St Stephen's Green</b>/<wbr/><b>R138</b>",
+                                                                        "maneuver": "turn-right",
+                                                                        "polyline": {
+                                                                                "points": "yvpdIv~de@I`@GPUv@"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.33885189999999,
+                                                                                "lng": -6.256598299999999
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                },
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "15 m",
+                                                                                "value": 15
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "1 min",
+                                                                                "value": 12
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3391734,
+                                                                                "lng": -6.2570406
+                                                                        },
+                                                                        "html_instructions": "Turn <b>right</b><div style=\"font-size:0.9em\">Destination will be on the right</div>",
+                                                                        "maneuver": "turn-right",
+                                                                        "polyline": {
+                                                                                "points": "axpdIbbee@WS"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.3390488,
+                                                                                "lng": -6.2571435
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                }
+                                                        ],
+                                                        "travel_mode": "WALKING"
+                                                }
+                                        ],
+                                        "traffic_speed_entry": [],
+                                        "via_waypoint": []
+                                }
+                        ],
+                        "overview_polyline": {
+                                "points": "oewdInmge@j@^NDV@^Q`B}Az@w@JE^GVZd@d@z@l@BMCLVJvAr@fAt@lAx@t@^hAp@vB~@dCpAjBbAv@X~@TTHVBZBbBJl@HfHnC\\Lh@LTDV@zEG`EKhABRDv@^x@b@lAd@~@Vj@HjE`@p@BvA?dDK|BIl@Eh@UZOE_@Ea@Kq@K]OKs@YWOS]Oq@G_@EsADyARqBh@kFHsAOKoBy@kBw@_@GUEy@CW?PaA`AiGJu@DDj@yCvC~Bb@kBXe@t@y@_@wAa@uAbDeD~@oAjAwAAE^c@fAqAVa@\\_@^CdAc@t@UvG_C^MnGsBr@WhA_@|CoAXObAa@v@]X_@f@}@@@rBgDNOV@FHbAdEz@rBb@j@pAbAjA{@PCt@Af@LV@ZWHWbC}P@AX_Ch@cE\\NtFhCbChAh@XBQCP\\NtAz@xAfALHI`@]hAWS"
+                        },
+                        "summary": "",
+                        "warnings": [
+                                "Walking directions are in beta. Use caution \u2013 This route may be missing sidewalks or pedestrian paths."
+                        ],
+                        "waypoint_order": []
+                },
+                {
+                        "bounds": {
+                                "northeast": {
+                                        "lat": 53.3723055,
+                                        "lng": -6.2545366
+                                },
+                                "southwest": {
+                                        "lat": 53.33885189999999,
+                                        "lng": -6.2754267
+                                }
+                        },
+                        "copyrights": "Map data \u00a92020",
+                        "legs": [
+                                {
+                                        "arrival_time": {
+                                                "text": "7:16pm",
+                                                "time_zone": "Europe/Dublin",
+                                                "value": 1595873808
+                                        },
+                                        "departure_time": {
+                                                "text": "6:43pm",
+                                                "time_zone": "Europe/Dublin",
+                                                "value": 1595871832
+                                        },
+                                        "distance": {
+                                                "text": "5.6 km",
+                                                "value": 5622
+                                        },
+                                        "duration": {
+                                                "text": "33 mins",
+                                                "value": 1976
+                                        },
+                                        "end_address": "24 St Stephen's Green, Dublin 2, D02 EK82, Ireland",
+                                        "end_location": {
+                                                "lat": 53.3391734,
+                                                "lng": -6.2570406
+                                        },
+                                        "start_address": "Botanic Gardens, Northside, Dublin, Co. Dublin, Ireland",
+                                        "start_location": {
+                                                "lat": 53.3719553,
+                                                "lng": -6.2692938
+                                        },
+                                        "steps": [
+                                                {
+                                                        "distance": {
+                                                                "text": "49 m",
+                                                                "value": 49
+                                                        },
+                                                        "duration": {
+                                                                "text": "1 min",
+                                                                "value": 34
+                                                        },
+                                                        "end_location": {
+                                                                "lat": 53.3722856,
+                                                                "lng": -6.2687826
+                                                        },
+                                                        "html_instructions": "Walk to Botanic Gardens, stop 183",
+                                                        "polyline": {
+                                                                "points": "wewdI`nge@aAeB"
+                                                        },
+                                                        "start_location": {
+                                                                "lat": 53.3719553,
+                                                                "lng": -6.2692938
+                                                        },
+                                                        "steps": [
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "49 m",
+                                                                                "value": 49
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "1 min",
+                                                                                "value": 34
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3722856,
+                                                                                "lng": -6.2687826
+                                                                        },
+                                                                        "polyline": {
+                                                                                "points": "wewdI`nge@aAeB"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.3719553,
+                                                                                "lng": -6.2692938
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                }
+                                                        ],
+                                                        "travel_mode": "WALKING"
+                                                },
+                                                {
+                                                        "distance": {
+                                                                "text": "3.5 km",
+                                                                "value": 3483
+                                                        },
+                                                        "duration": {
+                                                                "text": "15 mins",
+                                                                "value": 892
+                                                        },
+                                                        "end_location": {
+                                                                "lat": 53.345916,
+                                                                "lng": -6.269237299999999
+                                                        },
+                                                        "html_instructions": "Bus towards Kimmage",
+                                                        "polyline": {
+                                                                "points": "ygwdIzjge@CJHF`@^VTJJPLJHJDB@JBF@B?J?FCVMZYdAcAd@a@TUDCDANCNCFHNPXXJJLJl@`@@?TJTL`Ad@bAr@B@f@\\d@Z`@RRJLHz@f@dBt@PHp@\\JFJFz@b@fAj@b@VVJ^LLDZHL@FBTHVBJ@N@\\@b@B\\DB?@?H@L@RDj@Tp@VZJf@Pz@^FBb@P\\LB@XJPFVDJBH@D@P?X?~BEX?f@Ax@CtAEb@AL?t@@R@HBH@HDFBLFVLf@VPJLF~@\\`@L\\HPBXDRBd@DN@`CTT@D@R?@?L@F?p@?NAP?VAdAEt@C~@CXAD?\\CXCD?DAF?DCb@QZOXQXQNGHEBABALCRED?F?TBT@vANXFZHnBd@\\FRDHCL@F@D@JFZTd@VLFVNRLnAp@t@\\z@d@LFPHXJHBF?L@F?HFJ?H?d@BT?`@@t@@f@@l@BL?\\BR?P@PB@?\\F@?P?F@H@NBJDp@TLBD@^Lr@T@@LDF@DBPFNHLFLIBAD@JBNBF@B?BABA?AJSF}@Dq@HmA?GDcADaBB}@?k@@a@?Y?wAEmBCm@AWCe@IiA?CKwA?IEs@Ee@OqBGB"
+                                                        },
+                                                        "start_location": {
+                                                                "lat": 53.3722856,
+                                                                "lng": -6.2687826
+                                                        },
+                                                        "transit_details": {
+                                                                "arrival_stop": {
+                                                                        "location": {
+                                                                                "lat": 53.345916,
+                                                                                "lng": -6.269237299999999
+                                                                        },
+                                                                        "name": "Ormond Quay Upper"
+                                                                },
+                                                                "arrival_time": {
+                                                                        "text": "6:59pm",
+                                                                        "time_zone": "Europe/Dublin",
+                                                                        "value": 1595872760
+                                                                },
+                                                                "departure_stop": {
+                                                                        "location": {
+                                                                                "lat": 53.3722856,
+                                                                                "lng": -6.2687826
+                                                                        },
+                                                                        "name": "Botanic Gardens, stop 183"
+                                                                },
+                                                                "departure_time": {
+                                                                        "text": "6:44pm",
+                                                                        "time_zone": "Europe/Dublin",
+                                                                        "value": 1595871868
+                                                                },
+                                                                "headsign": "Kimmage",
+                                                                "line": {
+                                                                        "agencies": [
+                                                                                {
+                                                                                        "name": "Dublin Bus",
+                                                                                        "url": "http://www.transportforireland.ie/"
+                                                                                }
+                                                                        ],
+                                                                        "short_name": "83",
+                                                                        "vehicle": {
+                                                                                "icon": "//maps.gstatic.com/mapfiles/transit/iw2/6/bus2.png",
+                                                                                "name": "Bus",
+                                                                                "type": "BUS"
+                                                                        }
+                                                                },
+                                                                "num_stops": 11
+                                                        },
+                                                        "travel_mode": "TRANSIT"
+                                                },
+                                                {
+                                                        "distance": {
+                                                                "text": "1.9 km",
+                                                                "value": 1899
+                                                        },
+                                                        "duration": {
+                                                                "text": "9 mins",
+                                                                "value": 519
+                                                        },
+                                                        "end_location": {
+                                                                "lat": 53.3399308,
+                                                                "lng": -6.255723499999999
+                                                        },
+                                                        "html_instructions": "Bus towards Wilton Terrace",
+                                                        "polyline": {
+                                                                "points": "_crdIvmge@FCAWC]M_BOuBC[EkBCsAQwEGy@Ew@?MCq@IqAGo@QoAQuACMCQm@iEc@}C@A}@kGq@sDzBmA`@]n@u@zBqDNOJARLf@zBh@bBl@xARV`BvAjA{@PCt@Af@LV@LIVe@vBsO?AB@BQXwBDa@h@cE\\NjBz@hClAb@R~At@h@XBQ"
+                                                        },
+                                                        "start_location": {
+                                                                "lat": 53.345916,
+                                                                "lng": -6.269237299999999
+                                                        },
+                                                        "transit_details": {
+                                                                "arrival_stop": {
+                                                                        "location": {
+                                                                                "lat": 53.3399308,
+                                                                                "lng": -6.255723499999999
+                                                                        },
+                                                                        "name": "Kildare Street, stop 747"
+                                                                },
+                                                                "arrival_time": {
+                                                                        "text": "7:13pm",
+                                                                        "time_zone": "Europe/Dublin",
+                                                                        "value": 1595873636
+                                                                },
+                                                                "departure_stop": {
+                                                                        "location": {
+                                                                                "lat": 53.345916,
+                                                                                "lng": -6.269237299999999
+                                                                        },
+                                                                        "name": "Ormond Quay Upper"
+                                                                },
+                                                                "departure_time": {
+                                                                        "text": "7:05pm",
+                                                                        "time_zone": "Europe/Dublin",
+                                                                        "value": 1595873117
+                                                                },
+                                                                "headsign": "Wilton Terrace",
+                                                                "line": {
+                                                                        "agencies": [
+                                                                                {
+                                                                                        "name": "Dublin Bus",
+                                                                                        "url": "http://www.transportforireland.ie/"
+                                                                                }
+                                                                        ],
+                                                                        "short_name": "37",
+                                                                        "vehicle": {
+                                                                                "icon": "//maps.gstatic.com/mapfiles/transit/iw2/6/bus2.png",
+                                                                                "name": "Bus",
+                                                                                "type": "BUS"
+                                                                        }
+                                                                },
+                                                                "num_stops": 3
+                                                        },
+                                                        "travel_mode": "TRANSIT"
+                                                },
+                                                {
+                                                        "distance": {
+                                                                "text": "0.2 km",
+                                                                "value": 191
+                                                        },
+                                                        "duration": {
+                                                                "text": "3 mins",
+                                                                "value": 151
+                                                        },
+                                                        "end_location": {
+                                                                "lat": 53.3391734,
+                                                                "lng": -6.2570406
+                                                        },
+                                                        "html_instructions": "Walk to 24 St Stephen's Green, Dublin 2, D02 EK82, Ireland",
+                                                        "polyline": {
+                                                                "points": "u}pdIxyde@\\NZPx@h@JFlA~@LHI`@GPUv@WS"
+                                                        },
+                                                        "start_location": {
+                                                                "lat": 53.33994870000001,
+                                                                "lng": -6.2558067
+                                                        },
+                                                        "steps": [
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "0.1 km",
+                                                                                "value": 133
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "2 mins",
+                                                                                "value": 103
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.33885189999999,
+                                                                                "lng": -6.256598299999999
+                                                                        },
+                                                                        "html_instructions": "Head <b>south</b> on <b>Kildare St</b>/<wbr/><b>R138</b> toward <b>St Stephen's Green</b>",
+                                                                        "polyline": {
+                                                                                "points": "u}pdIxyde@\\NZPx@h@JFlA~@LH"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.33994870000001,
+                                                                                "lng": -6.2558067
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                },
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "43 m",
+                                                                                "value": 43
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "1 min",
+                                                                                "value": 36
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3390488,
+                                                                                "lng": -6.2571435
+                                                                        },
+                                                                        "html_instructions": "Turn <b>right</b> onto <b>St Stephen's Green</b>/<wbr/><b>R138</b>",
+                                                                        "maneuver": "turn-right",
+                                                                        "polyline": {
+                                                                                "points": "yvpdIv~de@I`@GPUv@"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.33885189999999,
+                                                                                "lng": -6.256598299999999
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                },
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "15 m",
+                                                                                "value": 15
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "1 min",
+                                                                                "value": 12
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3391734,
+                                                                                "lng": -6.2570406
+                                                                        },
+                                                                        "html_instructions": "Turn <b>right</b><div style=\"font-size:0.9em\">Destination will be on the right</div>",
+                                                                        "maneuver": "turn-right",
+                                                                        "polyline": {
+                                                                                "points": "axpdIbbee@WS"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.3390488,
+                                                                                "lng": -6.2571435
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                }
+                                                        ],
+                                                        "travel_mode": "WALKING"
+                                                }
+                                        ],
+                                        "traffic_speed_entry": [],
+                                        "via_waypoint": []
+                                }
+                        ],
+                        "overview_polyline": {
+                                "points": "wewdI`nge@aAeBCJj@f@`Ax@b@LN?^Q|CuCJE^G|@`Az@l@VJvAr@fAt@lAx@t@^hAp@vB~@dCpAjBbAv@X~@TTHVBZBbBJl@H`DjAdCbA\\Lh@LTDV@zEG`EKhABRDv@^x@b@lAd@~@Vj@HjE`@p@BvA?bHUl@Eh@Ut@a@v@a@j@KjCTbE~@RDHCTBPHZTd@Vd@VbB~@pCtAb@NT@PFT?rCF`CHd@@RBx@HXD|@ZfBh@\\L`@PLFLIH?ZFJ@FCJULoBT{FDeDEeEEeAYkE[uEGBFCEu@]uEIgCUkHMqBC_AQaCk@eEqAgJ@A}@kGq@sDzBmA`@]n@u@zBqDNOJARLf@zBh@bBl@xARV`BvAjA{@PCt@Af@LV@LIVe@vBuOB@BQ^yCh@cE\\NtFhCbChAh@XBQCP\\NtAz@xAfALHI`@]hAWS"
+                        },
+                        "summary": "",
+                        "warnings": [
+                                "Walking directions are in beta. Use caution \u2013 This route may be missing sidewalks or pedestrian paths."
+                        ],
+                        "waypoint_order": []
+                },
+                {
+                        "bounds": {
+                                "northeast": {
+                                        "lat": 53.3766608,
+                                        "lng": -6.252044300000001
+                                },
+                                "southwest": {
+                                        "lat": 53.33885189999999,
+                                        "lng": -6.2691984
+                                }
+                        },
+                        "copyrights": "Map data \u00a92020",
+                        "legs": [
+                                {
+                                        "arrival_time": {
+                                                "text": "7:16pm",
+                                                "time_zone": "Europe/Dublin",
+                                                "value": 1595873784
+                                        },
+                                        "departure_time": {
+                                                "text": "6:42pm",
+                                                "time_zone": "Europe/Dublin",
+                                                "value": 1595871776
+                                        },
+                                        "distance": {
+                                                "text": "6.5 km",
+                                                "value": 6474
+                                        },
+                                        "duration": {
+                                                "text": "33 mins",
+                                                "value": 2008
+                                        },
+                                        "end_address": "24 St Stephen's Green, Dublin 2, D02 EK82, Ireland",
+                                        "end_location": {
+                                                "lat": 53.3391734,
+                                                "lng": -6.2570406
+                                        },
+                                        "start_address": "Botanic Gardens, Northside, Dublin, Co. Dublin, Ireland",
+                                        "start_location": {
+                                                "lat": 53.3719219,
+                                                "lng": -6.2691984
+                                        },
+                                        "steps": [
+                                                {
+                                                        "distance": {
+                                                                "text": "0.8 km",
+                                                                "value": 825
+                                                        },
+                                                        "duration": {
+                                                                "text": "11 mins",
+                                                                "value": 641
+                                                        },
+                                                        "end_location": {
+                                                                "lat": 53.3766529,
+                                                                "lng": -6.2647581
+                                                        },
+                                                        "html_instructions": "Walk to Stella Avenue, stop 40",
+                                                        "polyline": {
+                                                                "points": "oewdInmge@IIWUa@_@k@i@SOYUBw@@S@M@GBOBMBIDKDGLWLQXe@v@aB\\{@]a@CE[]_@_@IGKGMC[IO?I@m@?M?a@CWCa@EWCsA]YG{EeBoAa@{@Ye@O_@?}@N"
+                                                        },
+                                                        "start_location": {
+                                                                "lat": 53.3719219,
+                                                                "lng": -6.2691984
+                                                        },
+                                                        "steps": [
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "0.1 km",
+                                                                                "value": 100
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "1 min",
+                                                                                "value": 68
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3727117,
+                                                                                "lng": -6.2684795
+                                                                        },
+                                                                        "html_instructions": "Head <b>northeast</b> on <b>B\u00f3thar Gharraithe Na Lus</b> toward <b>Botanic Ave</b>",
+                                                                        "polyline": {
+                                                                                "points": "oewdInmge@IIWUa@_@k@i@SOYU"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.3719219,
+                                                                                "lng": -6.2691984
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                },
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "0.2 km",
+                                                                                "value": 169
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "2 mins",
+                                                                                "value": 118
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.37184,
+                                                                                "lng": -6.2665
+                                                                        },
+                                                                        "html_instructions": "Turn <b>right</b> onto <b>Botanic Ave</b>",
+                                                                        "maneuver": "turn-right",
+                                                                        "polyline": {
+                                                                                "points": "mjwdI~hge@Bw@@S@M@GBOBMBIDKDGLWLQXe@v@aB\\{@"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.3727117,
+                                                                                "lng": -6.2684795
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                },
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "0.6 km",
+                                                                                "value": 556
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "8 mins",
+                                                                                "value": 455
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3766529,
+                                                                                "lng": -6.2647581
+                                                                        },
+                                                                        "html_instructions": "Turn <b>left</b> onto <b>St Mobhi Rd</b>/<wbr/><b>R108</b><div style=\"font-size:0.9em\">Destination will be on the right</div>",
+                                                                        "maneuver": "turn-left",
+                                                                        "polyline": {
+                                                                                "points": "_ewdIr|fe@]a@CE[]_@_@IGKGMC[IO?I@m@?M?a@CWCa@EWCsA]YG{EeBoAa@{@Ye@O_@?}@N"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.37184,
+                                                                                "lng": -6.2665
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                }
+                                                        ],
+                                                        "travel_mode": "WALKING"
+                                                },
+                                                {
+                                                        "distance": {
+                                                                "text": "5.5 km",
+                                                                "value": 5458
+                                                        },
+                                                        "duration": {
+                                                                "text": "20 mins",
+                                                                "value": 1195
+                                                        },
+                                                        "end_location": {
+                                                                "lat": 53.3399308,
+                                                                "lng": -6.255723499999999
+                                                        },
+                                                        "html_instructions": "Bus towards Sandyford B.D.",
+                                                        "polyline": {
+                                                                "points": "ccxdIdqfe@@Pz@O@?^?`@{ChAaIPuAZ_Cp@cFvAwKVmBZwBn@iFj@wE^oCNeAVmBT}APeBTHRJXLJFPH~@f@j@`@DB\\Rp@b@RJ\\RXRPJF?D@PDPH\\NZLr@`@RJj@XLHb@TZNBB^RVLxAv@t@`@PJ^N^RLLRHFBVHFBx@ZDBPDJDP@N@^Ar@@^BD?\\Bf@H@?PBXHXLVLn@ZnAt@j@\\h@`@x@l@xAhAVRNLPLNH@@HFFBNHjAfAr@n@LLJJHHVTp@j@\\ZNLPLr@p@DDn@l@PNDBDDJFTPXR`@ZfA`ARVnBfBz@v@JJ|@t@JJfAbAlBhCRVV`@^f@FJ^f@@BJNHHX^X^x@z@HLBFn@n@d@d@@?`C|BvC~BBI^aBXe@t@y@aAmDbDeDd@m@CGvBkCNOb@i@b@g@NYFGDGDGFEHIDAXAdAc@t@UjC}@nCaAZMpBs@|C_A^MRIZKCMFCjEqAzBmA`@]n@u@zBqDNOJARLbAdEz@rBb@j@pAbAjA{@PCt@Af@LV@ZWHWvBsO?AB@BQXwBDa@h@cE\\NjBz@hClAb@R~At@h@XBQ"
+                                                        },
+                                                        "start_location": {
+                                                                "lat": 53.3766608,
+                                                                "lng": -6.264669
+                                                        },
+                                                        "transit_details": {
+                                                                "arrival_stop": {
+                                                                        "location": {
+                                                                                "lat": 53.3399308,
+                                                                                "lng": -6.255723499999999
+                                                                        },
+                                                                        "name": "Kildare Street, stop 747"
+                                                                },
+                                                                "arrival_time": {
+                                                                        "text": "7:13pm",
+                                                                        "time_zone": "Europe/Dublin",
+                                                                        "value": 1595873612
+                                                                },
+                                                                "departure_stop": {
+                                                                        "location": {
+                                                                                "lat": 53.3766608,
+                                                                                "lng": -6.264669
+                                                                        },
+                                                                        "name": "Stella Avenue, stop 40"
+                                                                },
+                                                                "departure_time": {
+                                                                        "text": "6:53pm",
+                                                                        "time_zone": "Europe/Dublin",
+                                                                        "value": 1595872417
+                                                                },
+                                                                "headsign": "Sandyford B.D.",
+                                                                "line": {
+                                                                        "agencies": [
+                                                                                {
+                                                                                        "name": "Dublin Bus",
+                                                                                        "url": "http://www.transportforireland.ie/"
+                                                                                }
+                                                                        ],
+                                                                        "short_name": "11",
+                                                                        "vehicle": {
+                                                                                "icon": "//maps.gstatic.com/mapfiles/transit/iw2/6/bus2.png",
+                                                                                "name": "Bus",
+                                                                                "type": "BUS"
+                                                                        }
+                                                                },
+                                                                "num_stops": 16
+                                                        },
+                                                        "travel_mode": "TRANSIT"
+                                                },
+                                                {
+                                                        "distance": {
+                                                                "text": "0.2 km",
+                                                                "value": 191
+                                                        },
+                                                        "duration": {
+                                                                "text": "3 mins",
+                                                                "value": 151
+                                                        },
+                                                        "end_location": {
+                                                                "lat": 53.3391734,
+                                                                "lng": -6.2570406
+                                                        },
+                                                        "html_instructions": "Walk to 24 St Stephen's Green, Dublin 2, D02 EK82, Ireland",
+                                                        "polyline": {
+                                                                "points": "u}pdIxyde@\\NZPx@h@JFlA~@LHI`@GPUv@WS"
+                                                        },
+                                                        "start_location": {
+                                                                "lat": 53.33994870000001,
+                                                                "lng": -6.2558067
+                                                        },
+                                                        "steps": [
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "0.1 km",
+                                                                                "value": 133
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "2 mins",
+                                                                                "value": 103
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.33885189999999,
+                                                                                "lng": -6.256598299999999
+                                                                        },
+                                                                        "html_instructions": "Head <b>south</b> on <b>Kildare St</b>/<wbr/><b>R138</b> toward <b>St Stephen's Green</b>",
+                                                                        "polyline": {
+                                                                                "points": "u}pdIxyde@\\NZPx@h@JFlA~@LH"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.33994870000001,
+                                                                                "lng": -6.2558067
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                },
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "43 m",
+                                                                                "value": 43
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "1 min",
+                                                                                "value": 36
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3390488,
+                                                                                "lng": -6.2571435
+                                                                        },
+                                                                        "html_instructions": "Turn <b>right</b> onto <b>St Stephen's Green</b>/<wbr/><b>R138</b>",
+                                                                        "maneuver": "turn-right",
+                                                                        "polyline": {
+                                                                                "points": "yvpdIv~de@I`@GPUv@"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.33885189999999,
+                                                                                "lng": -6.256598299999999
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                },
+                                                                {
+                                                                        "distance": {
+                                                                                "text": "15 m",
+                                                                                "value": 15
+                                                                        },
+                                                                        "duration": {
+                                                                                "text": "1 min",
+                                                                                "value": 12
+                                                                        },
+                                                                        "end_location": {
+                                                                                "lat": 53.3391734,
+                                                                                "lng": -6.2570406
+                                                                        },
+                                                                        "html_instructions": "Turn <b>right</b><div style=\"font-size:0.9em\">Destination will be on the right</div>",
+                                                                        "maneuver": "turn-right",
+                                                                        "polyline": {
+                                                                                "points": "axpdIbbee@WS"
+                                                                        },
+                                                                        "start_location": {
+                                                                                "lat": 53.3390488,
+                                                                                "lng": -6.2571435
+                                                                        },
+                                                                        "travel_mode": "WALKING"
+                                                                }
+                                                        ],
+                                                        "travel_mode": "WALKING"
+                                                }
+                                        ],
+                                        "traffic_speed_entry": [],
+                                        "via_waypoint": []
+                                }
+                        ],
+                        "overview_polyline": {
+                                "points": "oewdInmge@oBiBm@e@DkAJs@\\u@f@w@tA}Ca@g@{@}@UOi@MuA@sBQmBe@kHgCaBi@_@?}@NAQ@P|@O^?`@{CzAwK|DiZvCiUf@sDf@cEnAj@pAp@p@d@`CvAj@^L@|Al@`CpA|GpD~@b@LLRH^L`A^VH\\FbB@d@BdALRBr@VfAh@zBrAtElDr@f@PJNHjAfA`A|@TTvBjBzBrBh@`@n@d@hB|ARVnBfBfAbAhA`AfAbAlBhCRVv@hAt@fAb@h@rAzALTtAtAbC|BvC~BBI^aBXe@t@y@aAmDbDeDd@m@CGvBkCr@y@b@g@NYLOLMNKXAdAc@`EsAjDoAnGsBr@WZKCMrEuAzBmA`@]n@u@zBqDNOJARLbAdEz@rBb@j@pAbAjA{@PCt@Af@LV@ZWHWvBuOB@BQ^yCh@cE\\NtFhCbChAh@XBQCP\\NtAz@xAfALHI`@]hAWS"
+                        },
+                        "summary": "",
+                        "warnings": [
+                                "Walking directions are in beta. Use caution \u2013 This route may be missing sidewalks or pedestrian paths."
+                        ],
+                        "waypoint_order": []
+                }
+        ],
+        "status": "OK"
+}
