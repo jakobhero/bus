@@ -18,10 +18,14 @@ import Tooltip from "@material-ui/core/Tooltip";
 import Typography from '@material-ui/core/Typography';
 import CardContent from '@material-ui/core/CardContent';
 import { findPoly } from "./components/polylines.js";
+
+import { getGeocode, getLatLng } from "use-places-autocomplete";
+import { TwitterTimelineEmbed } from "react-twitter-embed";
 import ReactWeather from "react-open-weather";
 //Optional include of the default css styles
 import "react-open-weather/lib/css/ReactWeather.css";
 import {Marker, InfoWindow} from "@react-google-maps/api";
+
 
 const { TabPane } = Tabs;
 let cookies = getStopNames();
@@ -119,20 +123,17 @@ const App = () => {
       setStopsForMap([
         { stopid: source.stopID, lat: source.lat, lng: source.lng },
       ]);
-      //marker doesnt show name
     } else {
       // otherwise - directions
       clearMap();
       axios
         .get(
-          "http://localhost/directions?dep=" +
+          "http://localhost/api/directions?dep=" +
             source.lat +
             "," +
             source.lng +
             "&arr=" +
-            dest.lat +
-            "," +
-            dest.lng +
+            dest.val +
             "&time=" +
             Math.round(time / 1000)
         )
@@ -317,6 +318,13 @@ const App = () => {
         </TabPane>
         <TabPane tab="Real Time" key="realTime">
           <RealTimeInfo realTimeData={realTimeData}></RealTimeInfo>
+        </TabPane>
+        <TabPane tab="News" key="news">
+          <TwitterTimelineEmbed
+            sourceType="profile"
+            screenName="dublinbusnews"
+            options={{ height: 500 }}
+          />
         </TabPane>
       </Tabs>
     </div>

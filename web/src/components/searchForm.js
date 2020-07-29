@@ -8,6 +8,8 @@ import "../css/search.css";
 
 import { Button } from "antd";
 
+import { getGeocode, getLatLng } from "use-places-autocomplete";
+
 const DatePickerFunc = ({ handleChange }) => {
   const [startDate, setStartDate] = useState(new Date());
 
@@ -47,18 +49,64 @@ const SearchForm = ({ handleSubmitApp }) => {
   };
 
   function handleSubmit(event) {
-    console.log(fieldsValues);
-    if (fieldsValues.source !== "") {
-      console.log(fieldsValues);
-      event.preventDefault();
-      handleSubmitApp(
-        fieldsValues.source,
-        fieldsValues.destination,
-        fieldsValues.time
-      );
+
+    event.preventDefault();
+    let newFields = { ...fieldsValues };
+    if (newFields.source.val) {
+      getGeocode({ address: newFields.source.val })
+        .then((results) => getLatLng(results[0]))
+        .then((coords) => {
+          let lat = coords.lat;
+          let lng = coords.lng;
+          let val = newFields.source.val;
+          newFields["source"] = { val: val, lat: lat, lng: lng };
+          console.log(newFields);
+          return newFields;
+        })
+        .then((newFields) => {
+          if (newFields.destination.val) {
+            getGeocode({ address: newFields.destination.val })
+              .then((results) => getLatLng(results[0]))
+              .then((coords) => {
+                let lat = coords.lat;
+                let lng = coords.lng;
+                let val = newFields.destination.val;
+                newFields["destination"] = { val: val, lat: lat, lng: lng };
+                return newFields;
+              })
+              .then((newFields) => {
+                console.log(newFields);
+                handleSubmitApp(
+                  newFields.source,
+                  newFields.destination,
+                  newFields.time
+                );
+              });
+          } else {
+            handleSubmitApp(
+              newFields.source,
+              newFields.destination,
+              newFields.time
+            );
+          }
+        });
+
     } else {
-      alert("Please enter a source!");
+      handleSubmitApp(newFields.source, newFields.destination, newFields.time);
     }
+
+    // setFieldsValues(newFields);
+    // console.log(newFields);
+    // if (fieldsValues.source !== "") {
+    //   event.preventDefault();
+    //   handleSubmitApp(
+    //     fieldsValues.source,
+    //     fieldsValues.destination,
+    //     fieldsValues.time
+    //   );
+    // } else {
+    //   alert("Please enter a source!");
+    // }
   }
 
   const icon = (
