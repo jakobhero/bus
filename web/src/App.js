@@ -16,7 +16,8 @@ import DirectionsBusIcon from "@material-ui/icons/DirectionsBus";
 import Tooltip from "@material-ui/core/Tooltip";
 
 import { findPoly } from "./components/polylines.js";
-
+import { getGeocode, getLatLng } from "use-places-autocomplete";
+import { TwitterTimelineEmbed } from "react-twitter-embed";
 const { TabPane } = Tabs;
 
 const App = () => {
@@ -105,20 +106,15 @@ const App = () => {
           fullname: source.fullname,
         },
       ]);
-      //marker doesnt show name
     } else {
       // otherwise - directions
       clearMap();
       axios
         .get(
           "http://localhost/api/directions?dep=" +
-            source.lat +
-            "," +
-            source.lng +
+            source.val +
             "&arr=" +
-            dest.lat +
-            "," +
-            dest.lng +
+            dest.val +
             "&time=" +
             Math.round(time / 1000)
         )
@@ -219,6 +215,13 @@ const App = () => {
         </TabPane>
         <TabPane tab="Real Time" key="realTime">
           <RealTimeInfo realTimeData={realTimeData}></RealTimeInfo>
+        </TabPane>
+        <TabPane tab="News" key="news">
+          <TwitterTimelineEmbed
+            sourceType="profile"
+            screenName="dublinbusnews"
+            options={{ height: 500 }}
+          />
         </TabPane>
       </Tabs>
     </div>

@@ -28,9 +28,11 @@
     "react-open-weather": "^0.5.2",
     "react-scripts": "3.4.1",
     "react-switch": "^5.0.1",
+    "react-twitter-embed": "^3.0.3",
     "semantic-ui-react": "^0.88.2",
     "use-places-autocomplete": "^1.3.7"
   },
+  "homepage": "./",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
