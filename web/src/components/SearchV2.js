@@ -30,7 +30,7 @@ const PlacesAutocomplete = ({ id, handleChange, placeholder, route }) => {
   });
   function searchLocalStop(query) {
     axios
-      .get("http://localhost/stops?substring=" + query)
+      .get("http://localhost/api/stops?substring=" + query)
       .then((res) => {
         if (res.statusText === "OK") {
           setStopData(res.data.stops);
