@@ -30,6 +30,7 @@ const Favourites = ({
 }) => {
   function handleClick(stopName) {
     console.log(stopName);
+    // transfer to the real-time tab once click the stop id in the favourites tab
     var stopid = getIdByName(String(stopName).trim());
     setRealTime(stopid.trim());
   }
@@ -41,6 +42,8 @@ const Favourites = ({
   }
 
   function handleClickAdd(Val) {
+    // transfer to the map tab, shows the address and near by bus stops
+    // once click the address in the favourites tab
     let newFields = { ...state };
     let test = {};
     test["val"] = getAddressByVal(Val);
