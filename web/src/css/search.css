@@ -1,13 +1,11 @@
 @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
 .search {
   position: relative;
-  width: 600px;
+  width: 60vw;
 }
 
-.mainForm {
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
+#borderW {
+  width: inherit;
 }
 
 .search .directionsButton {
@@ -22,17 +20,17 @@ table {
   margin-left: auto;
   margin-right: auto;
 }
-
-@media only screen and (max-width: 600px) {
+/* 
+@media only screen and (max-width: 500px) {
   .mainForm {
-    width: 80%;
+    width: 70vw;
     margin-left: auto;
     margin-right: auto;
   }
   .search {
-    width: 100%;
+    width: 70vw;
   }
-}
+} */
 
 #borderW {
   background-color: aqua;
