@@ -7,6 +7,7 @@ import { HistoryOutlined } from "@ant-design/icons";
 import {setCookie, delCookie, getStopNums} from "./cookies";
 
 const RealTimeInfo = ({ realTimeData }) => {
+  // generate content of real-time tab
   const [visible, setVisible] = useState(false);
   const [state, setState] = useState({});
   const [alertTime, setAlertTime] = useState(1);
@@ -16,6 +17,7 @@ const RealTimeInfo = ({ realTimeData }) => {
   const flgIcon = (Object.values(test).includes(parseInt(stopid)));
   const [icoStatus, seticoStatus] = useState(flgIcon);
   const icoStatusData = (e) => {
+    // adding/deleting cookies
     seticoStatus(!icoStatus);
 
     if ((flgIcon) ){
