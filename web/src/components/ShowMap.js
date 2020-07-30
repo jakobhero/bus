@@ -64,7 +64,7 @@ function ShowMap({
   }, []);
 
   function icoStatusData() {
-    console.log("star clicked");
+    // adding/deleting stop to/from cookies
     if (Object.values(getStopNums()).includes(parseInt(selected.stopid))) {
       console.log("deleteing");
       delCookie(selected.stopid);
@@ -77,6 +77,7 @@ function ShowMap({
     }
   }
   const saveAddOnMap = (Val) => {
+    // save address via map
     console.log("address icon clicked");
     console.log("adding");
     saveAddress(Val, address.val);
