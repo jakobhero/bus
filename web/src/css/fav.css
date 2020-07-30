@@ -1,0 +1,21 @@
+.stopsCard {
+  position: relative;
+}
+
+.realTimeIcon {
+  cursor: pointer;
+  margin-bottom: 22px;
+  text-align: center;
+  position: absolute;
+  right: 10px;
+  bottom: 0;
+}
+
+.delete {
+  cursor: pointer;
+  margin-bottom: 22px;
+  text-align: center;
+  position: absolute;
+  left: 10px;
+  bottom: 0;
+}

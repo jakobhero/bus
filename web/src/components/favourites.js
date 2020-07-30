@@ -1,9 +1,24 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
 import CardContent from "@material-ui/core/CardContent";
-import { getStopNames, getIdByName, getAddressByVal } from "./cookies";
+import DeleteIcon from "@material-ui/icons/Delete";
+import { HistoryOutlined } from "@ant-design/icons";
+import {
+  getStopNames,
+  getIdByName,
+  getAddressByVal,
+  delCookie,
+} from "./cookies";
 import axios from "axios";
 import { Card } from "antd";
+import "../css/fav.css";
+import { red } from "@material-ui/core/colors";
+
+const gridStyle = {
+  width: "25%",
+  height: "150px",
+  textAlign: "center",
+};
 
 const Favourites = ({
   setRealTime,
@@ -14,10 +29,15 @@ const Favourites = ({
   state,
 }) => {
   function handleClick(stopName) {
+    console.log(stopName);
     var stopid = getIdByName(String(stopName).trim());
     setRealTime(stopid.trim());
-    console.log(stopid);
-    console.log(getStopNames());
+  }
+
+  function handleDelete(stopName) {
+    console.log(stopName);
+    var stopid = getIdByName(String(stopName).trim());
+    delCookie(stopid.trim());
   }
 
   function handleClickAdd(Val) {
@@ -51,28 +71,46 @@ const Favourites = ({
 
   return (
     <div>
-      Favorite Locations:
       <div>
-        {getStopNames().map((item) => (
-          <Card hoverable onClick={() => handleClick(item)}>
-            <CardContent>
-              <Typography variant="h5" component="h2">
-                {item}
-              </Typography>
-            </CardContent>
-          </Card>
-        ))}
+        <Card title="Favorite Stops" headStyle={{ backgroundColor: "#1b55db" }}>
+          {getStopNames().map((item) => (
+            <Card.Grid style={gridStyle} hoverable className="stopsCard">
+              <CardContent>
+                <Typography variant="h5" component="h2">
+                  {item}
+                </Typography>
+                <HistoryOutlined
+                  onClick={() => handleClick(item)}
+                  className="realTimeIcon"
+                  style={{ fontSize: "16px" }}
+                />
+                <DeleteIcon
+                  onClick={() => handleDelete(item)}
+                  className="delete"
+                />
+              </CardContent>
+            </Card.Grid>
+          ))}
+        </Card>
       </div>
-      Home Address:
-      <Card hoverable onClick={() => handleClickAdd("Home")}>
+      <Card
+        hoverable
+        onClick={() => handleClickAdd("Home")}
+        title="Home Address"
+        headStyle={{ backgroundColor: "#fea100" }}
+      >
         <CardContent>
           <Typography variant="h5" component="h2">
             {getAddressByVal("Home")}
           </Typography>
         </CardContent>
       </Card>
-      Work Address:
-      <Card hoverable onClick={() => handleClickAdd("Work")}>
+      <Card
+        hoverable
+        onClick={() => handleClickAdd("Work")}
+        title="Work Address"
+        headStyle={{ backgroundColor: "#fea100" }}
+      >
         <CardContent>
           <Typography variant="h5" component="h2">
             {getAddressByVal("Work")}
