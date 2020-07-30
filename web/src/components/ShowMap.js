@@ -159,8 +159,8 @@ function ShowMap({
         onLoad={onMapLoad}
       >
         <Locate panTo={panTo} />
-        <div className="switch1 mapUI">
-          <Tooltip className="tooltip" title="Sort by bus changes">
+        <Tooltip className="tooltip" title="Tourist mode">
+          <div className="switch1 mapUI">
             <Switch
               width={35}
               height={22}
@@ -168,8 +168,9 @@ function ShowMap({
               checked={touristModeBool}
               className="Switch"
             />
-          </Tooltip>
-        </div>
+          </div>
+        </Tooltip>
+
         {otherRoute.length > 1 && (
           <div className="switch2 mapUI">
             <Replay
@@ -213,14 +214,16 @@ function ShowMap({
               <h4>
                 <p>{address.val}</p>
               </h4>
-              <Button style={{ margin: 10 }} onClick={showModal}>
-                <WeatherIcon
-                  name="owm"
-                  iconId="200"
-                  flip="horizontal"
-                  rotate="90"
-                />
-              </Button>
+              <Tooltip className="tooltip" title="Show Weather">
+                <Button style={{ margin: 10 }} onClick={showModal}>
+                  <WeatherIcon
+                    name="owm"
+                    iconId="200"
+                    flip="horizontal"
+                    rotate="90"
+                  />
+                </Button>
+              </Tooltip>
               <Modal
                 title="Today's Weather"
                 visible={visible}
@@ -235,31 +238,34 @@ function ShowMap({
                   lon={address.lng}
                 />
               </Modal>
-              <Button
-                style={{ margin: 10 }}
-                onClick={() => saveAddOnMap("Home")}
-              >
-                <span
-                  className={
-                    getAddressByVal("Home") === address.val
-                      ? "fa fa-home"
-                      : "fa fa-hospital-o"
-                  }
-                ></span>
-              </Button>
-
-              <Button
-                style={{ margin: 10 }}
-                onClick={() => saveAddOnMap("Work")}
-              >
-                <span
-                  className={
-                    getAddressByVal("Work") === address.val
-                      ? "fa fa-file"
-                      : "fa fa-file-o"
-                  }
-                ></span>
-              </Button>
+              <Tooltip className="tooltip" title="Set Home">
+                <Button
+                  style={{ margin: 10 }}
+                  onClick={() => saveAddOnMap("Home")}
+                >
+                  <span
+                    className={
+                      getAddressByVal("Home") === address.val
+                        ? "fa fa-home"
+                        : "fa fa-hospital-o"
+                    }
+                  ></span>
+                </Button>
+              </Tooltip>
+              <Tooltip className="tooltip" title="Set Work">
+                <Button
+                  style={{ margin: 10 }}
+                  onClick={() => saveAddOnMap("Work")}
+                >
+                  <span
+                    className={
+                      getAddressByVal("Work") === address.val
+                        ? "fa fa-file"
+                        : "fa fa-file-o"
+                    }
+                  ></span>
+                </Button>
+              </Tooltip>
             </div>
           </InfoWindow>
         ) : null}

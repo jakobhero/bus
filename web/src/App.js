@@ -3,24 +3,18 @@ import React, { useState } from "react";
 import SearchForm from "./components/searchForm";
 
 import ShowMap from "./components/ShowMap";
+import Favourites from "./components/favourites";
 import RealTimeInfo from "./components/RealTime";
 import AllRoutes from "./components/allRoutes";
 
-import { Tabs, Button, Card } from "antd";
+import { Tabs, Button } from "antd";
 import "antd/dist/antd.css";
-import {
-  getStopNames,
-  getIdByName,
-  getAddressByVal,
-} from "./components/cookies";
 import axios from "axios";
 
 import AccessTimeIcon from "@material-ui/icons/AccessTime";
 import SortIcon from "@material-ui/icons/Sort";
 import DirectionsBusIcon from "@material-ui/icons/DirectionsBus";
 import Tooltip from "@material-ui/core/Tooltip";
-import Typography from "@material-ui/core/Typography";
-import CardContent from "@material-ui/core/CardContent";
 import { findPoly } from "./components/polylines.js";
 
 import { TwitterTimelineEmbed } from "react-twitter-embed";
@@ -142,42 +136,6 @@ const App = () => {
     setActiveKey(key);
   }
 
-  function handleClick(stopName) {
-    var stopid = getIdByName(String(stopName).trim());
-    setRealTime(stopid.trim());
-    console.log(stopid);
-  }
-
-  function handleClickAdd(Val) {
-    let newFields = { ...state };
-    let test = {};
-    test["val"] = getAddressByVal(Val);
-    test["lat"] = parseFloat(getAddressByVal(Val + "Lat"));
-    test["lng"] = parseFloat(getAddressByVal(Val + "Lng"));
-    newFields["source"] = test;
-    newFields["destination"] = "";
-    newFields["time"] = "";
-    // if source is a place and no destination
-    clearMap();
-    axios
-      .get(
-        "http://localhost/api/nearestneighbor?lat=" +
-          getAddressByVal(Val + "Lat") +
-          "&lng=" +
-          getAddressByVal(Val + "Lng")
-      )
-      .then((res) => {
-        console.log(res);
-        if (res.statusText === "OK") {
-          setStopsForMap(res.data.stops);
-          setActiveKey("map");
-        }
-      })
-      .catch(console.log);
-    setState(newFields);
-    console.log("new field for fav", newFields);
-  }
-
   const sortSteps = () => {
     // Sort route alternatives by number of steps(bus changeovers)
     const tripTimesCopy = [...tripTimes];
@@ -249,36 +207,14 @@ const App = () => {
         </TabPane>
 
         <TabPane tab="Favourites" key="favourites">
-          Favorite Locations:
-          <div>
-            {getStopNames()
-              .split(";")
-              .map((item) => (
-                <Card hoverable onClick={() => handleClick(item)}>
-                  <CardContent>
-                    <Typography variant="h5" component="h2">
-                      {item}
-                    </Typography>
-                  </CardContent>
-                </Card>
-              ))}
-          </div>
-          Home Address:
-          <Card hoverable onClick={() => handleClickAdd("Home")}>
-            <CardContent>
-              <Typography variant="h5" component="h2">
-                {getAddressByVal("Home")}
-              </Typography>
-            </CardContent>
-          </Card>
-          Work Address:
-          <Card hoverable onClick={() => handleClickAdd("Work")}>
-            <CardContent>
-              <Typography variant="h5" component="h2">
-                {getAddressByVal("Work")}
-              </Typography>
-            </CardContent>
-          </Card>
+          <Favourites
+            setRealTime={setRealTime}
+            clearMap={clearMap}
+            setStopsForMap={setStopsForMap}
+            setActiveKey={setActiveKey}
+            setState={setState}
+            state={state}
+          />
         </TabPane>
         <TabPane tab="Real Time" key="realTime">
           <RealTimeInfo realTimeData={realTimeData}></RealTimeInfo>
