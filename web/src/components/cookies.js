@@ -27,13 +27,12 @@ function saveAddress(name, value) {
 }
 
 function getStopNames() {
-  var favStops = "";
+  let favStops = [];
   var storedCookies = document.cookie.split(";");
   for (let i = 0; i < storedCookies.length; i++) {
     var stopInfo = storedCookies[i].split("=");
     if (!isNaN(stopInfo[0])) {
-      favStops += stopInfo[1];
-      favStops += "; ";
+      favStops.push(stopInfo[1]);
     }
   }
   return favStops;

@@ -6,6 +6,7 @@ import {
   ComboboxPopover,
   ComboboxList,
   ComboboxOption,
+  ComboboxOptionText,
 } from "@reach/combobox";
 import axios from "axios";
 import "@reach/combobox/styles.css";
@@ -124,15 +125,43 @@ const PlacesAutocomplete = ({ id, handleChange, placeholder, route }) => {
                 <ComboboxOption
                   key={key}
                   value={`${fullname} (${stop_id}), Bus Stop`}
-                />
+                >
+                  <img
+                    src="./bus.svg"
+                    alt="bus"
+                    width="20"
+                    height="20"
+                    style={{ marginRight: "10px" }}
+                  />
+                  <ComboboxOptionText />
+                </ComboboxOption>
               ))}
+
             {routeData.length > 0 &&
               routeData.map(({ route_id, key }) => (
-                <ComboboxOption key={key} value={`${route_id}, Bus Route`} />
+                <ComboboxOption key={key} value={`${route_id}, Bus Route`}>
+                  <img
+                    src="./route.jpg"
+                    alt="route"
+                    width="20"
+                    height="20"
+                    style={{ marginRight: "10px" }}
+                  />
+                  <ComboboxOptionText />
+                </ComboboxOption>
               ))}
             {status === "OK" &&
               data.map(({ id, description }) => (
-                <ComboboxOption key={id} value={description} />
+                <ComboboxOption key={id} value={description}>
+                  <img
+                    src="./location.png"
+                    alt="route"
+                    width="20"
+                    height="20"
+                    style={{ marginRight: "10px" }}
+                  />
+                  <ComboboxOptionText />
+                </ComboboxOption>
               ))}
           </ComboboxList>
         </ComboboxPopover>
