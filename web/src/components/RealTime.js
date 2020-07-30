@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { Table, Modal, Radio } from "antd";
 import "antd/dist/antd.css";
 import { HistoryOutlined } from "@ant-design/icons";
-import {setCookie, delCookie, getStopNums} from "./cookies";
+import { setCookie, delCookie, getStopNums } from "./cookies";
 
 const RealTimeInfo = ({ realTimeData }) => {
   const [visible, setVisible] = useState(false);
@@ -13,17 +13,16 @@ const RealTimeInfo = ({ realTimeData }) => {
   const stopid = realTimeData.stopid;
   realTimeData = realTimeData.data;
   let test = getStopNums();
-  const flgIcon = (Object.values(test).includes(parseInt(stopid)));
+  const flgIcon = Object.values(test).includes(parseInt(stopid));
   const [icoStatus, seticoStatus] = useState(flgIcon);
   const icoStatusData = (e) => {
     seticoStatus(!icoStatus);
 
-    if ((flgIcon) ){
+    if (flgIcon) {
       delCookie(stopid);
       seticoStatus(!icoStatus);
-    }
-    else{
-      setCookie(stopid,stopid);
+    } else {
+      setCookie(stopid, stopid);
       seticoStatus(!icoStatus);
     }
   };
@@ -89,8 +88,13 @@ const RealTimeInfo = ({ realTimeData }) => {
   return (
     <div className="realTime">
       <h2>{realTimeData ? `Stop ${stopid}` : "Select a bus stop"}</h2>
-      <span className={( flgIcon) ? "fa fa-star" : "fa fa-star-o"} onClick={(e) => icoStatusData()}></span>
-      {console.log(icoStatus,  flgIcon)}
+      {realTimeData && (
+        <span
+          className={flgIcon ? "fa fa-star" : "fa fa-star-o"}
+          onClick={(e) => icoStatusData()}
+        ></span>
+      )}
+      {console.log(icoStatus, flgIcon)}
       <Table
         dataSource={realTimeData}
         columns={columns}
