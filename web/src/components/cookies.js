@@ -1,5 +1,7 @@
 import axios from "axios";
 function setCookie(name, value) {
+  // this function used to save stopid into cookies
+  // the cookies format as stopid=stop fullname 
   var days = 1;
   var exp = new Date();
   // cookies will last for a day
@@ -19,14 +21,16 @@ function setCookie(name, value) {
 }
 
 function saveAddress(name, value) {
+  // this function used to save address into cookies
+  // the cookies format as name=value
   var days = 1;
   var exp = new Date();
-  // cookies will last for a day
   exp.setTime(exp.getTime() + days * 24 * 60 * 60 * 1000);
   document.cookie = `${name}=${value};expires=${exp.toGMTString()}`;
 }
 
 function getStopNames() {
+  // return all saved bus stop name
   let favStops = [];
   var storedCookies = document.cookie.split(";");
   for (let i = 0; i < storedCookies.length; i++) {
@@ -39,6 +43,7 @@ function getStopNames() {
 }
 
 function getStopNums() {
+  // return saved stop id
   var storedCookies = document.cookie.split(";");
   var stopNums = new Array();
   for (let i = 0; i < storedCookies.length; i++) {
@@ -51,6 +56,7 @@ function getStopNums() {
 }
 
 function getAddressByVal(Val) {
+  // return the address according to cookies'key 
   var storedCookies = document.cookie.split(";");
   for (let i = 0; i < storedCookies.length; i++) {
     var stopInfo = storedCookies[i].split("=");
@@ -62,6 +68,7 @@ function getAddressByVal(Val) {
 }
 
 function getIdByName(name) {
+  // return stop id according to stop fullname
   var storedCookies = document.cookie.split(";");
   for (let i = 0; i < storedCookies.length; i++) {
     var stopInfo = storedCookies[i].split("=");
@@ -73,6 +80,7 @@ function getIdByName(name) {
 }
 
 function delCookie(name) {
+  // remove cookies
   var exp = new Date();
   exp.setTime(exp.getTime() - 1);
   document.cookie = `${name}=delete;expires=${exp.toGMTString()}`;
