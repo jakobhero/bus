@@ -12,12 +12,12 @@ import {
 import axios from "axios";
 import { Card } from "antd";
 import "../css/fav.css";
-import { red } from "@material-ui/core/colors";
 
 const gridStyle = {
   width: "25%",
   height: "150px",
   textAlign: "center",
+  minWidth: "150px",
 };
 
 const Favourites = ({
@@ -76,9 +76,7 @@ const Favourites = ({
           {getStopNames().map((item) => (
             <Card.Grid style={gridStyle} hoverable className="stopsCard">
               <CardContent>
-                <Typography variant="h5" component="h2">
-                  {item}
-                </Typography>
+                <Typography>{item}</Typography>
                 <HistoryOutlined
                   onClick={() => handleClick(item)}
                   className="realTimeIcon"

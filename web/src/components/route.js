@@ -13,6 +13,12 @@ import "antd/dist/antd.css";
 
 import { findPoly } from "./polylines.js";
 
+const gridStyle = {
+  width: "25%",
+  textAlign: "center",
+  minWidth: "250px",
+};
+
 const Route = ({ tripTime, setDirections }) => {
   const [showMore, setShowMore] = useState(false);
   let startTime = new Date(tripTime.start.time * 1000);
@@ -40,7 +46,7 @@ const Route = ({ tripTime, setDirections }) => {
     setDirections(findPoly(tripTime));
   };
   return (
-    <Card onClick={handleClick} hoverable>
+    <Card.Grid style={gridStyle} onClick={handleClick} hoverable>
       <span>
         {departTime}
         <span> - </span>
@@ -71,6 +77,8 @@ const Route = ({ tripTime, setDirections }) => {
       </div>
       {showMore && (
         <div>
+          <br />
+          <hr />
           <Timeline mode={"left"}>
             {tripTime.steps.map((step, i) => (
               <Timeline.Item
@@ -131,7 +139,7 @@ const Route = ({ tripTime, setDirections }) => {
           </Timeline>
         </div>
       )}
-    </Card>
+    </Card.Grid>
   );
 };
 
