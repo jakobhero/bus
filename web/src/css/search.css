@@ -20,17 +20,6 @@ table {
   margin-left: auto;
   margin-right: auto;
 }
-/* 
-@media only screen and (max-width: 500px) {
-  .mainForm {
-    width: 70vw;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .search {
-    width: 70vw;
-  }
-} */
 
 #borderW {
   background-color: aqua;
