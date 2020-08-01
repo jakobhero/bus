@@ -19,3 +19,7 @@
   left: 10px;
   bottom: 0;
 }
+
+thead[class*="ant-table-thead"] th {
+  background-color: #fea100 !important;
+}

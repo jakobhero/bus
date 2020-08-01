@@ -16,7 +16,7 @@ import SortIcon from "@material-ui/icons/Sort";
 import DirectionsBusIcon from "@material-ui/icons/DirectionsBus";
 import Tooltip from "@material-ui/core/Tooltip";
 import { findPoly } from "./components/polylines.js";
-import { getStopNames } from "./components/cookies";
+import { getStopNames, getStopNums } from "./components/cookies";
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 
 const { TabPane } = Tabs;
@@ -36,7 +36,10 @@ const App = () => {
   const [sortStepsNum, setSortStepsNum] = useState(1);
   const [sortTimeNum, setSortTimeNum] = useState(1);
 
-  const [favStops, setFavStops] = useState(getStopNames());
+  const [favStops, setFavStops] = useState({
+    fullname: getStopNames(),
+    stopsids: getStopNums(),
+  });
 
   const getRealTimeData = (stop, fullname) => {
     axios
@@ -225,11 +228,13 @@ const App = () => {
           ></RealTimeInfo>
         </TabPane>
         <TabPane tab="News" key="news">
-          <TwitterTimelineEmbed
-            sourceType="profile"
-            screenName="dublinbusnews"
-            options={{ height: 500 }}
-          />
+          <div className="news">
+            <TwitterTimelineEmbed
+              sourceType="profile"
+              screenName="dublinbusnews"
+              options={{ height: "30vw" }}
+            />
+          </div>
         </TabPane>
       </Tabs>
     </div>
