@@ -16,7 +16,7 @@ import SortIcon from "@material-ui/icons/Sort";
 import DirectionsBusIcon from "@material-ui/icons/DirectionsBus";
 import Tooltip from "@material-ui/core/Tooltip";
 import { findPoly } from "./components/polylines.js";
-
+import { getStopNames } from "./components/cookies";
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 
 const { TabPane } = Tabs;
@@ -36,18 +36,22 @@ const App = () => {
   const [sortStepsNum, setSortStepsNum] = useState(1);
   const [sortTimeNum, setSortTimeNum] = useState(1);
 
-  const getRealTimeData = (stop) => {
+  const [favStops, setFavStops] = useState(getStopNames());
+
+  const getRealTimeData = (stop, fullname) => {
     axios
       .get("/api/realtime?stopid=" + stop)
       .then((res) => {
         res["stopid"] = stop;
+        res["fullname"] = fullname;
+        console.log(fullname);
         setRealTimeData(res);
       })
       .catch(console.log);
   };
 
-  const setRealTime = (route) => {
-    getRealTimeData(route);
+  const setRealTime = (route, fullname) => {
+    getRealTimeData(route, fullname);
     setActiveKey("realTime");
   };
   const clearMap = () => {
@@ -94,7 +98,7 @@ const App = () => {
     } else if (!dest.val && !dest.stopID && source.stopID) {
       // if source is a bus stop and no destination
       clearMap();
-      setRealTime(source.stopID);
+      setRealTime(source.stopID, source.fullname);
       setStopsForMap([
         { stopid: source.stopID, lat: source.lat, lng: source.lng },
       ]);
@@ -209,10 +213,16 @@ const App = () => {
             setActiveKey={setActiveKey}
             setState={setState}
             state={state}
+            favStops={favStops}
+            setFavStops={setFavStops}
           />
         </TabPane>
         <TabPane tab="Real Time" key="realTime">
-          <RealTimeInfo realTimeData={realTimeData}></RealTimeInfo>
+          <RealTimeInfo
+            realTimeData={realTimeData}
+            favStops={favStops}
+            setFavStops={setFavStops}
+          ></RealTimeInfo>
         </TabPane>
         <TabPane tab="News" key="news">
           <TwitterTimelineEmbed

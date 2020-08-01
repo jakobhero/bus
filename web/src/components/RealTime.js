@@ -4,28 +4,43 @@ import React, { useState } from "react";
 import { Table, Modal, Radio } from "antd";
 import "antd/dist/antd.css";
 import { HistoryOutlined } from "@ant-design/icons";
-import { setCookie, delCookie, getStopNums } from "./cookies";
+import { setCookie, delCookie } from "./cookies";
 
-const RealTimeInfo = ({ realTimeData }) => {
+import StarIcon from "@material-ui/icons/Star";
+import StarBorderOutlinedIcon from "@material-ui/icons/StarBorderOutlined";
+
+const RealTimeInfo = ({ realTimeData, favStops, setFavStops }) => {
   // generate content of real-time tab
   const [visible, setVisible] = useState(false);
   const [state, setState] = useState({});
   const [alertTime, setAlertTime] = useState(1);
   const stopid = realTimeData.stopid;
+  const fullname = realTimeData.fullname;
   realTimeData = realTimeData.data;
-  let test = getStopNums();
-  const flgIcon = Object.values(test).includes(parseInt(stopid));
+  const flgIcon = favStops.includes(fullname);
   const [icoStatus, seticoStatus] = useState(flgIcon);
+  if (flgIcon !== icoStatus) {
+    seticoStatus(flgIcon);
+  }
+
+  function removeItemOnce(arr, value) {
+    var index = arr.indexOf(value);
+    if (index > -1) {
+      arr.splice(index, 1);
+    }
+    return arr;
+  }
+
   const icoStatusData = (e) => {
     // adding/deleting cookies
     seticoStatus(!icoStatus);
-
     if (flgIcon) {
       delCookie(stopid);
-      seticoStatus(!icoStatus);
+      setFavStops(removeItemOnce(favStops, fullname));
     } else {
       setCookie(stopid, stopid);
-      seticoStatus(!icoStatus);
+      favStops.push(fullname);
+      setFavStops(favStops);
     }
   };
 
@@ -64,14 +79,11 @@ const RealTimeInfo = ({ realTimeData }) => {
   };
 
   const handleOk = (e) => {
-    console.log(e);
     setVisible(false);
-    console.log(state.duetime - alertTime);
     setTimeout(setAlert, (state.duetime - alertTime) * 60000);
   };
 
   const handleCancel = (e) => {
-    console.log(e);
     setVisible(false);
   };
 
@@ -89,14 +101,15 @@ const RealTimeInfo = ({ realTimeData }) => {
 
   return (
     <div className="realTime">
-      <h2>{realTimeData ? `Stop ${stopid}` : "Select a bus stop"}</h2>
-      {realTimeData && (
-        <span
-          className={flgIcon ? "fa fa-star" : "fa fa-star-o"}
-          onClick={(e) => icoStatusData()}
-        ></span>
-      )}
-      {console.log(icoStatus, flgIcon)}
+      <h2>
+        {realTimeData ? `Stop ${stopid} (${fullname})` : "Select a bus stop"}
+      </h2>
+      {realTimeData &&
+        (icoStatus ? (
+          <StarIcon onClick={(e) => icoStatusData()} />
+        ) : (
+          <StarBorderOutlinedIcon onClick={(e) => icoStatusData()} />
+        ))}
       <Table
         dataSource={realTimeData}
         columns={columns}
