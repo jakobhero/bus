@@ -6,6 +6,8 @@ import "antd/dist/antd.css";
 import { HistoryOutlined } from "@ant-design/icons";
 import { setCookie, delCookie } from "./cookies";
 
+import "../css/fav.css";
+
 import StarIcon from "@material-ui/icons/Star";
 import StarBorderOutlinedIcon from "@material-ui/icons/StarBorderOutlined";
 
@@ -17,7 +19,7 @@ const RealTimeInfo = ({ realTimeData, favStops, setFavStops }) => {
   const stopid = realTimeData.stopid;
   const fullname = realTimeData.fullname;
   realTimeData = realTimeData.data;
-  const flgIcon = favStops.includes(fullname);
+  const flgIcon = favStops.stopsids.includes(stopid);
   const [icoStatus, seticoStatus] = useState(flgIcon);
   if (flgIcon !== icoStatus) {
     seticoStatus(flgIcon);
@@ -36,11 +38,18 @@ const RealTimeInfo = ({ realTimeData, favStops, setFavStops }) => {
     seticoStatus(!icoStatus);
     if (flgIcon) {
       delCookie(stopid);
-      setFavStops(removeItemOnce(favStops, fullname));
+      setFavStops({
+        fullname: removeItemOnce(favStops.fullname, fullname),
+        stopsids: removeItemOnce(favStops.stopsids, stopid),
+      });
     } else {
       setCookie(stopid, stopid);
-      favStops.push(fullname);
-      setFavStops(favStops);
+      favStops.fullname.push(fullname);
+      favStops.stopsids.push(stopid);
+      setFavStops({
+        fullname: favStops.fullname,
+        stopsids: favStops.stopsids,
+      });
     }
   };
 

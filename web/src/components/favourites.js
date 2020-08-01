@@ -5,13 +5,14 @@ import DeleteIcon from "@material-ui/icons/Delete";
 import { HistoryOutlined } from "@ant-design/icons";
 import {
   getStopNames,
-  getIdByName,
+  getStopNums,
   getAddressByVal,
   delCookie,
 } from "./cookies";
 import axios from "axios";
 import { Card } from "antd";
 import "../css/fav.css";
+import Tooltip from "@material-ui/core/Tooltip";
 
 const gridStyle = {
   width: "25%",
@@ -30,18 +31,13 @@ const Favourites = ({
   favStops,
   setFavStops,
 }) => {
-  function handleClick(stopName) {
-    console.log(stopName);
-    // transfer to the real-time tab once click the stop id in the favourites tab
-    var stopid = getIdByName(String(stopName).trim());
-    setRealTime(stopid.trim(), stopName);
+  function handleClick(stopid, stopName) {
+    setRealTime(stopid, stopName);
   }
 
-  function handleDelete(stopName) {
-    console.log(stopName);
-    var stopid = getIdByName(String(stopName).trim());
-    delCookie(stopid.trim());
-    setFavStops(getStopNames());
+  function handleDelete(stopid) {
+    delCookie(stopid);
+    setFavStops({ fullname: getStopNames(), stopsids: getStopNums() });
   }
 
   function handleClickAdd(Val) {
@@ -78,20 +74,28 @@ const Favourites = ({
   return (
     <div>
       <div>
-        <Card title="Favorite Stops" headStyle={{ backgroundColor: "#1b55db" }}>
-          {favStops.map((item) => (
+        <Card
+          title="Favorite Stops"
+          headStyle={{ backgroundColor: "#1b55db", color: "white" }}
+        >
+          {favStops.fullname.map((item, index) => (
             <Card.Grid style={gridStyle} hoverable className="stopsCard">
               <CardContent>
                 <Typography>{item}</Typography>
-                <HistoryOutlined
-                  onClick={() => handleClick(item)}
-                  className="realTimeIcon"
-                  style={{ fontSize: "16px" }}
-                />
-                <DeleteIcon
-                  onClick={() => handleDelete(item)}
-                  className="delete"
-                />
+                <Typography>{favStops.stopsids[index]}</Typography>
+                <Tooltip className="tooltip" title="Real Time Info">
+                  <HistoryOutlined
+                    onClick={() => handleClick(favStops.stopsids[index], item)}
+                    className="realTimeIcon"
+                    style={{ fontSize: "16px" }}
+                  />
+                </Tooltip>
+                <Tooltip className="tooltip" title="Remove">
+                  <DeleteIcon
+                    onClick={() => handleDelete(favStops.stopsids[index])}
+                    className="delete"
+                  />
+                </Tooltip>
               </CardContent>
             </Card.Grid>
           ))}
