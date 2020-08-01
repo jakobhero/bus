@@ -55,7 +55,7 @@ const Favourites = ({
     clearMap();
     axios
       .get(
-        "http://localhost/api/nearestneighbor?lat=" +
+        "/api/nearestneighbor?lat=" +
           getAddressByVal(Val + "Lat") +
           "&lng=" +
           getAddressByVal(Val + "Lng")

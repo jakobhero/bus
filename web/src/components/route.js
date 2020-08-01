@@ -7,20 +7,13 @@ import DirectionsWalkIcon from "@material-ui/icons/DirectionsWalk";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import TramIcon from "@material-ui/icons/Tram";
 
-import { Card, Timeline } from "antd";
+import { Card } from "antd";
 import { ClockCircleOutlined } from "@ant-design/icons";
 import "antd/dist/antd.css";
 
 import { findPoly } from "./polylines.js";
 
-const gridStyle = {
-  width: "25%",
-  textAlign: "center",
-  minWidth: "250px",
-};
-
-const Route = ({ tripTime, setDirections }) => {
-  const [showMore, setShowMore] = useState(false);
+const Route = ({ tripTime, setDirections, setIndex, index }) => {
   let startTime = new Date(tripTime.start.time * 1000);
   let endTime = new Date(tripTime.end.time * 1000);
   let time = tripTime.start.time * 1000;
@@ -42,11 +35,11 @@ const Route = ({ tripTime, setDirections }) => {
     endTime.getMinutes();
 
   const handleClick = () => {
-    setShowMore(!showMore);
+    setIndex(index);
     setDirections(findPoly(tripTime));
   };
   return (
-    <Card.Grid style={gridStyle} onClick={handleClick} hoverable>
+    <Card onClick={handleClick} hoverable>
       <span>
         {departTime}
         <span> - </span>
@@ -75,71 +68,7 @@ const Route = ({ tripTime, setDirections }) => {
         <ArrowForwardIosIcon />
         <DirectionsWalkIcon style={{ color: "blue" }} />
       </div>
-      {showMore && (
-        <div>
-          <br />
-          <hr />
-          <Timeline mode={"left"}>
-            {tripTime.steps.map((step, i) => (
-              <Timeline.Item
-                key={i}
-                label={
-                  new Date(step.time).getHours() +
-                  ":" +
-                  (new Date(step.time).getMinutes() < 10 ? "0" : "") +
-                  new Date(step.time).getMinutes()
-                }
-                color={tripTime.transit_index.includes(i) ? "blue" : "green"}
-              >
-                <p>
-                  {i < 1 ? tripTime.start.address : ""}
-
-                  {tripTime.transit_index.includes(i) &
-                  !tripTime.transit_index.includes(i - 1) &
-                  (i > 0)
-                    ? step.transit.dep.name
-                    : ""}
-
-                  {tripTime.transit_index.includes(i) &
-                  tripTime.transit_index.includes(i - 1)
-                    ? step.transit.dep.name
-                    : ""}
-
-                  {!tripTime.transit_index.includes(i) &
-                  tripTime.transit_index.includes(i - 1)
-                    ? tripTime.steps[i - 1].transit.arr.name
-                    : ""}
-                </p>
-                <p>
-                  {tripTime.transit_index.includes(i) ? (
-                    step.transit.type === "BUS" ? (
-                      <DirectionsBusIcon style={{ color: "blue" }} />
-                    ) : (
-                      <TramIcon style={{ color: "blue" }} />
-                    )
-                  ) : (
-                    ""
-                  )}
-                  {tripTime.transit_index.includes(i) ? step.transit.route : ""}
-
-                  {!tripTime.transit_index.includes(i) ? (
-                    <DirectionsWalkIcon style={{ color: "blue" }} />
-                  ) : (
-                    ""
-                  )}
-                </p>
-              </Timeline.Item>
-            ))}
-            <Timeline.Item
-              label={arriveTime}
-              dot={<ClockCircleOutlined style={{ fontSize: "16px" }} />}
-            >
-              {tripTime.end.address}
-            </Timeline.Item>
-          </Timeline>
-        </div>
-      )}
-    </Card.Grid>
+    </Card>
   );
 };
 

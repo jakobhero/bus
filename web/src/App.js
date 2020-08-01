@@ -38,7 +38,7 @@ const App = () => {
 
   const getRealTimeData = (stop) => {
     axios
-      .get("http://localhost/api/realtime?stopid=" + stop)
+      .get("/api/realtime?stopid=" + stop)
       .then((res) => {
         res["stopid"] = stop;
         setRealTimeData(res);
@@ -67,7 +67,7 @@ const App = () => {
       // if source is a bus route
       clearMap();
       axios
-        .get("http://localhost/api/routeinfo?routeid=" + source.bus_id)
+        .get("/api/routeinfo?routeid=" + source.bus_id)
         .then((res) => {
           if (res.statusText === "OK") {
             setStopsForMap(res.data[0]);
@@ -80,12 +80,7 @@ const App = () => {
       // if source is a place and no destination
       clearMap();
       axios
-        .get(
-          "http://localhost/api/nearestneighbor?lat=" +
-            source.lat +
-            "&lng=" +
-            source.lng
-        )
+        .get("/api/nearestneighbor?lat=" + source.lat + "&lng=" + source.lng)
         .then((res) => {
           console.log(res);
           if (res.statusText === "OK") {
@@ -108,7 +103,7 @@ const App = () => {
       clearMap();
       axios
         .get(
-          "http://localhost/api/directions?dep=" +
+          "/api/directions?dep=" +
             source.lat +
             "," +
             source.lng +
