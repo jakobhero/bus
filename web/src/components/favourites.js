@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Typography from "@material-ui/core/Typography";
 import CardContent from "@material-ui/core/CardContent";
 import DeleteIcon from "@material-ui/icons/Delete";
@@ -27,18 +27,21 @@ const Favourites = ({
   setActiveKey,
   setState,
   state,
+  favStops,
+  setFavStops,
 }) => {
   function handleClick(stopName) {
     console.log(stopName);
     // transfer to the real-time tab once click the stop id in the favourites tab
     var stopid = getIdByName(String(stopName).trim());
-    setRealTime(stopid.trim());
+    setRealTime(stopid.trim(), stopName);
   }
 
   function handleDelete(stopName) {
     console.log(stopName);
     var stopid = getIdByName(String(stopName).trim());
     delCookie(stopid.trim());
+    setFavStops(getStopNames());
   }
 
   function handleClickAdd(Val) {
@@ -76,7 +79,7 @@ const Favourites = ({
     <div>
       <div>
         <Card title="Favorite Stops" headStyle={{ backgroundColor: "#1b55db" }}>
-          {getStopNames().map((item) => (
+          {favStops.map((item) => (
             <Card.Grid style={gridStyle} hoverable className="stopsCard">
               <CardContent>
                 <Typography>{item}</Typography>

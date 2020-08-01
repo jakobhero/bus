@@ -1,14 +1,14 @@
 import axios from "axios";
 function setCookie(name, value) {
   // this function used to save stopid into cookies
-  // the cookies format as stopid=stop fullname 
+  // the cookies format as stopid=stop fullname
   var days = 1;
   var exp = new Date();
   // cookies will last for a day
   exp.setTime(exp.getTime() + days * 24 * 60 * 60 * 1000);
 
   axios
-    .get("http://localhost/api/stops?substring=" + name)
+    .get("/api/stops?substring=" + name)
     .then((res) => {
       if (res.statusText === "OK") {
         console.log(res.data.stops[0]);
@@ -45,18 +45,18 @@ function getStopNames() {
 function getStopNums() {
   // return saved stop id
   var storedCookies = document.cookie.split(";");
-  var stopNums = new Array();
+  var stopNums = [];
   for (let i = 0; i < storedCookies.length; i++) {
     var stopInfo = storedCookies[i].split("=");
     if (!isNaN(stopInfo[0])) {
-      stopNums[i] = parseInt(stopInfo[0]);
+      stopNums.push(parseInt(stopInfo[0]));
     }
   }
   return stopNums;
 }
 
 function getAddressByVal(Val) {
-  // return the address according to cookies'key 
+  // return the address according to cookies'key
   var storedCookies = document.cookie.split(";");
   for (let i = 0; i < storedCookies.length; i++) {
     var stopInfo = storedCookies[i].split("=");
