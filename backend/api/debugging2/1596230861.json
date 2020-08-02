@@ -1,0 +1,48 @@
+{
+        "connections": [
+                {
+                        "db_index": [],
+                        "distance": 1176,
+                        "duration": 894,
+                        "end": {
+                                "address": "Phoenix Park, Northside, Dublin 8, Ireland",
+                                "location": {
+                                        "lat": 53.3484473,
+                                        "lng": -6.297255499999999
+                                },
+                                "time": 1596231752
+                        },
+                        "start": {
+                                "address": "Blackhall Pl, Northside, Dublin, Ireland",
+                                "location": {
+                                        "lat": 53.3486857,
+                                        "lng": -6.282002599999999
+                                },
+                                "time": 1596230858
+                        },
+                        "steps": [
+                                {
+                                        "distance": 1176,
+                                        "duration": 894,
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "itrdIn}ie@TDp@FH@b@H`@F\\H\\Fh@HB@JB",
+                                                "{krdIr_je@S|BShC[fDCj@Iz@Cf@AREjD?ZElC?RC`BChBAz@GjE?r@?j@Bd@?t@@nC?v@?N@NDJTH",
+                                                "mnrdI~yke@EXCJCLE^QfAOnBEx@IhFE`B?^G`DAf@A`@?j@?n@",
+                                                "eqrdIxyle@GDGHEHEHGPOj@"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3486857,
+                                                "lng": -6.282002599999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.3484473,
+                                                "lng": -6.297255499999999
+                                        }
+                                }
+                        ],
+                        "transit_index": []
+                }
+        ],
+        "status": "OK"
+}

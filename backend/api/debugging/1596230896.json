@@ -1,0 +1,28 @@
+{
+        "available_travel_modes": [
+                "DRIVING",
+                "WALKING",
+                "BICYCLING"
+        ],
+        "geocoded_waypoints": [
+                {
+                        "geocoder_status": "OK",
+                        "place_id": "ChIJn5Z2DS4MZ0gR9D7ka27fsGk",
+                        "types": [
+                                "street_address"
+                        ]
+                },
+                {
+                        "geocoder_status": "OK",
+                        "place_id": "ChIJDUttHIsFZ0gR14K5hBFlw18",
+                        "types": [
+                                "establishment",
+                                "point_of_interest",
+                                "premise",
+                                "tourist_attraction"
+                        ]
+                }
+        ],
+        "routes": [],
+        "status": "ZERO_RESULTS"
+}

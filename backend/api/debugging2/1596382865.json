@@ -1,0 +1,418 @@
+{
+        "connections": [
+                {
+                        "db_index": [
+                                1
+                        ],
+                        "distance": 8955,
+                        "duration": 2433,
+                        "end": {
+                                "address": "University College Dublin, Belfield, Dublin 4, Ireland",
+                                "location": {
+                                        "lat": 53.30713120000001,
+                                        "lng": -6.220312
+                                },
+                                "time": 1596385929
+                        },
+                        "start": {
+                                "address": "32 Blackhall Pl, Northside, Dublin 7, D07 P2W7, Ireland",
+                                "location": {
+                                        "lat": 53.34917610000001,
+                                        "lng": -6.2818628
+                                },
+                                "time": 1596383496
+                        },
+                        "steps": [
+                                {
+                                        "distance": 165,
+                                        "duration": 118,
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "kwrdIr|ie@~@NRFLBTDp@FH@b@H`@F\\HLB"
+                                        ],
+                                        "start": {
+                                                "lat": 53.34917610000001,
+                                                "lng": -6.2818628
+                                        },
+                                        "stop": {
+                                                "lat": 53.3477145,
+                                                "lng": -6.2822356
+                                        }
+                                },
+                                {
+                                        "distance": 8309,
+                                        "duration": 1959,
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "cnrdIf~ie@CXfDx@B_@j@wKfAgJLeA\\yCXsC?CDi@Ba@N_CFcAF}@Dq@HmA?GDcADaBB}@?k@@a@?Y?wAEmBCm@AWCe@IiA?CKwA?IEs@Ee@OqBAWC]M_BOuBC[EkBCsAQwEGy@Ew@?MCq@IqAGo@QoAQuACMCQm@iEc@}CAEOgAIc@e@wCQaAQ}@AQIe@NEHIFCz@]JGJERGJGLOJOVe@NW?A@Bd@y@lAmBNOV@FHf@zBh@bBl@xARV`BvAjA{@PCt@Af@LV@LIVe@vBsO?AB@BQXwBDa@h@cE\\NjBz@hClAb@R~At@h@X\\NZPx@h@JFlA~@^}BTqAF_@F[N}@Lo@T{AXaBBOf@qC?CDWJ}@LaABSNkADi@@MF]DWLe@@Ex@gD\\sAZeAJe@R_@Xi@JUFKDM@AJQNWfAqBb@y@FKd@{@JQZg@PUf@o@LQtAaBTWJMZQDGf@u@rAkC@AHUh@eBb@cBBKhA^PDn@Rx@XH@bDfA|Af@HDv@VtHbCXJPHd@NtAx@Lg@?AVaAFOJ]HUDMHUBIb@w@h@u@r@gAl@y@b@k@v@cAV]HKtAqB@Ap@kANUPUVa@l@{@FIFI`BcCXc@t@iAb@m@Z_@PUPULSFGHOzAsBTc@Xg@BIR_@BGNULYHSN_@H_@P_CNk@HSHQNYf@{@Zi@v@oAFKJMp@gAXk@j@y@DGb@o@|@oAJONQf@q@PYBQ@CDKFM`@q@LUj@u@Xa@HMBEdBoCHOZg@PW`DeFHKNWlAiBLOx@oA^k@PYXe@^k@h@{@Xe@FMP]n@{AL_@L_@HUDOhAwEBOZmAFSRy@nA{CVi@LUV]t@_ApAsAtA_A@?`BkAjA_ALIj@a@\\WJKRQVU@S@Gf@u@LUTi@BGXw@Xy@p@cCFSFSRi@JYZ`@NV@?DJHH?@PXXb@JRTd@HSVYx@o@t@c@NCVe@\\i@NOPSJEDEDENIHELGHCTGD?J@DA^@V@XDNDJDNFJF`@ZB@LLHDJ@LGFEDGFMFOb@yATw@Vq@FMDGDCBAHAL@JDx@TOl@k@`CCBA@A?A@A?C?AAC?AACGIs@GWGF"
+                                        ],
+                                        "start": {
+                                                "lat": 53.34770409999999,
+                                                "lng": -6.2821238
+                                        },
+                                        "stop": {
+                                                "lat": 53.30531449999999,
+                                                "lng": -6.2166348
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Belfield, University College Dublin",
+                                                        "time": 1596385574
+                                                },
+                                                "dep": {
+                                                        "name": "Blackhall Place, stop 1715",
+                                                        "time": 1596383615
+                                                },
+                                                "headsign": "UCD",
+                                                "operator": "Dublin Bus",
+                                                "route": "39a",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "distance": 481,
+                                        "duration": 351,
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "}djdItd}d@AEEKGGSS",
+                                                "afjdIfc}d@Uv@c@xAGNGLEFGDMFKAIEMM",
+                                                "kjjdIvh}d@oA~AWj@[Ts@|CUxAATO^",
+                                                "kqjdIfw}d@w@_@SG",
+                                                "wsjdI~u}d@@LDZ@J@H@`@?B@B@D@Bh@n@X`@BB",
+                                                "{pjdIh|}d@BCDG"
+                                        ],
+                                        "start": {
+                                                "lat": 53.30527000000001,
+                                                "lng": -6.2165893
+                                        },
+                                        "stop": {
+                                                "lat": 53.30713120000001,
+                                                "lng": -6.220312
+                                        }
+                                }
+                        ],
+                        "transit_index": [
+                                1
+                        ]
+                },
+                {
+                        "db_index": [
+                                1
+                        ],
+                        "distance": 8523,
+                        "duration": 2210,
+                        "end": {
+                                "address": "University College Dublin, Belfield, Dublin 4, Ireland",
+                                "location": {
+                                        "lat": 53.30713120000001,
+                                        "lng": -6.220312
+                                },
+                                "time": 1596385978
+                        },
+                        "start": {
+                                "address": "32 Blackhall Pl, Northside, Dublin 7, D07 P2W7, Ireland",
+                                "location": {
+                                        "lat": 53.34917610000001,
+                                        "lng": -6.2818628
+                                },
+                                "time": 1596383768
+                        },
+                        "steps": [
+                                {
+                                        "distance": 414,
+                                        "duration": 304,
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "kwrdIr|ie@~@NRFLBTDp@FH@b@H`@F\\H\\Fh@HB@JB`B`@",
+                                                "yhrdIt`je@Cb@MvBANGlBCdCAF?\\"
+                                        ],
+                                        "start": {
+                                                "lat": 53.34917610000001,
+                                                "lng": -6.2818628
+                                        },
+                                        "stop": {
+                                                "lat": 53.3470186,
+                                                "lng": -6.2847789
+                                        }
+                                },
+                                {
+                                        "distance": 7614,
+                                        "duration": 1473,
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "ijrdIxnje@L??[@GBeCFmB@OLwBBc@FwBF}@LsCHiBZqCZsBP_BLeA\\yCXsC?CDi@Ba@N_CFcAF}@Dq@HmA?GDcADaBB}@?k@@a@?Y?wAEmBCm@AWCe@IiA?CKwA?IEs@Ee@OqBAWC]M_BOuBC[EkBCsAQwEGy@Ew@?MCq@IqAGo@QoAQuACMCQk@_EAIe@cDOgAIc@e@wCQaAQ}@AQIe@NEHIFCz@]JGJERGJGLOJOVe@NW?A@BrBgDNOV@FHbAdEz@rBb@j@pAbAjA{@PCt@Af@LV@ZWHWbC}P?A@?R}ADa@h@cE\\NjBz@hClAb@R~At@h@X?AxCfB~@t@He@PuAP_@^c@`@AZPlDhCh@`@vBbBd@VN@VMt@kAnAsAnCoCz@iAbEkE@AAC\\c@b@c@NOHIf@k@b@e@`AkAHGDCHGROL[HEr@k@PIHEDGf@i@@A@CBK@G@GAg@?K@O@Ch@]TMPSV[Zu@`@}@r@gBb@qAPg@`@_ALY`@y@Te@FSRs@BGFUBCBC@ADAZ{@L[J[Ts@Rs@XaA?CNe@Le@DQVy@Lg@?AVaAFOJ]HUDMHUBIb@w@h@u@r@gAl@y@b@k@v@cAV]HKtAqB@Ap@kANUPUVa@l@{@FIFI`BcCXc@t@iAb@m@Z_@PUPULSFGHOzAsBTc@Xg@BIR_@BGNULYHSN_@H_@P_CNk@HSHQNYf@{@Zi@v@oAFKJMp@gAXk@j@y@DGb@o@|@oAJONQf@q@PYBQ@CDKFM`@q@LUj@u@Xa@HMBEdBoCHOZg@PW`DeFHKNWlAiBLOx@oA^k@PYXe@^k@h@{@Xe@FMP]n@{AL_@L_@HUDOhAwEBOZmAFSRy@nA{CVi@LUV]t@_ApAsAtA_A@?`BkAjA_ALIj@a@\\WJKRQVU@S@Gf@u@LUTi@BGXw@Xy@p@cCFSFSRi@JYN_@\\o@\\s@P]JOh@aA@CIQ"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3470947,
+                                                "lng": -6.2847662
+                                        },
+                                        "stop": {
+                                                "lat": 53.3088746,
+                                                "lng": -6.2160812
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Booterstown, Woodbine Road",
+                                                        "time": 1596385546
+                                                },
+                                                "dep": {
+                                                        "name": "Wolfe Tone Quay, Ellis Street",
+                                                        "time": 1596384073
+                                                },
+                                                "headsign": "Ballywaltrim",
+                                                "operator": "Dublin Bus",
+                                                "route": "145",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "distance": 495,
+                                        "duration": 431,
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "{{jdIr`}d@g@r@?@@??@?@@@?@?@?@?@?@?@A??@?@?@A??@A??@A?@J@HDP@HQ\\]r@]n@O^",
+                                                "y_kdIxi}d@Z`@PVDJHHPZXb@JRTd@",
+                                                "m{jdIbp}d@HS",
+                                                "c{jdIno}d@l@jADJDJLJVRXLDBp@Vx@`@",
+                                                "wsjdI~u}d@@LDZ@J@H@`@?B@B@D@Bh@n@X`@BB",
+                                                "{pjdIh|}d@BCDG"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3089386,
+                                                "lng": -6.2159435
+                                        },
+                                        "stop": {
+                                                "lat": 53.30713120000001,
+                                                "lng": -6.220312
+                                        }
+                                }
+                        ],
+                        "transit_index": [
+                                1
+                        ]
+                },
+                {
+                        "db_index": [
+                                1,
+                                2
+                        ],
+                        "distance": 8228,
+                        "duration": 2483,
+                        "end": {
+                                "address": "University College Dublin, Belfield, Dublin 4, Ireland",
+                                "location": {
+                                        "lat": 53.30713120000001,
+                                        "lng": -6.220312
+                                },
+                                "time": 1596385748
+                        },
+                        "start": {
+                                "address": "32 Blackhall Pl, Northside, Dublin 7, D07 P2W7, Ireland",
+                                "location": {
+                                        "lat": 53.34917610000001,
+                                        "lng": -6.2818628
+                                },
+                                "time": 1596383265
+                        },
+                        "steps": [
+                                {
+                                        "distance": 165,
+                                        "duration": 118,
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "kwrdIr|ie@~@NRFLBTDp@FH@b@H`@F\\HLB"
+                                        ],
+                                        "start": {
+                                                "lat": 53.34917610000001,
+                                                "lng": -6.2818628
+                                        },
+                                        "stop": {
+                                                "lat": 53.3477145,
+                                                "lng": -6.2822356
+                                        }
+                                },
+                                {
+                                        "distance": 2904,
+                                        "duration": 849,
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "cnrdIf~ie@CXfDx@B_@j@wKfAgJLeA\\yCXsC?CDi@Ba@N_CFcAF}@Dq@HmA?GDcADaBB}@?k@@a@?Y?wAEmBCm@AWCe@IiA?CKwA?IEs@Ee@OqBAWC]M_BOuBC[EkBCsAQwEGy@Ew@?MCq@IqAGo@QoAQuACMCQm@iEc@}C@A}@kGq@sDzBmA`@]n@u@zBqDNOJARLf@zBh@bBl@xARV`BvAjA{@PCt@Af@LV@LIVe@vBsO?ABBBSXwBDa@h@cE\\NjBz@hClAb@R~At@h@XBQ"
+                                        ],
+                                        "start": {
+                                                "lat": 53.34770409999999,
+                                                "lng": -6.2821238
+                                        },
+                                        "stop": {
+                                                "lat": 53.3399308,
+                                                "lng": -6.255723499999999
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Kildare Street, stop 747",
+                                                        "time": 1596384233
+                                                },
+                                                "dep": {
+                                                        "name": "Blackhall Place, stop 1715",
+                                                        "time": 1596383384
+                                                },
+                                                "headsign": "Wilton Terrace",
+                                                "operator": "Dublin Bus",
+                                                "route": "37",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "distance": 4664,
+                                        "duration": 736,
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "q}pdIfyde@CNxCfB~@t@He@PuAP_@^c@`@AZPlDhCh@`@vBbBd@VN@VMt@kAnAsAnCoCz@iAbEkE@AAC\\c@b@c@NOHIf@k@b@e@`AkAHGDCHGROL[HEr@k@PIHEDGf@i@@A@CBK@G@GAg@?K@O@Ch@]TMPSV[Zu@`@}@r@gBb@qAPg@`@_ALY`@y@Te@FSRs@BGFUBCBC@ADAZ{@L[J[Ts@Rs@XaA?CNe@Le@DQVy@Lg@?AVaAFOJ]HUDMHUBIb@w@h@u@r@gAl@y@b@k@v@cAV]HKtAqB@Ap@kANUPUVa@l@{@FIFI`BcCXc@t@iAb@m@Z_@PUPULSFGHOzAsBTc@Xg@BIR_@BGNULYHSN_@H_@P_CNk@HSHQNYf@{@Zi@v@oAFKJMp@gAXk@j@y@DGb@o@|@oAJONQf@q@PYBQ@CDKFM`@q@LUj@u@Xa@HMBEdBoCHOZg@PW`DeFHKNWlAiBLOx@oA^k@PYXe@^k@h@{@Xe@FMP]n@{AL_@L_@HUDOhAwEBOZmAFSRy@nA{CVi@LUV]t@_ApAsAtA_A@?`BkAjA_ALIj@a@\\WJKRQVU@S@Gf@u@LUTi@BGXw@Xy@p@cCFSFSRi@JYN_@\\o@\\s@P]JOh@aA@CIQ"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3399308,
+                                                "lng": -6.255723499999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.3088746,
+                                                "lng": -6.2160812
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Booterstown, Woodbine Road",
+                                                        "time": 1596385316
+                                                },
+                                                "dep": {
+                                                        "name": "Kildare Street, stop 747",
+                                                        "time": 1596384580
+                                                },
+                                                "headsign": "Bray",
+                                                "operator": "Dublin Bus",
+                                                "route": "155",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "distance": 495,
+                                        "duration": 431,
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "{{jdIr`}d@g@r@?@@??@?@@@?@?@?@?@?@?@A??@?@?@A??@A??@A?@J@HDP@HQ\\]r@]n@O^",
+                                                "y_kdIxi}d@Z`@PVDJHHPZXb@JRTd@",
+                                                "m{jdIbp}d@HS",
+                                                "c{jdIno}d@l@jADJDJLJVRXLDBp@Vx@`@",
+                                                "wsjdI~u}d@@LDZ@J@H@`@?B@B@D@Bh@n@X`@BB",
+                                                "{pjdIh|}d@BCDG"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3089386,
+                                                "lng": -6.2159435
+                                        },
+                                        "stop": {
+                                                "lat": 53.30713120000001,
+                                                "lng": -6.220312
+                                        }
+                                }
+                        ],
+                        "transit_index": [
+                                1,
+                                2
+                        ]
+                },
+                {
+                        "db_index": [
+                                1
+                        ],
+                        "distance": 8955,
+                        "duration": 2010,
+                        "end": {
+                                "address": "University College Dublin, Belfield, Dublin 4, Ireland",
+                                "location": {
+                                        "lat": 53.30713120000001,
+                                        "lng": -6.220312
+                                },
+                                "time": 1596386399
+                        },
+                        "start": {
+                                "address": "32 Blackhall Pl, Northside, Dublin 7, D07 P2W7, Ireland",
+                                "location": {
+                                        "lat": 53.34917610000001,
+                                        "lng": -6.2818628
+                                },
+                                "time": 1596384389
+                        },
+                        "steps": [
+                                {
+                                        "distance": 165,
+                                        "duration": 118,
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "kwrdIr|ie@~@NRFLBTDp@FH@b@H`@F\\HLB"
+                                        ],
+                                        "start": {
+                                                "lat": 53.34917610000001,
+                                                "lng": -6.2818628
+                                        },
+                                        "stop": {
+                                                "lat": 53.3477145,
+                                                "lng": -6.2822356
+                                        }
+                                },
+                                {
+                                        "distance": 8309,
+                                        "duration": 1536,
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "cnrdIf~ie@CXfDx@B_@j@wKfAgJLeA\\yCXsC?CDi@Ba@N_CFcAF}@Dq@HmA?GDcADaBB}@?k@@a@?Y?wAEmBCm@AWCe@IiA?CKwA?IEs@Ee@OqBAWC]M_BOuBC[EkBCsAQwEGy@Ew@?MCq@IqAGo@QoAQuACMCQm@iEc@}CAEOgAIc@e@wCQaAQ}@AQIe@NEHIFCz@]JGJERGJGLOJOVe@NW?A@Bd@y@lAmBNOV@FHf@zBh@bBl@xARV`BvAjA{@PCt@Af@LV@LIVe@vBsO?AB@BQXwBDa@h@cE\\NjBz@hClAb@R~At@h@X\\NZPx@h@JFlA~@^}BTqAF_@F[N}@Lo@T{AXaBBOf@qC?CDWJ}@LaABSNkADi@@MF]DWLe@@Ex@gD\\sAZeAJe@R_@Xi@JUFKDM@AJQNWfAqBb@y@FKd@{@JQZg@PUf@o@LQtAaBTWJMZQDGf@u@rAkC@AHUh@eBb@cBBKhA^PDn@Rx@XH@bDfA|Af@HDv@VtHbCXJPHd@NtAx@Lg@?AVaAFOJ]HUDMHUBIb@w@h@u@r@gAl@y@b@k@v@cAV]HKtAqB@Ap@kANUPUVa@l@{@FIFI`BcCXc@t@iAb@m@Z_@PUPULSFGHOzAsBTc@Xg@BIR_@BGNULYHSN_@H_@P_CNk@HSHQNYf@{@Zi@v@oAFKJMp@gAXk@j@y@DGb@o@|@oAJONQf@q@PYBQ@CDKFM`@q@LUj@u@Xa@HMBEdBoCHOZg@PW`DeFHKNWlAiBLOx@oA^k@PYXe@^k@h@{@Xe@FMP]n@{AL_@L_@HUDOhAwEBOZmAFSRy@nA{CVi@LUV]t@_ApAsAtA_A@?`BkAjA_ALIj@a@\\WJKRQVU@S@Gf@u@LUTi@BGXw@Xy@p@cCFSFSRi@JYZ`@NV@?DJHH?@PXXb@JRTd@HSVYx@o@t@c@NCVe@\\i@NOPSJEDEDENIHELGHCTGD?J@DA^@V@XDNDJDNFJF`@ZB@LLHDJ@LGFEDGFMFOb@yATw@Vq@FMDGDCBAHAL@JDx@TOl@k@`CCBA@A?A@A?C?AAC?AACGIs@GWGF"
+                                        ],
+                                        "start": {
+                                                "lat": 53.34770409999999,
+                                                "lng": -6.2821238
+                                        },
+                                        "stop": {
+                                                "lat": 53.30531449999999,
+                                                "lng": -6.2166348
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Belfield, University College Dublin",
+                                                        "time": 1596386044
+                                                },
+                                                "dep": {
+                                                        "name": "Blackhall Place, stop 1715",
+                                                        "time": 1596384508
+                                                },
+                                                "headsign": "UCD",
+                                                "operator": "Dublin Bus",
+                                                "route": "39a",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "distance": 481,
+                                        "duration": 351,
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "}djdItd}d@AEEKGGSS",
+                                                "afjdIfc}d@Uv@c@xAGNGLEFGDMFKAIEMM",
+                                                "kjjdIvh}d@oA~AWj@[Ts@|CUxAATO^",
+                                                "kqjdIfw}d@w@_@SG",
+                                                "wsjdI~u}d@@LDZ@J@H@`@?B@B@D@Bh@n@X`@BB",
+                                                "{pjdIh|}d@BCDG"
+                                        ],
+                                        "start": {
+                                                "lat": 53.30527000000001,
+                                                "lng": -6.2165893
+                                        },
+                                        "stop": {
+                                                "lat": 53.30713120000001,
+                                                "lng": -6.220312
+                                        }
+                                }
+                        ],
+                        "transit_index": [
+                                1
+                        ]
+                }
+        ],
+        "status": "OK"
+}

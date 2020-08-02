@@ -1,0 +1,527 @@
+{
+        "connections": [
+                {
+                        "db_index": [
+                                1,
+                                3
+                        ],
+                        "distance": 4328,
+                        "duration": 1414,
+                        "end": {
+                                "address": "Ringsend, Co. Dublin, Ireland",
+                                "location": {
+                                        "lat": 53.3418611,
+                                        "lng": -6.226712099999999
+                                },
+                                "time": 1596234375
+                        },
+                        "start": {
+                                "address": "32 Blackhall Pl, Northside, Dublin 7, D07 P2W7, Ireland",
+                                "location": {
+                                        "lat": 53.34917610000001,
+                                        "lng": -6.2818628
+                                },
+                                "time": 1596232961
+                        },
+                        "steps": [
+                                {
+                                        "distance": 165,
+                                        "duration": 118,
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "kwrdIr|ie@~@NRFLBTDp@FH@b@H`@F\\HLB"
+                                        ],
+                                        "start": {
+                                                "lat": 53.34917610000001,
+                                                "lng": -6.2818628
+                                        },
+                                        "stop": {
+                                                "lat": 53.3477145,
+                                                "lng": -6.2822356
+                                        }
+                                },
+                                {
+                                        "distance": 1858,
+                                        "duration": 406,
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "cnrdIf~ie@CXfDx@B_@j@wKfAgJLeA\\yCXsC?CDi@Ba@N_CFcAF}@Dq@HmA?GDcADaBB}@?k@@a@?Y?wAEmBCm@AWCe@IiA?CKwA?IEs@Ee@OqBAWC]M_BOuBC[EkBCsAQwEGy@Ew@?MCq@IqAGo@QoAQuACMCQm@iEc@}CAEOgAIc@e@wCQaAQ}@AQIe@NEHIFCz@]JGJERGJGLOJOVe@NW?AKU"
+                                        ],
+                                        "start": {
+                                                "lat": 53.34770409999999,
+                                                "lng": -6.2821238
+                                        },
+                                        "stop": {
+                                                "lat": 53.3465812,
+                                                "lng": -6.2581256
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "D'Olier Street",
+                                                        "time": 1596233486
+                                                },
+                                                "dep": {
+                                                        "name": "Blackhall Place, stop 1715",
+                                                        "time": 1596233080
+                                                },
+                                                "headsign": "Burlington Road",
+                                                "operator": "Dublin Bus",
+                                                "route": "39",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "distance": 171,
+                                        "duration": 128,
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "wfrdI~hee@h@}@P[HQPY\\i@FI",
+                                                "ybrdIdcee@Am@?SAaD?C"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3465171,
+                                                "lng": -6.2582432
+                                        },
+                                        "stop": {
+                                                "lat": 53.345913,
+                                                "lng": -6.2561462
+                                        }
+                                },
+                                {
+                                        "distance": 2130,
+                                        "duration": 376,
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "qcrdIz{de@R??{A?AD{A?QBmE@}@BwA@gADwA@uA@w@HwBNcDF_CBoA@EDiA@Q@GLmAV_BZu@L]FUFOHMRWFEFEZKPG\\SBADCn@YZOVMr@_@NGNwAV{B^wCR{CJeBDi@HkADg@De@@c@Fu@BWLsBPuCJaBFw@JuAHqAFiALuBJuBF}@@YDi@@ILiBHwAFeAXsDB]NaCHyABc@NoBP}CHa@AO?G?O?]Cg@CiACo@CcACm@Co@KcDMeCEaAOyB?_@?I@GGA"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3460128,
+                                                "lng": -6.2561361
+                                        },
+                                        "stop": {
+                                                "lat": 53.34190299999999,
+                                                "lng": -6.2267174
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Ringsend, stop 356",
+                                                        "time": 1596234338
+                                                },
+                                                "dep": {
+                                                        "name": "Townsend St, Garda Station",
+                                                        "time": 1596233962
+                                                },
+                                                "headsign": "Sandymount",
+                                                "operator": "Dublin Bus",
+                                                "route": "1",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "distance": 4,
+                                        "duration": 1,
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "{iqdI~c_e@FA"
+                                        ],
+                                        "start": {
+                                                "lat": 53.34190299999999,
+                                                "lng": -6.2267174
+                                        },
+                                        "stop": {
+                                                "lat": 53.3418611,
+                                                "lng": -6.226712099999999
+                                        }
+                                }
+                        ],
+                        "transit_index": [
+                                1,
+                                3
+                        ]
+                },
+                {
+                        "db_index": [
+                                1,
+                                3
+                        ],
+                        "distance": 4325,
+                        "duration": 2119,
+                        "end": {
+                                "address": "Ringsend, Co. Dublin, Ireland",
+                                "location": {
+                                        "lat": 53.3418611,
+                                        "lng": -6.226712099999999
+                                },
+                                "time": 1596235080
+                        },
+                        "start": {
+                                "address": "32 Blackhall Pl, Northside, Dublin 7, D07 P2W7, Ireland",
+                                "location": {
+                                        "lat": 53.34917610000001,
+                                        "lng": -6.2818628
+                                },
+                                "time": 1596232961
+                        },
+                        "steps": [
+                                {
+                                        "distance": 165,
+                                        "duration": 118,
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "kwrdIr|ie@~@NRFLBTDp@FH@b@H`@F\\HLB"
+                                        ],
+                                        "start": {
+                                                "lat": 53.34917610000001,
+                                                "lng": -6.2818628
+                                        },
+                                        "stop": {
+                                                "lat": 53.3477145,
+                                                "lng": -6.2822356
+                                        }
+                                },
+                                {
+                                        "distance": 1557,
+                                        "duration": 306,
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "cnrdIf~ie@CXfDx@B_@j@wKfAgJLeA\\yCXsC?CDi@Ba@N_CFcAF}@Dq@HmA?GDcADaBB}@?k@@a@?Y?wAEmBCm@AWCe@IiA?CKwA?IEs@Ee@OqBAWC]M_BOuBC[EkBCsAQwEGy@Ew@?MCq@IqAGo@QoAQuACMCQm@iEc@}CMF"
+                                        ],
+                                        "start": {
+                                                "lat": 53.34770409999999,
+                                                "lng": -6.2821238
+                                        },
+                                        "stop": {
+                                                "lat": 53.34709609999999,
+                                                "lng": -6.2614082
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Bachelors Walk",
+                                                        "time": 1596233386
+                                                },
+                                                "dep": {
+                                                        "name": "Blackhall Place, stop 1715",
+                                                        "time": 1596233080
+                                                },
+                                                "headsign": "Burlington Road",
+                                                "operator": "Dublin Bus",
+                                                "route": "39",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "distance": 468,
+                                        "duration": 371,
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "}irdIp|ee@AEOgAIc@e@wCQaAQ}@AQ",
+                                                "emrdItoee@fAg@j@U",
+                                                "qirdIvmee@Gg@",
+                                                "yirdInlee@RGJGLOJOVe@NWh@_AP[HQPY\\i@FI",
+                                                "ybrdIdcee@Am@?SAaD?C"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3470339,
+                                                "lng": -6.2613653
+                                        },
+                                        "stop": {
+                                                "lat": 53.345913,
+                                                "lng": -6.2561462
+                                        }
+                                },
+                                {
+                                        "distance": 2131,
+                                        "duration": 355,
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "qcrdIz{de@R?F{I?_ARcK^sM@EBoA@EDiA@Q@GLmAV_BZu@L]FUFOHMRWFEFEZKPG\\SBADCn@YZOVMr@_@NGNwAV{B^wCR{CJeBDi@HkADg@De@@c@Fu@BWLsBPuCJaBFw@JuAHqAFiALuBJuBF}@@YDi@@ILiBHwAFeAXsDB]NaCHyABc@NoBP}CHa@AO?G?O?]Cg@CiACo@CcACm@Co@KcDMeCEaAOyB?_@?I@GGA"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3460128,
+                                                "lng": -6.2561361
+                                        },
+                                        "stop": {
+                                                "lat": 53.34190299999999,
+                                                "lng": -6.2267174
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Ringsend, stop 356",
+                                                        "time": 1596235043
+                                                },
+                                                "dep": {
+                                                        "name": "Townsend St, Garda Station",
+                                                        "time": 1596234688
+                                                },
+                                                "headsign": "Belarmine",
+                                                "operator": "Dublin Bus",
+                                                "route": "47",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "distance": 4,
+                                        "duration": 1,
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "{iqdI~c_e@FA"
+                                        ],
+                                        "start": {
+                                                "lat": 53.34190299999999,
+                                                "lng": -6.2267174
+                                        },
+                                        "stop": {
+                                                "lat": 53.3418611,
+                                                "lng": -6.226712099999999
+                                        }
+                                }
+                        ],
+                        "transit_index": [
+                                1,
+                                3
+                        ]
+                },
+                {
+                        "db_index": [
+                                1,
+                                3
+                        ],
+                        "distance": 4628,
+                        "duration": 2130,
+                        "end": {
+                                "address": "Ringsend, Co. Dublin, Ireland",
+                                "location": {
+                                        "lat": 53.3418611,
+                                        "lng": -6.226712099999999
+                                },
+                                "time": 1596235080
+                        },
+                        "start": {
+                                "address": "32 Blackhall Pl, Northside, Dublin 7, D07 P2W7, Ireland",
+                                "location": {
+                                        "lat": 53.34917610000001,
+                                        "lng": -6.2818628
+                                },
+                                "time": 1596232950
+                        },
+                        "steps": [
+                                {
+                                        "distance": 414,
+                                        "duration": 304,
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "kwrdIr|ie@~@NRFLBTDp@FH@b@H`@F\\H\\Fh@HB@JB`B`@",
+                                                "yhrdIt`je@Cb@MvBANGlBCdCAF?\\"
+                                        ],
+                                        "start": {
+                                                "lat": 53.34917610000001,
+                                                "lng": -6.2818628
+                                        },
+                                        "stop": {
+                                                "lat": 53.3470186,
+                                                "lng": -6.2847789
+                                        }
+                                },
+                                {
+                                        "distance": 1611,
+                                        "duration": 337,
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "ijrdIxnje@L??[@GBeCFmB@OLwBBc@FwBF}@LsCHiBZqCZsBP_BLeA\\yCXsC?CDi@Ba@N_CFcAF}@Dq@HmA?GDcADaBB}@?k@@a@?Y?wAEmBCm@AWCe@IiA?CKwA?IEs@Ee@OqBAWC]M_BOuBC[EkBCsAQwEGy@Ew@?MCq@IqAGo@QoAQuACMCQm@iEc@}CMF"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3470947,
+                                                "lng": -6.2847662
+                                        },
+                                        "stop": {
+                                                "lat": 53.34709609999999,
+                                                "lng": -6.2614082
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Bachelors Walk",
+                                                        "time": 1596233592
+                                                },
+                                                "dep": {
+                                                        "name": "Wolfe Tone Quay, Ellis Street",
+                                                        "time": 1596233255
+                                                },
+                                                "headsign": "Merrion Sq",
+                                                "operator": "Dublin Bus",
+                                                "route": "25b",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "distance": 468,
+                                        "duration": 371,
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "}irdIp|ee@AEOgAIc@e@wCQaAQ}@AQ",
+                                                "emrdItoee@fAg@j@U",
+                                                "qirdIvmee@Gg@",
+                                                "yirdInlee@RGJGLOJOVe@NWh@_AP[HQPY\\i@FI",
+                                                "ybrdIdcee@Am@?SAaD?C"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3470339,
+                                                "lng": -6.2613653
+                                        },
+                                        "stop": {
+                                                "lat": 53.345913,
+                                                "lng": -6.2561462
+                                        }
+                                },
+                                {
+                                        "distance": 2131,
+                                        "duration": 355,
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "qcrdIz{de@R?F{I?_ARcK^sM@EBoA@EDiA@Q@GLmAV_BZu@L]FUFOHMRWFEFEZKPG\\SBADCn@YZOVMr@_@NGNwAV{B^wCR{CJeBDi@HkADg@De@@c@Fu@BWLsBPuCJaBFw@JuAHqAFiALuBJuBF}@@YDi@@ILiBHwAFeAXsDB]NaCHyABc@NoBP}CHa@AO?G?O?]Cg@CiACo@CcACm@Co@KcDMeCEaAOyB?_@?I@GGA"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3460128,
+                                                "lng": -6.2561361
+                                        },
+                                        "stop": {
+                                                "lat": 53.34190299999999,
+                                                "lng": -6.2267174
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Ringsend, stop 356",
+                                                        "time": 1596235043
+                                                },
+                                                "dep": {
+                                                        "name": "Townsend St, Garda Station",
+                                                        "time": 1596234688
+                                                },
+                                                "headsign": "Belarmine",
+                                                "operator": "Dublin Bus",
+                                                "route": "47",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "distance": 4,
+                                        "duration": 1,
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "{iqdI~c_e@FA"
+                                        ],
+                                        "start": {
+                                                "lat": 53.34190299999999,
+                                                "lng": -6.2267174
+                                        },
+                                        "stop": {
+                                                "lat": 53.3418611,
+                                                "lng": -6.226712099999999
+                                        }
+                                }
+                        ],
+                        "transit_index": [
+                                1,
+                                3
+                        ]
+                },
+                {
+                        "db_index": [],
+                        "distance": 4891,
+                        "duration": 2142,
+                        "end": {
+                                "address": "Ringsend, Co. Dublin, Ireland",
+                                "location": {
+                                        "lat": 53.3418602,
+                                        "lng": -6.2267125
+                                },
+                                "time": 1596235623
+                        },
+                        "start": {
+                                "address": "32 Blackhall Pl, Northside, Dublin 7, D07 P2W7, Ireland",
+                                "location": {
+                                        "lat": 53.34917610000001,
+                                        "lng": -6.2818628
+                                },
+                                "time": 1596233481
+                        },
+                        "steps": [
+                                {
+                                        "distance": 497,
+                                        "duration": 373,
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "kwrdIr|ie@~@NRFLBTDp@FH@b@H`@F",
+                                                "qordIp~ie@JuBFaAHgBFkADaA",
+                                                "enrdIbqie@H}BFcC@K@G?]@u@",
+                                                "mmrdIxeie@|@JRDD@HB",
+                                                "kjrdIpfie@?SB]Jy@"
+                                        ],
+                                        "start": {
+                                                "lat": 53.34917610000001,
+                                                "lng": -6.2818628
+                                        },
+                                        "stop": {
+                                                "lat": 53.3470233,
+                                                "lng": -6.277794999999999
+                                        }
+                                },
+                                {
+                                        "distance": 3340,
+                                        "duration": 985,
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "kjrdIdcie@KABc@BsA@i@?cI?Q?QB]F_ALwAFu@Bg@FeAJsB@_@?Y?[AUS{C[}FUiD]yECk@C_ACi@Gk@Gq@C_@CYQ{BOmBw@oJEy@]_GKkBi@eKCi@Es@GcAW}COoBk@aGk@uFCOCQEOCMI[GWa@aCCYCU?OC{@Cg@ASCQCKIKOKcAi@IGGKCGCGCS?O?K@M@O?ELu@D[PeABY@KD]De@@a@Bi@@YBUBUDSDWDMHSBIBM@KBW@WBmADkBDgBFmBNoEB[@WBy@HoBLqG@WNgGHiE@_@Ds@J_DZaLFeCR_Jj@{SXgK@a@F_CAA"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3470962,
+                                                "lng": -6.2777904
+                                        },
+                                        "stop": {
+                                                "lat": 53.3483482,
+                                                "lng": -6.2291837
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "The Point",
+                                                        "time": 1596234840
+                                                },
+                                                "dep": {
+                                                        "name": "Smithfield",
+                                                        "time": 1596233855
+                                                },
+                                                "headsign": "The Point",
+                                                "operator": "Luas",
+                                                "route": "Red Line",
+                                                "type": "TRAM"
+                                        }
+                                },
+                                {
+                                        "distance": 1054,
+                                        "duration": 783,
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "{rrdIjs_e@?DC~@C^?JAL",
+                                                "esrdIjw_e@`@@J@tGt@",
+                                                "airdIdy_e@@WHyBF{B@_@@K?QBu@@I?O?S?OAMAK?KCM",
+                                                "khrdIpi_e@@A@A@??A@??A@A?A@A?A@A?A?A@A?A?A?A?A?A?A?A?A?A?EFEDADC@?D?H@B?PD`@B~@HB?jAJ`@FL?T?L?BHB@@BB?D@D@J@F@J@VBTB",
+                                                "qzqdI`j_e@CXEZ@H",
+                                                "yzqdI`l_e@DFB?zBJ|BLV?PA^CTGTG\\MzCqA",
+                                                "eiqdIli_e@OyB?_@?I@K"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3484566,
+                                                "lng": -6.229184699999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.3418602,
+                                                "lng": -6.2267125
+                                        }
+                                }
+                        ],
+                        "transit_index": [
+                                1
+                        ]
+                }
+        ],
+        "status": "OK"
+}

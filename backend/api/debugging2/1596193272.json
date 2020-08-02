@@ -1,0 +1,21 @@
+{
+        "geocoded_waypoints": [
+                {
+                        "geocoder_status": "OK",
+                        "place_id": "ChIJU9Y3FF0O5okRm_bmXU9s6wk",
+                        "types": [
+                                "street_address"
+                        ]
+                },
+                {
+                        "geocoder_status": "OK",
+                        "place_id": "ChIJM8kdoZQOZ0gRFzCyXZMx934",
+                        "types": [
+                                "neighborhood",
+                                "political"
+                        ]
+                }
+        ],
+        "routes": [],
+        "status": "ZERO_RESULTS"
+}
