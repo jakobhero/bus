@@ -1,0 +1,345 @@
+{
+        "connections": [
+                {
+                        "db_index": [
+                                1
+                        ],
+                        "distance": 2024,
+                        "duration": 1275,
+                        "end": {
+                                "address": "College Green, Dublin 2, Ireland",
+                                "location": {
+                                        "lat": 53.3443633,
+                                        "lng": -6.2593112
+                                },
+                                "time": 1595998185
+                        },
+                        "start": {
+                                "address": "Blackhall Pl, Northside, Dublin, Ireland",
+                                "location": {
+                                        "lat": 53.3486857,
+                                        "lng": -6.282002599999999
+                                },
+                                "time": 1595996910
+                        },
+                        "steps": [
+                                {
+                                        "distance": 1314,
+                                        "duration": 1016,
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "itrdIn}ie@TDp@FH@b@H`@F\\H\\Fh@HB@JB`B`@jAXND",
+                                                "}erdItaje@XiGNeDLuAJy@B[PyARuAh@qEJ}@PaB\\wCD{@Fs@B[?QBm@Bo@?IJoCLaDDyAHyC",
+                                                "e}qdIr_he@D?NCPCd@Id@Ob@KTEH?JAv@Eb@?",
+                                                "etqdIv}ge@I{AUmF",
+                                                "euqdIlsge@HGBCFM",
+                                                "otqdIrrge@EOUoB"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3486857,
+                                                "lng": -6.282002599999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.3437389,
+                                                "lng": -6.269377
+                                        }
+                                },
+                                {
+                                        "distance": 453,
+                                        "duration": 71,
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "wuqdIxnge@JE]wC]}CEe@IsAEoACgAA_@?U?s@?yB?eB?eA?g@C{AC{AAiA?QM@"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3438036,
+                                                "lng": -6.269414299999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.3443047,
+                                                "lng": -6.2628894
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Temple Bar, Central Bank",
+                                                        "time": 1595997997
+                                                },
+                                                "dep": {
+                                                        "name": "Lord Edward Street, stop 2002",
+                                                        "time": 1595997926
+                                                },
+                                                "headsign": "Eden Quay",
+                                                "operator": "Dublin Bus",
+                                                "route": "27",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "distance": 257,
+                                        "duration": 187,
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "mxqdIdffe@Au@ASB_@?i@CgAA{@A]CgA?]EoC?KAWIaAIY",
+                                                "uyqdIxpee@I?",
+                                                "_zqdIxpee@@]",
+                                                "}yqdIzoee@FAB?HC"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3442331,
+                                                "lng": -6.262905099999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.3443633,
+                                                "lng": -6.2593112
+                                        }
+                                }
+                        ],
+                        "transit_index": [
+                                1
+                        ]
+                },
+                {
+                        "db_index": [],
+                        "distance": 1963,
+                        "duration": 1479,
+                        "end": {
+                                "address": "College Green, Dublin 2, Ireland",
+                                "location": {
+                                        "lat": 53.3443633,
+                                        "lng": -6.2593112
+                                },
+                                "time": 1595998211
+                        },
+                        "start": {
+                                "address": "Blackhall Pl, Northside, Dublin, Ireland",
+                                "location": {
+                                        "lat": 53.3486857,
+                                        "lng": -6.282002599999999
+                                },
+                                "time": 1595996732
+                        },
+                        "steps": [
+                                {
+                                        "distance": 1963,
+                                        "duration": 1479,
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "itrdIn}ie@TDp@FH@b@H`@F\\H\\Fh@HB@JB`B`@jAXND",
+                                                "}erdItaje@XiGNeDLuAJy@B[PyARuAh@qEJ}@PaB\\wCD{@Fs@B[?QBm@Bo@?IJoCLaDDyAHyC?o@EsAEqAEeACc@IoBOeDMyCGkC",
+                                                "k_rdIvcge@nA_@h@MxBe@",
+                                                "wwqdIbage@EoACgAA_@?U?s@?yB?eB?eA?g@C{AC{AAiAAaAASB_@?i@CgAA{@A]CgA?]EoC?KAWIaAIY",
+                                                "uyqdIxpee@I?",
+                                                "_zqdIxpee@@]",
+                                                "}yqdIzoee@FAB?HC"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3486857,
+                                                "lng": -6.282002599999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.3443633,
+                                                "lng": -6.2593112
+                                        }
+                                }
+                        ],
+                        "transit_index": []
+                },
+                {
+                        "db_index": [],
+                        "distance": 2375,
+                        "duration": 1129,
+                        "end": {
+                                "address": "College Green, Dublin 2, Ireland",
+                                "location": {
+                                        "lat": 53.3443633,
+                                        "lng": -6.2593112
+                                },
+                                "time": 1595998957
+                        },
+                        "start": {
+                                "address": "Blackhall Pl, Northside, Dublin, Ireland",
+                                "location": {
+                                        "lat": 53.3486857,
+                                        "lng": -6.282002599999999
+                                },
+                                "time": 1595997828
+                        },
+                        "steps": [
+                                {
+                                        "distance": 449,
+                                        "duration": 321,
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "itrdIn}ie@H{AB]JsCNaD",
+                                                "_srdI~oie@YE",
+                                                "ysrdIxoie@D{@RgE",
+                                                "_srdItgie@d@HLBb@H",
+                                                "gprdIlhie@^e@d@s@",
+                                                "anrdIreie@RD|@JRDD@HB",
+                                                "kjrdIpfie@?SB]Jy@"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3486857,
+                                                "lng": -6.282002599999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.3470233,
+                                                "lng": -6.277794999999999
+                                        }
+                                },
+                                {
+                                        "distance": 1339,
+                                        "duration": 350,
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "kjrdIdcie@KABc@BsA@i@?cI?Q?QB]F_ALwAFu@Bg@FeAJsB@_@?Y?[AUS{C[}FUiD]yECk@C_ACi@Gk@Gq@C_@CYQ{BOmBw@oJEy@]_GKkBi@eKCi@Es@GcAW}CGB"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3470962,
+                                                "lng": -6.2777904
+                                        },
+                                        "stop": {
+                                                "lat": 53.3486529,
+                                                "lng": -6.2581687
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Abbey Street",
+                                                        "time": 1595998500
+                                                },
+                                                "dep": {
+                                                        "name": "Smithfield",
+                                                        "time": 1595998150
+                                                },
+                                                "headsign": "The Point",
+                                                "operator": "Luas",
+                                                "route": "Red Line",
+                                                "type": "TRAM"
+                                        }
+                                },
+                                {
+                                        "distance": 587,
+                                        "duration": 455,
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "ysrdI`kee@NjA",
+                                                "isrdIlmee@FAFC\\Kj@Ql@UZO",
+                                                "enrdIbkee@@JHh@Ht@Hd@",
+                                                "emrdItoee@fAg@j@U",
+                                                "qirdIvmee@BV",
+                                                "mirdInnee@T?\\Bx@Bx@?v@@L?tAAd@BN?RF",
+                                                "_}qdIboee@`@RFDFFFJDNBHFR@F",
+                                                "qzqdIfree@HEDAFELE",
+                                                "kyqdIrqee@IY",
+                                                "uyqdIxpee@I?",
+                                                "_zqdIxpee@@]",
+                                                "}yqdIzoee@FAB?HC"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3486063,
+                                                "lng": -6.2585733
+                                        },
+                                        "stop": {
+                                                "lat": 53.3443633,
+                                                "lng": -6.2593112
+                                        }
+                                }
+                        ],
+                        "transit_index": [
+                                1
+                        ]
+                },
+                {
+                        "db_index": [
+                                1
+                        ],
+                        "distance": 2919,
+                        "duration": 952,
+                        "end": {
+                                "address": "College Green, Dublin 2, Ireland",
+                                "location": {
+                                        "lat": 53.3443633,
+                                        "lng": -6.2593112
+                                },
+                                "time": 1596000088
+                        },
+                        "start": {
+                                "address": "Blackhall Pl, Northside, Dublin, Ireland",
+                                "location": {
+                                        "lat": 53.3486857,
+                                        "lng": -6.282002599999999
+                                },
+                                "time": 1595999136
+                        },
+                        "steps": [
+                                {
+                                        "distance": 109,
+                                        "duration": 77,
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "itrdIn}ie@TDp@FH@b@H`@F\\HLB"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3486857,
+                                                "lng": -6.282002599999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.3477145,
+                                                "lng": -6.2822356
+                                        }
+                                },
+                                {
+                                        "distance": 2508,
+                                        "duration": 658,
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "cnrdIf~ie@CXfDx@B_@j@wKfAgJLeA\\yCXsC?CDi@Ba@N_CFcAF}@Dq@HmA?GDcADaBB}@?k@@a@?Y?wAEmBCm@AWCe@IiA?CKwA?IEs@Ee@OqBAWC]M_BOuBC[EkBCsAQwEGy@Ew@?MCq@IqAGo@QoAQuACMCQm@iEc@}C@A}@kGq@sDzBmA`@]n@u@zBqDNOJARLf@zBh@bBl@xARV`BvAjA{@PCt@Af@LV@LIVe@vBsO?AIE"
+                                        ],
+                                        "start": {
+                                                "lat": 53.34770409999999,
+                                                "lng": -6.2821238
+                                        },
+                                        "stop": {
+                                                "lat": 53.3426561,
+                                                "lng": -6.256341099999999
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Nassau Street",
+                                                        "time": 1595999872
+                                                },
+                                                "dep": {
+                                                        "name": "Blackhall Place, stop 1715",
+                                                        "time": 1595999214
+                                                },
+                                                "headsign": "Wilton Terrace",
+                                                "operator": "Dublin Bus",
+                                                "route": "37",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "distance": 302,
+                                        "duration": 214,
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "unqdIn_ee@CP?@EVQ|@Kt@ELGZEZ?DCRALEZU`C",
+                                                "sqqdIzlee@K?AB?@A@CVALEHGDI?M@I?OAK?_@ASASAO@O@IDQLEDGB"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3426683,
+                                                "lng": -6.25672
+                                        },
+                                        "stop": {
+                                                "lat": 53.3443633,
+                                                "lng": -6.2593112
+                                        }
+                                }
+                        ],
+                        "transit_index": [
+                                1
+                        ]
+                }
+        ],
+        "status": "OK"
+}

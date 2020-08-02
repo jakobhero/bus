@@ -1,0 +1,45 @@
+[
+        [
+                {
+                        "direction": 2,
+                        "route": "39",
+                        "start": "1715",
+                        "stop": "335"
+                },
+                {
+                        "direction": 1,
+                        "route": "1",
+                        "start": "340",
+                        "stop": "356"
+                }
+        ],
+        [
+                {
+                        "direction": 1,
+                        "route": "145",
+                        "start": "1476",
+                        "stop": "334"
+                },
+                {
+                        "direction": 1,
+                        "route": "1",
+                        "start": "340",
+                        "stop": "356"
+                }
+        ],
+        [
+                {
+                        "direction": 2,
+                        "route": "39A",
+                        "start": "1715",
+                        "stop": "315"
+                },
+                {
+                        "direction": 1,
+                        "route": "1",
+                        "start": "340",
+                        "stop": "356"
+                }
+        ],
+        []
+]

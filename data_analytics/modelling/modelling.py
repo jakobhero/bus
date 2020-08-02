@@ -17,19 +17,20 @@ def daystamp_converter(time):
 
 if __name__=='__main__':
     #check provided arguments and matches them with project member
-    argvs=sys.argv
-    if(len(argvs)<=1 or argvs[1].lower() not in ["yuqian","mohamed","jakob"]):
-        print("Please provide your first name as command line argument when running the Script.")
-        quit()
-    name=argvs[1].lower()
+    # argvs=sys.argv
+    # if(len(argvs)<=1 or argvs[1].lower() not in ["yuqian","mohamed","jakob"]):
+    #     print("Please provide your first name as command line argument when running the Script.")
+    #     quit()
+    # name=argvs[1].lower()
     
     #read in the assignments of the models which were computed in pipeline_automation.ipynb
     with open('assignment.json') as json_file:
         assignment = json.load(json_file)
     
     #match assignments with command line argument.
-    models=assignment[name]
-    
+    # models=assignment[name]
+    models=assignment["yuqian"]+assignment["mohamed"]+assignment["jakob"]
+
     #for testing purposes only
     #models=[['46A',1]]
 
@@ -39,6 +40,7 @@ if __name__=='__main__':
 
     count=0
     length=len(models)
+    features={}
 
     #train each model in the assignment
     for model in models:
@@ -106,11 +108,19 @@ if __name__=='__main__':
         X=df_test_prior
         X_train,X_test,y_train,y_test=train_test_split(X,y_prior,random_state=1)
 
+        #store features
+        sched_features={
+            "weekday":list(df_weekday.columns),
+            "month":list(df_month.columns),
+            "hour":list(df_hour.columns),
+            "stops":list(df_stops.columns)
+        }
+
         #train and dump model for scheduled duration.
-        reg = LinearRegression().fit(X_train, y_train)
-        print(f"Score of schedule prediction: {reg.score(X_test,y_test):.2f}.")
-        filename = "schedule_preds/"+line+"_"+str(direction)+".sav"
-        pickle.dump(reg, open(filename, 'wb'))        
+        # reg = LinearRegression().fit(X_train, y_train)
+        # print(f"Score of schedule prediction: {reg.score(X_test,y_test):.2f}.")
+        # filename = "schedule_preds/"+line+"_"+str(direction)+".sav"
+        # pickle.dump(reg, open(filename, 'wb'))        
 
         #set up model for actual duration.
         y=df_ml["dur_a"]
@@ -119,9 +129,35 @@ if __name__=='__main__':
         X=df_test
         X_train,X_test,y_train,y_test=train_test_split(X,y,random_state=1)
 
+        #store features in dictionary
+        actual_features={
+            "temp":None,
+            "dur_s":None,
+            "weather":list(df_weather.columns),
+            "weekday":list(df_weekday.columns),
+            "month":list(df_month.columns),
+            "hour":list(df_hour.columns)            
+        }
+        if line in features:
+            features[line][str(direction)]={
+                "schedule":sched_features,
+                "actual":actual_features
+            }
+        else:
+            features[line]={
+                str(direction):{
+                    "schedule":sched_features,
+                    "actual":actual_features
+                }
+            }        
+
         #train and dump model for actual duration.
-        reg = LinearRegression().fit(X_train, y_train)
-        print(f"Score of duration prediction: {reg.score(X_test,y_test):.2f}.")
-        filename = "duration_preds/"+line+"_"+str(direction)+".sav"
-        pickle.dump(reg, open(filename, 'wb'))
-        print("")
+        # reg = LinearRegression().fit(X_train, y_train)
+        # print(f"Score of duration prediction: {reg.score(X_test,y_test):.2f}.")
+        # filename = "duration_preds/"+line+"_"+str(direction)+".sav"
+        # pickle.dump(reg, open(filename, 'wb'))
+        # print("")
+    
+    #dump feature sets in json
+    with open('features.json', 'w') as outfile:
+        json.dump(features, outfile)

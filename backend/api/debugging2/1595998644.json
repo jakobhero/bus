@@ -1,0 +1,382 @@
+{
+        "connections": [
+                {
+                        "db_index": [
+                                1
+                        ],
+                        "distance": 2919,
+                        "duration": 952,
+                        "end": {
+                                "address": "College Green, Dublin 2, Ireland",
+                                "location": {
+                                        "lat": 53.3443633,
+                                        "lng": -6.2593112
+                                },
+                                "time": 1596000088
+                        },
+                        "start": {
+                                "address": "Blackhall Pl, Northside, Dublin, Ireland",
+                                "location": {
+                                        "lat": 53.3486857,
+                                        "lng": -6.282002599999999
+                                },
+                                "time": 1595999136
+                        },
+                        "steps": [
+                                {
+                                        "distance": 109,
+                                        "duration": 77,
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "itrdIn}ie@TDp@FH@b@H`@F\\HLB"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3486857,
+                                                "lng": -6.282002599999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.3477145,
+                                                "lng": -6.2822356
+                                        }
+                                },
+                                {
+                                        "distance": 2508,
+                                        "duration": 658,
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "cnrdIf~ie@CXfDx@B_@j@wKfAgJLeA\\yCXsC?CDi@Ba@N_CFcAF}@Dq@HmA?GDcADaBB}@?k@@a@?Y?wAEmBCm@AWCe@IiA?CKwA?IEs@Ee@OqBAWC]M_BOuBC[EkBCsAQwEGy@Ew@?MCq@IqAGo@QoAQuACMCQm@iEc@}C@A}@kGq@sDzBmA`@]n@u@zBqDNOJARLf@zBh@bBl@xARV`BvAjA{@PCt@Af@LV@LIVe@vBsO?AIE"
+                                        ],
+                                        "start": {
+                                                "lat": 53.34770409999999,
+                                                "lng": -6.2821238
+                                        },
+                                        "stop": {
+                                                "lat": 53.3426561,
+                                                "lng": -6.256341099999999
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Nassau Street",
+                                                        "time": 1595999872
+                                                },
+                                                "dep": {
+                                                        "name": "Blackhall Place, stop 1715",
+                                                        "time": 1595999214
+                                                },
+                                                "headsign": "Wilton Terrace",
+                                                "operator": "Dublin Bus",
+                                                "route": "37",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "distance": 302,
+                                        "duration": 214,
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "unqdIn_ee@CP?@EVQ|@Kt@ELGZEZ?DCRALEZU`C",
+                                                "sqqdIzlee@K?AB?@A@CVALEHGDI?M@I?OAK?_@ASASAO@O@IDQLEDGB"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3426683,
+                                                "lng": -6.25672
+                                        },
+                                        "stop": {
+                                                "lat": 53.3443633,
+                                                "lng": -6.2593112
+                                        }
+                                }
+                        ],
+                        "transit_index": [
+                                1
+                        ]
+                },
+                {
+                        "db_index": [
+                                1
+                        ],
+                        "distance": 2353,
+                        "duration": 893,
+                        "end": {
+                                "address": "College Green, Dublin 2, Ireland",
+                                "location": {
+                                        "lat": 53.3443633,
+                                        "lng": -6.2593112
+                                },
+                                "time": 1596000016
+                        },
+                        "start": {
+                                "address": "Blackhall Pl, Northside, Dublin, Ireland",
+                                "location": {
+                                        "lat": 53.3486857,
+                                        "lng": -6.282002599999999
+                                },
+                                "time": 1595999123
+                        },
+                        "steps": [
+                                {
+                                        "distance": 109,
+                                        "duration": 77,
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "itrdIn}ie@TDp@FH@b@H`@F\\HLB"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3486857,
+                                                "lng": -6.282002599999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.3477145,
+                                                "lng": -6.2822356
+                                        }
+                                },
+                                {
+                                        "distance": 1858,
+                                        "duration": 523,
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "cnrdIf~ie@CXfDx@B_@j@wKfAgJLeA\\yCXsC?CDi@Ba@N_CFcAF}@Dq@HmA?GDcADaBB}@?k@@a@?Y?wAEmBCm@AWCe@IiA?CKwA?IEs@Ee@OqBAWC]M_BOuBC[EkBCsAQwEGy@Ew@?MCq@IqAGo@QoAQuACMCQm@iEc@}CAEOgAIc@e@wCQaAQ}@AQIe@NEHIFCz@]JGJERGJGLOJOVe@NW?AKU"
+                                        ],
+                                        "start": {
+                                                "lat": 53.34770409999999,
+                                                "lng": -6.2821238
+                                        },
+                                        "stop": {
+                                                "lat": 53.3465812,
+                                                "lng": -6.2581256
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "D'Olier Street",
+                                                        "time": 1595999724
+                                                },
+                                                "dep": {
+                                                        "name": "Blackhall Place, stop 1715",
+                                                        "time": 1595999201
+                                                },
+                                                "headsign": "UCD",
+                                                "operator": "Dublin Bus",
+                                                "route": "39a",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "distance": 386,
+                                        "duration": 291,
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "wfrdI~hee@?@OVWd@KNAP?J?L?J@F@F@DBFHL",
+                                                "ygrdIrnee@x@Bx@?v@@L?tAAd@BN?RF",
+                                                "_}qdIboee@`@RFDFFFJDNBHFR@F",
+                                                "qzqdIfree@HEDAFELE",
+                                                "kyqdIrqee@IY",
+                                                "uyqdIxpee@I?",
+                                                "_zqdIxpee@@]",
+                                                "}yqdIzoee@FAB?HC"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3465171,
+                                                "lng": -6.2582432
+                                        },
+                                        "stop": {
+                                                "lat": 53.3443633,
+                                                "lng": -6.2593112
+                                        }
+                                }
+                        ],
+                        "transit_index": [
+                                1
+                        ]
+                },
+                {
+                        "db_index": [
+                                1
+                        ],
+                        "distance": 3280,
+                        "duration": 1081,
+                        "end": {
+                                "address": "College Green, Dublin 2, Ireland",
+                                "location": {
+                                        "lat": 53.3443633,
+                                        "lng": -6.2593112
+                                },
+                                "time": 1595999928
+                        },
+                        "start": {
+                                "address": "Blackhall Pl, Northside, Dublin, Ireland",
+                                "location": {
+                                        "lat": 53.3486857,
+                                        "lng": -6.282002599999999
+                                },
+                                "time": 1595998847
+                        },
+                        "steps": [
+                                {
+                                        "distance": 359,
+                                        "duration": 263,
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "itrdIn}ie@TDp@FH@b@H`@F\\H\\Fh@HB@JB`B`@",
+                                                "yhrdIt`je@Cb@MvBANGlBCdCAF?\\"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3486857,
+                                                "lng": -6.282002599999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.3470186,
+                                                "lng": -6.2847789
+                                        }
+                                },
+                                {
+                                        "distance": 2579,
+                                        "duration": 544,
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "ijrdIxnje@L??[@GBeCFmB@OLwBBc@FwBF}@LsCHiBZqCZsBP_BLeA\\yCXsC?CDi@Ba@N_CFcAF}@Dq@HmA?GDcADaBB}@?k@@a@?Y?wAEmBCm@AWCe@IiA?CKwA?IEs@Ee@OqBAWC]M_BOuBC[EkBCsAQwEGy@Ew@?MCq@IqAGo@QoAQuACMCQm@iEc@}C@A}@kGq@sDzBmA`@]n@u@zBqDNOJARLVjAj@xBz@rBb@j@pAbAjA{@PCt@Af@LV@ZWHWbC}P?AKG"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3470947,
+                                                "lng": -6.2847662
+                                        },
+                                        "stop": {
+                                                "lat": 53.3426053,
+                                                "lng": -6.2561202
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Nassau Street, stop 406",
+                                                        "time": 1595999655
+                                                },
+                                                "dep": {
+                                                        "name": "Wolfe Tone Quay, Ellis Street",
+                                                        "time": 1595999111
+                                                },
+                                                "headsign": "Merrion Sq",
+                                                "operator": "Dublin Bus",
+                                                "route": "67",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "distance": 342,
+                                        "duration": 248,
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "{mqdI~{de@EXEZQjA?@EVQ|@Kt@ELGZEZ?DCRALEZU`C",
+                                                "sqqdIzlee@K?AB?@A@CVALEHGDI?M@I?OAK?_@ASASAO@O@IDQLEDGB"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3425407,
+                                                "lng": -6.256158
+                                        },
+                                        "stop": {
+                                                "lat": 53.3443633,
+                                                "lng": -6.2593112
+                                        }
+                                }
+                        ],
+                        "transit_index": [
+                                1
+                        ]
+                },
+                {
+                        "db_index": [
+                                1
+                        ],
+                        "distance": 2353,
+                        "duration": 851,
+                        "end": {
+                                "address": "College Green, Dublin 2, Ireland",
+                                "location": {
+                                        "lat": 53.3443633,
+                                        "lng": -6.2593112
+                                },
+                                "time": 1596000603
+                        },
+                        "start": {
+                                "address": "Blackhall Pl, Northside, Dublin, Ireland",
+                                "location": {
+                                        "lat": 53.3486857,
+                                        "lng": -6.282002599999999
+                                },
+                                "time": 1595999752
+                        },
+                        "steps": [
+                                {
+                                        "distance": 109,
+                                        "duration": 77,
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "itrdIn}ie@TDp@FH@b@H`@F\\HLB"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3486857,
+                                                "lng": -6.282002599999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.3477145,
+                                                "lng": -6.2822356
+                                        }
+                                },
+                                {
+                                        "distance": 1858,
+                                        "duration": 481,
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "cnrdIf~ie@CXfDx@B_@j@wKfAgJLeA\\yCXsC?CDi@Ba@N_CFcAF}@Dq@HmA?GDcADaBB}@?k@@a@?Y?wAEmBCm@AWCe@IiA?CKwA?IEs@Ee@OqBAWC]M_BOuBC[EkBCsAQwEGy@Ew@?MCq@IqAGo@QoAQuACMCQm@iEc@}CAEOgAIc@e@wCQaAQ}@AQIe@NEHIFCz@]JGJERGJGLOJOVe@NW?AKU"
+                                        ],
+                                        "start": {
+                                                "lat": 53.34770409999999,
+                                                "lng": -6.2821238
+                                        },
+                                        "stop": {
+                                                "lat": 53.3465812,
+                                                "lng": -6.2581256
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "D'Olier Street",
+                                                        "time": 1596000311
+                                                },
+                                                "dep": {
+                                                        "name": "Blackhall Place, stop 1715",
+                                                        "time": 1595999830
+                                                },
+                                                "headsign": "Burlington Road",
+                                                "operator": "Dublin Bus",
+                                                "route": "39",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "distance": 386,
+                                        "duration": 291,
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "wfrdI~hee@?@OVWd@KNAP?J?L?J@F@F@DBFHL",
+                                                "ygrdIrnee@x@Bx@?v@@L?tAAd@BN?RF",
+                                                "_}qdIboee@`@RFDFFFJDNBHFR@F",
+                                                "qzqdIfree@HEDAFELE",
+                                                "kyqdIrqee@IY",
+                                                "uyqdIxpee@I?",
+                                                "_zqdIxpee@@]",
+                                                "}yqdIzoee@FAB?HC"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3465171,
+                                                "lng": -6.2582432
+                                        },
+                                        "stop": {
+                                                "lat": 53.3443633,
+                                                "lng": -6.2593112
+                                        }
+                                }
+                        ],
+                        "transit_index": [
+                                1
+                        ]
+                }
+        ],
+        "status": "OK"
+}

@@ -1,0 +1,23 @@
+{
+        "geocoded_waypoints": [
+                {
+                        "geocoder_status": "OK",
+                        "place_id": "ChIJn5Z2DS4MZ0gR9D7ka27fsGk",
+                        "types": [
+                                "street_address"
+                        ]
+                },
+                {
+                        "geocoder_status": "OK",
+                        "place_id": "ChIJ70uPDG29-IcRZdvohOrutR0",
+                        "types": [
+                                "establishment",
+                                "park",
+                                "point_of_interest",
+                                "tourist_attraction"
+                        ]
+                }
+        ],
+        "routes": [],
+        "status": "ZERO_RESULTS"
+}

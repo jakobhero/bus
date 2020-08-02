@@ -1,23 +1,29 @@
-import json
-import os
-import requests
-import datetime
-import numpy as np
-import time
+import json, os, requests, datetime, numpy as np, time, pickle
 from sklearn.neighbors import KDTree
 from flask_restful import Resource, Api, reqparse
 from sqlalchemy.types import String
 
-from .models import Stops as StopsModel
+from .models import Stops as StopsModel, StopsRoute as SRModel
 
 api = Api()
 
+stops = None
+coords = None
+tree = None
+stops_dict = None
+models = None
+features = None
+weather = None
 
 class Stops(Resource):
     """API Endpoint for Dublin Bus stop information. Returns all stops that contain specified substring in either
     ID or name."""
 
     def get(self):
+        global stops_dict
+
+        if stops_dict==None:
+            build_stops_dict()
         parser = reqparse.RequestParser()
         parser.add_argument('substring', type=str)
         frontend_params = parser.parse_args()
@@ -34,11 +40,23 @@ class Stops(Resource):
             looking_for = '%'+looking_for
         print(looking_for)
         for count, row in enumerate(StopsModel.query.filter(StopsModel.stop_id.ilike(looking_for)).all()[:3]):
-            response.append({'stop_id': row.stop_id, 'fullname': row.name,
-                             'lat': row.lat, 'lng': row.lon, 'key': count + row.lat-row.lon})
+            response.append({
+                'stop_id': row.stop_id,
+                'fullname': row.name,
+                'lat': row.lat,
+                'lng': row.lon,
+                'key': count + row.lat-row.lon,
+                'lines':stops_dict[row.stop_id]
+                })
         for count, row in enumerate(StopsModel.query.filter(StopsModel.name.ilike(looking_for)).all()[:3]):
-            response.append({'stop_id': row.stop_id, 'fullname': row.name,
-                             'lat': row.lat, 'lng': row.lon, 'key': count + row.lat-row.lon})
+            response.append({
+                'stop_id': row.stop_id,
+                'fullname': row.name,
+                'lat': row.lat,
+                'lng': row.lon,
+                'key': count + row.lat-row.lon,
+                'lines':stops_dict[row.stop_id]
+                })
         return {"stops": response, "status": "OK"}
 
 
@@ -48,6 +66,8 @@ class NearestNeighbor(Resource):
     all bus stops are returned. For the calculation of the closest stops, a KD tree is used to find results in O(log(n))."""
 
     def get(self):
+        global stops
+        global tree
 
         # parse arguments "lat", "lon", "k" in request
         parser = reqparse.RequestParser()
@@ -56,12 +76,8 @@ class NearestNeighbor(Resource):
         parser.add_argument('k', type=int)
         frontend_params = parser.parse_args()
 
-        stops = []
-        coords = np.empty([0, 2])  # necessary for KD tree data structure
-        for stop in StopsModel.query.all():
-            stops.append({'stopid': stop.stop_id, 'fullname': stop.name,
-                          'lat': stop.lat, 'lng': stop.lon})
-            coords = np.append(coords, [[stop.lat, stop.lon]], axis=0)
+        if stops==None:
+            build_tree()
 
         # check for required params
         if frontend_params["lat"] == None or frontend_params["lng"] == None:
@@ -79,16 +95,7 @@ class NearestNeighbor(Resource):
         except:
             return {"status": "Error: Coordinates could not be parsed to float"}
 
-        # set up KD tree
-        tree = KDTree(coords)
-
-        # calculate the nearest neighbours
-        nearest_dist, nearest_ind = tree.query(target, k=k)
-
-        # populate response with rows from stops specified by calculated indices
-        response = []
-        for ind in nearest_ind[0]:
-            response.append(stops[ind])
+        response=nearest_stations(target,stops,tree,k)
 
         return {"stops": response, "status": "OK"}
         # http://localhost/stops?lat=53.305544&lon=-6.237866&k=10
@@ -231,7 +238,7 @@ class Directions(Resource):
             "departure_time": int(time.time()),
             "alternatives": "true"
         }
-        if "time" in frontend_params:  # overwrite default value if time is specified
+        if frontend_params["time"] != None:  # overwrite default value if time is specified
             params["departure_time"] = frontend_params["time"]
 
         # make request-
@@ -247,6 +254,21 @@ class Directions(Resource):
 
         # process response
         res = directions_parser(res, params["departure_time"])
+
+        # NEXT BLOCK ONLY FOR DEVELOPMENT PURPOSES
+        # store results for debugging purposes
+        now = str(int(datetime.datetime.now().timestamp()))
+        with open('api/debugging2/'+now+'.json', 'w') as outfile:
+            json.dump(res, outfile, sort_keys=True, indent=8)
+        
+        model_info=find_model(res)
+
+        # NEXT BLOCK ONLY FOR DEVELOPMENT PURPOSES
+        # store results for debugging purposes        
+        with open('api/debugging3/'+now+'.json', 'w') as outfile:
+            json.dump(model_info, outfile, sort_keys=True, indent=8)
+
+        prediction=get_prediction(model_info)
 
         return res
 
@@ -357,6 +379,281 @@ def directions_parser(directions, time):
 
     return {"connections": connections, "status": status}
 
+def build_tree():
+    """build KDTree to search through stops with log(n) time complexity.
+    For this, the global variables stops, coords and tree are populated"""
+    global stops
+    global coords
+    global tree
+    global stops_dict
+
+    if stops_dict==None:
+        build_stops_dict()
+
+    stops=[]
+    coords=np.empty([0, 2])
+    for stop in StopsModel.query.all():
+        stops.append({
+            'stopid': stop.stop_id,
+            'fullname': stop.name,
+            'lat': stop.lat,
+            'lng': stop.lon,
+            'lines':stops_dict[stop.stop_id]
+            })
+        coords = np.append(coords, [[stop.lat, stop.lon]], axis=0)
+    tree=KDTree(coords)
+
+def nearest_stations(target, stops, tree, k):
+    # calculate the nearest neighbours
+    if tree==None:
+        build_tree()
+    nearest_dist, nearest_ind = tree.query(target, k=k)
+
+    # populate response with rows from stops specified by calculated indices
+    response = []
+    for ind in nearest_ind[0]:
+        response.append(stops[ind])
+    return response
+
+def find_model(directions):
+    global stops
+    global tree
+    global models
+
+    if stops==None:
+        build_tree()
+        print("Tree is built!")
+
+    if models==None:
+        build_models()
+        print("Models are loaded!")
+
+    if directions["status"]!="OK":
+        return directions
+    
+    model_data=[]
+    for connection in directions["connections"]:
+        model_data_row=[]
+        db_index=connection["db_index"]
+        for index in db_index:
+            route=connection["steps"][index]
+            google_start=[[route["start"]["lat"],route["start"]["lng"]]]
+            google_stop=[[route["stop"]["lat"],route["stop"]["lng"]]]
+            google_route=route["transit"]["route"].upper()
+            start_stations=nearest_stations(google_start,stops,tree,30)
+            stop_stations=nearest_stations(google_stop,stops,tree,30)
+            start_index=route_matcher(start_stations,google_route)
+            stop_index=route_matcher(stop_stations,google_route)
+            print(f"Detected options in start are {start_index}.")
+            print(f"Detected options in start are {stop_index}.")
+            response=model_finder(start_stations,stop_stations,start_index,stop_index,google_route)
+            if response!=None:
+                response["start"]["time"]=route["transit"]["dep"]["time"]
+                response["stop"]["time"]=route["transit"]["arr"]["time"]
+                print(response)
+            model_data_row.append(response)
+        model_data.append(model_data_row)
+    return model_data
+
+def get_prediction(model_info):
+    global features
+
+    if features==None:
+        load_features()
+        print("Features loaded.")
+
+    predictions=[]
+    for route in model_info:
+        predictions_row=[]
+        for leg in route:
+            print(f"Retrieving prediction for route {leg['route']}, direction {leg['direction']}.")
+
+            #load pickle files
+            model_name=leg["route"]+"_"+str(leg["direction"])+".sav"
+            sched=pickle.load( open( "schedule_preds/"+model_name, "rb" ))
+            actual=pickle.load(open("duration_preds/"+model_name, "rb"))
+
+            #retrieve feature sets for line and direction
+            feature_set=features[str(leg["route"])][str(leg["direction"])]
+            
+            #retrieve time input
+            dt_start=datetime.datetime.fromtimestamp(leg["start"]["time"])
+            dt_stop=datetime.datetime.fromtimestamp(leg["stop"]["time"])
+            wd_start,m_start,h_start=dt_start.weekday(),dt_start.month,dt_start.hour
+            wd_stop,m_stop,h_stop=dt_stop.weekday(),dt_stop.month,dt_stop.hour
+            
+            #transform input for schedule prediction
+            sched_input_start=sched_input_create(wd_start,m_start,h_start,int(leg["start"]["id"]),feature_set["schedule"])
+            sched_input_stop=sched_input_create(wd_stop,m_stop,h_stop,int(leg["stop"]["id"]),feature_set["schedule"])
+            
+            #predict the scheduled duration of the trip
+            sched_start,sched_stop=sched.predict([sched_input_start,sched_input_stop])
+            print(f"Prediction for trip duration (scheduled): {(sched_stop-sched_start)/60:.2f} mins.")
+            
+            #retrieve weather input
+            owm_data=get_weather(leg["start"]["time"])
+            weather=owm_data["weather"][0]["main"]
+            temp=owm_data["main"]["temp"]
+            
+            #transform input for actual duration prediction
+            dur_input_start=dur_input_create(temp,sched_start,weather,wd_start,m_start,h_start,feature_set["actual"])
+            dur_input_stop=dur_input_create(temp,sched_stop,weather,wd_stop,m_stop,h_stop,feature_set["actual"])   
+            
+            #predict the actual duration of the trip
+            dur_start,dur_stop=actual.predict([dur_input_start,dur_input_stop])
+            print(f"Prediction for trip duration (actual): {(dur_stop-dur_start)/60:.2f} mins.")
+            print("")
+            predictions_row.append({
+                "schedule":round(sched_stop-sched_start),
+                "duration":round(dur_stop-dur_start)
+                })
+        predictions.append(predictions_row)
+    return predictions               
+
+def load_features():
+    """function loads global variable features, which holds the feature sets for each model, from json file."""
+    global features
+
+    with open('features.json') as json_file:
+        features = json.load(json_file)
+
+def build_models():
+    """loads models into global variable models"""
+    global models
+    models={
+        "schedule":{},
+        "duration":{}
+    }
+    for model in SRModel.query.distinct(SRModel.line_id,SRModel.direction):
+        model_name=str(model.line_id)+"_"+str(model.direction)+".sav"
+        p_schedule = open("schedule_preds/"+model_name, 'rb')
+        p_duration = open("duration_preds/"+model_name, 'rb')
+        if  str(model.line_id) not in models["schedule"]:
+            models["schedule"][str(model.line_id)]={
+                    model.direction:pickle.load(p_schedule)
+            }
+            models["duration"][str(model.line_id)]={
+                    model.direction:pickle.load(p_duration)
+            }
+        else:
+            models["schedule"][str(model.line_id)][model.direction]=pickle.load(p_schedule)
+            models["duration"][str(model.line_id)][model.direction]=pickle.load(p_duration)
+
+def route_matcher(stations,route):
+    """implement logic to match route from google directions with closest stations from search.
+    requires that stops response includes route info."""
+    global stops_dict
+
+    if stops_dict==None:
+        build_stops_dict()
+
+    response=[]
+    index=0
+    for station in stations:
+        if route in station["lines"]:
+            response.append(index)
+        index+=1
+    return response
+
+def model_finder(start_stations, stop_stations, start_index, stop_index, route):
+    for start in start_index:
+        start_info=start_stations[start]["lines"][route]
+        for stop in stop_index:
+            stop_info=stop_stations[stop]["lines"][route]
+            print(f"Trying to match route {route}:{start_info} with {route}:{stop_info}.")
+            for direction in start_info:
+                if direction in stop_info:
+                    if start_info[direction]<stop_info[direction]:
+                        return {
+                            "route":route,
+                            "direction":direction,
+                            "start":{
+                                "id":start_stations[start]["stopid"]
+                            },
+                            "stop":{
+                                "id":stop_stations[stop]["stopid"]
+                            }
+                        }
+
+def build_stops_dict():
+    global stops_dict
+    stops_dict={}
+    for stop in SRModel.query.all():
+        if str(stop.stoppoint_id) not in stops_dict:
+            stops_dict[str(stop.stoppoint_id)]={
+                stop.line_id:{
+                    stop.direction:stop.progr_number
+                }
+            }
+        elif stop.line_id not in stops_dict[str(stop.stoppoint_id)]:
+            stops_dict[str(stop.stoppoint_id)][stop.line_id]={
+                stop.direction:stop.progr_number
+            }
+        elif stop.direction not in stops_dict[str(stop.stoppoint_id)][stop.line_id]:
+            stops_dict[str(stop.stoppoint_id)][stop.line_id][stop.direction]=stop.progr_number
+
+def get_weather(timestamp):
+    """retrieves weather by checking timestamp and either returning cached value, calling update script or do TO DO behavior."""
+    global weather
+    now=round(datetime.datetime.now().timestamp())
+
+    #check to see if global variable weather holds data, if not call the update script.
+    if weather==None:
+        update_weather()
+        print("Weather is loaded.")
+    
+    #if the timestamp for the prediction is within 30 mins, get the prediction for now
+    if abs(timestamp-now)<=(30*60):
+        #update the weather if the cached value is older than 15 mins.
+        if abs(now-weather["dt"])>=(15*60):
+            update_weather()
+        return weather
+    #TO DO: implement logic for average weather prediction for timestamp specified if it isn't near current time
+    else:
+        #for now, we just return the current weather (suboptimal)
+        if abs(now-weather["dt"])>=(15*60):
+            update_weather()
+        return weather
+
+def update_weather():
+    """sends request to open weather map API for dublin, ireland and stores the response in global variable weather."""
+    global weather
+
+    url="https://api.openweathermap.org/data/2.5/weather"
+    params={
+        "q":"dublin,leinster,ireland",
+        "appid":os.environ.get("OWM_KEY"),
+        "units":"metric"
+    }
+    weather_req=requests.get(url=url,params=params)
+    weather=weather_req.json()
+        
+def sched_input_create(weekday,month,hour,stop,feature_set):
+    """Transforms necessary data for schedule predictor in appropriate format for model."""
+    wd_input=ordinal_match(weekday,feature_set["weekday"])        
+    month_input=ordinal_match(month,feature_set["month"])
+    hour_input=ordinal_match(hour,feature_set["hour"])
+    stop_input=ordinal_match(stop,feature_set["stops"])       
+    return wd_input+month_input+hour_input+stop_input
+
+def dur_input_create(temp,dur_s,weather,weekday,month,hour,feature_set):
+    """Transforms necessary data for duration predictor in appropriate format for model."""
+    weather_input=ordinal_match(weather,feature_set["weather"])
+    wd_input=wd_input=ordinal_match(weekday,feature_set["weekday"])
+    month_input=ordinal_match(month,feature_set["month"])
+    hour_input=ordinal_match(hour,feature_set["hour"])
+    return [temp,dur_s]+weather_input+wd_input+month_input+hour_input
+
+def ordinal_match(value,cardinality):
+    """Transforms ordinal feature in format suitable for modelling by retrieving the
+    cardinality of the binary encoded feature of the model and then
+    setting the correct column "one-hot"."""
+    response=[0]*len(cardinality)
+    try:
+        response[cardinality.index(value)]=1
+    except:
+        print(f"Could not match {str(value)}.")
+    return response    
 
 api.add_resource(Directions, '/directions', endpoint='direction')
 api.add_resource(NearestNeighbor, '/nearestneighbor',
