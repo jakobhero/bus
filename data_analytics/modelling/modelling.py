@@ -17,22 +17,19 @@ def daystamp_converter(time):
 
 if __name__=='__main__':
     #check provided arguments and matches them with project member
-    # argvs=sys.argv
-    # if(len(argvs)<=1 or argvs[1].lower() not in ["yuqian","mohamed","jakob"]):
-    #     print("Please provide your first name as command line argument when running the Script.")
-    #     quit()
-    # name=argvs[1].lower()
+    argvs=sys.argv
+    if(len(argvs)<=1 or argvs[1].lower() not in ["yuqian","mohamed","jakob"]):
+        print("Please provide your first name as command line argument when running the Script.")
+        quit()
+    name=argvs[1].lower()
     
     #read in the assignments of the models which were computed in pipeline_automation.ipynb
     with open('assignment.json') as json_file:
         assignment = json.load(json_file)
     
     #match assignments with command line argument.
-    # models=assignment[name]
-    models=assignment["yuqian"]+assignment["mohamed"]+assignment["jakob"]
-
-    #for testing purposes only
-    #models=[['46A',1]]
+    models=assignment[name]
+    # models=assignment["yuqian"]+assignment["mohamed"]+assignment["jakob"]
 
     #create sql alchemy engine
     config=config()
@@ -117,10 +114,10 @@ if __name__=='__main__':
         }
 
         #train and dump model for scheduled duration.
-        # reg = LinearRegression().fit(X_train, y_train)
-        # print(f"Score of schedule prediction: {reg.score(X_test,y_test):.2f}.")
-        # filename = "schedule_preds/"+line+"_"+str(direction)+".sav"
-        # pickle.dump(reg, open(filename, 'wb'))        
+        reg = LinearRegression().fit(X_train, y_train)
+        print(f"Score of schedule prediction: {reg.score(X_test,y_test):.2f}.")
+        filename = "schedule_preds/"+line+"_"+str(direction)+".sav"
+        pickle.dump(reg, open(filename, 'wb'))        
 
         #set up model for actual duration.
         y=df_ml["dur_a"]
@@ -152,11 +149,11 @@ if __name__=='__main__':
             }        
 
         #train and dump model for actual duration.
-        # reg = LinearRegression().fit(X_train, y_train)
-        # print(f"Score of duration prediction: {reg.score(X_test,y_test):.2f}.")
-        # filename = "duration_preds/"+line+"_"+str(direction)+".sav"
-        # pickle.dump(reg, open(filename, 'wb'))
-        # print("")
+        reg = LinearRegression().fit(X_train, y_train)
+        print(f"Score of duration prediction: {reg.score(X_test,y_test):.2f}.")
+        filename = "duration_preds/"+line+"_"+str(direction)+".sav"
+        pickle.dump(reg, open(filename, 'wb'))
+        print("")
     
     #dump feature sets in json
     with open('features.json', 'w') as outfile:
