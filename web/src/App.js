@@ -188,6 +188,8 @@ const App = () => {
             directions={directions}
             busIndex={busIndex}
             getStopsByCoords={getStopsByCoords}
+            favStops={favStops}
+            setFavStops={setFavStops}
           />
         </TabPane>
 

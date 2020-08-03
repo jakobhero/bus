@@ -61,10 +61,10 @@ function getAddressByVal(Val) {
   for (let i = 0; i < storedCookies.length; i++) {
     var stopInfo = storedCookies[i].split("=");
     if (stopInfo[0].trim() === Val) {
-      var Addree = stopInfo[1];
+      var address = stopInfo[1];
     }
   }
-  return Addree;
+  return address;
 }
 
 function getIdByName(name) {
