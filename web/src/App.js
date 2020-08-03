@@ -58,11 +58,23 @@ const App = () => {
     setActiveKey("realTime");
   };
   const clearMap = () => {
-    // setState({})
     setStopsForMap([]);
     setDirections([]);
     setOtherRoute([]);
     setBusIndex([]);
+  };
+
+  const getStopsByCoords = (lat, lng) => {
+    clearMap();
+    axios
+      .get("/api/nearestneighbor?lat=" + lat + "&lng=" + lng)
+      .then((res) => {
+        if (res.statusText === "OK") {
+          setStopsForMap(res.data.stops);
+          setActiveKey("map");
+        }
+      })
+      .catch(console.log);
   };
 
   const handleSubmitApp = (source, dest, time) => {
@@ -70,6 +82,7 @@ const App = () => {
     newFields["source"] = source;
     newFields["destination"] = dest;
     newFields["time"] = time;
+    setState(newFields);
     if (source.bus_id) {
       // if source is a bus route
       clearMap();
@@ -85,25 +98,18 @@ const App = () => {
         .catch(console.log);
     } else if (!dest.val && !dest.stopID && !source.stopID) {
       // if source is a place and no destination
-      clearMap();
-      axios
-        .get("/api/nearestneighbor?lat=" + source.lat + "&lng=" + source.lng)
-        .then((res) => {
-          console.log(res);
-          if (res.statusText === "OK") {
-            setStopsForMap(res.data.stops);
-            setActiveKey("map");
-          }
-        })
-        .catch(console.log);
-      setState(newFields);
-      console.log("new field", newFields);
+      getStopsByCoords(source.lat, source.lng);
     } else if (!dest.val && !dest.stopID && source.stopID) {
       // if source is a bus stop and no destination
       clearMap();
       setRealTime(source.stopID, source.fullname);
       setStopsForMap([
-        { stopid: source.stopID, lat: source.lat, lng: source.lng },
+        {
+          stopid: source.stopID,
+          lat: source.lat,
+          lng: source.lng,
+          fullname: source.fullname,
+        },
       ]);
     } else {
       // otherwise - directions
@@ -130,7 +136,6 @@ const App = () => {
           }
         })
         .catch(console.log);
-      setState(newFields);
       setActiveKey("connections");
     }
   };
@@ -182,6 +187,7 @@ const App = () => {
             otherRoute={otherRoute}
             directions={directions}
             busIndex={busIndex}
+            getStopsByCoords={getStopsByCoords}
           />
         </TabPane>
 
