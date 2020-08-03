@@ -14,6 +14,7 @@ stops_dict = None
 models = None
 features = None
 weather = None
+forecast = None
 
 class Stops(Resource):
     """API Endpoint for Dublin Bus stop information. Returns all stops that contain specified substring in either
@@ -491,9 +492,7 @@ def get_prediction(model_info):
             print(f"Prediction for trip duration (scheduled): {(sched_stop-sched_start)/60:.2f} mins.")
             
             #retrieve weather input
-            owm_data=get_weather(leg["start"]["time"])
-            weather=owm_data["weather"][0]["main"]
-            temp=owm_data["main"]["temp"]
+            temp,weather=get_weather(leg["start"]["time"])
             
             #transform input for actual duration prediction
             dur_input_start=dur_input_create(temp,sched_start,weather,wd_start,m_start,h_start,feature_set["actual"])
@@ -593,30 +592,46 @@ def build_stops_dict():
             stops_dict[str(stop.stoppoint_id)][stop.line_id][stop.direction]=stop.progr_number
 
 def get_weather(timestamp):
-    """retrieves weather by checking timestamp and either returning cached value, calling update script or do TO DO behavior."""
+    """retrieves weather by checking timestamp and either returning cached value, calling update script or do TO DO behavior
+    from global variables weather and forecast."""
     global weather
+    global forecast
     now=round(datetime.datetime.now().timestamp())
-
-    #check to see if global variable weather holds data, if not call the update script.
-    if weather==None:
-        update_weather()
-        print("Weather is loaded.")
     
     #if the timestamp for the prediction is within 30 mins, get the prediction for now
     if abs(timestamp-now)<=(30*60):
         #update the weather if the cached value is older than 15 mins.
-        if abs(now-weather["dt"])>=(15*60):
+        if abs(weather==None or now-weather["dt"])>=(15*60):
             update_weather()
-        return weather
-    #TO DO: implement logic for average weather prediction for timestamp specified if it isn't near current time
+            print("Weather is loaded/updated.")
+        #return tuple of (temperature,weather description)
+        return weather["main"]["temp"],weather["weather"][0]["main"]
+
+    #if the timestamp for the prediction is within 48 hours of the current hour, use OWM forecast
+    hour_delta=round(timestamp//3600)-now//3600 #calculate the difference of hour stamps
+    if 0<=hour_delta<48:
+        if forecast != None: #check whether forecast has been cached before
+            #calculate difference in hourstamps between first cached forecast value and provided timestamp
+            hours_away=round(timestamp//3600)-int(forecast[0]["dt"]/3600)
+            #check whether timestamp value is covered by cached forecast
+            if 0<=hours_away<48:
+                fc_row=forecast[hours_away]
+                return fc_row["temp"],fc_row["weather"][0]["main"]
+        #update forecast if no cache exists or timestamp value is not covered but latest cached forecast.
+        update_forecast()
+        print("Forecast is loaded.")
+        fc_row=forecast[hour_delta]
+        return fc_row["temp"],fc_row["weather"][0]["main"]
+    #TO DO: weather handling if it isn't near current time or within 48 hour forecast window
     else:
         #for now, we just return the current weather (suboptimal)
         if abs(now-weather["dt"])>=(15*60):
             update_weather()
-        return weather
+        #return tuple of (temperature,weather description)
+        return weather["main"]["temp"],weather["weather"][0]["main"]
 
 def update_weather():
-    """sends request to open weather map API for dublin, ireland and stores the response in global variable weather."""
+    """sends request for current weather to open weather map API for dublin, ireland and stores the response in global variable weather."""
     global weather
 
     url="https://api.openweathermap.org/data/2.5/weather"
@@ -625,8 +640,25 @@ def update_weather():
         "appid":os.environ.get("OWM_KEY"),
         "units":"metric"
     }
-    weather_req=requests.get(url=url,params=params)
-    weather=weather_req.json()
+    weather_res=requests.get(url=url,params=params)
+    weather=weather_res.json()
+
+def update_forecast():
+    """sends request for 48 hour hourly weather forecast to open weather map API for coordinates of dublin and stores response in global dict forecast."""
+    global forecast
+
+    url="https://api.openweathermap.org/data/2.5/onecall"
+    params={
+        "lat":53.3498, #lat of dublin
+        "lon":-6.2603, #lon of dublin
+        "exclude":"current,minutely,daily", #exclude unnecessary forecast components
+        "appid":os.environ.get("OWM_KEY"),
+        "units":"metric"
+    }
+
+    #make request and store response in global variable
+    forecast_res=requests.get(url=url,params=params)
+    forecast=forecast_res.json()["hourly"]
         
 def sched_input_create(weekday,month,hour,stop,feature_set):
     """Transforms necessary data for schedule predictor in appropriate format for model."""
