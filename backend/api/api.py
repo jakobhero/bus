@@ -96,7 +96,7 @@ class NearestNeighbor(Resource):
         except:
             return {"status": "Error: Coordinates could not be parsed to float"}
 
-        response=nearest_stations(target,stops,tree,k)
+        response=nearest_stations(target,stops,k)
 
         return {"stops": response, "status": "OK"}
         # http://localhost/stops?lat=53.305544&lon=-6.237866&k=10
@@ -382,7 +382,7 @@ def directions_parser(directions, time):
 
 def build_tree():
     """build KDTree to search through stops with log(n) time complexity.
-    For this, the global variables stops, coords and tree are populated"""
+    For this, the global variables stops, coords tree, and stops_dict are populated"""
     global stops
     global coords
     global tree
@@ -404,10 +404,12 @@ def build_tree():
         coords = np.append(coords, [[stop.lat, stop.lon]], axis=0)
     tree=KDTree(coords)
 
-def nearest_stations(target, stops, tree, k):
+def nearest_stations(target, stops, k):
+    global tree
     # calculate the nearest neighbours
     if tree==None:
         build_tree()
+        print("KD-Tree is built.")
     nearest_dist, nearest_ind = tree.query(target, k=k)
 
     # populate response with rows from stops specified by calculated indices
@@ -423,11 +425,11 @@ def find_model(directions):
 
     if stops==None:
         build_tree()
-        print("Tree is built!")
+        print("KD-Tree is built.")
 
     if models==None:
-        build_models()
-        print("Models are loaded!")
+        load_models()
+        print("Models are loaded.")
 
     if directions["status"]!="OK":
         return directions
@@ -441,8 +443,8 @@ def find_model(directions):
             google_start=[[route["start"]["lat"],route["start"]["lng"]]]
             google_stop=[[route["stop"]["lat"],route["stop"]["lng"]]]
             google_route=route["transit"]["route"].upper()
-            start_stations=nearest_stations(google_start,stops,tree,30)
-            stop_stations=nearest_stations(google_stop,stops,tree,30)
+            start_stations=nearest_stations(google_start,stops,30)
+            stop_stations=nearest_stations(google_stop,stops,30)
             start_index=route_matcher(start_stations,google_route)
             stop_index=route_matcher(stop_stations,google_route)
             print(f"Detected options in start are {start_index}.")
@@ -516,7 +518,7 @@ def load_features():
     with open('features.json') as json_file:
         features = json.load(json_file)
 
-def build_models():
+def load_models():
     """loads models into global variable models"""
     global models
     models={
@@ -616,11 +618,13 @@ def get_weather(timestamp):
             #check whether timestamp value is covered by cached forecast
             if 0<=hours_away<48:
                 fc_row=forecast[hours_away]
+                #return tuple of (temperature,weather description)
                 return fc_row["temp"],fc_row["weather"][0]["main"]
         #update forecast if no cache exists or timestamp value is not covered but latest cached forecast.
         update_forecast()
         print("Forecast is loaded.")
         fc_row=forecast[hour_delta]
+        #return tuple of (temperature,weather description)
         return fc_row["temp"],fc_row["weather"][0]["main"]
     #TO DO: weather handling if it isn't near current time or within 48 hour forecast window
     else:
