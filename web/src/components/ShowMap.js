@@ -10,19 +10,20 @@ import mapStyles from "./mapStyles";
 import mapStylesIcons from "./mapStylesIcons";
 
 import Switch from "react-switch";
-import {
-  setCookie,
-  saveAddress,
-  delCookie,
-  getStopNums,
-  getAddressByVal,
-} from "./cookies";
+import { setCookie, saveAddress, delCookie, getAddressByVal } from "./cookies";
 import { Button, Modal } from "antd";
-import { HistoryOutlined } from "@ant-design/icons";
-import Replay from "@material-ui/icons/Replay";
 import Tooltip from "@material-ui/core/Tooltip";
 
-import WeatherIcon from "react-icons-weather";
+import Replay from "@material-ui/icons/Replay";
+import Watch from "@material-ui/icons/WatchLaterOutlined";
+import Cloud from "@material-ui/icons/CloudOutlined";
+import StarIcon from "@material-ui/icons/Star";
+import StarBorderOutlinedIcon from "@material-ui/icons/StarBorderOutlined";
+import Home from "@material-ui/icons/Home";
+import HomeOutlined from "@material-ui/icons/HomeOutlined";
+import Work from "@material-ui/icons/Work";
+import WorkOutlined from "@material-ui/icons/WorkOutline";
+
 import ReactWeather from "react-open-weather";
 //Optional include of the default css styles
 import "react-open-weather/lib/css/ReactWeather.css";
@@ -49,11 +50,14 @@ function ShowMap({
   directions,
   busIndex,
   getStopsByCoords,
+  favStops,
+  setFavStops,
 }) {
   const [selected, setSelected] = React.useState(null);
-  const [address, setAddress] = React.useState(false);
+  const [address, setAddress] = React.useState(null);
   const [touristModeBool, setTouristModeBool] = React.useState(false);
   const [otherRouteBool, setOherRouteBool] = React.useState(false);
+
   const mapRef = React.useRef();
   const onMapLoad = React.useCallback((map) => {
     mapRef.current = map;
@@ -64,26 +68,54 @@ function ShowMap({
     mapRef.current.setZoom(14);
   }, []);
 
+  function removeItemOnce(arr, value) {
+    var index = arr.indexOf(value);
+    if (index > -1) {
+      arr.splice(index, 1);
+    }
+    return arr;
+  }
+
   function icoStatusData() {
     // adding/deleting stop to/from cookies
-    if (Object.values(getStopNums()).includes(parseInt(selected.stopid))) {
+    if (favStops.stopsids.includes(selected.stopid)) {
       console.log("deleteing");
       delCookie(selected.stopid);
-      console.log(
-        Object.values(getStopNums()).includes(parseInt(selected.stopid))
-      );
+      setFavStops({
+        fullname: removeItemOnce(favStops.fullname, selected.fullname),
+        stopsids: removeItemOnce(favStops.stopsids, selected.stopid),
+      });
     } else {
       console.log("adding");
       setCookie(selected.stopid, selected.stopid);
+      favStops.fullname.push(selected.fullname);
+      favStops.stopsids.push(selected.stopid);
+      setFavStops({
+        fullname: favStops.fullname,
+        stopsids: favStops.stopsids,
+      });
     }
   }
   const saveAddOnMap = (Val) => {
     // save address via map
-    console.log("address icon clicked");
-    console.log("adding");
+
+    let tempAdd = { ...address };
+    if (Val === "Work" && !tempAdd.work) {
+      tempAdd.work = !tempAdd.work;
+    } else if (Val === "Home" && !tempAdd.home) {
+      tempAdd.home = !tempAdd.home;
+    }
+    setAddress(tempAdd);
     saveAddress(Val, address.val);
     saveAddress(Val + "Lat", address.lat);
     saveAddress(Val + "Lng", address.lng);
+  };
+
+  const onClickHW = () => {
+    let newSource = { ...source };
+    newSource["work"] = getAddressByVal("Work") === source.val;
+    newSource["home"] = getAddressByVal("Home") === source.val;
+    setAddress(newSource);
   };
 
   const directionsBusMarker = (lat, lng) => {
@@ -179,7 +211,7 @@ function ShowMap({
           // only appears if location is entered not for stops or route
           <Marker
             position={{ lat: source.lat, lng: source.lng }}
-            onClick={() => setAddress(source)}
+            onClick={onClickHW}
           />
         )}
 
@@ -197,7 +229,7 @@ function ShowMap({
             }}
           />
         ))}
-        {destination && otherRoute.length < 1 && (
+        {destination && otherRoute.length < 1 && stops.length > 1 && (
           <Marker position={{ lat: destination.lat, lng: destination.lng }} />
         )}
         {address ? (
@@ -213,12 +245,7 @@ function ShowMap({
               </h4>
               <Tooltip className="tooltip" title="Show Weather">
                 <Button style={{ margin: 10 }} onClick={showModal}>
-                  <WeatherIcon
-                    name="owm"
-                    iconId="200"
-                    flip="horizontal"
-                    rotate="90"
-                  />
+                  <Cloud />
                 </Button>
               </Tooltip>
               <Modal
@@ -240,13 +267,7 @@ function ShowMap({
                   style={{ margin: 10 }}
                   onClick={() => saveAddOnMap("Home")}
                 >
-                  <span
-                    className={
-                      getAddressByVal("Home") === address.val
-                        ? "fa fa-home"
-                        : "fa fa-hospital-o"
-                    }
-                  ></span>
+                  {address.home ? <Home /> : <HomeOutlined />}
                 </Button>
               </Tooltip>
               <Tooltip className="tooltip" title="Set Work">
@@ -254,13 +275,7 @@ function ShowMap({
                   style={{ margin: 10 }}
                   onClick={() => saveAddOnMap("Work")}
                 >
-                  <span
-                    className={
-                      getAddressByVal("Work") === address.val
-                        ? "fa fa-file"
-                        : "fa fa-file-o"
-                    }
-                  ></span>
+                  {address.work ? <Work /> : <WorkOutlined />}
                 </Button>
               </Tooltip>
             </div>
@@ -279,22 +294,21 @@ function ShowMap({
                 <p>{`Stop ${selected.stopid}`}</p>
               </h2>
               <p>{selected.fullname}</p>
-              <Button
-                style={{ margin: 10 }}
-                onClick={() =>
-                  setRealTime(selected.stopid, selected.lat, selected.lng)
-                }
-              >
-                <HistoryOutlined />
-              </Button>
-              <Button style={{ margin: 10 }} onClick={showModal}>
-                <WeatherIcon
-                  name="owm"
-                  iconId="200"
-                  flip="horizontal"
-                  rotate="90"
-                />
-              </Button>
+              <Tooltip className="tooltip" title="Real Time">
+                <Button
+                  style={{ margin: 5 }}
+                  onClick={() =>
+                    setRealTime(selected.stopid, selected.fullname)
+                  }
+                >
+                  <Watch />
+                </Button>
+              </Tooltip>
+              <Tooltip className="tooltip" title="Show Weather">
+                <Button style={{ margin: 5 }} onClick={showModal}>
+                  <Cloud />
+                </Button>
+              </Tooltip>
               <Modal
                 title="Today's Weather"
                 visible={visible}
@@ -309,17 +323,15 @@ function ShowMap({
                   lon={selected.lng}
                 />
               </Modal>
-              <Button style={{ margin: 10 }} onClick={icoStatusData}>
-                <span
-                  className={
-                    Object.values(getStopNums()).includes(
-                      parseInt(selected.stopid)
-                    )
-                      ? "fa fa-star"
-                      : "fa fa-star-o"
-                  }
-                ></span>
-              </Button>
+              <Tooltip className="tooltip" title="Toggle Favourite">
+                <Button style={{ margin: 5 }} onClick={icoStatusData}>
+                  {favStops.stopsids.includes(selected.stopid) ? (
+                    <StarIcon />
+                  ) : (
+                    <StarBorderOutlinedIcon />
+                  )}
+                </Button>
+              </Tooltip>
             </div>
           </InfoWindow>
         ) : null}

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Typography from "@material-ui/core/Typography";
 import CardContent from "@material-ui/core/CardContent";
 import DeleteIcon from "@material-ui/icons/Delete";
-import { HistoryOutlined } from "@ant-design/icons";
+import Watch from "@material-ui/icons/WatchLaterOutlined";
 import {
   getStopNames,
   getStopNums,
@@ -84,7 +84,8 @@ const Favourites = ({
                 <Typography>{item}</Typography>
                 <Typography>{favStops.stopsids[index]}</Typography>
                 <Tooltip className="tooltip" title="Real Time Info">
-                  <HistoryOutlined
+                  <Watch
+                    fontSize="large"
                     onClick={() => handleClick(favStops.stopsids[index], item)}
                     className="realTimeIcon"
                     style={{ fontSize: "16px" }}
