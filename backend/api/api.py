@@ -603,7 +603,7 @@ def get_weather(timestamp):
     #if the timestamp for the prediction is within 30 mins, get the prediction for now
     if abs(timestamp-now)<=(30*60):
         #update the weather if the cached value is older than 15 mins.
-        if abs(weather==None or now-weather["dt"])>=(15*60):
+        if weather==None or abs(now-weather["dt"])>=(15*60):
             update_weather()
             print("Weather is loaded/updated.")
         #return tuple of (temperature,weather description)
@@ -637,7 +637,7 @@ def get_weather(timestamp):
 def update_weather():
     """sends request for current weather to open weather map API for dublin, ireland and stores the response in global variable weather."""
     global weather
-
+    
     url="https://api.openweathermap.org/data/2.5/weather"
     params={
         "q":"dublin,leinster,ireland",
