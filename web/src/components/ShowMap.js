@@ -48,6 +48,7 @@ function ShowMap({
   otherRoute,
   directions,
   busIndex,
+  getStopsByCoords,
 }) {
   const [selected, setSelected] = React.useState(null);
   const [address, setAddress] = React.useState(false);
@@ -153,7 +154,7 @@ function ShowMap({
         }}
         onLoad={onMapLoad}
       >
-        <Locate panTo={panTo} />
+        <Locate panTo={panTo} getStopsByCoords={getStopsByCoords} />
         <Tooltip className="tooltip" title="Tourist mode">
           <div className="switch1 mapUI">
             <Switch
@@ -174,7 +175,8 @@ function ShowMap({
             ></Replay>
           </div>
         )}
-        {source && otherRoute.length < 1 && (
+        {source && otherRoute.length < 1 && stops.length > 1 && (
+          // only appears if location is entered not for stops or route
           <Marker
             position={{ lat: source.lat, lng: source.lng }}
             onClick={() => setAddress(source)}
@@ -362,7 +364,7 @@ function ShowMap({
   );
 }
 
-function Locate({ panTo }) {
+function Locate({ panTo, getStopsByCoords }) {
   return (
     <div
       className="mapUI locate"
@@ -373,6 +375,10 @@ function Locate({ panTo }) {
               lat: position.coords.latitude,
               lng: position.coords.longitude,
             });
+            getStopsByCoords(
+              position.coords.latitude,
+              position.coords.longitude
+            );
           },
           () => null
         );
