@@ -4,7 +4,6 @@ import { Col, Timeline, Row } from "antd";
 
 import DirectionsBusIcon from "@material-ui/icons/DirectionsBus";
 import DirectionsWalkIcon from "@material-ui/icons/DirectionsWalk";
-import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import TramIcon from "@material-ui/icons/Tram";
 import { ClockCircleOutlined } from "@ant-design/icons";
 
@@ -16,7 +15,7 @@ const AllRoutes = ({ tripTimes, setDirections }) => {
     <div>
       {tripTimes.length < 1 && <p>Choose a source and destination</p>}
       <Row>
-        <Col span={8}>
+        <Col flex={1}>
           {tripTimes.length > 0 &&
             tripTimes.map((dueTime, i) => (
               <Route
@@ -27,9 +26,10 @@ const AllRoutes = ({ tripTimes, setDirections }) => {
                 index={i}
               />
             ))}
+          <br />
         </Col>
         {tripTimes.length > 0 && (
-          <Col>
+          <Col flex={4}>
             <Timeline mode={"left"}>
               {tripTimes[index].steps.map((step, i) => (
                 <Timeline.Item

@@ -52,6 +52,7 @@ const SearchForm = ({ handleSubmitApp }) => {
     event.preventDefault();
     let newFields = { ...fieldsValues };
     if (newFields.source.val) {
+      // if source is a place
       getGeocode({ address: newFields.source.val })
         .then((results) => getLatLng(results[0]))
         .then((coords) => {
@@ -59,11 +60,11 @@ const SearchForm = ({ handleSubmitApp }) => {
           let lng = coords.lng;
           let val = newFields.source.val;
           newFields["source"] = { val: val, lat: lat, lng: lng };
-          console.log(newFields);
           return newFields;
         })
         .then((newFields) => {
           if (newFields.destination.val) {
+            //if destination is a place, if not then it is a bus stop(has coords already) or is blank
             getGeocode({ address: newFields.destination.val })
               .then((results) => getLatLng(results[0]))
               .then((coords) => {
@@ -74,7 +75,6 @@ const SearchForm = ({ handleSubmitApp }) => {
                 return newFields;
               })
               .then((newFields) => {
-                console.log(newFields);
                 handleSubmitApp(
                   newFields.source,
                   newFields.destination,
@@ -89,22 +89,28 @@ const SearchForm = ({ handleSubmitApp }) => {
             );
           }
         });
+    } else if (newFields.destination.val && newFields.source.stopID) {
+      // if source is a bus stop and dest is a place
+      getGeocode({ address: newFields.destination.val })
+        .then((results) => getLatLng(results[0]))
+        .then((coords) => {
+          let lat = coords.lat;
+          let lng = coords.lng;
+          let val = newFields.destination.val;
+          newFields["destination"] = { val: val, lat: lat, lng: lng };
+          return newFields;
+        })
+        .then((newFields) => {
+          console.log(newFields);
+          handleSubmitApp(
+            newFields.source,
+            newFields.destination,
+            newFields.time
+          );
+        });
     } else {
       handleSubmitApp(newFields.source, newFields.destination, newFields.time);
     }
-
-    // setFieldsValues(newFields);
-    // console.log(newFields);
-    // if (fieldsValues.source !== "") {
-    //   event.preventDefault();
-    //   handleSubmitApp(
-    //     fieldsValues.source,
-    //     fieldsValues.destination,
-    //     fieldsValues.time
-    //   );
-    // } else {
-    //   alert("Please enter a source!");
-    // }
   }
 
   const icon = (

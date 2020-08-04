@@ -34,7 +34,7 @@ const App = () => {
   const [directions, setDirections] = useState([]);
 
   const [sortStepsNum, setSortStepsNum] = useState(1);
-  const [sortTimeNum, setSortTimeNum] = useState(1);
+  const [sortTimeNum, setSortTimeNum] = useState(-1);
 
   const [favStops, setFavStops] = useState({
     fullname: getStopNames(),
@@ -45,9 +45,8 @@ const App = () => {
     axios
       .get("/api/realtime?stopid=" + stop)
       .then((res) => {
-        res["stopid"] = stop;
+        res["stopid"] = parseInt(stop, 10);
         res["fullname"] = fullname;
-        console.log(fullname);
         setRealTimeData(res);
       })
       .catch(console.log);
@@ -113,6 +112,8 @@ const App = () => {
       ]);
     } else {
       // otherwise - directions
+      console.log(source);
+      console.log(dest);
       clearMap();
       axios
         .get(
@@ -121,7 +122,9 @@ const App = () => {
             "," +
             source.lng +
             "&arr=" +
-            dest.val +
+            dest.lat +
+            "," +
+            dest.lng +
             "&time=" +
             Math.round(time / 1000)
         )
