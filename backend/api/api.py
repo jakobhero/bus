@@ -66,7 +66,7 @@ class Stops(Resource):
 
 class NearestNeighbor(Resource):
     """API endpoint for Dublin Bus stop information. Returns the k nearest bus stops to the coordinates specified in request.
-    If k is not specified in request, the a default of 10 closest stops is returned. If coordinates are not specified in request,
+    If k is not specified in request, the a default of 20 closest stops is returned. If coordinates are not specified in request,
     all bus stops are returned. For the calculation of the closest stops, a KD tree is used to find results in O(log(n))."""
 
     def get(self):
@@ -102,7 +102,6 @@ class NearestNeighbor(Resource):
         response=nearest_stations(target,stops,k)
 
         return {"stops": response, "status": "OK"}
-        # http://localhost/stops?lat=53.305544&lon=-6.237866&k=10
 
 
 class realTime(Resource):
@@ -124,7 +123,10 @@ class realTime(Resource):
 
 
 class routeInfo(Resource):
-
+    """API endpoint for Dublin Bus Route Details. Returns all stops served by a route, grouped by direction and
+    including the stop details ID, name, coordinates and all lines served. Takes a route as parameter. If no route
+    is provided, a result with all routes previously cached, grouped by their names, is returned."""
+    
     def get(self):
         global routes
         global stops_dict
@@ -173,7 +175,7 @@ class Directions(Resource):
     Expects the parameters "dep", "arr" (both required) and "time" (optional).
     Locations can be provided as address strings (spaces replaced by "+" in request) or coordinates in format "lat,lng".
     Response from Google API is processed for Frontend display."""
-
+    
     def get(self):
 
         # parse request
@@ -272,15 +274,22 @@ def directions_parser(directions, time):
                 "duration": step["duration"]["value"],
                 "start": step["start_location"],
                 "stop": step["end_location"],
-                "mode": step["travel_mode"]
+                "mode": step["travel_mode"],
+                "html_instructions":step["html_instructions"]
             }
 
-            # directions for walking are stored in array of polylines
+            # directions for walking are stored in array
             if curr_step["mode"] == "WALKING":
-                polylines = []
-                for poly_elem in step["steps"]:
-                    polylines.append(poly_elem["polyline"]["points"])
-                curr_step["polyline"] = polylines
+                polyline = []
+                directions=[]
+                for segment in step["steps"]:
+                    polyline.append(segment["polyline"]["points"])
+                    instructions=None
+                    if "html_instructions" in segment:
+                        instructions=segment["html_instructions"]
+                    directions.append(instructions)
+                curr_step["polyline"] = polyline
+                curr_step["directions"] = directions
             # transic specific information is stored in variable transit, which will be addedd to curr_step
             if curr_step["mode"] == "TRANSIT":
                 transit = {
