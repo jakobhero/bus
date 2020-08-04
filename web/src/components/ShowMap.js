@@ -291,9 +291,10 @@ function ShowMap({
           >
             <div>
               <h2>
-                <p>{`Stop ${selected.stopid}`}</p>
+                <p>{selected.fullname}</p>
               </h2>
-              <p>{selected.fullname}</p>
+              <h4>{`Stop ${selected.stopid}`}</h4>
+              <p>Routes:[11,14,46A]</p>
               <Tooltip className="tooltip" title="Real Time">
                 <Button
                   style={{ margin: 5 }}

@@ -44,6 +44,7 @@ const RealTimeInfo = ({ realTimeData, favStops, setFavStops }) => {
       });
     } else {
       setCookie(stopid, stopid);
+      console.log(favStops.fullname, fullname);
       favStops.fullname.push(fullname);
       favStops.stopsids.push(stopid);
       setFavStops({
