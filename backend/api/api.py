@@ -2,8 +2,9 @@ import json, os, requests, datetime, numpy as np, time, pickle
 from sklearn.neighbors import KDTree
 from flask_restful import Resource, Api, reqparse
 from sqlalchemy.types import String
+from sqlalchemy import cast
 
-from .models import Stops as StopsModel, StopsRoute as SRModel
+from .models import Stops as StopsModel, StopsRoute as SRModel, db
 
 api = Api()
 
@@ -15,6 +16,7 @@ models = None
 features = None
 weather = None
 forecast = None
+routes = {}
 
 class Stops(Resource):
     """API Endpoint for Dublin Bus stop information. Returns all stops that contain specified substring in either
@@ -25,6 +27,7 @@ class Stops(Resource):
 
         if stops_dict==None:
             build_stops_dict()
+
         parser = reqparse.RequestParser()
         parser.add_argument('substring', type=str)
         frontend_params = parser.parse_args()
@@ -121,93 +124,49 @@ class realTime(Resource):
 
 
 class routeInfo(Resource):
-    def match(self, list1, list2):
-        return len(list(set(list1).intersection(list2)))
-
-    def get_stops(self, stopsObj):
-        """Iterates through object and extracts stopid for place in list"""
-        stops = []
-        for stop in stopsObj:
-            stops.append(stop['stopid'])
-        return stops
-
-    def split_by_direction(self, results):
-        """[Assumes first and last objects corresponds to different directions, then iterates through the list and finds stops arrays more similar to one direction than to another
-        If an object cannot be classified, then assume 1st index and last correspond to different directions etc]
-
-        Args:
-            results ([list]): [list of objects returned by api request]
-
-        Returns:
-            [Two lists]: [Each list corresponds to the indexes of those objects in the array which predominatly go in the same direction]
-        """
-        for start in range(len(results)):
-            dir1, dir2 = [], []
-            count = 0
-            for i, result in enumerate(results):
-                match_dir1 = self.match(self.get_stops(
-                    results[start]['stops']), self.get_stops(result['stops']))
-                match_dir2 = self.match(self.get_stops(
-                    results[-1]['stops']), self.get_stops(result['stops']))
-
-                # print(i, " matches with dir1 ", match_dir1, " and with dir2 ",
-                #       match_dir2, " num of stops in i ", len(self.get_stops(result['stops'])))
-                if match_dir1 > match_dir2:
-                    dir1.append(i)
-                elif match_dir1 < match_dir2:
-                    dir2.append(i)
-                else:
-                    count += 1
-            # print(dir1, dir2)
-            if count < 1:
-                break
-
-        return dir1, dir2
-
-    def stop_in_response(self, stopid, response):
-        for indiv in response:
-            if indiv['stopid'] == stopid:
-                return True
-        return False
-
-    def process_route_info(self, results):
-        """If the stop has not already been placed in the response then clean it and add to response"""
-        dir1, dir2 = self.split_by_direction(results)
-
-        overall_response = []
-        for dir_ in [dir1, dir2]:
-            response = []
-            for obj in dir_:
-                for stop in results[obj]['stops']:
-                    if not self.stop_in_response(stop['stopid'], response):
-                        stop['lat'] = float(stop.pop('latitude'))
-                        stop['lng'] = float(stop.pop('longitude'))
-                        stop.pop('shortnamelocalized', None)
-                        stop.pop('fullnamelocalized', None)
-                        stop.pop('shortname', None)
-                        stop.pop('operators', None)
-                        stop.pop('displaystopid', None)
-                        response.append(stop)
-            overall_response.append(response)
-        return overall_response
 
     def get(self):
+        global routes
+        global stops_dict
+
+        if stops_dict==None:
+            build_stops_dict()
+            
         parser = reqparse.RequestParser()
         parser.add_argument('routeid', type=str)
 
         frontend_params = parser.parse_args()
-        if "routeid" not in frontend_params:
-            return {"status": "NO_ROUTE"}
 
-        route_id = frontend_params['routeid']
-        URL = 'https://data.smartdublin.ie/cgi-bin/rtpi/routeinformation'
-        req_items = {'routeid': route_id, 'operator': 'Dublin Bus'}
-        resp = requests.get(URL, params=req_items)
-        parsed_json = (json.loads(resp.text))
-        # print(len(parsed_json))
+        #if no route is specified, return all routes
+        if frontend_params["routeid"]==None:
+            return routes
+        route=frontend_params["routeid"].upper()
 
-        return self.process_route_info(parsed_json['results'])
-
+        #if route is cached, return cached result
+        if route in routes:
+            return routes[route]
+        
+        #if route is not cached yet, create the route_dict
+        route_dict={}
+        #join stops and stops_route_match tables on stop_id and filter for the specified route only
+        for stop, srm in db.session.query(StopsModel, SRModel).filter(cast(SRModel.stoppoint_id,String) == StopsModel.stop_id,SRModel.line_id == route).all():
+            #create dictionary entry
+            entry={
+                'stopid': stop.stop_id,
+                'fullname': stop.name,
+                'lat': stop.lat,
+                'lng': stop.lon,
+                'lines':stops_dict[stop.stop_id]
+            }
+            #if the direction is not in the route_dict yet, create direction and populate with array of entry
+            if srm.direction not in route_dict:
+                route_dict[srm.direction]=[entry]
+            else:
+                #else, append the entry to the existing array
+                route_dict[srm.direction].append(entry)
+        #add the route to the global variable
+        routes[route]=route_dict
+        return route_dict
 
 class Directions(Resource):
     """API endpoint for transit directions from A to B in Dublin from Google's directions API.
