@@ -156,7 +156,7 @@ class routeInfo(Resource):
                 'fullname': stop.name,
                 'lat': stop.lat,
                 'lng': stop.lon,
-                'lines':stops_dict[stop.stop_id]
+                'lines':list(stops_dict[stop.stop_id].keys())
             }
             #if the direction is not in the route_dict yet, create direction and populate with array of entry
             if srm.direction not in route_dict:
