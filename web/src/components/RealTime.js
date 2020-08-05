@@ -19,6 +19,7 @@ const RealTimeInfo = ({ realTimeData, favStops, setFavStops }) => {
   const stopid = realTimeData.stopid;
   const fullname = realTimeData.fullname;
   realTimeData = realTimeData.data;
+  // This will default to false until the data is loaded in, this the below if statement will correct this
   const flgIcon = favStops.stopsids.includes(stopid);
   const [icoStatus, seticoStatus] = useState(flgIcon);
   if (flgIcon !== icoStatus) {
@@ -33,18 +34,17 @@ const RealTimeInfo = ({ realTimeData, favStops, setFavStops }) => {
     return arr;
   }
 
-  const icoStatusData = (e) => {
+  const iconStatusData = (e) => {
     // adding/deleting cookies
     seticoStatus(!icoStatus);
-    if (flgIcon) {
+    if (icoStatus) {
       delCookie(stopid);
       setFavStops({
         fullname: removeItemOnce(favStops.fullname, fullname),
         stopsids: removeItemOnce(favStops.stopsids, stopid),
       });
     } else {
-      setCookie(stopid, stopid);
-      console.log(favStops.fullname, fullname);
+      setCookie(stopid);
       favStops.fullname.push(fullname);
       favStops.stopsids.push(stopid);
       setFavStops({
@@ -55,6 +55,7 @@ const RealTimeInfo = ({ realTimeData, favStops, setFavStops }) => {
   };
 
   const columns = [
+    // Set up for table
     {
       title: "Route",
       dataIndex: "route",
@@ -116,9 +117,9 @@ const RealTimeInfo = ({ realTimeData, favStops, setFavStops }) => {
       </h2>
       {realTimeData &&
         (icoStatus ? (
-          <StarIcon onClick={(e) => icoStatusData()} />
+          <StarIcon onClick={(e) => iconStatusData()} />
         ) : (
-          <StarBorderOutlinedIcon onClick={(e) => icoStatusData()} />
+          <StarBorderOutlinedIcon onClick={(e) => iconStatusData()} />
         ))}
       <Table
         dataSource={realTimeData}

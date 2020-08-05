@@ -5,6 +5,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import BorderWrapper from "react-border-wrapper";
 import "../css/search.css";
+import Tooltip from "@material-ui/core/Tooltip";
 
 import { Button } from "antd";
 
@@ -38,9 +39,11 @@ const SearchForm = ({ handleSubmitApp }) => {
     destination: "",
     time: new Date().getTime(),
   });
+
   const handleChange = (value, fieldId) => {
     let newFields = { ...fieldsValues };
     if (fieldId === "time") {
+      //converting to unix
       newFields[fieldId] = new Date(value.date).getTime();
     } else {
       newFields[fieldId] = value;
@@ -48,7 +51,15 @@ const SearchForm = ({ handleSubmitApp }) => {
     setFieldsValues(newFields);
   };
 
+  const handleDirectionsClick = () => {
+    let newFields = { ...fieldsValues };
+    newFields["destination"] = "";
+    setFieldsValues(newFields);
+    setShowDestination(!showDestination);
+  };
+
   function handleSubmit(event) {
+    // Must make sure that all but route have a lat and lng attached to them, bus stops have this already, places require a lookup
     event.preventDefault();
     let newFields = { ...fieldsValues };
     if (newFields.source.val) {
@@ -101,14 +112,20 @@ const SearchForm = ({ handleSubmitApp }) => {
           return newFields;
         })
         .then((newFields) => {
-          console.log(newFields);
           handleSubmitApp(
             newFields.source,
             newFields.destination,
             newFields.time
           );
         });
+    } else if (newFields.source.bus_id && newFields.destination) {
+      // if bus route and any destination
+      alert("Invalid selection");
+    } else if (!newFields.source && newFields.destination) {
+      // destination but no source
+      alert("Please enter an Origin");
     } else {
+      // only case left, is only bus stop and no direction
       handleSubmitApp(newFields.source, newFields.destination, newFields.time);
     }
   }
@@ -146,12 +163,12 @@ const SearchForm = ({ handleSubmitApp }) => {
               placeholder={"Enter a location, stop or bus route"}
               route
             />
-
-            <DirectionsIcon
-              className="directionsButton"
-              onClick={() => setShowDestination(!showDestination)}
-              //consider making it clear destination state
-            />
+            <Tooltip className="tooltip" title="Directions">
+              <DirectionsIcon
+                className="directionsButton"
+                onClick={handleDirectionsClick}
+              />
+            </Tooltip>
             <br />
           </div>
           {showDestination && (

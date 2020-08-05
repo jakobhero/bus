@@ -18,6 +18,7 @@ const AllRoutes = ({ tripTimes, setDirections }) => {
         <Col flex={1}>
           {tripTimes.length > 0 &&
             tripTimes.map((dueTime, i) => (
+              // make cards for each alternative route
               <Route
                 key={i}
                 tripTime={dueTime}
@@ -41,31 +42,35 @@ const AllRoutes = ({ tripTimes, setDirections }) => {
                     new Date(step.time).getMinutes()
                   }
                   color={
+                    // blue if transit, green if walking
                     tripTimes[index].transit_index.includes(i)
                       ? "blue"
                       : "green"
                   }
                 >
                   <p>
-                    {i < 1 ? tripTimes[index].start.address : ""}
+                    {
+                      // first show the start address
+                      i < 1 ? tripTimes[index].start.address : ""
+                    }
 
-                    {tripTimes[index].transit_index.includes(i) &
-                    !tripTimes[index].transit_index.includes(i - 1) &
-                    (i > 0)
-                      ? step.transit.dep.name
-                      : ""}
+                    {
+                      // if this step is transit, else nothing
+                      tripTimes[index].transit_index.includes(i) & (i > 0)
+                        ? step.transit.dep.name
+                        : ""
+                    }
 
-                    {tripTimes[index].transit_index.includes(i) &
-                    tripTimes[index].transit_index.includes(i - 1)
-                      ? step.transit.dep.name
-                      : ""}
-
-                    {!tripTimes[index].transit_index.includes(i) &
-                    tripTimes[index].transit_index.includes(i - 1)
-                      ? tripTimes[index].steps[i - 1].transit.arr.name
-                      : ""}
+                    {
+                      // if this step isnt transit and the last was show previous arrival name, else nothing
+                      !tripTimes[index].transit_index.includes(i) &
+                      tripTimes[index].transit_index.includes(i - 1)
+                        ? tripTimes[index].steps[i - 1].transit.arr.name
+                        : ""
+                    }
                   </p>
                   <p>
+                    {/* The inside */}
                     {tripTimes[index].transit_index.includes(i) ? (
                       step.transit.type === "BUS" ? (
                         <DirectionsBusIcon style={{ color: "blue" }} />
@@ -75,18 +80,15 @@ const AllRoutes = ({ tripTimes, setDirections }) => {
                     ) : (
                       ""
                     )}
-                    {tripTimes[index].transit_index.includes(i)
-                      ? step.transit.route
-                      : ""}
-
-                    {!tripTimes[index].transit_index.includes(i) ? (
-                      <DirectionsWalkIcon style={{ color: "blue" }} />
+                    {tripTimes[index].transit_index.includes(i) ? (
+                      step.transit.route
                     ) : (
-                      ""
+                      <DirectionsWalkIcon style={{ color: "blue" }} />
                     )}
                   </p>
                 </Timeline.Item>
               ))}
+              {/* Destination timeline element */}
               <Timeline.Item
                 label={
                   new Date(tripTimes[index].end.time * 1000).getHours() +

@@ -82,6 +82,7 @@ const App = () => {
     newFields["destination"] = dest;
     newFields["time"] = time;
     setState(newFields);
+    console.log(newFields);
     if (source.bus_id) {
       // if source is a bus route
       clearMap();
@@ -112,8 +113,6 @@ const App = () => {
       ]);
     } else {
       // otherwise - directions
-      console.log(source);
-      console.log(dest);
       clearMap();
       axios
         .get(
@@ -130,7 +129,6 @@ const App = () => {
         )
         .then((res) => {
           if (res.data.status === "OK") {
-            console.log(res.data.connections);
             setTripTimes(res.data.connections);
             setDirections(findPoly(res.data.connections[0]));
             setStopsForMap([]);
@@ -142,6 +140,7 @@ const App = () => {
       setActiveKey("connections");
     }
   };
+
   function changeActiveTab(key) {
     setActiveKey(key);
   }

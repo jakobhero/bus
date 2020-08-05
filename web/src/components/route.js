@@ -23,6 +23,7 @@ const Route = ({ tripTime, setDirections, setIndex, index }) => {
     tripTime.steps[i]["time"] = time;
     time += tripTime.steps[i].duration * 1000;
   }
+  // Depart and arrival time in human readable format
   let departTime =
     startTime.getHours() +
     ":" +
@@ -35,6 +36,7 @@ const Route = ({ tripTime, setDirections, setIndex, index }) => {
     endTime.getMinutes();
 
   const handleClick = () => {
+    // update detailed directions in favourites tab and set new polyline
     setIndex(index);
     setDirections(findPoly(tripTime));
   };
@@ -53,6 +55,7 @@ const Route = ({ tripTime, setDirections, setIndex, index }) => {
       <div>
         <DirectionsWalkIcon style={{ color: "blue" }} />
         {tripTime.transit_index.map((index) => (
+          // Loop over array of transit index, and for each index given if it corresponds to bus show bus icon, else Tram icon
           <span key={index}>
             <ArrowForwardIosIcon />
             {tripTime.steps[index].transit.type === "BUS" ? (

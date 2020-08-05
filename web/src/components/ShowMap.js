@@ -33,7 +33,7 @@ import "../css/map.css";
 // https://www.youtube.com/watch?v=SySVBV_jcCM
 
 const mapContainerStyle = {
-  height: "70vh",
+  height: "60vh",
 };
 
 const centre = {
@@ -57,6 +57,7 @@ function ShowMap({
   const [address, setAddress] = React.useState(null);
   const [touristModeBool, setTouristModeBool] = React.useState(false);
   const [otherRouteBool, setOherRouteBool] = React.useState(false);
+  const [visible, setVisible] = useState(false);
 
   const mapRef = React.useRef();
   const onMapLoad = React.useCallback((map) => {
@@ -76,18 +77,16 @@ function ShowMap({
     return arr;
   }
 
-  function icoStatusData() {
+  function iconStatusData() {
     // adding/deleting stop to/from cookies
     if (favStops.stopsids.includes(selected.stopid)) {
-      console.log("deleteing");
       delCookie(selected.stopid);
       setFavStops({
         fullname: removeItemOnce(favStops.fullname, selected.fullname),
         stopsids: removeItemOnce(favStops.stopsids, selected.stopid),
       });
     } else {
-      console.log("adding");
-      setCookie(selected.stopid, selected.stopid);
+      setCookie(selected.stopid);
       favStops.fullname.push(selected.fullname);
       favStops.stopsids.push(selected.stopid);
       setFavStops({
@@ -98,7 +97,7 @@ function ShowMap({
   }
   const saveAddOnMap = (Val) => {
     // save address via map
-
+    // Only allows setting of home or work, no unsetting. This is done by overriding values
     let tempAdd = { ...address };
     if (Val === "Work" && !tempAdd.work) {
       tempAdd.work = !tempAdd.work;
@@ -112,6 +111,7 @@ function ShowMap({
   };
 
   const onClickHW = () => {
+    //Updates address to not just contain source but also booleans for use in state of icons
     let newSource = { ...source };
     newSource["work"] = getAddressByVal("Work") === source.val;
     newSource["home"] = getAddressByVal("Home") === source.val;
@@ -122,7 +122,6 @@ function ShowMap({
     axios
       .get("/api/nearestneighbor?lat=" + lat + "&lng=" + lng + "&k=1")
       .then((res) => {
-        console.log(res);
         if (res.statusText === "OK") {
           setSelected(res.data.stops[0]);
         }
@@ -130,6 +129,7 @@ function ShowMap({
       .catch(console.log);
   };
 
+  // Setting bounds for map to zoom and pan to include all markers, special case if only one marker to avoid over zooming
   let bounds = new window.google.maps.LatLngBounds();
 
   if (stops.length > 0) {
@@ -157,21 +157,7 @@ function ShowMap({
     mapRef.current.fitBounds(bounds);
     mapRef.current.panTo(bounds.getCenter());
   }
-  const [visible, setVisible] = useState(false);
 
-  const showModal = () => {
-    setVisible(true);
-  };
-
-  const handleOk = (e) => {
-    console.log(e);
-    setVisible(false);
-  };
-
-  const handleCancel = (e) => {
-    console.log(e);
-    setVisible(false);
-  };
   return (
     <div>
       <GoogleMap
@@ -244,22 +230,22 @@ function ShowMap({
                 <p>{address.val}</p>
               </h4>
               <Tooltip className="tooltip" title="Show Weather">
-                <Button style={{ margin: 10 }} onClick={showModal}>
+                <Button style={{ margin: 10 }} onClick={() => setVisible(true)}>
                   <Cloud />
                 </Button>
               </Tooltip>
               <Modal
                 title="Today's Weather"
                 visible={visible}
-                onOk={handleOk}
-                onCancel={handleCancel}
+                onOk={() => setVisible(false)}
+                onCancel={() => setVisible(false)}
               >
                 <ReactWeather
                   forecast="today"
                   apikey="7ad07aac9b0943040a4abdd2c23dfc4e"
                   type="geo"
-                  lat={address.lat}
-                  lon={address.lng}
+                  lat={address.lat.toString()}
+                  lon={address.lng.toString()}
                 />
               </Modal>
               <Tooltip className="tooltip" title="Set Home">
@@ -306,26 +292,26 @@ function ShowMap({
                 </Button>
               </Tooltip>
               <Tooltip className="tooltip" title="Show Weather">
-                <Button style={{ margin: 5 }} onClick={showModal}>
+                <Button style={{ margin: 5 }} onClick={() => setVisible(true)}>
                   <Cloud />
                 </Button>
               </Tooltip>
               <Modal
                 title="Today's Weather"
                 visible={visible}
-                onOk={handleOk}
-                onCancel={handleCancel}
+                onOk={() => setVisible(false)}
+                onCancel={() => setVisible(false)}
               >
                 <ReactWeather
                   forecast="today"
                   apikey="7ad07aac9b0943040a4abdd2c23dfc4e"
                   type="geo"
-                  lat={selected.lat}
-                  lon={selected.lng}
+                  lat={selected.lat.toString()}
+                  lon={selected.lng.toString()}
                 />
               </Modal>
               <Tooltip className="tooltip" title="Toggle Favourite">
-                <Button style={{ margin: 5 }} onClick={icoStatusData}>
+                <Button style={{ margin: 5 }} onClick={iconStatusData}>
                   {favStops.stopsids.includes(selected.stopid) ? (
                     <StarIcon />
                   ) : (
@@ -379,31 +365,33 @@ function ShowMap({
 
 function Locate({ panTo, getStopsByCoords }) {
   return (
-    <div
-      className="mapUI locate"
-      onClick={() => {
-        navigator.geolocation.getCurrentPosition(
-          (position) => {
-            panTo({
-              lat: position.coords.latitude,
-              lng: position.coords.longitude,
-            });
-            getStopsByCoords(
-              position.coords.latitude,
-              position.coords.longitude
-            );
-          },
-          () => null
-        );
-      }}
-    >
-      <i
-        className="fa fa-compass"
-        id="innerLocate"
-        aria-hidden="true"
-        style={{ fontSize: "35px" }}
-      />
-    </div>
+    <Tooltip className="tooltip" title="Current Location">
+      <div
+        className="mapUI locate"
+        onClick={() => {
+          navigator.geolocation.getCurrentPosition(
+            (position) => {
+              panTo({
+                lat: position.coords.latitude,
+                lng: position.coords.longitude,
+              });
+              getStopsByCoords(
+                position.coords.latitude,
+                position.coords.longitude
+              );
+            },
+            () => null
+          );
+        }}
+      >
+        <i
+          className="fa fa-compass"
+          id="innerLocate"
+          aria-hidden="true"
+          style={{ fontSize: "35px" }}
+        />
+      </div>
+    </Tooltip>
   );
 }
 

@@ -24,6 +24,7 @@ const PlacesAutocomplete = ({ id, handleChange, placeholder, route }) => {
     setValue,
   } = usePlacesAutocomplete({
     requestOptions: {
+      // set google places to only return places in Ireland, favouring places close to Dublin
       location: { lat: () => 53.35014, lng: () => -6.266155 },
       radius: 100000, //100 km
       componentRestrictions: { country: "ie" },
@@ -41,6 +42,7 @@ const PlacesAutocomplete = ({ id, handleChange, placeholder, route }) => {
   }
 
   function searchLocalRoute(query) {
+    // search locally stored array of bus routes
     var filter,
       count,
       route_id,
@@ -90,6 +92,7 @@ const PlacesAutocomplete = ({ id, handleChange, placeholder, route }) => {
       stopID = val.split("(")[1];
       stopID = stopID.split(")")[0];
       for (var i = 0; i < stopData.length; i++) {
+        // loop over the data orginally fetched from the server during the lookup
         let stop_id = stopData[i].stop_id;
         if (stop_id === stopID) {
           lat = stopData[i].lat;
