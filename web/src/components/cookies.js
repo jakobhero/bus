@@ -1,5 +1,5 @@
 import axios from "axios";
-function setCookie(name, value) {
+function setCookie(name) {
   // this function used to save stopid into cookies
   // the cookies format as stopid=stop fullname
   var days = 1;
@@ -11,7 +11,6 @@ function setCookie(name, value) {
     .get("/api/stops?substring=" + name)
     .then((res) => {
       if (res.statusText === "OK") {
-        console.log(res.data.stops[0]);
         return res.data.stops[0].fullname;
       }
     })
@@ -33,6 +32,9 @@ function getStopNames() {
   // return all saved bus stop name
   let favStops = [];
   var storedCookies = document.cookie.split(";");
+  if (!storedCookies[0]) {
+    return favStops;
+  }
   for (let i = 0; i < storedCookies.length; i++) {
     var stopInfo = storedCookies[i].split("=");
     if (!isNaN(stopInfo[0])) {
@@ -46,6 +48,9 @@ function getStopNums() {
   // return saved stop id
   var storedCookies = document.cookie.split(";");
   var stopNums = [];
+  if (!storedCookies[0]) {
+    return stopNums;
+  }
   for (let i = 0; i < storedCookies.length; i++) {
     var stopInfo = storedCookies[i].split("=");
     if (!isNaN(stopInfo[0])) {
