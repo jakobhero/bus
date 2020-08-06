@@ -1,0 +1,441 @@
+{
+        "connections": [
+                {
+                        "db_index": [
+                                1
+                        ],
+                        "distance": 2287,
+                        "duration": 829,
+                        "end": {
+                                "address": "College Green, Dublin 2, Ireland",
+                                "location": {
+                                        "lat": 53.3443633,
+                                        "lng": -6.2593112
+                                },
+                                "time": 1596706679
+                        },
+                        "start": {
+                                "address": "Blackhall Pl, Northside, Dublin, Ireland",
+                                "location": {
+                                        "lat": 53.3486857,
+                                        "lng": -6.282002599999999
+                                },
+                                "time": 1596705850
+                        },
+                        "steps": [
+                                {
+                                        "directions": [
+                                                "Head <b>south</b> on <b>Blackhall Pl</b>/<wbr/><b>R804</b>/<wbr/><b>R805</b> toward <b>Oxmantown Ln</b>",
+                                                "Turn <b>right</b> onto <b>Ellis Quay</b>/<wbr/><b>R148</b><div style=\"font-size:0.9em\">Continue to follow R148</div><div style=\"font-size:0.9em\">Destination will be on the right</div>"
+                                        ],
+                                        "distance": 359,
+                                        "duration": 263,
+                                        "html_instructions": "Walk to Wolfe Tone Quay, Ellis Street",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "itrdIn}ie@TDp@FH@b@H`@F\\H\\Fh@HB@JB`B`@",
+                                                "yhrdIt`je@Cb@MvBANGlBCdCAF?\\"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3486857,
+                                                "lng": -6.282002599999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.3470186,
+                                                "lng": -6.2847789
+                                        }
+                                },
+                                {
+                                        "distance": 1671,
+                                        "duration": 377,
+                                        "html_instructions": "Bus towards Aston Quay",
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "ijrdIxnje@L??[@GBeCFmB@OLwBBc@FwBF}@LsCHiBZqCZsBP_BLeA\\yCXsC?CDi@Ba@N_CFcAF}@Dq@HmA?GDcADaBB}@@mA?Y?wAEmBCm@AWCe@G}@AK?CKwA?IEs@Ee@QiCC]M_BOuBrBe@ZInA_@h@MNEhB_@EoACgAA_@?U?s@?yB?eB?eA?g@C{AC{AAiA?QM@"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3470947,
+                                                "lng": -6.2847662
+                                        },
+                                        "stop": {
+                                                "lat": 53.3443047,
+                                                "lng": -6.2628894
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Temple Bar, Central Bank",
+                                                        "time": 1596706491
+                                                },
+                                                "dep": {
+                                                        "name": "Wolfe Tone Quay, Ellis Street",
+                                                        "time": 1596706114
+                                                },
+                                                "headsign": "Aston Quay",
+                                                "operator": "Dublin Bus",
+                                                "route": "79",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "directions": [
+                                                "Head <b>east</b> on <b>Dame St</b>/<wbr/><b>R137</b> toward <b>Trinity St</b><div style=\"font-size:0.9em\">Continue to follow R137</div>",
+                                                "Turn <b>left</b> onto <b>College Green</b>/<wbr/><b>R138</b><div style=\"font-size:0.9em\">Closed Mon\u2013Fri 7:00 \u2013 10:00 AM</div>",
+                                                "Turn <b>right</b>",
+                                                "Turn <b>right</b>"
+                                        ],
+                                        "distance": 257,
+                                        "duration": 187,
+                                        "html_instructions": "Walk to College Green, Dublin 2, Ireland",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "mxqdIdffe@Au@ASB_@?i@CgAA{@A]CgA?]EoC?KAWIaAIY",
+                                                "uyqdIxpee@I?",
+                                                "_zqdIxpee@@]",
+                                                "}yqdIzoee@FAB?HC"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3442331,
+                                                "lng": -6.262905099999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.3443633,
+                                                "lng": -6.2593112
+                                        }
+                                }
+                        ],
+                        "transit_index": [
+                                1
+                        ]
+                },
+                {
+                        "db_index": [
+                                1
+                        ],
+                        "distance": 3287,
+                        "duration": 1242,
+                        "end": {
+                                "address": "College Green, Dublin 2, Ireland",
+                                "location": {
+                                        "lat": 53.3443633,
+                                        "lng": -6.2593112
+                                },
+                                "time": 1596706950
+                        },
+                        "start": {
+                                "address": "Blackhall Pl, Northside, Dublin, Ireland",
+                                "location": {
+                                        "lat": 53.3486857,
+                                        "lng": -6.282002599999999
+                                },
+                                "time": 1596705708
+                        },
+                        "steps": [
+                                {
+                                        "directions": [
+                                                "Head <b>south</b> on <b>Blackhall Pl</b>/<wbr/><b>R804</b>/<wbr/><b>R805</b> toward <b>Oxmantown Ln</b>",
+                                                "Turn <b>right</b> onto <b>Ellis Quay</b>/<wbr/><b>R148</b><div style=\"font-size:0.9em\">Continue to follow R148</div><div style=\"font-size:0.9em\">Destination will be on the right</div>"
+                                        ],
+                                        "distance": 359,
+                                        "duration": 263,
+                                        "html_instructions": "Walk to Wolfe Tone Quay, Ellis Street",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "itrdIn}ie@TDp@FH@b@H`@F\\H\\Fh@HB@JB`B`@",
+                                                "yhrdIt`je@Cb@MvBANGlBCdCAF?\\"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3486857,
+                                                "lng": -6.282002599999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.3470186,
+                                                "lng": -6.2847789
+                                        }
+                                },
+                                {
+                                        "distance": 2586,
+                                        "duration": 729,
+                                        "html_instructions": "Bus towards Merrion Sq",
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "ijrdIxnje@L??[@GBeCFmB@OLwBBc@FwBF}@LsCHiBZqCZsBP_BLeA\\yCXsC?CDi@Ba@N_CFcAF}@Dq@HmA?GDcADaBB}@?k@@a@?Y?wAEmBCm@AWCe@IiA?CKwA?IEs@Ee@OqBAWC]M_BOuBC[EkBCsAQwEGy@Ew@?MCq@IqAGo@QoAQuACMCQm@iEc@}CAEOgAIc@e@wCQaAQ}@AQIe@NEHIFCz@]JGJERGJGLOJOVe@NWh@_AP[HQPY\\i@FIDCBA@?B?B?D@B@DDDF@FHRBL@JFZNp@Lh@Lh@HJTn@^t@PV\\ZLJHFFBXPH?ROROLGJEPEJAJAr@BV@X@@?DABCDCBCDEBEFMFe@TaCD[@MBS?ED[FYBGDKHs@N{@BW@APkAD[DYMG"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3470947,
+                                                "lng": -6.2847662
+                                        },
+                                        "stop": {
+                                                "lat": 53.3426053,
+                                                "lng": -6.2561202
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Nassau Street, stop 406",
+                                                        "time": 1596706701
+                                                },
+                                                "dep": {
+                                                        "name": "Wolfe Tone Quay, Ellis Street",
+                                                        "time": 1596705972
+                                                },
+                                                "headsign": "Merrion Sq",
+                                                "operator": "Dublin Bus",
+                                                "route": "25a",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "directions": [
+                                                "Head <b>west</b> on <b>Nassau St</b>/<wbr/><b>R138</b> toward <b>Frederick St S</b>",
+                                                "Slight <b>right</b>"
+                                        ],
+                                        "distance": 342,
+                                        "duration": 248,
+                                        "html_instructions": "Walk to College Green, Dublin 2, Ireland",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "{mqdI~{de@EXEZQjAA@EVMz@Ir@GNI\\EZ?DCRALEZU`C",
+                                                "sqqdIzlee@K?AB?@A@CVALEHGDI?M@I?OAK?_@ASASAO@O@IDQLEDGB"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3425407,
+                                                "lng": -6.256158
+                                        },
+                                        "stop": {
+                                                "lat": 53.3443633,
+                                                "lng": -6.2593112
+                                        }
+                                }
+                        ],
+                        "transit_index": [
+                                1
+                        ]
+                },
+                {
+                        "db_index": [
+                                1
+                        ],
+                        "distance": 2296,
+                        "duration": 933,
+                        "end": {
+                                "address": "College Green, Dublin 2, Ireland",
+                                "location": {
+                                        "lat": 53.3443633,
+                                        "lng": -6.2593112
+                                },
+                                "time": 1596707155
+                        },
+                        "start": {
+                                "address": "Blackhall Pl, Northside, Dublin, Ireland",
+                                "location": {
+                                        "lat": 53.3486857,
+                                        "lng": -6.282002599999999
+                                },
+                                "time": 1596706222
+                        },
+                        "steps": [
+                                {
+                                        "directions": [
+                                                "Head <b>south</b> on <b>Blackhall Pl</b>/<wbr/><b>R804</b>/<wbr/><b>R805</b> toward <b>Oxmantown Ln</b><div style=\"font-size:0.9em\">Destination will be on the left</div>"
+                                        ],
+                                        "distance": 109,
+                                        "duration": 77,
+                                        "html_instructions": "Walk to Blackhall Place, stop 1715",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "itrdIn}ie@TDp@FH@b@H`@F\\HLB"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3486857,
+                                                "lng": -6.282002599999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.3477145,
+                                                "lng": -6.2822356
+                                        }
+                                },
+                                {
+                                        "distance": 1858,
+                                        "duration": 597,
+                                        "html_instructions": "Bus towards UCD",
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "cnrdIf~ie@CXfDx@B_@j@wKfAgJLeA\\yCXsC?CDi@Ba@N_CFcAF}@Dq@HmA?GDcADaBB}@?k@@a@?Y?wAEmBCm@AWCe@IiA?CKwA?IEs@Ee@OqBAWC]M_BOuBC[EkBCsAQwEGy@Ew@?MCq@IqAGo@QoAQuACMCQm@iEc@}CAEOgAIc@e@wCQaAQ}@AQIe@NEHIFCz@]JGJERGJGLOJOVe@NW?AKU"
+                                        ],
+                                        "start": {
+                                                "lat": 53.34770409999999,
+                                                "lng": -6.2821238
+                                        },
+                                        "stop": {
+                                                "lat": 53.3465812,
+                                                "lng": -6.2581256
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "D'Olier Street",
+                                                        "time": 1596706897
+                                                },
+                                                "dep": {
+                                                        "name": "Blackhall Place, stop 1715",
+                                                        "time": 1596706300
+                                                },
+                                                "headsign": "UCD",
+                                                "operator": "Dublin Bus",
+                                                "route": "39a",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "directions": [
+                                                "Head <b>southeast</b> on <b>D'Olier Street</b> toward <b>Fleet St</b>",
+                                                "Slight <b>right</b> onto <b>College St</b><div style=\"font-size:0.9em\">Parts of this road may be closed at certain times or days</div>",
+                                                "Slight <b>left</b>"
+                                        ],
+                                        "distance": 329,
+                                        "duration": 246,
+                                        "html_instructions": "Walk to College Green, Dublin 2, Ireland",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "wfrdI~hee@h@}@P[HQPY\\i@FI",
+                                                "ybrdIdcee@DCDAB?B?D@B@DDDF@FHRBJ@LFZNp@Lh@Lh@HJTn@^t@",
+                                                "i}qdIzmee@J?H@FBD@DBDBDFFHDFFDDDFDF@H@FAB?HC"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3465171,
+                                                "lng": -6.2582432
+                                        },
+                                        "stop": {
+                                                "lat": 53.3443633,
+                                                "lng": -6.2593112
+                                        }
+                                }
+                        ],
+                        "transit_index": [
+                                1
+                        ]
+                },
+                {
+                        "db_index": [
+                                1
+                        ],
+                        "distance": 2777,
+                        "duration": 1206,
+                        "end": {
+                                "address": "College Green, Dublin 2, Ireland",
+                                "location": {
+                                        "lat": 53.3443633,
+                                        "lng": -6.2593112
+                                },
+                                "time": 1596706961
+                        },
+                        "start": {
+                                "address": "Blackhall Pl, Northside, Dublin, Ireland",
+                                "location": {
+                                        "lat": 53.3486857,
+                                        "lng": -6.282002599999999
+                                },
+                                "time": 1596705755
+                        },
+                        "steps": [
+                                {
+                                        "directions": [
+                                                "Head <b>east</b> on <b>Blackhall St</b> toward <b>Paul St</b>",
+                                                "Turn <b>left</b> onto <b>Queen St</b>/<wbr/><b>R804</b>/<wbr/><b>R805</b>",
+                                                "Turn <b>right</b> onto <b>Blackhall Walk</b>",
+                                                "Turn <b>right</b> toward <b>Smithfield</b>",
+                                                "Turn <b>left</b> toward <b>Smithfield</b>",
+                                                "Turn <b>right</b> onto <b>Smithfield</b>",
+                                                "Turn <b>left</b> onto <b>New Church St</b>",
+                                                "Turn <b>left</b> onto <b>Bow St</b>",
+                                                "Turn <b>right</b> onto <b>May Ln</b>",
+                                                "Turn <b>right</b> onto <b>Church St</b>/<wbr/><b>N1</b><div style=\"font-size:0.9em\">Destination will be on the left</div>"
+                                        ],
+                                        "distance": 613,
+                                        "duration": 447,
+                                        "html_instructions": "Walk to Church Street, stop 1615",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "itrdIn}ie@H{AB]JsCNaD",
+                                                "_srdI~oie@YE",
+                                                "ysrdIxoie@D{@RgE",
+                                                "_srdItgie@d@H",
+                                                "yqrdI~gie@x@gALO",
+                                                "qordIfeie@XF",
+                                                "wnrdIneie@X{F",
+                                                "}mrdIr}he@UEQGICSK",
+                                                "cprdIt|he@@kK",
+                                                "aprdIhphe@P@PB@?"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3486857,
+                                                "lng": -6.282002599999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.34782209999999,
+                                                "lng": -6.274801
+                                        }
+                                },
+                                {
+                                        "distance": 1982,
+                                        "duration": 628,
+                                        "html_instructions": "Bus towards Kimmage",
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "wnrdIhohe@Cd@\\F@?P?F@H@NBJDp@TLBD@^Lr@T@@LDF@DBPFNHLFLIBAD@JBNBF@B?BABA?AJSF}@Dq@HmA?GDcADaBB}@?k@@a@?Y?wAEmBCm@AWCe@IiA?CKwA?IEs@Ee@OqBAWC]M_BOuBC[EkBCsAQwEGy@Ew@?MCq@IqAGo@QoAQuACMCQm@iEc@}CAEOgAIc@e@wCQaAQ}@AQIe@NEHIFCz@]JGJERGJGLOJOVe@NWh@_AP[BGDIPY\\i@FIDCBA@?B?B?D@B@DDDF@FHRBL@JFZNp@Lh@Lh@HJTn@^t@PV\\ZLJHFFBXPH?HXH`A@V?JDnC?X?DBdA@\\@r@H?"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3478,
+                                                "lng": -6.2746054
+                                        },
+                                        "stop": {
+                                                "lat": 53.344203,
+                                                "lng": -6.2617693
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "College Green, stop 1279",
+                                                        "time": 1596706830
+                                                },
+                                                "dep": {
+                                                        "name": "Church Street, stop 1615",
+                                                        "time": 1596706202
+                                                },
+                                                "headsign": "Kimmage",
+                                                "operator": "Dublin Bus",
+                                                "route": "83",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "directions": [
+                                                "Head <b>east</b> on <b>College Green</b>/<wbr/><b>R137</b> toward <b>Church Ln</b>",
+                                                "Turn <b>left</b> onto <b>College Green</b>/<wbr/><b>R138</b><div style=\"font-size:0.9em\">Closed Mon\u2013Fri 7:00 \u2013 10:00 AM</div>",
+                                                "Turn <b>right</b>",
+                                                "Turn <b>right</b>"
+                                        ],
+                                        "distance": 182,
+                                        "duration": 130,
+                                        "html_instructions": "Walk to College Green, Dublin 2, Ireland",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "qxqdId_fe@Aw@A]CgA?]EoC?KAWIaAIY",
+                                                "uyqdIxpee@I?",
+                                                "_zqdIxpee@@]",
+                                                "}yqdIzoee@FAB?HC"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3442506,
+                                                "lng": -6.2617859
+                                        },
+                                        "stop": {
+                                                "lat": 53.3443633,
+                                                "lng": -6.2593112
+                                        }
+                                }
+                        ],
+                        "transit_index": [
+                                1
+                        ]
+                }
+        ],
+        "status": "OK"
+}

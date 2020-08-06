@@ -29,9 +29,7 @@ if __name__=='__main__':
     
     #match assignments with command line argument.
     models=assignment[name]
-    
-    #for testing purposes only
-    #models=[['46A',1]]
+    # models=assignment["yuqian"]+assignment["mohamed"]+assignment["jakob"]
 
     #create sql alchemy engine
     config=config()
@@ -39,6 +37,7 @@ if __name__=='__main__':
 
     count=0
     length=len(models)
+    features={}
 
     #train each model in the assignment
     for model in models:
@@ -106,6 +105,14 @@ if __name__=='__main__':
         X=df_test_prior
         X_train,X_test,y_train,y_test=train_test_split(X,y_prior,random_state=1)
 
+        #store features
+        sched_features={
+            "weekday":list(df_weekday.columns),
+            "month":list(df_month.columns),
+            "hour":list(df_hour.columns),
+            "stops":list(df_stops.columns)
+        }
+
         #train and dump model for scheduled duration.
         reg = LinearRegression().fit(X_train, y_train)
         print(f"Score of schedule prediction: {reg.score(X_test,y_test):.2f}.")
@@ -119,9 +126,35 @@ if __name__=='__main__':
         X=df_test
         X_train,X_test,y_train,y_test=train_test_split(X,y,random_state=1)
 
+        #store features in dictionary
+        actual_features={
+            "temp":None,
+            "dur_s":None,
+            "weather":list(df_weather.columns),
+            "weekday":list(df_weekday.columns),
+            "month":list(df_month.columns),
+            "hour":list(df_hour.columns)            
+        }
+        if line in features:
+            features[line][str(direction)]={
+                "schedule":sched_features,
+                "actual":actual_features
+            }
+        else:
+            features[line]={
+                str(direction):{
+                    "schedule":sched_features,
+                    "actual":actual_features
+                }
+            }        
+
         #train and dump model for actual duration.
         reg = LinearRegression().fit(X_train, y_train)
         print(f"Score of duration prediction: {reg.score(X_test,y_test):.2f}.")
         filename = "duration_preds/"+line+"_"+str(direction)+".sav"
         pickle.dump(reg, open(filename, 'wb'))
         print("")
+    
+    #dump feature sets in json
+    with open('features.json', 'w') as outfile:
+        json.dump(features, outfile)
