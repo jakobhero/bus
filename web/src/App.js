@@ -36,6 +36,9 @@ const App = () => {
   const [sortStepsNum, setSortStepsNum] = useState(1);
   const [sortTimeNum, setSortTimeNum] = useState(-1);
 
+  const [searchValS, setSearchValS] = useState("");
+  const [searchValD, setSearchValD] = useState("");
+
   const [favStops, setFavStops] = useState({
     fullname: getStopNames(),
     stopsids: getStopNums(),
@@ -82,7 +85,6 @@ const App = () => {
     newFields["destination"] = dest;
     newFields["time"] = time;
     setState(newFields);
-    console.log(newFields);
     if (source.bus_id) {
       // if source is a bus route
       clearMap();
@@ -131,8 +133,6 @@ const App = () => {
           if (res.data.status === "OK") {
             setTripTimes(res.data.connections);
             setDirections(findPoly(res.data.connections[0]));
-            setStopsForMap([]);
-            setOtherRoute([]);
             setBusIndex(res.data.connections[0].transit_index);
           }
         })
@@ -174,11 +174,19 @@ const App = () => {
   };
   return (
     <div className="App">
-      <SearchForm handleSubmitApp={handleSubmitApp} />
+      <SearchForm
+        handleSubmitApp={handleSubmitApp}
+        searchValD={searchValD}
+        searchValS={searchValS}
+        setSearchValD={setSearchValD}
+        setSearchValS={setSearchValS}
+      />
       <Tabs
         style={{ margin: 10 }}
         onChange={changeActiveTab}
         activeKey={activeKey}
+        size={"large"}
+        animated={true}
       >
         <TabPane tab="Map" key="map">
           <ShowMap
@@ -228,6 +236,7 @@ const App = () => {
             state={state}
             favStops={favStops}
             setFavStops={setFavStops}
+            setSearchVal={setSearchValS}
           />
         </TabPane>
         <TabPane tab="Real Time" key="realTime">
