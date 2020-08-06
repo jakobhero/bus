@@ -92,8 +92,9 @@ const App = () => {
         .get("/api/routeinfo?routeid=" + source.bus_id)
         .then((res) => {
           if (res.statusText === "OK") {
-            setStopsForMap(res.data[0]);
-            setOtherRoute(res.data[1]);
+            console.log(res.data);
+            setStopsForMap(res.data["1"]);
+            setOtherRoute(res.data["2"]);
             setActiveKey("map");
           }
         })

@@ -23,6 +23,7 @@ import Home from "@material-ui/icons/Home";
 import HomeOutlined from "@material-ui/icons/HomeOutlined";
 import Work from "@material-ui/icons/Work";
 import WorkOutlined from "@material-ui/icons/WorkOutline";
+import DirectionsBusIcon from "@material-ui/icons/DirectionsBus";
 
 import ReactWeather from "react-open-weather";
 //Optional include of the default css styles
@@ -313,11 +314,15 @@ function ShowMap({
             }}
           >
             <div>
-              <h2>
-                <p>{selected.fullname}</p>
-              </h2>
+              <h2>{selected.fullname}</h2>
               <h4>{`Stop ${selected.stopid}`}</h4>
-              <p>Routes:[11,14,46A]</p>
+              {Object.keys(selected.lines).map((route) => (
+                <span>
+                  <DirectionsBusIcon style={{ color: "blue" }} />
+                  {route}
+                </span>
+              ))}
+              <br />
               <Tooltip className="tooltip" title="Real Time">
                 <Button
                   style={{ margin: 5 }}

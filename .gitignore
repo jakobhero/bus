@@ -18,3 +18,4 @@ data_analytics/jakob/weather_clean.csv
 data_analytics/jakob/stops_cleaned.csv
 data_analytics/jakob/gtfs
 backend/.env
+backend/env

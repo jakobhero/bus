@@ -63,6 +63,7 @@ const SearchForm = ({
     newFields["destination"] = "";
     setFieldsValues(newFields);
     setShowDestination(!showDestination);
+    setSearchValD("");
   };
 
   const handleSwapClick = () => {
