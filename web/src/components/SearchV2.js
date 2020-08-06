@@ -13,10 +13,18 @@ import "@reach/combobox/styles.css";
 
 import routes from "./routesInfo";
 
-const PlacesAutocomplete = ({ id, handleChange, placeholder, route }) => {
+const PlacesAutocomplete = ({
+  id,
+  handleChange,
+  placeholder,
+  route,
+  searchVal,
+  setSearchVal,
+}) => {
   const [stopData, setStopData] = useState([]);
   const [routeData, setRouteData] = useState([]);
 
+  const [input, setInput] = useState(false);
   const {
     ready,
     value,
@@ -69,21 +77,25 @@ const PlacesAutocomplete = ({ id, handleChange, placeholder, route }) => {
   }
 
   const handleInput = (e) => {
+    setInput(true);
     // when characters are added to the input, then functions are run with the input, if there is a match then add that match to the array, the array is displayed in the dropdown
     try {
       setRouteData([]);
       setStopData([]);
       searchLocalStop(e.target.value);
       if (route) {
+        // only search routes if specified
         searchLocalRoute(e.target.value);
       }
       setValue(e.target.value);
+      setSearchVal(e.target.value);
     } catch (error) {
       console.error(error);
     }
   };
 
   const handleSelect = (val) => {
+    setInput(false);
     //Firstly if the option was a bus stop, then find the corresponding info for the stop and send the data to the parent via handleChange.
     //Then if it was a route, send bus_id to parent
     // Lastly if it was a place, find the co ords, then send them along with value to parent
@@ -107,14 +119,16 @@ const PlacesAutocomplete = ({ id, handleChange, placeholder, route }) => {
     } else {
       handleChange({ val }, id);
     }
-    setValue(val, false);
+    setSearchVal(val, false);
+    setRouteData([]);
+    setStopData([]);
   };
 
   return (
     <div>
       <Combobox onSelect={handleSelect} aria-label="Choose a location">
         <ComboboxInput
-          value={value}
+          value={searchVal}
           onChange={handleInput}
           disabled={!ready}
           placeholder={placeholder}
@@ -122,53 +136,64 @@ const PlacesAutocomplete = ({ id, handleChange, placeholder, route }) => {
           data-lpignore="true"
           selectOnClick
         />
-        <ComboboxPopover>
-          <ComboboxList>
-            {stopData.length > 0 &&
-              stopData.map(({ stop_id, key, fullname }) => (
-                <ComboboxOption
-                  key={key}
-                  value={`${fullname} (${stop_id}), Bus Stop`}
-                >
-                  <img
-                    src="./bus.svg"
-                    alt="bus"
-                    width="20"
-                    height="20"
-                    style={{ marginRight: "10px" }}
-                  />
-                  <ComboboxOptionText />
-                </ComboboxOption>
-              ))}
+        {input && (
+          <ComboboxPopover>
+            <ComboboxList>
+              {
+                // display stops that match search and icon
+                stopData.length > 0 &&
+                  stopData.map(({ stop_id, key, fullname }) => (
+                    <ComboboxOption
+                      key={key}
+                      value={`${fullname} (${stop_id}), Bus Stop`}
+                    >
+                      <img
+                        src="./bus.svg"
+                        alt="bus"
+                        width="20"
+                        height="20"
+                        style={{ marginRight: "10px" }}
+                      />
+                      <ComboboxOptionText />
+                    </ComboboxOption>
+                  ))
+              }
 
-            {routeData.length > 0 &&
-              routeData.map(({ route_id, key }) => (
-                <ComboboxOption key={key} value={`${route_id}, Bus Route`}>
-                  <img
-                    src="./route.jpg"
-                    alt="route"
-                    width="20"
-                    height="20"
-                    style={{ marginRight: "10px" }}
-                  />
-                  <ComboboxOptionText />
-                </ComboboxOption>
-              ))}
-            {status === "OK" &&
-              data.map(({ id, description }) => (
-                <ComboboxOption key={id} value={description}>
-                  <img
-                    src="./location.png"
-                    alt="route"
-                    width="20"
-                    height="20"
-                    style={{ marginRight: "10px" }}
-                  />
-                  <ComboboxOptionText />
-                </ComboboxOption>
-              ))}
-          </ComboboxList>
-        </ComboboxPopover>
+              {
+                // display routes that match search and icon
+                routeData.length > 0 &&
+                  routeData.map(({ route_id, key }) => (
+                    <ComboboxOption key={key} value={`${route_id}, Bus Route`}>
+                      <img
+                        src="./route.jpg"
+                        alt="route"
+                        width="20"
+                        height="20"
+                        style={{ marginRight: "10px" }}
+                      />
+                      <ComboboxOptionText />
+                    </ComboboxOption>
+                  ))
+              }
+              {
+                // display google results and icon
+                status === "OK" &&
+                  data.map(({ id, description }) => (
+                    <ComboboxOption key={id} value={description}>
+                      <img
+                        src="./location.png"
+                        alt="route"
+                        width="20"
+                        height="20"
+                        style={{ marginRight: "10px" }}
+                      />
+                      <ComboboxOptionText />
+                    </ComboboxOption>
+                  ))
+              }
+            </ComboboxList>
+          </ComboboxPopover>
+        )}
       </Combobox>
     </div>
   );

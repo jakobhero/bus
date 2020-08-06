@@ -29,6 +29,7 @@ const Favourites = ({
   state,
   favStops,
   setFavStops,
+  setSearchVal,
 }) => {
   function handleClick(stopid, stopName) {
     setRealTime(stopid, stopName);
@@ -39,14 +40,15 @@ const Favourites = ({
     setFavStops({ fullname: getStopNames(), stopsids: getStopNums() });
   }
 
-  function handleClickAdd(Val) {
+  function handleClickAdd(val) {
     // transfer to the map tab, shows the address and near by bus stops
     // once click the address in the favourites tab
+    setSearchVal(getAddressByVal(val));
     let newFields = { ...state };
     let newSource = {
-      val: getAddressByVal(Val),
-      lat: parseFloat(getAddressByVal(Val + "Lat")),
-      lng: parseFloat(getAddressByVal(Val + "Lng")),
+      val: getAddressByVal(val),
+      lat: parseFloat(getAddressByVal(val + "Lat")),
+      lng: parseFloat(getAddressByVal(val + "Lng")),
     };
     newFields["source"] = newSource;
     newFields["destination"] = "";
