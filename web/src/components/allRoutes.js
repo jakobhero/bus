@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Route from "./route";
 import { Col, Timeline, Row } from "antd";
+import ReactHtmlParser from "react-html-parser";
 
 import DirectionsBusIcon from "@material-ui/icons/DirectionsBus";
 import DirectionsWalkIcon from "@material-ui/icons/DirectionsWalk";
@@ -83,7 +84,12 @@ const AllRoutes = ({ tripTimes, setDirections }) => {
                     {tripTimes[index].transit_index.includes(i) ? (
                       step.transit.route
                     ) : (
-                      <DirectionsWalkIcon style={{ color: "blue" }} />
+                      <div>
+                        <DirectionsWalkIcon style={{ color: "blue" }} />
+                        {step.directions.map((direction) => (
+                          <p>{ReactHtmlParser(direction)}</p>
+                        ))}
+                      </div>
                     )}
                   </p>
                 </Timeline.Item>
