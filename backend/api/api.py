@@ -7,6 +7,8 @@ import time
 from sklearn.neighbors import KDTree
 from flask_restful import Resource, Api, reqparse
 from sqlalchemy.types import String
+from pyleapcard import *
+from pprint import pprint
 
 from .models import Stops as StopsModel
 
@@ -92,6 +94,24 @@ class NearestNeighbor(Resource):
         return {"stops": response, "status": "OK"}
         # http://localhost/stops?lat=53.305544&lon=-6.237866&k=10
 
+class Leapcard(Resource):
+
+    def get(self):
+        parser = reqparse.RequestParser()
+        parser.add_argument('username', type=str)
+        parser.add_argument('password', type=str)
+
+        frontend_params = parser.parse_args()
+        if frontend_params["username"] == None:
+            return {"status": "NO_Username"}
+
+        username = frontend_params['username']
+        password = frontend_params['password']
+        session = LeapSession()
+        session.try_login("golfleap", "Monty1999")
+
+        overview = session.get_card_overview()
+        return overview
 
 class realTime(Resource):
     def get(self):
@@ -110,6 +130,9 @@ class realTime(Resource):
         parsed_json = (json.loads(resp.text))
         return parsed_json['results']
 
+class hello_world(Resource):
+    def hello(self):
+        return 'Hello, World!'
 
 class routeInfo(Resource):
     def match(self, list1, list2):
@@ -359,3 +382,7 @@ api.add_resource(NearestNeighbor, '/api/nearestneighbor',
 api.add_resource(realTime, '/api/realtime', endpoint='realtime')
 api.add_resource(routeInfo, '/api/routeinfo', endpoint='routeinfo')
 api.add_resource(Stops, '/api/stops', endpoint='stops')
+api.add_resource(hello_world, '/api/hello', endpoint='hello')
+api.add_resource(Leapcard, '/api/leapcard', endpoint='leapcard')
+
+
