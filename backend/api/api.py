@@ -307,6 +307,9 @@ class Directions(Resource):
 
         for i in range(len(model_info)):
             connection=res["connections"][i]
+            #if there is no dublin bus ride on the connection, move along to next connection
+            if len(connection["db_index"])==0:
+                continue
             #reset the start for the first bus to the time specified in the parameter plus however long it takes to get to the first bus stop
             prior_travel=0 #time it takes to get to first bus
             for j in range(connection["db_index"][0]):
