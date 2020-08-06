@@ -40,6 +40,37 @@ const centre = {
   lat: 53.35014,
   lng: -6.266155,
 };
+function Locate({ panTo, getStopsByCoords }) {
+  return (
+    <Tooltip className="tooltip" title="Current Location">
+      <div
+        className="mapUI locate"
+        onClick={() => {
+          navigator.geolocation.getCurrentPosition(
+            (position) => {
+              panTo({
+                lat: position.coords.latitude,
+                lng: position.coords.longitude,
+              });
+              getStopsByCoords(
+                position.coords.latitude,
+                position.coords.longitude
+              );
+            },
+            () => null
+          );
+        }}
+      >
+        <i
+          className="fa fa-compass"
+          id="innerLocate"
+          aria-hidden="true"
+          style={{ fontSize: "35px" }}
+        />
+      </div>
+    </Tooltip>
+  );
+}
 
 function ShowMap({
   source,
@@ -110,6 +141,11 @@ function ShowMap({
     saveAddress(Val + "Lng", address.lng);
   };
 
+  const onMapClick = React.useCallback((e) => {
+    setAddress(null);
+    setSelected(null);
+  }, []);
+
   const onClickHW = () => {
     //Updates address to not just contain source but also booleans for use in state of icons
     let newSource = { ...source };
@@ -171,6 +207,7 @@ function ShowMap({
           zoomControl: true,
         }}
         onLoad={onMapLoad}
+        onClick={onMapClick}
       >
         <Locate panTo={panTo} getStopsByCoords={getStopsByCoords} />
         <Tooltip className="tooltip" title="Tourist mode">
@@ -322,76 +359,41 @@ function ShowMap({
             </div>
           </InfoWindow>
         ) : null}
-        {/* If directions array is populated that loop through the array of arrays and draw polylines, if thatcurrent array corresponds to a bus array, then place a stop marker
+        {/* If directions array is populated that loop through the array of arrays and draw polylines, if that current array corresponds to a bus array, then place a stop marker
         at the first waypoint. */}
-        {directions.length > 1 &&
-          directions.map((marker, index) =>
-            marker.map((mrk) => (
-              <div key={(mrk[0].lat - mrk[0].lng) * (index + 1)}>
-                {busIndex.includes(index) &&
-                  [1, mrk.length - 1].map((idx) => (
-                    <Marker
-                      key={mrk[idx].lat - mrk[idx].lng}
-                      position={{ lat: mrk[idx].lat, lng: mrk[idx].lng }}
-                      onClick={() =>
-                        directionsBusMarker(mrk[idx].lat, mrk[idx].lng)
-                      }
-                      icon={{
-                        url: `./bus_1.svg`,
-                        origin: new window.google.maps.Point(0, 0),
-                        anchor: new window.google.maps.Point(15, 15),
-                        scaledSize: new window.google.maps.Size(30, 30),
-                      }}
-                    />
-                  ))}
-                <Polyline
-                  path={mrk}
-                  geodesic={true}
-                  options={{
-                    strokeColor: busIndex.includes(index)
-                      ? "#fea100"
-                      : "#1b55db",
-                    strokeOpacity: 1,
-                    strokeWeight: 4,
-                  }}
-                />
-              </div>
-            ))
-          )}
+        {directions.map((marker, index) =>
+          marker.map((mrk) => (
+            <div key={(mrk[0].lat - mrk[0].lng) * (index + 1)}>
+              {busIndex.includes(index) &&
+                [1, mrk.length - 1].map((idx) => (
+                  <Marker
+                    key={mrk[idx].lat - mrk[idx].lng}
+                    position={{ lat: mrk[idx].lat, lng: mrk[idx].lng }}
+                    onClick={() =>
+                      directionsBusMarker(mrk[idx].lat, mrk[idx].lng)
+                    }
+                    icon={{
+                      url: `./bus_1.svg`,
+                      origin: new window.google.maps.Point(0, 0),
+                      anchor: new window.google.maps.Point(15, 15),
+                      scaledSize: new window.google.maps.Size(30, 30),
+                    }}
+                  />
+                ))}
+              <Polyline
+                path={mrk}
+                geodesic={true}
+                options={{
+                  strokeColor: busIndex.includes(index) ? "#fea100" : "#1b55db",
+                  strokeOpacity: 1,
+                  strokeWeight: 4,
+                }}
+              />
+            </div>
+          ))
+        )}
       </GoogleMap>
     </div>
-  );
-}
-
-function Locate({ panTo, getStopsByCoords }) {
-  return (
-    <Tooltip className="tooltip" title="Current Location">
-      <div
-        className="mapUI locate"
-        onClick={() => {
-          navigator.geolocation.getCurrentPosition(
-            (position) => {
-              panTo({
-                lat: position.coords.latitude,
-                lng: position.coords.longitude,
-              });
-              getStopsByCoords(
-                position.coords.latitude,
-                position.coords.longitude
-              );
-            },
-            () => null
-          );
-        }}
-      >
-        <i
-          className="fa fa-compass"
-          id="innerLocate"
-          aria-hidden="true"
-          style={{ fontSize: "35px" }}
-        />
-      </div>
-    </Tooltip>
   );
 }
 
