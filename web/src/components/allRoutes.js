@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Route from "./route";
 import { Col, Timeline, Row } from "antd";
+import ReactHtmlParser from "react-html-parser";
 
 import DirectionsBusIcon from "@material-ui/icons/DirectionsBus";
 import DirectionsWalkIcon from "@material-ui/icons/DirectionsWalk";
@@ -9,11 +10,9 @@ import { ClockCircleOutlined } from "@ant-design/icons";
 
 const AllRoutes = ({ tripTimes, setDirections }) => {
   const [index, setIndex] = useState(0);
-  console.log(tripTimes);
-
   return (
     <div>
-      {tripTimes.length < 1 && <p>Choose a source and destination</p>}
+      {tripTimes.length < 1 && <h2>Choose a source and destination</h2>}
       <Row>
         <Col flex={1}>
           {tripTimes.length > 0 &&
@@ -83,7 +82,12 @@ const AllRoutes = ({ tripTimes, setDirections }) => {
                     {tripTimes[index].transit_index.includes(i) ? (
                       step.transit.route
                     ) : (
-                      <DirectionsWalkIcon style={{ color: "blue" }} />
+                      <div>
+                        <DirectionsWalkIcon style={{ color: "blue" }} />
+                        {step.directions.map((direction) => (
+                          <p>{ReactHtmlParser(direction)}</p>
+                        ))}
+                      </div>
                     )}
                   </p>
                 </Timeline.Item>

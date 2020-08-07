@@ -17,32 +17,38 @@ weather = None
 forecast = None
 routes = {}
 
+
 class Test(Resource):
     def get(self):
-        with open ('api/debugging2/1596651176.json', 'r') as data:
-            directions=json.load(data)
+        with open('api/debugging2/1596651176.json', 'r') as data:
+            directions = json.load(data)
 
-        with open ('api/debugging3/1596651176.json', 'r') as data:
-            model_info=json.load(data)
+        with open('api/debugging3/1596651176.json', 'r') as data:
+            model_info = json.load(data)
 
         for i in range(len(model_info)):
             for j in range(len(model_info[i])):
-                leg=model_info[i][j]
-                t_start=find_trip(leg["start"]["time"],leg["start"]["id"],leg["route"],leg["direction"])
-                if len(t_start)==0:
+                leg = model_info[i][j]
+                t_start = find_trip(
+                    leg["start"]["time"], leg["start"]["id"], leg["route"], leg["direction"])
+                if len(t_start) == 0:
                     print("Error: Couldn't find a bus with the following parameters:")
-                    print(leg["start"]["time"],leg["start"]["id"],leg["route"],leg["direction"])
+                    print(leg["start"]["time"], leg["start"]
+                          ["id"], leg["route"], leg["direction"])
                     break
-                index=0
-                midnight=datetime.datetime.fromtimestamp(leg["start"]["time"]).replace(hour=0, minute=0, second=0, microsecond=0)
-                #find the latest bus that doesn't depart prior to our set time
+                index = 0
+                midnight = datetime.datetime.fromtimestamp(leg["start"]["time"]).replace(
+                    hour=0, minute=0, second=0, microsecond=0)
+                # find the latest bus that doesn't depart prior to our set time
                 while(True):
-                    curr=t_start[index]
-                    prediction=get_prediction(curr["start_time"],curr["duration"],curr["route_id"],curr["direction"])
-                    if int(midnight.timestamp())+curr["start_time"]+prediction<leg["start"]["time"]: #TODO replace the time with what's specified in the request
+                    curr = t_start[index]
+                    prediction = get_prediction(
+                        curr["start_time"], curr["duration"], curr["route_id"], curr["direction"])
+                    # TODO replace the time with what's specified in the request
+                    if int(midnight.timestamp())+curr["start_time"]+prediction < leg["start"]["time"]:
                         break
-                    index+=1
-                    if index==len(t_start):
+                    index += 1
+                    if index == len(t_start):
                         break
                 start=t_start[max(0,index-1)]
                 start["duration_p"]=prediction
@@ -68,22 +74,23 @@ class Test(Resource):
                 if j==0:
                     prior_travel=0 #time it takes to get to first bus
                     for k in range(connection["db_index"][j]):
-                        prior_travel+=connection["steps"][k]["duration"]
-                    connection["start"]["time"]=start["dep_p"]-prior_travel
-                
-                #check if there are more dublin bus journeys on this connection
-                if j<len(model_info[i])-1:
-                    #add the delta of predicted arrival and scheduled arrival to the start of the next bus journey
-                    p_delta=t_stop["dep_p"]-t_stop["dep_time"]
-                    model_info[i][j+1]["start"]["time"]+=p_delta
-                    model_info[i][j+1]["stop"]["time"]+=p_delta
-                #if the current is the last journey, modify the final time
+                        prior_travel += connection["steps"][k]["duration"]
+                    connection["start"]["time"] = start["dep_p"]-prior_travel
+
+                # check if there are more dublin bus journeys on this connection
+                if j < len(model_info[i])-1:
+                    # add the delta of predicted arrival and scheduled arrival to the start of the next bus journey
+                    p_delta = t_stop["dep_p"]-t_stop["dep_time"]
+                    model_info[i][j+1]["start"]["time"] += p_delta
+                    model_info[i][j+1]["stop"]["time"] += p_delta
+                # if the current is the last journey, modify the final time
                 else:
-                    later_travel=0 #time it takes to get from final bus stop to destination
-                    for k in range(connection["db_index"][j]+1,len(connection["steps"])):
-                        later_travel+=connection["steps"][k]["duration"]
-                    connection["end"]["time"]=t_stop["dep_p"]+later_travel
-                    connection["duration"]=connection["end"]["time"]-connection["start"]["time"]
+                    later_travel = 0  # time it takes to get from final bus stop to destination
+                    for k in range(connection["db_index"][j]+1, len(connection["steps"])):
+                        later_travel += connection["steps"][k]["duration"]
+                    connection["end"]["time"] = t_stop["dep_p"]+later_travel
+                    connection["duration"] = connection["end"]["time"] - \
+                        connection["start"]["time"]
         return directions
 
 class Stops(Resource):
@@ -93,7 +100,7 @@ class Stops(Resource):
     def get(self):
         global stops_dict
 
-        if stops_dict==None:
+        if stops_dict == None:
             build_stops_dict()
 
         parser = reqparse.RequestParser()
@@ -117,8 +124,8 @@ class Stops(Resource):
                 'lat': row.lat,
                 'lng': row.lon,
                 'key': count + row.lat-row.lon,
-                'lines':stops_dict[row.stop_id]
-                })
+                'lines': stops_dict[row.stop_id]
+            })
         for count, row in enumerate(StopsModel.query.filter(StopsModel.name.ilike(looking_for)).all()[:3]):
             response.append({
                 'stop_id': row.stop_id,
@@ -126,8 +133,8 @@ class Stops(Resource):
                 'lat': row.lat,
                 'lng': row.lon,
                 'key': count + row.lat-row.lon,
-                'lines':stops_dict[row.stop_id]
-                })
+                'lines': stops_dict[row.stop_id]
+            })
         return {"stops": response, "status": "OK"}
 
 class NearestNeighbor(Resource):
@@ -146,7 +153,7 @@ class NearestNeighbor(Resource):
         parser.add_argument('k', type=int)
         frontend_params = parser.parse_args()
 
-        if stops==None:
+        if stops == None:
             build_tree()
 
         # check for required params
@@ -165,7 +172,7 @@ class NearestNeighbor(Resource):
         except:
             return {"status": "Error: Coordinates could not be parsed to float"}
 
-        response=nearest_stations(target,stops,k)
+        response = nearest_stations(target, stops, k)
 
         return {"stops": response, "status": "OK"}
 
@@ -190,48 +197,48 @@ class routeInfo(Resource):
     """API endpoint for Dublin Bus Route Details. Returns all stops served by a route, grouped by direction and
     including the stop details ID, name, coordinates and all lines served. Takes a route as parameter. If no route
     is provided, a result with all routes previously cached, grouped by their names, is returned."""
-    
+
     def get(self):
         global routes
         global stops_dict
 
-        if stops_dict==None:
+        if stops_dict == None:
             build_stops_dict()
-            
+
         parser = reqparse.RequestParser()
         parser.add_argument('routeid', type=str)
 
         frontend_params = parser.parse_args()
 
-        #if no route is specified, return all routes
-        if frontend_params["routeid"]==None:
+        # if no route is specified, return all routes
+        if frontend_params["routeid"] == None:
             return routes
-        route=frontend_params["routeid"].upper()
+        route = frontend_params["routeid"].upper()
 
-        #if route is cached, return cached result
+        # if route is cached, return cached result
         if route in routes:
             return routes[route]
-        
-        #if route is not cached yet, create the route_dict
-        route_dict={}
-        #join stops and stops_route_match tables on stop_id and filter for the specified route only
-        for stop, srm in db.session.query(StopsModel, SRModel).filter(cast(SRModel.stoppoint_id,String) == StopsModel.stop_id,SRModel.line_id == route).all():
-            #create dictionary entry
-            entry={
+
+        # if route is not cached yet, create the route_dict
+        route_dict = {}
+        # join stops and stops_route_match tables on stop_id and filter for the specified route only
+        for stop, srm in db.session.query(StopsModel, SRModel).filter(cast(SRModel.stoppoint_id, String) == StopsModel.stop_id, SRModel.line_id == route).all():
+            # create dictionary entry
+            entry = {
                 'stopid': stop.stop_id,
                 'fullname': stop.name,
                 'lat': stop.lat,
                 'lng': stop.lon,
-                'lines':list(stops_dict[stop.stop_id].keys())
+                'lines': stops_dict[stop.stop_id]
             }
-            #if the direction is not in the route_dict yet, create direction and populate with array of entry
+            # if the direction is not in the route_dict yet, create direction and populate with array of entry
             if srm.direction not in route_dict:
-                route_dict[srm.direction]=[entry]
+                route_dict[srm.direction] = [entry]
             else:
-                #else, append the entry to the existing array
+                # else, append the entry to the existing array
                 route_dict[srm.direction].append(entry)
-        #add the route to the global variable
-        routes[route]=route_dict
+        # add the route to the global variable
+        routes[route] = route_dict
         return route_dict
 
 class Directions(Resource):
@@ -239,7 +246,7 @@ class Directions(Resource):
     Expects the parameters "dep", "arr" (both required) and "time" (optional).
     Locations can be provided as address strings (spaces replaced by "+" in request) or coordinates in format "lat,lng".
     Response from Google API is processed for Frontend display."""
-    
+
     def get(self):
 
         # parse request
@@ -264,7 +271,8 @@ class Directions(Resource):
             "departure_time": int(time.time()),
             "alternatives": "true"
         }
-        if frontend_params["time"] != None:  # overwrite default value if time is specified
+        # overwrite default value if time is specified
+        if frontend_params["time"] != None:
             params["departure_time"] = frontend_params["time"]
 
         # make request-
@@ -301,7 +309,7 @@ class Directions(Resource):
             model_input.append(model_input_row)
 
         # NEXT BLOCK ONLY FOR DEVELOPMENT PURPOSES
-        # store results for debugging purposes        
+        # store results for debugging purposes
         with open('api/debugging3/'+now+'.json', 'w') as outfile:
             json.dump(model_input, outfile, sort_keys=True, indent=8)
 
@@ -310,8 +318,8 @@ class Directions(Resource):
             #if there is no dublin bus ride on the connection, move along to next connection
             if len(connection["db_index"])==0:
                 continue
-            #reset the start for the first bus to the time specified in the parameter plus however long it takes to get to the first bus stop
-            prior_travel=0 #time it takes to get to first bus
+            # reset the start for the first bus to the time specified in the parameter plus however long it takes to get to the first bus stop
+            prior_travel = 0  # time it takes to get to first bus
             for j in range(connection["db_index"][0]):
                 prior_travel+=connection["steps"][j]["duration"]
             model_input[i][0]["start"]["time"]=params["departure_time"]+prior_travel
@@ -321,18 +329,22 @@ class Directions(Resource):
                 t_start=find_trip(leg["start"]["time"],leg["start"]["id"],leg["route"],leg["direction"])
                 if len(t_start)==0:
                     print("Error: Couldn't find a bus with the following parameters:")
-                    print(leg["start"]["time"],leg["start"]["id"],leg["route"],leg["direction"])
+                    print(leg["start"]["time"], leg["start"]
+                          ["id"], leg["route"], leg["direction"])
                     break
-                index=0
-                midnight=datetime.datetime.fromtimestamp(leg["start"]["time"]).replace(hour=0, minute=0, second=0, microsecond=0)
-                #find the latest bus that doesn't depart prior to our set time
+                index = 0
+                midnight = datetime.datetime.fromtimestamp(leg["start"]["time"]).replace(
+                    hour=0, minute=0, second=0, microsecond=0)
+                # find the latest bus that doesn't depart prior to our set time
                 while(True):
-                    curr=t_start[index]
-                    prediction=get_prediction(curr["start_time"],curr["duration"],curr["route_id"],curr["direction"])
-                    if int(midnight.timestamp())+curr["start_time"]+prediction<leg["start"]["time"]: #TODO replace the time with what's specified in the request
+                    curr = t_start[index]
+                    prediction = get_prediction(
+                        curr["start_time"], curr["duration"], curr["route_id"], curr["direction"])
+                    # TODO replace the time with what's specified in the request
+                    if int(midnight.timestamp())+curr["start_time"]+prediction < leg["start"]["time"]:
                         break
-                    index+=1
-                    if index==len(t_start):
+                    index += 1
+                    if index == len(t_start):
                         break
                 start=t_start[max(0,index-1)]
                 start["duration_p"]=prediction
@@ -365,11 +377,12 @@ class Directions(Resource):
                     model_input[i][j+1]["stop"]["time"]+=p_delta
                 #if the current is the last journey, modify the final time
                 else:
-                    later_travel=0 #time it takes to get from final bus stop to destination
-                    for k in range(connection["db_index"][j]+1,len(connection["steps"])):
-                        later_travel+=connection["steps"][k]["duration"]
-                    connection["end"]["time"]=t_stop["dep_p"]+later_travel
-                    connection["duration"]=connection["end"]["time"]-connection["start"]["time"]
+                    later_travel = 0  # time it takes to get from final bus stop to destination
+                    for k in range(connection["db_index"][j]+1, len(connection["steps"])):
+                        later_travel += connection["steps"][k]["duration"]
+                    connection["end"]["time"] = t_stop["dep_p"]+later_travel
+                    connection["duration"] = connection["end"]["time"] - \
+                        connection["start"]["time"]
         return res
 
 def directions_parser(directions, time):
@@ -412,18 +425,18 @@ def directions_parser(directions, time):
                 "start": step["start_location"],
                 "stop": step["end_location"],
                 "mode": step["travel_mode"],
-                "html_instructions":step["html_instructions"]
+                "html_instructions": step["html_instructions"]
             }
 
             # directions for walking are stored in array
             if curr_step["mode"] == "WALKING":
                 polyline = []
-                directions=[]
+                directions = []
                 for segment in step["steps"]:
                     polyline.append(segment["polyline"]["points"])
-                    instructions=None
+                    instructions = None
                     if "html_instructions" in segment:
-                        instructions=segment["html_instructions"]
+                        instructions = segment["html_instructions"]
                     directions.append(instructions)
                 curr_step["polyline"] = polyline
                 curr_step["directions"] = directions
@@ -494,26 +507,26 @@ def build_tree():
     global tree
     global stops_dict
 
-    if stops_dict==None:
+    if stops_dict == None:
         build_stops_dict()
 
-    stops=[]
-    coords=np.empty([0, 2])
+    stops = []
+    coords = np.empty([0, 2])
     for stop in StopsModel.query.all():
         stops.append({
             'stopid': stop.stop_id,
             'fullname': stop.name,
             'lat': stop.lat,
             'lng': stop.lon,
-            'lines':stops_dict[stop.stop_id]
-            })
+            'lines': stops_dict[stop.stop_id]
+        })
         coords = np.append(coords, [[stop.lat, stop.lon]], axis=0)
-    tree=KDTree(coords)
+    tree = KDTree(coords)
 
 def nearest_stations(target, stops, k):
     global tree
     # calculate the nearest neighbours
-    if tree==None:
+    if tree == None:
         build_tree()
         # print("KD-Tree is built.")
     nearest_dist, nearest_ind = tree.query(target, k=k)
@@ -589,54 +602,55 @@ def find_model(route):
         response["stop"]["time"]=route["transit"]["arr"]["time"]
     return response
 
-def find_trip(time,stop_id,route_id,direction):
+def find_trip(time, stop_id, route_id, direction):
     """finds trips according to specified parameters that were supposed to depart within the last 120 mins of timestamp according to schedule."""
-    time=datetime.datetime.fromtimestamp(time)
-    weekday=time.weekday()
-    if weekday<5:
-        service_id="y1002"
-    elif weekday==5:
-        service_id="y1001"
+    time = datetime.datetime.fromtimestamp(time)
+    weekday = time.weekday()
+    if weekday < 5:
+        service_id = "y1002"
+    elif weekday == 5:
+        service_id = "y1001"
     else:
-        service_id="y1003"
+        service_id = "y1003"
     midnight = time.replace(hour=0, minute=0, second=0, microsecond=0)
     timestamp=time-midnight
     result=db.session.query(GTFS_times,GTFS_trips).filter((GTFS_times.stop_id==stop_id) & (GTFS_times.dep<=(timestamp.seconds+20*60)) & (GTFS_times.dep>=(timestamp.seconds-1*60*60))).join(GTFS_trips, (GTFS_times.trip_id==GTFS_trips.trip_id) & (GTFS_trips.route_id==route_id) & (GTFS_trips.direction==direction) & (GTFS_trips.service_id==service_id)).order_by(GTFS_times.dep.desc())
     response=[]
     for times,trips in result:
         response.append({
-            "trip_id":times.trip_id,
-            "stop_id":times.stop_id,
-            "start_time":times.start,
-            "dep_time":times.dep,
-            "duration":times.cum_dur,
-            "route_id":trips.route_id,
-            "direction":trips.direction
+            "trip_id": times.trip_id,
+            "stop_id": times.stop_id,
+            "start_time": times.start,
+            "dep_time": times.dep,
+            "duration": times.cum_dur,
+            "route_id": trips.route_id,
+            "direction": trips.direction
         })
     return response
 
-def match_trip(trip_id,stop_id):
+def match_trip(trip_id, stop_id):
     "returns the row from trips table that matches the trip and stop"
-    result=db.session.query(GTFS_times).filter((GTFS_times.trip_id==trip_id) & (GTFS_times.stop_id==stop_id)).first()
+    result = db.session.query(GTFS_times).filter(
+        (GTFS_times.trip_id == trip_id) & (GTFS_times.stop_id == stop_id)).first()
     return {
-        "trip_id":result.trip_id,
-        "progr_number":result.progr_number,
-        "stop_id":result.stop_id,
-        "start":result.start,
-        "dep_time":result.dep,
-        "duration":result.cum_dur
-        }
+        "trip_id": result.trip_id,
+        "progr_number": result.progr_number,
+        "stop_id": result.stop_id,
+        "start": result.start,
+        "dep_time": result.dep,
+        "duration": result.cum_dur
+    }
 
-def get_prediction(timestamp,duration,route_id,direction):
+def get_prediction(timestamp, duration, route_id, direction):
     global features
     global models
 
-    if features==None:
+    if features == None:
         load_features()
         # print("Features are loaded.")
 
-    #load model
-    model_name=route_id+"_"+str(direction)
+    # load model
+    model_name = route_id+"_"+str(direction)
     if model_name not in models:
         load_model(model_name)
         # print(f"Model for route {route_id}, direction {direction} loaded.")
@@ -675,20 +689,21 @@ def load_model(model_name):
 
 def build_stops_dict():
     global stops_dict
-    stops_dict={}
+    stops_dict = {}
     for stop in SRModel.query.all():
         if str(stop.stoppoint_id) not in stops_dict:
-            stops_dict[str(stop.stoppoint_id)]={
-                stop.line_id:{
-                    stop.direction:stop.progr_number
+            stops_dict[str(stop.stoppoint_id)] = {
+                stop.line_id: {
+                    stop.direction: stop.progr_number
                 }
             }
         elif stop.line_id not in stops_dict[str(stop.stoppoint_id)]:
-            stops_dict[str(stop.stoppoint_id)][stop.line_id]={
-                stop.direction:stop.progr_number
+            stops_dict[str(stop.stoppoint_id)][stop.line_id] = {
+                stop.direction: stop.progr_number
             }
         elif stop.direction not in stops_dict[str(stop.stoppoint_id)][stop.line_id]:
-            stops_dict[str(stop.stoppoint_id)][stop.line_id][stop.direction]=stop.progr_number
+            stops_dict[str(stop.stoppoint_id)
+                       ][stop.line_id][stop.direction] = stop.progr_number
 
 def get_weather(timestamp):
     """retrieves weather by checking timestamp and either returning cached value, calling update script or do TO DO behavior
@@ -752,11 +767,11 @@ def get_weather(timestamp):
         return fc_row["temp"],fc_row["weather"][0]["main"]
     #TO DO: weather handling if it isn't near current time or within 48 hour forecast window
     else:
-        #for now, we just return the current weather (suboptimal)
-        if weather==None or abs(now-weather["dt"])>=(15*60):
+        # for now, we just return the current weather (suboptimal)
+        if weather == None or abs(now-weather["dt"]) >= (15*60):
             update_weather()
-        #return tuple of (temperature,weather description)
-        return weather["main"]["temp"],weather["weather"][0]["main"]
+        # return tuple of (temperature,weather description)
+        return weather["main"]["temp"], weather["weather"][0]["main"]
 
 def model_input_create(temp,dur_s,weather,weekday,month,hour,feature_set):
     """Transforms necessary data for predictor in appropriate format for model."""
@@ -780,7 +795,8 @@ def model_input_create(temp,dur_s,weather,weekday,month,hour,feature_set):
     return [temp,dur_s]+weather_input+wd_input+month_input+hour_input
 
 api.add_resource(Directions, '/api/directions', endpoint='direction')
-api.add_resource(NearestNeighbor, '/api/nearestneighbor', endpoint='nearestneighbor')
+api.add_resource(NearestNeighbor, '/api/nearestneighbor',
+                 endpoint='nearestneighbor')
 api.add_resource(realTime, '/api/realtime', endpoint='realtime')
 api.add_resource(routeInfo, '/api/routeinfo', endpoint='routeinfo')
 api.add_resource(Stops, '/api/stops', endpoint='stops')
