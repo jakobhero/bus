@@ -112,6 +112,7 @@ const App = () => {
           lat: source.lat,
           lng: source.lng,
           fullname: source.fullname,
+          lines: source.lines,
         },
       ]);
     } else {
@@ -245,6 +246,7 @@ const App = () => {
             realTimeData={realTimeData}
             favStops={favStops}
             setFavStops={setFavStops}
+            setRealTime={setRealTime}
           ></RealTimeInfo>
         </TabPane>
         <TabPane tab="News" key="news">

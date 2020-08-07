@@ -58,7 +58,10 @@ function Locate({ panTo, getStopsByCoords }) {
                 position.coords.longitude
               );
             },
-            () => null
+            () => null,
+            {
+              enableHighAccuracy: true,
+            }
           );
         }}
       >
@@ -118,7 +121,7 @@ function ShowMap({
         stopsids: removeItemOnce(favStops.stopsids, selected.stopid),
       });
     } else {
-      setCookie(selected.stopid);
+      setCookie(selected.stopid, selected.fullname);
       favStops.fullname.push(selected.fullname);
       favStops.stopsids.push(selected.stopid);
       setFavStops({
@@ -153,6 +156,7 @@ function ShowMap({
     newSource["work"] = getAddressByVal("Work") === source.val;
     newSource["home"] = getAddressByVal("Home") === source.val;
     setAddress(newSource);
+    setSelected(null);
   };
 
   const directionsBusMarker = (lat, lng) => {
@@ -240,11 +244,14 @@ function ShowMap({
         )}
 
         {/* Loop through either array and add markers, based on switch that appears when another route is provided */}
-        {(otherRouteBool ? otherRoute : stops).map((marker) => (
+        {(otherRouteBool ? otherRoute : stops).map((marker, index) => (
           <Marker
-            key={marker.lat - marker.lng}
+            key={index}
             position={{ lat: marker.lat, lng: marker.lng }}
-            onClick={() => setSelected(marker)}
+            onClick={() => {
+              setAddress(null);
+              setSelected(marker);
+            }}
             icon={{
               url: `./bus_1.svg`,
               origin: new window.google.maps.Point(0, 0),
@@ -314,6 +321,7 @@ function ShowMap({
             }}
           >
             <div>
+              {console.log(selected)}
               <h2>{selected.fullname}</h2>
               <h4>{`Stop ${selected.stopid}`}</h4>
               {Object.keys(selected.lines).map((route) => (
@@ -366,6 +374,7 @@ function ShowMap({
         ) : null}
         {/* If directions array is populated that loop through the array of arrays and draw polylines, if that current array corresponds to a bus array, then place a stop marker
         at the first waypoint. */}
+        {/* Shows stops for luas routes aswell must fix */}
         {directions.map((marker, index) =>
           marker.map((mrk) => (
             <div key={(mrk[0].lat - mrk[0].lng) * (index + 1)}>
