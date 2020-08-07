@@ -1,7 +1,7 @@
 function setCookie(name, fullname) {
   // this function used to save stopid into cookies
   // the cookies format as stopid=stop fullname
-  var days = 1;
+  var days = 365;
   var exp = new Date();
   // cookies will last for a day
   exp.setTime(exp.getTime() + days * 24 * 60 * 60 * 1000);
@@ -12,7 +12,7 @@ function setCookie(name, fullname) {
 function saveAddress(name, value) {
   // this function used to save address into cookies
   // the cookies format as name=value
-  var days = 1;
+  var days = 365;
   var exp = new Date();
   exp.setTime(exp.getTime() + days * 24 * 60 * 60 * 1000);
   document.cookie = `${name}=${value};expires=${exp.toGMTString()}`;

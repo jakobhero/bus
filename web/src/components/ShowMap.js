@@ -114,7 +114,7 @@ function ShowMap({
 
   function iconStatusData() {
     // adding/deleting stop to/from cookies
-    if (favStops.stopsids.includes(selected.stopid)) {
+    if (favStops.stopsids.includes(parseInt(selected.stopid))) {
       delCookie(selected.stopid);
       setFavStops({
         fullname: removeItemOnce(favStops.fullname, selected.fullname),
@@ -123,7 +123,7 @@ function ShowMap({
     } else {
       setCookie(selected.stopid, selected.fullname);
       favStops.fullname.push(selected.fullname);
-      favStops.stopsids.push(selected.stopid);
+      favStops.stopsids.push(parseInt(selected.stopid, 10));
       setFavStops({
         fullname: favStops.fullname,
         stopsids: favStops.stopsids,
@@ -321,7 +321,6 @@ function ShowMap({
             }}
           >
             <div>
-              {console.log(selected)}
               <h2>{selected.fullname}</h2>
               <h4>{`Stop ${selected.stopid}`}</h4>
               {Object.keys(selected.lines).map((route) => (
@@ -362,7 +361,7 @@ function ShowMap({
               </Modal>
               <Tooltip className="tooltip" title="Toggle Favourite">
                 <Button style={{ margin: 5 }} onClick={iconStatusData}>
-                  {favStops.stopsids.includes(selected.stopid) ? (
+                  {favStops.stopsids.includes(parseInt(selected.stopid)) ? (
                     <StarIcon />
                   ) : (
                     <StarBorderOutlinedIcon />
