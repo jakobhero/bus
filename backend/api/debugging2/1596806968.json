@@ -1,0 +1,872 @@
+{
+        "connections": [
+                {
+                        "db_index": [
+                                1,
+                                3
+                        ],
+                        "distance": 253700,
+                        "duration": 20402,
+                        "end": {
+                                "address": "Primary Care Centre, Barrack St, Rathquarter, Sligo, Ireland",
+                                "location": {
+                                        "lat": 54.27660969999999,
+                                        "lng": -8.476087099999999
+                                },
+                                "time": 1596829567
+                        },
+                        "start": {
+                                "address": "Clonskeagh, Bird Avenue, Friarland, Dublin, Co. Dublin, Ireland",
+                                "location": {
+                                        "lat": 53.30512119999999,
+                                        "lng": -6.236070799999999
+                                },
+                                "time": 1596809165
+                        },
+                        "steps": [
+                                {
+                                        "directions": [
+                                                "Head <b>northwest</b> on <b>Roebuck Rd</b>/<wbr/><b>R825</b> toward <b>Gledswood Dr</b>",
+                                                "Turn <b>left</b> onto <b>Gledswood Dr</b><div style=\"font-size:0.9em\">Destination will be on the left</div>"
+                                        ],
+                                        "distance": 92,
+                                        "duration": 71,
+                                        "html_instructions": "Walk to Clonskeagh, Bird Avenue",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "_djdIl~`e@q@x@MN",
+                                                "_fjdIv`ae@Lr@Jj@FX@J"
+                                        ],
+                                        "start": {
+                                                "lat": 53.30512119999999,
+                                                "lng": -6.236070799999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.305263,
+                                                "lng": -6.2371123
+                                        }
+                                },
+                                {
+                                        "distance": 5894,
+                                        "duration": 1230,
+                                        "html_instructions": "Bus towards St Pappin's Rd",
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "sdjdIxdae@BlASKsCcBqAH}EUq@?k@J[LIB@R?@?AFUKDw@ZkB|@c@RcAj@EBm@XC@e@Rg@Pc@L_@JaBXkANy@Lo@Ho@HUDC@OBWDUD[Di@A[EoAWuCq@q@Ok@My@UQGcBgAQCIAIAG?O@MFGBKFGHMLKNGJGN]|@GP[dAM`@CHUt@eAbDGLsA~BABmBpCaAzAKNY^IJuAfBEF]f@Wd@u@dBa@v@CFGJi@dA}@zAkApBcAhBQ\\Wd@[l@e@bAe@lAS`@[r@O\\e@bASb@Q^a@|@c@hAENKVEL[|@KXMb@Y|@ENITUv@Oj@i@`CYnAAJSv@o@tB_@vAQd@Wm@a@gAoAsDAAeAsCe@eASi@G_@SmAISaCsFe@w@o@_AsAqBYe@QYc@w@KQW[i@w@Ur@KZMZA@Yx@AJ?BABIVK\\Of@Kb@AJG`@_@zDM~@Mn@On@K\\?B]~@U`@Ud@U\\Y^MNMLa@Xu@f@SHEBC@C@c@PGD_@PaAn@KDSASNIFEBIFaAjAc@d@g@j@IHONONSRsBdCw@v@QPe@d@[\\i@f@g@h@m@p@FVGWOP[^EDkAnA_@h@KVEHEFIX[Si@_@KGy@i@YScAs@SQwB{A[Y[YGACAE?G?MDGBED?@EFCFGVEXAD]pBI`@GPUv@i@jDWnAYjAqAWu@Ow@Q?GYGs@Mr@LqMaC[dC[xBIV[VWAg@Mu@@QBkAz@aBwAs@CsAFC?Db@"
+                                        ],
+                                        "start": {
+                                                "lat": 53.30522320000001,
+                                                "lng": -6.237091299999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.3456223,
+                                                "lng": -6.259291999999999
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Dublin City South, Westmoreland Street",
+                                                        "time": 1596810467
+                                                },
+                                                "dep": {
+                                                        "name": "Clonskeagh, Bird Avenue",
+                                                        "time": 1596809237
+                                                },
+                                                "headsign": "St Pappin's Rd",
+                                                "operator": "Dublin Bus",
+                                                "route": "11",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "directions": [
+                                                "Head <b>north</b> on <b>Westmoreland St</b> toward <b>Fleet St</b><div style=\"font-size:0.9em\">May be closed at certain times or days</div>",
+                                                "Turn <b>left</b> onto <b>Fleet St</b>",
+                                                "Turn <b>right</b> onto <b>Aston Pl</b>",
+                                                "Turn <b>left</b> onto <b>Aston Quay</b>/<wbr/><b>R148</b><div style=\"font-size:0.9em\">Destination will be on the left</div>"
+                                        ],
+                                        "distance": 264,
+                                        "duration": 197,
+                                        "html_instructions": "Walk to Temple Bar, Aston Quay",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "cardIvnee@[@M?",
+                                                "mbrdIxnee@@^FlBHlC",
+                                                "yardItwee@yADoAH",
+                                                "cgrdIdxee@NbAPlA"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3456243,
+                                                "lng": -6.2591626
+                                        },
+                                        "stop": {
+                                                "lat": 53.3464064,
+                                                "lng": -6.2614037
+                                        }
+                                },
+                                {
+                                        "distance": 2259,
+                                        "duration": 410,
+                                        "html_instructions": "Bus towards Parkwest",
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "werdIl|ee@IFTzAN`ALfANnAPfBHt@Fp@H~@NjBBV@RPnBHz@PpB^dFFjCLxCHhBDz@HnBBb@DdADpADrA?n@IxCExAM`DA`@IlB?HCn@Cl@?PCZGr@Ez@]vCQ`BK|@UfBShBStAQxACZKx@MtAOdDYhGOvBCd@Cr@ApACxA?^AtAClBAjACdCEpDAfBCfAAd@CpA?REz@Gp@ShC@H@DAPCR?L?F@HBJBHDJ@DLLXNl@VDBHHBFBJBN@NFl@JpATzC?BDz@BjA?DJ?"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3463566,
+                                                "lng": -6.261352599999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.34588410000001,
+                                                "lng": -6.293856
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Heuston Station, stop 2637",
+                                                        "time": 1596811310
+                                                },
+                                                "dep": {
+                                                        "name": "Temple Bar, Aston Quay",
+                                                        "time": 1596810900
+                                                },
+                                                "headsign": "Parkwest",
+                                                "operator": "Dublin Bus",
+                                                "route": "79a",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "directions": [
+                                                "Head <b>west</b> on <b>Chapelizod Bypass</b>/<wbr/><b>St John's Rd W</b>/<wbr/><b>R148</b> toward <b>Military Rd</b>"
+                                        ],
+                                        "distance": 5,
+                                        "duration": 4,
+                                        "html_instructions": "Walk to Outside Heuston Train Station 3 8",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "ccrdIrgle@@N"
+                                        ],
+                                        "start": {
+                                                "lat": 53.34593839999999,
+                                                "lng": -6.293863099999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.3459347,
+                                                "lng": -6.293942299999999
+                                        }
+                                },
+                                {
+                                        "distance": 197866,
+                                        "duration": 10800,
+                                        "html_instructions": "Bus towards Bus\u00e1ras - Ballina Bus Station",
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "sbrdI`hle@M@BhBB`BFjBBf@FpA@HNfEBfAJ|BHdADf@X`DDn@ZxDX|CP`CRzBNjAHf@Jf@Lh@h@rB\\nAPj@fA|DRz@^hBH^F\\D`@@Z?TEhB?HAFA`@AN?V?V@X@`@@d@LhDD~@J~BTdGXlKNpFFjBLxD?`@DnABzAB~@@tA?L@bB?@AnAEdBGvAIpAOpBIx@c@xDEb@o@jFi@pEUlBIl@ARcApIiAdKg@hEGn@QdBABGfAGdACp@Cz@Af@A`A?F?fA?dA@t@Bl@Bn@Bb@Bd@Dl@BVBb@@HHv@VdCLnATvCFbADdA@h@DtB@fB?~@Az@ClBGpBCdBGxCG|AEnAE|@AFIbAIn@Mr@S`ASx@Yz@_@`A[l@g@v@SVORCB[Z_@\\YT_BlAg@`@g@`@kAz@eClB[XMLIJ]^MPKLw@rAc@bAa@jAQj@Sp@Ml@Ot@Kl@Gd@AJK|@Ef@IjAAZCV?@CV]~FKpAIt@StA_@~A]dA_@`Ac@v@EDMNMRm@t@m@n@_A`Am@x@[j@s@|AAF]jAEXEVKd@QtAKnA?BIhBC|B?dAElDM`DALIvAGz@KzASzBGt@K~@?BKdAGd@]fCAPQ`AyAhJa@hC]vB_@hCGZQdAQnAg@hDG\\o@dEQjAWbBI`@k@tDEVObAWbBQhAUzAK~@Gl@Gv@ExA?pCJvBFp@Hl@DT@NLp@H`@d@tBLr@Hf@Db@Dj@Dh@@`@@^?^?r@A`@A\\Eh@I~@O~AK~AEz@Ex@AlC?|@BjA?R@^@Z@VD|@NdC`@~FNpB@N@XN`ED|A@V@b@DfBDfBBfC@xBAjA@B?b@Ad@A\\A`@C`@C\\Eh@KrAGf@Gj@QpAOfAKl@_@~BiAtHKl@Kn@kBtMW~Ae@dDERQjAyAtJUfBQxAOnAIt@KtAKhAGv@QnCE`AItAEfAEzACnACzAA~@AbDElGAhC?~C?dB?x@Bz@@r@B|@H`APnCLtATjBLz@Lp@N~@VlAXhAZdAf@zA|@bC|@zB^`AFNL\\Vn@DJl@|A^~@r@fBz@xBj@zA`@dAz@vBlA~C^`Al@~Aj@tAbAhC^`Al@~Al@|A^fAXz@Vx@Tx@Nf@V`ATz@f@tBVnAVnARdARlAPjARnA\\zCLhAPbBJtAHhAJdBHrAJrBFpBDxABxA@XBhB?vDC`FE`CEzAEhAM~BGjAE|@CXI`AMtAMzAMnAQ`BQvAQrAU~AId@UpAWvACJm@pCi@`C]lAEPYfAa@tAs@vBg@rA]|@[z@CFYp@S`@ELi@fAeBnDy@bBi@lAg@hA[t@[t@u@rBe@rAc@rA_@lA]dA]hA{@tCSx@a@~A[vA_@`BS~@CPUjAQ~@M|@M|@Gb@Gd@I|@Et@IdACf@EpAEbACfBAdA?lB@lB?HBpD@|A@|A^lc@LjO^vf@JvLVr[NtRDvDFdH@nCBxF?lD?lAAlBCnIEpEAzAEzDKvFIvEWrJAXM|DKxC]bIe@hJ[pGs@nNSrDMtCIrAIdBEz@OnCA`@{@rPa@hIEx@Ez@OvCKdBGtAc@pIKvBc@rIe@rJSnDa@dI]rGa@|Fk@zHi@tGSbCi@lF?BIx@OtAKdAQ|A[hC{@vHi@xEgBvOoAvK_AnIu@rGoAtK[tCYbCYbCSbBa@pDe@bEQ`BOlAS`CQlBQ~BSlCOhCI~AC\\KrCIvBCf@GdCI`DEhDCvC?fD?fJ?fJ?~D@|@AfCEvDAnABn@Bv@GjHAbC?f@AV?T@P?T@P@TBV@NBLBRDPDNDRDLFNDHLPRXVR\\VBBD@H@N@@GBA@A@A@A@A@A@?@?@?@?@?H@@@@?@@@B@@@@@B@B@@?B@B@B?B?B?B@B?D?BAB?B?BAB?BADA@?BA@ABA@A@A@C@A@A@A?C?C?E?A?AAAAA?AAAAACKHGBOBOBY?k@AWAO@m@DUCMAO?a@A[Ac@Ao@CW?gAAq@AyDk@a@CEAG?KAEAs@Qc@O]OsAm@c@ScBq@uAo@i@WOGoAg@s@_@m@UmD{AYMWMu@_@]Oo@YoAq@k@YkA]w@YOGG?k@Ma@Ei@Cm@?a@@kAFy@Jc@Jc@Lc@NUJUHMFC@C@E@SH[TYNaAt@q@n@STdAgAl@i@hBeAhBu@xDg@bCBlCd@vAh@r\\bOxCbA|Cj@|BTbDPrDF_@dDuCvR_AtEmC|QoMl}@eDvU{G~d@SbBWzAmGvc@oBtM{A~KiMz|@wRdtAgBrKk@|CqCrMs@rCiCrJwAxE{BtG_FfMiCzFsCxFsE`IqIvMqc@|p@iGdJ{DnF_ChEgCvD{EtIwEnJgF|LiBbFgBrF_BrFwDtNaCvK}@lE_BhJoBzL}@jGw@nGqAfMiAjM{@pM}@|RSvG[pOi@xr@YpSO|Wa@tPOtCyBvXsAfR_BrWk@dNSbJQzL?xLFjJJdGZtLnAtUVhDxAhPt@dGz@zGbClO`CpLtKng@tBlL~@lGjAnJ~@fJt@zJn@rMb@fP`B`uAFdJ?nPYdUi@`Q]~GgAnQo@rHsApMk@`FqAlJi@pDcDpRiCtLaBbHiHxWoAfFoBjJaAlFw@|Ew@vF_A`IkA~LaA~Og@zNMnHChE@fPPpKTzHx@pOhFrv@X|GJbEBdJInGMtD_@`Hs@~H_@dD_BxJc@zBkAvE}AnFw@vBeB`EiBxDqBnDqQvYuRb\\mAzBeB|D}BbGyApEgBzGcAxEaBtJ_AtHa@nEq@tL[lJw@r[SfGm@j^KzKK|T@hXX`}@FtEf@vTZnHxBl_@\\~GP`OAfHMpHe@zKYdEm@dHe@zDyA|JkBhJaDvLyCnIwCzGcFtJeGdMqGpOsEbMkEpMyBjHeDxLyCpLcCtKcAxEaC~LiCjOuAdJoBzNg@bEe@hEoAxMq@jImA|QkAnWuRx~EwA|YgBjYi@fHiFpo@iB~Su@fKs@rNq@zP{Ah][lFu@zIo@pF{BnNwBfL{ApHwDtOeEdOeJtYmKt[mw@zcCeAzC}CzHwCnG_GhKiR~Z{NjVsBzD}EnKsC|HsBrG{`@vuA{ApFsBlIcA|EkJng@oBxIiAnEmCvIeHbRqBbGqAnEmBzHmCpMyAxJg@bE{@nIsAhQo@zGiB~NsBnLwC~O}DbUyAxGiCbJuC~HiIfT_DtHeDvIsDbJmFjLiIjPsHxM{BlEgBdEs@lBu@zBgAbEm@nCcAdGoCzQwFlb@cAvGsCxPwEtYgAbG_DdPiEbRgIr_@sYjxAoHn^k@~Bm@pBcBxEsCzFiA~AgAnAwAtAcCpBsBlAsAj@eLfEiAh@g]hMaFrBuAt@_CrAaE~CgFlFiAtAsBvCyBnD_CvE}@pBgb@|fA{Pdd@iQtc@{@jBqFtNiFbM_DzG}DxHoFhJ}DhG}A|BuEhGyIdK}D~DqG|F}KjI}S`MoeAfm@qCzAkGnCi`@xLaDxAeBbAaBjAsDjDwAdB{AvB_C~DqCfGeAzCaAzCeBfHiAvGo@zEqEfd@aAxGa@tBc@dBm@jBaAdCyDnI{@tB{@jCo@dCc@xBk@zDg@pEaDb_@u@tGm@xDe@`CaEnQ{AlGeBvI]bCWlC[bIg@n^M|DyApUy@~Ki@pEcBfIaHbYaBvF}AxDwPj[sDrH_m@fpAyRta@cK|SgDjH_AfBgAbBw@`AcC~BA?o@l@kApAgBzB[l@aAdBcAtBw@vBi@~Ae@tAa@zASp@u@jCW~@c@|ASv@{@~CY`AqAnE{GrUeBfGmAhEiAvDiAzDOd@[lA{@vCmA`EkAnDwBnGy@|BcCfGiArCWl@ITeDnHIZAD]t@k@fAq@rAe@z@kBpD{BbESVqGlLmCzEc@x@Yh@{DhHiApB{@|AaBpCmBnDgCtECLCFCHm@nAqCvEqEjIuCfFs@tAsA`CiBdDyBvDgBvCc@v@mBvCQNINUZiCnEW`@eD|FEHU^S\\]h@QLYPUTYR_@VMH}A|@e@Zs@d@c@\\_@ZUROPIJOLk@j@_@`@q@v@}@hAEFeA|AEFKHmEhHU\\eDnFgAnBa@t@cDbGqBzDoBhEuBzEwAjDq@|A_CrFyAzDm@vAS^cC`GuAjD]|@k@|Ao@lBi@xA}@jCaAxCwAvEGTaAnDcBjG}AxGWfAcArEaAhEs@bDi@`CWhAe@|BKr@qAlGQt@CNo@~C]pAWz@Sf@Yr@qE`J]|@Ur@GPMh@CHOp@a@dBgAbFgCbLEPeAvEkBnIuBtJoBvIi@dCaAlE{@zDuAjGoJzb@eDfN}ArGgAbFc@jBaDrO{AlHQx@]|Ag@vBU~@q@pCqAhE{@lC]bA[bASt@U~@SbAeBpKuAnIu@~Dq@jDq@dDeCjKa@dB]vAYtAS~@UbAOt@_AjEEPk@pCk@pCu@lDI`@IZM^Yv@Un@M^O\\iAdDUj@BB@B@B@B@B@D@B?D@D?B?D?D?D?D?DABAD?DABABCBABABC@ABC@C?A@C?C?A?C?CAAAECCCACACACACAEACAE?E?CAE?E?E@E?E@C?E@E@Cc@k@SYY[QQ]SYOQKKMc@e@[e@m@eAOUUc@KQQYECGCEAEAG@GBe@b@i@b@gBdByB~Bi@l@WZINGVIb@?^A`@AZEfACv@Gz@?BMfBIhAh@nAf@bBl@dBXn@n@rA^r@t@jABCBCBABAD?B?B?D@BBB@FHBB@FBD@F@F@F?F?F?F?FAFALADCFADCDCBCDC@EBC@E?C?E?CAGt@IfAEn@E~@_Cj]UdDQbCU|BWnBKr@EZGZG\\Mn@WnA[pAQp@[dAc@tA_@dAcB|D}@pBWl@O^_@~@Yx@Of@Wx@ATSt@WdAOv@YzAG^Kj@OlAOnAIr@CT]lEMfBGTaAtLE`@mAdNmEpj@wA~QuAjQCVK|A}BbZKnAkA~PqAfPO~Ai@jG}@zJc@fF}@~JAZe@nFa@zEkAtLA@EPiBlSw@`JIx@WjCoBfTw@fIcAlKO~A}@fJgAzL]zDKjA}@pJc@xEa@vEqAhNe@fF_CbW?NOjBg@lFc@`F{@|GGVw@|IaBrRIx@qAnO?Pk@`HcBfRw@pIm@~FG\\}B`U{@rIyAlOyA|R?X_@tES|B[lDSjB[lDK`@_BdQiArMa@bEYvC{@xIo@bHc@xE]jDm@|GSdBGf@Kd@a@tBJLBJDJ@J@L@L?L?LAJCLCJEHEHEFGFEBGBG?G?GAGCEEGEEGCIy@fACBINk@pAw@tCi@xBy@lDi@xB[nAkAnEkB|FbCzAr@b@d@\\PHDH@H@H?L?L?LATEVKj@Ml@[lAsAzBKNs@dAo@lAU`@g@fAg@nAe@xAOn@Ot@YzBKbAG|@G`CGpCAVErBAbDLzDLzA\\tBd@dDJh@D`@D`@Dp@@h@@j@B`DQvCWhC[xCg@~E{@tIIt@UfCAFMfAAJMpA]dDi@hFQvB]bDGh@CVE\\KpAE`@CRGh@WnCAHMlAIx@Ix@Gh@QhBUrBC\\yAbOYvCSjA@F@D@FBF@DBBJRVnAbHqF`@]HEDAB?B@DDBH@JHf@@@Lx@@P@H?D?FAFANYlBa@h@y@jAYb@yAxB`@fAJV@B`@lAX|@@HBJ?H?HAHi@bAEHCHCJ?B?B?D@L@N?P?JANAJCHCDEFKJa@\\gBfBEHCDADAF?B?B?D@F@D@Fh@hAl@rAx@hBf@fAb@fAeEfG}AvBqDzE~@~CNb@XbA\\pApAxE\\dAhAlDRt@n@`C|@fDVjAXnAR|@Rz@lA|Fp@bDv@rDTdA?A@?@?@A@?@?@?@@@?@?@@@@@@@@@@@B@B?@@@@B?@@B?B@@?B?@?@?B?B?@?B?@AB?@?BA@?@A@AB?@A@A@A@A@B|A?T@|@@~@Av@A~@Cx@?FE~@KfAI|@Kp@Mt@}@lFe@rCm@lD[jBDDBD@BBF@D@F@F@D?F?F?HAD?FAFAFADCDCDCDABEBC@C@C@E?C?CACHi@nFIvAE~@Ez@Ap@A`@Ab@A^?d@?NA~@AlC?pC?lCA|JAnI?vG?n@AtH?b@?jBC~M[l`AElJArD?|AIdLAjDAnD?vFBxHDbPBbLBjIAbE@xBAt@E`AAp@CdA[dFC\\c@jGALMfBWdDk@zHi@zGaAzNWnEi@`J_@vGg@nI_@bG?HKzAQ`CSpC[~CKhAOhAMfASzAu@~F{A~KU~ASrAQhAMr@Op@Mn@W|@St@Wr@g@tAAB[r@]p@_@p@]h@o@|@u@z@uBnBgB|Ay@r@_@\\SPgDjD_EjEQRsL~MuB`CaCjCcAhAc@f@u@z@m@t@u@z@QZa@j@c@n@c@r@U^S\\O\\[n@]z@Sf@Wv@Uv@GPI\\Oh@Kf@Ol@Mn@O|@Mt@QfAQfBIbAU`DCRWtE?BI~AEr@OpCKrAI`AC^OpBEn@]~EKnAIjAEl@IlAMjBKtASnCGx@Aj@M~AStBCNQnBCXGl@WrBKv@[rBQrAKn@G\\EJ_@xBsAvHo@nDMv@yDbTuA~H_@vBaAdGO|@If@CNMv@Gb@O`AYhB_@`COv@QfAaAnGi@bD_@fCIj@Kv@YtB_@|C_@hCO`AW`BQ`AYbBY~ASbAq@bD[~A_@`Be@pB_@zAi@zBa@hBCLENe@pCABYdB_@hCObAKbAQdBQdBWjCAJe@bFShBO`BKhAm@rGGb@AVGn@Q|AGj@MbAMbAMbA_@hCKp@CJIb@SnAYvAIb@c@pBg@vBQn@[jAYbA]lAOd@{@nCo@rB_AvCm@rBa@nA_@nAOf@Md@CLWz@[nA[lAMf@YnAYjAYnAWrAWjAWpAKl@m@dDSnAUtAQnA]bCIn@OfAoCrUOhAGj@OtA[lCc@hDYhCY`Ck@lE[nCi@pESbBGh@Y`CMhA[hCa@hDg@tEQfBa@pEUjCWfDUvCQlCKhBOfCIvAOnCKpBIjBGpAOrDGjBEjAEjBEhBGlCAr@Cz@?DE`CExDExCG~FEzBE|DCvCCpBGhFGnFCvAEfEGpEA^IjEAv@KvDM|DSjFEx@Ez@Ez@IpB]jGEd@Ex@ARc@`IUdEEx@c@`Io@~LM~BShEK`BEz@?F[~FWzEQtCKrBa@pHStDa@|GYjFMdCY`F@VCb@KfB]pGKnBEfAI~ACf@Cp@MxEErBK`ECnACjACjA?dAAnA?bA?`A@jA@hA@h@CRDhADxADt@Bl@Dv@Bb@JjADp@J~@NzAPzAdArHp@~EHh@D^F`@J`AHt@F|@BP@RDt@Dt@D~@DhAB|@@lA?h@?f@?@?fAAfA?j@C|@EdAInBKnBYvFQhDUxEi@tKKpBKfBSdEQlDStDGzA[pGUhFOpDO~CE|@QpDE|@MtCUrEMrCUrEItB[xGU~EMbCU~EA`@O|CSdFOxCe@~JKpBOvCEdACb@Ev@E`@CLI\\CNEHCFGNELEHEFGHIJIHIFIDKDODI@M@U@qAHqAFc@@aCHc@BI?m@DyBLs@F_AF_DNyBHI@qBJc@@O@}DTiBHm@DM?qAFG?q@F?B?@?@?@?@?@A@?@?@A@?@A@?@?@A??@A??@A??@A?A@A?@~A?XP|LFpDF`ELdCDdAFx@DpAJhEBf@D`@BTHf@Lj@Nj@Ld@HXN^Td@bAfBDH?@Zd@l@bAt@hAtClEDFh@x@p@~@\\h@V^T`@Zd@N`@Tr@Nf@J^H`@Hd@F^D`@D^Dl@Dn@@n@@d@?l@A`ACdAIrBEn@Gr@MhAMn@UjAYtAYxAW~AM`Ag@nEqBdPEd@Cb@AV?RAL@N?T?J@JB\\D`@Fd@DVBHHb@@HR~@Jj@BHTbAJf@Jl@Hj@JfABz@DdBBpADnBDjA?p@?z@A~@?VANI`ACRCTe@dDOnAGn@Cb@Er@Cn@A\\?v@Ax@@bADjBB~ADxBB`ADhABx@Dn@BVBTD\\D`@Jl@F^Jj@RfABLP~@PbAR`ALf@Rr@L\\LVBDJRV`@NV`@h@T\\PVFNJPN\\@DTh@HThAzCl@~AJVLV^x@`@z@`@`ATn@f@bBTx@T~@ZrA@D^zAVhAR|@DVPdAJ`AB^@LDb@Bv@Dn@F~Af@xLVzGDz@Bd@d@pLLhCLjDD~@XvHJpBFtAX`FZjFLtBJ~ANlCJ~AD\\Fl@?DF^Jb@BPFVLb@Pj@ZdARl@d@~AVz@X~@hAzDb@vAvAzE`BxF^nANd@`@rAPn@BHV~@T~@Jf@Hf@Db@DXDr@B\\@T?N@\\?\\?h@An@Cz@G|AK|CKrCCx@WjGAj@UxGCd@C|@KhCMnDAZAf@EjACbAAd@AX?FBh@?r@EfBExBGlBGhBIlBEjAI|BGtAEjAEfAG~AErAGzAGdBCpAEfBAZAh@Cz@Ch@CXARATANCTCXIr@In@E^UzAO~@EPIZi@fCETUdAEVQz@If@EROx@Mv@QnASfAIj@S~AU`BGd@YbCOpAOlAIn@Ir@KdAE`@MtAOhBC\\CNEh@G~@MbBOxBIxAKrAGhAMfBUbEOnC]vFMfBKhBKpAOdCG~@OvBGbAIpAGz@IfAA\\KrAEx@I~@Eb@CTCTCVGVAHCRIZCPEPITSp@Ut@O`@Sn@Wv@Sl@IVO`@]dAEJy@bCs@vBmB|FWt@e@vAOd@ABY|@Ob@Ql@S|@E\\EVCPGb@E\\Gp@KxAEr@Gr@Eb@CZIn@QxAGl@S~AUdB[|BOfA_@xBYdBMx@Ml@Mn@S|@W~@Qz@Mh@Ot@GXMr@]vBETU~Ak@jDMx@If@e@xCKn@Mz@UzAG\\i@hDOv@Y|A]jBKl@GZCNGf@M~@_@`DUfBOpAM|@Kj@Kp@Q~@Kh@G`@Gh@CXCVEd@Ep@SdDQbCGv@Gh@E^GVETGPIVo@~AYn@[v@y@pBq@bBUj@k@xAIRWl@A@EJYh@Yj@a@t@S\\a@t@MTOZSd@Q`@O`@aAzCq@tBk@hBSp@Qd@Un@Uf@Ub@OZ]l@c@p@[f@[f@EH_AvAoB`DcA|Aq@hAm@`Aa@t@c@v@kA|Bw@|AABWd@[l@{@~AA@m@lA]p@GL_@r@_@t@u@vAOZu@tAYj@Wd@S\\_@n@Wd@]j@a@p@]h@OTa@j@[b@KRKTMVIVITWz@u@jCELUz@YnAS|@GZOt@Qv@Kd@Or@Kj@Op@S`A]zAMn@Qv@GVGTIVKXITMVSd@OXWh@Ud@Q^M\\O`@IZIVI\\GZMn@Mr@If@O~@Il@Ip@KdAGx@Gr@QlBKbAIl@Eb@M|@E\\Gb@Ih@G`@Gf@CVEZATAPAT?T?P?Z?ZB`@B^Bn@Bb@B^@Z?b@?T?VAT?PARCTC\\EZE`@GZEPERERGRO`@ITMTIPMTKJQTONOLEBMHQJC@WJYJo@RoA`@u@R{Ab@_AZs@Ti@PYJWJOHIDGDGFKJMLKNKPEJININIVO^w@~B[z@_@jAo@hBeA`DeBdFqGhRo@hB[z@M\\OZQZMTSVQVW\\QRMPe@j@c@j@k@r@W\\STk@t@qA~AW\\eHxI}GxIwAfB{AjBw@bAKLuAfB_AhAc@j@W^GJGHGLMVWr@Uv@i@fBo@vBo@tBMd@Oh@K^Kb@Id@Kf@Gf@Gh@Ed@Gj@E|@InASfDGpAe@nHStDCb@InAG|@Gl@I`AMpAQdBIl@Gn@eAtKqE`d@Ix@gCvVe@nE_@lDIt@Gp@Eh@Et@GdAIjBGfACj@W|DO~AAZCVAf@?PA`@@`C?dAAh@Aj@ADCp@C^CVCXIf@GZGXG\\GRK^Ob@eGjS]hAg@~Ao@vBSf@O`@KVQXU^OTQPw@|@y@x@mBnBGFsAtASP{A|AiAjAA?]\\s@r@IHy@v@CBq@p@{@z@YX[\\WZ_@b@WZUZUXa@h@SZ[f@}@xAqAzBs@nA_@p@KREHEJELIPGRa@tAcC`I}AdFcAfDgBzFu@jBq@zA{BvEcBpDsBjEgCjFiDjHYj@cCdFe@bAgIjR}@tBgAdCgCbGg@jAu@hBaAxBg@hAIPsEvKeAfC_AxB]bAe@nAQh@a@lAO`@Sx@Sx@EPS`Ag@dC?@]~AK^CFGRK\\IVKTGLIPGLKJa@`@KFMFUJ]JcAVoBd@_@JODKBaAVq@T[NUNYPYTuAxAgBhBo@n@YTy@h@mBhAm@^iAv@o@h@a@^KHSPe@`@o@b@a@TUP_@RYJc@Nw@Nu@Jq@L_BRaBLaAFeBJs@Hg@Fm@Jg@JuA`@_GfBwDfAkA^EBeA`@s@\\YPURA@YTo@v@i@p@gAbB{G|JKNaBdCUZ[b@_BzBiC`De@j@iArAgCpCuDtDiCdCGF}CzC_A`A_@^m@l@YRSLUJa@Ns@Ra@D[@I@g@AcBG[@]?YDWB}AXi@Fw@H_@FOBc@Lc@Pa@Pg@^s@j@i@b@UPoAbAu@l@mAdA_@\\WVEFGJINg@jAkArCqCpGeB|DKT?@k@tAe@lBo^|mBeAlFiAfE_ArCmPle@mAtE_@dBc@fCk@jEqBrQqTfpB}N|qAeDpZwGdo@w@dJEfAAtAFpPFxGL|ET`Fp@nJbCfSfA`I~Gxc@~C~Sv@zETtCDrA@jFGlBm@zIElCNpExAv[FnEo@h[KhKAdFChBO~D]xDWjBe@`Cc@dBuF|O}BjIqDjNc@rBsArIcAzEyBpHiF`PqBvH}EvSwAjFkOne@y@~Ce@xB{@|E{BtQw@pHw@fFe@|BmBxHaAxCuAlDcBrDcGrJsBpEa@xA_BbCABl@`A@N@Bl@dDwKrWiOf_@cTdh@_CjGeCjJqGjZg@nBwAbEkGbPm@jBqHxXqBfGkGlNkBdD{JnOmF~Kc@dAmAxDsCrKw@zBuEdLsAbD{@bB{A`CcIbLqG`IsBzCaA`BcF`LmDxGcBlCcGbHmAhB{@dBa@`Au@rCu@pEk@zEu@vDeBnFqUpo@wApEw@vCc@vBy@jF[lCUzCo@fMaB|`@}@hQqAvPcB`Pw@hG_CvOki@jbDgCrO{B`OkC|So@zF}A`Pq@dIwAxS[zFkAxXWxJmGzpDOfSAtUuQdPq@ZmAVuEV_@`Fa@rCSv@mAdEy@zBsCrGYnAk@zEQhCE|A?dCF~GThL?xCCrCKnBQjBa@hCuAdF{@pEy@vHMrBQvDEhGDpFRfNJxBDnAK@w@Hi@C|AgA@ACI"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3458582,
+                                                "lng": -6.2939322
+                                        },
+                                        "stop": {
+                                                "lat": 53.9639683,
+                                                "lng": -8.794926199999999
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Charlestown (Mayo), Charlestown Rooney's ->W1",
+                                                        "time": 1596823500
+                                                },
+                                                "dep": {
+                                                        "name": "Outside Heuston Train Station 3 8",
+                                                        "time": 1596812700
+                                                },
+                                                "headsign": "Bus\u00e1ras - Ballina Bus Station",
+                                                "operator": "Bus \u00c9ireann",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "distance": 46456,
+                                        "duration": 3240,
+                                        "html_instructions": "Bus towards Galway Bus Station - Derry (Magee Campus Strand Road)",
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "yyjhIhwtt@HC@HDj@SFIBSHg@N_@FqA@w@B_AA]AOA_@EO?cB?kA@}B?sA?i@CG@S?K?MAIAMAYCi@Gw@Oe@M_@Kk@Qe@Qu@[WMCEGISK}@i@c@W_@Yy@q@YUsAiAk@g@}@u@w@o@]YWS_@[qAgAgA_Am@g@eByAiA_AsAiA{@s@gBwAwBgBkCyBmAaAo@k@wAkAg@_@qAgAkA_AwAgASOe@[u@e@g@][UoAo@m@]g@UoCsA{@a@o@[eD}Au@]qEyBkBcAs@_@gBcAOKmAu@EEqBqAwCoBeAu@_BeA]U{@i@cAm@cAm@yBkAe@W_Ag@cAi@c@S}@a@aAe@YMiAg@yBaA{FeCyB_A{BcAy@a@sAo@g@WSKmAq@q@_@qBkAsAu@]SgAm@{@e@OImAq@QKMCWM}@g@_B}@}BoAQIWOQKe@YwBmA[OaBeAUOuA{@iBkA_BaAAASO{A_Au@e@g@][Se@[UYq@a@OMiBoAaAm@qEkCm@]u@e@yA}@IEaBaA_Ai@YQSMOKOMOQOOQUQUeAuAY_@Y]o@{@e@m@oAaBi@s@_@g@aDiEaAsAcAuA}@kAk@w@y@gAe@q@g@s@q@}@q@_Au@cAo@y@g@q@a@i@[a@e@q@gA{AwAmB_AoAW]Y]a@i@_@a@Y[SUq@s@[Wa@YWOCACAQI_@MYGIAQCO?UAa@?uABsBDs@B{AD}@Bo@ByBHu@DmAFWBi@Be@Dc@D_@Da@Fw@LUDq@L_@Fy@P{@Rs@NsAZi@Lm@Je@Lc@J_E`ASDgJ|BcB^aBd@u@RoEnAgCp@oG~A{Ct@gAT]HUDM@U@MHk@AW?_@ESCc@KUGWOUOWQ[Y_@_@QSMSUa@IMISMWKWK[Oa@Ia@K]G[Gc@?AIm@Ko@Gg@OyASaCcBkR}@iK[iDI{@Is@Ii@Kg@Qk@Um@s@}A[o@KWEKoCwFq@}Ae@gA]}@m@eBUu@Mg@K_@GUEYMq@WiBSyAGYG_@YwA{@yDMi@Me@IYM[IMGKIOOQIK[[eAgAi@e@q@k@{@w@c@e@m@k@]]EEQOOKoAw@QIQM]UQM][]YwDmDq@q@oBoBYUWSMIWMe@UUGOGSEc@I_@IOEWOQMSOAAQSIOUa@Si@IWm@_BIS]w@Yq@OW{C_GSc@KYK]Me@OUGIIIEEIGuAgAKIeBuBc@g@e@w@Uc@Uc@KOEEA?AAGAI@Ok@I]g@wAi@wAa@sAUy@S{@Q{@EQEWKu@GYGSKa@IYM]MWiAsBYk@Wc@mBeEq@{AQ_@wAkDo@eBKYoA{DkFkOm@eBUs@Ug@i@kAmAgCYk@iA}Ba@w@o@sAe@u@Ye@SYa@i@w@aAWYg@g@e@e@e@a@_@YWS{AeAqA}@{@e@eDcB{@e@sE}BEAyAu@}Aq@cBo@}CkAkAc@a@Mc@OsHgC}Bw@gA_@g@OaBi@uAc@{@Uo@QaAWmEcA{Bg@q@QcAa@mBy@gBu@m@YiBy@iAg@_@OQG]K]EYEY?Q?W?G@[@G@QBUFODYJm@Ve@VwAr@sAn@w@\\e@Pi@Nu@Pk@J]Di@B_@?S?]CWCWESGYGUIWIWMkAm@i@[i@[WWWUSSY]W]Ua@Q[?A[i@w@{A_@y@Yu@K]YeAMe@Ig@ACG[CWEUUcBKu@KgAImAEw@EcBAs@EwB?ACaCAiBAsC?}DAe@A}@C[Es@CYEYSwA_@aCm@oDs@kEa@aC{BgN[aBg@sC]cCe@cDk@eEg@oDOeAc@wC{@_GUaBCMEg@Cc@Ck@Ag@?o@@}ADw@H_BFqAB_@JsBJcBH}AFyAFiBB}A?iACqAQiCQ{@o@iD_@kBc@yBe@{Be@_CqAeGKi@yBaKkBsIOu@wByJyBuJ_D_NK_@k@{B}@wCaBeFyCaJ}CyJ]cAoAiEmAgE}@gD]kAa@{AwAeFu@mCMe@eAuDc@}ASs@o@{BaA{CGUy@aCkBqFy@_Cy@yBo@kBM_@u@wB{@cCs@sBe@uAGOs@qBeA{Ce@uAu@sBw@_CkAeDg@}Ac@mAOe@c@qAs@aCeAgDaA}CiAoDeAkDGMSq@o@uBgAgDi@gBsBwG}AeFc@aBc@sBo@cDw@oDa@yBm@cDs@iEm@oDKo@]kBg@_Dg@wCUmAe@cBmDeK_HiSmAgDu@}Bi@}Am@aBo@gBGSe@sAu@eBq@oAu@wAu@wAYg@Yg@q@qAq@qAo@oAa@aASi@u@uC_@}Ac@gBe@cBa@uA_@uACG_@oAa@wA_@mA]aAi@sAKUq@_B]w@Se@CIo@aBo@uBo@oB_@aAUg@e@aAq@yAUi@Qc@[cASy@O_AKeAGmAC{A@g@?_A@}A@_B?cBEmAEe@Ea@AOGe@Ia@Mm@Mm@W}@Uq@[}@s@mBu@sBy@wBe@mAe@sAa@uAYoACUG[Iu@ScDMmDS_GScHC_@G{BGuCa@cLGeAEq@CSE_@Gc@EWIYESEOISa@mA{@iBO_@s@wAq@oAc@q@OQs@w@o@o@[]U[]c@MS_@u@]y@M_@M[a@iA_@}@aAwB}@sB]q@o@sAc@aASa@Se@wA{CMU{@iBg@iA_@u@Se@a@}@g@iASi@Qg@Qk@Qo@Mk@WcAQq@Us@Yu@Q_@Yc@QUc@i@i@g@y@y@u@s@cAaAq@k@MKi@]s@]s@]w@e@a@Wq@k@YWo@w@_BeB}@eAyAaBoAyA_CkCm@y@wAsBy@gA[[][[S_@Sc@O_@Ie@GmBSoAMo@GcBOqAIsAIyBOm@Gc@Oq@]WU]UU[_@e@Ya@_AyAQYwA{BgC_E{@{A[{@m@_B]gAW}@k@}B[_Ba@uCUwBs@gGc@sD[sCQmAc@sCUmAMm@Kg@Ki@Oo@Ok@CI]oA_@iAcAqCk@uAeBcE}CmHsA}CoBwEWm@Qa@{BqFmAsCUi@]w@[o@Sa@S]c@u@_@k@c@o@q@u@WWg@e@WSg@_@uA}@wAw@c@Wa@U_@SQKwA{@a@Wu@g@iB_Bo@m@kAqAs@_A{AeC[g@_@m@mBcDsBmDg@{@u@oAy@sAwHqMKS[i@OWuAaCoAwBEI[i@Yg@cAeBqAyBKS[g@IOiCmEsA_CqA{B_@q@e@{@g@gA]u@o@cBq@qB_@oAc@wAs@qCMk@Mq@SaAS_AaAsGm@{Eq@yE{@sGcAcHg@mDUaBWsBMw@g@wDsCgTa@yCUaBSwAQmAkB}MGIACEKI[GSSe@CAACAACCACACACAE]IUGUEe@AeA?oAAO?c@Ac@?oDB}FXeCRa@Dg@JUJ_@TMDABADABC@ABABA@CBOd@IVE\\Kz@InBi@Oa@Ky@SKCYC]CY@a@Fc@Na@P[VaFtESx@YtAAXAHAJIjAMvBEz@CVAHIPa@PGBE@SFODMBEBKBe@Rm@RGDKFa@R{@d@qBnAwBrAg@\\A@q@TwA`@SFMBmBb@cAFc@B{@F{Kb@qBJWDKDGDKPGb@Mt@Ih@Uf@SVUDU@aAS_AOa@?c@JiBdBoDfDyC|C}HvHqClCkBhBmChC{BxBEDwBpB}@z@_Az@y@v@CDgF|EoApAg@f@s@x@]^e@v@EJGJQ^q@xAaBdDm@lAiBxDMXIPYj@q@vAYj@g@dAIPMXA@?@@??@@??@?@@??@?@?@@@?@?@?@?@?@?@?@?@?@A@?@?@A@?@A@?@A??@A??@A?A?A?A?A?A??AA??AA??AA??A?AA??A?AAA?A?A?A?A?A?A?A?A?A?A?A@A?A?A?A@??A@??AWe@Wi@c@_Ay@iAuA_BEE}@_AMGME]OA??@?@A??@A??@A?A??AA??AA??A?AKFCBEDEDCDKNINKTGNq@|A]t@Wb@IHa@d@{@x@QLgAz@}@|@sArAwAlBu@x@i@Zm@TUDQBQ?A?MAQCWMMOIKGKKUGQIa@O{@[gBKq@e@cCScAa@uBI_@Kg@]}@S]U[k@c@q@_@YQW[ACOYO_@GSGWG[My@W{D?MQqBOuAOeA[wAOm@ISWeAMo@CKGc@Kw@Ko@a@gCkAZwATyARI@}@Dm@G]Gs@IMEUIIEw@]YMGCKGQI_@Os@So@Qq@Om@Ok@QcAWA?MWi@OgAa@YKc@Qy@_@cAc@eAg@_@Qw@]w@_@_Ac@e@Wg@YWQe@[QM]We@_@[Ya@_@_@a@c@c@a@e@CCc@g@a@i@u@_As@}@SWe@k@gB_CcAqAi@q@_AmAaBsBMQUYGIy@eAuAeByAiBgAyAqAaB{AqBsAgByAiBw@kA[e@_@m@QYa@u@e@}@CEYm@Yk@[u@[w@i@uAg@sAk@uAg@sAk@qAo@mAo@iAs@eAu@_Au@{@c@c@i@e@OMi@c@[UuCoBwB{AiD{BaAo@eAq@}@g@o@]k@Ym@YeBw@aC_Ak@Sw@U{@WuA_@k@Mq@Oa@I}@OqASWEi@Ii@GYEy@GWCqAGk@C}@Ck@AaAAi@?m@?Q?Q@o@@_AD_ADiAHG?[DM@uANoAPm@Hi@Jg@JMBa@HMDUDe@J_AV_AX}@Xi@Pg@RYJ_@Lk@Ve@Ro@ZqB~@i@VgBz@QHsBbAqAj@_A^e@P]L_@Ji@Nk@N{@Ri@HcAPe@FA?i@FwAJwBJoBJa@BoBLyDRo@Bi@@MB_@BGJCDCBCBE@E@C@E?EACAEACCCECECECEAGCG?GAIQ_@GOEGKIMI]Mi@Se@Sg@Yc@Ug@U]O_@KUG]IWCI?SAUAI?I?W@WBe@FIByBj@DlAsBjAyEnDMcA?CMu@_B|@"
+                                        ],
+                                        "start": {
+                                                "lat": 53.9639683,
+                                                "lng": -8.794926199999999
+                                        },
+                                        "stop": {
+                                                "lat": 54.2720255,
+                                                "lng": -8.481893699999999
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Sligo Bus Station, stop 555081",
+                                                        "time": 1596828900
+                                                },
+                                                "dep": {
+                                                        "name": "Charlestown (Mayo), Charlestown Rooney's ->W1",
+                                                        "time": 1596825660
+                                                },
+                                                "headsign": "Galway Bus Station - Derry (Magee Campus Strand Road)",
+                                                "operator": "Bus \u00c9ireann",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "directions": [
+                                                "Head <b>west</b> toward <b>Lord Edward St</b>/<wbr/><b>R292</b>",
+                                                "Slight <b>left</b> onto <b>Lord Edward St</b>/<wbr/><b>R292</b>",
+                                                "Turn <b>left</b> onto <b>N4</b>"
+                                        ],
+                                        "distance": 864,
+                                        "duration": 667,
+                                        "html_instructions": "Walk to Primary Care Centre, Barrack St, Rathquarter, Sligo, Ireland",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "w~fjIttwr@?r@?R@HBLBHDD@DFDFBF?HAHCFCLQBG@E@E?K?G?GAOA]?a@?G?E@IDO",
+                                                "w{fjIprwr@g@mDGg@",
+                                                "g}fjIzkwr@k@AcAKu@KGA}@OqAUWE[IOEMGMI_@UYYQQOSSWMSEIc@s@Yg@g@y@[i@IQg@cAYm@GQKWMa@Mc@IUAGSg@MSGKYg@_@g@c@i@SUII"
+                                        ],
+                                        "start": {
+                                                "lat": 54.27196300000001,
+                                                "lng": -8.4821872
+                                        },
+                                        "stop": {
+                                                "lat": 54.27660969999999,
+                                                "lng": -8.476087099999999
+                                        }
+                                }
+                        ],
+                        "transit_index": [
+                                1,
+                                3,
+                                5,
+                                6
+                        ]
+                },
+                {
+                        "db_index": [
+                                3
+                        ],
+                        "distance": 259676,
+                        "duration": 21799,
+                        "end": {
+                                "address": "Primary Care Centre, Barrack St, Rathquarter, Sligo, Ireland",
+                                "location": {
+                                        "lat": 54.27660969999999,
+                                        "lng": -8.476087099999999
+                                },
+                                "time": 1596829567
+                        },
+                        "start": {
+                                "address": "Clonskeagh, Bird Avenue, Friarland, Dublin, Co. Dublin, Ireland",
+                                "location": {
+                                        "lat": 53.30512119999999,
+                                        "lng": -6.236070799999999
+                                },
+                                "time": 1596807768
+                        },
+                        "steps": [
+                                {
+                                        "directions": [
+                                                "Head <b>northwest</b> on <b>Roebuck Rd</b>/<wbr/><b>R825</b> toward <b>Gledswood Dr</b>",
+                                                "Turn <b>left</b> onto <b>Gledswood Dr</b><div style=\"font-size:0.9em\">Destination will be on the left</div>"
+                                        ],
+                                        "distance": 92,
+                                        "duration": 71,
+                                        "html_instructions": "Walk to Clonskeagh, Bird Avenue",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "_djdIl~`e@q@x@MN",
+                                                "_fjdIv`ae@Lr@Jj@FX@J"
+                                        ],
+                                        "start": {
+                                                "lat": 53.30512119999999,
+                                                "lng": -6.236070799999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.305263,
+                                                "lng": -6.2371123
+                                        }
+                                },
+                                {
+                                        "distance": 2881,
+                                        "duration": 420,
+                                        "html_instructions": "Bus towards Blackrock - Rialto",
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "sdjdIxdae@GB@J?F?F?F?FADCL?@HN@F@F?D?F@L?T?Z?rB?nB@pA?jL?VArD?tEA|B?|CBTBPBJDLDFDFJLpACPAJ?D?JCREjA]RG^M`@GNCTCVAr@AzAGP@P@VBTDHDFB`@Vd@Rt@\\XNHBLFVJl@T`@Lj@N|@Rz@Pv@Lt@HZD^Bt@Fb@DX@Z@V?b@C\\G\\Eh@GjBUnCa@ZA|@AVA|AAF?f@?RAHAZAb@IBAd@GDAFGHCHCJC\\CT@N@`@HF@NDPHGZa@vAQt@Q`AGb@Il@OnAOnASpBARCJADABEHIx@KfAADSjBE`@CXE`@Gj@MhAQrAQjBo@zGIt@A`@EXAHEd@Gj@Y|CKhAGf@Ip@MjADBNJF@FBb@D^BNBNB@?PDFBFHBDBF?D@D@F?JCHCDGJCBEBd@fBFP?@FG"
+                                        ],
+                                        "start": {
+                                                "lat": 53.30522320000001,
+                                                "lng": -6.237091299999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.2942267,
+                                                "lng": -6.2582315
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Churchtown, Nutgrove Avenue",
+                                                        "time": 1596808260
+                                                },
+                                                "dep": {
+                                                        "name": "Clonskeagh, Bird Avenue",
+                                                        "time": 1596807840
+                                                },
+                                                "headsign": "Blackrock - Rialto",
+                                                "operator": "Go-Ahead",
+                                                "route": "17",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "directions": [
+                                                "Head <b>northeast</b> on <b>Nutgrove Ave</b>/<wbr/><b>R821</b> toward <b>Beaumont Ave</b>",
+                                                "Turn <b>right</b> onto <b>Beaumont Ave</b>/<wbr/><b>R821</b><div style=\"font-size:0.9em\">Continue to follow Beaumont Ave</div><div style=\"font-size:0.9em\">Destination will be on the right</div>"
+                                        ],
+                                        "distance": 123,
+                                        "duration": 107,
+                                        "html_instructions": "Walk to Weston Park, stop 1054",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "c`hdIdiee@AAGQe@gB",
+                                                "sahdIheee@FEHMBEBIHKFGLMHCN?`@D"
+                                        ],
+                                        "start": {
+                                                "lat": 53.294265,
+                                                "lng": -6.2582735
+                                        },
+                                        "stop": {
+                                                "lat": 53.2939138,
+                                                "lng": -6.257313900000001
+                                        }
+                                },
+                                {
+                                        "distance": 8164,
+                                        "duration": 1802,
+                                        "html_instructions": "Bus towards Beaumont",
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "_~gdIncee@@Ia@EO?G@C@KLGFIJCHCDGJCBEBG?ECECGGYUGOEGCEGEGGCAOKKEKAa@AUxBE^U`BOx@W|@GNCHIPS^QVWVWRYNA@QHOFC?QFIB]BM?O?WAa@Gw@Ke@Gi@Ac@AQBODODOD[LYRSNUTQRMRIPUf@Wn@_BzDkBrEq@`B[x@a@~@oBvEi@rAO^Qd@Sb@Qd@IXIZQz@Id@CVEVMGQIm@[g@]y@i@UQ]YKMEGA?EMCKCMUaBm@_EKw@ScAGSKa@GMM][w@GQMSKKGGMIKn@CVAHEr@EvAC|AE|AGlACTAHUx@Qn@q@lAOXc@v@Ub@EFCDADABSb@?@GNEPKb@I`@Ol@?@]lBETAFM`@Qt@IRMZMTOVOTWRUNu@h@WTWPCBi@^WN]XYP_@VMLMPIP_@n@Ux@YdAg@|AUh@CHOZM\\IPENARYJ_APYDO@UDWFK@YLo@\\QJ[TiBpAESEMAEGQSc@WYUSWUuA{@y@i@{@i@QK_BcAQKuA}@KGa@WcAm@GEi@_@g@YQKWQUOA?@?UMgC_BsAy@MI_Am@e@Ye@]iDwBSMo@c@yDaCCCaBcAKG{@g@m@_@QMGEEE?AQSEKEMCSCMCSM{@G_@ES?EAGCGI[GUGQIQOMIIKIICoAQ{@GKAi@I_@GKCKAMCw@IG?c@E[CaAKuBWMAMCs@IcAKuAQkAMoAMc@EWCs@I[EsBSu@IsAKIAo@GaAM[Ei@IE?MCE?M?I?I?K?[FgAR_ANMBYHWD]Dk@J{@JA?kBRc@Lq@J{ATk@Pa@HM?G@E@YHYAO?kACo@A{@EI?U?KAY?ODa@FMBQD[Fu@Rk@FcAV_ANu@LMBe@L_@LoA\\]?aC[mAQEAw@Ke@GqAQe@O}Ca@_@a@kBkBKGWOEAKGSGMAGAICE?u@Gq@?C?u@@}@F_A??g@C{AC{AAiAAaAASGUHEh@K|A{By@mDwADB`DSmBScFE[g@mBq@k@s@C}BHqDA]IaAV}@b@k@aEA@]sCGg@CWOmA]qEKqACc@M_@KUGKCCMAICOIw@]MGGEIEMOEUGUCQO_AEWE_@CYC[?eCB_ABa@QC"
+                                        ],
+                                        "start": {
+                                                "lat": 53.29391740000001,
+                                                "lng": -6.257359
+                                        },
+                                        "stop": {
+                                                "lat": 53.3494871,
+                                                "lng": -6.252193699999999
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Bus\u00e1ras",
+                                                        "time": 1596810645
+                                                },
+                                                "dep": {
+                                                        "name": "Weston Park, stop 1054",
+                                                        "time": 1596808843
+                                                },
+                                                "headsign": "Beaumont",
+                                                "operator": "Dublin Bus",
+                                                "route": "14",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "directions": [
+                                                "Head <b>east</b> on <b>Amiens St</b>/<wbr/><b>R105</b>",
+                                                "Sharp <b>right</b> to stay on <b>Amiens St</b>/<wbr/><b>R105</b><div style=\"font-size:0.9em\">Destination will be on the left</div>"
+                                        ],
+                                        "distance": 89,
+                                        "duration": 69,
+                                        "html_instructions": "Walk to Bus\u00e1ras, stop 135001",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "wxrdIjcde@@a@?a@AQEYIWEUSg@",
+                                                "azrdId}ce@XR"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3494028,
+                                                "lng": -6.2522236
+                                        },
+                                        "stop": {
+                                                "lat": 53.34948410000001,
+                                                "lng": -6.2513302
+                                        }
+                                },
+                                {
+                                        "distance": 201007,
+                                        "duration": 11100,
+                                        "html_instructions": "Bus towards Bus\u00e1ras - Ballina Bus Station",
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "cyrdIh}ce@CN@@VNZPHDJFNFVMRIPAP?V?d@HL@NBB@PBNDz@PH?d@X@R?@@X?P?L@NAX?T?r@CxCAP?p@Al@?F?PAz@CnAA~@?r@AdA@nAJxAPvAD\\BZDX^lCPxAFf@BVNfA@DN|@Fd@^bCNbAf@fDN`ALfANnAPfBHt@Fp@H~@NjBBV@RPnBHz@PpB^dFFjCLxCNdDHnBBb@DdADpADrA?n@IxCExAM`DKnC?HCn@Cl@?PCZGr@Ez@]vCQ`BK|@i@pEStAQxACZKx@MtAOdDYhGOvBCd@Cr@ApACxA?^AtAClBAjACdCEpDEnDAd@CpA?REz@Gp@ShC@H@DAPCR?L?F@HBJBHDJ@DLLXNl@VDBHHBFBJBN@NFl@JpATzC?BDz@BjA@TBhBB`BFjBBf@FpA@HNfEBfAJ|BHdADf@X`DDn@ZxDX|CP`CRzBNjAHf@Jf@Lh@h@rB\\nAPj@fA|DRz@^hBH^F\\D`@@Z?TEhB?HAFA`@AN?V?V@X@`@@d@LhDD~@J~BTdGXlKNpFFjBLxD?`@DnABzAB~@@tA?L@bB?@AnAEdBGvAIpAOpBIx@c@xDEb@o@jFi@pEUlBIl@ARcApIiAdKg@hEGn@QdBABGfAGdACp@Cz@Af@A`A?F?fA?dA@t@Bl@Bn@Bb@Bd@Dl@BVBb@@HHv@VdCLnATvCFbADdA@h@DtB@fB?~@Az@ClBGpBCdBGxCG|AEnAE|@AFIbAIn@Mr@S`ASx@Yz@_@`A[l@g@v@SVORCB[Z_@\\YT_BlAg@`@g@`@kAz@eClB[XMLIJ]^MPKLw@rAc@bAa@jAQj@Sp@Ml@Ot@Kl@Gd@AJK|@Ef@IjAAZCV?@CV]~FKpAIt@StA_@~A]dA_@`Ac@v@EDMNMRm@t@m@n@_A`Am@x@[j@s@|AAF]jAEXEVKd@QtAKnA?BIhBC|B?dAElDM`DALIvAGz@KzASzBGt@K~@?BKdAGd@]fCAPQ`AyAhJa@hC]vB_@hCGZQdAQnAg@hDG\\o@dEQjAWbBI`@k@tDEVObAWbBQhAUzAK~@Gl@Gv@ExA?pCJvBFp@Hl@DT@NLp@H`@d@tBLr@Hf@Db@Dj@Dh@@`@@^?^?r@A`@A\\Eh@I~@O~AK~AEz@Ex@AlC?|@BjA?R@^@Z@VD|@NdC`@~FNpB@N@XN`ED|A@V@b@DfBDfBBfC@xBAjA@B?b@Ad@A\\A`@C`@C\\Eh@KrAGf@Gj@QpAOfAKl@_@~BiAtHKl@Kn@kBtMW~Ae@dDERQjAyAtJUfBQxAOnAIt@KtAKhAGv@QnCE`AItAEfAEzACnACzAA~@AbDElGAhC?~C?dB?x@Bz@@r@B|@H`APnCLtATjBLz@Lp@N~@VlAXhAZdAf@zA|@bC|@zB^`AFNL\\Vn@DJl@|A^~@r@fBz@xBj@zA`@dAz@vBlA~C^`Al@~Aj@tAbAhC^`Al@~Al@|A^fAXz@Vx@Tx@Nf@V`ATz@f@tBVnAVnARdARlAPjARnA\\zCLhAPbBJtAHhAJdBHrAJrBFpBDxABxA@XBhB?vDC`FE`CEzAEhAM~BGjAE|@CXI`AMtAMzAMnAQ`BQvAQrAU~AId@UpAWvACJm@pCi@`C]lAEPYfAa@tAs@vBg@rA]|@[z@CFYp@S`@ELi@fAeBnDy@bBi@lAg@hA[t@[t@u@rBe@rAc@rA_@lA]dA]hA{@tCSx@a@~A[vA_@`BS~@CPUjAQ~@M|@M|@Gb@Gd@I|@Et@IdACf@EpAEbACfBAdA?lB@lB?HBpD@|A@|A^lc@LjO^vf@JvLVr[NtRDvDFdH@nCBxF?lD?lAAlBCnIEpEAzAEzDKvFIvEWrJAXM|DKxC]bIe@hJ[pGs@nNSrDMtCIrAIdBEz@OnCA`@{@rPa@hIEx@Ez@OvCKdBGtAc@pIKvBc@rIe@rJSnDa@dI]rGa@|Fk@zHi@tGSbCi@lF?BIx@OtAKdAQ|A[hC{@vHi@xEgBvOoAvK_AnIu@rGoAtK[tCYbCYbCSbBa@pDe@bEQ`BOlAS`CQlBQ~BSlCOhCI~AC\\KrCIvBCf@GdCI`DEhDCvC?fD?fJ?fJ?~D@|@AfCEvDAnABn@Bv@GjHAbC?f@AV?T@P?T@P@TBV@NBLBRDPDNDRDLFNDHLPRXVR\\VBBD@H@N@@GBA@A@A@A@A@A@?@?@?@?@?H@@@@?@@@B@@@@@B@B@@?B@B@B?B?B?B@B?D?BAB?B?BAB?BADA@?BA@ABA@A@A@C@A@A@A?C?C?E?A?AAAAA?AAAAACKHGBOBOBY?k@AWAO@m@DUCMAO?a@A[Ac@Ao@CW?gAAq@AyDk@a@CEAG?KAEAs@Qc@O]OsAm@c@ScBq@uAo@i@WOGoAg@s@_@m@UmD{AYMWMu@_@]Oo@YoAq@k@YkA]w@YOGG?k@Ma@Ei@Cm@?a@@kAFy@Jc@Jc@Lc@NUJUHMFC@C@E@SH[TYNaAt@q@n@STdAgAl@i@hBeAhBu@xDg@bCBlCd@vAh@r\\bOxCbA|Cj@|BTbDPrDF_@dDuCvR_AtEmC|QoMl}@eDvU{G~d@SbBWzAmGvc@oBtM{A~KiMz|@wRdtAgBrKk@|CqCrMs@rCiCrJwAxE{BtG_FfMiCzFsCxFsE`IqIvMqc@|p@iGdJ{DnF_ChEgCvD{EtIwEnJgF|LiBbFgBrF_BrFwDtNaCvK}@lE_BhJoBzL}@jGw@nGqAfMiAjM{@pM}@|RSvG[pOi@xr@YpSO|Wa@tPOtCyBvXsAfR_BrWk@dNSbJQzL?xLFjJJdGZtLnAtUVhDxAhPt@dGz@zGbClO`CpLtKng@tBlL~@lGjAnJ~@fJt@zJn@rMb@fP`B`uAFdJ?nPYdUi@`Q]~GgAnQo@rHsApMk@`FqAlJi@pDcDpRiCtLaBbHiHxWoAfFoBjJaAlFw@|Ew@vF_A`IkA~LaA~Og@zNMnHChE@fPPpKTzHx@pOhFrv@X|GJbEBdJInGMtD_@`Hs@~H_@dD_BxJc@zBkAvE}AnFw@vBeB`EiBxDqBnDqQvYuRb\\mAzBeB|D}BbGyApEgBzGcAxEaBtJ_AtHa@nEq@tL[lJw@r[SfGm@j^KzKK|T@hXX`}@FtEf@vTZnHxBl_@\\~GP`OAfHMpHe@zKYdEm@dHe@zDyA|JkBhJaDvLyCnIwCzGcFtJeGdMqGpOsEbMkEpMyBjHeDxLyCpLcCtKcAxEaC~LiCjOuAdJoBzNg@bEe@hEoAxMq@jImA|QkAnWuRx~EwA|YgBjYi@fHiFpo@iB~Su@fKs@rNq@zP{Ah][lFu@zIo@pF{BnNwBfL{ApHwDtOeEdOeJtYmKt[mw@zcCeAzC}CzHwCnG_GhKiR~Z{NjVsBzD}EnKsC|HsBrG{`@vuA{ApFsBlIcA|EkJng@oBxIiAnEmCvIeHbRqBbGqAnEmBzHmCpMyAxJg@bE{@nIsAhQo@zGiB~NsBnLwC~O}DbUyAxGiCbJuC~HiIfT_DtHeDvIsDbJmFjLiIjPsHxM{BlEgBdEs@lBu@zBgAbEm@nCcAdGoCzQwFlb@cAvGsCxPwEtYgAbG_DdPiEbRgIr_@sYjxAoHn^k@~Bm@pBcBxEsCzFiA~AgAnAwAtAcCpBsBlAsAj@eLfEiAh@g]hMaFrBuAt@_CrAaE~CgFlFiAtAsBvCyBnD_CvE}@pBgb@|fA{Pdd@iQtc@{@jBqFtNiFbM_DzG}DxHoFhJ}DhG}A|BuEhGyIdK}D~DqG|F}KjI}S`MoeAfm@qCzAkGnCi`@xLaDxAeBbAaBjAsDjDwAdB{AvB_C~DqCfGeAzCaAzCeBfHiAvGo@zEqEfd@aAxGa@tBc@dBm@jBaAdCyDnI{@tB{@jCo@dCc@xBk@zDg@pEaDb_@u@tGm@xDe@`CaEnQ{AlGeBvI]bCWlC[bIg@n^M|DyApUy@~Ki@pEcBfIaHbYaBvF}AxDwPj[sDrH_m@fpAyRta@cK|SgDjH_AfBgAbBw@`AcC~BA?o@l@kApAgBzB[l@aAdBcAtBw@vBi@~Ae@tAa@zASp@u@jCW~@c@|ASv@{@~CY`AqAnE{GrUeBfGmAhEiAvDiAzDOd@[lA{@vCmA`EkAnDwBnGy@|BcCfGiArCWl@ITeDnHIZAD]t@k@fAq@rAe@z@kBpD{BbESVqGlLmCzEc@x@Yh@{DhHiApB{@|AaBpCmBnDgCtECLCFCHm@nAqCvEqEjIuCfFs@tAsA`CiBdDyBvDgBvCc@v@mBvCQNINUZiCnEW`@eD|FEHU^S\\]h@QLYPUTYR_@VMH}A|@e@Zs@d@c@\\_@ZUROPIJOLk@j@_@`@q@v@}@hAEFeA|AEFKHmEhHU\\eDnFgAnBa@t@cDbGqBzDoBhEuBzEwAjDq@|A_CrFyAzDm@vAS^cC`GuAjD]|@k@|Ao@lBi@xA}@jCaAxCwAvEGTaAnDcBjG}AxGWfAcArEaAhEs@bDi@`CWhAe@|BKr@qAlGQt@CNo@~C]pAWz@Sf@Yr@qE`J]|@Ur@GPMh@CHOp@a@dBgAbFgCbLEPeAvEkBnIuBtJoBvIi@dCaAlE{@zDuAjGoJzb@eDfN}ArGgAbFc@jBaDrO{AlHQx@]|Ag@vBU~@q@pCqAhE{@lC]bA[bASt@U~@SbAeBpKuAnIu@~Dq@jDq@dDeCjKa@dB]vAYtAS~@UbAOt@_AjEEPk@pCk@pCu@lDI`@IZM^Yv@Un@M^O\\iAdDUj@BB@B@B@B@B@D@B?D@D?B?D?D?D?D?DABAD?DABABCBABABC@ABC@C?A@C?C?A?C?CAAAECCCACACACACAEACAE?E?CAE?E?E@E?E@C?E@E@Cc@k@SYY[QQ]SYOQKKMc@e@[e@m@eAOUUc@KQQYECGCEAEAG@GBe@b@i@b@gBdByB~Bi@l@WZINGVIb@?^A`@AZEfACv@Gz@?BMfBIhAh@nAf@bBl@dBXn@n@rA^r@t@jABCBCBABAD?B?B?D@BBB@FHBB@FBD@F@F@F?F?F?F?FAFALADCFADCDCBCDC@EBC@E?C?E?CAGt@IfAEn@E~@_Cj]UdDQbCU|BWnBKr@EZGZG\\Mn@WnA[pAQp@[dAc@tA_@dAcB|D}@pBWl@O^_@~@Yx@Of@Wx@ATSt@WdAOv@YzAG^Kj@OlAOnAIr@CT]lEMfBGTaAtLE`@mAdNmEpj@wA~QuAjQCVK|A}BbZKnAkA~PqAfPO~Ai@jG}@zJc@fF}@~JAZe@nFa@zEkAtLA@EPiBlSw@`JIx@WjCoBfTw@fIcAlKO~A}@fJgAzL]zDKjA}@pJc@xEa@vEqAhNe@fF_CbW?NOjBg@lFc@`F{@|GGVw@|IaBrRIx@qAnO?Pk@`HcBfRw@pIm@~FG\\}B`U{@rIyAlOyA|R?X_@tES|B[lDSjB[lDK`@_BdQiArMa@bEYvC{@xIo@bHc@xE]jDm@|GSdBGf@Kd@a@tBJLBJDJ@J@L@L?L?LAJCLCJEHEHEFGFEBGBG?G?GAGCEEGEEGCIy@fACBINk@pAw@tCi@xBy@lDi@xB[nAkAnEkB|FbCzAr@b@d@\\PHDH@H@H?L?L?LATEVKj@Ml@[lAsAzBKNs@dAo@lAU`@g@fAg@nAe@xAOn@Ot@YzBKbAG|@G`CGpCAVErBAbDLzDLzA\\tBd@dDJh@D`@D`@Dp@@h@@j@B`DQvCWhC[xCg@~E{@tIIt@UfCAFMfAAJMpA]dDi@hFQvB]bDGh@CVE\\KpAE`@CRGh@WnCAHMlAIx@Ix@Gh@QhBUrBC\\yAbOYvCSjA@F@D@FBF@DBBJRVnAbHqF`@]HEDAB?B@DDBH@JHf@@@Lx@@P@H?D?FAFANYlBa@h@y@jAYb@yAxB`@fAJV@B`@lAX|@@HBJ?H?HAHi@bAEHCHCJ?B?B?D@L@N?P?JANAJCHCDEFKJa@\\gBfBEHCDADAF?B?B?D@F@D@Fh@hAl@rAx@hBf@fAb@fAeEfG}AvBqDzE~@~CNb@XbA\\pApAxE\\dAhAlDRt@n@`C|@fDVjAXnAR|@Rz@lA|Fp@bDv@rDTdA?A@?@?@A@?@?@?@@@?@?@@@@@@@@@@@B@B?@@@@B?@@B?B@@?B?@?@?B?B?@?B?@AB?@?BA@?@A@AB?@A@A@A@A@B|A?T@|@@~@Av@A~@Cx@?FE~@KfAI|@Kp@Mt@}@lFe@rCm@lD[jBDDBD@BBF@D@F@F@D?F?F?HAD?FAFAFADCDCDCDABEBC@C@C@E?C?CACHi@nFIvAE~@Ez@Ap@A`@Ab@A^?d@?NA~@AlC?pC?lCA|JAnI?vG?n@AtH?b@?jBC~M[l`AElJArD?|AIdLAjDAnD?vFBxHDbPBbLBjIAbE@xBAt@E`AAp@CdA[dFC\\c@jGALMfBWdDk@zHi@zGaAzNWnEi@`J_@vGg@nI_@bG?HKzAQ`CSpC[~CKhAOhAMfASzAu@~F{A~KU~ASrAQhAMr@Op@Mn@W|@St@Wr@g@tAAB[r@]p@_@p@]h@o@|@u@z@uBnBgB|Ay@r@_@\\SPgDjD_EjEQRsL~MuB`CaCjCcAhAc@f@u@z@m@t@u@z@QZa@j@c@n@c@r@U^S\\O\\[n@]z@Sf@Wv@Uv@GPI\\Oh@Kf@Ol@Mn@O|@Mt@QfAQfBIbAU`DCRWtE?BI~AEr@OpCKrAI`AC^OpBEn@]~EKnAIjAEl@IlAMjBKtASnCGx@Aj@M~AStBCNQnBCXGl@WrBKv@[rBQrAKn@G\\EJ_@xBsAvHo@nDMv@yDbTuA~H_@vBaAdGO|@If@CNMv@Gb@O`AYhB_@`COv@QfAaAnGi@bD_@fCIj@Kv@YtB_@|C_@hCO`AW`BQ`AYbBY~ASbAq@bD[~A_@`Be@pB_@zAi@zBa@hBCLENe@pCABYdB_@hCObAKbAQdBQdBWjCAJe@bFShBO`BKhAm@rGGb@AVGn@Q|AGj@MbAMbAMbA_@hCKp@CJIb@SnAYvAIb@c@pBg@vBQn@[jAYbA]lAOd@{@nCo@rB_AvCm@rBa@nA_@nAOf@Md@CLWz@[nA[lAMf@YnAYjAYnAWrAWjAWpAKl@m@dDSnAUtAQnA]bCIn@OfAoCrUOhAGj@OtA[lCc@hDYhCY`Ck@lE[nCi@pESbBGh@Y`CMhA[hCa@hDg@tEQfBa@pEUjCWfDUvCQlCKhBOfCIvAOnCKpBIjBGpAOrDGjBEjAEjBEhBGlCAr@Cz@?DE`CExDExCG~FEzBE|DCvCCpBGhFGnFCvAEfEGpEA^IjEAv@KvDM|DSjFEx@Ez@Ez@IpB]jGEd@Ex@ARc@`IUdEEx@c@`Io@~LM~BShEK`BEz@?F[~FWzEQtCKrBa@pHStDa@|GYjFMdCY`F@VCb@KfB]pGKnBEfAI~ACf@Cp@MxEErBK`ECnACjACjA?dAAnA?bA?`A@jA@hA@h@CRDhADxADt@Bl@Dv@Bb@JjADp@J~@NzAPzAdArHp@~EHh@D^F`@J`AHt@F|@BP@RDt@Dt@D~@DhAB|@@lA?h@?f@?@?fAAfA?j@C|@EdAInBKnBYvFQhDUxEi@tKKpBKfBSdEQlDStDGzA[pGUhFOpDO~CE|@QpDE|@MtCUrEMrCUrEItB[xGU~EMbCU~EA`@O|CSdFOxCe@~JKpBOvCEdACb@Ev@E`@CLI\\CNEHCFGNELEHEFGHIJIHIFIDKDODI@M@U@qAHqAFc@@aCHc@BI?m@DyBLs@F_AF_DNyBHI@qBJc@@O@}DTiBHm@DM?qAFG?q@F?B?@?@?@?@?@A@?@?@A@?@A@?@?@A??@A??@A??@A?A@A?@~A?XP|LFpDF`ELdCDdAFx@DpAJhEBf@D`@BTHf@Lj@Nj@Ld@HXN^Td@bAfBDH?@Zd@l@bAt@hAtClEDFh@x@p@~@\\h@V^T`@Zd@N`@Tr@Nf@J^H`@Hd@F^D`@D^Dl@Dn@@n@@d@?l@A`ACdAIrBEn@Gr@MhAMn@UjAYtAYxAW~AM`Ag@nEqBdPEd@Cb@AV?RAL@N?T?J@JB\\D`@Fd@DVBHHb@@HR~@Jj@BHTbAJf@Jl@Hj@JfABz@DdBBpADnBDjA?p@?z@A~@?VANI`ACRCTe@dDOnAGn@Cb@Er@Cn@A\\?v@Ax@@bADjBB~ADxBB`ADhABx@Dn@BVBTD\\D`@Jl@F^Jj@RfABLP~@PbAR`ALf@Rr@L\\LVBDJRV`@NV`@h@T\\PVFNJPN\\@DTh@HThAzCl@~AJVLV^x@`@z@`@`ATn@f@bBTx@T~@ZrA@D^zAVhAR|@DVPdAJ`AB^@LDb@Bv@Dn@F~Af@xLVzGDz@Bd@d@pLLhCLjDD~@XvHJpBFtAX`FZjFLtBJ~ANlCJ~AD\\Fl@?DF^Jb@BPFVLb@Pj@ZdARl@d@~AVz@X~@hAzDb@vAvAzE`BxF^nANd@`@rAPn@BHV~@T~@Jf@Hf@Db@DXDr@B\\@T?N@\\?\\?h@An@Cz@G|AK|CKrCCx@WjGAj@UxGCd@C|@KhCMnDAZAf@EjACbAAd@AX?FBh@?r@EfBExBGlBGhBIlBEjAI|BGtAEjAEfAG~AErAGzAGdBCpAEfBAZAh@Cz@Ch@CXARATANCTCXIr@In@E^UzAO~@EPIZi@fCETUdAEVQz@If@EROx@Mv@QnASfAIj@S~AU`BGd@YbCOpAOlAIn@Ir@KdAE`@MtAOhBC\\CNEh@G~@MbBOxBIxAKrAGhAMfBUbEOnC]vFMfBKhBKpAOdCG~@OvBGbAIpAGz@IfAA\\KrAEx@I~@Eb@CTCTCVGVAHCRIZCPEPITSp@Ut@O`@Sn@Wv@Sl@IVO`@]dAEJy@bCs@vBmB|FWt@e@vAOd@ABY|@Ob@Ql@S|@E\\EVCPGb@E\\Gp@KxAEr@Gr@Eb@CZIn@QxAGl@S~AUdB[|BOfA_@xBYdBMx@Ml@Mn@S|@W~@Qz@Mh@Ot@GXMr@]vBETU~Ak@jDMx@If@e@xCKn@Mz@UzAG\\i@hDOv@Y|A]jBKl@GZCNGf@M~@_@`DUfBOpAM|@Kj@Kp@Q~@Kh@G`@Gh@CXCVEd@Ep@SdDQbCGv@Gh@E^GVETGPIVo@~AYn@[v@y@pBq@bBUj@k@xAIRWl@A@EJYh@Yj@a@t@S\\a@t@MTOZSd@Q`@O`@aAzCq@tBk@hBSp@Qd@Un@Uf@Ub@OZ]l@c@p@[f@[f@EH_AvAoB`DcA|Aq@hAm@`Aa@t@c@v@kA|Bw@|AABWd@[l@{@~AA@m@lA]p@GL_@r@_@t@u@vAOZu@tAYj@Wd@S\\_@n@Wd@]j@a@p@]h@OTa@j@[b@KRKTMVIVITWz@u@jCELUz@YnAS|@GZOt@Qv@Kd@Or@Kj@Op@S`A]zAMn@Qv@GVGTIVKXITMVSd@OXWh@Ud@Q^M\\O`@IZIVI\\GZMn@Mr@If@O~@Il@Ip@KdAGx@Gr@QlBKbAIl@Eb@M|@E\\Gb@Ih@G`@Gf@CVEZATAPAT?T?P?Z?ZB`@B^Bn@Bb@B^@Z?b@?T?VAT?PARCTC\\EZE`@GZEPERERGRO`@ITMTIPMTKJQTONOLEBMHQJC@WJYJo@RoA`@u@R{Ab@_AZs@Ti@PYJWJOHIDGDGFKJMLKNKPEJININIVO^w@~B[z@_@jAo@hBeA`DeBdFqGhRo@hB[z@M\\OZQZMTSVQVW\\QRMPe@j@c@j@k@r@W\\STk@t@qA~AW\\eHxI}GxIwAfB{AjBw@bAKLuAfB_AhAc@j@W^GJGHGLMVWr@Uv@i@fBo@vBo@tBMd@Oh@K^Kb@Id@Kf@Gf@Gh@Ed@Gj@E|@InASfDGpAe@nHStDCb@InAG|@Gl@I`AMpAQdBIl@Gn@eAtKqE`d@Ix@gCvVe@nE_@lDIt@Gp@Eh@Et@GdAIjBGfACj@W|DO~AAZCVAf@?PA`@@`C?dAAh@Aj@ADCp@C^CVCXIf@GZGXG\\GRK^Ob@eGjS]hAg@~Ao@vBSf@O`@KVQXU^OTQPw@|@y@x@mBnBGFsAtASP{A|AiAjAA?]\\s@r@IHy@v@CBq@p@{@z@YX[\\WZ_@b@WZUZUXa@h@SZ[f@}@xAqAzBs@nA_@p@KREHEJELIPGRa@tAcC`I}AdFcAfDgBzFu@jBq@zA{BvEcBpDsBjEgCjFiDjHYj@cCdFe@bAgIjR}@tBgAdCgCbGg@jAu@hBaAxBg@hAIPsEvKeAfC_AxB]bAe@nAQh@a@lAO`@Sx@Sx@EPS`Ag@dC?@]~AK^CFGRK\\IVKTGLIPGLKJa@`@KFMFUJ]JcAVoBd@_@JODKBaAVq@T[NUNYPYTuAxAgBhBo@n@YTy@h@mBhAm@^iAv@o@h@a@^KHSPe@`@o@b@a@TUP_@RYJc@Nw@Nu@Jq@L_BRaBLaAFeBJs@Hg@Fm@Jg@JuA`@_GfBwDfAkA^EBeA`@s@\\YPURA@YTo@v@i@p@gAbB{G|JKNaBdCUZ[b@_BzBiC`De@j@iArAgCpCuDtDiCdCGF}CzC_A`A_@^m@l@YRSLUJa@Ns@Ra@D[@I@g@AcBG[@]?YDWB}AXi@Fw@H_@FOBc@Lc@Pa@Pg@^s@j@i@b@UPoAbAu@l@mAdA_@\\WVEFGJINg@jAkArCqCpGeB|DKT?@k@tAe@lBo^|mBeAlFiAfE_ArCmPle@mAtE_@dBc@fCk@jEqBrQqTfpB}N|qAeDpZwGdo@w@dJEfAAtAFpPFxGL|ET`Fp@nJbCfSfA`I~Gxc@~C~Sv@zETtCDrA@jFGlBm@zIElCNpExAv[FnEo@h[KhKAdFChBO~D]xDWjBe@`Cc@dBuF|O}BjIqDjNc@rBsArIcAzEyBpHiF`PqBvH}EvSwAjFkOne@y@~Ce@xB{@|E{BtQw@pHw@fFe@|BmBxHaAxCuAlDcBrDcGrJsBpEa@xA_BbCABl@`A@N@Bl@dDwKrWiOf_@cTdh@_CjGeCjJqGjZg@nBwAbEkGbPm@jBqHxXqBfGkGlNkBdD{JnOmF~Kc@dAmAxDsCrKw@zBuEdLsAbD{@bB{A`CcIbLqG`IsBzCaA`BcF`LmDxGcBlCcGbHmAhB{@dBa@`Au@rCu@pEk@zEu@vDeBnFqUpo@wApEw@vCc@vBy@jF[lCUzCo@fMaB|`@}@hQqAvPcB`Pw@hG_CvOki@jbDgCrO{B`OkC|So@zF}A`Pq@dIwAxS[zFkAxXWxJmGzpDOfSAtUuQdPq@ZmAVuEV_@`Fa@rCSv@mAdEy@zBsCrGYnAk@zEQhCE|A?dCF~GThL?xCCrCKnBQjBa@hCuAdF{@pEy@vHMrBQvDEhGDpFRfNJxBDnAK@w@Hi@C|AgA@ACI"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3494603,
+                                                "lng": -6.2512466
+                                        },
+                                        "stop": {
+                                                "lat": 53.9639683,
+                                                "lng": -8.794926199999999
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Charlestown (Mayo), Charlestown Rooney's ->W1",
+                                                        "time": 1596823500
+                                                },
+                                                "dep": {
+                                                        "name": "Bus\u00e1ras, stop 135001",
+                                                        "time": 1596812400
+                                                },
+                                                "headsign": "Bus\u00e1ras - Ballina Bus Station",
+                                                "operator": "Bus \u00c9ireann",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "distance": 46456,
+                                        "duration": 3240,
+                                        "html_instructions": "Bus towards Galway Bus Station - Derry (Magee Campus Strand Road)",
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "yyjhIhwtt@HC@HDj@SFIBSHg@N_@FqA@w@B_AA]AOA_@EO?cB?kA@}B?sA?i@CG@S?K?MAIAMAYCi@Gw@Oe@M_@Kk@Qe@Qu@[WMCEGISK}@i@c@W_@Yy@q@YUsAiAk@g@}@u@w@o@]YWS_@[qAgAgA_Am@g@eByAiA_AsAiA{@s@gBwAwBgBkCyBmAaAo@k@wAkAg@_@qAgAkA_AwAgASOe@[u@e@g@][UoAo@m@]g@UoCsA{@a@o@[eD}Au@]qEyBkBcAs@_@gBcAOKmAu@EEqBqAwCoBeAu@_BeA]U{@i@cAm@cAm@yBkAe@W_Ag@cAi@c@S}@a@aAe@YMiAg@yBaA{FeCyB_A{BcAy@a@sAo@g@WSKmAq@q@_@qBkAsAu@]SgAm@{@e@OImAq@QKMCWM}@g@_B}@}BoAQIWOQKe@YwBmA[OaBeAUOuA{@iBkA_BaAAASO{A_Au@e@g@][Se@[UYq@a@OMiBoAaAm@qEkCm@]u@e@yA}@IEaBaA_Ai@YQSMOKOMOQOOQUQUeAuAY_@Y]o@{@e@m@oAaBi@s@_@g@aDiEaAsAcAuA}@kAk@w@y@gAe@q@g@s@q@}@q@_Au@cAo@y@g@q@a@i@[a@e@q@gA{AwAmB_AoAW]Y]a@i@_@a@Y[SUq@s@[Wa@YWOCACAQI_@MYGIAQCO?UAa@?uABsBDs@B{AD}@Bo@ByBHu@DmAFWBi@Be@Dc@D_@Da@Fw@LUDq@L_@Fy@P{@Rs@NsAZi@Lm@Je@Lc@J_E`ASDgJ|BcB^aBd@u@RoEnAgCp@oG~A{Ct@gAT]HUDM@U@MHk@AW?_@ESCc@KUGWOUOWQ[Y_@_@QSMSUa@IMISMWKWK[Oa@Ia@K]G[Gc@?AIm@Ko@Gg@OyASaCcBkR}@iK[iDI{@Is@Ii@Kg@Qk@Um@s@}A[o@KWEKoCwFq@}Ae@gA]}@m@eBUu@Mg@K_@GUEYMq@WiBSyAGYG_@YwA{@yDMi@Me@IYM[IMGKIOOQIK[[eAgAi@e@q@k@{@w@c@e@m@k@]]EEQOOKoAw@QIQM]UQM][]YwDmDq@q@oBoBYUWSMIWMe@UUGOGSEc@I_@IOEWOQMSOAAQSIOUa@Si@IWm@_BIS]w@Yq@OW{C_GSc@KYK]Me@OUGIIIEEIGuAgAKIeBuBc@g@e@w@Uc@Uc@KOEEA?AAGAI@Ok@I]g@wAi@wAa@sAUy@S{@Q{@EQEWKu@GYGSKa@IYM]MWiAsBYk@Wc@mBeEq@{AQ_@wAkDo@eBKYoA{DkFkOm@eBUs@Ug@i@kAmAgCYk@iA}Ba@w@o@sAe@u@Ye@SYa@i@w@aAWYg@g@e@e@e@a@_@YWS{AeAqA}@{@e@eDcB{@e@sE}BEAyAu@}Aq@cBo@}CkAkAc@a@Mc@OsHgC}Bw@gA_@g@OaBi@uAc@{@Uo@QaAWmEcA{Bg@q@QcAa@mBy@gBu@m@YiBy@iAg@_@OQG]K]EYEY?Q?W?G@[@G@QBUFODYJm@Ve@VwAr@sAn@w@\\e@Pi@Nu@Pk@J]Di@B_@?S?]CWCWESGYGUIWIWMkAm@i@[i@[WWWUSSY]W]Ua@Q[?A[i@w@{A_@y@Yu@K]YeAMe@Ig@ACG[CWEUUcBKu@KgAImAEw@EcBAs@EwB?ACaCAiBAsC?}DAe@A}@C[Es@CYEYSwA_@aCm@oDs@kEa@aC{BgN[aBg@sC]cCe@cDk@eEg@oDOeAc@wC{@_GUaBCMEg@Cc@Ck@Ag@?o@@}ADw@H_BFqAB_@JsBJcBH}AFyAFiBB}A?iACqAQiCQ{@o@iD_@kBc@yBe@{Be@_CqAeGKi@yBaKkBsIOu@wByJyBuJ_D_NK_@k@{B}@wCaBeFyCaJ}CyJ]cAoAiEmAgE}@gD]kAa@{AwAeFu@mCMe@eAuDc@}ASs@o@{BaA{CGUy@aCkBqFy@_Cy@yBo@kBM_@u@wB{@cCs@sBe@uAGOs@qBeA{Ce@uAu@sBw@_CkAeDg@}Ac@mAOe@c@qAs@aCeAgDaA}CiAoDeAkDGMSq@o@uBgAgDi@gBsBwG}AeFc@aBc@sBo@cDw@oDa@yBm@cDs@iEm@oDKo@]kBg@_Dg@wCUmAe@cBmDeK_HiSmAgDu@}Bi@}Am@aBo@gBGSe@sAu@eBq@oAu@wAu@wAYg@Yg@q@qAq@qAo@oAa@aASi@u@uC_@}Ac@gBe@cBa@uA_@uACG_@oAa@wA_@mA]aAi@sAKUq@_B]w@Se@CIo@aBo@uBo@oB_@aAUg@e@aAq@yAUi@Qc@[cASy@O_AKeAGmAC{A@g@?_A@}A@_B?cBEmAEe@Ea@AOGe@Ia@Mm@Mm@W}@Uq@[}@s@mBu@sBy@wBe@mAe@sAa@uAYoACUG[Iu@ScDMmDS_GScHC_@G{BGuCa@cLGeAEq@CSE_@Gc@EWIYESEOISa@mA{@iBO_@s@wAq@oAc@q@OQs@w@o@o@[]U[]c@MS_@u@]y@M_@M[a@iA_@}@aAwB}@sB]q@o@sAc@aASa@Se@wA{CMU{@iBg@iA_@u@Se@a@}@g@iASi@Qg@Qk@Qo@Mk@WcAQq@Us@Yu@Q_@Yc@QUc@i@i@g@y@y@u@s@cAaAq@k@MKi@]s@]s@]w@e@a@Wq@k@YWo@w@_BeB}@eAyAaBoAyA_CkCm@y@wAsBy@gA[[][[S_@Sc@O_@Ie@GmBSoAMo@GcBOqAIsAIyBOm@Gc@Oq@]WU]UU[_@e@Ya@_AyAQYwA{BgC_E{@{A[{@m@_B]gAW}@k@}B[_Ba@uCUwBs@gGc@sD[sCQmAc@sCUmAMm@Kg@Ki@Oo@Ok@CI]oA_@iAcAqCk@uAeBcE}CmHsA}CoBwEWm@Qa@{BqFmAsCUi@]w@[o@Sa@S]c@u@_@k@c@o@q@u@WWg@e@WSg@_@uA}@wAw@c@Wa@U_@SQKwA{@a@Wu@g@iB_Bo@m@kAqAs@_A{AeC[g@_@m@mBcDsBmDg@{@u@oAy@sAwHqMKS[i@OWuAaCoAwBEI[i@Yg@cAeBqAyBKS[g@IOiCmEsA_CqA{B_@q@e@{@g@gA]u@o@cBq@qB_@oAc@wAs@qCMk@Mq@SaAS_AaAsGm@{Eq@yE{@sGcAcHg@mDUaBWsBMw@g@wDsCgTa@yCUaBSwAQmAkB}MGIACEKI[GSSe@CAACAACCACACACAE]IUGUEe@AeA?oAAO?c@Ac@?oDB}FXeCRa@Dg@JUJ_@TMDABADABC@ABABA@CBOd@IVE\\Kz@InBi@Oa@Ky@SKCYC]CY@a@Fc@Na@P[VaFtESx@YtAAXAHAJIjAMvBEz@CVAHIPa@PGBE@SFODMBEBKBe@Rm@RGDKFa@R{@d@qBnAwBrAg@\\A@q@TwA`@SFMBmBb@cAFc@B{@F{Kb@qBJWDKDGDKPGb@Mt@Ih@Uf@SVUDU@aAS_AOa@?c@JiBdBoDfDyC|C}HvHqClCkBhBmChC{BxBEDwBpB}@z@_Az@y@v@CDgF|EoApAg@f@s@x@]^e@v@EJGJQ^q@xAaBdDm@lAiBxDMXIPYj@q@vAYj@g@dAIPMXA@?@@??@@??@?@@??@?@?@@@?@?@?@?@?@?@?@?@?@A@?@?@A@?@A@?@A??@A??@A?A?A?A?A?A??AA??AA??AA??A?AA??A?AAA?A?A?A?A?A?A?A?A?A?A?A@A?A?A?A@??A@??AWe@Wi@c@_Ay@iAuA_BEE}@_AMGME]OA??@?@A??@A??@A?A??AA??AA??A?AKFCBEDEDCDKNINKTGNq@|A]t@Wb@IHa@d@{@x@QLgAz@}@|@sArAwAlBu@x@i@Zm@TUDQBQ?A?MAQCWMMOIKGKKUGQIa@O{@[gBKq@e@cCScAa@uBI_@Kg@]}@S]U[k@c@q@_@YQW[ACOYO_@GSGWG[My@W{D?MQqBOuAOeA[wAOm@ISWeAMo@CKGc@Kw@Ko@a@gCkAZwATyARI@}@Dm@G]Gs@IMEUIIEw@]YMGCKGQI_@Os@So@Qq@Om@Ok@QcAWA?MWi@OgAa@YKc@Qy@_@cAc@eAg@_@Qw@]w@_@_Ac@e@Wg@YWQe@[QM]We@_@[Ya@_@_@a@c@c@a@e@CCc@g@a@i@u@_As@}@SWe@k@gB_CcAqAi@q@_AmAaBsBMQUYGIy@eAuAeByAiBgAyAqAaB{AqBsAgByAiBw@kA[e@_@m@QYa@u@e@}@CEYm@Yk@[u@[w@i@uAg@sAk@uAg@sAk@qAo@mAo@iAs@eAu@_Au@{@c@c@i@e@OMi@c@[UuCoBwB{AiD{BaAo@eAq@}@g@o@]k@Ym@YeBw@aC_Ak@Sw@U{@WuA_@k@Mq@Oa@I}@OqASWEi@Ii@GYEy@GWCqAGk@C}@Ck@AaAAi@?m@?Q?Q@o@@_AD_ADiAHG?[DM@uANoAPm@Hi@Jg@JMBa@HMDUDe@J_AV_AX}@Xi@Pg@RYJ_@Lk@Ve@Ro@ZqB~@i@VgBz@QHsBbAqAj@_A^e@P]L_@Ji@Nk@N{@Ri@HcAPe@FA?i@FwAJwBJoBJa@BoBLyDRo@Bi@@MB_@BGJCDCBCBE@E@C@E?EACAEACCCECECECEAGCG?GAIQ_@GOEGKIMI]Mi@Se@Sg@Yc@Ug@U]O_@KUG]IWCI?SAUAI?I?W@WBe@FIByBj@DlAsBjAyEnDMcA?CMu@_B|@"
+                                        ],
+                                        "start": {
+                                                "lat": 53.9639683,
+                                                "lng": -8.794926199999999
+                                        },
+                                        "stop": {
+                                                "lat": 54.2720255,
+                                                "lng": -8.481893699999999
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Sligo Bus Station, stop 555081",
+                                                        "time": 1596828900
+                                                },
+                                                "dep": {
+                                                        "name": "Charlestown (Mayo), Charlestown Rooney's ->W1",
+                                                        "time": 1596825660
+                                                },
+                                                "headsign": "Galway Bus Station - Derry (Magee Campus Strand Road)",
+                                                "operator": "Bus \u00c9ireann",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "directions": [
+                                                "Head <b>west</b> toward <b>Lord Edward St</b>/<wbr/><b>R292</b>",
+                                                "Slight <b>left</b> onto <b>Lord Edward St</b>/<wbr/><b>R292</b>",
+                                                "Turn <b>left</b> onto <b>N4</b>"
+                                        ],
+                                        "distance": 864,
+                                        "duration": 667,
+                                        "html_instructions": "Walk to Primary Care Centre, Barrack St, Rathquarter, Sligo, Ireland",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "w~fjIttwr@?r@?R@HBLBHDD@DFDFBF?HAHCFCLQBG@E@E?K?G?GAOA]?a@?G?E@IDO",
+                                                "w{fjIprwr@g@mDGg@",
+                                                "g}fjIzkwr@k@AcAKu@KGA}@OqAUWE[IOEMGMI_@UYYQQOSSWMSEIc@s@Yg@g@y@[i@IQg@cAYm@GQKWMa@Mc@IUAGSg@MSGKYg@_@g@c@i@SUII"
+                                        ],
+                                        "start": {
+                                                "lat": 54.27196300000001,
+                                                "lng": -8.4821872
+                                        },
+                                        "stop": {
+                                                "lat": 54.27660969999999,
+                                                "lng": -8.476087099999999
+                                        }
+                                }
+                        ],
+                        "transit_index": [
+                                1,
+                                3,
+                                5,
+                                6
+                        ]
+                },
+                {
+                        "db_index": [],
+                        "distance": 266018,
+                        "duration": 20767,
+                        "end": {
+                                "address": "Primary Care Centre, Barrack St, Rathquarter, Sligo, Ireland",
+                                "location": {
+                                        "lat": 54.27660969999999,
+                                        "lng": -8.476087099999999
+                                },
+                                "time": 1596829567
+                        },
+                        "start": {
+                                "address": "Clonskeagh, Bird Avenue, Friarland, Dublin, Co. Dublin, Ireland",
+                                "location": {
+                                        "lat": 53.30517039999999,
+                                        "lng": -6.235952999999999
+                                },
+                                "time": 1596808800
+                        },
+                        "steps": [
+                                {
+                                        "distance": 9500,
+                                        "duration": 1440,
+                                        "html_instructions": "Bus towards Rialto - Blackrock",
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "idjdIt}`e@HVp@y@hAgA\\[r@}@^i@^g@Ve@JSPYNWNSHKHMRSNM@AJIHGLEXIBgA@EFmBDw@Bw@@MFaBFsADo@BYHq@lAmKBUF_@@KDW@MHg@D[@KBIDWDOBKBIBIBIFMBI@CJUJURc@Xo@LWJSZq@N_@\\u@HOHSFOFUDKBKDSF[DWD]BQ@O?S@U@W?[?W@W?S@WD_@@OD[DUDQBKBMDMHS@EJUDITe@HQJQJ]BKBIBODQBO@OB[DU@UB[Fk@H_AJcAFk@Ee@CU?GAGM}@Wm@?CM]CIMa@Qm@m@oBUq@Ok@[aAo@uBK]Mc@Y{@Ss@[cAMc@M_@Ma@K]Uw@ISWaAOc@]kAIUc@{AMa@c@uACM[aAOg@IWi@gBeAiDKYMa@K]g@cBa@p@u@lAwEpHk@|@[h@EHKN_BfCmArBu@nAu@tAYf@?TADAFIRu@fBm@dB_DdJq@lB{@dCJRTd@HSVYx@o@t@c@NCVe@\\i@NOPSJEDEDENIHELGHCTGD?J@DA^@V@XDNDJDNFJF`@ZB@LLHDJ@LGFEDGFMFOb@yATw@Vq@FMDGDCBAHAL@JDx@TOl@k@`CCBA@A?A@A?C?AAC?AACGIs@GWAEEKGGSSUv@c@xAGNGLEFGDMFKAIEMMCAa@[KGOGKEOEYEWA_@AE@KAE?UFIBMFIDOHEDEDKDQRON]h@Wd@iB|Dk@`AG@A?C?AACCECAEACACAC?CAG?CA[Na@HQUe@KSYc@QY?AIIEKA?OW[a@N_@\\o@\\s@P]JOh@aA@Cf@eAFIXe@f@{@LW^m@d@w@@CJC`CcFfBsC`A{Af@}@dBuCFK`@q@RYDG`A{ArAyBb@y@r@iA\\k@d@q@P[HM^i@FKLSh@u@h@q@x@cA\\]@Aj@i@XYDCd@[hAo@hAo@VOPI|BcA`A]ZMn@]f@Wj@U@Al@W`Ac@`@S|@[@APGZM@?hBa@B?RCN[@CB?BAL?DAB?@A@CBC@C@C@E@E@G?GB[G[Ie@AGQaAUuAs@yDG_@[kBQaAuAcIOw@EQQcAcA_Gm@gDqDcT]gBe@oCmCePcB|JiClOnDfC\\F^SHUNq@v@eHT{@\\i@ESCD?BMVITGPCLCFMvA]nDAHIn@AHA@GTENKJMNEBEBM@E?E?IG_@W_@YoBuArAaIn@sDRoAX_BVqAd@iCQiAAGQaAIc@UoA?AWwAUuAm@eDUsAi@_DEQMy@EOO}@Ia@I]Ma@K]QUNu@FQLe@BMHWBu@B[HoAOm@GYIc@Ow@AQAQAU@WFcAn@cEJg@FUFOFQh@_Am@mA[QKGa@XEDEHCDGTK`@ABS`A?BRL"
+                                        ],
+                                        "start": {
+                                                "lat": 53.30517039999999,
+                                                "lng": -6.235952999999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.3024801,
+                                                "lng": -6.1783708
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Blackrock (DunLaoghaire-Rathdown), Outside Train Station",
+                                                        "time": 1596810240
+                                                },
+                                                "dep": {
+                                                        "name": "Clonskeagh, Bird Avenue",
+                                                        "time": 1596808800
+                                                },
+                                                "headsign": "Rialto - Blackrock",
+                                                "operator": "Go-Ahead",
+                                                "route": "17",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "directions": [
+                                                "Head <b>west</b> on <b>Bath Pl</b>",
+                                                "Turn <b>right</b><div style=\"font-size:0.9em\">Take the stairs</div>",
+                                                "Take the pedestrian overpass<div style=\"font-size:0.9em\">Destination will be on the left</div>"
+                                        ],
+                                        "distance": 105,
+                                        "duration": 75,
+                                        "html_instructions": "Walk to Blackrock",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "ctidIjuud@ADCZAHALAP?TAFAFAJEH",
+                                                "{tidIryud@W]TaABD@I",
+                                                "wtidInvud@KK"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3025817,
+                                                "lng": -6.1782963
+                                        },
+                                        "stop": {
+                                                "lat": 53.3027446,
+                                                "lng": -6.1784157
+                                        }
+                                },
+                                {
+                                        "distance": 7830,
+                                        "duration": 1200,
+                                        "html_instructions": "Train towards Malahide",
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "iuidIxwud@GGi@tBK`@m@rBqAlEkBhGwBhHkCvIkBhG{A`FyA|E_BlFuA`EmBdFs@hBIPuB~Ey@bBq@vAOV[l@mA`CwBrDaAbBeAhBiB~CuBpDgB~CgCjEwAbCsBnDILoBjDoAvBo@fAU`@k@`Aq@jAuC`FoAxBC@yAjCg@z@u@pAoAtBu@pAKPiB|Ck@|@s@jAABW^wAtBmBxCuE`HyGtJmBpCaB~B}LdQQXo@z@_AtA{B`DuBzCeAzAiA`B{@jAUZaDpEaB`C]f@qDlFMNKNCBmA~Ao@x@CDw@pAiD~EcAxAaCfD]d@_@f@e@r@MR[d@ILe@t@[h@INa@n@c@v@EHYf@S`@KPk@jAe@`AEH_@x@c@bAc@dAWp@MXKTELQ`@IXEJSd@Yp@MVO`@Ob@KVABgAdD[x@g@xAeAzCYx@M\\Wz@K\\KZMb@Mb@e@dBe@dBIXWfACDK`@UdAQp@Qx@ENERGRMh@SdAWtA_@jBIj@G`@e@fDg@dD?@Mv@Mv@g@lDCHGZS~@K\\Mf@ABOb@GLWn@OZMTY^GLORSTWZi@l@WZe@j@MNQRSTSTSVIHOREFIHGHKN_@f@_@h@Y^IHOPi@f@UNOLKF[PSHIBWJCBYF]FSBM@[@S@A?O@K?EAWAEAG?GAYEYGUIYIa@Uc@WWSKMII_@e@_@g@_@g@OUO]Q_@Q_@ISkAkCSi@o@yAQc@Wk@Ui@W}@EKO]GQbA_B"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3027726,
+                                                "lng": -6.1786885
+                                        },
+                                        "stop": {
+                                                "lat": 53.3515264,
+                                                "lng": -6.2496782
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Connolly Station",
+                                                        "time": 1596811860
+                                                },
+                                                "dep": {
+                                                        "name": "Blackrock",
+                                                        "time": 1596810660
+                                                },
+                                                "headsign": "Malahide",
+                                                "operator": "Irish Rail",
+                                                "type": "HEAVY_RAIL"
+                                        }
+                                },
+                                {
+                                        "directions": [
+                                                "Take exit <span class=\"location\">Main Entrance</span>",
+                                                "Head <b>south</b> on <b>Amiens St</b>/<wbr/><b>R105</b> toward <b>Talbot St</b><div style=\"font-size:0.9em\">Destination will be on the left</div>"
+                                        ],
+                                        "distance": 256,
+                                        "duration": 195,
+                                        "html_instructions": "Walk to Bus\u00e1ras, stop 135001",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "afsdInsce@@T",
+                                                "efsdIduce@`@Vd@RBBFBHBt@^xAr@HBPJl@^HFLHXXXVXR"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3515264,
+                                                "lng": -6.2496782
+                                        },
+                                        "stop": {
+                                                "lat": 53.34948410000001,
+                                                "lng": -6.2513302
+                                        }
+                                },
+                                {
+                                        "distance": 201007,
+                                        "duration": 11100,
+                                        "html_instructions": "Bus towards Bus\u00e1ras - Ballina Bus Station",
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "cyrdIh}ce@CN@@VNZPHDJFNFVMRIPAP?V?d@HL@NBB@PBNDz@PH?d@X@R?@@X?P?L@NAX?T?r@CxCAP?p@Al@?F?PAz@CnAA~@?r@AdA@nAJxAPvAD\\BZDX^lCPxAFf@BVNfA@DN|@Fd@^bCNbAf@fDN`ALfANnAPfBHt@Fp@H~@NjBBV@RPnBHz@PpB^dFFjCLxCNdDHnBBb@DdADpADrA?n@IxCExAM`DKnC?HCn@Cl@?PCZGr@Ez@]vCQ`BK|@i@pEStAQxACZKx@MtAOdDYhGOvBCd@Cr@ApACxA?^AtAClBAjACdCEpDEnDAd@CpA?REz@Gp@ShC@H@DAPCR?L?F@HBJBHDJ@DLLXNl@VDBHHBFBJBN@NFl@JpATzC?BDz@BjA@TBhBB`BFjBBf@FpA@HNfEBfAJ|BHdADf@X`DDn@ZxDX|CP`CRzBNjAHf@Jf@Lh@h@rB\\nAPj@fA|DRz@^hBH^F\\D`@@Z?TEhB?HAFA`@AN?V?V@X@`@@d@LhDD~@J~BTdGXlKNpFFjBLxD?`@DnABzAB~@@tA?L@bB?@AnAEdBGvAIpAOpBIx@c@xDEb@o@jFi@pEUlBIl@ARcApIiAdKg@hEGn@QdBABGfAGdACp@Cz@Af@A`A?F?fA?dA@t@Bl@Bn@Bb@Bd@Dl@BVBb@@HHv@VdCLnATvCFbADdA@h@DtB@fB?~@Az@ClBGpBCdBGxCG|AEnAE|@AFIbAIn@Mr@S`ASx@Yz@_@`A[l@g@v@SVORCB[Z_@\\YT_BlAg@`@g@`@kAz@eClB[XMLIJ]^MPKLw@rAc@bAa@jAQj@Sp@Ml@Ot@Kl@Gd@AJK|@Ef@IjAAZCV?@CV]~FKpAIt@StA_@~A]dA_@`Ac@v@EDMNMRm@t@m@n@_A`Am@x@[j@s@|AAF]jAEXEVKd@QtAKnA?BIhBC|B?dAElDM`DALIvAGz@KzASzBGt@K~@?BKdAGd@]fCAPQ`AyAhJa@hC]vB_@hCGZQdAQnAg@hDG\\o@dEQjAWbBI`@k@tDEVObAWbBQhAUzAK~@Gl@Gv@ExA?pCJvBFp@Hl@DT@NLp@H`@d@tBLr@Hf@Db@Dj@Dh@@`@@^?^?r@A`@A\\Eh@I~@O~AK~AEz@Ex@AlC?|@BjA?R@^@Z@VD|@NdC`@~FNpB@N@XN`ED|A@V@b@DfBDfBBfC@xBAjA@B?b@Ad@A\\A`@C`@C\\Eh@KrAGf@Gj@QpAOfAKl@_@~BiAtHKl@Kn@kBtMW~Ae@dDERQjAyAtJUfBQxAOnAIt@KtAKhAGv@QnCE`AItAEfAEzACnACzAA~@AbDElGAhC?~C?dB?x@Bz@@r@B|@H`APnCLtATjBLz@Lp@N~@VlAXhAZdAf@zA|@bC|@zB^`AFNL\\Vn@DJl@|A^~@r@fBz@xBj@zA`@dAz@vBlA~C^`Al@~Aj@tAbAhC^`Al@~Al@|A^fAXz@Vx@Tx@Nf@V`ATz@f@tBVnAVnARdARlAPjARnA\\zCLhAPbBJtAHhAJdBHrAJrBFpBDxABxA@XBhB?vDC`FE`CEzAEhAM~BGjAE|@CXI`AMtAMzAMnAQ`BQvAQrAU~AId@UpAWvACJm@pCi@`C]lAEPYfAa@tAs@vBg@rA]|@[z@CFYp@S`@ELi@fAeBnDy@bBi@lAg@hA[t@[t@u@rBe@rAc@rA_@lA]dA]hA{@tCSx@a@~A[vA_@`BS~@CPUjAQ~@M|@M|@Gb@Gd@I|@Et@IdACf@EpAEbACfBAdA?lB@lB?HBpD@|A@|A^lc@LjO^vf@JvLVr[NtRDvDFdH@nCBxF?lD?lAAlBCnIEpEAzAEzDKvFIvEWrJAXM|DKxC]bIe@hJ[pGs@nNSrDMtCIrAIdBEz@OnCA`@{@rPa@hIEx@Ez@OvCKdBGtAc@pIKvBc@rIe@rJSnDa@dI]rGa@|Fk@zHi@tGSbCi@lF?BIx@OtAKdAQ|A[hC{@vHi@xEgBvOoAvK_AnIu@rGoAtK[tCYbCYbCSbBa@pDe@bEQ`BOlAS`CQlBQ~BSlCOhCI~AC\\KrCIvBCf@GdCI`DEhDCvC?fD?fJ?fJ?~D@|@AfCEvDAnABn@Bv@GjHAbC?f@AV?T@P?T@P@TBV@NBLBRDPDNDRDLFNDHLPRXVR\\VBBD@H@N@@GBA@A@A@A@A@A@?@?@?@?@?H@@@@?@@@B@@@@@B@B@@?B@B@B?B?B?B@B?D?BAB?B?BAB?BADA@?BA@ABA@A@A@C@A@A@A?C?C?E?A?AAAAA?AAAAACKHGBOBOBY?k@AWAO@m@DUCMAO?a@A[Ac@Ao@CW?gAAq@AyDk@a@CEAG?KAEAs@Qc@O]OsAm@c@ScBq@uAo@i@WOGoAg@s@_@m@UmD{AYMWMu@_@]Oo@YoAq@k@YkA]w@YOGG?k@Ma@Ei@Cm@?a@@kAFy@Jc@Jc@Lc@NUJUHMFC@C@E@SH[TYNaAt@q@n@STdAgAl@i@hBeAhBu@xDg@bCBlCd@vAh@r\\bOxCbA|Cj@|BTbDPrDF_@dDuCvR_AtEmC|QoMl}@eDvU{G~d@SbBWzAmGvc@oBtM{A~KiMz|@wRdtAgBrKk@|CqCrMs@rCiCrJwAxE{BtG_FfMiCzFsCxFsE`IqIvMqc@|p@iGdJ{DnF_ChEgCvD{EtIwEnJgF|LiBbFgBrF_BrFwDtNaCvK}@lE_BhJoBzL}@jGw@nGqAfMiAjM{@pM}@|RSvG[pOi@xr@YpSO|Wa@tPOtCyBvXsAfR_BrWk@dNSbJQzL?xLFjJJdGZtLnAtUVhDxAhPt@dGz@zGbClO`CpLtKng@tBlL~@lGjAnJ~@fJt@zJn@rMb@fP`B`uAFdJ?nPYdUi@`Q]~GgAnQo@rHsApMk@`FqAlJi@pDcDpRiCtLaBbHiHxWoAfFoBjJaAlFw@|Ew@vF_A`IkA~LaA~Og@zNMnHChE@fPPpKTzHx@pOhFrv@X|GJbEBdJInGMtD_@`Hs@~H_@dD_BxJc@zBkAvE}AnFw@vBeB`EiBxDqBnDqQvYuRb\\mAzBeB|D}BbGyApEgBzGcAxEaBtJ_AtHa@nEq@tL[lJw@r[SfGm@j^KzKK|T@hXX`}@FtEf@vTZnHxBl_@\\~GP`OAfHMpHe@zKYdEm@dHe@zDyA|JkBhJaDvLyCnIwCzGcFtJeGdMqGpOsEbMkEpMyBjHeDxLyCpLcCtKcAxEaC~LiCjOuAdJoBzNg@bEe@hEoAxMq@jImA|QkAnWuRx~EwA|YgBjYi@fHiFpo@iB~Su@fKs@rNq@zP{Ah][lFu@zIo@pF{BnNwBfL{ApHwDtOeEdOeJtYmKt[mw@zcCeAzC}CzHwCnG_GhKiR~Z{NjVsBzD}EnKsC|HsBrG{`@vuA{ApFsBlIcA|EkJng@oBxIiAnEmCvIeHbRqBbGqAnEmBzHmCpMyAxJg@bE{@nIsAhQo@zGiB~NsBnLwC~O}DbUyAxGiCbJuC~HiIfT_DtHeDvIsDbJmFjLiIjPsHxM{BlEgBdEs@lBu@zBgAbEm@nCcAdGoCzQwFlb@cAvGsCxPwEtYgAbG_DdPiEbRgIr_@sYjxAoHn^k@~Bm@pBcBxEsCzFiA~AgAnAwAtAcCpBsBlAsAj@eLfEiAh@g]hMaFrBuAt@_CrAaE~CgFlFiAtAsBvCyBnD_CvE}@pBgb@|fA{Pdd@iQtc@{@jBqFtNiFbM_DzG}DxHoFhJ}DhG}A|BuEhGyIdK}D~DqG|F}KjI}S`MoeAfm@qCzAkGnCi`@xLaDxAeBbAaBjAsDjDwAdB{AvB_C~DqCfGeAzCaAzCeBfHiAvGo@zEqEfd@aAxGa@tBc@dBm@jBaAdCyDnI{@tB{@jCo@dCc@xBk@zDg@pEaDb_@u@tGm@xDe@`CaEnQ{AlGeBvI]bCWlC[bIg@n^M|DyApUy@~Ki@pEcBfIaHbYaBvF}AxDwPj[sDrH_m@fpAyRta@cK|SgDjH_AfBgAbBw@`AcC~BA?o@l@kApAgBzB[l@aAdBcAtBw@vBi@~Ae@tAa@zASp@u@jCW~@c@|ASv@{@~CY`AqAnE{GrUeBfGmAhEiAvDiAzDOd@[lA{@vCmA`EkAnDwBnGy@|BcCfGiArCWl@ITeDnHIZAD]t@k@fAq@rAe@z@kBpD{BbESVqGlLmCzEc@x@Yh@{DhHiApB{@|AaBpCmBnDgCtECLCFCHm@nAqCvEqEjIuCfFs@tAsA`CiBdDyBvDgBvCc@v@mBvCQNINUZiCnEW`@eD|FEHU^S\\]h@QLYPUTYR_@VMH}A|@e@Zs@d@c@\\_@ZUROPIJOLk@j@_@`@q@v@}@hAEFeA|AEFKHmEhHU\\eDnFgAnBa@t@cDbGqBzDoBhEuBzEwAjDq@|A_CrFyAzDm@vAS^cC`GuAjD]|@k@|Ao@lBi@xA}@jCaAxCwAvEGTaAnDcBjG}AxGWfAcArEaAhEs@bDi@`CWhAe@|BKr@qAlGQt@CNo@~C]pAWz@Sf@Yr@qE`J]|@Ur@GPMh@CHOp@a@dBgAbFgCbLEPeAvEkBnIuBtJoBvIi@dCaAlE{@zDuAjGoJzb@eDfN}ArGgAbFc@jBaDrO{AlHQx@]|Ag@vBU~@q@pCqAhE{@lC]bA[bASt@U~@SbAeBpKuAnIu@~Dq@jDq@dDeCjKa@dB]vAYtAS~@UbAOt@_AjEEPk@pCk@pCu@lDI`@IZM^Yv@Un@M^O\\iAdDUj@BB@B@B@B@B@D@B?D@D?B?D?D?D?D?DABAD?DABABCBABABC@ABC@C?A@C?C?A?C?CAAAECCCACACACACAEACAE?E?CAE?E?E@E?E@C?E@E@Cc@k@SYY[QQ]SYOQKKMc@e@[e@m@eAOUUc@KQQYECGCEAEAG@GBe@b@i@b@gBdByB~Bi@l@WZINGVIb@?^A`@AZEfACv@Gz@?BMfBIhAh@nAf@bBl@dBXn@n@rA^r@t@jABCBCBABAD?B?B?D@BBB@FHBB@FBD@F@F@F?F?F?F?FAFALADCFADCDCBCDC@EBC@E?C?E?CAGt@IfAEn@E~@_Cj]UdDQbCU|BWnBKr@EZGZG\\Mn@WnA[pAQp@[dAc@tA_@dAcB|D}@pBWl@O^_@~@Yx@Of@Wx@ATSt@WdAOv@YzAG^Kj@OlAOnAIr@CT]lEMfBGTaAtLE`@mAdNmEpj@wA~QuAjQCVK|A}BbZKnAkA~PqAfPO~Ai@jG}@zJc@fF}@~JAZe@nFa@zEkAtLA@EPiBlSw@`JIx@WjCoBfTw@fIcAlKO~A}@fJgAzL]zDKjA}@pJc@xEa@vEqAhNe@fF_CbW?NOjBg@lFc@`F{@|GGVw@|IaBrRIx@qAnO?Pk@`HcBfRw@pIm@~FG\\}B`U{@rIyAlOyA|R?X_@tES|B[lDSjB[lDK`@_BdQiArMa@bEYvC{@xIo@bHc@xE]jDm@|GSdBGf@Kd@a@tBJLBJDJ@J@L@L?L?LAJCLCJEHEHEFGFEBGBG?G?GAGCEEGEEGCIy@fACBINk@pAw@tCi@xBy@lDi@xB[nAkAnEkB|FbCzAr@b@d@\\PHDH@H@H?L?L?LATEVKj@Ml@[lAsAzBKNs@dAo@lAU`@g@fAg@nAe@xAOn@Ot@YzBKbAG|@G`CGpCAVErBAbDLzDLzA\\tBd@dDJh@D`@D`@Dp@@h@@j@B`DQvCWhC[xCg@~E{@tIIt@UfCAFMfAAJMpA]dDi@hFQvB]bDGh@CVE\\KpAE`@CRGh@WnCAHMlAIx@Ix@Gh@QhBUrBC\\yAbOYvCSjA@F@D@FBF@DBBJRVnAbHqF`@]HEDAB?B@DDBH@JHf@@@Lx@@P@H?D?FAFANYlBa@h@y@jAYb@yAxB`@fAJV@B`@lAX|@@HBJ?H?HAHi@bAEHCHCJ?B?B?D@L@N?P?JANAJCHCDEFKJa@\\gBfBEHCDADAF?B?B?D@F@D@Fh@hAl@rAx@hBf@fAb@fAeEfG}AvBqDzE~@~CNb@XbA\\pApAxE\\dAhAlDRt@n@`C|@fDVjAXnAR|@Rz@lA|Fp@bDv@rDTdA?A@?@?@A@?@?@?@@@?@?@@@@@@@@@@@B@B?@@@@B?@@B?B@@?B?@?@?B?B?@?B?@AB?@?BA@?@A@AB?@A@A@A@A@B|A?T@|@@~@Av@A~@Cx@?FE~@KfAI|@Kp@Mt@}@lFe@rCm@lD[jBDDBD@BBF@D@F@F@D?F?F?HAD?FAFAFADCDCDCDABEBC@C@C@E?C?CACHi@nFIvAE~@Ez@Ap@A`@Ab@A^?d@?NA~@AlC?pC?lCA|JAnI?vG?n@AtH?b@?jBC~M[l`AElJArD?|AIdLAjDAnD?vFBxHDbPBbLBjIAbE@xBAt@E`AAp@CdA[dFC\\c@jGALMfBWdDk@zHi@zGaAzNWnEi@`J_@vGg@nI_@bG?HKzAQ`CSpC[~CKhAOhAMfASzAu@~F{A~KU~ASrAQhAMr@Op@Mn@W|@St@Wr@g@tAAB[r@]p@_@p@]h@o@|@u@z@uBnBgB|Ay@r@_@\\SPgDjD_EjEQRsL~MuB`CaCjCcAhAc@f@u@z@m@t@u@z@QZa@j@c@n@c@r@U^S\\O\\[n@]z@Sf@Wv@Uv@GPI\\Oh@Kf@Ol@Mn@O|@Mt@QfAQfBIbAU`DCRWtE?BI~AEr@OpCKrAI`AC^OpBEn@]~EKnAIjAEl@IlAMjBKtASnCGx@Aj@M~AStBCNQnBCXGl@WrBKv@[rBQrAKn@G\\EJ_@xBsAvHo@nDMv@yDbTuA~H_@vBaAdGO|@If@CNMv@Gb@O`AYhB_@`COv@QfAaAnGi@bD_@fCIj@Kv@YtB_@|C_@hCO`AW`BQ`AYbBY~ASbAq@bD[~A_@`Be@pB_@zAi@zBa@hBCLENe@pCABYdB_@hCObAKbAQdBQdBWjCAJe@bFShBO`BKhAm@rGGb@AVGn@Q|AGj@MbAMbAMbA_@hCKp@CJIb@SnAYvAIb@c@pBg@vBQn@[jAYbA]lAOd@{@nCo@rB_AvCm@rBa@nA_@nAOf@Md@CLWz@[nA[lAMf@YnAYjAYnAWrAWjAWpAKl@m@dDSnAUtAQnA]bCIn@OfAoCrUOhAGj@OtA[lCc@hDYhCY`Ck@lE[nCi@pESbBGh@Y`CMhA[hCa@hDg@tEQfBa@pEUjCWfDUvCQlCKhBOfCIvAOnCKpBIjBGpAOrDGjBEjAEjBEhBGlCAr@Cz@?DE`CExDExCG~FEzBE|DCvCCpBGhFGnFCvAEfEGpEA^IjEAv@KvDM|DSjFEx@Ez@Ez@IpB]jGEd@Ex@ARc@`IUdEEx@c@`Io@~LM~BShEK`BEz@?F[~FWzEQtCKrBa@pHStDa@|GYjFMdCY`F@VCb@KfB]pGKnBEfAI~ACf@Cp@MxEErBK`ECnACjACjA?dAAnA?bA?`A@jA@hA@h@CRDhADxADt@Bl@Dv@Bb@JjADp@J~@NzAPzAdArHp@~EHh@D^F`@J`AHt@F|@BP@RDt@Dt@D~@DhAB|@@lA?h@?f@?@?fAAfA?j@C|@EdAInBKnBYvFQhDUxEi@tKKpBKfBSdEQlDStDGzA[pGUhFOpDO~CE|@QpDE|@MtCUrEMrCUrEItB[xGU~EMbCU~EA`@O|CSdFOxCe@~JKpBOvCEdACb@Ev@E`@CLI\\CNEHCFGNELEHEFGHIJIHIFIDKDODI@M@U@qAHqAFc@@aCHc@BI?m@DyBLs@F_AF_DNyBHI@qBJc@@O@}DTiBHm@DM?qAFG?q@F?B?@?@?@?@?@A@?@?@A@?@A@?@?@A??@A??@A??@A?A@A?@~A?XP|LFpDF`ELdCDdAFx@DpAJhEBf@D`@BTHf@Lj@Nj@Ld@HXN^Td@bAfBDH?@Zd@l@bAt@hAtClEDFh@x@p@~@\\h@V^T`@Zd@N`@Tr@Nf@J^H`@Hd@F^D`@D^Dl@Dn@@n@@d@?l@A`ACdAIrBEn@Gr@MhAMn@UjAYtAYxAW~AM`Ag@nEqBdPEd@Cb@AV?RAL@N?T?J@JB\\D`@Fd@DVBHHb@@HR~@Jj@BHTbAJf@Jl@Hj@JfABz@DdBBpADnBDjA?p@?z@A~@?VANI`ACRCTe@dDOnAGn@Cb@Er@Cn@A\\?v@Ax@@bADjBB~ADxBB`ADhABx@Dn@BVBTD\\D`@Jl@F^Jj@RfABLP~@PbAR`ALf@Rr@L\\LVBDJRV`@NV`@h@T\\PVFNJPN\\@DTh@HThAzCl@~AJVLV^x@`@z@`@`ATn@f@bBTx@T~@ZrA@D^zAVhAR|@DVPdAJ`AB^@LDb@Bv@Dn@F~Af@xLVzGDz@Bd@d@pLLhCLjDD~@XvHJpBFtAX`FZjFLtBJ~ANlCJ~AD\\Fl@?DF^Jb@BPFVLb@Pj@ZdARl@d@~AVz@X~@hAzDb@vAvAzE`BxF^nANd@`@rAPn@BHV~@T~@Jf@Hf@Db@DXDr@B\\@T?N@\\?\\?h@An@Cz@G|AK|CKrCCx@WjGAj@UxGCd@C|@KhCMnDAZAf@EjACbAAd@AX?FBh@?r@EfBExBGlBGhBIlBEjAI|BGtAEjAEfAG~AErAGzAGdBCpAEfBAZAh@Cz@Ch@CXARATANCTCXIr@In@E^UzAO~@EPIZi@fCETUdAEVQz@If@EROx@Mv@QnASfAIj@S~AU`BGd@YbCOpAOlAIn@Ir@KdAE`@MtAOhBC\\CNEh@G~@MbBOxBIxAKrAGhAMfBUbEOnC]vFMfBKhBKpAOdCG~@OvBGbAIpAGz@IfAA\\KrAEx@I~@Eb@CTCTCVGVAHCRIZCPEPITSp@Ut@O`@Sn@Wv@Sl@IVO`@]dAEJy@bCs@vBmB|FWt@e@vAOd@ABY|@Ob@Ql@S|@E\\EVCPGb@E\\Gp@KxAEr@Gr@Eb@CZIn@QxAGl@S~AUdB[|BOfA_@xBYdBMx@Ml@Mn@S|@W~@Qz@Mh@Ot@GXMr@]vBETU~Ak@jDMx@If@e@xCKn@Mz@UzAG\\i@hDOv@Y|A]jBKl@GZCNGf@M~@_@`DUfBOpAM|@Kj@Kp@Q~@Kh@G`@Gh@CXCVEd@Ep@SdDQbCGv@Gh@E^GVETGPIVo@~AYn@[v@y@pBq@bBUj@k@xAIRWl@A@EJYh@Yj@a@t@S\\a@t@MTOZSd@Q`@O`@aAzCq@tBk@hBSp@Qd@Un@Uf@Ub@OZ]l@c@p@[f@[f@EH_AvAoB`DcA|Aq@hAm@`Aa@t@c@v@kA|Bw@|AABWd@[l@{@~AA@m@lA]p@GL_@r@_@t@u@vAOZu@tAYj@Wd@S\\_@n@Wd@]j@a@p@]h@OTa@j@[b@KRKTMVIVITWz@u@jCELUz@YnAS|@GZOt@Qv@Kd@Or@Kj@Op@S`A]zAMn@Qv@GVGTIVKXITMVSd@OXWh@Ud@Q^M\\O`@IZIVI\\GZMn@Mr@If@O~@Il@Ip@KdAGx@Gr@QlBKbAIl@Eb@M|@E\\Gb@Ih@G`@Gf@CVEZATAPAT?T?P?Z?ZB`@B^Bn@Bb@B^@Z?b@?T?VAT?PARCTC\\EZE`@GZEPERERGRO`@ITMTIPMTKJQTONOLEBMHQJC@WJYJo@RoA`@u@R{Ab@_AZs@Ti@PYJWJOHIDGDGFKJMLKNKPEJININIVO^w@~B[z@_@jAo@hBeA`DeBdFqGhRo@hB[z@M\\OZQZMTSVQVW\\QRMPe@j@c@j@k@r@W\\STk@t@qA~AW\\eHxI}GxIwAfB{AjBw@bAKLuAfB_AhAc@j@W^GJGHGLMVWr@Uv@i@fBo@vBo@tBMd@Oh@K^Kb@Id@Kf@Gf@Gh@Ed@Gj@E|@InASfDGpAe@nHStDCb@InAG|@Gl@I`AMpAQdBIl@Gn@eAtKqE`d@Ix@gCvVe@nE_@lDIt@Gp@Eh@Et@GdAIjBGfACj@W|DO~AAZCVAf@?PA`@@`C?dAAh@Aj@ADCp@C^CVCXIf@GZGXG\\GRK^Ob@eGjS]hAg@~Ao@vBSf@O`@KVQXU^OTQPw@|@y@x@mBnBGFsAtASP{A|AiAjAA?]\\s@r@IHy@v@CBq@p@{@z@YX[\\WZ_@b@WZUZUXa@h@SZ[f@}@xAqAzBs@nA_@p@KREHEJELIPGRa@tAcC`I}AdFcAfDgBzFu@jBq@zA{BvEcBpDsBjEgCjFiDjHYj@cCdFe@bAgIjR}@tBgAdCgCbGg@jAu@hBaAxBg@hAIPsEvKeAfC_AxB]bAe@nAQh@a@lAO`@Sx@Sx@EPS`Ag@dC?@]~AK^CFGRK\\IVKTGLIPGLKJa@`@KFMFUJ]JcAVoBd@_@JODKBaAVq@T[NUNYPYTuAxAgBhBo@n@YTy@h@mBhAm@^iAv@o@h@a@^KHSPe@`@o@b@a@TUP_@RYJc@Nw@Nu@Jq@L_BRaBLaAFeBJs@Hg@Fm@Jg@JuA`@_GfBwDfAkA^EBeA`@s@\\YPURA@YTo@v@i@p@gAbB{G|JKNaBdCUZ[b@_BzBiC`De@j@iArAgCpCuDtDiCdCGF}CzC_A`A_@^m@l@YRSLUJa@Ns@Ra@D[@I@g@AcBG[@]?YDWB}AXi@Fw@H_@FOBc@Lc@Pa@Pg@^s@j@i@b@UPoAbAu@l@mAdA_@\\WVEFGJINg@jAkArCqCpGeB|DKT?@k@tAe@lBo^|mBeAlFiAfE_ArCmPle@mAtE_@dBc@fCk@jEqBrQqTfpB}N|qAeDpZwGdo@w@dJEfAAtAFpPFxGL|ET`Fp@nJbCfSfA`I~Gxc@~C~Sv@zETtCDrA@jFGlBm@zIElCNpExAv[FnEo@h[KhKAdFChBO~D]xDWjBe@`Cc@dBuF|O}BjIqDjNc@rBsArIcAzEyBpHiF`PqBvH}EvSwAjFkOne@y@~Ce@xB{@|E{BtQw@pHw@fFe@|BmBxHaAxCuAlDcBrDcGrJsBpEa@xA_BbCABl@`A@N@Bl@dDwKrWiOf_@cTdh@_CjGeCjJqGjZg@nBwAbEkGbPm@jBqHxXqBfGkGlNkBdD{JnOmF~Kc@dAmAxDsCrKw@zBuEdLsAbD{@bB{A`CcIbLqG`IsBzCaA`BcF`LmDxGcBlCcGbHmAhB{@dBa@`Au@rCu@pEk@zEu@vDeBnFqUpo@wApEw@vCc@vBy@jF[lCUzCo@fMaB|`@}@hQqAvPcB`Pw@hG_CvOki@jbDgCrO{B`OkC|So@zF}A`Pq@dIwAxS[zFkAxXWxJmGzpDOfSAtUuQdPq@ZmAVuEV_@`Fa@rCSv@mAdEy@zBsCrGYnAk@zEQhCE|A?dCF~GThL?xCCrCKnBQjBa@hCuAdF{@pEy@vHMrBQvDEhGDpFRfNJxBDnAK@w@Hi@C|AgA@ACI"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3494603,
+                                                "lng": -6.2512466
+                                        },
+                                        "stop": {
+                                                "lat": 53.9639683,
+                                                "lng": -8.794926199999999
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Charlestown (Mayo), Charlestown Rooney's ->W1",
+                                                        "time": 1596823500
+                                                },
+                                                "dep": {
+                                                        "name": "Bus\u00e1ras, stop 135001",
+                                                        "time": 1596812400
+                                                },
+                                                "headsign": "Bus\u00e1ras - Ballina Bus Station",
+                                                "operator": "Bus \u00c9ireann",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "distance": 46456,
+                                        "duration": 3240,
+                                        "html_instructions": "Bus towards Galway Bus Station - Derry (Magee Campus Strand Road)",
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "yyjhIhwtt@HC@HDj@SFIBSHg@N_@FqA@w@B_AA]AOA_@EO?cB?kA@}B?sA?i@CG@S?K?MAIAMAYCi@Gw@Oe@M_@Kk@Qe@Qu@[WMCEGISK}@i@c@W_@Yy@q@YUsAiAk@g@}@u@w@o@]YWS_@[qAgAgA_Am@g@eByAiA_AsAiA{@s@gBwAwBgBkCyBmAaAo@k@wAkAg@_@qAgAkA_AwAgASOe@[u@e@g@][UoAo@m@]g@UoCsA{@a@o@[eD}Au@]qEyBkBcAs@_@gBcAOKmAu@EEqBqAwCoBeAu@_BeA]U{@i@cAm@cAm@yBkAe@W_Ag@cAi@c@S}@a@aAe@YMiAg@yBaA{FeCyB_A{BcAy@a@sAo@g@WSKmAq@q@_@qBkAsAu@]SgAm@{@e@OImAq@QKMCWM}@g@_B}@}BoAQIWOQKe@YwBmA[OaBeAUOuA{@iBkA_BaAAASO{A_Au@e@g@][Se@[UYq@a@OMiBoAaAm@qEkCm@]u@e@yA}@IEaBaA_Ai@YQSMOKOMOQOOQUQUeAuAY_@Y]o@{@e@m@oAaBi@s@_@g@aDiEaAsAcAuA}@kAk@w@y@gAe@q@g@s@q@}@q@_Au@cAo@y@g@q@a@i@[a@e@q@gA{AwAmB_AoAW]Y]a@i@_@a@Y[SUq@s@[Wa@YWOCACAQI_@MYGIAQCO?UAa@?uABsBDs@B{AD}@Bo@ByBHu@DmAFWBi@Be@Dc@D_@Da@Fw@LUDq@L_@Fy@P{@Rs@NsAZi@Lm@Je@Lc@J_E`ASDgJ|BcB^aBd@u@RoEnAgCp@oG~A{Ct@gAT]HUDM@U@MHk@AW?_@ESCc@KUGWOUOWQ[Y_@_@QSMSUa@IMISMWKWK[Oa@Ia@K]G[Gc@?AIm@Ko@Gg@OyASaCcBkR}@iK[iDI{@Is@Ii@Kg@Qk@Um@s@}A[o@KWEKoCwFq@}Ae@gA]}@m@eBUu@Mg@K_@GUEYMq@WiBSyAGYG_@YwA{@yDMi@Me@IYM[IMGKIOOQIK[[eAgAi@e@q@k@{@w@c@e@m@k@]]EEQOOKoAw@QIQM]UQM][]YwDmDq@q@oBoBYUWSMIWMe@UUGOGSEc@I_@IOEWOQMSOAAQSIOUa@Si@IWm@_BIS]w@Yq@OW{C_GSc@KYK]Me@OUGIIIEEIGuAgAKIeBuBc@g@e@w@Uc@Uc@KOEEA?AAGAI@Ok@I]g@wAi@wAa@sAUy@S{@Q{@EQEWKu@GYGSKa@IYM]MWiAsBYk@Wc@mBeEq@{AQ_@wAkDo@eBKYoA{DkFkOm@eBUs@Ug@i@kAmAgCYk@iA}Ba@w@o@sAe@u@Ye@SYa@i@w@aAWYg@g@e@e@e@a@_@YWS{AeAqA}@{@e@eDcB{@e@sE}BEAyAu@}Aq@cBo@}CkAkAc@a@Mc@OsHgC}Bw@gA_@g@OaBi@uAc@{@Uo@QaAWmEcA{Bg@q@QcAa@mBy@gBu@m@YiBy@iAg@_@OQG]K]EYEY?Q?W?G@[@G@QBUFODYJm@Ve@VwAr@sAn@w@\\e@Pi@Nu@Pk@J]Di@B_@?S?]CWCWESGYGUIWIWMkAm@i@[i@[WWWUSSY]W]Ua@Q[?A[i@w@{A_@y@Yu@K]YeAMe@Ig@ACG[CWEUUcBKu@KgAImAEw@EcBAs@EwB?ACaCAiBAsC?}DAe@A}@C[Es@CYEYSwA_@aCm@oDs@kEa@aC{BgN[aBg@sC]cCe@cDk@eEg@oDOeAc@wC{@_GUaBCMEg@Cc@Ck@Ag@?o@@}ADw@H_BFqAB_@JsBJcBH}AFyAFiBB}A?iACqAQiCQ{@o@iD_@kBc@yBe@{Be@_CqAeGKi@yBaKkBsIOu@wByJyBuJ_D_NK_@k@{B}@wCaBeFyCaJ}CyJ]cAoAiEmAgE}@gD]kAa@{AwAeFu@mCMe@eAuDc@}ASs@o@{BaA{CGUy@aCkBqFy@_Cy@yBo@kBM_@u@wB{@cCs@sBe@uAGOs@qBeA{Ce@uAu@sBw@_CkAeDg@}Ac@mAOe@c@qAs@aCeAgDaA}CiAoDeAkDGMSq@o@uBgAgDi@gBsBwG}AeFc@aBc@sBo@cDw@oDa@yBm@cDs@iEm@oDKo@]kBg@_Dg@wCUmAe@cBmDeK_HiSmAgDu@}Bi@}Am@aBo@gBGSe@sAu@eBq@oAu@wAu@wAYg@Yg@q@qAq@qAo@oAa@aASi@u@uC_@}Ac@gBe@cBa@uA_@uACG_@oAa@wA_@mA]aAi@sAKUq@_B]w@Se@CIo@aBo@uBo@oB_@aAUg@e@aAq@yAUi@Qc@[cASy@O_AKeAGmAC{A@g@?_A@}A@_B?cBEmAEe@Ea@AOGe@Ia@Mm@Mm@W}@Uq@[}@s@mBu@sBy@wBe@mAe@sAa@uAYoACUG[Iu@ScDMmDS_GScHC_@G{BGuCa@cLGeAEq@CSE_@Gc@EWIYESEOISa@mA{@iBO_@s@wAq@oAc@q@OQs@w@o@o@[]U[]c@MS_@u@]y@M_@M[a@iA_@}@aAwB}@sB]q@o@sAc@aASa@Se@wA{CMU{@iBg@iA_@u@Se@a@}@g@iASi@Qg@Qk@Qo@Mk@WcAQq@Us@Yu@Q_@Yc@QUc@i@i@g@y@y@u@s@cAaAq@k@MKi@]s@]s@]w@e@a@Wq@k@YWo@w@_BeB}@eAyAaBoAyA_CkCm@y@wAsBy@gA[[][[S_@Sc@O_@Ie@GmBSoAMo@GcBOqAIsAIyBOm@Gc@Oq@]WU]UU[_@e@Ya@_AyAQYwA{BgC_E{@{A[{@m@_B]gAW}@k@}B[_Ba@uCUwBs@gGc@sD[sCQmAc@sCUmAMm@Kg@Ki@Oo@Ok@CI]oA_@iAcAqCk@uAeBcE}CmHsA}CoBwEWm@Qa@{BqFmAsCUi@]w@[o@Sa@S]c@u@_@k@c@o@q@u@WWg@e@WSg@_@uA}@wAw@c@Wa@U_@SQKwA{@a@Wu@g@iB_Bo@m@kAqAs@_A{AeC[g@_@m@mBcDsBmDg@{@u@oAy@sAwHqMKS[i@OWuAaCoAwBEI[i@Yg@cAeBqAyBKS[g@IOiCmEsA_CqA{B_@q@e@{@g@gA]u@o@cBq@qB_@oAc@wAs@qCMk@Mq@SaAS_AaAsGm@{Eq@yE{@sGcAcHg@mDUaBWsBMw@g@wDsCgTa@yCUaBSwAQmAkB}MGIACEKI[GSSe@CAACAACCACACACAE]IUGUEe@AeA?oAAO?c@Ac@?oDB}FXeCRa@Dg@JUJ_@TMDABADABC@ABABA@CBOd@IVE\\Kz@InBi@Oa@Ky@SKCYC]CY@a@Fc@Na@P[VaFtESx@YtAAXAHAJIjAMvBEz@CVAHIPa@PGBE@SFODMBEBKBe@Rm@RGDKFa@R{@d@qBnAwBrAg@\\A@q@TwA`@SFMBmBb@cAFc@B{@F{Kb@qBJWDKDGDKPGb@Mt@Ih@Uf@SVUDU@aAS_AOa@?c@JiBdBoDfDyC|C}HvHqClCkBhBmChC{BxBEDwBpB}@z@_Az@y@v@CDgF|EoApAg@f@s@x@]^e@v@EJGJQ^q@xAaBdDm@lAiBxDMXIPYj@q@vAYj@g@dAIPMXA@?@@??@@??@?@@??@?@?@@@?@?@?@?@?@?@?@?@?@A@?@?@A@?@A@?@A??@A??@A?A?A?A?A?A??AA??AA??AA??A?AA??A?AAA?A?A?A?A?A?A?A?A?A?A?A@A?A?A?A@??A@??AWe@Wi@c@_Ay@iAuA_BEE}@_AMGME]OA??@?@A??@A??@A?A??AA??AA??A?AKFCBEDEDCDKNINKTGNq@|A]t@Wb@IHa@d@{@x@QLgAz@}@|@sArAwAlBu@x@i@Zm@TUDQBQ?A?MAQCWMMOIKGKKUGQIa@O{@[gBKq@e@cCScAa@uBI_@Kg@]}@S]U[k@c@q@_@YQW[ACOYO_@GSGWG[My@W{D?MQqBOuAOeA[wAOm@ISWeAMo@CKGc@Kw@Ko@a@gCkAZwATyARI@}@Dm@G]Gs@IMEUIIEw@]YMGCKGQI_@Os@So@Qq@Om@Ok@QcAWA?MWi@OgAa@YKc@Qy@_@cAc@eAg@_@Qw@]w@_@_Ac@e@Wg@YWQe@[QM]We@_@[Ya@_@_@a@c@c@a@e@CCc@g@a@i@u@_As@}@SWe@k@gB_CcAqAi@q@_AmAaBsBMQUYGIy@eAuAeByAiBgAyAqAaB{AqBsAgByAiBw@kA[e@_@m@QYa@u@e@}@CEYm@Yk@[u@[w@i@uAg@sAk@uAg@sAk@qAo@mAo@iAs@eAu@_Au@{@c@c@i@e@OMi@c@[UuCoBwB{AiD{BaAo@eAq@}@g@o@]k@Ym@YeBw@aC_Ak@Sw@U{@WuA_@k@Mq@Oa@I}@OqASWEi@Ii@GYEy@GWCqAGk@C}@Ck@AaAAi@?m@?Q?Q@o@@_AD_ADiAHG?[DM@uANoAPm@Hi@Jg@JMBa@HMDUDe@J_AV_AX}@Xi@Pg@RYJ_@Lk@Ve@Ro@ZqB~@i@VgBz@QHsBbAqAj@_A^e@P]L_@Ji@Nk@N{@Ri@HcAPe@FA?i@FwAJwBJoBJa@BoBLyDRo@Bi@@MB_@BGJCDCBCBE@E@C@E?EACAEACCCECECECEAGCG?GAIQ_@GOEGKIMI]Mi@Se@Sg@Yc@Ug@U]O_@KUG]IWCI?SAUAI?I?W@WBe@FIByBj@DlAsBjAyEnDMcA?CMu@_B|@"
+                                        ],
+                                        "start": {
+                                                "lat": 53.9639683,
+                                                "lng": -8.794926199999999
+                                        },
+                                        "stop": {
+                                                "lat": 54.2720255,
+                                                "lng": -8.481893699999999
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Sligo Bus Station, stop 555081",
+                                                        "time": 1596828900
+                                                },
+                                                "dep": {
+                                                        "name": "Charlestown (Mayo), Charlestown Rooney's ->W1",
+                                                        "time": 1596825660
+                                                },
+                                                "headsign": "Galway Bus Station - Derry (Magee Campus Strand Road)",
+                                                "operator": "Bus \u00c9ireann",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "directions": [
+                                                "Head <b>west</b> toward <b>Lord Edward St</b>/<wbr/><b>R292</b>",
+                                                "Slight <b>left</b> onto <b>Lord Edward St</b>/<wbr/><b>R292</b>",
+                                                "Turn <b>left</b> onto <b>N4</b>"
+                                        ],
+                                        "distance": 864,
+                                        "duration": 667,
+                                        "html_instructions": "Walk to Primary Care Centre, Barrack St, Rathquarter, Sligo, Ireland",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "w~fjIttwr@?r@?R@HBLBHDD@DFDFBF?HAHCFCLQBG@E@E?K?G?GAOA]?a@?G?E@IDO",
+                                                "w{fjIprwr@g@mDGg@",
+                                                "g}fjIzkwr@k@AcAKu@KGA}@OqAUWE[IOEMGMI_@UYYQQOSSWMSEIc@s@Yg@g@y@[i@IQg@cAYm@GQKWMa@Mc@IUAGSg@MSGKYg@_@g@c@i@SUII"
+                                        ],
+                                        "start": {
+                                                "lat": 54.27196300000001,
+                                                "lng": -8.4821872
+                                        },
+                                        "stop": {
+                                                "lat": 54.27660969999999,
+                                                "lng": -8.476087099999999
+                                        }
+                                }
+                        ],
+                        "transit_index": [
+                                0,
+                                2,
+                                4,
+                                5
+                        ]
+                },
+                {
+                        "db_index": [
+                                1
+                        ],
+                        "distance": 238626,
+                        "duration": 16693,
+                        "end": {
+                                "address": "Primary Care Centre, Barrack St, Rathquarter, Sligo, Ireland",
+                                "location": {
+                                        "lat": 54.27660969999999,
+                                        "lng": -8.476087099999999
+                                },
+                                "time": 1596831247
+                        },
+                        "start": {
+                                "address": "Clonskeagh, Bird Avenue, Friarland, Dublin, Co. Dublin, Ireland",
+                                "location": {
+                                        "lat": 53.30512119999999,
+                                        "lng": -6.236070799999999
+                                },
+                                "time": 1596814554
+                        },
+                        "steps": [
+                                {
+                                        "directions": [
+                                                "Head <b>northwest</b> on <b>Roebuck Rd</b>/<wbr/><b>R825</b> toward <b>Gledswood Dr</b>",
+                                                "Turn <b>left</b> onto <b>Gledswood Dr</b><div style=\"font-size:0.9em\">Destination will be on the left</div>"
+                                        ],
+                                        "distance": 92,
+                                        "duration": 71,
+                                        "html_instructions": "Walk to Clonskeagh, Bird Avenue",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "_djdIl~`e@q@x@MN",
+                                                "_fjdIv`ae@Lr@Jj@FX@J"
+                                        ],
+                                        "start": {
+                                                "lat": 53.30512119999999,
+                                                "lng": -6.236070799999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.305263,
+                                                "lng": -6.2371123
+                                        }
+                                },
+                                {
+                                        "distance": 7820,
+                                        "duration": 1542,
+                                        "html_instructions": "Bus towards Coast Road",
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "sdjdIxdae@GB@J?F?F?F?FADCL?@HN@F@F?D?F@L?T?Z?rB?nB@pA?jL?VArD?tEA|B?|C@fB_ARUF]Jg@JC?i@JwATgARqAViAPSD}@JQ@YBg@BwA?C?w@Cc@BOBOFi@\\[\\KNCDGFINKPINGPSp@K\\AFKZI^t@TJBLDJDNJTPRPJNNPBDDFFJFLD@@??@LT`@~@Zp@LT\\x@Zn@b@bABFL\\DRFT?BDTDRDV@P@PLxB@JF~@@z@Fj@FjA@b@?@@d@A`@A^AXATCRKrAC\\C\\AFARCZOvB[xEARKtAAf@AL?N?X@b@DxA?@?n@?^?hA?JAJAFADABCBEDCFSZU\\}@hAOTUZcAlAGHSVKLUXk@l@iAjAk@h@KJMDA?IBWFi@Hi@FU?M?o@DK@_@FWB_@Bs@JMFMHUPa@\\AtBg@Pi@TSHyAl@gAd@iBx@aBp@YJ{@\\QFKBO?UAeAM}@QSEq@Q[M]Sm@]YM[M]I]IKAI?MAS@E?U@UDa@LIB_A`@wAn@cB|@SJc@VcBz@MF_@JE@MBYBGBE@EBEDOMIIKIICoAQ{@GKAi@I_@GKCKAMCw@IG?c@E[CaAKuBWMAMCs@IcAKuAQkAMoAMc@EWCs@I[EsBSu@IsAKIAo@GaAM[Ei@IE?MCE?M?I?I?K?[FgAR_ANMBYHWD]Dk@J{@JA?kBRc@Lq@J{ATk@Pa@HM?G@E@YHYAO?kACo@A{@EI?U?KAY?ODa@FMBQD[Fu@Rk@FcAV_ANu@LMBe@L_@LoA\\]?aC[mAQEAw@Ke@GqAQe@O}Ca@_@a@kBkBKGWOEAKGSGMAGAICE?u@Gq@?C?u@@}@F_A??g@C{AC{AAiAAaAASGUHEh@K|A{By@mDwADB`DSmBScFm@iCq@k@s@C}BHQsIByA@eJaD?wHs@?oE?EC?AuDAwC?oA?o@@[@k@@a@@IDoC@YA?"
+                                        ],
+                                        "start": {
+                                                "lat": 53.30522320000001,
+                                                "lng": -6.237091299999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.3482435,
+                                                "lng": -6.250111899999999
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Custom House Quay, stop 2498",
+                                                        "time": 1596816168
+                                                },
+                                                "dep": {
+                                                        "name": "Clonskeagh, Bird Avenue",
+                                                        "time": 1596814626
+                                                },
+                                                "headsign": "Coast Road",
+                                                "operator": "Dublin Bus",
+                                                "route": "142",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "directions": [
+                                                "Head <b>west</b> on <b>Custom House Quay</b>/<wbr/><b>R801</b>",
+                                                "Turn <b>right</b> onto <b>Memorial Rd</b>/<wbr/><b>R105</b>/<wbr/><b>R802</b><div style=\"font-size:0.9em\">Continue to follow R105</div><div style=\"font-size:0.9em\">Destination will be on the right</div>"
+                                        ],
+                                        "distance": 219,
+                                        "duration": 171,
+                                        "html_instructions": "Walk to Bus\u00e1ras, stop 135001",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "mqrdIdvce@AXEnCAHA`@",
+                                                "yqrdIz|ce@EVCFABEBABGDMJW?Q?Q@SHWLOGKGIE[QWOAA"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3482294,
+                                                "lng": -6.250114
+                                        },
+                                        "stop": {
+                                                "lat": 53.34948410000001,
+                                                "lng": -6.2513302
+                                        }
+                                },
+                                {
+                                        "distance": 229631,
+                                        "duration": 12780,
+                                        "html_instructions": "Bus towards Bus\u00e1ras - Sligo It",
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "cyrdIh}ce@STk@y@eLiGPc@p@{VF{@fBNMkAgG_IxIyMbEuwAeAWgFkDsDyBo@m@c@k@wB{Da@m@cAy@eASeAFe@R[Tc@j@a@t@s@fCoBvLeChKY~@Wp@oDtG{AdCkA`BwB`CyBbBwAx@sB`AyA`@aB^eN~@wDpBiKjCmLlIgDlBeFrMy@hBu@rAsAvB_BrBwAxAmAdAoBrAaDvAoAZ_C`@w@FkBFgCE{TcAgHi@}JqA_r@sKyHmBwDwAyAq@kDkBsIgGyOiOod@{c@iEyDyBgBcDcCcC}AmGwD{C}AmKoEwNuGyIoDqg@}T}Dy@e@AiANc@JeAn@}@bA[f@u@`Bg@fBa@nBKz@o@vOg@fXFpAb@lBBt@Et@c@fBKv@K~A?n@Bv@NpARt@\\x@r@v@bIvGRRn@jAb@xALx@NrC@pAWhDYfC{DfSy@z@]Di@_@c@o@i@Sw@pAiCzE?n@A@C@C@C?CACACCAEAGAIEa@@q@?]?KAICKEICEECICIAKCSAWAA?ECECCCCC?ACECICGAGAGAMEgAL{CH_BB]J}ARiCN{BBc@?ADa@Ba@Ba@Da@D_@PeBB]Da@Hi@JsBB_@@UBa@HkBBw@@u@?cA?m@BwADsBJcEHmB@M?OAMCUAKEMEMEOCMAC?AAAEKAGCGAKAIAIAI?I?I?I?I@K@IBG@KBIDIBG@EBCDGFGDCDCDABAD?F?D?D@DBFBDDDDFHBHNRHNFHHJLHDDFBF@H?J?PCTCLAZEREh@Gb@En@Iv@Cd@AD?d@@P?|@DL?N@PBB?h@Jj@Nf@Ld@N`@NPF`A\\XNRPPJv@j@^Zp@r@f@n@b@f@TXBDXZHJ^b@^f@\\b@V`@`@j@\\h@R\\T^DFNXT`@PZRb@R`@Tb@Vl@^z@d@bATh@DFXn@\\v@\\t@b@z@Zj@HNf@`Ah@`A|@xA^n@Vb@JX\\b@I^Ih@?HCb@Cx@?BCZCn@MhN]~`@AlAE`AI|AIhAK`BQxCKxAKhBMxBWxDQrCIxAItAIpAMlBK|AE|@Ev@Ch@ErACt@AfAAhB?hA?tBDxBFlBLlBLxAD`@BJTzAZtAd@`Bb@nAHTf@lAr@dBh@tAVr@P|@?@F^LDB@@@DDHHFDHDLD`AQd@IlAWx@Yt@SZIj@EV@R?jAJfALh@Bj@CXCZAb@An@Ct@Cf@Bh@Gl@?f@BD@f@Bd@Dx@Nj@LpANf@B\\GZUPOBABAL?FWn@c@HCHCHEDAFANAL?HAJ@F?ZFNDF@B@D@FBDDFFBDFJFTHXBTBP@P?XCv@G`@Kj@ETAHAHCVATCd@ANAd@EdAGtACx@@b@A~@CdB?f@?f@?`ADtIBlB@nA?z@A^Ix@DvB?n@HnDFnDJzFLxF@ZPpIJvEJ`GHdHFvDPbKLrFFnC@z@@f@JhFHfENfIPhGRjFPrDNnCH`Bh@nHN`BFt@VfCl@hGfAxIr@bFz@pFb@bCd@bC|@rE\\`BZrAXlANp@@DLj@j@rBb@hBHX@FBJPn@Tz@fCtJL`@fCzJlB|G|BjIb@dBLl@ZpAt@rCrCnKbOtj@`AnD`Jf]jFzR|@jDb@bB~@hDBHLf@`BhGjAlEtAjFj@pBPr@fGlURp@Nl@rCdKlAnEdAtDRl@Vx@b@pAjA`D`A|BfBlDf@`Av@tA^l@v@jAXb@HJPVPTl@v@h@p@JJZ`@xAfB@B|AhBnB`Cv@`AdApA^b@V\\rCfDx@~@pA~Av@|@~@fABDpA|At@z@z@bAtEnF`GrH~AnBxAfBhBxBl@r@dBlBfAlA`@`@PPjCfCzAtA^ZfA`An@l@~@`AHLv@`Ax@lAv@pA\\p@Tb@j@jA\\v@^v@v@~A`AjBd@r@b@r@^j@TXz@hAp@v@h@h@l@j@|@x@p@f@~@n@\\Tn@\\d@Vr@Z^NVHZLb@NfAXnB\\dAV|AV~@XbCr@n@T`@JvAX`ANnBVbBV|@LlDf@~AXZKJCL@H@l@H`@BV@B?N@N?JAF?R?DALGLIHGNQPYZk@Pc@R]NQJKDCBCHCFCJAL?H@PDHDLJFDDHHLDJFNDRDJDRBLFPDDDDHf@Db@Dj@Dh@@`@@^?^?r@A`@A\\Eh@I~@O~AK~AEz@Ex@AlC?|@BjA?R@^@Z@VD|@NdC`@~FNpBBh@N`ED|A@V@b@DfBDfBBfC@xBAjA@B?b@Ad@A\\A`@C`@C\\Eh@KrAGf@Gj@QpAOfAKl@_@~BiAtHKl@Kn@kBtMW~Ae@dDERQjAyAtJUfBQxAOnAIt@KtAKhAGv@QnCE`AItAEfAEzACnACzAA~@AbDElGAhC?~C?dB?x@Bz@@r@B|@H`APnCLtATjBLz@Lp@N~@VlAXhAZdAf@zA|@bC|@zB^`AFNL\\Vn@DJl@|A^~@r@fBz@xBj@zA`@dAz@vBlA~C^`Al@~Aj@tAbAhC^`Al@~Al@|A^fAXz@Vx@Tx@Nf@V`ATz@f@tBVnAVnARdARlAPjARnA\\zCLhAPbBJtAHhAJdBHrAJrBFpBDxABxA@XBhB?vDC`FE`CEzAEhAM~BGjAE|@CXI`AMtAMzAMnAQ`BQvAQrAU~AId@UpAWvACJm@pCi@`C]lAEPYfAa@tAs@vBg@rA]|@[z@CFYp@S`@ELi@fACh@A@Uf@Q^o@rAi@hAc@z@ABYl@[v@INYp@Wr@s@jB[~@Ul@Wv@ELQl@Oj@Ol@W~@ELMb@M`@ITABKZSp@Oj@Md@Op@Qp@Ml@Ol@Ib@IZShAQx@Mz@Kl@]fCC`@KdAEd@G`ACr@Cp@AhA?vB?t@?d@@t@Bl@?J?\\@b@B\\DZ?@JjAR`BBV?N@VMlCG~AEfAChAAlAA~@?TCvA?xA?vA@dB?zA@bB@pA?LAFE`@LjO^vf@JvLVr[NtRDvDFdH@nCBxF?lD?lAAlBCnIEpEAzAEzDKvFIvEWrJAXM|DKxC]bIe@hJ[pGs@nNSrDMtCIrAIdBEz@OnCA`@{@rPa@hIEx@Ez@OvCKdBGtAc@pIKvBc@rIe@rJSnDa@dI]rGa@|Fk@zHi@tGSbCi@lF?BIx@OtAKdAQ|A[hC{@vHi@xEgBvOoAvK_AnIu@rGoAtK[tCYbCYbCSbBa@pDe@bEQ`BOlAS`CQlBQ~BSlCOhCI~AC\\KrCIvBCf@GdCI`DEhDCvC?fD?fJ?fJ?~D@|@AfCEvDAnAC~AEpBE~AElAEnAEbAIhBKfBKhBGbAEp@IfAIhAKxAUbCKhAKhAK~@Gd@ShB[dCU~Ag@pDq@rEa@vCCN_@jCW`BIl@e@dDSpAKr@]dCW`B]fC_@bCe@dDo@fEm@hEc@`Do@lEWdBc@xCg@lDg@nDeAlHGZ_@nCM~@O|@oD|VgIdk@cBrLUxASxAkDhVWbBWdBaBjLuAnJUbBG^OfAWbB]~BGf@O|@ObAk@bEg@fDo@nEYpBi@tDqAdJqAbJgApH_@jC}@hGu@jFg@nDQfA]xBY`Bi@`D[`By@~Di@dCq@xC}@rDm@~Bs@jCq@~BmA|Du@zBw@zB{@bCiAxCu@jB}@rBu@bB{@hB{@hBkA~BS^u@rAw@xA{@xAs@jAsAtB{AzBINeBhCGJSXaDxE_HfKgFvHuEfHwBbDoCdEsApBU\\i@z@k@z@oB|Ci@v@wCnEcCvDWb@sApBoBdDo@hAs@nAg@`A_B~Cu@`BQ^?@OX}@pB]v@i@rAO`@Q`@{A~Dg@tAw@zBy@dCuApEmAfEi@tBs@nCs@tCe@pBi@bCAD]`Bi@fCq@jDShAUhAOz@w@tEa@dCg@`Do@tEi@bEYzBa@lDW|BO~Ao@pGM`BGz@UjCa@tFMpBOnCMrBMdCIhBQtEEnAKnCEvBKpDIrEExDAdA?`@GpFEpGKvMCbC?ZEpFCjCEpDGnDEvBCjB?JCpACtBAXCzIG~DM`FY|GSfEs@rKSjDGdAMhBMfBIbA[|DEt@QfCCh@]bFWzDInASrC[~EU`FMfEGjBGlBAr@InDIpFE|F?`@AbF?hBB~DB`DBbCHpDJhEJjDTzFPrDPdDLnBT`DTtC^jEh@pFt@lGFj@r@pFj@rDr@pEBRbAtFx@bEr@fDzBjKf@~BzAdHl@pCd@|BjAtFlAxGp@jEr@bF^rCj@dF\\hDPpBXlDNnBV`EJnBDz@JtB@NHhCNbFFpCHtFNhLN~LN~MLhKJlJ@j@PlODlE@xF?vC?dDApCIxGGzEQbHE`BQ~EUnFSnDEp@WjEK|A]~Ek@zGOdBYjCo@dG{@fHcAnHIh@W`BCLe@xC_ApFq@lDa@rBqAjGeAtEaAxDoAxEW`AYbAsAzE{@zCq@hCUbAQh@u@hDo@zC}@`Fq@~D{@dGYlBi@pEQzAm@zF]jEy@lMYdHOfEK|DG|ECjG?v@?zD@t@DpEDhDNxIHrBRhFVjFh@`Iz@lMdAnORhCd@~GXjEPrDFfCFlC?`GYjPUdEi@fH}AxLy@rEyAxGADiBbG_BhEaCpF_AdBwAdCyHhMiEdHkHtLsGrKu@nAAB_C~DcBnDiApC{@~BeAtCgAzDcBvGiArFy@`Fi@hEq@hGg@rGSvDQ~Ea@dOAz@Cz@MzEMbHOlEOnHCz@CdA_@rUGxHGzLClIAzI@`G@nHBdJ@xGBtEB~EFbMBdE@z@@|@DnC@b@JrGT`IT`H`@zH\\pF^lGFfAHnARvDDnANbEHhDB~BB`B@nB?fAAhDC~ACdBE~AAhAGnBGfBQpDIfAGhAKlAGv@Eb@Gn@O~Ac@xDKbAo@dEe@tCOv@m@~CUfAeAtEk@xBe@~Am@pBm@jBk@`Bo@zAs@fBw@hBi@bAw@`Ba@v@Wf@A@i@bAy@~Ag@~@iAzBgA`Cg@fAa@|@uA|Ci@jAq@`Bu@lBo@zAoBhFwAzDAFQf@aCbH[|@g@bBkApDmBxGaArDQn@q@dCgAjEUv@_@`BsAxFYpACLMl@CF{AhHeB~IUnA_AhF]zB]lBALIh@Mv@Mv@k@nDy@zFo@`Fg@`E]vCa@~D[xCQlBO|ACVAJALGx@?FYfDAPm@fIc@~GO`DOtCKvBCl@[|GYtHMpDs@xP]rIMdDCv@_Bv`@Ex@_I~pBKtBm@|OGzAMlCY~GWfFEx@WrEEj@GfAo@xKa@xFa@vFIpAOhBUxC[lDMfB]~Dw@lJu@~IQpBUhCUrCc@hF]`EYzDWhDKbBEz@APUzDGzAMzCYlGCl@SrE]vIU~EOfDSnEYhFMlBKrAMpAe@pES~AOfAe@vC_AtFk@bDi@pCKf@YxAm@pCo@vCo@pCs@|C{@hDe@fBiBxGa@xAo@vB_@jAu@bCSp@ABw@bCiBvFkB|FiEnMCLmBvFmAtDyDtLwBzG]hAUp@_B`FwApE_BbFKXmAvDY|@iAnDIRyArEw@bCc@vA{AtEuAlEcBhFu@~B_@hA{@jCqA|Dk@fB_BbFmArDyAnEi@vAm@~ACFUl@Qd@e@lAMTWl@ENQ\\e@dAy@bBg@`AaAhBOVOVCD_FhIo@dAkAlBc@r@_A|A_@l@aA|A_A~A_A|AoCpEgCbEiAjB_BjCS^{@tA_A`B}@bBq@nAEJS^S^EJo@tAy@lBs@fBi@pAYt@]bAa@jAs@rBo@tBa@tAYz@Sv@Sp@]hAqArEm@vBcClIeAtDgAtDUx@IVc@|AeArDwDtMkA`EQp@g@bBq@~Ba@tAsAzEITc@`BU|@m@|Bi@~B]|ACLOt@[zAq@rDeAtF_AbFY~AWtACLQ~@UlAQ~@Ot@Ov@w@zDWnAI^YhAQr@CLe@lBc@dB{@tCSr@a@pAQj@ADc@lAq@nB{BzFoAfDWr@]|@Od@Od@i@~As@bC]jA]lASv@ET_@xAGTMf@_@fBiApFKf@a@~Bo@xDAFm@jEa@hD_@hDI`AIx@ANMnAQ~BUbDM`BKtAObBYrCU~BmA~J]xBQlA_@nBi@tCIf@y@dEcApFsBlLg@tCa@~BId@Ot@?Bo@~C}@rDc@`Bm@vBi@`B[z@Un@O`@ELyAzDcD`Io@fB}DvJGRkB`F_CdG_@bAOd@{BpFgCvFiAvBcEhIuB`EcAnBMTOXiFtJaAfByAvCkAjCM`@aAbC_@jAqArEgB~Ju@xEk@tDyCtSc@dDKz@_@dDi@jEu@hFkAjHKv@CLIh@}@xF{CtQg@vCq@dEMx@eDrPsCvMKf@ENqBrIm@xCo@pCQr@iDfPwEnUkBlJs@fDeCdMk@rCuD`RUdAqApGyBtKkBjJ}@pESfA[xA_@vAW`A_@lAe@rAc@fA]t@Wj@c@x@_@n@Yf@y@nA]d@_@d@a@f@k@r@aB|Au@l@uAv@gB~@{NtFqAd@_EzAuEbB}DtAaDlA{Bz@w@XmCfAiBz@iAl@{A~@sBzAqAdAeAbAiAjAsA|Ay@`Aq@|@CDs@bAa@l@}@tAm@fAo@hAw@zAe@bAg@fAuAjDmFfNqCfHqFpNsApD{A|DuAnD}@|Bm@|Aw@nBw@pBUj@_AfCiAtCq@dBk@|Ay@tBk@~Ac@fAUl@M\\g@nAyArDi@pAmE`LmG|OyGnQiAvCCH_@~@aAbCaAxBOZ[t@Sb@GLGHKJoB`EqAhCuBzD_@n@}CpF[j@qCtEkA~A[b@kA~AaDdEmCdD]^iDxD_D`D}@~@iAfA[V_DnCuD~CSLkCjB}AbAWPgBdA}ChBa@TeBbAgAn@{BrAsAr@sAx@eB|@uCdB_DjBmGnDE@wBlAsBjAkHdEoC|Aa@ToJnFqBlAwBpAaB`ASJmE~BgAh@k@ToCbAm@Ra@LkA^kLbDi@Pa@Je@NoA^g@Nw@Xe@Ng@Nu@XqAd@y@\\o@^iAp@s@f@s@h@]Za@Zc@b@cAfASRQPa@d@{@hAoAfBm@bAYd@Yj@uAjC}AvDy@`C]`AiAdE{@~Dq@pDOdASlAQjA_@bDs@~GEd@Ix@g@~Es@fHm@`GMjAYjB[hB]zA]rAc@zAu@hBcBxDy@dBy@bBM\\y@nBY~@k@vBYjAGZWtAQhAEVa@lDSzBS`Cc@fFANGj@g@bG]`Ei@bGShB?@Mv@Ij@[pBa@rBq@vCOr@GXIZ_AzD{AfGo@vCmAzFq@dE]jD[`FQ`JA~@GvDAj@MdIEpCIjCEjAEvAQrCK~Aa@~Fe@~FKxAYfDg@xECRIz@]jBc@pBu@|Cu@xCeAjEi@nBc@hBI^s@tC{@tC_@hAu@lBqBnEiA|BOXEFi@~@e@\\}BfE}@~AuBbE}@fB{CjGiDhHoBhEwA|C_CxEGVq@zA}@lBaAtBoCvFMVEBEBEDGHuE`KkEhJwCfGcEzIQ`@q@zAeIlP_BfDsBrEOd@GLGN]r@]p@Wf@[p@Wd@GLg@jAa@l@GNm@hAINMRu@|AsAjCoAlBeAnA_@`@k@h@_@\\o@l@kApAgBzB[l@aAdBcAtBw@vBi@~Ae@tAa@zASp@u@jCW~@c@|ASv@{@~CY`AqAnE{GrUeBfGmAhEiAvDiAzDOd@[lA{@vCmA`EkAnDwBnGy@|BcCfGiArCWl@ITeDnHIZAD]t@k@fAq@rAe@z@kBpD{BbESVqGlLmCzEc@x@Yh@{DhHiApB{@|AaBpCmBnDgCtECLCFCHm@nAqCvEqEjIuCfFs@tAsA`CiBdDyBvDgBvCc@v@mBvCQNINUZiCnEW`@eD|FEHU^S\\]h@QLYPUTYR_@VMH}A|@e@Zs@d@c@\\_@ZUROPIJOLk@j@_@`@q@v@}@hAEFeA|AEFKHmEhHU\\eDnFgAnBa@t@cDbGqBzDoBhEuBzEwAjDq@|A_CrFyAzDm@vAS^cC`GuAjD]|@k@|Ao@lBi@xA}@jCaAxCwAvEGTaAnDcBjG}AxGWfAcArEaAhEs@bDi@`CWhAe@|BKr@qAlGQt@CNo@~C]pAWz@Sf@Yr@qE`J]|@Ur@GPMh@CHOp@a@dBgAbFgCbLEPeAvEkBnIuBtJoBvIi@dCaAlE{@zDuAjGoJzb@eDfN}ArGgAbFc@jBaDrO{AlHQx@]|Ag@vBU~@q@pCqAhE{@lC]bA[bASt@U~@SbAeBpKuAnIu@~Dq@jDq@dDeCjKa@dB]vAYtAS~@UbAOt@_AjEEPk@pCk@pCu@lDI`@IZM^Yv@Un@M^O\\iAdDUj@BB@B@B@B@B@D@B?D@D?B?D?D?D?D?DABAD?DABABCBABABC@ABC@C?A@C?C?A?C?CAAAECCCACACACACAEACAE?E?CAE?E?E@E?E@C?E@E@Cc@k@SYY[QQ]SYOQKKMc@e@[e@m@eAOUUc@KQQYECGCEAEAG@GBe@b@i@b@gBdByB~Bi@l@WZINGVIb@?^A`@AZEfACv@Gz@?BMfBIhAh@nAf@bBl@dBXn@n@rA^r@t@jABCBCBABAD?B?B?D@BBB@FHBB@FBD@F@F@F?F?F?F?FAFALADCFADCDCBCDC@EBC@E?C?E?CAGt@IfAEn@E~@_Cj]UdDQbCU|BWnBKr@EZGZG\\Mn@WnA[pAQp@[dAc@tA_@dAcB|D}@pBWl@O^_@~@Yx@Of@Wx@ATSt@WdAOv@YzAG^Kj@OlAOnAIr@CT]lEMfBGTaAtLE`@mAdNmEpj@wA~QuAjQCVK|A}BbZKnAkA~PqAfPO~Ai@jG}@zJc@fF}@~JAZe@nFa@zEkAtLA@EPiBlSw@`JIx@WjCoBfTw@fIcAlKO~A}@fJgAzL]zDKjA}@pJc@xEa@vEqAhNe@fF_CbW?NOjBg@lFc@`F{@|GGVw@|IaBrRIx@qAnO?Pk@`HcBfRw@pIm@~FG\\}B`U{@rIyAlOyA|R?X_@tES|B[lDSjB[lDK`@_BdQiArMa@bEYvC{@xIo@bHc@xE]jDm@|GSdBGf@Kd@a@tBJLBJDJ@J@L@L?L?LAJCLCJEHEHEFGFEBGBG?G?GAGCEEGEEGCIy@fACBINk@pAw@tCi@xBy@lDi@xB[nAkAnEkB|FbCzAr@b@d@\\PHDH@H@H?L?L?LATEVKj@Ml@[lAsAzBKNs@dAo@lAU`@g@fAg@nAe@xAOn@Ot@YzBKbAG|@G`CGpCAVErBAbDLzDLzA\\tBd@dDJh@D`@D`@Dp@@h@@j@B`DQvCWhC[xCg@~E{@tIIt@UfCAFMfAAJMpA]dDi@hFQvB]bDGh@CVE\\KpAE`@CRGh@WnCAHMlAIx@Ix@Gh@QhBUrBC\\yAbOYvCSjA@F@D@FBF@DBBJRVnAbHqF`@]HEDAB?B@DDBH@JHf@@@Lx@@P@H?D?FAFANYlBa@h@y@jAYb@yAxBURQNi@t@aCvC]d@a@b@o@\\e@R[PwBlAiBv@aAd@kAh@qAl@YLoCn@C?CAECCACGQ_A_@mCKa@GWMUEGGAG?I?[@m@DMB{@Fq@?eC?iCG_CE_ACy@A{BCs@EiAGm@CIHKAgA@e@@g@?[@K@G@G@GDGDKHGHmAhA[^{@|@K?ORe@b@o@h@[PYFc@Ba@Ao@Ac@Ck@A?@?@?@AB?@?@?@A@?@?@A??@A??@A@A??@A?A??@A?A??AA?A??AA?AA?AA??AAA?A?AA??A?A?A?A?AA??A?AqCEODY@YBAH?BADABADCBABC@EZMfAYpBQnA_@nBW|@Ut@KVUl@a@|@g@|@_@n@SX[`@[ZqCrE@J@F@F@H?FAH?FAHAFAFCFABABA@ABC@ABC@ABE@E@C?E?EACAEACEECCECEAGCGAGmAK_@QOFSLw@l@iAbAw@x@_@`@s@z@Y`@W`@W`@cBvCsCdFeD|FaGhKaDrF_A~AkGvKkBdD{@zAmBlDoA|ByAjCi@x@a@p@q@x@s@x@aAbAg@h@uAvAk@l@aAtASZY`@?BYd@yBbEGJ{@|AcAhBEHOXS^i@`AINa@t@oAzBS\\s@dAcAvAgAzAsAjBk@x@mBrCe@z@w@xAeAcCYi@yAsDi@yA]}@ACUi@Q[EIGGGGCEEAECG?SCYCWCGPMRQTEHCDCFCJCJAHEVC`@Gv@G^APCPALAJAFEPENI\\ENSn@Q`@ADABCDGLGJGJ[f@GJGNEJGNENCJG\\CROfAOdAWzBeAk@y@e@_@Qg@]kBmAg@[MIMGa@YICAAA?A?A?A?A@A?A?A@A@EBOPs@`AWZIJa@f@EHe@j@s@z@yAfB{@bAqBxBA@KLIHOJIDc@Ze@VSJQFWJw@NQ@SBU?c@@g@C[AaC[wB[k@Ic@Gq@KuASuB[_Dg@wBYgEq@kAOy@Iw@Ek@Ae@?W@a@BWBK@G@WDO@_@JG@MJoBlAcAn@g@\\{AdB_@b@MRSTG@GJg@z@uAlCgBlDiA|Bq@pAiA|BgBhDmBxDmAhCO^GR}@nCa@xAq@nDk@|FU`Ci@lF[|CUrCKpAEbAIpBIlCInBAJQ~C]~DMnAIr@Ij@Kj@Mh@Qv@Mb@AFK\\eAhD_@fAm@`BKXO\\AB[r@KROX[f@c@r@q@fAk@`AOZIPKTWr@Sj@eAlDQf@kBvGgD~KgBdGsBdHM`@eBzF_AxC_AtCk@xA_@x@]l@S\\QXo@~@e@j@g@h@cA~@_Aj@cAp@uAt@eBjAeCjBuBhBi@d@iAbA{@t@wCdC{F~EaAx@e@`@m@h@uAlAe@b@KJ]b@QTQRQXYf@QXg@bAw@lBUn@]~@c@pA]dAkArDm@fBi@`B_ArC{@dCYr@O`@Uf@_@r@S`@Yf@[f@eAfB}DpGgAdByEpHGR{EtHiAlBcBxC{AvCaB|CkAhCy@fBo@vAq@dBo@~A_A`Co@hBiA~Cs@jBcAjC}@rBcA`Cu@~A_ApB_AfBw@zA[d@_@p@a@h@y@`AEDMPGPM^?HAJAHAHCHCHCFEFAv@E~@A^Ej@Kv@[zBUrAO|@If@Kf@]vAERi@dB]bAa@|@GLIRWh@_@p@u@dAe@n@k@l@m@j@WRQL]Rq@^y@\\aCbAuDtA{EbBiA^aDdAa@NiDhAiA^sDpA_AZWVg@RoBn@y@TWHA?MBq@Pw@HKCcAROBmATUDs@J[Dk@Ds@?i@EUEQEMCCAs@WeAc@q@[aB}@wAy@g@]gEmCm@_@]Ow@Yk@@U@c@HaAXa@Pw@`@y@f@sBzAmDnCyAfAo@`@eAn@MDm@X]Jk@NUDm@HaBVM?U?M?_@ISKi@[WOe@e@w@y@]W]OWIs@Kc@CK?sGKgJ[{GWaDQgCC_CF_DX[Di@FiATqBt@qAn@]PgBbBm@n@a@d@YZCD]b@i@v@iBbCU\\q@z@EDe@^g@^w@\\[Tu@l@u@v@CBu@z@wApB_AhAg@^WLG@M@M@I?q@Ea@O{BaA[MYI_@GG?I@K@SBYFwAb@[Js@Rs@PwAX]Jm@RwC`BcBr@eBt@o@Vy@PeAR_Bj@a@Pe@ZGFKJa@f@Yb@CDOXSl@Or@Gd@Gn@AJGn@C\\O`AOn@Uj@KPQVKJWZc@d@m@r@[Vm@d@y@b@{@b@kAj@_Bp@oB`AWLcDfBaBv@s@XiAd@q@RmCn@c@Fw@JuARQBw@J}IvAoB\\m@JgAXo@VIDUNIFs@l@s@r@g@h@[ZIDC@IBG@K?ICIGIGKOKSs@v@m@t@k@z@c@r@q@hAoAnCq@bBaAbC{@vB_B~Dw@dBSVa@t@Yh@_@p@U`@Yb@c@n@]f@]d@s@|@c@d@_@^ABo@n@cBtA}GpF}EzDm@f@_@X{AlAkA~@iAbAML_@\\YXiAfAiAhAiAdA_@`@iAfAiAfAyAvAyAzA}A|AaC~B[ZgAfAmBjByBxBURiAdAiAbAaAx@oAfAs@l@yBlBMRYXaA`A}A~Aa@b@kAhAg@f@EDe@d@oAlAgCdCWTQJ}@|@OLOPIFeAbAgBdBMJ]\\oAfAmAhA_@ZgB~AkCdCyAxAaAhA_AhAmAxAwBjC}DxEGFaBtB_AfAg@n@uErFi@p@s@~@e@r@i@x@A@i@|@ABeApBq@~AYr@CJe@nAu@xBSp@e@tAu@~BoAtDiAhD}@rCkAlD]~@e@zAu@hCI\\a@zAa@fB]hB_@rB[nBo@fESxAA^SrAY`BWlACHs@xCSr@a@rAm@lBITa@hAiAbDgCxGwBjFABMLUj@iBfEy@dBWj@gA|BkBrDgB`D{DzGyDfGu@fA}AzBqAjBi@r@uCvD{@dA}@bAcAhAw@|@yA|AqAzAaBrBgBvBmBzBwB|BcBhBoApAk@n@kArA]b@a@j@w@jAu@nAq@pAu@`Bg@lAg@zAWx@c@xAOh@Qv@k@nCWvAYlBOhAOhAO`BKpAU|FOxEM`FC|@C|@MjFMlGOxHGpDAbB?xABzCDnCFzBJ~BLrBPtBXpCX`CV~A?BLt@Lt@x@`FbApFnAlHbAbGbAzFN|@XhBd@jDNpANtAHlAJlAFjAFbBFlBF~BBR@x@AdB?`@Ar@CfBAb@Af@GlACt@Eh@Gz@Gp@MrAQrAQpAQhAYxAIT{AdIkAhG}@vEmApG}@zE_@lBOx@S|@s@xCCTe@`Bo@tB_@jAUt@u@tBUt@uA|DqArD_AjCIHwCxIsB~FkEdM_AnC]fAERITWt@y@dCOb@aEvLw@zBe@pAUl@eAzC_@lAM^GP[n@y@~B[dASn@K^IXANCV?@?@?@?@@@?@?@?@?@?@?@A@?@?@?@A@?@?@A@?@A@?@A??@A??@A?A@A?A?KTEHKZMd@Kl@Op@[~Ae@nCUnAIh@G`@E^Eh@C`@Ej@DfAB??@@?@??@@@@??@@@?@@@@@?@@B?@?@@@?@?B?@?@?@?B?@?@?@?B?@?@A@?@?@AB?@?@A@AB?@A@?@A@A?A@?@A?Gx@?P?J?R@\\Dd@D\\LjAV`BbBbLL~@lAtIV~@@@@?@@?@@@@@@@@BTHZH^HRJLJHHJLDHFJDHDJFPDNDNDVDXFd@Hn@BVn@jGPvB\\vC^bDBb@@TBf@BdABt@A`A?f@A\\Al@APARAVC\\Gt@KdAMbACPWhBPLZXPPd@d@VX\\^Vb@DR@PBL?FDVBNBPBLJ\\xClIRx@Jf@FZHJBf@@XA`@?h@GlAGbAOdC]vESzCOfC@??@?@@??@?@@??@?@?@@??@?@?@?@?@?@?@?B?@?@?@?@?@?@?@?@?@A@?@?@A??@A@?@A??@A??@A?A?Ip@Gh@WxCw@rHE^e@jESrAWpBSvA_@xBm@xDm@nDQdAS`Aa@zBs@dDUbAk@dCcA|DEN_@rAGJcAnDyA|EwB~Gm@lBsA`EABSr@gAlDg@lBs@|CSdA[dB[pBWlBM`AK~@MdAM~ASbCMtBCl@E|@EdAA`@Ah@ErBArA?l@Az@@p@?t@@dAB`ABjA@l@JpCJnBf@dHJhBB`@Dp@?HHlBDxABrA@rA@|@?bA?hAEjCGlCGlBM|BMjBW|C]`DEVKx@AFUzAYbBYrA]`BWbAYdASx@[bAWz@e@nA[z@y@pB}DxIyExKmAnCaBnDg@hAYn@mAlC_@x@aAxB_CfFm@rAiAtCc@lAe@zA{AjGI^CLAHI`@Kj@Id@M~@Mz@Ip@MhAIx@Gz@KhAG~@EjAGxAEnAEfBGtCErCErBI`DEzDWbOEpCAdB?~A?d@?Z?`BApAAdA?f@At@EvAIpCIpCIrCGfA?FE`AEfAGfAIfAIjAKfAKdAGf@Kt@CNQnA[lBYvAUfASx@Op@?B{@fDo@jCs@vCgAjE[pAs@rCm@`C]pAWx@Ql@a@fA]|@a@~@g@bAo@jAIL[d@KRk@x@ABY^CDW\\}@rAkBlCaArA{B~Cw@dAoCtDsAfBcAnAo@v@y@`Ag@h@y@`AuA~Ay@~@QRITY`@]d@Yf@S^MXMZSb@Qb@KZOf@KZOr@Kd@AFMl@Kd@Gh@MbAE`@CVCh@ALC`@Cf@Af@Aj@A~@?n@?f@?f@FdC?h@dAnRd@rINrCrAl[Dz@n@dOTtFDtABx@Bl@BdA@p@@v@@jA?|BAxBEjCGjCGnCIvCGjCE|AAt@ADIvDCl@_@tQEdAG~Bg@pNMpEGrACjAEbBAjACv@AfACjF?XBZDfI?B?h@C`A?^?vD?~BCzCAvDEzG?FEj@?|AAbA?lAB|A@bADzAD`BFdAD~@@TJrALfBNhBJhBDbALhCD|ADbB@jA@nA?`C?d@Af@?h@ExACnACz@CZ@d@Cn@G~@E|@SfCQxAa@rDU|AQnAMr@O`@_@lBS|@W`A_@zAg@~Ac@rAe@nAc@dAGNe@fAYl@INg@`Ag@|@g@z@k@x@g@v@Y^WZo@r@]`@e@f@w@t@eCvBmB|A{BlBuA~@wA|@MJEBGDeC`B_@T[Te@ZUPy@f@OJuA~@oAz@_@TEDYRqAz@IJABC@OLu@h@uA~@iAv@UN}@j@k@^EBc@XEBA@A@OBy@j@KHm@d@EBuAbAoAz@sA|@qChBUNA@YPs@^UJ]PKDwAh@C@E@ODQFA?QFe@JKHCBE@[Fe@HODsANq@Dq@Bg@BY?c@A_@Ae@Cs@Eq@Iq@Ik@Im@OCA_@KYI]MQG_@Qk@WCAs@[o@Y]Oi@Uq@[s@[cAc@s@[o@YaA_@_A_@yAk@u@Yu@Wy@U{@WuA[gEq@KCy@K_AKSAEACAMKa@CWAWC[A{@CoAAK?c@?I?k@@kABeAD_@BkAJq@Fa@DcALg@JYDuAVc@J]He@JwAb@y@To@TkAd@k@TeAd@e@Ti@TaAj@q@\\a@Vc@X}@l@EBk@`@aAt@g@`@k@b@A@q@l@g@b@]\\[ZYXa@`@a@b@u@x@g@l@WXSVA@Y^QTq@x@Y`@g@p@e@p@i@x@k@|@CBWb@A@Wd@U^Yf@o@hAa@v@m@nAELYj@A@Wl@m@tAq@|Aq@dBo@`Ba@hAUn@_@fAc@rA]fAKZw@jCSv@Ux@On@Sx@_@bB_@hBYrAMt@WtA_@bCMx@Ih@e@jDQtAM~@W~BK|@OfAGr@MhAIt@K~@KfAKlAGz@Ef@Eb@CVAVGr@MhBK|AIpAItAw@nN@TATALCp@OrCYfFOrBGfAAPANSbDUtD?@ERo@jLKpBIhBQxCY~EGt@Q|CS|DK`BCb@KxBKjB?\\]hIQzCCf@En@El@C\\Eh@Gl@Gn@E\\Ed@Il@K|@Kr@EVIp@Kr@Kr@Gb@ShAKf@G\\Kl@Mj@I`@Qx@Ol@q@bCK`@Qf@W|@Un@KZIJ]~@e@pA]z@a@bAc@bAs@|Ao@nAS^aAdBq@dA]h@i@t@c@j@IT_@b@YZ_@b@_@^i@j@u@p@[VuAhAQNk@`@]V[RMHQJ[RUNQJSJKFQFOHSHc@Pe@Pg@P_@Ji@N_@HODi@Hi@J[Bk@Hk@FU@M@MEg@B{@Bo@@O?]?o@Aq@CUAYAUC]E]C_@Ei@IYEOCi@MGAw@SsA]UIg@M}@UQGc@K[KeAYEAe@MqA]UGa@MeAWi@MaASw@MgASOIMEKEMGSGKEOCUE_AIi@ESAYAqAEeACg@?[?q@?_@@m@@y@Dq@BQ@i@DcAJkANe@FMBa@Fs@L_ARcATcAVwA\\u@Rg@L}@RiBd@aAVaAVaB`@eAV_@JyCv@_AVgCl@cBb@iCl@s@P}@T_AV_AVkA^[Jg@RqAf@}@`@g@TSJ]PwAv@YNw@f@y@h@mAz@mA~@c@^k@f@w@r@_@\\e@b@c@d@UTs@v@iBxBo@x@WZq@dB]d@mAhBoBdDmAxBkBpDiDxGyDrHiBlDaDhG}@dB}AxCoBxDy@~AaAhBgB`D[h@mAtBeBrCsB`D}@nA{@nAwAnBkA~AmA|AkFpGgDbEoCjD]`@y@dAUVeC|CaDdEoG|I}EvG{DfF{BtC[^uAjB]d@[b@IPEH_@j@]h@QZQXa@v@A?Yh@ABCEcFrJuDxGuCtDe_@|_@}MbM_TvSiBbCaHxK}Q~To@|@a@x@_@nAgCnMw@rEcA`KSlAg@dBi@x@qB~BeE|Fmg@tv@e`@nk@gLpQiFxHcO~VuEhHwEnIcIpOcDlIoAjC]f@wA~AyApAwEjDqD|By\\dVA?@?ED_C~Ak@`@cDzB}BzAcBhAe@^YVe@f@]b@w@jAw@pAwBnDsAtBuBfDwAzBoApBkAjB{@rAk@`AKN[f@qD~Fs@hAqArBcA~ASXMPA@ORMLABIHMLYZu@n@_@\\YTeA~@_@ZEBc@^a@\\uAjAe@`@gA~@cEhDoGpF{@t@yBjBgB|AwCdCWTuAjAiB~AiB`BwAnAmB~AEDkA~@sAjA]Zg@b@]^c@j@a@n@i@`As@rAeBdD[n@w@xA}ArCqA`Cm@hAe@|@U\\wBzDyAnCaBxC_AbBGTaDfGaBxCmAtBmA~BeAhBiArBW^MP]j@}@~AmAjBW^w@hAyAhBiBrBwAvAyAzAo@n@y@z@mAfA}AnAwA`AwAz@y@`@g@VmAb@uA`@mAZYFg@H}@Ns@D{@FuAD{A?o@AgBGcIYwHYyGSOAg@EIHE@G@I?QCsA?i@@]@WBKDSRA@A@A@A@ABA?A@A@CBE@C?E?C?EACACACAACAACCACACACAE]IUGUEe@AeA?oAAO?c@Ac@?oDB}FXeCRa@Dg@JUJ_@TMDABADABC@ABABA@CBOd@IVE\\Kz@InBi@Oa@Ky@SKCYC]CY@a@Fc@Na@P[VaFtESx@YtAAXAHAJIjAMvBEz@CVAHIPa@PGBE@SFODMBEBKBe@Rm@RGDKFa@R{@d@qBnAwBrAg@\\A@q@TwA`@SFMBmBb@cAFc@B{@F{Kb@qBJWDKDGDKPGb@Mt@Ih@Uf@SVUDU@aAS_AOa@?c@JiBdBoDfDyC|C}HvHqClCkBhBmChC{BxBEDwBpB}@z@_Az@y@v@CDgF|EoApAg@f@s@x@]^e@v@EJGJQ^q@xAaBdDm@lAiBxDMXIPYj@q@vAYj@g@dAIPMXA@?@@??@@??@?@@??@?@?@@@?@?@?@?@?@?@?@?@?@A@?@?@A@?@A@?@A??@A??@A?A?A?A?A?A??AA??AA??AA??A?AA??A?AAA?A?A?A?A?A?A?A?A?A?A?A@A?A?A?A@??A@??AWe@Wi@c@_Ay@iAuA_BEE}@_AMGME]OA??@?@A??@A??@A?A??AA??AA??A?AKFCBEDEDCDKNINKTGNq@|A]t@Wb@IHa@d@{@x@QLgAz@}@|@sArAwAlBu@x@i@Zm@TUDQBQ?A?MAQCWMMOIKGKKUGQIa@O{@[gBKq@e@cCScAa@uBI_@Kg@]}@S]U[k@c@q@_@YQW[ACOYO_@GSGWG[My@W{D?MQqBOuAOeA[wAOm@ISWeAMo@CKGc@Kw@Ko@a@gCkAZwATyARI@}@Dm@G]Gs@IMEUIIEw@]YMGCKGQI_@Os@So@Qq@Om@Ok@QcAWA?MWi@OgAa@YKc@Qy@_@cAc@eAg@_@Qw@]w@_@_Ac@e@Wg@YWQe@[QM]We@_@[Ya@_@_@a@c@c@a@e@CCc@g@a@i@u@_As@}@SWe@k@gB_CcAqAi@q@_AmAaBsBMQUYGIy@eAuAeByAiBgAyAqAaB{AqBsAgByAiBw@kA[e@_@m@QYa@u@e@}@CEYm@Yk@[u@[w@i@uAg@sAk@uAg@sAk@qAo@mAo@iAs@eAu@_Au@{@c@c@i@e@OMi@c@[UuCoBwB{AiD{BaAo@eAq@}@g@o@]k@Ym@YeBw@aC_Ak@Sw@U{@WuA_@k@Mq@Oa@I}@OqASWEi@Ii@GYEy@GWCqAGk@C}@Ck@AaAAi@?m@?Q?Q@o@@_AD_ADiAHG?[DM@uANoAPm@Hi@Jg@JMBa@HMDUDe@J_AV_AX}@Xi@Pg@RYJ_@Lk@Ve@Ro@ZqB~@i@VgBz@QHsBbAqAj@_A^e@P]L_@Ji@Nk@N{@Ri@HcAPe@FA?i@FwAJwBJoBJa@BoBLyDRo@Bi@@MB_@BGJCDCBCBE@E@C@E?EACAEACCCECECECEAGCG?GAIQ_@GOEGKIMI]Mi@Se@Sg@Yc@Ug@U]O_@KUG]IWCI?SAUAI?I?W@WBe@FIByBj@DlAsBjAyEnDMcA?CMu@_B|@"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3494603,
+                                                "lng": -6.2512466
+                                        },
+                                        "stop": {
+                                                "lat": 54.2720255,
+                                                "lng": -8.481893699999999
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Sligo Bus Station, stop 555081",
+                                                        "time": 1596830580
+                                                },
+                                                "dep": {
+                                                        "name": "Bus\u00e1ras, stop 135001",
+                                                        "time": 1596817800
+                                                },
+                                                "headsign": "Bus\u00e1ras - Sligo It",
+                                                "operator": "Bus \u00c9ireann",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "directions": [
+                                                "Head <b>west</b> toward <b>Lord Edward St</b>/<wbr/><b>R292</b>",
+                                                "Slight <b>left</b> onto <b>Lord Edward St</b>/<wbr/><b>R292</b>",
+                                                "Turn <b>left</b> onto <b>N4</b>"
+                                        ],
+                                        "distance": 864,
+                                        "duration": 667,
+                                        "html_instructions": "Walk to Primary Care Centre, Barrack St, Rathquarter, Sligo, Ireland",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "w~fjIttwr@?r@?R@HBLBHDD@DFDFBF?HAHCFCLQBG@E@E?K?G?GAOA]?a@?G?E@IDO",
+                                                "w{fjIprwr@g@mDGg@",
+                                                "g}fjIzkwr@k@AcAKu@KGA}@OqAUWE[IOEMGMI_@UYYQQOSSWMSEIc@s@Yg@g@y@[i@IQg@cAYm@GQKWMa@Mc@IUAGSg@MSGKYg@_@g@c@i@SUII"
+                                        ],
+                                        "start": {
+                                                "lat": 54.27196300000001,
+                                                "lng": -8.4821872
+                                        },
+                                        "stop": {
+                                                "lat": 54.27660969999999,
+                                                "lng": -8.476087099999999
+                                        }
+                                }
+                        ],
+                        "transit_index": [
+                                1,
+                                3
+                        ]
+                }
+        ],
+        "status": "OK"
+}

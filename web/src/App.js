@@ -36,6 +36,9 @@ const App = () => {
   const [sortStepsNum, setSortStepsNum] = useState(1);
   const [sortTimeNum, setSortTimeNum] = useState(-1);
 
+  const [searchValS, setSearchValS] = useState("");
+  const [searchValD, setSearchValD] = useState("");
+
   const [favStops, setFavStops] = useState({
     fullname: getStopNames(),
     stopsids: getStopNums(),
@@ -82,7 +85,6 @@ const App = () => {
     newFields["destination"] = dest;
     newFields["time"] = time;
     setState(newFields);
-    console.log(newFields);
     if (source.bus_id) {
       // if source is a bus route
       clearMap();
@@ -90,8 +92,9 @@ const App = () => {
         .get("/api/routeinfo?routeid=" + source.bus_id)
         .then((res) => {
           if (res.statusText === "OK") {
-            setStopsForMap(res.data[0]);
-            setOtherRoute(res.data[1]);
+            console.log(res.data);
+            setStopsForMap(res.data["1"]);
+            setOtherRoute(res.data["2"]);
             setActiveKey("map");
           }
         })
@@ -109,6 +112,7 @@ const App = () => {
           lat: source.lat,
           lng: source.lng,
           fullname: source.fullname,
+          lines: source.lines,
         },
       ]);
     } else {
@@ -128,11 +132,10 @@ const App = () => {
             Math.round(time / 1000)
         )
         .then((res) => {
+          console.log(res);
           if (res.data.status === "OK") {
             setTripTimes(res.data.connections);
             setDirections(findPoly(res.data.connections[0]));
-            setStopsForMap([]);
-            setOtherRoute([]);
             setBusIndex(res.data.connections[0].transit_index);
           }
         })
@@ -174,11 +177,19 @@ const App = () => {
   };
   return (
     <div className="App">
-      <SearchForm handleSubmitApp={handleSubmitApp} />
+      <SearchForm
+        handleSubmitApp={handleSubmitApp}
+        searchValD={searchValD}
+        searchValS={searchValS}
+        setSearchValD={setSearchValD}
+        setSearchValS={setSearchValS}
+      />
       <Tabs
         style={{ margin: 10 }}
         onChange={changeActiveTab}
         activeKey={activeKey}
+        size={"large"}
+        animated={true}
       >
         <TabPane tab="Map" key="map">
           <ShowMap
@@ -228,6 +239,7 @@ const App = () => {
             state={state}
             favStops={favStops}
             setFavStops={setFavStops}
+            setSearchVal={setSearchValS}
           />
         </TabPane>
         <TabPane tab="Real Time" key="realTime">
@@ -235,6 +247,7 @@ const App = () => {
             realTimeData={realTimeData}
             favStops={favStops}
             setFavStops={setFavStops}
+            setRealTime={setRealTime}
           ></RealTimeInfo>
         </TabPane>
         <TabPane tab="News" key="news">
