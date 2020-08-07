@@ -71,7 +71,7 @@ const SearchForm = ({
     let temp = newFields.destination;
     newFields.destination = newFields.source;
     newFields.source = temp;
-
+    console.log(newFields);
     setSearchValD(searchValS);
     setSearchValS(searchValD);
     setFieldsValues(newFields);

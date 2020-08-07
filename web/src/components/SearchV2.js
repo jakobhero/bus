@@ -95,11 +95,12 @@ const PlacesAutocomplete = ({
   };
 
   const handleSelect = (val) => {
-    setInput(false);
     //Firstly if the option was a bus stop, then find the corresponding info for the stop and send the data to the parent via handleChange.
     //Then if it was a route, send bus_id to parent
     // Lastly if it was a place, find the co ords, then send them along with value to parent
-    let lat, lng, stopID, fullname;
+    let lat, lng, stopID, fullname, lines;
+    setInput(false);
+
     if (val.includes(", Bus Stop")) {
       stopID = val.split("(")[1];
       stopID = stopID.split(")")[0];
@@ -110,16 +111,47 @@ const PlacesAutocomplete = ({
           lat = stopData[i].lat;
           lng = stopData[i].lng;
           fullname = stopData[i].fullname;
-          handleChange({ stopID, lat, lng, fullname }, id);
+          lines = stopData[i].lines;
+          handleChange({ stopID, lat, lng, fullname, lines }, id);
+          setSearchVal(val, false);
         }
       }
     } else if (val.includes(", Bus Route")) {
       const bus_id = val.slice(0, val.length - 11);
       handleChange({ bus_id }, id);
+      setSearchVal(val, false);
+    } else if (val.includes("Current Location")) {
+      const geocoder = new window.google.maps.Geocoder();
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const latlng = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude,
+          };
+          geocoder.geocode({ location: latlng }, (results, status) => {
+            if (status === "OK") {
+              if (results[0]) {
+                val = results[0].formatted_address;
+                handleChange({ val }, id);
+                setSearchVal(val, false);
+              } else {
+                alert("No results");
+              }
+            } else {
+              window.alert("Geocoder failed due to: " + status);
+            }
+          });
+        },
+        () => null,
+        {
+          enableHighAccuracy: true,
+        }
+      );
     } else {
       handleChange({ val }, id);
+      setSearchVal(val, false);
     }
-    setSearchVal(val, false);
+
     setRouteData([]);
     setStopData([]);
   };
@@ -139,6 +171,17 @@ const PlacesAutocomplete = ({
         {input && (
           <ComboboxPopover>
             <ComboboxList>
+              <ComboboxOption value={`Current Location`}>
+                <img
+                  src="./userLocation.png"
+                  alt="bus"
+                  width="20"
+                  height="20"
+                  style={{ marginRight: "10px" }}
+                />
+                <ComboboxOptionText />
+              </ComboboxOption>
+
               {
                 // display stops that match search and icon
                 stopData.length > 0 &&

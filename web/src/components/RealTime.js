@@ -10,8 +10,9 @@ import "../css/fav.css";
 
 import StarIcon from "@material-ui/icons/Star";
 import StarBorderOutlinedIcon from "@material-ui/icons/StarBorderOutlined";
+import Refresh from "@material-ui/icons/Refresh";
 
-const RealTimeInfo = ({ realTimeData, favStops, setFavStops }) => {
+const RealTimeInfo = ({ realTimeData, favStops, setFavStops, setRealTime }) => {
   // generate content of real-time tab
   const [visible, setVisible] = useState(false);
   const [state, setState] = useState({});
@@ -44,7 +45,7 @@ const RealTimeInfo = ({ realTimeData, favStops, setFavStops }) => {
         stopsids: removeItemOnce(favStops.stopsids, stopid),
       });
     } else {
-      setCookie(stopid);
+      setCookie(stopid, fullname);
       favStops.fullname.push(fullname);
       favStops.stopsids.push(stopid);
       setFavStops({
@@ -115,12 +116,16 @@ const RealTimeInfo = ({ realTimeData, favStops, setFavStops }) => {
       <h2>
         {realTimeData ? `Stop ${stopid} (${fullname})` : "Select a bus stop"}
       </h2>
-      {realTimeData &&
-        (icoStatus ? (
-          <StarIcon onClick={(e) => iconStatusData()} />
-        ) : (
-          <StarBorderOutlinedIcon onClick={(e) => iconStatusData()} />
-        ))}
+      {realTimeData && (
+        <div>
+          <Refresh onClick={() => setRealTime(stopid, fullname)} />
+          {icoStatus ? (
+            <StarIcon onClick={(e) => iconStatusData()} />
+          ) : (
+            <StarBorderOutlinedIcon onClick={(e) => iconStatusData()} />
+          )}
+        </div>
+      )}
       <Table
         dataSource={realTimeData}
         columns={columns}

@@ -33,6 +33,7 @@ const Favourites = ({
 }) => {
   function handleClick(stopid, stopName) {
     setRealTime(stopid, stopName);
+    setStopsForMap([]);
   }
 
   function handleDelete(stopid) {
