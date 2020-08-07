@@ -1,13 +1,12 @@
-import json, os, requests, datetime, numpy as np, time, pickle
+import json, requests, datetime, numpy as np, time, pickle
 from sklearn.neighbors import KDTree
 from flask_restful import Resource, Api, reqparse
 from sqlalchemy.types import String
 from sqlalchemy import cast
-
 from .models import Stops as StopsModel, StopsRoute as SRModel, GTFS_trips, GTFS_times, GTFS_stops, db
+from .config import Config
 
 api = Api()
-
 stops = None
 coords = None
 tree = None
@@ -53,10 +52,6 @@ class Test(Resource):
                 prediction=get_prediction(start["start_time"],t_stop["duration"],leg["route"],leg["direction"])
                 t_stop["duration_p"]=prediction
                 t_stop["dep_p"]=start["start_time"]+prediction
-                print({
-                    "start":start,
-                    "stop":t_stop
-                })
                 
                 #correct the values of directions
                 connection=directions["connections"][i]
@@ -90,8 +85,6 @@ class Test(Resource):
                     connection["end"]["time"]=t_stop["dep_p"]+later_travel
                     connection["duration"]=connection["end"]["time"]-connection["start"]["time"]
         return directions
-
-
 
 class Stops(Resource):
     """API Endpoint for Dublin Bus stop information. Returns all stops that contain specified substring in either
@@ -137,7 +130,6 @@ class Stops(Resource):
                 })
         return {"stops": response, "status": "OK"}
 
-
 class NearestNeighbor(Resource):
     """API endpoint for Dublin Bus stop information. Returns the k nearest bus stops to the coordinates specified in request.
     If k is not specified in request, the a default of 20 closest stops is returned. If coordinates are not specified in request,
@@ -177,7 +169,6 @@ class NearestNeighbor(Resource):
 
         return {"stops": response, "status": "OK"}
 
-
 class realTime(Resource):
     def get(self):
 
@@ -194,7 +185,6 @@ class realTime(Resource):
         resp = requests.get(URL, params=req_items)
         parsed_json = (json.loads(resp.text))
         return parsed_json['results']
-
 
 class routeInfo(Resource):
     """API endpoint for Dublin Bus Route Details. Returns all stops served by a route, grouped by direction and
@@ -269,7 +259,7 @@ class Directions(Resource):
         params = {
             "origin": frontend_params["dep"],
             "destination": frontend_params["arr"],
-            "key": os.environ.get('GOOGLE_KEY'),
+            "key": Config.GOOGLE_KEY,
             "mode": "transit",
             "departure_time": int(time.time()),
             "alternatives": "true"
@@ -297,15 +287,25 @@ class Directions(Resource):
         with open('api/debugging2/'+now+'.json', 'w') as outfile:
             json.dump(res, outfile, sort_keys=True, indent=8)
         
-        model_info=find_model(res)
-        print(model_info)
+        if res["status"]!="OK":
+            return res
+    
+        model_input=[]
+        for connection in res["connections"]:
+            model_input_row=[]
+            db_index=connection["db_index"]
+            for index in db_index:
+                #retrieve a leg in the journey that represents a dublin bus ride
+                route=connection["steps"][index]
+                model_input_row.append(find_model(route))
+            model_input.append(model_input_row)
 
         # NEXT BLOCK ONLY FOR DEVELOPMENT PURPOSES
         # store results for debugging purposes        
         with open('api/debugging3/'+now+'.json', 'w') as outfile:
-            json.dump(model_info, outfile, sort_keys=True, indent=8)
+            json.dump(model_input, outfile, sort_keys=True, indent=8)
 
-        for i in range(len(model_info)):
+        for i in range(len(model_input)):
             connection=res["connections"][i]
             #if there is no dublin bus ride on the connection, move along to next connection
             if len(connection["db_index"])==0:
@@ -314,10 +314,10 @@ class Directions(Resource):
             prior_travel=0 #time it takes to get to first bus
             for j in range(connection["db_index"][0]):
                 prior_travel+=connection["steps"][j]["duration"]
-            model_info[i][0]["start"]["time"]=params["departure_time"]+prior_travel
+            model_input[i][0]["start"]["time"]=params["departure_time"]+prior_travel
 
-            for j in range(len(model_info[i])):
-                leg=model_info[i][j]
+            for j in range(len(model_input[i])):
+                leg=model_input[i][j]
                 t_start=find_trip(leg["start"]["time"],leg["start"]["id"],leg["route"],leg["direction"])
                 if len(t_start)==0:
                     print("Error: Couldn't find a bus with the following parameters:")
@@ -342,16 +342,12 @@ class Directions(Resource):
                 prediction=get_prediction(start["start_time"],t_stop["duration"],leg["route"],leg["direction"])
                 t_stop["duration_p"]=prediction
                 t_stop["dep_p"]=start["start_time"]+prediction
-                print({
-                    "start":start,
-                    "stop":t_stop
-                })
                 
                 #correct the values of the results of the directions parser
                 bus_travel=connection["steps"][connection["db_index"][j]]
                 bus_travel["duration"]=t_stop["duration_p"]-start["duration_p"]
-                bus_travel["transit"]["arr"]["time"]=midnight.timestamp()+t_stop["dep_p"]
-                bus_travel["transit"]["dep"]["time"]=midnight.timestamp()+start["dep_p"]
+                bus_travel["transit"]["arr"]["time"]=int(midnight.timestamp())+t_stop["dep_p"]
+                bus_travel["transit"]["dep"]["time"]=int(midnight.timestamp())+start["dep_p"]
                 bus_travel["transit"]["source"]="TFI HOOLIGANS"
                 bus_travel["transit"]["arr"]["delta"]=t_stop["dep_p"]-t_stop["dep_time"]
                 bus_travel["transit"]["dep"]["delta"]=start["dep_p"]-start["dep_time"]
@@ -362,11 +358,11 @@ class Directions(Resource):
                     connection["start"]["time"]=start["dep_p"]-prior_travel
                 
                 #check if there are more dublin bus journeys on this connection
-                if j<len(model_info[i])-1:
+                if j<len(model_input[i])-1:
                     #add the delta of predicted arrival and scheduled arrival to the start of the next bus journey
                     p_delta=t_stop["dep_p"]-t_stop["dep_time"]
-                    model_info[i][j+1]["start"]["time"]+=p_delta
-                    model_info[i][j+1]["stop"]["time"]+=p_delta
+                    model_input[i][j+1]["start"]["time"]+=p_delta
+                    model_input[i][j+1]["stop"]["time"]+=p_delta
                 #if the current is the last journey, modify the final time
                 else:
                     later_travel=0 #time it takes to get from final bus stop to destination
@@ -375,7 +371,6 @@ class Directions(Resource):
                     connection["end"]["time"]=t_stop["dep_p"]+later_travel
                     connection["duration"]=connection["end"]["time"]-connection["start"]["time"]
         return res
-
 
 def directions_parser(directions, time):
     """transforms response of Google's direction service into frontend-friendly format."""
@@ -445,7 +440,8 @@ def directions_parser(directions, time):
                     },
                     "headsign": step["transit_details"]["headsign"],
                     "type": step["transit_details"]["line"]["vehicle"]["type"],
-                    "operator": step["transit_details"]["line"]["agencies"][0]["name"]
+                    "operator": step["transit_details"]["line"]["agencies"][0]["name"],
+                    "source":"GOOGLE"
                 }
 
                 if transit["operator"] in ["Dublin Bus", "Go-Ahead"]:
@@ -519,7 +515,7 @@ def nearest_stations(target, stops, k):
     # calculate the nearest neighbours
     if tree==None:
         build_tree()
-        print("KD-Tree is built.")
+        # print("KD-Tree is built.")
     nearest_dist, nearest_ind = tree.query(target, k=k)
 
     # populate response with rows from stops specified by calculated indices
@@ -528,51 +524,70 @@ def nearest_stations(target, stops, k):
         response.append(stops[ind])
     return response
 
-def find_model(directions):
+def find_model(route):
+    """matches a dublin bus journey as returned by the google direction API with a route ID, stop IDs for origin
+    and destination, and a direction as stored in the DB."""
+        
     global stops
     global tree
     global models
 
+    def route_matcher(stations,route):
+        """matches route from google directions with closest stations from search.
+        requires that stops response includes route info."""
+        response=[]
+        index=0
+        for station in stations:
+            if route in station["lines"]:
+                response.append(index)
+            index+=1
+        return response
+
+    def route_verifier(start_stations, stop_stations, start_index, stop_index, route):
+        """function that checks whether start_stations and stop_stations can be connected by the route represented
+        in the google direction."""
+        for start in start_index:
+            start_info=start_stations[start]["lines"][route]
+            for stop in stop_index:
+                stop_info=stop_stations[stop]["lines"][route]
+                #print(f"Trying to match route {route}:{start_info} with {route}:{stop_info}.")
+                for direction in start_info:
+                    if direction in stop_info:
+                        if start_info[direction]<stop_info[direction]:
+                            return {
+                                "route":route,
+                                "direction":direction,
+                                "start":{
+                                    "id":start_stations[start]["stopid"]
+                                },
+                                "stop":{
+                                    "id":stop_stations[stop]["stopid"]
+                                }
+                            }    
+
     if stops==None:
         build_tree()
-        print("KD-Tree is built.")
+        # print("KD-Tree is built.")
 
-    if models==None:
-        load_models()
-        print("Models are loaded.")
-
-    if directions["status"]!="OK":
-        return directions
-    
-    model_data=[]
-    for connection in directions["connections"]:
-        model_data_row=[]
-        db_index=connection["db_index"]
-        for index in db_index:
-            #retrieve a leg in the journey that represents a dublin bus ride
-            route=connection["steps"][index]
-            #set the coordinates of the starting and destination stop as suggested by google
-            google_start=[[route["start"]["lat"],route["start"]["lng"]]]
-            google_stop=[[route["stop"]["lat"],route["stop"]["lng"]]]
-            #retrieve the route information as suggested by google
-            google_route=route["transit"]["route"].upper()
-            #retrieve the closest bus stops in our data to start and stop
-            start_stations=nearest_stations(google_start,stops,30)
-            stop_stations=nearest_stations(google_stop,stops,30)
-            #check which stations in the closest stops match up with google route
-            start_index=route_matcher(start_stations,google_route)
-            stop_index=route_matcher(stop_stations,google_route)
-            #print(f"Detected options in start are {start_index}.")
-            #print(f"Detected options in start are {stop_index}.")
-            #find a connection of the google route between two stops in the station data
-            response=route_verifier(start_stations,stop_stations,start_index,stop_index,google_route)
-            if response!=None:
-                response["start"]["time"]=route["transit"]["dep"]["time"]
-                response["stop"]["time"]=route["transit"]["arr"]["time"]
-                # print(response)
-            model_data_row.append(response)
-        model_data.append(model_data_row)
-    return model_data
+    #set the coordinates of the starting and destination stop as suggested by google
+    google_start=[[route["start"]["lat"],route["start"]["lng"]]]
+    google_stop=[[route["stop"]["lat"],route["stop"]["lng"]]]
+    #retrieve the route information as suggested by google
+    google_route=route["transit"]["route"].upper()
+    #retrieve the closest bus stops in our data to start and stop
+    start_stations=nearest_stations(google_start,stops,30)
+    stop_stations=nearest_stations(google_stop,stops,30)
+    #check which stations in the closest stops match up with google route
+    start_index=route_matcher(start_stations,google_route)
+    stop_index=route_matcher(stop_stations,google_route)
+    #print(f"Detected options in start are {start_index}.")
+    #print(f"Detected options in start are {stop_index}.")
+    #find a connection of the google route between two stops in the station data
+    response=route_verifier(start_stations,stop_stations,start_index,stop_index,google_route)
+    if response!=None:
+        response["start"]["time"]=route["transit"]["dep"]["time"]
+        response["stop"]["time"]=route["transit"]["arr"]["time"]
+    return response
 
 def find_trip(time,stop_id,route_id,direction):
     """finds trips according to specified parameters that were supposed to depart within the last 120 mins of timestamp according to schedule."""
@@ -586,7 +601,6 @@ def find_trip(time,stop_id,route_id,direction):
         service_id="y1003"
     midnight = time.replace(hour=0, minute=0, second=0, microsecond=0)
     timestamp=time-midnight
-    print(timestamp.seconds)
     result=db.session.query(GTFS_times,GTFS_trips).filter((GTFS_times.stop_id==stop_id) & (GTFS_times.dep<=(timestamp.seconds+20*60)) & (GTFS_times.dep>=(timestamp.seconds-1*60*60))).join(GTFS_trips, (GTFS_times.trip_id==GTFS_trips.trip_id) & (GTFS_trips.route_id==route_id) & (GTFS_trips.direction==direction) & (GTFS_trips.service_id==service_id)).order_by(GTFS_times.dep.desc())
     response=[]
     for times,trips in result:
@@ -619,13 +633,13 @@ def get_prediction(timestamp,duration,route_id,direction):
 
     if features==None:
         load_features()
-        print("Features are loaded.")
+        # print("Features are loaded.")
 
     #load model
     model_name=route_id+"_"+str(direction)
     if model_name not in models:
         load_model(model_name)
-        print(f"Model for route {route_id}, direction {direction} loaded.")
+        # print(f"Model for route {route_id}, direction {direction} loaded.")
     model=models[model_name]
 
     #retrieve feature sets for line and direction
@@ -656,41 +670,8 @@ def load_model(model_name):
     """loads model with specified name into global variable models"""
     global models
     
-    pickle_file = open("preds/"+model_name+".sav", 'rb')
-    models[model_name]=pickle.load(pickle_file)
-
-def route_matcher(stations,route):
-    """implement logic to match route from google directions with closest stations from search.
-    requires that stops response includes route info."""
-    response=[]
-    index=0
-    for station in stations:
-        if route in station["lines"]:
-            response.append(index)
-        index+=1
-    return response
-
-def route_verifier(start_stations, stop_stations, start_index, stop_index, route):
-    """function that checks whether start_stations and stop_stations can be connected by the route represented
-    in the google direction."""
-    for start in start_index:
-        start_info=start_stations[start]["lines"][route]
-        for stop in stop_index:
-            stop_info=stop_stations[stop]["lines"][route]
-            #print(f"Trying to match route {route}:{start_info} with {route}:{stop_info}.")
-            for direction in start_info:
-                if direction in stop_info:
-                    if start_info[direction]<stop_info[direction]:
-                        return {
-                            "route":route,
-                            "direction":direction,
-                            "start":{
-                                "id":start_stations[start]["stopid"]
-                            },
-                            "stop":{
-                                "id":stop_stations[stop]["stopid"]
-                            }
-                        }
+    with open("preds/"+model_name+".sav", 'rb') as pickle_file:
+        models[model_name]=pickle.load(pickle_file)
 
 def build_stops_dict():
     global stops_dict
@@ -714,14 +695,41 @@ def get_weather(timestamp):
     from global variables weather and forecast."""
     global weather
     global forecast
+
+    def update_weather():
+        """sends request for current weather to open weather map API for dublin, ireland and stores the response in global variable weather."""     
+        global weather
+        url="https://api.openweathermap.org/data/2.5/weather"
+        params={
+            "q":"dublin,leinster,ireland",
+            "appid":Config.OWM_KEY,
+            "units":"metric"
+        }
+        weather_res=requests.get(url=url,params=params)
+        weather=weather_res.json()
+
+    def update_forecast():
+        """sends request for 48 hour hourly weather forecast to open weather map API for coordinates of dublin and stores response in global dict forecast."""
+        global forecast
+        url="https://api.openweathermap.org/data/2.5/onecall"
+        params={
+            "lat":53.3498, #lat of dublin
+            "lon":-6.2603, #lon of dublin
+            "exclude":"current,minutely,daily", #exclude unnecessary forecast components
+            "appid":Config.OWM_KEY,
+            "units":"metric"
+        }
+        #make request and store response in global variable
+        forecast_res=requests.get(url=url,params=params)
+        forecast=forecast_res.json()["hourly"]
+
     now=round(datetime.datetime.now().timestamp())
-    
     #if the timestamp for the prediction is within 30 mins, get the prediction for now
     if abs(timestamp-now)<=(30*60):
         #update the weather if the cached value is older than 15 mins.
         if weather==None or abs(now-weather["dt"])>=(15*60):
             update_weather()
-            print("Weather is loaded/updated.")
+            # print("Weather is loaded/updated.")
         #return tuple of (temperature,weather description)
         return weather["main"]["temp"],weather["weather"][0]["main"]
 
@@ -738,7 +746,7 @@ def get_weather(timestamp):
                 return fc_row["temp"],fc_row["weather"][0]["main"]
         #update forecast if no cache exists or timestamp value is not covered but latest cached forecast.
         update_forecast()
-        print("Forecast is loaded.")
+        # print("Forecast is loaded.")
         fc_row=forecast[hour_delta]
         #return tuple of (temperature,weather description)
         return fc_row["temp"],fc_row["weather"][0]["main"]
@@ -750,55 +758,26 @@ def get_weather(timestamp):
         #return tuple of (temperature,weather description)
         return weather["main"]["temp"],weather["weather"][0]["main"]
 
-def update_weather():
-    """sends request for current weather to open weather map API for dublin, ireland and stores the response in global variable weather."""
-    global weather
-    
-    url="https://api.openweathermap.org/data/2.5/weather"
-    params={
-        "q":"dublin,leinster,ireland",
-        "appid":os.environ.get("OWM_KEY"),
-        "units":"metric"
-    }
-    weather_res=requests.get(url=url,params=params)
-    weather=weather_res.json()
-
-def update_forecast():
-    """sends request for 48 hour hourly weather forecast to open weather map API for coordinates of dublin and stores response in global dict forecast."""
-    global forecast
-
-    url="https://api.openweathermap.org/data/2.5/onecall"
-    params={
-        "lat":53.3498, #lat of dublin
-        "lon":-6.2603, #lon of dublin
-        "exclude":"current,minutely,daily", #exclude unnecessary forecast components
-        "appid":os.environ.get("OWM_KEY"),
-        "units":"metric"
-    }
-
-    #make request and store response in global variable
-    forecast_res=requests.get(url=url,params=params)
-    forecast=forecast_res.json()["hourly"]
-
 def model_input_create(temp,dur_s,weather,weekday,month,hour,feature_set):
     """Transforms necessary data for predictor in appropriate format for model."""
+    
+    def ordinal_match(value,cardinality):
+        """Transforms ordinal feature in format suitable for modelling by retrieving the
+        cardinality of the binary encoded feature of the model and then
+        setting the correct column "one-hot"."""
+        response=[0]*len(cardinality)
+        try:
+            response[cardinality.index(value)]=1
+        except:
+            # print(f"Could not match {str(value)}.")
+            pass
+        return response
+    
     weather_input=ordinal_match(weather,feature_set["weather"])
     wd_input=wd_input=ordinal_match(weekday,feature_set["weekday"])
     month_input=ordinal_match(month,feature_set["month"])
     hour_input=ordinal_match(hour,feature_set["hour"])
     return [temp,dur_s]+weather_input+wd_input+month_input+hour_input
-
-def ordinal_match(value,cardinality):
-    """Transforms ordinal feature in format suitable for modelling by retrieving the
-    cardinality of the binary encoded feature of the model and then
-    setting the correct column "one-hot"."""
-    response=[0]*len(cardinality)
-    try:
-        response[cardinality.index(value)]=1
-    except:
-        # print(f"Could not match {str(value)}.")
-        pass
-    return response
 
 api.add_resource(Directions, '/api/directions', endpoint='direction')
 api.add_resource(NearestNeighbor, '/api/nearestneighbor', endpoint='nearestneighbor')
