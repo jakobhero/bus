@@ -33,9 +33,10 @@ const PlacesAutocomplete = ({
   } = usePlacesAutocomplete({
     requestOptions: {
       // set google places to only return places in Ireland, favouring places close to Dublin
-      location: { lat: () => 53.35014, lng: () => -6.266155 },
-      radius: 100000, //100 km
+      location: new window.google.maps.LatLng(53.35014, -6.266155),
+      radius: 10000, //100 km
       componentRestrictions: { country: "ie" },
+      strictBounds: true, // doesnt work with current version of package, will be left for future work
     },
   });
   function searchLocalStop(query) {
@@ -187,7 +188,7 @@ const PlacesAutocomplete = ({
                 stopData.length > 0 &&
                   stopData.map(({ stop_id, key, fullname }) => (
                     <ComboboxOption
-                      key={key}
+                      key={key + stop_id}
                       value={`${fullname} (${stop_id}), Bus Stop`}
                     >
                       <img

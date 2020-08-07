@@ -10,11 +10,9 @@ import { ClockCircleOutlined } from "@ant-design/icons";
 
 const AllRoutes = ({ tripTimes, setDirections }) => {
   const [index, setIndex] = useState(0);
-  console.log(tripTimes);
-
   return (
     <div>
-      {tripTimes.length < 1 && <p>Choose a source and destination</p>}
+      {tripTimes.length < 1 && <h2>Choose a source and destination</h2>}
       <Row>
         <Col flex={1}>
           {tripTimes.length > 0 &&

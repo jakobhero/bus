@@ -132,6 +132,7 @@ const App = () => {
             Math.round(time / 1000)
         )
         .then((res) => {
+          console.log(res);
           if (res.data.status === "OK") {
             setTripTimes(res.data.connections);
             setDirections(findPoly(res.data.connections[0]));
