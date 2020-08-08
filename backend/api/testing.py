@@ -30,6 +30,7 @@ class PythonOrgSearch(unittest.TestCase):
 
         search_box = driver.find_element(By.XPATH, '//*[@id="root"]/div/form/div/div/div[2]/div[2]/div/div/div/input')
         search_box.send_keys('46A') # This searches boosting in Google
+        time.sleep(5)
         select_first = driver.find_element(By.XPATH, '//*[@id="-141180394"]')
         select_first.click()
         submit_box = driver.find_element(By.XPATH, '//*[@id="root"]/div/form/div/div/div[2]/div[2]/button')
