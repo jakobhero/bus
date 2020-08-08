@@ -23,6 +23,7 @@ import Home from "@material-ui/icons/Home";
 import HomeOutlined from "@material-ui/icons/HomeOutlined";
 import Work from "@material-ui/icons/Work";
 import WorkOutlined from "@material-ui/icons/WorkOutline";
+import DirectionsBusIcon from "@material-ui/icons/DirectionsBus";
 
 import ReactWeather from "react-open-weather";
 //Optional include of the default css styles
@@ -40,6 +41,40 @@ const centre = {
   lat: 53.35014,
   lng: -6.266155,
 };
+function Locate({ panTo, getStopsByCoords }) {
+  return (
+    <Tooltip className="tooltip" title="Current Location">
+      <div
+        className="mapUI locate"
+        onClick={() => {
+          navigator.geolocation.getCurrentPosition(
+            (position) => {
+              panTo({
+                lat: position.coords.latitude,
+                lng: position.coords.longitude,
+              });
+              getStopsByCoords(
+                position.coords.latitude,
+                position.coords.longitude
+              );
+            },
+            () => null,
+            {
+              enableHighAccuracy: true,
+            }
+          );
+        }}
+      >
+        <i
+          className="fa fa-compass"
+          id="innerLocate"
+          aria-hidden="true"
+          style={{ fontSize: "35px" }}
+        />
+      </div>
+    </Tooltip>
+  );
+}
 
 function ShowMap({
   source,
@@ -79,16 +114,16 @@ function ShowMap({
 
   function iconStatusData() {
     // adding/deleting stop to/from cookies
-    if (favStops.stopsids.includes(selected.stopid)) {
+    if (favStops.stopsids.includes(parseInt(selected.stopid))) {
       delCookie(selected.stopid);
       setFavStops({
         fullname: removeItemOnce(favStops.fullname, selected.fullname),
         stopsids: removeItemOnce(favStops.stopsids, selected.stopid),
       });
     } else {
-      setCookie(selected.stopid);
+      setCookie(selected.stopid, selected.fullname);
       favStops.fullname.push(selected.fullname);
-      favStops.stopsids.push(selected.stopid);
+      favStops.stopsids.push(parseInt(selected.stopid, 10));
       setFavStops({
         fullname: favStops.fullname,
         stopsids: favStops.stopsids,
@@ -110,12 +145,18 @@ function ShowMap({
     saveAddress(Val + "Lng", address.lng);
   };
 
+  const onMapClick = React.useCallback((e) => {
+    setAddress(null);
+    setSelected(null);
+  }, []);
+
   const onClickHW = () => {
     //Updates address to not just contain source but also booleans for use in state of icons
     let newSource = { ...source };
     newSource["work"] = getAddressByVal("Work") === source.val;
     newSource["home"] = getAddressByVal("Home") === source.val;
     setAddress(newSource);
+    setSelected(null);
   };
 
   const directionsBusMarker = (lat, lng) => {
@@ -171,6 +212,7 @@ function ShowMap({
           zoomControl: true,
         }}
         onLoad={onMapLoad}
+        onClick={onMapClick}
       >
         <Locate panTo={panTo} getStopsByCoords={getStopsByCoords} />
         <Tooltip className="tooltip" title="Tourist mode">
@@ -202,11 +244,14 @@ function ShowMap({
         )}
 
         {/* Loop through either array and add markers, based on switch that appears when another route is provided */}
-        {(otherRouteBool ? otherRoute : stops).map((marker) => (
+        {(otherRouteBool ? otherRoute : stops).map((marker, index) => (
           <Marker
-            key={marker.lat - marker.lng}
+            key={index}
             position={{ lat: marker.lat, lng: marker.lng }}
-            onClick={() => setSelected(marker)}
+            onClick={() => {
+              setAddress(null);
+              setSelected(marker);
+            }}
             icon={{
               url: `./bus_1.svg`,
               origin: new window.google.maps.Point(0, 0),
@@ -276,11 +321,15 @@ function ShowMap({
             }}
           >
             <div>
-              <h2>
-                <p>{selected.fullname}</p>
-              </h2>
+              <h2>{selected.fullname}</h2>
               <h4>{`Stop ${selected.stopid}`}</h4>
-              <p>Routes:[11,14,46A]</p>
+              {Object.keys(selected.lines).map((route) => (
+                <span>
+                  <DirectionsBusIcon style={{ color: "blue" }} />
+                  {route}
+                </span>
+              ))}
+              <br />
               <Tooltip className="tooltip" title="Real Time">
                 <Button
                   style={{ margin: 5 }}
@@ -312,7 +361,7 @@ function ShowMap({
               </Modal>
               <Tooltip className="tooltip" title="Toggle Favourite">
                 <Button style={{ margin: 5 }} onClick={iconStatusData}>
-                  {favStops.stopsids.includes(selected.stopid) ? (
+                  {favStops.stopsids.includes(parseInt(selected.stopid)) ? (
                     <StarIcon />
                   ) : (
                     <StarBorderOutlinedIcon />
@@ -322,76 +371,42 @@ function ShowMap({
             </div>
           </InfoWindow>
         ) : null}
-        {/* If directions array is populated that loop through the array of arrays and draw polylines, if thatcurrent array corresponds to a bus array, then place a stop marker
+        {/* If directions array is populated that loop through the array of arrays and draw polylines, if that current array corresponds to a bus array, then place a stop marker
         at the first waypoint. */}
-        {directions.length > 1 &&
-          directions.map((marker, index) =>
-            marker.map((mrk) => (
-              <div key={(mrk[0].lat - mrk[0].lng) * (index + 1)}>
-                {busIndex.includes(index) &&
-                  [1, mrk.length - 1].map((idx) => (
-                    <Marker
-                      key={mrk[idx].lat - mrk[idx].lng}
-                      position={{ lat: mrk[idx].lat, lng: mrk[idx].lng }}
-                      onClick={() =>
-                        directionsBusMarker(mrk[idx].lat, mrk[idx].lng)
-                      }
-                      icon={{
-                        url: `./bus_1.svg`,
-                        origin: new window.google.maps.Point(0, 0),
-                        anchor: new window.google.maps.Point(15, 15),
-                        scaledSize: new window.google.maps.Size(30, 30),
-                      }}
-                    />
-                  ))}
-                <Polyline
-                  path={mrk}
-                  geodesic={true}
-                  options={{
-                    strokeColor: busIndex.includes(index)
-                      ? "#fea100"
-                      : "#1b55db",
-                    strokeOpacity: 1,
-                    strokeWeight: 4,
-                  }}
-                />
-              </div>
-            ))
-          )}
+        {/* Shows stops for luas routes aswell must fix */}
+        {directions.map((marker, index) =>
+          marker.map((mrk) => (
+            <div key={(mrk[0].lat - mrk[0].lng) * (index + 1)}>
+              {busIndex.includes(index) &&
+                [1, mrk.length - 1].map((idx) => (
+                  <Marker
+                    key={mrk[idx].lat - mrk[idx].lng}
+                    position={{ lat: mrk[idx].lat, lng: mrk[idx].lng }}
+                    onClick={() =>
+                      directionsBusMarker(mrk[idx].lat, mrk[idx].lng)
+                    }
+                    icon={{
+                      url: `./bus_1.svg`,
+                      origin: new window.google.maps.Point(0, 0),
+                      anchor: new window.google.maps.Point(15, 15),
+                      scaledSize: new window.google.maps.Size(30, 30),
+                    }}
+                  />
+                ))}
+              <Polyline
+                path={mrk}
+                geodesic={true}
+                options={{
+                  strokeColor: busIndex.includes(index) ? "#fea100" : "#1b55db",
+                  strokeOpacity: 1,
+                  strokeWeight: 4,
+                }}
+              />
+            </div>
+          ))
+        )}
       </GoogleMap>
     </div>
-  );
-}
-
-function Locate({ panTo, getStopsByCoords }) {
-  return (
-    <Tooltip className="tooltip" title="Current Location">
-      <div
-        className="mapUI locate"
-        onClick={() => {
-          navigator.geolocation.getCurrentPosition(
-            (position) => {
-              panTo({
-                lat: position.coords.latitude,
-                lng: position.coords.longitude,
-              });
-              getStopsByCoords(
-                position.coords.latitude,
-                position.coords.longitude
-              );
-            },
-            () => null
-          );
-        }}
-      >
-        <i
-          className="fa fa-compass"
-          id="innerLocate"
-          aria-hidden="true"
-          style={{ fontSize: "35px" }}
-        />
-      </div>
-    </Tooltip>
   );
 }
 
