@@ -1,5 +1,6 @@
 from flask import Flask
 from flask_cors import CORS
+from dotenv import load_dotenv
 
 from api.api import api
 from api.models import db
@@ -22,5 +23,6 @@ def register_extensions(app):
 app = create_app(Config)
 
 if __name__ == '__main__':
+    load_dotenv()
     app = create_app(Config)
     app.run(debug=True, threaded=True)

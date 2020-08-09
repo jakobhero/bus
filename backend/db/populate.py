@@ -22,8 +22,12 @@ def pop_stops(stops_df):
     """populates the stops table with data in stops df."""
     stops_df.to_sql("stops",con=engine,if_exists="append",chunksize=10000,index=False)
 
-if __name__=='__main__':
+def pop_srm(srm_df):
+    """populates the stop_route_match table with data in stop_route_match df."""
+    srm_df.to_sql("stop_route_match",con=engine,if_exists="append",chunksize=10000,index=False)
 
+if __name__=='__main__':
+    
     #create engine from config file
     config=config()
     engine=create_engine("postgresql://"+config["user"]+":"+config["password"]+"@"+config["host"]+"/"+config["database"])
@@ -43,9 +47,7 @@ if __name__=='__main__':
     #populate stops
     stops_df=pd.read_csv("data/stops_cleaned.csv",index_col=0)
     pop_stops(stops_df)
-
-
-
-
-
     
+    #populate stop_route_match
+    srm_df=pd.read_csv("data/stop_route_match.csv",index_col=0)
+    pop_srm(srm_df)

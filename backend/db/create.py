@@ -57,10 +57,19 @@ weather = Table(
     Column('weather_icon', String)
 )
 
+stop_route_match= Table(
+    'stop_route_match', meta,
+    Column('line_id', String(length=5), primary_key=True, nullable=False),
+    Column('direction', SmallInteger, primary_key=True, nullable=False),
+    Column('stoppoint_id', BigInteger, primary_key=True, nullable=False),
+    Column('route_id', SmallInteger),
+    Column('progr_number', SmallInteger)
+)
+
 if __name__=='__main__':
     #create engine
     config=config()
     engine=create_engine("postgresql://"+config["user"]+":"+config["password"]+"@"+config["host"]+"/"+config["database"])
 
-    #create schema
+    #create tables
     meta.create_all(engine)
