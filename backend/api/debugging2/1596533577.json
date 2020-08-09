@@ -1,0 +1,532 @@
+{
+        "connections": [
+                {
+                        "db_index": [
+                                1
+                        ],
+                        "distance": 5879,
+                        "duration": 1175,
+                        "end": {
+                                "address": "Ringsend, Co. Dublin, Ireland",
+                                "location": {
+                                        "lat": 53.3418602,
+                                        "lng": -6.2267125
+                                },
+                                "time": 1596534960
+                        },
+                        "start": {
+                                "address": "University College Dublin, Belfield, Dublin 4, Ireland",
+                                "location": {
+                                        "lat": 53.30713120000001,
+                                        "lng": -6.220312
+                                },
+                                "time": 1596533785
+                        },
+                        "steps": [
+                                {
+                                        "distance": 356,
+                                        "duration": 245,
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "qpjdI|{}d@DK@C?A?CACAEYa@s@_AQE",
+                                                "msjdItw}d@AKE[AM",
+                                                "wsjdI~u}d@y@a@q@WECYMWSMKEKEK",
+                                                "uyjdIzq}d@k@`AKTWd@]x@",
+                                                "c}jdIrw}d@UmASw@CM"
+                                        ],
+                                        "start": {
+                                                "lat": 53.30713120000001,
+                                                "lng": -6.220312
+                                        },
+                                        "stop": {
+                                                "lat": 53.3093741,
+                                                "lng": -6.218879299999999
+                                        }
+                                },
+                                {
+                                        "distance": 5474,
+                                        "duration": 892,
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "y~jdI~r}d@GMMRMTi@~@_@h@y@jA]\\YXYRKHSFM@GAKHi@`@IFk@^yA`AcAr@{@j@s@h@[Z[V[`@A@c@p@q@jAOYa@_AIUMUq@cBSe@GWgBcE_@w@CGyA}Cg@mAkAoCk@mAUg@y@kBw@eBw@gBi@oAO]o@yAYm@Yo@ACGSESIs@?ICYK}@C@_@_DI]Wm@Q\\UNMZqAxCuCbGcAtBQaH?A@EEgAEkB?KCu@IuBK]KWEEEGMKCCCCEESYa@c@u@}@o@{@[a@e@^{@r@u@n@q@l@UPm@f@c@Z[P[JUFID[Fw@RQmAIi@CWCSAG?G?E?GBM@C@E@A@ADEFCe@iESiBMgAMqAAEa@sCESIo@Gm@Eg@?IAE@C?CA?A??AA??A?A?AA??A?AUD[Jm@d@u@h@A?CBa@TOLy@b@yBdAKFw@Zw@TA?SFq@Pm@JWB[DG@u@DM@{@Bm@By@Bi@BM@UDe@PMH[RYNWPm@`@_Ar@a@Xc@^]X_@Z]NUJWFOHQH?@?@?@?@?@A??@?@?@A??@?@A??@A?A?DRBFJTTj@N^DFZl@^p@@@Zp@R\\HTHPHb@CNEXMrAM|@Ot@C`@@d@Wn@Qp@Sp@M`@CJOd@KBGDIJGH[b@QTsBzC}BnDEFS\\W`@c@r@MRMNi@x@}@xAg@x@MRW`@i@tASx@Il@GXE\\E^Gj@Gh@Cd@AFIp@EDILa@DkANg@DcALgARu@NQFm@Ve@XOLQNIFa@ZQFu@JI@[DUDQDKBMBKFOJMJMLKNU^CDEJa@~@c@bAUf@O\\a@|@w@|AU\\gAjASVEFEHAFCHELAHAHAL?H?^JzANC"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3094124,
+                                                "lng": -6.218878399999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.3417336,
+                                                "lng": -6.2274153
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Ringsend, stop 392",
+                                                        "time": 1596534923
+                                                },
+                                                "dep": {
+                                                        "name": "UCD N11 Entrance, stop 768",
+                                                        "time": 1596534031
+                                                },
+                                                "headsign": "Poolbeg St",
+                                                "operator": "Dublin Bus",
+                                                "route": "47",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "distance": 49,
+                                        "duration": 37,
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "iiqdInh_e@K{A?_@?I@K"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3418103,
+                                                "lng": -6.227441900000001
+                                        },
+                                        "stop": {
+                                                "lat": 53.3418602,
+                                                "lng": -6.2267125
+                                        }
+                                }
+                        ],
+                        "transit_index": [
+                                1
+                        ]
+                },
+                {
+                        "db_index": [
+                                1,
+                                3
+                        ],
+                        "distance": 9613,
+                        "duration": 2560,
+                        "end": {
+                                "address": "Ringsend, Co. Dublin, Ireland",
+                                "location": {
+                                        "lat": 53.3418611,
+                                        "lng": -6.226712099999999
+                                },
+                                "time": 1596536424
+                        },
+                        "start": {
+                                "address": "University College Dublin, Belfield, Dublin 4, Ireland",
+                                "location": {
+                                        "lat": 53.30713120000001,
+                                        "lng": -6.220312
+                                },
+                                "time": 1596533864
+                        },
+                        "steps": [
+                                {
+                                        "distance": 356,
+                                        "duration": 245,
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "qpjdI|{}d@DK@C?A?CACAEYa@s@_AQE",
+                                                "msjdItw}d@AKE[AM",
+                                                "wsjdI~u}d@y@a@q@WECYMWSMKEKEK",
+                                                "uyjdIzq}d@k@`AKTWd@]x@",
+                                                "c}jdIrw}d@UmASw@CM"
+                                        ],
+                                        "start": {
+                                                "lat": 53.30713120000001,
+                                                "lng": -6.220312
+                                        },
+                                        "stop": {
+                                                "lat": 53.3093741,
+                                                "lng": -6.218879299999999
+                                        }
+                                },
+                                {
+                                        "distance": 6958,
+                                        "duration": 1325,
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "y~jdI~r}d@GMMRMTi@~@_@h@y@jA]\\YXYRKHSFM@GAKHi@`@IFk@^yA`ACB_An@{@j@s@h@[Z[V[`@A@c@p@q@jAUf@Sh@Of@Oj@WdAEPMp@[jA?B]hAMh@KZELo@fBSd@Uf@Uf@o@dAOXm@z@UZ[`@QXs@dA_@f@yAxByA`CmB`DGJy@pAILSZg@v@IJCF[h@]n@KRu@t@A@EDQHQXg@p@OPKNCB}AzBEFk@x@Yj@q@fAKLGJw@nA[h@GJ_@n@OXIPIROj@Q~BI^O^IRMXOTCFS^]p@Ub@{ArBINGFMRGHIJQT[^c@l@u@hAYb@aBbCGHGHm@z@W`@QTOTKRe@v@A@uApBIJUXy@fAc@j@m@x@s@fAi@t@c@v@CHITELITK\\GNW`A?@Mf@uAy@UIOEk@UuHcCaA]i@Os@WcDgAIAuAe@SGQEiA_@CJc@bBi@dBITA@sAjCg@t@EFSl@ILkBnBORKLm@bAaA~AOTg@bAaAfBOXS^MRMXQ\\O\\Kb@y@~C}@~CAFMd@CL?DA@?F?H?Hf@h@d@`@RPr@l@JJlB`BhAfAFDhAdAv@n@\\VDBJLHRf@jB@LDLZvAH^[\\i@f@g@h@m@p@FVGWOP[^EDkAnA_@h@KVEHEFIX[Si@_@KGy@i@YScAs@SQwB{A[Y[YGACAE?G?MDGBED?@EFCFGVEXAD]pBI`@GPUv@i@jDWnAYjAqAWu@Ow@Q?GYGs@Mr@LiCg@XmE|@aKqCmAuBy@`@uDPmABWC?DYBg@@S@e@AKAECKM_@Om@GWKc@CM?G?AAG?K@OBYD]LmABYSKYOo@]wAu@oBcAMIEA[OGCQKS?I@G@IDGFILG`@OjAm@rEKr@Ej@MlAE^Q~AQxAi@tFE^M|@@RALANEPETAHQdAGVS`AJH"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3094124,
+                                                "lng": -6.218878399999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.3454598,
+                                                "lng": -6.2562454
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Pearse Street",
+                                                        "time": 1596535435
+                                                },
+                                                "dep": {
+                                                        "name": "UCD N11 Entrance, stop 768",
+                                                        "time": 1596534110
+                                                },
+                                                "headsign": "Ongar",
+                                                "operator": "Dublin Bus",
+                                                "route": "39a",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "distance": 165,
+                                        "duration": 120,
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "m`rdId|de@CLE\\ANCXCj@AZ?t@",
+                                                "cardIxbee@ISCGEGGGCAECGCI?",
+                                                "{brdIbaee@AaD?C"
+                                        ],
+                                        "start": {
+                                                "lat": 53.34551159999999,
+                                                "lng": -6.256185599999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.345913,
+                                                "lng": -6.2561462
+                                        }
+                                },
+                                {
+                                        "distance": 2130,
+                                        "duration": 579,
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "qcrdIz{de@R??{A?AD{A?QBmE@}@BwA@gADwA@uA@w@HwBNcDF_CBoA@EDiA@Q@GLmAV_BZu@L]FUFOHMRWFEFEZKPG\\SBADCn@YZOVMr@_@NGNwAV{B^wCR{CJeBDi@HkADg@De@@c@Fu@BWLsBPuCJaBFw@JuAHqAFiALuBJuBF}@@YDi@@ILiBHwAFeAXsDB]NaCHyABc@NoBP}CHa@AO?G?O?]Cg@CiACo@CcACm@Co@KcDMeCEaAOyB?_@?I@GGA"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3460128,
+                                                "lng": -6.2561361
+                                        },
+                                        "stop": {
+                                                "lat": 53.34190299999999,
+                                                "lng": -6.2267174
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Ringsend, stop 356",
+                                                        "time": 1596536387
+                                                },
+                                                "dep": {
+                                                        "name": "Townsend St, Garda Station",
+                                                        "time": 1596535808
+                                                },
+                                                "headsign": "Sandymount",
+                                                "operator": "Dublin Bus",
+                                                "route": "1",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "distance": 4,
+                                        "duration": 1,
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "{iqdI~c_e@FA"
+                                        ],
+                                        "start": {
+                                                "lat": 53.34190299999999,
+                                                "lng": -6.2267174
+                                        },
+                                        "stop": {
+                                                "lat": 53.3418611,
+                                                "lng": -6.226712099999999
+                                        }
+                                }
+                        ],
+                        "transit_index": [
+                                1,
+                                3
+                        ]
+                },
+                {
+                        "db_index": [
+                                1,
+                                3
+                        ],
+                        "distance": 8059,
+                        "duration": 2522,
+                        "end": {
+                                "address": "Ringsend, Co. Dublin, Ireland",
+                                "location": {
+                                        "lat": 53.3418611,
+                                        "lng": -6.226712099999999
+                                },
+                                "time": 1596536424
+                        },
+                        "start": {
+                                "address": "University College Dublin, Belfield, Dublin 4, Ireland",
+                                "location": {
+                                        "lat": 53.30713120000001,
+                                        "lng": -6.220312
+                                },
+                                "time": 1596533902
+                        },
+                        "steps": [
+                                {
+                                        "distance": 356,
+                                        "duration": 245,
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "qpjdI|{}d@DK@C?A?CACAEYa@s@_AQE",
+                                                "msjdItw}d@AKE[AM",
+                                                "wsjdI~u}d@y@a@q@WECYMWSMKEKEK",
+                                                "uyjdIzq}d@k@`AKTWd@]x@",
+                                                "c}jdIrw}d@UmASw@CM"
+                                        ],
+                                        "start": {
+                                                "lat": 53.30713120000001,
+                                                "lng": -6.220312
+                                        },
+                                        "stop": {
+                                                "lat": 53.3093741,
+                                                "lng": -6.218879299999999
+                                        }
+                                },
+                                {
+                                        "distance": 5342,
+                                        "duration": 1050,
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "y~jdI~r}d@GMMRMTi@~@_@h@y@jA]\\YXYRKHSFM@GAKHi@`@IFk@^yA`ACB_An@{@j@s@h@[Z[V[`@A@c@p@q@jAUf@Sh@Of@Oj@WdAEPMp@[jA?B]hAMh@KZELo@fBSd@Uf@Uf@o@dAOXm@z@UZ[`@QXs@dA_@f@yAxByA`CmB`DGJy@pAILSZg@v@IJCF[h@]n@KRu@t@A@EDQHQXg@p@OPKNCB}AzBEFk@x@Yj@q@fAKLGJw@nA[h@GJ_@n@OXIPIROj@Q~BI^O^IRMXOTCFS^]p@Ub@{ArBINGFMRGHIJQT[^c@l@u@hAYb@aBbCGHGHm@z@W`@QTOTKRe@v@A@uApBIJUXy@fAc@j@m@x@s@fAi@t@c@v@CHITELITK\\GNW`A?@Mf@Wx@EPMd@Od@YdASr@Ur@KZMZA@Yx@AJ?BABIVK\\Of@Kb@AJG`@_@zDM~@Mn@On@K\\?B]~@U`@Ud@U\\Y^MNMLa@Xu@f@SHEBC@g@RGD]NA@aAn@KDSASNIFEBIFaAjAc@d@g@j@IHONONSRsBdCw@v@QPe@d@[\\i@f@g@h@m@p@FVGWOP[^EDkAnA_@h@KVEHEFIX[Si@_@KGy@i@YScAs@SQwB{A[Y[YGACAE?G?MDGBED?@EFCFGVEXAD]pBI`@GPUv@i@jDWnAYjAqAWu@Ow@Q?EkNkC[dC[xBIV[VWAg@Mu@@QBkAz@aBwAs@CsAFC?Db@"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3094124,
+                                                "lng": -6.218878399999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.3456223,
+                                                "lng": -6.259291999999999
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Dublin City South, Westmoreland Street",
+                                                        "time": 1596535198
+                                                },
+                                                "dep": {
+                                                        "name": "UCD N11 Entrance, stop 768",
+                                                        "time": 1596534148
+                                                },
+                                                "headsign": "Phoenix Pk",
+                                                "operator": "Dublin Bus",
+                                                "route": "46a",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "distance": 227,
+                                        "duration": 175,
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "cardIvnee@[@M?",
+                                                "mbrdIxnee@Em@M{H",
+                                                "acrdIncee@FI",
+                                                "ybrdIdcee@Am@?SAaD?C"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3456243,
+                                                "lng": -6.2591626
+                                        },
+                                        "stop": {
+                                                "lat": 53.345913,
+                                                "lng": -6.2561462
+                                        }
+                                },
+                                {
+                                        "distance": 2130,
+                                        "duration": 579,
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "qcrdIz{de@R??{A?AD{A?QBmE@}@BwA@gADwA@uA@w@HwBNcDF_CBoA@EDiA@Q@GLmAV_BZu@L]FUFOHMRWFEFEZKPG\\SBADCn@YZOVMr@_@NGNwAV{B^wCR{CJeBDi@HkADg@De@@c@Fu@BWLsBPuCJaBFw@JuAHqAFiALuBJuBF}@@YDi@@ILiBHwAFeAXsDB]NaCHyABc@NoBP}CHa@AO?G?O?]Cg@CiACo@CcACm@Co@KcDMeCEaAOyB?_@?I@GGA"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3460128,
+                                                "lng": -6.2561361
+                                        },
+                                        "stop": {
+                                                "lat": 53.34190299999999,
+                                                "lng": -6.2267174
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Ringsend, stop 356",
+                                                        "time": 1596536387
+                                                },
+                                                "dep": {
+                                                        "name": "Townsend St, Garda Station",
+                                                        "time": 1596535808
+                                                },
+                                                "headsign": "Sandymount",
+                                                "operator": "Dublin Bus",
+                                                "route": "1",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "distance": 4,
+                                        "duration": 1,
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "{iqdI~c_e@FA"
+                                        ],
+                                        "start": {
+                                                "lat": 53.34190299999999,
+                                                "lng": -6.2267174
+                                        },
+                                        "stop": {
+                                                "lat": 53.3418611,
+                                                "lng": -6.226712099999999
+                                        }
+                                }
+                        ],
+                        "transit_index": [
+                                1,
+                                3
+                        ]
+                },
+                {
+                        "db_index": [
+                                1,
+                                3
+                        ],
+                        "distance": 8789,
+                        "duration": 2327,
+                        "end": {
+                                "address": "Ringsend, Co. Dublin, Ireland",
+                                "location": {
+                                        "lat": 53.3418611,
+                                        "lng": -6.226712099999999
+                                },
+                                "time": 1596537244
+                        },
+                        "start": {
+                                "address": "University College Dublin, Belfield, Dublin 4, Ireland",
+                                "location": {
+                                        "lat": 53.30713120000001,
+                                        "lng": -6.220312
+                                },
+                                "time": 1596534917
+                        },
+                        "steps": [
+                                {
+                                        "distance": 356,
+                                        "duration": 245,
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "qpjdI|{}d@DK@C?A?CACAEYa@s@_AQE",
+                                                "msjdItw}d@AKE[AM",
+                                                "wsjdI~u}d@y@a@q@WECYMWSMKEKEK",
+                                                "uyjdIzq}d@k@`AKTWd@]x@",
+                                                "c}jdIrw}d@UmASw@CM"
+                                        ],
+                                        "start": {
+                                                "lat": 53.30713120000001,
+                                                "lng": -6.220312
+                                        },
+                                        "stop": {
+                                                "lat": 53.3093741,
+                                                "lng": -6.218879299999999
+                                        }
+                                },
+                                {
+                                        "distance": 6134,
+                                        "duration": 1153,
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "y~jdI~r}d@GMMRMTi@~@_@h@y@jA]\\YXYRKHSFM@GAKHi@`@IFk@^yA`ACB_An@{@j@s@h@[Z[V[`@A@c@p@q@jAUf@Sh@Of@Oj@WdAEPMp@[jA?B]hAMh@KZELo@fBSd@Uf@Uf@o@dAOXm@z@UZ[`@QXs@dA_@f@yAxByA`CmB`DGJy@pAILSZg@v@IJCF[h@]n@KRu@t@A@EDQHQXg@p@OPKNCB}AzBEFk@x@Yj@q@fAKLGJw@nA[h@GJ_@n@OXIPIROj@Q~BI^O^IRMXOTCFS^]p@Ub@{ArBINGFMRGHIJQT[^c@l@u@hAYb@aBbCGHGHm@z@W`@QTOTKRe@v@A@uApBIJUXy@fAc@j@m@x@s@fAi@t@c@v@CHITELITK\\GNW`A?@Mf@Wx@EPMd@Od@YdASr@Ur@KZMZA@Yx@AJ?BABIVK\\Of@Kb@AJG`@_@zDM~@Mn@On@K\\?B]~@U`@Ud@U\\Y^MNMLa@Xu@f@SHEBC@g@RGD]NA@aAn@KDSASNIFEBIFaAjAc@d@g@j@IHONONSRsBdCw@v@QPe@d@[\\i@f@g@h@m@p@FVGWOP[^EDkAnA_@h@KVEHEFIX[Si@_@KGy@i@YScAs@SQwB{A[Y[YGACAE?G?MDGBED?@EFCFGVEXAD]pBI`@GPUv@i@jDWnAYjAqAWu@Ow@Q?EcDq@XmE|@aKqCmAuBy@`@uDPmABWC?DYBg@@S@e@AKAECKM_@Om@GWKc@CM?G?AAG?K@OBYD]LmABYSKYOo@]wAu@oBcAMIEA[OGCQKS?I@G@IDGFILG`@OjAm@rEKr@Ej@MlAE^Q~AQxAi@tFE^M|@APCHCFADCBEDA@C?K?A?GvE"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3094124,
+                                                "lng": -6.218878399999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.3454598,
+                                                "lng": -6.2562454
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Pearse Street",
+                                                        "time": 1596536316
+                                                },
+                                                "dep": {
+                                                        "name": "UCD N11 Entrance, stop 768",
+                                                        "time": 1596535163
+                                                },
+                                                "headsign": "Heuston Station",
+                                                "operator": "Dublin Bus",
+                                                "route": "145",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "distance": 165,
+                                        "duration": 120,
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "m`rdId|de@CLE\\ANCXCj@AZ?t@",
+                                                "cardIxbee@ISCGEGGGCAECGCI?",
+                                                "{brdIbaee@AaD?C"
+                                        ],
+                                        "start": {
+                                                "lat": 53.34551159999999,
+                                                "lng": -6.256185599999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.345913,
+                                                "lng": -6.2561462
+                                        }
+                                },
+                                {
+                                        "distance": 2130,
+                                        "duration": 537,
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "qcrdIz{de@R??{A?AD{A?QBmE@}@BwA@gADwA@uA@w@HwBNcDF_CBoA@EDiA@Q@GLmAV_BZu@L]FUFOHMRWFEFEZKPG\\SBADCn@YZOVMr@_@NGNwAV{B^wCR{CJeBDi@HkADg@De@@c@Fu@BWLsBPuCJaBFw@JuAHqAFiALuBJuBF}@@YDi@@ILiBHwAFeAXsDB]NaCHyABc@NoBP}CHa@AO?G?O?]Cg@CiACo@CcACm@Co@KcDMeCEaAOyB?_@?I@GGA"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3460128,
+                                                "lng": -6.2561361
+                                        },
+                                        "stop": {
+                                                "lat": 53.34190299999999,
+                                                "lng": -6.2267174
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Ringsend, stop 356",
+                                                        "time": 1596537207
+                                                },
+                                                "dep": {
+                                                        "name": "Townsend St, Garda Station",
+                                                        "time": 1596536670
+                                                },
+                                                "headsign": "Sandymount",
+                                                "operator": "Dublin Bus",
+                                                "route": "1",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "distance": 4,
+                                        "duration": 1,
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "{iqdI~c_e@FA"
+                                        ],
+                                        "start": {
+                                                "lat": 53.34190299999999,
+                                                "lng": -6.2267174
+                                        },
+                                        "stop": {
+                                                "lat": 53.3418611,
+                                                "lng": -6.226712099999999
+                                        }
+                                }
+                        ],
+                        "transit_index": [
+                                1,
+                                3
+                        ]
+                }
+        ],
+        "status": "OK"
+}

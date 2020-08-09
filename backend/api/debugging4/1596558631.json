@@ -1,0 +1,30 @@
+[
+        [
+                {
+                        "duration": 2233,
+                        "schedule": 2087
+                }
+        ],
+        [
+                {
+                        "duration": 2059,
+                        "schedule": 1914
+                }
+        ],
+        [
+                {
+                        "duration": 2233,
+                        "schedule": 2087
+                }
+        ],
+        [
+                {
+                        "duration": 941,
+                        "schedule": 900
+                },
+                {
+                        "duration": 940,
+                        "schedule": 933
+                }
+        ]
+]

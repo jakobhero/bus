@@ -1,28 +1,18 @@
-import axios from "axios";
-function setCookie(name) {
+function setCookie(name, fullname) {
   // this function used to save stopid into cookies
   // the cookies format as stopid=stop fullname
-  var days = 1;
+  var days = 365;
   var exp = new Date();
   // cookies will last for a day
   exp.setTime(exp.getTime() + days * 24 * 60 * 60 * 1000);
 
-  axios
-    .get("/api/stops?substring=" + name)
-    .then((res) => {
-      if (res.statusText === "OK") {
-        return res.data.stops[0].fullname;
-      }
-    })
-    .then((fullname) => {
-      document.cookie = `${name}=${fullname};expires=${exp.toGMTString()}`;
-    });
+  document.cookie = `${name}=${fullname};expires=${exp.toGMTString()}`;
 }
 
 function saveAddress(name, value) {
   // this function used to save address into cookies
   // the cookies format as name=value
-  var days = 1;
+  var days = 365;
   var exp = new Date();
   exp.setTime(exp.getTime() + days * 24 * 60 * 60 * 1000);
   document.cookie = `${name}=${value};expires=${exp.toGMTString()}`;
