@@ -5,6 +5,7 @@ import { Table, Modal, Radio } from "antd";
 import "antd/dist/antd.css";
 import { HistoryOutlined } from "@ant-design/icons";
 import { setCookie, delCookie } from "./cookies";
+import Tooltip from "@material-ui/core/Tooltip";
 
 import "../css/fav.css";
 
@@ -113,19 +114,37 @@ const RealTimeInfo = ({ realTimeData, favStops, setFavStops, setRealTime }) => {
 
   return (
     <div className="realTime">
-      <h2>
-        {realTimeData ? `Stop ${stopid} (${fullname})` : "Select a bus stop"}
-      </h2>
-      {realTimeData && (
-        <div>
-          <Refresh onClick={() => setRealTime(stopid, fullname)} />
-          {icoStatus ? (
-            <StarIcon onClick={(e) => iconStatusData()} />
-          ) : (
-            <StarBorderOutlinedIcon onClick={(e) => iconStatusData()} />
-          )}
-        </div>
-      )}
+      <div className="Title">
+        <h2>
+          {realTimeData ? `Stop ${stopid} (${fullname})` : "Select a bus stop"}
+        </h2>
+        {realTimeData && (
+          <div>
+            <Tooltip className="tooltip" title="Refresh">
+              <Refresh
+                className="buttons left"
+                fontSize="large"
+                onClick={() => setRealTime(stopid, fullname)}
+              />
+            </Tooltip>
+            <Tooltip className="tooltip" title="Toggle Favourite">
+              {icoStatus ? (
+                <StarIcon
+                  className="buttons right"
+                  fontSize="large"
+                  onClick={(e) => iconStatusData()}
+                />
+              ) : (
+                <StarBorderOutlinedIcon
+                  className="buttons right"
+                  fontSize="large"
+                  onClick={(e) => iconStatusData()}
+                />
+              )}
+            </Tooltip>
+          </div>
+        )}
+      </div>
       <Table
         dataSource={realTimeData}
         columns={columns}

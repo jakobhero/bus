@@ -7,9 +7,11 @@ import DirectionsBusIcon from "@material-ui/icons/DirectionsBus";
 import DirectionsWalkIcon from "@material-ui/icons/DirectionsWalk";
 import TramIcon from "@material-ui/icons/Tram";
 import { ClockCircleOutlined } from "@ant-design/icons";
+import { Divider } from "antd";
 
 const AllRoutes = ({ tripTimes, setDirections }) => {
   const [index, setIndex] = useState(0);
+  const [showMore, setShowMore] = useState(false);
   return (
     <div>
       {tripTimes.length < 1 && <h2>Choose a source and destination</h2>}
@@ -23,7 +25,8 @@ const AllRoutes = ({ tripTimes, setDirections }) => {
                 tripTime={dueTime}
                 setDirections={setDirections}
                 setIndex={setIndex}
-                index={i}
+                index={index}
+                i={i}
               />
             ))}
           <br />
@@ -83,10 +86,17 @@ const AllRoutes = ({ tripTimes, setDirections }) => {
                       step.transit.route
                     ) : (
                       <div>
-                        <DirectionsWalkIcon style={{ color: "blue" }} />
-                        {step.directions.map((direction) => (
-                          <p>{ReactHtmlParser(direction)}</p>
-                        ))}
+                        <DirectionsWalkIcon
+                          onClick={() => setShowMore(!showMore)}
+                          style={{ color: "blue" }}
+                        />
+                        {showMore &&
+                          step.directions.map((direction) => (
+                            <p>
+                              {ReactHtmlParser(direction)}
+                              <Divider />
+                            </p>
+                          ))}
                       </div>
                     )}
                   </p>

@@ -72,6 +72,7 @@ const App = () => {
       .get("/api/nearestneighbor?lat=" + lat + "&lng=" + lng)
       .then((res) => {
         if (res.statusText === "OK") {
+          setState({});
           setStopsForMap(res.data.stops);
           setActiveKey("map");
         }
@@ -92,7 +93,6 @@ const App = () => {
         .get("/api/routeinfo?routeid=" + source.bus_id)
         .then((res) => {
           if (res.statusText === "OK") {
-            console.log(res.data);
             setStopsForMap(res.data["1"]);
             setOtherRoute(res.data["2"]);
             setActiveKey("map");
@@ -189,7 +189,7 @@ const App = () => {
         onChange={changeActiveTab}
         activeKey={activeKey}
         size={"large"}
-        animated={true}
+        animated={{ inkBar: true, tabPane: true }}
       >
         <TabPane tab="Map" key="map">
           <ShowMap

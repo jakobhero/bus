@@ -13,15 +13,15 @@ import "antd/dist/antd.css";
 
 import { findPoly } from "./polylines.js";
 
-const Route = ({ tripTime, setDirections, setIndex, index }) => {
+const Route = ({ tripTime, setDirections, setIndex, index, i }) => {
   let startTime = new Date(tripTime.start.time * 1000);
   let endTime = new Date(tripTime.end.time * 1000);
   let time = tripTime.start.time * 1000;
 
   // loops through json and adds a time value to each step, should be moved to backend
-  for (var i = 0; i < tripTime.steps.length; i++) {
-    tripTime.steps[i]["time"] = time;
-    time += tripTime.steps[i].duration * 1000;
+  for (var j = 0; j < tripTime.steps.length; j++) {
+    tripTime.steps[j]["time"] = time;
+    time += tripTime.steps[j].duration * 1000;
   }
   // Depart and arrival time in human readable format
   let departTime =
@@ -37,11 +37,16 @@ const Route = ({ tripTime, setDirections, setIndex, index }) => {
 
   const handleClick = () => {
     // update detailed directions in favourites tab and set new polyline
-    setIndex(index);
+    setIndex(i);
     setDirections(findPoly(tripTime));
   };
   return (
-    <Card onClick={handleClick} hoverable>
+    <Card
+      onClick={handleClick}
+      hoverable
+      size={index === i ? "default" : "small"}
+      bodyStyle={{ backgroundColor: index === i ? "whitesmoke" : "" }}
+    >
       <span>
         {departTime}
         <span> - </span>

@@ -260,9 +260,7 @@ function ShowMap({
             }}
           />
         ))}
-        {destination && otherRoute.length < 1 && stops.length > 1 && (
-          <Marker position={{ lat: destination.lat, lng: destination.lng }} />
-        )}
+
         {address ? (
           <InfoWindow
             position={{ lat: address.lat, lng: address.lng }}

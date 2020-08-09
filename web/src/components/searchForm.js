@@ -81,13 +81,19 @@ const SearchForm = ({
     // Must make sure that all but route have a lat and lng attached to them, bus stops have this already, places require a lookup
     event.preventDefault();
     let newFields = { ...fieldsValues };
-    if (
-      !newFields.source.stopID &&
-      !newFields.source.bus_id &&
-      searchValS !== newFields.source.val
-    ) {
-      newFields.source = { val: searchValS };
+    if (searchValS !== newFields.source.val) {
+      // if there is a mismatch in source val and searchVal thats due to favourites populating search bar, then overide previous values.
+      if (
+        (!newFields.source.stopID && !newFields.source.bus_id) ||
+        (newFields.source.bus_id && !searchValS.includes(", Bus Route")) ||
+        (newFields.source.stopID && !searchValS.includes(", Bus Stop"))
+      ) {
+        newFields.source = { val: searchValS };
+      }
     }
+
+    console.log(newFields);
+    console.log(searchValS);
 
     if (newFields.source.val === "") {
       // No source
