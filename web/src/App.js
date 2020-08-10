@@ -25,6 +25,7 @@ const App = () => {
   const [state, setState] = React.useState({});
   const [activeKey, setActiveKey] = React.useState("map");
   const [tripTimes, setTripTimes] = React.useState([]);
+  const [index, setIndex] = useState(0);
 
   const [realTimeData, setRealTimeData] = useState([]);
   const [stopsForMap, setStopsForMap] = useState([]);
@@ -121,6 +122,7 @@ const App = () => {
     } else {
       // otherwise - directions
       clearMap();
+      setIndex(0);
       axios
         .get(
           "/api/directions?dep=" +
@@ -135,7 +137,6 @@ const App = () => {
             Math.round(time / 1000)
         )
         .then((res) => {
-          console.log(res);
           if (res.data.status === "OK") {
             setTripTimes(res.data.connections);
             setDirections(findPoly(res.data.connections[0]));
@@ -229,6 +230,8 @@ const App = () => {
           <AllRoutes
             tripTimes={tripTimes}
             setDirections={setDirections}
+            index={index}
+            setIndex={setIndex}
           ></AllRoutes>
         </TabPane>
 

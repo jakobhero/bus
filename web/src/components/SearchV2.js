@@ -10,6 +10,7 @@ import {
 } from "@reach/combobox";
 import axios from "axios";
 import "@reach/combobox/styles.css";
+import "../css/search.css";
 
 import routes from "./routesInfo";
 
@@ -158,8 +159,8 @@ const PlacesAutocomplete = ({
   };
 
   return (
-    <div>
-      <Combobox onSelect={handleSelect} aria-label="Choose a location">
+    <div className="places">
+      <Combobox onSelect={handleSelect}>
         <ComboboxInput
           value={searchVal}
           onChange={handleInput}
@@ -188,7 +189,7 @@ const PlacesAutocomplete = ({
                 stopData.length > 0 &&
                   stopData.map(({ stop_id, key, fullname }) => (
                     <ComboboxOption
-                      key={key + stop_id}
+                      key={key + "_" + stop_id}
                       value={`${fullname} (${stop_id}), Bus Stop`}
                     >
                       <img
@@ -207,7 +208,10 @@ const PlacesAutocomplete = ({
                 // display routes that match search and icon
                 routeData.length > 0 &&
                   routeData.map(({ route_id, key }) => (
-                    <ComboboxOption key={key} value={`${route_id}, Bus Route`}>
+                    <ComboboxOption
+                      key={route_id + "_" + key}
+                      value={`${route_id}, Bus Route`}
+                    >
                       <img
                         src="./route.jpg"
                         alt="route"
@@ -223,7 +227,7 @@ const PlacesAutocomplete = ({
                 // display google results and icon
                 status === "OK" &&
                   data.map(({ id, description }) => (
-                    <ComboboxOption key={id} value={description}>
+                    <ComboboxOption key={description} value={description}>
                       <img
                         src="./location.png"
                         alt="route"
