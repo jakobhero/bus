@@ -92,10 +92,10 @@ const AllRoutes = ({ tripTimes, setDirections }) => {
                         />
                         {showMore &&
                           step.directions.map((direction) => (
-                            <p>
+                            <div>
                               {ReactHtmlParser(direction)}
                               <Divider />
-                            </p>
+                            </div>
                           ))}
                       </div>
                     )}
