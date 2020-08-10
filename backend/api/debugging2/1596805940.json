@@ -1,0 +1,736 @@
+{
+        "connections": [
+                {
+                        "db_index": [],
+                        "distance": 218710,
+                        "duration": 15561,
+                        "end": {
+                                "address": "Primary Care Centre, Barrack St, Rathquarter, Sligo, Ireland",
+                                "location": {
+                                        "lat": 54.27660969999999,
+                                        "lng": -8.476087099999999
+                                },
+                                "time": 1596883447
+                        },
+                        "start": {
+                                "address": "36A Londonbridge Road, Dublin 4, D04 PD61, Ireland",
+                                "location": {
+                                        "lat": 53.3376815,
+                                        "lng": -6.2263113
+                                },
+                                "time": 1596867886
+                        },
+                        "steps": [
+                                {
+                                        "directions": [
+                                                "Head <b>west</b> on <b>London Bridge</b>/<wbr/><b>Londonbridge Road</b>/<wbr/><b>R111</b>",
+                                                "Turn <b>left</b>",
+                                                "Turn <b>right</b> onto <b>Lansdowne Rd</b><div style=\"font-size:0.9em\">Destination will be on the left</div>"
+                                        ],
+                                        "distance": 636,
+                                        "duration": 494,
+                                        "html_instructions": "Walk to Lansdowne Road",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "oopdIla_e@JvB",
+                                                "copdIde_e@PITIlB_Ad@U`Ag@b@W|Ay@DCbAo@PKDEDA@?HAH@F?FDD@JHHFJRPXNPLP",
+                                                "}{odId__e@AL?HBLPrADZNfABPDZBVBLBVFh@@NBj@@PB^@\\Bz@?P@R?N@J?N"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3376815,
+                                                "lng": -6.2263113
+                                        },
+                                        "stop": {
+                                                "lat": 53.3340769,
+                                                "lng": -6.2292201
+                                        }
+                                },
+                                {
+                                        "distance": 3011,
+                                        "duration": 540,
+                                        "html_instructions": "Train towards Malahide",
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "}vodIxp_e@EMCDw@pAiD~EcAxAaCfD]d@_@f@e@r@MR[d@ILe@t@[h@INa@n@c@v@EHYf@S`@KPk@jAe@`AEH_@x@c@bAc@dAWp@MXKTELQ`@IXEJSd@Yp@MVO`@Ob@KVABgAdD[x@g@xAeAzCYx@M\\Wz@K\\KZMb@Mb@e@dBe@dBIXWfACDK`@UdAQp@Qx@ENERGRMh@SdAWtA_@jBIj@G`@e@fDg@dD?@Mv@Mv@g@lDCHGZS~@K\\Mf@ABOb@GLWn@OZMTY^GLORSTWZi@l@WZe@j@MNQRSTSTSVIHOREFIHGHKN_@f@_@h@Y^IHOPi@f@UNOLKF[PSHIBWJCBYF]FSBM@[@S@A?O@K?EAWAEAG?GAYEYGUIYIa@Uc@WWSKMII_@e@_@g@_@g@OUO]Q_@Q_@ISkAkCSi@o@yAQc@Wk@Ui@W}@EKO]GQbA_B"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3337453,
+                                                "lng": -6.2287677
+                                        },
+                                        "stop": {
+                                                "lat": 53.3515264,
+                                                "lng": -6.2496782
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Connolly Station",
+                                                        "time": 1596868920
+                                                },
+                                                "dep": {
+                                                        "name": "Lansdowne Road",
+                                                        "time": 1596868380
+                                                },
+                                                "headsign": "Malahide",
+                                                "operator": "Irish Rail",
+                                                "type": "HEAVY_RAIL"
+                                        }
+                                },
+                                {
+                                        "directions": [
+                                                "Take exit <span class=\"location\">Main Entrance</span>",
+                                                "Head <b>south</b> on <b>Amiens St</b>/<wbr/><b>R105</b> toward <b>Talbot St</b><div style=\"font-size:0.9em\">Destination will be on the left</div>"
+                                        ],
+                                        "distance": 256,
+                                        "duration": 195,
+                                        "html_instructions": "Walk to Bus\u00e1ras, stop 135001",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "afsdInsce@@T",
+                                                "efsdIduce@`@Vd@RBBFBHBt@^xAr@HBPJl@^HFLHXXXVXR"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3515264,
+                                                "lng": -6.2496782
+                                        },
+                                        "stop": {
+                                                "lat": 53.34948410000001,
+                                                "lng": -6.2513302
+                                        }
+                                },
+                                {
+                                        "distance": 213943,
+                                        "duration": 12780,
+                                        "html_instructions": "Bus towards Bus\u00e1ras - Sligo It",
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "cyrdIh}ce@CN@@VNZPHDJFNFVMRIPAP?V?d@HL@NBB@PBNDz@PH?d@X@R?@@X?P?L@NAX?T?r@CxCAP?p@Al@?F?PAz@CnAA~@?r@AdA@nAJxAPvAD\\BZDX^lCPxAFf@BVNfA@DN|@Fd@^bCNbAf@fDN`ALfANnAPfBHt@Fp@H~@NjBBV@RPnBHz@PpB^dFFjCLxCNdDHnBBb@DdADpADrA?n@IxCExAM`DKnC?HCn@Cl@?PCZGr@Ez@]vCQ`BK|@i@pEStAQxACZKx@MtAOdDYhGOvBCd@Cr@ApACxA?^AtAClBAjACdCEpDEnDAd@CpA?REz@Gp@ShC@H@DAPCR?L?F@HBJBHDJ@DLLXNl@VDBHHBFBJBN@NFl@JpATzC?BDz@BjAD~BB`BFjBBf@FpA@HNfEBfAJ|BHdADf@X`DDn@ZxDX|CP`CRzBNjAHf@Jf@Lh@h@rB\\nAPj@fA|DRz@^hBH^F\\D`@@Z?TEhB?HAFA`@AN?V?V@X@`@@d@LhDD~@J~BTdGXlKNpFFjBLxD?`@DnABzAB~@@tA?L@bB?@AnAEdBGvAIpAOpBIx@c@xDEb@o@jFi@pEUlBIl@ARcApIiAdKg@hEGn@QdBABGfAGdACp@Cz@Af@A`A?F?fA?dA@t@Bl@Bn@Bb@Bd@Dl@BVBb@@HHv@VdCLnATvCFbADdA@h@DtB@fB?~@Az@ClBGpBCdBGxCG|AEnAE|@AFIbAIn@Mr@S`ASx@Yz@_@`A[l@g@v@SVORCB[Z_@\\YT_BlAg@`@g@`@kAz@eClB[XMLIJ]^MPKLw@rAc@bAa@jAQj@Sp@Ml@Ot@Kl@Gd@AJK|@Ef@IjAAZCV?@CV]~FKpAIt@StA_@~A]dA_@`Ac@v@EDMNMRm@t@m@n@_A`Am@x@[j@s@|AAF]jAEXEVKd@QtAKnA?BIhBC|B?dAElDM`DALIvAGz@KzASzBGt@K~@?BKdAGd@]fCAPQ`AyAhJa@hC]vB_@hCGZQdAQnAg@hDG\\o@dEQjAWbBI`@k@tDEVObAWbBQhAUzAK~@Gl@Gv@ExA?pCJvBFp@Hl@DT@NLp@H`@d@tBLr@Hf@Db@Dj@Dh@@`@@^?^?r@A`@A\\Eh@I~@O~AK~AEz@Ex@AlC?|@BjA?R@^@Z@VD|@NdC`@~FNpBBh@N`ED|A@V@b@DfBDfBBfC@xBAjA@B?b@Ad@A\\A`@C`@C\\Eh@KrAGf@Gj@QpAOfAKl@_@~BiAtHKl@Kn@kBtMW~Ae@dDERQjAyAtJUfBQxAOnAIt@KtAKhAGv@QnCE`AItAEfAEzACnACzAA~@AbDElGAhC?~C?dB?x@Bz@@r@B|@H`APnCLtATjBLz@Lp@N~@VlAXhAZdAf@zA|@bC|@zB^`AFNL\\Vn@DJl@|A^~@r@fBz@xBj@zA`@dAz@vBlA~C^`Al@~Aj@tAbAhC^`Al@~Al@|A^fAXz@Vx@Tx@Nf@V`ATz@f@tBVnAVnARdARlAPjARnA\\zCLhAPbBJtAHhAJdBHrAJrBFpBDxABxA@XBhB?vDC`FE`CEzAEhAM~BGjAE|@CXI`AMtAMzAMnAQ`BQvAQrAU~AId@UpAWvACJm@pCi@`C]lAEPYfAa@tAs@vBg@rA]|@[z@CFYp@S`@ELi@fACh@A@Uf@Q^o@rAi@hAc@z@ABYl@[v@INYp@Wr@s@jB[~@Ul@Wv@ELQl@Oj@Ol@W~@ELMb@M`@ITABKZSp@Oj@Md@Op@Qp@Ml@Ol@Ib@IZShAQx@Mz@Kl@]fCC`@KdAEd@G`ACr@Cp@AhA?vB?t@?d@@t@Bl@?J?\\@b@B\\DZ?@JjAR`BBV?N@VMlCG~AEfAChAAlAA~@?TCvA?xA?vA@dB?zA@bB@pA?LAFE`@LjO^vf@JvLVr[NtRDvDFdH@nCBxF?lD?lAAlBCnIEpEAzAEzDKvFIvEWrJAXM|DKxC]bIe@hJ[pGs@nNSrDMtCIrAIdBEz@OnCA`@{@rPa@hIEx@Ez@OvCKdBGtAc@pIKvBc@rIe@rJSnDa@dI]rGa@|Fk@zHi@tGSbCi@lF?BIx@OtAKdAQ|A[hC{@vHi@xEgBvOoAvK_AnIu@rGoAtK[tCYbCYbCSbBa@pDe@bEQ`BOlAS`CQlBQ~BSlCOhCI~AC\\KrCIvBCf@GdCI`DEhDCvC?fD?fJ?fJ?~D@|@AfCEvDAnAC~AEpBE~AElAEnAEbAIhBKfBKhBGbAEp@IfAIhAKxAUbCKhAKhAK~@Gd@ShB[dCU~Ag@pDq@rEa@vCCN_@jCW`BIl@e@dDSpAKr@]dCW`B]fC_@bCe@dDo@fEm@hEc@`Do@lEWdBc@xCg@lDg@nDeAlHGZ_@nCM~@O|@oD|VgIdk@cBrLUxASxAkDhVWbBWdBaBjLuAnJUbBG^OfAWbB]~BGf@O|@ObAk@bEg@fDo@nEYpBi@tDqAdJqAbJgApH_@jC}@hGu@jFg@nDQfA]xBY`Bi@`D[`By@~Di@dCq@xC}@rDm@~Bs@jCq@~BmA|Du@zBw@zB{@bCiAxCu@jB}@rBu@bB{@hB{@hBkA~BS^u@rAw@xA{@xAs@jAsAtB{AzBINeBhCGJSXaDxE_HfKgFvHuEfHwBbDoCdEsApBU\\i@z@k@z@oB|Ci@v@wCnEcCvDWb@sApBoBdDo@hAs@nAg@`A_B~Cu@`BQ^?@OX}@pB]v@i@rAO`@Q`@{A~Dg@tAw@zBy@dCuApEmAfEi@tBs@nCs@tCe@pBi@bCAD]`Bi@fCq@jDShAUhAOz@w@tEa@dCg@`Do@tEi@bEYzBa@lDW|BO~Ao@pGM`BGz@UjCa@tFMpBOnCMrBMdCIhBQtEEnAKnCEvBKpDIrEExDAdA?`@GpFEpGKvMCbC?ZEpFCjCEpDGnDEvBCjB?JCpACtBAXCzIG~DM`FY|GSfEs@rKSjDGdAMhBMfBIbA[|DEt@QfCCh@]bFWzDInASrC[~EU`FMfEGjBGlBAr@InDIpFE|F?`@AbF?hBB~DB`DBbCHpDJhEJjDTzFPrDPdDLnBT`DTtC^jEh@pFt@lGFj@r@pFj@rDr@pEBRbAtFx@bEr@fDzBjKf@~BzAdHl@pCd@|BjAtFlAxGp@jEr@bF^rCj@dF\\hDPpBXlDNnBV`EJnBDz@JtB@NHhCNbFFpCHtFNhLN~LN~MLhKJlJ@j@PlODlE@xF?vC?dDApCIxGGzEQbHE`BQ~EUnFSnDEp@WjEK|A]~Ek@zGOdBYjCo@dG{@fHcAnHIh@W`BCLe@xC_ApFq@lDa@rBqAjGeAtEaAxDoAxEW`AYbAsAzE{@zCq@hCUbAQh@u@hDo@zC}@`Fq@~D{@dGYlBi@pEQzAm@zF]jEy@lMYdHOfEK|DG|ECjG?v@?zD@t@DpEDhDNxIHrBRhFVjFh@`Iz@lMdAnORhCd@~GXjEPrDFfCFlC?`GYjPUdEi@fH}AxLy@rEyAxGADiBbG_BhEaCpF_AdBwAdCyHhMiEdHkHtLsGrKu@nAAB_C~DcBnDiApC{@~BeAtCgAzDcBvGiArFy@`Fi@hEq@hGg@rGSvDQ~Ea@dOAz@Cz@MzEMbHOlEOnHCz@CdA_@rUGxHGzLClIAzI@`G@nHBdJ@xGBtEB~EFbMBdE@z@@|@DnC@b@JrGT`IT`H`@zH\\pF^lGFfAHnARvDDnANbEHhDB~BB`B@nB?fAAhDC~ACdBE~AAhAGnBGfBQpDIfAGhAKlAGv@Eb@Gn@O~Ac@xDKbAo@dEe@tCOv@m@~CUfAeAtEk@xBe@~Am@pBm@jBk@`Bo@zAs@fBw@hBi@bAw@`Ba@v@Wf@A@i@bAy@~Ag@~@iAzBgA`Cg@fAa@|@uA|Ci@jAq@`Bu@lBo@zAoBhFwAzDAFQf@aCbH[|@g@bBkApDmBxGaArDQn@q@dCgAjEUv@_@`BsAxFYpACLMl@CF{AhHeB~IUnA_AhF]zB]lBALIh@Mv@Mv@k@nDy@zFo@`Fg@`E]vCa@~D[xCQlBO|ACVAJALGx@?FYfDAPm@fIc@~GO`DOtCKvBCl@[|GYtHMpDs@xP]rIMdDCv@_Bv`@Ex@_I~pBKtBm@|OGzAMlCY~GWfFEx@WrEEj@GfAo@xKa@xFa@vFIpAOhBUxC[lDMfB]~Dw@lJu@~IQpBUhCUrCc@hF]`EYzDWhDKbBEz@APUzDGzAMzCYlGCl@SrE]vIU~EOfDSnEYhFMlBKrAMpAe@pES~AOfAe@vC_AtFk@bDi@pCKf@YxAm@pCo@vCo@pCs@|C{@hDe@fBiBxGa@xAo@vB_@jAu@bCSp@ABw@bCiBvFkB|FiEnMCLmBvFmAtDyDtLwBzG]hAUp@_B`FwApE_BbFKXmAvDY|@iAnDIRyArEw@bCc@vA{AtEuAlEcBhFu@~B_@hA{@jCqA|Dk@fB_BbFmArDyAnEi@vAm@~ACFUl@Qd@e@lAMTWl@ENQ\\e@dAy@bBg@`AaAhBOVOVCD_FhIo@dAkAlBc@r@_A|A_@l@aA|A_A~A_A|AoCpEgCbEiAjB_BjCS^{@tA_A`B}@bBq@nAEJS^S^EJo@tAy@lBs@fBi@pAYt@]bAa@jAs@rBo@tBa@tAYz@Sv@Sp@]hAqArEm@vBcClIeAtDgAtDUx@IVc@|AeArDwDtMkA`EQp@g@bBq@~Ba@tAsAzEITc@`BU|@m@|Bi@~B]|ACLOt@[zAq@rDeAtF_AbFY~AWtACLQ~@UlAQ~@Ot@Ov@w@zDWnAI^YhAQr@CLe@lBc@dB{@tCSr@a@pAQj@ADc@lAq@nB{BzFoAfDWr@]|@Od@Od@i@~As@bC]jA]lASv@ET_@xAGTMf@_@fBiApFKf@a@~Bo@xDAFm@jEa@hD_@hDI`AIx@ANMnAQ~BUbDM`BKtAObBYrCU~BmA~J]xBQlA_@nBi@tCIf@y@dEcApFsBlLg@tCa@~BId@Ot@?Bo@~C}@rDc@`Bm@vBi@`B[z@Un@O`@ELyAzDcD`Io@fB}DvJGRkB`F_CdG_@bAOd@{BpFgCvFiAvBcEhIuB`EcAnBMTOXiFtJaAfByAvCkAjCM`@aAbC_@jAqArEgB~Ju@xEk@tDyCtSc@dDKz@_@dDi@jEu@hFkAjHKv@CLIh@}@xF{CtQg@vCq@dEMx@eDrPsCvMKf@ENqBrIm@xCo@pCQr@iDfPwEnUkBlJs@fDeCdMk@rCuD`RUdAqApGEj@cA|Fm@vDIh@ALGn@OzASxCEx@MtBMzBEj@zFfE?C@A?C@C?A@A@C@A?A@A@A@A@A@?@A@?@?B?@?@?@?@@@?@@@@@@@@@@@B@@?@@B?@@B?B@@?B?@?R?@?B?@AB?@AB?@AB?@A@?@A@A@A@A@?@A?A@A?A@A?A?A?A?AAE`@Cv@InBKvAEp@Eh@Iv@ShB?@EZ?T?@?B}@vGe@jDc@tC@??@?@@??@?@?@?@@??@?@?@?@A@?@?@?@?@A??@?@A??@A??@A??@A?_@dDSp@i@xDKv@WpB_A`Hy@lGIl@?X_AvHc@tCg@dCs@tDc@bCCPCJIr@CNC`@CZC^C\\Ev@GxE?XAbA?H?RAh@?zAApBA^@XAfB?Z?dBGdLAZMbNAj@A`CElB?LAjAApAAxBA~EE~DCvCEhE?TAX@|A?bA?\\Ap@ArAF~B@?@??@?@@??@?@?@?@?@A??@A??@A??AA??AA??A?A{@TUH]NEBKFMJcAp@c@r@EF?@@??@?@?@?@?@?@A??@?@?@A??@A??@A?A?A??AA??AA??AAA{AtB?@?@?@?@?@?@?@A??@A??@A?A??AA??AILsArBQVo@fAeAfBgAhBKNGHGJSXOTQVKPaCrDw@|Am@hAk@dAe@dBEZA@CZAf@CZADEVI^IVITMPQP_@\\o@b@QRGL?@@??@?@@??@?@@??@?@?@?@?@?@?@?@?@A??@?@A??@?@A??@A?A?A?A?A??AA??AA??AA??A?A?AA??AQJa@RQPUVc@f@mAbBeB`CuAlB@@@@?@@@?@@@?@?@@@?@?@?@?@?@@@?B?@?@A@?@?@?@?BA@?@?@A@?@A@ABA@?@A??@A?A@A?A@A?A?A?A??AA?A??AA?AAAAAA?AA??AAA?A?AAA?A?AAA?A?A?C?A?A?A?A?A?C?A?A?A@A?A?A_BsCs@mAq@gAc@y@SKmFeIS[o@eAwAiCmCsE}@qBaC{E_AmB}BsEm@aAoA{BoAyB?@A@C@?@A?A@A?A?A?A?A?A?AAA?AAAAAAAAACAAAA?A?AAAAC?AAC?CAC?C?CAC?C?A?C@C?C?C@C?A{DaF_BiB{CmDCCCSi@m@aG{GeAqA_AeAeBwBA?c@e@GG}BmCsFoFQ@E@IBGH]\\a@h@[`@a@j@}AtBMRGJSZABWf@Yp@wBhFMXOVQTmE`LmG|OyGnQiAvCCH_@~@aAbCaAxBOZ[t@Sb@GLGHKJoB`EqAhCuBzD_@n@}CpF[j@qCtEkA~A[b@kA~AaDdEmCdD]^iDxD_D`D}@~@iAfA[V_DnCuD~CSLkCjB}AbAWPgBdA}ChBa@TeBbAgAn@{BrAsAr@sAx@eB|@uCdB_DjBmGnDE@wBlAsBjAkHdEoC|Aa@ToJnFqBlAwBpAaB`ASJmE~BgAh@k@ToCbAm@Ra@LkA^kLbDi@Pa@Je@NoA^g@Nw@Xe@Ng@Nu@XqAd@y@\\o@^iAp@s@f@s@h@]Za@Zc@b@cAfASRQPa@d@{@hAoAfBm@bAYd@Yj@uAjC}AvDy@`C]`AiAdE{@~Dq@pDOdASlAQjA_@bDs@~GEd@Ix@g@~Es@fHm@`GMjAYjB[hB]zA]rAc@zAu@hBcBxDy@dBy@bBM\\y@nBY~@k@vBYjAGZWtAQhAEVa@lDSzBS`Cc@fFANGj@g@bG]`Ei@bGShB?@Mv@Ij@[pBa@rBq@vCOr@GXIZ_AzD{AfGo@vCmAzFq@dE]jD[`FQ`JA~@GvDAj@MdIEpCIjCEjAEvAQrCK~Aa@~Fe@~FKxAYfDg@xECRIz@]jBc@pBu@|Cu@xCeAjEi@nBc@hBI^s@tC{@tC_@hAu@lBqBnEiA|BOXEFi@~@e@\\}BfE}@~AuBbE}@fB{CjGiDhHoBhEwA|C_CxEGVq@zA}@lBaAtBoCvFMVEBEBEDGHuE`KkEhJwCfGcEzIQ`@q@zAeIlP_BfDsBrEOd@GLGN]r@]p@Wf@[p@Wd@GLg@jAa@l@GNm@hAINMRu@|AsAjCoAlBeAnA_@`@k@h@_@\\o@l@kApAgBzB[l@aAdBcAtBw@vBi@~Ae@tAa@zASp@u@jCW~@c@|ASv@{@~CY`AqAnE{GrUeBfGmAhEiAvDiAzDOd@[lA{@vCmA`EkAnDwBnGy@|BcCfGiArCWl@ITeDnHIZAD]t@k@fAq@rAe@z@kBpD{BbESVqGlLmCzEc@x@Yh@{DhHiApB{@|AaBpCmBnDgCtECLCFCHm@nAqCvEqEjIuCfFs@tAsA`CiBdDyBvDgBvCc@v@mBvCQNINUZiCnEW`@eD|FEHU^S\\]h@QLYPUTYR_@VMH}A|@e@Zs@d@c@\\_@ZUROPIJOLk@j@_@`@q@v@}@hAEFeA|AEFKHmEhHU\\eDnFgAnBa@t@cDbGqBzDoBhEuBzEwAjDq@|A_CrFyAzDm@vAS^cC`GuAjD]|@k@|Ao@lBi@xA}@jCaAxCwAvEGTaAnDcBjG}AxGWfAcArEaAhEs@bDi@`CWhAe@|BKr@qAlGQt@CNo@~C]pAWz@Sf@Yr@qE`J]|@Ur@GPMh@CHOp@a@dBgAbFgCbLEPeAvEkBnIuBtJoBvIi@dCaAlE{@zDuAjGoJzb@eDfN}ArGgAbFc@jBaDrO{AlHQx@]|Ag@vBU~@q@pCqAhE{@lC]bA[bASt@U~@SbAeBpKuAnIu@~Dq@jDq@dDeCjKa@dB]vAYtAS~@UbAOt@_AjEEPk@pCk@pCu@lDI`@IZM^Yv@Un@M^O\\iAdDUj@BB@B@B@B@B@D@B?D@D?B?D?D?D?D?DABAD?DABABCBABABC@ABC@C?A@C?C?A?C?CAAAECCCACACACACAEACAE?E?CAE?E?E@E?E@C?E@E@Cc@k@SYY[QQ]SYOQKKMc@e@[e@m@eAOUUc@KQQYECGCEAEAG@GBe@b@i@b@gBdByB~Bi@l@WZINGVIb@?^A`@AZEfACv@Gz@?BMfBIhAh@nAf@bBl@dBXn@n@rA^r@t@jABCBCBABAD?B?B?D@BBB@FHBB@FBD@F@F@F?F?F?F?FAFALADCFADCDCBCDC@EBC@E?C?E?CAGt@IfAEn@E~@_Cj]UdDQbCU|BWnBKr@EZGZG\\Mn@WnA[pAQp@[dAc@tA_@dAcB|D}@pBWl@O^_@~@Yx@Of@Wx@ATSt@WdAOv@YzAG^Kj@OlAOnAIr@CT]lEMfBGTaAtLE`@mAdNmEpj@wA~QuAjQCVK|A}BbZKnAkA~PqAfPO~Ai@jG}@zJc@fF}@~JAZe@nFa@zEkAtLA@EPiBlSw@`JIx@WjCoBfTw@fIcAlKO~A}@fJgAzL]zDKjA}@pJc@xEa@vEqAhNe@fF_CbW?NOjBg@lFc@`F{@|GGVw@|IaBrRIx@qAnO?Pk@`HcBfRw@pIm@~FG\\}B`U{@rIyAlOyA|R?X_@tES|B[lDSjB[lDK`@_BdQiArMa@bEYvC{@xIo@bHc@xE]jDm@|GSdBGf@Kd@a@tBJLBJDJ@J@L@L?L?LAJCLCJEHEHEFGFEBGBG?G?GAGCEEGEEGCIy@fACBINk@pAw@tCi@xBy@lDi@xB[nAkAnEkB|FbCzAr@b@d@\\PHDH@H@H?L?L?LATEVKj@Ml@[lAsAzBKNs@dAo@lAU`@g@fAg@nAe@xAOn@Ot@YzBKbAG|@G`CGpCAVErBAbDLzDLzA\\tBd@dDJh@D`@D`@Dp@@h@@j@B`DQvCWhC[xCg@~E{@tIIt@UfCAFMfAAJMpA]dDi@hFQvB]bDGh@CVE\\KpAE`@CRGh@WnCAHMlAIx@Ix@Gh@QhBUrBC\\yAbOYvCSjA@F@D@FBF@DBBJRVnAbHqF`@]HEDAB?B@DDBH@JHf@@@Lx@@P@H?D?FAFANYlBa@h@y@jAYb@yAxBURQNi@t@aCvC]d@a@b@o@\\e@R[PwBlAiBv@aAd@kAh@qAl@YLoCn@C?CAECCACGQ_A_@mCKa@GWMUEGGAG?I?[@m@DMB{@Fq@?eC?iCG_CE_ACy@A{BCs@EiAGm@CIHKAgA@e@@g@?[@K@G@G@GDGDKHGHmAhA[^{@|@K?ORe@b@o@h@[PYFc@Ba@Ao@Ac@Ck@A?@?@?@AB?@?@?@A@?@?@A??@A??@A@A??@A?A??@A?A??AA?A??AA?AA?AA??AAA?A?AA??A?A?A?A?AA??A?AqCEODY@YBAH?BADABADCBABC@EZMfAYpBQnA_@nBW|@Ut@KVUl@a@|@g@|@_@n@SX[`@[ZqCrE@J@F@F@H?FAH?FAHAFAFCFABABA@ABC@ABC@ABE@E@C?E?EACAEACEECCECEAGCGAGmAK_@QOFSLw@l@iAbAw@x@_@`@s@z@Y`@W`@W`@cBvCsCdFeD|FaGhKaDrF_A~AkGvKkBdD{@zAmBlDoA|ByAjCi@x@a@p@q@x@s@x@aAbAg@h@uAvAk@l@aAtASZY`@?BYd@yBbEGJ{@|AcAhBEHOXS^i@`AINa@t@oAzBS\\s@dAcAvAgAzAsAjBk@x@mBrCe@z@w@xAeAcCYi@yAsDi@yA]}@ACUi@Q[EIGGGGCEEAECG?SCYCWCGPMRQTEHCDCFCJCJAHEVC`@Gv@G^APCPALAJAFEPENI\\ENSn@Q`@ADABCDGLGJGJ[f@GJGNEJGNENCJG\\CROfAOdAWzBeAk@y@e@_@Qg@]kBmAg@[MIMGa@YICAAA?A?A?A?A@A?A?A@A@EBOPs@`AWZIJa@f@EHe@j@s@z@yAfB{@bAqBxBA@KLIHOJIDc@Ze@VSJQFWJw@NQ@SBU?c@@g@C[AaC[wB[k@Ic@Gq@KuASuB[_Dg@wBYgEq@kAOy@Iw@Ek@Ae@?W@a@BWBK@G@WDO@_@JG@MJoBlAcAn@g@\\{AdB_@b@MRSTG@GJg@z@uAlCgBlDiA|Bq@pAiA|BgBhDmBxDmAhCO^GR}@nCa@xAq@nDk@|FU`Ci@lF[|CUrCKpAEbAIpBIlCInBAJQ~C]~DMnAIr@Ij@Kj@Mh@Qv@Mb@AFK\\eAhD_@fAm@`BKXO\\AB[r@KROX[f@c@r@q@fAk@`AOZIPKTWr@Sj@eAlDQf@kBvGgD~KgBdGsBdHM`@eBzF_AxC_AtCk@xA_@x@]l@S\\QXo@~@e@j@g@h@cA~@_Aj@cAp@uAt@eBjAeCjBuBhBi@d@iAbA{@t@wCdC{F~EaAx@e@`@m@h@uAlAe@b@KJ]b@QTQRQXYf@QXg@bAw@lBUn@]~@c@pA]dAkArDm@fBi@`B_ArC{@dCYr@O`@Uf@_@r@S`@Yf@[f@eAfB}DpGgAdByEpHGR{EtHiAlBcBxC{AvCaB|CkAhCy@fBo@vAq@dBo@~A_A`Co@hBiA~Cs@jBcAjC}@rBcA`Cu@~A_ApB_AfBw@zA[d@_@p@a@h@y@`AEDMPGPM^?HAJAHAHCHCHCFEFCBCDCBE@CBE@C?E@E?EAEAEACCEECCEEY@]Ho@^{@f@yBjAuAt@kDzA{CtAk@TeBp@qAf@sAd@{@X}@Xk@PWFUHkAZqAZcATeB`@y@RsAVC?cBZiBVuARsARuAP{@Jo@FQBQBm@FqAJuAL_AH_AFs@B_@B_@@u@BiBD_CD_ABsABuAB}@@_A?O?m@AaA?}@A_AC}@C{@CwAIm@CsAGuCOiBKuAK_AIsAOwAOe@I_AKsAQmBUwAQoAQaASaAQe@Ma@M]Ky@WcA[c@MkCy@QESGeA[wDkAeCs@_@I]IeAWiBc@WGgCm@aAW_@KaAUkCs@wAe@{@Yc@Ma@M{E}Ae@Og@OkBk@aDaAcD_AwA_@mAYa@I[E}@Mi@Eg@Ci@Ai@?i@@g@Bi@Fg@Fi@Li@LYHMDg@ROFWJe@Te@Xg@Xe@^c@\\c@`@URa@b@W\\QRQPiAfBk@bA}@fBk@pAYr@c@jAITEPIb@BD@D?D@F?D@D?F?DAF?DAB?@ADADADADCB?@A@CBC@?@C@C@C?C@Sj@_@nAaEpO[dAaBlGqD`NW|@cAnDe@|AYz@W|@Wv@{BdHe@|AeAfDgAdDo@lB_@jAg@|As@pBy@pBw@dBk@fAm@hAa@p@]h@o@`Ac@l@a@h@c@f@s@v@s@p@y@r@w@n@y@j@w@f@mAn@UJe@X{@b@kCnAoB`AA?{EbCiAn@o@f@m@f@[Vq@p@s@v@m@t@k@z@c@r@q@hAoAnCq@bBaAbC{@vB_B~Dw@dBSVa@t@Yh@_@p@U`@Yb@c@n@]f@]d@s@|@c@d@_@^ABo@n@cBtA}GpF}EzDm@f@_@X{AlAkA~@iAbAML_@\\YXiAfAiAhAiAdA_@`@iAfAiAfAyAvAyAzA}A|AaC~B[ZgAfAmBjByBxBURiAdAiAbAaAx@oAfAs@l@yBlBMRYXaA`A}A~Aa@b@kAhAg@f@EDe@d@oAlAgCdCWTQJ}@|@OLOPIFeAbAgBdBMJ]\\oAfAmAhA_@ZgB~AkCdCyAxAaAhA_AhAmAxAwBjC}DxEGFaBtB_AfAg@n@uErFi@p@s@~@e@r@i@x@A@i@|@ABeApBq@~AYr@CJe@nAu@xBSp@e@tAu@~BoAtDiAhD}@rCkAlD]~@e@zAu@hCI\\a@zAa@fB]hB_@rB[nBo@fESxAA^SrAY`BWlACHs@xCSr@a@rAm@lBITa@hAiAbDgCxGwBjFABMLUj@iBfEy@dBWj@gA|BkBrDgB`D{DzGyDfGu@fA}AzBqAjBi@r@uCvD{@dA}@bAcAhAw@|@yA|AqAzAaBrBgBvBmBzBwB|BcBhBoApAk@n@kArA]b@a@j@w@jAu@nAq@pAu@`Bg@lAg@zAWx@c@xAOh@Qv@k@nCWvAYlBOhAOhAO`BKpAU|FOxEM`FC|@C|@MjFMlGOxHGpDAbB?xABzCDnCFzBJ~BLrBPtBXpCX`CV~A?BLt@Lt@x@`FbApFnAlHbAbGbAzFN|@XhBd@jDNpANtAHlAJlAFjAFbBFlBF~BBR@x@AdB?`@Ar@CfBAb@Af@GlACt@Eh@Gz@Gp@MrAQrAQpAQhAYxAIT{AdIkAhG}@vEmApG}@zE_@lBOx@S|@s@xCCTe@`Bo@tB_@jAUt@u@tBUt@uA|DqArD_AjCIHwCxIsB~FkEdM_AnC]fAERITWt@y@dCOb@aEvLw@zBe@pAUl@eAzC_@lAM^GP[n@y@~B[dASn@K^IXANCV?@?@?@?@@@?@?@?@?@?@?@A@?@?@?@A@?@?@A@?@A@?@A??@A??@A?A@A?A?KTEHKZMd@Kl@Op@[~Ae@nCUnAIh@G`@E^Eh@C`@Ej@DfAB??@@?@??@@@@??@@@?@@@@@?@@B?@?@@@?@?B?@?@?@?B?@?@?@?B?@?@A@?@?@AB?@?@A@AB?@A@?@A@A?A@?@A?Gx@?P?J?R@\\Dd@D\\LjAV`BbBbLL~@lAtIV~@@@@?@@?@@@@@@@@BTHZH^HRJLJHHJLDHFJDHDJFPDNDNDVDXFd@Hn@BVn@jGPvB\\vC^bDBb@@TBf@BdABt@A`A?f@A\\Al@APARAVEAK~Ak@fECb@Zj@zBvBV^J\\NfALj@bDjJh@bCBx@CzBaBnVHR@RKPGBgAzLmB~OyArJ{AlIgBtIyC|LaCjI}HpVqBlHq@xCm@dD_AhHa@hEa@lGQpFEdJDrDH`DNbDr@nK\\pIFdFClGUpHk@bIm@lFe@zC}ArHeAxDcAzC}AzD{Vzj@gHjP{BrHgAdF}@fGa@hE[lF]~Nu@nc@CfNK`Ge@|M_@~G]nDk@nEaAnFcKdb@o@bCeB`FaArBaBrCuIbM}HtK}DhFcJbKaAzAeB|Dm@lBk@xC]tCS|DAx@?zBNjFfBp^dDju@XjIF|C?~GGrE_Bhp@eA`\\QfKC~J@pPOlZDfHJnDtAlTR~H?vGMfHm@pKb@\\Zb@Pf@`BdMTtDPdIIjGc@`Qc@pGiBbUSxBkFne@k@|FMjB[rJYrFi@fIaA`MsBvSSzA_@r@m@~Ac@l@i@b@o@\\sBv@b@pErAdKsAeKc@qEeFrAcC^kABkCGiCa@qA_@mImDeEkCaDiC_AcAeCuCiA}AuA}BaCuEuB}EeA}CcCoIeMmd@g@aCm@uE_BA{AMgBUsB_@qC_A}S_J_EsA_Ci@gG_AcG_@_EA}CLgE\\aEn@uEhAcDlAqClAeDbBgG`EeCpBqCpCgDvD{AnB}CrEsAzBuCjFkBtDwBdFaAhCcDvJcCjJo@rCqCxOaAjHmAjK{@zJo@fJ}@rOsJjfBc@zGo@|Ga@`DiAhHiAhFmA|Eo@rB}AjE_CpFyBdEkC~DmB`C{A`BaEpDiCdBsBbAoCfAyBj@{Dn@yFR}@CsFc@sDy@wQ_FyDs@sEe@_DQmEA{BF_Gd@qHvAai@tMcDx@yDpAaEhBcCpAuGpEoC~BqEtEqChDeB`CqBzCgD|Fua@jx@oDpGsFvIqBvCaHfJc[d`@oNxR}L~O}CrEmAzBcFrJuDxGuCtDe_@|_@}MbM_TvSiBbCaHxK}Q~To@|@a@x@_@nAgCnMw@rEcA`KSlAg@dBi@x@qB~BeE|Fmg@tv@e`@nk@gLpQiFxHcO~VuEhHwEnIcIpOcDlIoAjC]f@wA~AyApAwEjDqD|By\\dVA?@?ED_C~Ak@`@cDzB}BzAcBhAe@^YVe@f@]b@w@jAw@pAwBnDsAtBuBfDwAzBoApBkAjB{@rAk@`AKN[f@qD~Fs@hAqArBcA~ASXMPA@ORMLABIHMLYZu@n@_@\\YTeA~@_@ZEBc@^a@\\uAjAe@`@gA~@cEhDoGpF{@t@yBjBgB|AwCdCWTuAjAiB~AiB`BwAnAmB~AEDkA~@sAjA]Zg@b@]^c@j@a@n@i@`As@rAeBdD[n@w@xA}ArCqA`Cm@hAe@|@U\\wBzDyAnCaBxC_AbBGTaDfGaBxCmAtBmA~BeAhBiArBW^MP]j@}@~AmAjBW^w@hAyAhBiBrBwAvAyAzAo@n@y@z@mAfA}AnAwA`AwAz@y@`@g@VmAb@uA`@mAZYFg@H}@Ns@D{@FuAD{A?o@AgBGcIYwHYyGSOAg@EIHE@G@I?QCsA?i@@]@WBKDSRA@A@A@A@ABA?A@A@CBE@C?E?C?EACACACAACAACCACACACAE]IUGUEe@AeA?oAAO?c@Ac@?oDB}FXeCRa@Dg@JUJ_@TMDABADABC@ABABA@CBC@C@C@E?C?C?EACAGEA??AA??AAAAAq@O]BkAV{Dz@qAb@iAXiBn@i@PYLQDMFSH]LMDyEvBaCfAu@`@mAv@_@V[Va@ZA@i@d@QRq@p@wB~BmBvB}@bA}AbBUT]^QPu@l@w@j@?@i@^{@d@k@XqAl@m@VoA^sBp@qBn@c@N{Ad@aCt@uBp@yAb@_Bf@A@_@LqAb@}@`@}@b@s@`@o@b@SNg@\\q@j@URyAzAEB}BpCo@t@oB`CsAtAgBxAcBpAgAt@SNMHuA`Ak@`@e@XsAt@y@^eAb@y@TA?aATeAPk@FC?m@DG@oB@wAEi@Eg@Iu@Ma@Io@Ow@UkBi@eCo@cCo@yCq@UEA?m@M_Di@EAc@Ic@G_@GAAc@EgBUuC[kCQc@CeBOcCO_AEaAAM?A?o@AqBHgD`@yAHoADS?S?u@AWAaAGq@Gy@Ki@KeAWi@OgAa@YKc@Qy@_@cAc@eAg@_@Qw@]w@_@_Ac@e@Wg@YWQe@[QM]We@_@[Ya@_@_@a@c@c@a@e@CCc@g@a@i@u@_As@}@SWe@k@gB_CcAqAi@q@_AmAaBsBMQUYGIy@eAuAeByAiBgAyAqAaB{AqBsAgByAiBw@kA[e@_@m@QYa@u@e@}@CEYm@Yk@[u@[w@i@uAg@sAk@uAg@sAk@qAo@mAo@iAs@eAu@_Au@{@c@c@i@e@OMi@c@[UuCoBwB{AiD{BaAo@eAq@}@g@o@]k@Ym@YeBw@aC_Ak@Sw@U{@WuA_@k@Mq@Oa@I}@OqASWEi@Ii@GYEy@GWCqAGk@C}@Ck@AaAAi@?m@?Q?Q@o@@_AD_ADiAHG?[DM@uANoAPm@Hi@Jg@JMBa@HMDUDe@J_AV_AX}@Xi@Pg@RYJ_@Lk@Ve@Ro@ZqB~@i@VgBz@QHsBbAqAj@_A^e@P]L_@Ji@Nk@N{@Ri@HcAPe@FA?i@FwAJwBJoBJa@BoBLyDRo@Bi@@MB_@BGJCDCBCBE@E@C@E?EACAEACCCECECECEAGCG?GAIQ_@GOEGKIMI]Mi@Se@Sg@Yc@Ug@U]O_@KUG]IWCI?SAUAI?I?W@WBe@FIByBj@DlAsBjAyEnDMcA?CMu@_B|@"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3494603,
+                                                "lng": -6.2512466
+                                        },
+                                        "stop": {
+                                                "lat": 54.2720255,
+                                                "lng": -8.481893699999999
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Sligo Bus Station, stop 555081",
+                                                        "time": 1596882780
+                                                },
+                                                "dep": {
+                                                        "name": "Bus\u00e1ras, stop 135001",
+                                                        "time": 1596870000
+                                                },
+                                                "headsign": "Bus\u00e1ras - Sligo It",
+                                                "operator": "Bus \u00c9ireann",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "directions": [
+                                                "Head <b>west</b> toward <b>Lord Edward St</b>/<wbr/><b>R292</b>",
+                                                "Slight <b>left</b> onto <b>Lord Edward St</b>/<wbr/><b>R292</b>",
+                                                "Turn <b>left</b> onto <b>N4</b>"
+                                        ],
+                                        "distance": 864,
+                                        "duration": 667,
+                                        "html_instructions": "Walk to Primary Care Centre, Barrack St, Rathquarter, Sligo, Ireland",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "w~fjIttwr@?r@?R@HBLBHDD@DFDFBF?HAHCFCLQBG@E@E?K?G?GAOA]?a@?G?E@IDO",
+                                                "w{fjIprwr@g@mDGg@",
+                                                "g}fjIzkwr@k@AcAKu@KGA}@OqAUWE[IOEMGMI_@UYYQQOSSWMSEIc@s@Yg@g@y@[i@IQg@cAYm@GQKWMa@Mc@IUAGSg@MSGKYg@_@g@c@i@SUII"
+                                        ],
+                                        "start": {
+                                                "lat": 54.27196300000001,
+                                                "lng": -8.4821872
+                                        },
+                                        "stop": {
+                                                "lat": 54.27660969999999,
+                                                "lng": -8.476087099999999
+                                        }
+                                }
+                        ],
+                        "transit_index": [
+                                1,
+                                3
+                        ]
+                },
+                {
+                        "db_index": [
+                                1,
+                                2
+                        ],
+                        "distance": 218242,
+                        "duration": 15187,
+                        "end": {
+                                "address": "Primary Care Centre, Barrack St, Rathquarter, Sligo, Ireland",
+                                "location": {
+                                        "lat": 54.27660969999999,
+                                        "lng": -8.476087099999999
+                                },
+                                "time": 1596883447
+                        },
+                        "start": {
+                                "address": "36A Londonbridge Road, Dublin 4, D04 PD61, Ireland",
+                                "location": {
+                                        "lat": 53.3376815,
+                                        "lng": -6.2263113
+                                },
+                                "time": 1596868260
+                        },
+                        "steps": [
+                                {
+                                        "directions": [
+                                                "Head <b>east</b> on <b>Londonbridge Road</b>/<wbr/><b>R111</b> toward <b>Londonbridge Dr</b>",
+                                                "Turn <b>left</b> toward <b>Irishtown Rd</b>",
+                                                "Turn <b>left</b> onto <b>Irishtown Rd</b>",
+                                                "Turn <b>left</b><div style=\"font-size:0.9em\">Restricted usage road</div><div style=\"font-size:0.9em\">Destination will be on the right</div>"
+                                        ],
+                                        "distance": 315,
+                                        "duration": 248,
+                                        "html_instructions": "Walk to Irishtown Road, stop 371",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "oopdIla_e@AUMiDIwCAe@GwBAOAe@GwB",
+                                                "_qpdIhl~d@Y_@]W",
+                                                "wrpdIpj~d@e@XOLQN",
+                                                "_updIhl~d@@V"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3376815,
+                                                "lng": -6.2263113
+                                        },
+                                        "stop": {
+                                                "lat": 53.33855149999999,
+                                                "lng": -6.2230512
+                                        }
+                                },
+                                {
+                                        "distance": 2277,
+                                        "duration": 400,
+                                        "html_instructions": "Bus towards Shanard Road",
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "eupdIbm~d@CQa@ZQFu@JI@[DUDQDKBMBKFOJMJMLKNU^CDEJa@~@c@bAUf@O\\a@|@w@|AU\\gAjASVEFEHAFCHELAHAHAL?H?^JzAB\\D`ALdCJbDBn@Bl@BbABn@BhABf@?\\?N?F@NI`@Q|COnBM|BO`CC\\YrDAZEh@IvAMhBGr@AXG|@KtBMtBGhAIpAKtAGv@K`BQtCMrBCVCXCZAb@KlAIjAEh@KdBSzCc@lDSdBOvAKn@CPCPCTA?Eb@Gj@ETANGh@Ej@Mz@QjAW`CAH?D?BGp@G`@OjAm@rEKr@Ej@SlBQ~AOnAJD"
+                                        ],
+                                        "start": {
+                                                "lat": 53.33858720000001,
+                                                "lng": -6.2230599
+                                        },
+                                        "stop": {
+                                                "lat": 53.3448274,
+                                                "lng": -6.2531773
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Sraid an Phiarsaigh/Pearse Street",
+                                                        "time": 1596868908
+                                                },
+                                                "dep": {
+                                                        "name": "Irishtown Road, stop 371",
+                                                        "time": 1596868508
+                                                },
+                                                "headsign": "Shanard Road",
+                                                "operator": "Dublin Bus",
+                                                "route": "1",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "distance": 16516,
+                                        "duration": 1499,
+                                        "html_instructions": "Bus towards Maynooth",
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "e|qdIjide@OIkApKu@BcABD{EJoEnDZaCrTA@Cd@AZ?t@AJ?F?H@H?JBL@JFZNp@Lh@Lh@?L?H@N@T?RCz@y@?[@M?w@Ay@?y@C]CU?NfA@DN|@Fd@^bCNbAf@fDN`ALfANnAPfBHt@Fp@H~@NjBBV@RPnBHz@HfAFh@^dFFjCLxCNdDHnBBb@DdADpADrA?n@IxCExAM`DA`@IlB?HCn@Cl@?PCZGr@Ez@]vCQ`BK|@UfBShBStAQxACZKx@MtAOdDYhGOvBCd@Cr@ApACxA?^AtAClBAjACdCEpDEnDAd@CpA?REz@Gp@ShCWvBSSQMc@WQFGDGFEJIVQhAKl@EXCJCLE^QfAKnAC^Ex@IhFE`B?^G`DAf@A`@?j@?n@C`EA\\CjDGzL?b@AjCCtF?~C?p@GnF?T?hB@fB@d@@r@HtE@`A@`@Bl@Bx@Bz@@^J|BDbA@HNtCF|@Bb@BZf@dGHz@p@hHDd@PfBBVPbBh@nFPlBZfDB^HpADn@JpB@RBr@@TBv@@JFpC@VDtCBvC?^BpE@t@@n@@r@Bd@Br@Dz@FfAB|@?V@V?XAp@Aj@?f@IjEA|ACrACxAAn@G`CEzBG|CGfDIxDG`B?HAh@Cz@EdACv@Cz@K~BEtB?FCf@Ch@?JAFE`A?HE^Gx@OlAOfAQ~@CN]nAa@pAQh@Wt@Wx@KXELM^y@bCJbCJzBHvAPxBBRBTDVDRR`A@DR`A_@f@{@`AgAlAY^A@_@h@m@dAS\\_@n@mA~BIN[p@MXAFGNM`@M^Mf@Kb@CHc@bBYnAGPWtAGZEZCNAJA@E\\AFGl@Gd@FLBBFDFDD@x@RXF`@LHBRD@@@?PD@?RDb@J@?H@X@ZAPAFArAKJD@@BBBFBH@D@H?B?DAFCJKNwA~@[XA?]\\MP]d@]l@e@`AaAnC_@~A]dA_@`Ac@v@EDMNMRm@t@m@n@_A`Am@x@[j@s@|AAF]jAEXEVKd@QtAKnA?BIhBC|B?dAElDM`DALIrA?BGz@KzASzBGt@K~@?BKdAGd@]fCAPQ`Aa@dCw@bFa@hC]vBStAKr@GZQdAQnAg@hDG\\o@dEQjAWbBI`@k@tDEVObAWbBQhAUzAK~@Gl@Gv@ExA?pCJvBFp@Hl@DT@NLp@H`@d@tBLr@Hf@Db@Dj@Dh@@`@@^?^?r@A`@A\\Eh@I~@O~AK~AEz@Ex@AlC?|@BjA?R@^@Z@VD|@NdC`@~FNpBBZ?LN`ED|A@V@b@DfBDfBBfC@xBAjA@B?b@Ad@A\\A`@C`@C\\Eh@KrAGf@Gj@QpAOfAKl@Mt@QhAiAtHKl@Kn@kBtMW~Ae@dDERQjAyAtJUfBQvA?@OnAIt@KtAKhAGv@QnC?X?L@^An@?@Ad@GvBEjAEpBALAnDAXAjC?NAdE?z@?~@?R?zAAdA@R?r@DhBJbBf@dFBVVpBN|@Lj@H^JZJ\\Rj@Vn@DN~@~BTl@Vl@Y`@k@v@k@t@GHQTWVUPMHSJA@GB[Lm@NA?SFC?g@B?@W@I@_@@CXALGnAE~BAjACr@AZA^Ev@ApA?F?j@@jA?jA@V@`C@nA?t@?l@?XAl@CfAGhAA`@OnCKnBGhAIdBIvACp@ATAVA\\AX?NAl@An@@`@?N@r@@HBj@Dn@?XDbABx@Np@H^`@bBDLT|@DPBHFPFNFLnBlCX\\DF\\b@BB\\h@FLFHpAbCp@rAt@xB`@bAZ~@Rn@Lh@Lb@FXDRDZDT@TB\\@b@DjBDvEBpD@tB@j@@Z@bADjBBz@NpC@LDd@?@Db@Bb@@NB\\Dx@Bn@t@jFLpARhBLfAFh@^|BHp@NbABZBZB`@Bf@D~@Dz@@jA?\\K~BEz@G`BEp@Cb@Gp@WnBEZE^?V@R?V@\\?H@V@RB\\?B@D@JDX@DDV?B@BH`@@DZ~A@DH`@FJBDHTH\\@A@??A@?@?@??@@?@??@@??@VB^Kr@YCUAKCKCI?AEMO]oA_CM[IGCACCCAC?CAC?OEINYp@Wr@s@jB[~@Ul@Wv@ELQl@Oj@Ol@W~@ELMb@M`@ADLN"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3448274,
+                                                "lng": -6.2531773
+                                        },
+                                        "stop": {
+                                                "lat": 53.356724,
+                                                "lng": -6.465305499999999
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Lucan, Hotel",
+                                                        "time": 1596870863
+                                                },
+                                                "dep": {
+                                                        "name": "Sraid an Phiarsaigh/Pearse Street",
+                                                        "time": 1596869364
+                                                },
+                                                "headsign": "Maynooth",
+                                                "operator": "Dublin Bus",
+                                                "route": "66",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "directions": [
+                                                "Head <b>northwest</b> toward <b>Kew Park</b>"
+                                        ],
+                                        "distance": 8,
+                                        "duration": 7,
+                                        "html_instructions": "Walk to Lucan, Spa Hotel 1",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "}ftdItvmf@GNAB"
+                                        ],
+                                        "start": {
+                                                "lat": 53.356792,
+                                                "lng": -6.4652258
+                                        },
+                                        "stop": {
+                                                "lat": 53.356835,
+                                                "lng": -6.4653282
+                                        }
+                                },
+                                {
+                                        "distance": 198262,
+                                        "duration": 11280,
+                                        "html_instructions": "Bus towards Bus\u00e1ras - Sligo It",
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "egtdIhwmf@A?KZSp@Oj@Md@Op@Qp@Ml@Ol@Ib@IZShAQx@Mz@Kl@]fCC`@KdAEd@G`ACr@Cp@AhA?vB?t@?d@@t@Bl@?J?\\@b@B\\DZ?@JjAR`BBV?N@VMlCG~AEfAChAAlAA~@?TCvA?xA?vA@dB?zA@bB@pA?LAFE`@LjO^vf@JvLVr[NtRDvDFdH@nCBxF?lD?lAAlBCnIEpEAzAEzDKvFIvEWrJAXM|DKxC]bIe@hJ[pGs@nNSrDMtCIrAIdBEz@OnCA`@{@rPa@hIEx@Ez@OvCKdBGtAc@pIKvBc@rIe@rJSnDa@dI]rGa@|Fk@zHi@tGSbCi@lF?BIx@OtAKdAQ|A[hC{@vHi@xEgBvOoAvK_AnIu@rGoAtK[tCYbCYbCSbBa@pDe@bEQ`BOlAS`CQlBQ~BSlCOhCI~AC\\KrCIvBCf@GdCI`DEhDCvC?fD?fJ?fJ?~D@|@AfCEvDAnAC~AEpBE~AElAEnAEbAIhBKfBKhBGbAEp@IfAIhAKxAUbCKhAKhAK~@Gd@ShB[dCU~Ag@pDq@rEa@vCCN_@jCW`BIl@e@dDSpAKr@]dCW`B]fC_@bCe@dDo@fEm@hEc@`Do@lEWdBc@xCg@lDg@nDeAlHGZ_@nCM~@O|@oD|VgIdk@cBrLUxASxAkDhVWbBWdBaBjLuAnJUbBG^OfAWbB]~BGf@O|@ObAk@bEg@fDo@nEYpBi@tDqAdJqAbJgApH_@jC}@hGu@jFg@nDQfA]xBY`Bi@`D[`By@~Di@dCq@xC}@rDm@~Bs@jCq@~BmA|Du@zBw@zB{@bCiAxCu@jB}@rBu@bB{@hB{@hBkA~BS^u@rAw@xA{@xAs@jAsAtB{AzBINeBhCGJSXaDxE_HfKgFvHuEfHwBbDoCdEsApBU\\i@z@k@z@oB|Ci@v@wCnEcCvDWb@sApBoBdDo@hAs@nAg@`A_B~Cu@`BQ^?@OX}@pB]v@i@rAO`@Q`@{A~Dg@tAw@zBy@dCuApEmAfEi@tBs@nCs@tCe@pBi@bCAD]`Bi@fCq@jDShAUhAOz@w@tEa@dCg@`Do@tEi@bEYzBa@lDW|BO~Ao@pGM`BGz@UjCa@tFMpBOnCMrBMdCIhBQtEEnAKnCEvBKpDIrEExDAdA?`@GpFEpGKvMCbC?ZEpFCjCEpDGnDEvBCjB?JCpACtBAXCzIG~DM`FY|GSfEs@rKSjDGdAMhBMfBIbA[|DEt@QfCCh@]bFWzDInASrC[~EU`FMfEGjBGlBAr@InDIpFE|F?`@AbF?hBB~DB`DBbCHpDJhEJjDTzFPrDPdDLnBT`DTtC^jEh@pFt@lGFj@r@pFj@rDr@pEBRbAtFx@bEr@fDzBjKf@~BzAdHl@pCd@|BjAtFlAxGp@jEr@bF^rCj@dF\\hDPpBXlDNnBV`EJnBDz@JtB@NHhCNbFFpCHtFNhLN~LN~MLhKJlJ@j@PlODlE@xF?vC?dDApCIxGGzEQbHE`BQ~EUnFSnDEp@WjEK|A]~Ek@zGOdBYjCo@dG{@fHcAnHIh@W`BCLe@xC_ApFq@lDa@rBqAjGeAtEaAxDoAxEW`AYbAsAzE{@zCq@hCUbAQh@u@hDo@zC}@`Fq@~D{@dGYlBi@pEQzAm@zF]jEy@lMYdHOfEK|DG|ECjG?v@?zD@t@DpEDhDNxIHrBRhFVjFh@`Iz@lMdAnORhCd@~GXjEPrDFfCFlC?`GYjPUdEi@fH}AxLy@rEyAxGADiBbG_BhEaCpF_AdBwAdCyHhMiEdHkHtLsGrKu@nAAB_C~DcBnDiApC{@~BeAtCgAzDcBvGiArFy@`Fi@hEq@hGg@rGSvDQ~Ea@dOAz@Cz@MzEMbHOlEOnHCz@CdA_@rUGxHGzLClIAzI@`G@nHBdJ@xGBtEB~EFbMBdE@z@@|@DnC@b@JrGT`IT`H`@zH\\pF^lGFfAHnARvDDnANbEHhDB~BB`B@nB?fAAhDC~ACdBE~AAhAGnBGfBQpDIfAGhAKlAGv@Eb@Gn@O~Ac@xDKbAo@dEe@tCOv@m@~CUfAeAtEk@xBe@~Am@pBm@jBk@`Bo@zAs@fBw@hBi@bAw@`Ba@v@Wf@A@i@bAy@~Ag@~@iAzBgA`Cg@fAa@|@uA|Ci@jAq@`Bu@lBo@zAoBhFwAzDAFQf@aCbH[|@g@bBkApDmBxGaArDQn@q@dCgAjEUv@_@`BsAxFYpACLMl@CF{AhHeB~IUnA_AhF]zB]lBALIh@Mv@Mv@k@nDy@zFo@`Fg@`E]vCa@~D[xCQlBO|ACVAJALGx@?FYfDAPm@fIc@~GO`DOtCKvBCl@[|GYtHMpDs@xP]rIMdDCv@_Bv`@Ex@_I~pBKtBm@|OGzAMlCY~GWfFEx@WrEEj@GfAo@xKa@xFa@vFIpAOhBUxC[lDMfB]~Dw@lJu@~IQpBUhCUrCc@hF]`EYzDWhDKbBEz@APUzDGzAMzCYlGCl@SrE]vIU~EOfDSnEYhFMlBKrAMpAe@pES~AOfAe@vC_AtFk@bDi@pCKf@YxAm@pCo@vCo@pCs@|C{@hDe@fBiBxGa@xAo@vB_@jAu@bCSp@ABw@bCiBvFkB|FiEnMCLmBvFmAtDyDtLwBzG]hAUp@_B`FwApE_BbFKXmAvDY|@iAnDIRyArEw@bCc@vA{AtEuAlEcBhFu@~B_@hA{@jCqA|Dk@fB_BbFmArDyAnEi@vAm@~ACFUl@Qd@e@lAMTWl@ENQ\\e@dAy@bBg@`AaAhBOVOVCD_FhIo@dAkAlBc@r@_A|A_@l@aA|A_A~A_A|AoCpEgCbEiAjB_BjCS^{@tA_A`B}@bBq@nAEJS^S^EJo@tAy@lBs@fBi@pAYt@]bAa@jAs@rBo@tBa@tAYz@Sv@Sp@]hAqArEm@vBcClIeAtDgAtDUx@IVc@|AeArDwDtMkA`EQp@g@bBq@~Ba@tAsAzEITc@`BU|@m@|Bi@~B]|ACLOt@[zAq@rDeAtF_AbFY~AWtACLQ~@UlAQ~@Ot@Ov@w@zDWnAI^YhAQr@CLe@lBc@dB{@tCSr@a@pAQj@ADc@lAq@nB{BzFoAfDWr@]|@Od@Od@i@~As@bC]jA]lASv@ET_@xAGTMf@_@fBiApFKf@a@~Bo@xDAFm@jEa@hD_@hDI`AIx@ANMnAQ~BUbDM`BKtAObBYrCU~BmA~J]xBQlA_@nBi@tCIf@y@dEcApFsBlLg@tCa@~BId@Ot@?Bo@~C}@rDc@`Bm@vBi@`B[z@Un@O`@ELyAzDcD`Io@fB}DvJGRkB`F_CdG_@bAOd@{BpFgCvFiAvBcEhIuB`EcAnBMTOXiFtJaAfByAvCkAjCM`@aAbC_@jAqArEgB~Ju@xEk@tDyCtSc@dDKz@_@dDi@jEu@hFkAjHKv@CLIh@}@xF{CtQg@vCq@dEMx@eDrPsCvMKf@ENqBrIm@xCo@pCQr@iDfPwEnUkBlJs@fDeCdMk@rCuD`RUdAqApGEj@cA|Fm@vDIh@ALGn@OzASxCEx@MtBMzBEj@zFfE?C@A?C@C?A@A@C@A?A@A@A@A@A@?@A@?@?B?@?@?@?@@@?@@@@@@@@@@@B@@?@@B?@@B?B@@?B?@?R?@?B?@AB?@AB?@AB?@A@?@A@A@A@A@?@A?A@A?A@A?A?A?A?AAE`@Cv@InBKvAEp@Eh@Iv@ShB?@EZ?T?@?B}@vGe@jDc@tC@??@?@@??@?@?@?@@??@?@?@?@A@?@?@?@?@A??@?@A??@A??@A??@A?_@dDSp@i@xDKv@WpB_A`Hy@lGIl@?X_AvHc@tCg@dCs@tDc@bCCPCJIr@CNC`@CZC^C\\Ev@GxE?XAbA?H?RAh@?zAApBA^@XAfB?Z?dBGdLAZMbNAj@A`CElB?LAjAApAAxBA~EE~DCvCEhE?TAX@|A?bA?\\Ap@ArAF~B@?@??@?@@??@?@?@?@?@A??@A??@A??AA??AA??A?A{@TUH]NEBKFMJcAp@c@r@EF?@@??@?@?@?@?@?@A??@?@?@A??@A??@A?A?A??AA??AA??AAA{AtB?@?@?@?@?@?@?@A??@A??@A?A??AA??AILsArBQVo@fAeAfBgAhBKNGHGJSXOTQVKPaCrDw@|Am@hAk@dAe@dBEZA@CZAf@CZADEVI^IVITMPQP_@\\o@b@QRGL?@@??@?@@??@?@@??@?@?@?@?@?@?@?@?@A??@?@A??@?@A??@A?A?A?A?A??AA??AA??AA??A?A?AA??AQJa@RQPUVc@f@mAbBeB`CuAlB@@@@?@@@?@@@?@?@@@?@?@?@?@?@@@?B?@?@A@?@?@?@?BA@?@?@A@?@A@ABA@?@A??@A?A@A?A@A?A?A?A??AA?A??AA?AAAAAA?AA??AAA?A?AAA?A?AAA?A?A?C?A?A?A?A?A?C?A?A?A@A?A?A_BsCs@mAq@gAc@y@SKmFeIS[o@eAwAiCmCsE}@qBaC{E_AmB}BsEm@aAoA{BoAyB?@A@C@?@A?A@A?A?A?A?A?A?AAA?AAAAAAAAACAAAA?A?AAAAC?AAC?CAC?C?CAC?C?A?C@C?C?C@C?A{DaF_BiB{CmDCCCSi@m@aG{GeAqA_AeAeBwBA?c@e@GG}BmCsFoFQ@E@IBGH]\\a@h@[`@a@j@}AtBMRGJSZABWf@Yp@wBhFMXOVQTmE`LmG|OyGnQiAvCCH_@~@aAbCaAxBOZ[t@Sb@GLGHKJoB`EqAhCuBzD_@n@}CpF[j@qCtEkA~A[b@kA~AaDdEmCdD]^iDxD_D`D}@~@iAfA[V_DnCuD~CSLkCjB}AbAWPgBdA}ChBa@TeBbAgAn@{BrAsAr@sAx@eB|@uCdB_DjBmGnDE@wBlAsBjAkHdEoC|Aa@ToJnFqBlAwBpAaB`ASJmE~BgAh@k@ToCbAm@Ra@LkA^kLbDi@Pa@Je@NoA^g@Nw@Xe@Ng@Nu@XqAd@y@\\o@^iAp@s@f@s@h@]Za@Zc@b@cAfASRQPa@d@{@hAoAfBm@bAYd@Yj@uAjC}AvDy@`C]`AiAdE{@~Dq@pDOdASlAQjA_@bDs@~GEd@Ix@g@~Es@fHm@`GMjAYjB[hB]zA]rAc@zAu@hBcBxDy@dBy@bBM\\y@nBY~@k@vBYjAGZWtAQhAEVa@lDSzBS`Cc@fFANGj@g@bG]`Ei@bGShB?@Mv@Ij@[pBa@rBq@vCOr@GXIZ_AzD{AfGo@vCmAzFq@dE]jD[`FQ`JA~@GvDAj@MdIEpCIjCEjAEvAQrCK~Aa@~Fe@~FKxAYfDg@xECRIz@]jBc@pBu@|Cu@xCeAjEi@nBc@hBI^s@tC{@tC_@hAu@lBqBnEiA|BOXEFi@~@e@\\}BfE}@~AuBbE}@fB{CjGiDhHoBhEwA|C_CxEGVq@zA}@lBaAtBoCvFMVEBEBEDGHuE`KkEhJwCfGcEzIQ`@q@zAeIlP_BfDsBrEOd@GLGN]r@]p@Wf@[p@Wd@GLg@jAa@l@GNm@hAINMRu@|AsAjCoAlBeAnA_@`@k@h@_@\\o@l@kApAgBzB[l@aAdBcAtBw@vBi@~Ae@tAa@zASp@u@jCW~@c@|ASv@{@~CY`AqAnE{GrUeBfGmAhEiAvDiAzDOd@[lA{@vCmA`EkAnDwBnGy@|BcCfGiArCWl@ITeDnHIZAD]t@k@fAq@rAe@z@kBpD{BbESVqGlLmCzEc@x@Yh@{DhHiApB{@|AaBpCmBnDgCtECLCFCHm@nAqCvEqEjIuCfFs@tAsA`CiBdDyBvDgBvCc@v@mBvCQNINUZiCnEW`@eD|FEHU^S\\]h@QLYPUTYR_@VMH}A|@e@Zs@d@c@\\_@ZUROPIJOLk@j@_@`@q@v@}@hAEFeA|AEFKHmEhHU\\eDnFgAnBa@t@cDbGqBzDoBhEuBzEwAjDq@|A_CrFyAzDm@vAS^cC`GuAjD]|@k@|Ao@lBi@xA}@jCaAxCwAvEGTaAnDcBjG}AxGWfAcArEaAhEs@bDi@`CWhAe@|BKr@qAlGQt@CNo@~C]pAWz@Sf@Yr@qE`J]|@Ur@GPMh@CHOp@a@dBgAbFgCbLEPeAvEkBnIuBtJoBvIi@dCaAlE{@zDuAjGoJzb@eDfN}ArGgAbFc@jBaDrO{AlHQx@]|Ag@vBU~@q@pCqAhE{@lC]bA[bASt@U~@SbAeBpKuAnIu@~Dq@jDq@dDeCjKa@dB]vAYtAS~@UbAOt@_AjEEPk@pCk@pCu@lDI`@IZM^Yv@Un@M^O\\iAdDUj@BB@B@B@B@B@D@B?D@D?B?D?D?D?D?DABAD?DABABCBABABC@ABC@C?A@C?C?A?C?CAAAECCCACACACACAEACAE?E?CAE?E?E@E?E@C?E@E@Cc@k@SYY[QQ]SYOQKKMc@e@[e@m@eAOUUc@KQQYECGCEAEAG@GBe@b@i@b@gBdByB~Bi@l@WZINGVIb@?^A`@AZEfACv@Gz@?BMfBIhAh@nAf@bBl@dBXn@n@rA^r@t@jABCBCBABAD?B?B?D@BBB@FHBB@FBD@F@F@F?F?F?F?FAFALADCFADCDCBCDC@EBC@E?C?E?CAGt@IfAEn@E~@_Cj]UdDQbCU|BWnBKr@EZGZG\\Mn@WnA[pAQp@[dAc@tA_@dAcB|D}@pBWl@O^_@~@Yx@Of@Wx@ATSt@WdAOv@YzAG^Kj@OlAOnAIr@CT]lEMfBGTaAtLE`@mAdNmEpj@wA~QuAjQCVK|A}BbZKnAkA~PqAfPO~Ai@jG}@zJc@fF}@~JAZe@nFa@zEkAtLA@EPiBlSw@`JIx@WjCoBfTw@fIcAlKO~A}@fJgAzL]zDKjA}@pJc@xEa@vEqAhNe@fF_CbW?NOjBg@lFc@`F{@|GGVw@|IaBrRIx@qAnO?Pk@`HcBfRw@pIm@~FG\\}B`U{@rIyAlOyA|R?X_@tES|B[lDSjB[lDK`@_BdQiArMa@bEYvC{@xIo@bHc@xE]jDm@|GSdBGf@Kd@a@tBJLBJDJ@J@L@L?L?LAJCLCJEHEHEFGFEBGBG?G?GAGCEEGEEGCIy@fACBINk@pAw@tCi@xBy@lDi@xB[nAkAnEkB|FbCzAr@b@d@\\PHDH@H@H?L?L?LATEVKj@Ml@[lAsAzBKNs@dAo@lAU`@g@fAg@nAe@xAOn@Ot@YzBKbAG|@G`CGpCAVErBAbDLzDLzA\\tBd@dDJh@D`@D`@Dp@@h@@j@B`DQvCWhC[xCg@~E{@tIIt@UfCAFMfAAJMpA]dDi@hFQvB]bDGh@CVE\\KpAE`@CRGh@WnCAHMlAIx@Ix@Gh@QhBUrBC\\yAbOYvCSjA@F@D@FBF@DBBJRVnAbHqF`@]HEDAB?B@DDBH@JHf@@@Lx@@P@H?D?FAFANYlBa@h@y@jAYb@yAxBURQNi@t@aCvC]d@a@b@o@\\e@R[PwBlAiBv@aAd@kAh@qAl@YLoCn@C?CAECCACGQ_A_@mCKa@GWMUEGGAG?I?[@m@DMB{@Fq@?eC?iCG_CE_ACy@A{BCs@EiAGm@CIHKAgA@e@@g@?[@K@G@G@GDGDKHGHmAhA[^{@|@K?ORe@b@o@h@[PYFc@Ba@Ao@Ac@Ck@A?@?@?@AB?@?@?@A@?@?@A??@A??@A@A??@A?A??@A?A??AA?A??AA?AA?AA??AAA?A?AA??A?A?A?A?AA??A?AqCEODY@YBAH?BADABADCBABC@EZMfAYpBQnA_@nBW|@Ut@KVUl@a@|@g@|@_@n@SX[`@[ZqCrE@J@F@F@H?FAH?FAHAFAFCFABABA@ABC@ABC@ABE@E@C?E?EACAEACEECCECEAGCGAGmAK_@QOFSLw@l@iAbAw@x@_@`@s@z@Y`@W`@W`@cBvCsCdFeD|FaGhKaDrF_A~AkGvKkBdD{@zAmBlDoA|ByAjCi@x@a@p@q@x@s@x@aAbAg@h@uAvAk@l@aAtASZY`@?BYd@yBbEGJ{@|AcAhBEHOXS^i@`AINa@t@oAzBS\\s@dAcAvAgAzAsAjBk@x@mBrCe@z@w@xAeAcCYi@yAsDi@yA]}@ACUi@Q[EIGGGGCEEAECG?SCYCWCGPMRQTEHCDCFCJCJAHEVC`@Gv@G^APCPALAJAFEPENI\\ENSn@Q`@ADABCDGLGJGJ[f@GJGNEJGNENCJG\\CROfAOdAWzBeAk@y@e@_@Qg@]kBmAg@[MIMGa@YICAAA?A?A?A?A@A?A?A@A@EBOPs@`AWZIJa@f@EHe@j@s@z@yAfB{@bAqBxBA@KLIHOJIDc@Ze@VSJQFWJw@NQ@SBU?c@@g@C[AaC[wB[k@Ic@Gq@KuASuB[_Dg@wBYgEq@kAOy@Iw@Ek@Ae@?W@a@BWBK@G@WDO@_@JG@MJoBlAcAn@g@\\{AdB_@b@MRSTG@GJg@z@uAlCgBlDiA|Bq@pAiA|BgBhDmBxDmAhCO^GR}@nCa@xAq@nDk@|FU`Ci@lF[|CUrCKpAEbAIpBIlCInBAJQ~C]~DMnAIr@Ij@Kj@Mh@Qv@Mb@AFK\\eAhD_@fAm@`BKXO\\AB[r@KROX[f@c@r@q@fAk@`AOZIPKTWr@Sj@eAlDQf@kBvGgD~KgBdGsBdHM`@eBzF_AxC_AtCk@xA_@x@]l@S\\QXo@~@e@j@g@h@cA~@_Aj@cAp@uAt@eBjAeCjBuBhBi@d@iAbA{@t@wCdC{F~EaAx@e@`@m@h@uAlAe@b@KJ]b@QTQRQXYf@QXg@bAw@lBUn@]~@c@pA]dAkArDm@fBi@`B_ArC{@dCYr@O`@Uf@_@r@S`@Yf@[f@eAfB}DpGgAdByEpHGR{EtHiAlBcBxC{AvCaB|CkAhCy@fBo@vAq@dBo@~A_A`Co@hBiA~Cs@jBcAjC}@rBcA`Cu@~A_ApB_AfBw@zA[d@_@p@a@h@y@`AEDMPGPM^?HAJAHAHCHCHCFEFCBCDCBE@CBE@C?E@E?EAEAEACCEECCEEY@]Ho@^{@f@yBjAuAt@kDzA{CtAk@TeBp@qAf@sAd@{@X}@Xk@PWFUHkAZqAZcATeB`@y@RsAVC?cBZiBVuARsARuAP{@Jo@FQBQBm@FqAJuAL_AH_AFs@B_@B_@@u@BiBD_CD_ABsABuAB}@@_A?O?m@AaA?}@A_AC}@C{@CwAIm@CsAGuCOiBKuAK_AIsAOwAOe@I_AKsAQmBUwAQoAQaASaAQe@Ma@M]Ky@WcA[c@MkCy@QESGeA[wDkAeCs@_@I]IeAWiBc@WGgCm@aAW_@KaAUkCs@wAe@{@Yc@Ma@M{E}Ae@Og@OkBk@aDaAcD_AwA_@mAYa@I[E}@Mi@Eg@Ci@Ai@?i@@g@Bi@Fg@Fi@Li@LYHMDg@ROFWJe@Te@Xg@Xe@^c@\\c@`@URa@b@W\\QRQPiAfBk@bA}@fBk@pAYr@c@jAITEPIb@BD@D?D@F?D@D?F?DAF?DAB?@ADADADADCB?@A@CBC@?@C@C@C?C@Sj@_@nAaEpO[dAaBlGqD`NW|@cAnDe@|AYz@W|@Wv@{BdHe@|AeAfDgAdDo@lB_@jAg@|As@pBy@pBw@dBk@fAm@hAa@p@]h@o@`Ac@l@a@h@c@f@s@v@s@p@y@r@w@n@y@j@w@f@mAn@UJe@X{@b@kCnAoB`AA?{EbCiAn@o@f@m@f@[Vq@p@s@v@m@t@k@z@c@r@q@hAoAnCq@bBaAbC{@vB_B~Dw@dBSVa@t@Yh@_@p@U`@Yb@c@n@]f@]d@s@|@c@d@_@^ABo@n@cBtA}GpF}EzDm@f@_@X{AlAkA~@iAbAML_@\\YXiAfAiAhAiAdA_@`@iAfAiAfAyAvAyAzA}A|AaC~B[ZgAfAmBjByBxBURiAdAiAbAaAx@oAfAs@l@yBlBMRYXaA`A}A~Aa@b@kAhAg@f@EDe@d@oAlAgCdCWTQJ}@|@OLOPIFeAbAgBdBMJ]\\oAfAmAhA_@ZgB~AkCdCyAxAaAhA_AhAmAxAwBjC}DxEGFaBtB_AfAg@n@uErFi@p@s@~@e@r@i@x@A@i@|@ABeApBq@~AYr@CJe@nAu@xBSp@e@tAu@~BoAtDiAhD}@rCkAlD]~@e@zAu@hCI\\a@zAa@fB]hB_@rB[nBo@fESxAA^SrAY`BWlACHs@xCSr@a@rAm@lBITa@hAiAbDgCxGwBjFABMLUj@iBfEy@dBWj@gA|BkBrDgB`D{DzGyDfGu@fA}AzBqAjBi@r@uCvD{@dA}@bAcAhAw@|@yA|AqAzAaBrBgBvBmBzBwB|BcBhBoApAk@n@kArA]b@a@j@w@jAu@nAq@pAu@`Bg@lAg@zAWx@c@xAOh@Qv@k@nCWvAYlBOhAOhAO`BKpAU|FOxEM`FC|@C|@MjFMlGOxHGpDAbB?xABzCDnCFzBJ~BLrBPtBXpCX`CV~A?BLt@Lt@x@`FbApFnAlHbAbGbAzFN|@XhBd@jDNpANtAHlAJlAFjAFbBFlBF~BBR@x@AdB?`@Ar@CfBAb@Af@GlACt@Eh@Gz@Gp@MrAQrAQpAQhAYxAIT{AdIkAhG}@vEmApG}@zE_@lBOx@S|@s@xCCTe@`Bo@tB_@jAUt@u@tBUt@uA|DqArD_AjCIHwCxIsB~FkEdM_AnC]fAERITWt@y@dCOb@aEvLw@zBe@pAUl@eAzC_@lAM^GP[n@y@~B[dASn@K^IXANCV?@?@?@?@@@?@?@?@?@?@?@A@?@?@?@A@?@?@A@?@A@?@A??@A??@A?A@A?A?KTEHKZMd@Kl@Op@[~Ae@nCUnAIh@G`@E^Eh@C`@Ej@DfAB??@@?@??@@@@??@@@?@@@@@?@@B?@?@@@?@?B?@?@?@?B?@?@?@?B?@?@A@?@?@AB?@?@A@AB?@A@?@A@A?A@?@A?Gx@?P?J?R@\\Dd@D\\LjAV`BbBbLL~@lAtIV~@@@@?@@?@@@@@@@@BTHZH^HRJLJHHJLDHFJDHDJFPDNDNDVDXFd@Hn@BVn@jGPvB\\vC^bDBb@@TBf@BdABt@A`A?f@A\\Al@APARAVEAK~Ak@fECb@Zj@zBvBV^J\\NfALj@bDjJh@bCBx@CzBaBnVHR@RKPGBgAzLmB~OyArJ{AlIgBtIyC|LaCjI}HpVqBlHq@xCm@dD_AhHa@hEa@lGQpFEdJDrDH`DNbDr@nK\\pIFdFClGUpHk@bIm@lFe@zC}ArHeAxDcAzC}AzD{Vzj@gHjP{BrHgAdF}@fGa@hE[lF]~Nu@nc@CfNK`Ge@|M_@~G]nDk@nEaAnFcKdb@o@bCeB`FaArBaBrCuIbM}HtK}DhFcJbKaAzAeB|Dm@lBk@xC]tCS|DAx@?zBNjFfBp^dDju@XjIF|C?~GGrE_Bhp@eA`\\QfKC~J@pPOlZDfHJnDtAlTR~H?vGMfHm@pKb@\\Zb@Pf@`BdMTtDPdIIjGc@`Qc@pGiBbUSxBkFne@k@|FMjB[rJYrFi@fIaA`MsBvSSzA_@r@m@~Ac@l@i@b@o@\\sBv@b@pErAdKsAeKc@qEeFrAcC^kABkCGiCa@qA_@mImDeEkCaDiC_AcAeCuCiA}AuA}BaCuEuB}EeA}CcCoIeMmd@g@aCm@uE_BA{AMgBUsB_@qC_A}S_J_EsA_Ci@gG_AcG_@_EA}CLgE\\aEn@uEhAcDlAqClAeDbBgG`EeCpBqCpCgDvD{AnB}CrEsAzBuCjFkBtDwBdFaAhCcDvJcCjJo@rCqCxOaAjHmAjK{@zJo@fJ}@rOsJjfBc@zGo@|Ga@`DiAhHiAhFmA|Eo@rB}AjE_CpFyBdEkC~DmB`C{A`BaEpDiCdBsBbAoCfAyBj@{Dn@yFR}@CsFc@sDy@wQ_FyDs@sEe@_DQmEA{BF_Gd@qHvAai@tMcDx@yDpAaEhBcCpAuGpEoC~BqEtEqChDeB`CqBzCgD|Fua@jx@oDpGsFvIqBvCaHfJc[d`@oNxR}L~O}CrEmAzBcFrJuDxGuCtDe_@|_@}MbM_TvSiBbCaHxK}Q~To@|@a@x@_@nAgCnMw@rEcA`KSlAg@dBi@x@qB~BeE|Fmg@tv@e`@nk@gLpQiFxHcO~VuEhHwEnIcIpOcDlIoAjC]f@wA~AyApAwEjDqD|By\\dVA?@?ED_C~Ak@`@cDzB}BzAcBhAe@^YVe@f@]b@w@jAw@pAwBnDsAtBuBfDwAzBoApBkAjB{@rAk@`AKN[f@qD~Fs@hAqArBcA~ASXMPA@ORMLABIHMLYZu@n@_@\\YTeA~@_@ZEBc@^a@\\uAjAe@`@gA~@cEhDoGpF{@t@yBjBgB|AwCdCWTuAjAiB~AiB`BwAnAmB~AEDkA~@sAjA]Zg@b@]^c@j@a@n@i@`As@rAeBdD[n@w@xA}ArCqA`Cm@hAe@|@U\\wBzDyAnCaBxC_AbBGTaDfGaBxCmAtBmA~BeAhBiArBW^MP]j@}@~AmAjBW^w@hAyAhBiBrBwAvAyAzAo@n@y@z@mAfA}AnAwA`AwAz@y@`@g@VmAb@uA`@mAZYFg@H}@Ns@D{@FuAD{A?o@AgBGcIYwHYyGSOAg@EIHE@G@I?QCsA?i@@]@WBKDSRA@A@A@A@ABA?A@A@CBE@C?E?C?EACACACAACAACCACACACAE]IUGUEe@AeA?oAAO?c@Ac@?oDB}FXeCRa@Dg@JUJ_@TMDABADABC@ABABA@CBC@C@C@E?C?C?EACAGEA??AA??AAAAAq@O]BkAV{Dz@qAb@iAXiBn@i@PYLQDMFSH]LMDyEvBaCfAu@`@mAv@_@V[Va@ZA@i@d@QRq@p@wB~BmBvB}@bA}AbBUT]^QPu@l@w@j@?@i@^{@d@k@XqAl@m@VoA^sBp@qBn@c@N{Ad@aCt@uBp@yAb@_Bf@A@_@LqAb@}@`@}@b@s@`@o@b@SNg@\\q@j@URyAzAEB}BpCo@t@oB`CsAtAgBxAcBpAgAt@SNMHuA`Ak@`@e@XsAt@y@^eAb@y@TA?aATeAPk@FC?m@DG@oB@wAEi@Eg@Iu@Ma@Io@Ow@UkBi@eCo@cCo@yCq@UEA?m@M_Di@EAc@Ic@G_@GAAc@EgBUuC[kCQc@CeBOcCO_AEaAAM?A?o@AqBHgD`@yAHoADS?S?u@AWAaAGq@Gy@Ki@KeAWi@OgAa@YKc@Qy@_@cAc@eAg@_@Qw@]w@_@_Ac@e@Wg@YWQe@[QM]We@_@[Ya@_@_@a@c@c@a@e@CCc@g@a@i@u@_As@}@SWe@k@gB_CcAqAi@q@_AmAaBsBMQUYGIy@eAuAeByAiBgAyAqAaB{AqBsAgByAiBw@kA[e@_@m@QYa@u@e@}@CEYm@Yk@[u@[w@i@uAg@sAk@uAg@sAk@qAo@mAo@iAs@eAu@_Au@{@c@c@i@e@OMi@c@[UuCoBwB{AiD{BaAo@eAq@}@g@o@]k@Ym@YeBw@aC_Ak@Sw@U{@WuA_@k@Mq@Oa@I}@OqASWEi@Ii@GYEy@GWCqAGk@C}@Ck@AaAAi@?m@?Q?Q@o@@_AD_ADiAHG?[DM@uANoAPm@Hi@Jg@JMBa@HMDUDe@J_AV_AX}@Xi@Pg@RYJ_@Lk@Ve@Ro@ZqB~@i@VgBz@QHsBbAqAj@_A^e@P]L_@Ji@Nk@N{@Ri@HcAPe@FA?i@FwAJwBJoBJa@BoBLyDRo@Bi@@MB_@BGJCDCBCBE@E@C@E?EACAEACCCECECECEAGCG?GAIQ_@GOEGKIMI]Mi@Se@Sg@Yc@Ug@U]O_@KUG]IWCI?SAUAI?I?W@WBe@FIByBj@DlAsBjAyEnDMcA?CMu@_B|@"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3568322,
+                                                "lng": -6.4653317
+                                        },
+                                        "stop": {
+                                                "lat": 54.2720255,
+                                                "lng": -8.481893699999999
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Sligo Bus Station, stop 555081",
+                                                        "time": 1596882780
+                                                },
+                                                "dep": {
+                                                        "name": "Lucan, Spa Hotel 1",
+                                                        "time": 1596871500
+                                                },
+                                                "headsign": "Bus\u00e1ras - Sligo It",
+                                                "operator": "Bus \u00c9ireann",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "directions": [
+                                                "Head <b>west</b> toward <b>Lord Edward St</b>/<wbr/><b>R292</b>",
+                                                "Slight <b>left</b> onto <b>Lord Edward St</b>/<wbr/><b>R292</b>",
+                                                "Turn <b>left</b> onto <b>N4</b>"
+                                        ],
+                                        "distance": 864,
+                                        "duration": 667,
+                                        "html_instructions": "Walk to Primary Care Centre, Barrack St, Rathquarter, Sligo, Ireland",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "w~fjIttwr@?r@?R@HBLBHDD@DFDFBF?HAHCFCLQBG@E@E?K?G?GAOA]?a@?G?E@IDO",
+                                                "w{fjIprwr@g@mDGg@",
+                                                "g}fjIzkwr@k@AcAKu@KGA}@OqAUWE[IOEMGMI_@UYYQQOSSWMSEIc@s@Yg@g@y@[i@IQg@cAYm@GQKWMa@Mc@IUAGSg@MSGKYg@_@g@c@i@SUII"
+                                        ],
+                                        "start": {
+                                                "lat": 54.27196300000001,
+                                                "lng": -8.4821872
+                                        },
+                                        "stop": {
+                                                "lat": 54.27660969999999,
+                                                "lng": -8.476087099999999
+                                        }
+                                }
+                        ],
+                        "transit_index": [
+                                1,
+                                2,
+                                4
+                        ]
+                },
+                {
+                        "db_index": [
+                                1
+                        ],
+                        "distance": 222715,
+                        "duration": 14061,
+                        "end": {
+                                "address": "Primary Care Centre, Barrack St, Rathquarter, Sligo, Ireland",
+                                "location": {
+                                        "lat": 54.27660969999999,
+                                        "lng": -8.476087099999999
+                                },
+                                "time": 1596885967
+                        },
+                        "start": {
+                                "address": "36A Londonbridge Road, Dublin 4, D04 PD61, Ireland",
+                                "location": {
+                                        "lat": 53.3376815,
+                                        "lng": -6.2263113
+                                },
+                                "time": 1596871906
+                        },
+                        "steps": [
+                                {
+                                        "directions": [
+                                                "Head <b>east</b> on <b>Londonbridge Road</b>/<wbr/><b>R111</b> toward <b>Londonbridge Dr</b>",
+                                                "Turn <b>left</b> toward <b>Irishtown Rd</b>",
+                                                "Turn <b>left</b> onto <b>Irishtown Rd</b>",
+                                                "Turn <b>left</b><div style=\"font-size:0.9em\">Restricted usage road</div><div style=\"font-size:0.9em\">Destination will be on the right</div>"
+                                        ],
+                                        "distance": 315,
+                                        "duration": 248,
+                                        "html_instructions": "Walk to Irishtown Road, stop 371",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "oopdIla_e@AUMiDIwCAe@GwBAOAe@GwB",
+                                                "_qpdIhl~d@Y_@]W",
+                                                "wrpdIpj~d@e@XOLQN",
+                                                "_updIhl~d@@V"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3376815,
+                                                "lng": -6.2263113
+                                        },
+                                        "stop": {
+                                                "lat": 53.33855149999999,
+                                                "lng": -6.2230512
+                                        }
+                                },
+                                {
+                                        "distance": 5573,
+                                        "duration": 1167,
+                                        "html_instructions": "Bus towards Shanard Road",
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "eupdIbm~d@CQa@ZQFu@JI@[DUDQDKBMBKFOJMJMLKNU^CDEJa@~@c@bAUf@O\\a@|@w@|AU\\gAjASVEFEHAFCHELAHAHAL?H?^JzAB\\D`ALdCJbDBn@Bl@BbABn@BhABf@?\\?N?F@NI`@Q|COnBM|BO`CC\\YrDAZEh@IvAMhBGr@AXG|@KtBMtBGhAIpAKtAGv@K`BQtCMrBCVCXCZAb@KlAIjAEh@KdBSzCc@lDSdBOvAKn@CPCPCTA?Eb@Gj@ETANGh@Ej@Mz@QjAW`CAH?D?BGp@G`@OjAm@rEKr@Ej@SlBQ~AOnAECAHgAfKyBFD{EJoEnDZgAfKe@rDU~BC|@GhBz@lDDd@?z@Oh@k@@?J[@M?w@Ay@?y@C]CU?KBA@IBe@R[LMDMDSF}Br@IB]JKFI@mA`@SFkC|@{Af@aEtAa@Nk@PaA\\UHm@R]NOFH^~@pCPZR\\R\\]r@U`@iArBuBbDmApBQ\\u@tAEFKTCFOj@k@~BmAqAII_@_@OOYWw@q@m@e@a@]s@g@MKw@u@EC{@y@o@m@e@c@IKG?CAA?EEOOk@i@q@{@SWY_@KOg@u@g@q@EEk@s@II[_@]_@gAeAeAcAKImAkA_@a@{@y@YWaA_Am@g@IGOKKGKECCMIII_@[GIc@]o@m@_@[aA{@KM?A"
+                                        ],
+                                        "start": {
+                                                "lat": 53.33858720000001,
+                                                "lng": -6.2230599
+                                        },
+                                        "stop": {
+                                                "lat": 53.3629171,
+                                                "lng": -6.258435899999999
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Drumcondra Rail Stn, stop 17",
+                                                        "time": 1596873321
+                                                },
+                                                "dep": {
+                                                        "name": "Irishtown Road, stop 371",
+                                                        "time": 1596872154
+                                                },
+                                                "headsign": "Shanard Road",
+                                                "operator": "Dublin Bus",
+                                                "route": "1",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "directions": [
+                                                "Head <b>southwest</b> on <b>Drumcondra Rd Lower</b>/<wbr/><b>N1</b> toward <b>St Anne's Rd</b>",
+                                                "Turn <b>right</b> onto <b>St Anne's Rd</b><div style=\"font-size:0.9em\">Destination will be on the right</div>"
+                                        ],
+                                        "distance": 65,
+                                        "duration": 53,
+                                        "html_instructions": "Walk to Drumcondra",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "gmudIhjee@JL",
+                                                "{ludIvjee@c@xC?B"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3629237,
+                                                "lng": -6.2584548
+                                        },
+                                        "stop": {
+                                                "lat": 53.3630439,
+                                                "lng": -6.259305899999999
+                                        }
+                                },
+                                {
+                                        "distance": 215898,
+                                        "duration": 10980,
+                                        "html_instructions": "Train towards Sligo",
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "soudI~nee@PLIh@Ov@Id@ERI`@Ib@Ot@G\\ER[`BSfAWpAKl@Mn@Ox@ERIh@Kt@ABQtAK|@I`AKrAEn@ANEdACl@Cr@Av@Aj@AdA?DAbCC|CA|B?nBAh@?^?`@Aj@?n@An@Cn@C`@Af@ABGhAGv@Eh@E`@Iv@OvAKl@EXM|@WxAUfAYtACFAJKf@Ij@[|BKz@Ed@c@hC[`BI^?BS`AGTCPOn@Qr@UdA_@pAY~@_@hASl@_@`A]~@mAnCWl@gDlHIP[r@iB|Dm@tAi@jA_@`AYr@Sp@Oj@AFUz@Id@Ov@Gf@Il@K|@CXEl@Ev@Cd@A\\ATAb@?D?jA@f@@rAA~BE~A?@Cj@Gr@CVC^M`AOpAKn@a@pCOhAc@zCCNKj@[bCUjBG`@UrBCRK`AIp@Gh@Gh@YjCADWtBE\\UlBQrAGh@O`AOjAYrB[vBQ|AQnAOhAQ~AC\\Kz@Gj@I~@Gx@I`A?FKrAI|@AVOrBMrBU|COtBO`CI`AAJe@~GGdAIpAE`AGbAG~AIjBEdBCz@AdAE`DCvC?rB?`CAlBAvQ?tB?fDAlD?`A?z@?xC?fE?dDApB?|A?dC?h@@~@@tB?JBvABbA?JBz@@r@?FFdB@VB~ABl@FlCDtBBpA?`@?bB?`AGbCKzBO|BK|AQdBUlBOfASrA[`B]`B]nAa@xAaAvCyAdEmAhDIVgA~C{AfEEJe@pAoAjDcA|CcArCi@jBq@bCWdAOh@]`BUjAe@rCoAtHc@tCMr@SnASfAOhAGf@WjBQjAQ`BKlACXC^G|@Ev@AJI~AEnB?RAz@Aj@?jA?`A@n@?h@@P@`@DtAHxBDv@N`DD|@ZfFD|@JbBXhF@TRpDB`@NnCDz@@JRxDBd@NfCBh@JjBRxCNdCNrBThCZbDTdC^xC^`DZxBTtAhAhHx@bFP~@ZjBp@`El@tDP`Ad@tCVtATvAPhAHn@Hv@VpB?@XhDH|@LhBJbCBz@Bx@?HFvC@hC?vBApAA`AErAGlBQ|CWpD[~C]tCe@jDKv@Ih@w@zFWbBKx@CPcAjHKx@[xCGd@KfAu@bIi@xFk@`GUbCc@zE_@zDKjAOhBYtCWjCQlBWfCQbB]rCc@vC[nBUtAKl@y@tEa@dCUnAQdACNWtAId@ADEXOz@Ox@ABW`BOnA_@~CK~@a@hD]`DM~@a@lDUlBEVIv@YfCQvA?BEd@O~AGv@G~@Cl@EnACvAApAAhB@~@?TBvAH|BJpBPbCR~BPxALdALz@Z`BZ`BZtALd@Nh@^pAj@dBf@rAt@`Bv@~AfAhBr@jAdCvDjCzD|BzCj@t@JLzDxEbE`FrDlEj@r@~DzENR|CrDzDxEpA|Av@|@|@dAd@p@n@~@^r@^z@Vp@FRPf@Rp@Nf@^dBTpAFb@VfBThCRxC@\\Dv@DtB@~ACfBCdBIjBMzBWdCS`Ba@zBi@xCs@|Dy@rEu@pE_@tCc@|DUxBQrBY|DWdEKvCU`HMxC_@bMi@zOQ`FOvEUbGEdAOdC]nGGlA[jFM|BUjEOhCM|Bo@lKM~BKjBYfFMxBIlBAr@Ab@?dA@dAB`ABbADt@Dj@Fn@Fv@Fh@Hj@F^Lh@ZpAT~@Pj@Nd@x@tBHRDF`A`A^^LLHFz@j@dAr@pAbAp@b@~@l@h@`@n@d@t@x@rApAt@~@^l@~@tAP^r@rAVl@Tj@n@hBV|@Nz@D\\Fr@PpBJxAFpCH~B@lBEnBEbACl@GnAWpCc@nE_@|Dk@nGe@jFGr@Gh@E\\Kp@SnAGZKv@CNGj@MhAU|AKn@G^ITQj@Ob@k@rAw@hBy@fBs@vA{AvDk@pAu@nBc@lAg@dBUt@]tAw@vDKl@Qz@c@bDe@zDQpAgA|J_@fDm@bHw@`Jg@|FOpBO|AEb@QrBOtAQrBYdDQvBEn@[vDa@|EShCm@pIShDa@~GUfEMvBIzAKnBQhDU|DCZEp@OzCGn@Ch@ARGfAItAUpDOdCg@~HUtD]dGSnDa@`Hg@~IG~@Y|Fa@~HUbEWdFSbDUjDKzBUrFCpAAp@Ar@?pB@|@BhCBfBDfANjCZdEd@lFR|BXzCJhATlCN`BHfARbCNbBJjAHz@Dj@BP@RHr@Df@Jx@J`ARxA?DTvANdALz@F\\Lt@BPP~@BNXvA@BTfANp@^xAj@bC^~An@vCP~@Jr@Hd@Fh@FZD`@Db@D`@J|@Bd@@`@@T@^Bh@@^@V?R@R?J?J?JBJ@X@hBAvACjAEfAEdAM`BU~Ba@lDs@rE}@jHq@dF_AjGy@nFq@|EGb@}@|GsBvO_BvLWhBo@hE]|Bo@`Ei@fEg@xDIx@CPO`B_@lD]|Cq@bFkA`HOp@cAnE{AbFuBnG_EdLaE|Lu@zB{A`GmD~JeB|EwCxHwAdEuE~MaArC_G~PuAzDgC|HmBpFmB~FiDtJkBxFmAfEyBrJ{AdHe@xBcDzO_ErRo@~CiAnFOp@I^ENYlAI`@e@pBIRw@dCk@rA{@hBq@zAgA~BcCfFgH|NwBvEEHaC|E_B`CEFyA~Bu@dAC@m@v@uBhCo@v@oGlImDrEo@x@kDzFg@x@aCjFsBvFiCfHcH`Tg@zAeIpUiBxFQn@oBrGe@hBs@vCu@pDkBnJWlAiDjPqAhHo@lDkApH?@I`@Oz@eAhH_B`LuAtJiB~LCTo@zDeAtGe@jC_AzEeAdF_AbDeB|GyAbGuBrIgA|EwBbKm@~CaAzHE^}D|\\CNALoBfPsBzPgA`LUfFGbE@vC@lBJrCJnBNhBZlDt@rG|@xH\\zCzAfM~AhN~@fItDn[fB~NdC~RZbBl@jCd@fBl@jBXt@t@pBl@lAr@~Ah@x@r@bAd@n@DFlAxA`AhAhAvArAhBl@|@pAbCf@fAd@dAZz@d@tAv@jCn@|B`@rBRrAP|@DTNhA^nCTrCLdBHnBFlAHnC?j@?X?FAzECpAGxBMnCC^i@nGk@rF_AfJc@xEq@|G}AzOi@fGSxC]xGC`@KjG?vCA`BNnJV~G\\`F`@lFzB|Y?DvAlQrB`WDv@TrCRbB\\lCn@rDj@nC`@xA^nAb@pAx@`CZ~@d@rA^hA^`A\\~@L^r@fBd@rAJX\\x@DDh@vAl@`BtCrHr@rBb@lADRb@zALl@DPH^p@pD@Fh@bCFZZlBHlB@`EAtBCnDEjEAh@KpEWdKSrHKjD]bL[|Jg@vLgAp]Ct@]rKANOrEMjE[hJIvBCx@GjA[rE_@|EYfCw@tGw@fHeBzOQzAyCbXg@jEaB`PcAvL[|CIfAGtASpGMpE[bLIdCO`FEbBGbC[fIO`DIlAQpBCTOdAIj@S~@a@bBUt@_@fACJk@xA_@z@oAlCqFzKiAbCmDlHYl@CDc@v@aBfDiBxCw@hA_ChCw@r@yFbEmFvDaBdA{A|@eAd@m@Ru@VUHo@Rw@JwBZ}ATiBZsAZqBf@q@Py@Zq@ZEB_@RoEhCoCnBc@ZqBnBoB|BuBbCQRc@h@c@l@e@p@aAbBaAjB}@~BYr@s@xBgAvDIZgBlG}E`QqDrMsBxHSt@gAbEcAtE{BjKuDvTqDzSIj@}BrLc@tBqA~FcAjEu@nC]~@KT_AlB[l@cB|CqGvKsAzBs@hAWd@Wd@OTeAnBuBxDQZyAdCIVUp@IVw@tAkBbDYb@}AxBoBtBa@V}B~AqFhC{C|AOF}@d@oB|@gDhBiCnBmBvBw@|@_A|Ak@jAsApC}@`Cm@bBiAlDaDvJwDjMsBzGy@`Cu@zBg@pAmAtCOZwA`DELe@z@MVoAbCw@fBqD`Iq@lB}A~FEZo@jEu@xGiApLuAdOmAvMoAtMm@hHg@rFm@|LO~M?vFAbI?pFGnGYhGi@|JSbESpDIvAKxAGz@?DGtAItAMtBo@jLwCfm@KrBSrDKtBGpAG~@]jGe@pIkBf]c@lIwAtXg@`KeBx_@[jGw@nNo@tK_@hFu@`K}@dLwB`WGr@}@bKa@pEW`DaAjLwAjPiLjqAwB|V{Dxd@]`EuJ`jA}@lKg@tFEl@Ed@MxA_@lEcAtLqEhh@k@~GYlDE^IdA_A|K{Cn]u@rIGv@Gz@KjAU~BgC|YgCdZI`Ae@rFi@xGu@|IaDh_@g@jGC^OtAMrACRS`CwAzQo@~Hq@bJi@lJKrCShGM~FGnE@lC@pC?nA@h@DhE@^?D?\\BtB@`@DvB@vALvFTbKFpCf@fVNtIHhELlF`@hJRbC^vCn@|Dt@zDz@lDpBzGtA|Dh@bBzBpHX~@@FNj@VdAJb@VhAN~@DXD^DVFf@LjA@DPzBFj@@DJ|@HpBBv@BnA@f@DvB?fDEjDG~BM`CUlC_@~DUhBc@jDCNAJuAjMOvA?@YfCkClUmEl_@oClUqAbMM~@_@fDGl@YzCCh@CZAj@Cd@m@|F}AlNmAhK}@hH_Ex]qAhLe@fEQ|A_BrNqCtV{B`RKz@kBzPwApLkAbKeCvSgB`PiAzJwCzUEb@eApLYxB{AdMgC~T}B~Ty@dKI~@w@xLIrAIxBO`EEdAEhAGhCMtGOrM?xCAfH@fEAfCAdACdBC~@Et@KdBU|BWrCu@rH}BdVQbBIl@G\\EN{@vCIh@Ql@Q~@U~@s@hCaApC?@m@zAg@dAkAzBIPe@t@W`@KPa@f@eApAsAxAi@n@a@d@a@d@y@dAa@j@e@p@MVc@r@w@~Aa@dAi@pAu@zB}@hC}@tCoAvDo@nBo@nBi@bB{@hCs@zBy@bCqA~DkAnDg@xAYt@GJ]v@s@~AGJQZ}@~AYf@e@t@y@pAs@fAS\\[f@{BxD{BzEaArCOd@Of@Qr@g@rBKp@ERMn@I`@Id@[nBMlAMhAEh@Gp@Gr@E|@Er@Ch@Ch@Af@AZAf@Cx@?fACrBAJ?ZA\\CTC\\C\\E`@G`@EXEPALGVGZGR?DK\\KXM^KROZQZQXA@WXST]ZQNSLMFMDA@WFWB]HUFUDi@Ba@?wAGU?C?]C_ACm@EoCKiBOyOq@gAE{@Ea@CM?c@CO?{AGyAGQAgAE{ACkA?{B?{A@a@B}BFyAHK@c@DSBeBNSBe@Fk@FoARu@JG@m@HcAPeAP{@Pi@LoBf@gAZqAb@w@Xo@TODs@Xg@PaA^qAh@sBx@cAd@qAj@qAl@cCfAiDxA_@PwAn@_Af@u@b@WRi@ZeAt@kA~@iAdAeAfAQR{@`AKJcBdCoArBWb@oAvBA?cBvCuAbCi@`A}AbCqApBg@p@_@h@QVq@z@mAxA}A~AqAjAgB|AcBpAoBpAiBbA_Bz@gBr@yAf@kCr@gARI@cAH_CLe@@O@qA?wAAo@AcAGgAIoBQuCc@qDi@yBYaCSkBIyA@kBBoBJsAH_BToB^{A^kBh@}B~@oB|@qAt@uA~@iAx@cBpAyAnAmBlBkCvCwBzCE@gAfBs@lAy@pAw@zAeBhDw@fBi@rAa@bAoE~L}AzDgBbEiAvBk@fAw@zAEH{CxE}C`EeEdEuElEgE`E}AxAqFhFkDdDaKtJcGzFkH`H_J`IyEfDcKdGOLmAx@uDhD}@z@}@x@_@^_@\\]\\e@d@SNw@t@]\\gBbB]\\UTKJqAlA}AxAq@n@aa@h`@w\\b[mD~C{BjBuAdAyC|B}AdAKHC@SLeDzBC@uLdIyI|D}IlDgObFmIrBgBXiBXoARYF]DE@{@Nm@HA?iBRaT|BiJvA{Cd@{JzAuLhC{Bp@ODqCjAeFbC}E~C{C|B}BtB_BxA}@z@g@b@KLQPoAnAIJa@b@mDjEQRg@r@uAnBa@h@KPaB`COTiBbDuB`EcFfLa@|@o@xAiDnIIVi@tAQb@}Ybt@gIfSm@dBw@dCyDzNg@rBc@dBo@rDuBxPqCvWIx@y@pHgHpq@QxA]hDCPaLreAm@vFeCbVwFxi@sDj^Ir@AJgAtKoAdMqQjeBIx@}Htu@q@jG}CtZs@`HMj@Cn@q@nGUzB]|C]`Ds@tG}@hJ{@bIcAvJcB`Pq@rGq@hGeAdKw@nHs@fHsCpXMhAo@lG_BpOKnA_@fDaAvIWbC}@tI[tCk@rF]hDk@nFAFIx@_@jDcA|JQ`Bm@pFiBxP}Cv[AJ_AvIaAdJGn@Gh@MjAcEx_@E^Eb@eBdQi@hFC\\CHi@fFK~@Kz@{@fI[fDCPStBWbCE^I|@Gd@Gf@UvBSnBiCpVO~AsBrRw@bIo@tGCPs@bHKv@SrBw@tHs@lG?H]zCm@lGq@|Fi@lFk@fGq@dG{@dIq@vGs@~Go@bGs@jGKdAWbC]lDYrCKx@I~@UrBGd@YfCEb@u@pGcArHs@dFkAfIaAvFmBtKyArH}BxLk@lDqAxIs@vFe@jEm@rGKbAW~Ce@dHWnFStEE~AEz@ErAKxGIdFErF?bD?nDDtH@z@BlA@jBF~BLlEBh@Dz@VlFVvIFvBHfG?tD?z@?pBItFQtFKfDWvDS|CQlB[tCa@jD_@`Dc@fDm@zECVi@|Dy@bHk@rEe@zD}@dHgAzI_AnHmAtJgB|NGh@Kr@g@lEyAhL{@~GGb@EVa@bDs@zFmArJq@lFE^m@dFMz@ObAWpBWpBYtBgEj]Kx@UdBmEl_@{CvUaAxHg@bEQxAy@rGIn@Kh@YnBAJUtAUpA[jB}@vEs@hDs@~CcA~D_AhDeApD}@pCeA~CcApC[v@s@fBs@~AmCbG{AbDe@~@qD~He@`AoCzFkAbCoAhCw@dBe@`AEH_@r@sA~Cs@~Aq@lAUp@oB`EeAfCiBjEw@rBiAfD}@fDy@|Cc@hBe@~B]bBIb@aAxFIl@Gb@c@zCS~AQvAUvBY|DUlDU`EIpBKfEGnEAnE@bDDzCDnBHfDJbDPbCH|ARxCV|C@JN`CFn@P`BFb@L`ABJHj@r@pEBLj@bDt@dE`AtF\\rBDT@?n@bDlCzPx@nC\\fFNvJHzMUtJ]dHmAhIgB`H{D~K}ExIkH`GkJhCkEdAa`@bLgt@vNu\\xJ}ObA}WhGcj@vLoJjDeDh@}Ht@gEr@qV`G}o@lPeQ~EgCtAaF~CaPdQ_CzCkJvKug@fk@{KxKwSbS{RpTm\\b`@kd@jl@gRtTqQpWaMdIe_@~GwBfBsd@~x@oVla@kHxJmHxI{LpLoShX}FlAyk@li@gQpPkA~@A@CMEDeA~@kA`AaBvAu@n@uAjAGDE@IBiEtDgIfHqJjIaCpBq@h@k@f@A@c@`@YX_@ZQNi@b@u@p@SRiAbAk@f@mBbBoGvFkBzAsFzEe@^A@i@d@_B|A}AdBaCtCoA`Bm@|@A?a@l@w@lAS\\w@jAu@rA}@`BeAlBm@hAcAxB{AnDg@rAi@tA_@dAc@pA_BdFs@bC{AdFoAnEkDtLIXmBxGyEbP]pAs@dCq@~BsBdHg@dBeAdDeE`MgAhC_@|@i@fAe@bA}@hBKPk@dAmApB[f@}A`Cc@l@wAjBgAnAy@bAe@f@_@^mCbCiAbAcD|CmBhB{IbIKH{BrBw@p@CBy@v@_CxB_BzA}BxBmAnAaCpCeCbD_ArAsAzBuA`Cs@pAcBfDgB`Eu@jBs@rBADe@tAWv@Of@Yz@Qj@ADOb@k@rBy@tCABYhAm@lCe@zB}@~EaAzFKz@OfAk@tEk@dFgAbJkCrT}AhMKx@AJeA~IuAtLkArJWpBcCfSaAlIoApKm@nFe@dEgA`J]lCOnA_@nDMrAQtAIdAIv@QnBC`@KjAMxAInBGdAGtAMjGAREtD?HC|BAl@?@?dBChC?B?xB?jPAvDA`CArD?nG?~SAhMBnE@zADpBDdCT~HPtEVxHBdAJjDLzDBl@Dz@FxB@NH`CBz@?JD|@FxB@RJ~CTpH`@xMH`C^vM@Ll@|Qt@dVNtEF`DBdEAhFAxAAr@ItCKdDK|AYhEe@zEOnAWjBYfBSrAk@zCe@tBy@`D_AjDi@tByAfFeAhDaC|HwC`Kg@dBm@tBSn@Qh@Sp@]pAGTg@dBK\\w@lC_@zAYlAi@~BOn@Ox@u@`Ek@|Ci@hCWfAc@~AY|@q@vBi@xAm@|A_@|@Sf@kAhCg@z@y@xAaApAo@t@m@x@_B~AqBfBm@f@{@l@_@VkAp@sAn@eAd@kFdBeGtB_Bl@aCt@uC`AcGtBaCz@{G`CeA\\q@V}An@qA`@g@PiA^sBt@_@JoAb@mC|@c@Ny@Vo@TeAd@kAl@a@VkAv@w@p@YVYVURWZa@b@WZUZyAnBa@n@MP}@xAEJq@tASh@Qd@g@tAYx@M\\M\\Y`Am@vBQr@Mh@o@zCe@jCG^Kl@UfBMlAUvBGt@AJM`CKhCE|AEnDKzKKtLIbKG`SEzFAxBAj@ApB?|@?BAhAC|CCtDA|@GfICzFM|ME~E?REjEA`DCxFEdHCxBGpEM|FIxBGdBIpAInA]|Ea@xEaClXa@dFi@hG_@hEm@nHg@dGe@lFS|BGv@IbAe@lF_Fpk@_AfLWpCe@jFKtAIz@G|@KhAYvCQbBQrAUlBg@hD_ArFuAfImA~GMv@Mv@qC`PUtA{AfJW|As@zDkA~GCLIh@wAjI[xAWhAS`AoA~EiAjEK\\i@lBkB~GmD`MuBjHyClKeFzQy@xCSt@W`AM`@GPOj@c@xAy@xCeArDkDxLiD|L}If[mBtG_FhQeDjLuCdK{@vC[lAMb@Sz@m@pCWlA]dBq@xD}@|FQvA]vCUxBeAxLm@xFYfCYbCa@nDMnA_@jDc@vDSrBIn@SnCSpCMtBEjAEnAGlBAhAAx@?^AvC?\\?jB?l@@`@?X@fABfB@F@`ADv@@r@FvAJjBHrADl@^xE`@lGHlAJ~AJdC@VHdCBx@BxB?hB?zAA|AAfACpAGrBAx@Cn@GvAMfBK|AI~@KjAMrAIt@OnAM`AYnBu@`Fa@xCYrBMpAS~A]rDAJm@rIqApQYdEMnBM|BC`@G~@GfBCx@Ad@CjACx@AtA?hAAfACnFAhGCxJGpMAjD?Z?zB@hB?xB?X?`@A|@@xB@jA@l@?D@dA@p@@h@Bn@HnBDdABj@Dp@LfB\\zELnAb@vDRvABPV~AZpBJv@N`AJr@R`BF`@NzALpAJfAL~A@H?DJvAFj@LhB@VDz@@b@@J?NBx@DrA?R@\\?r@?nA?lCArCIrEAbACbB?TAPGl@?JI~KGnG?f@@r@B`CBpB@JDpBF|BF`BHdBH~AJtBFlAJdBJvAJtAJfAn@nHPtCFrAF`BHtBDrB@nADhB@vA?lCCnDClAA`AAj@E|AMjESrFEdCAdCA~B?nBFnEBtD@fCAzCCjBCnAAr@Ct@EdACt@GjAIlAOzBMtAKnAOpAOtAS|AYrBW`Bo@`EgA~GADWhB]xBIf@Ih@YpBCLWbBq@|EUfBIt@i@`FOfB_@rEMpBKxBKrB?PMzCKrDAfACdAAnBAlBB|EB|BBdBDtBNhDXjHRlDJzAHtAHzBFjBFdBBtAB`B@hC?hB@bBC~AAxAC~@CfAEzAIvBIvBM~CMfDOpDSdEG~Aa@zI]lIg@jKQvEOhDUdFI|BEl@Ep@MbDGx@QtDW~DOlBM~A_@vEQpBYvCWbCi@rEAJ{@zGM|@Oz@YjBIl@_@zBk@tD{@bFc@bC[fBm@dDYxAaAbFs@jDcCpLqAxFmBnHGVw@lCgBfGoCzIsBpG}@xCGRu@bCo@pBENIXEJIXIXEHo@rBa@rAsAnEqAhEWz@Qf@qBtGsA`E}@bCgCfGiBbEiB`EwAxCWl@Yj@s@|AiBdEmBhE]r@aA~BWn@sAhCo@xAs@`ByEtKqCfGiA`CKR[j@[j@KPMR[h@[h@KRq@~@eB|ByAfBy@z@uApA{BhBcAp@aAh@w@`@YLq@Xy@XC@]JIBMDOD{Bn@IBqA`@sAb@o@Xo@\\iAn@]TWN{@p@MLMLSTq@n@cAfAi@p@EF{@jAa@n@e@t@e@z@_@n@]t@u@dBGHg@pAgA~C_ArCiBfGa@nA]fAa@hAYv@w@tBw@jBa@|@cAzBo@pAg@~@}@~AYf@q@hA_@n@U^{@tAEHy@tAkAnBYd@eCjE_DpFkCpE}BxD}@xAGJm@bACDq@jAEFWb@U`@Ub@OXu@pAeDvFaA`BmEtHwDpGOXIL[f@eEjHyC~Eu@nAGLW`@U^KTOXGHEHo@fAu@nAABmBhD}AhCcAdBaBrCq@bAuBrDkCrEyGhLa@t@_DrFOTuBtDa@r@kElH{CzEoAhBmAbB{@hAUXaAnAa@d@KNUVOP_AdA}@`ASTyA|AoBjBqD~CmA~@iAv@sBvAoAx@wBlAkAn@cD|AIB_@N_@PA?]NMFqAd@cA\\uBr@eDfA{FlBeDdA}FfBUFmDjAC@SFUJKBKDG@sEpAoDlAcC~@gCv@eErAaAZcHvByE~AmLxDaKdDkCz@{J`D{MlEeYfJwAb@aAZKB{Ah@_@Nq@RWHmDjAsAb@_HxBu@VaAXqCl@cB^eGf@aCP{DhAoGpBC@uAx@qBjASJqAt@YPeA`AaCzBoMjLoKpKaKdI}HpDWLwCt@c@JgAVoBZ]DeAL{BR}Gl@i@Fe@FYFc@LeAZeAZgA\\_@LoE`B_A\\kA`@i@R_Bn@eBt@{m@hWMLqQ`UwCrCaJbIsBdB}DhDeDtC{JzI_Ax@SPiAdA_@ZGFwAlA_Av@}G~F}KvJeElDsG~FoF|DgErB_EnB{ExAC@oDd@uDXkM[{F_AuCg@[Es@KaDo@uJoBkBg@kGkAgFy@mCi@sCi@cBe@qBq@}BaAi@Yc@YoA{@}AiAeBuAuAmAuDmEgD{EoAmBk@}@g@s@y@kAYi@We@k@gAi@o@y@gAiJkLWUiHyFy@k@_@YoCkBiD{@}@WAAmIqBcEoAmAe@u@_@cCqAkE}CmDqCkE}Du@q@IGiBeBSQEEc@]qBoB_OqNsAkA}@{@_Ay@a@Yc@Y}@{@_@_@]]yAuAaEuD_@]}@y@wDkD{EkGcGmJeDiH}B_GoF_M}AoDiAmCeBwDaAyBs@sAcA}AqAgBcAqAwAuA]]e@c@wB_Cy@}@uHaH{HsHeS}QgA{@u@m@YQg@[YQuAy@a@SCA]Qk@YmAk@GCeA[_@MaJ}BsFk@{@KyAOkBSeAKo@IWCe@EmAGUAuAC[A{BCwEHG?aMHoC@s@Dw@DcF|@{D|@sC|@qB~@w@d@MFSJ}Az@oBtAmE~DeAfAiClC_C`DuDhFsAzAcAjAmAlA_CbBsA|@_D`Bc@PgBp@mBj@y@LgARi@D}@HyFB_DU_C_@ICeAU_AUQEWIA?aA[IEyBo@ICaCy@cEsAwCs@{C[qDS]Ai@BmADo@@M@U?k@Dk@BcADe@?}B?QCyAKQCeAMi@Mk@MgBm@gBm@qC_AgDkAoEaBqAi@wAm@mAi@yBgAw@e@{@k@WS{@u@a@a@SSiAoAq@y@}@kAgB}BsBwCwBeCoAyA[[]YiAaAeAu@u@e@uAu@[Ms@Uq@Wu@S_AU}@SyA]MC{Aa@OEeAYQI}Am@k@[OKsAy@MIe@]e@]i@c@g@g@mC}CgAwAMOy@w@wDuDmA{@e@]kAq@g@Ww@[{@]k@QaAW}@Qa@IiAMaAGo@AsA?_AD_BLkBNyAL_@Bo@FoCTeNhAwFb@qCT_CRyARaBXUFcAXu@TE@gBr@sAn@}@f@MHkBpAcAv@iA`AmCxB_DhCoC|BcDbC_Aj@y@d@}@`@o@XA?q@Rq@Rm@Ni@JgARy@HM@k@DWBqA@e@@aACi@Cm@GiAOs@Mg@Ok@Oy@UmAe@_@OKEgBw@mAi@WMKGs@_@WQe@Y{@k@?Aw@q@a@a@u@y@cAqAs@iA_@m@o@oAi@gAKYO[]aAKY[{@AASs@Oe@COSs@c@gBKi@WoAUuAMw@Ig@CMEu@QkBKkAGeA?cA?eA@{B@gA\\@"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3632954,
+                                                "lng": -6.2592013
+                                        },
+                                        "stop": {
+                                                "lat": 54.2720255,
+                                                "lng": -8.481893699999999
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Sligo Bus Station, stop 555081",
+                                                        "time": 1596885300
+                                                },
+                                                "dep": {
+                                                        "name": "Drumcondra",
+                                                        "time": 1596874320
+                                                },
+                                                "headsign": "Sligo",
+                                                "operator": "Irish Rail",
+                                                "type": "HEAVY_RAIL"
+                                        }
+                                },
+                                {
+                                        "directions": [
+                                                "Head <b>west</b> toward <b>Lord Edward St</b>/<wbr/><b>R292</b>",
+                                                "Slight <b>left</b> onto <b>Lord Edward St</b>/<wbr/><b>R292</b>",
+                                                "Turn <b>left</b> onto <b>N4</b>"
+                                        ],
+                                        "distance": 864,
+                                        "duration": 667,
+                                        "html_instructions": "Walk to Primary Care Centre, Barrack St, Rathquarter, Sligo, Ireland",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "w~fjIttwr@?r@?R@HBLBHDD@DFDFBF?HAHCFCLQBG@E@E?K?G?GAOA]?a@?G?E@IDO",
+                                                "w{fjIprwr@g@mDGg@",
+                                                "g}fjIzkwr@k@AcAKu@KGA}@OqAUWE[IOEMGMI_@UYYQQOSSWMSEIc@s@Yg@g@y@[i@IQg@cAYm@GQKWMa@Mc@IUAGSg@MSGKYg@_@g@c@i@SUII"
+                                        ],
+                                        "start": {
+                                                "lat": 54.27196300000001,
+                                                "lng": -8.4821872
+                                        },
+                                        "stop": {
+                                                "lat": 54.27660969999999,
+                                                "lng": -8.476087099999999
+                                        }
+                                }
+                        ],
+                        "transit_index": [
+                                1,
+                                3
+                        ]
+                },
+                {
+                        "db_index": [
+                                1
+                        ],
+                        "distance": 358774,
+                        "duration": 31208,
+                        "end": {
+                                "address": "Primary Care Centre, Barrack St, Rathquarter, Sligo, Ireland",
+                                "location": {
+                                        "lat": 54.27660969999999,
+                                        "lng": -8.476087099999999
+                                },
+                                "time": 1596872167
+                        },
+                        "start": {
+                                "address": "36A Londonbridge Road, Dublin 4, D04 PD61, Ireland",
+                                "location": {
+                                        "lat": 53.3376815,
+                                        "lng": -6.2263113
+                                },
+                                "time": 1596840959
+                        },
+                        "steps": [
+                                {
+                                        "directions": [
+                                                "Head <b>east</b> on <b>Londonbridge Road</b>/<wbr/><b>R111</b> toward <b>Londonbridge Dr</b>",
+                                                "Turn <b>left</b> toward <b>Irishtown Rd</b>",
+                                                "Turn <b>left</b> onto <b>Irishtown Rd</b>",
+                                                "Turn <b>left</b><div style=\"font-size:0.9em\">Restricted usage road</div><div style=\"font-size:0.9em\">Destination will be on the right</div>"
+                                        ],
+                                        "distance": 315,
+                                        "duration": 248,
+                                        "html_instructions": "Walk to Irishtown Road, stop 371",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "oopdIla_e@AUMiDIwCAe@GwBAOAe@GwB",
+                                                "_qpdIhl~d@Y_@]W",
+                                                "wrpdIpj~d@e@XOLQN",
+                                                "_updIhl~d@@V"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3376815,
+                                                "lng": -6.2263113
+                                        },
+                                        "stop": {
+                                                "lat": 53.33855149999999,
+                                                "lng": -6.2230512
+                                        }
+                                },
+                                {
+                                        "distance": 3134,
+                                        "duration": 426,
+                                        "html_instructions": "Bus towards Poolbeg St",
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "eupdIbm~d@CQa@ZQFu@JI@[DUDQDKBMBKFOJMJMLKNU^CDEJa@~@c@bAUf@O\\a@|@w@|AU\\gAjASVEFEHAFCHELAHAHAL?H?^JzAB\\D`ALdCJbDBn@Bl@BbABn@BhABf@?\\?N?F@NI`@Q|COnBM|BO`CC\\YrDAZEh@IvAMhBGr@AXG|@KtBMtBGhAIpAKtAGv@K`BQtCMrBCVCXCZAb@KlAIjAEh@KdBSzCc@lDSdBOvAKn@CPCPCTA?Eb@Gj@ETANGh@Ej@Mz@QjAW`CAH?D?BGp@G`@OjAm@rEKr@Ej@SlBQ~AOnAECAHeA`KADyBFBwC@cAJoEnDZeA`KADyBFBwC@cAqDSIA?hAD?"
+                                        ],
+                                        "start": {
+                                                "lat": 53.33858720000001,
+                                                "lng": -6.2230599
+                                        },
+                                        "stop": {
+                                                "lat": 53.3467791,
+                                                "lng": -6.2543387
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Poolbeg St, stop 7564",
+                                                        "time": 1596841633
+                                                },
+                                                "dep": {
+                                                        "name": "Irishtown Road, stop 371",
+                                                        "time": 1596841207
+                                                },
+                                                "headsign": "Poolbeg St",
+                                                "operator": "Dublin Bus",
+                                                "route": "47",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "directions": [
+                                                "Head <b>west</b> on <b>Poolbeg St</b> toward <b>Tara St</b>/<wbr/><b>R138</b>/<wbr/><b>R802</b>",
+                                                "Turn <b>right</b> onto <b>Tara St</b>/<wbr/><b>R138</b>/<wbr/><b>R802</b>",
+                                                "Turn <b>left</b> onto <b>Burgh Quay</b>/<wbr/><b>George's Quay</b>/<wbr/><b>R105</b>/<wbr/><b>R138</b><div style=\"font-size:0.9em\">Continue to follow Burgh Quay/<wbr/>R105</div><div style=\"font-size:0.9em\">Destination will be on the left</div>"
+                                        ],
+                                        "distance": 246,
+                                        "duration": 185,
+                                        "html_instructions": "Walk to Dublin City South, Burgh Quay, stop 339",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "qhrdIrpde@?V?v@AhA",
+                                                "shrdIlude@cCU",
+                                                "wlrdIvtde@A~@?r@AdABnAHxA@D"
+                                        ],
+                                        "start": {
+                                                "lat": 53.34681089999999,
+                                                "lng": -6.254337899999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.3474219,
+                                                "lng": -6.2568139
+                                        }
+                                },
+                                {
+                                        "distance": 207137,
+                                        "duration": 9000,
+                                        "html_instructions": "Bus towards Galway Coach Stn, stop 511201",
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "ukrdI|_ee@SJLhAD\\BZDX^lCPxAFf@BVNfA@DN|@Fd@^bCNbAf@fDN`ALfANnAPfBHt@Fp@H~@NjBBV@RPnBHz@PpB^dFFjCLxCNdDHnBBb@DdADpADrA?n@IxCExAM`DKnC?HCn@Cl@?PCZGr@Ez@]vCQ`BK|@i@pEStAQxACZKx@MtAOdDYhGOvBCd@Cr@ApACxA?^AtAClBAjACdCEpDEnDAd@CpA?REz@Gp@ShC@H@DAPCR?L?F@HBJBHDJ@DLLXNl@VDBHHBFBJBN@NFl@JpATzC?BDz@BjAD~BB`BFjBBf@FpA@HNfEBfAJ|BHdADf@X`DDn@ZxDX|CP`CRzBNjAHf@Jf@Lh@h@rB\\nAPj@fA|DRz@^hBH^F\\D`@@Z?TEhB?HAFA`@AN?V?V@X@`@@d@LhDD~@J~BTdGXlKNpFFjBLxD?`@DnABzAB~@@tA?L@bB?@AnAEdBGvAIpAOpBIx@c@xDEb@o@jFi@pEUlBIl@ARcApIiAdKg@hEGn@QdBABGfAGdACp@Cz@Af@A`A?F?fA?dA@t@Bl@Bn@Bb@Bd@Dl@BVBb@@HHv@VdCLnATvCFbADdA@h@DtB@fB?~@Az@ClBGpBCdBGxCG|AEnAE|@AFIbAIn@Mr@S`ASx@Yz@_@`A[l@g@v@SVORCB[Z_@\\YT_BlAg@`@g@`@kAz@eClB[XMLIJ]^MPKLw@rAc@bAa@jAQj@Sp@Ml@Ot@Kl@Gd@AJK|@Ef@IjAAZCV?@CV]~FKpAIt@StA_@~A]dA_@`Ac@v@EDMNMRm@t@m@n@_A`Am@x@[j@s@|AAF]jAEXEVKd@QtAKnA?BIhBC|B?dAElDM`DALIvAGz@KzASzBGt@K~@?BKdAGd@]fCAPQ`AyAhJa@hC]vB_@hCGZQdAQnAg@hDG\\o@dEQjAWbBI`@k@tDEVObAWbBQhAUzAK~@Gl@Gv@ExA?pCJvBFp@Hl@DT@NLp@H`@d@tBLr@Hf@Db@Dj@Dh@@`@@^?^?r@A`@A\\Eh@I~@O~AK~AEz@Ex@AlC?|@BjA?R@^@Z@VD|@NdC`@~FNpBBh@N`ED|A@V@b@DfBDfBBfC@xBAjA@B?b@Ad@A\\A`@C`@C\\Eh@KrAGf@Gj@QpAOfAKl@_@~BiAtHKl@Kn@kBtMW~Ae@dDERQjAyAtJUfBQxAOnAIt@KtAKhAGv@QnCE`AItAEfAEzACnACzAA~@AbDElGAhC?~C?dB?x@Bz@@r@B|@H`APnCLtATjBLz@Lp@N~@VlAXhAZdAf@zA|@bC|@zB^`AFNL\\Vn@DJl@|A^~@r@fBz@xBj@zA`@dAz@vBlA~C^`Al@~Aj@tAbAhC^`Al@~Al@|A^fAXz@Vx@Tx@Nf@V`ATz@f@tBVnAVnARdARlAPjARnA\\zCLhAPbBJtAHhAJdBHrAJrBFpBDxABxA@XBhB?vDC`FE`CEzAEhAM~BGjAE|@CXI`AMtAMzAMnAQ`BQvAQrAU~AId@UpAWvACJm@pCi@`C]lAEPYfAa@tAs@vBg@rA]|@[z@CFYp@S`@ELi@fAeBnDy@bBi@lAg@hA[t@[t@u@rBe@rAc@rA_@lA]dA]hA{@tCSx@a@~A[vA_@`BS~@CPUjAQ~@M|@M|@Gb@Gd@I|@Et@IdACf@EpAEbACfBAdA?lB@lB?HBpD@|A@|A^lc@LjO^vf@JvLVr[NtRDvDFdH@nCBxF?lD?lAAlBCnIEpEAzAEzDKvFIvEWrJAXM|DKxC]bIe@hJ[pGs@nNSrDMtCIrAIdBEz@OnCA`@{@rPa@hIEx@Ez@OvCKdBGtAc@pIKvBc@rIe@rJSnDa@dI]rGa@|Fk@zHi@tGSbCi@lF?BIx@OtAKdAQ|A[hC{@vHi@xEgBvOoAvK_AnIu@rGoAtK[tCYbCYbCSbBa@pDe@bEQ`BOlAS`CQlBQ~BSlCOhCI~AC\\KrCIvBCf@GdCI`DEhDCvC?fD?fJ?fJ?~D@|@AfCEvDAnAC~AEpBE~AElAEnAEbAIhBKfBKhBGbAEp@IfAIhAKxAUbCKhAKhAK~@Gd@ShB[dCU~Ag@pDq@rEa@vCCN_@jCW`BIl@e@dDSpAKr@]dCW`B]fC_@bCe@dDo@fEm@hEc@`Do@lEWdBc@xCg@lDg@nDeAlHGZ_@nCM~@O|@oD|VgIdk@cBrLUxASxAkDhVWbBWdBaBjLuAnJUbBG^OfAWbB]~BGf@O|@ObAk@bEg@fDo@nEYpBi@tDqAdJqAbJgApH_@jC}@hGu@jFg@nDQfA]xBY`Bi@`D[`By@~Di@dCq@xC}@rDm@~Bs@jCq@~BmA|Du@zBw@zB{@bCiAxCu@jB}@rBu@bB{@hB{@hBkA~BS^u@rAw@xA{@xAs@jAsAtB{AzBINeBhCGJSXaDxE_HfKgFvHuEfHwBbDoCdEsApBU\\i@z@k@z@oB|Ci@v@wCnEcCvDWb@sApBoBdDo@hAs@nAg@`A_B~Cu@`BQ^?@OX}@pB]v@i@rAO`@Q`@{A~Dg@tAw@zBy@dCuApEmAfEi@tBs@nCs@tCe@pBi@bCAD]`Bi@fCq@jDShAUhAOz@w@tEa@dCg@`Do@tEi@bEYzBa@lDW|BO~Ao@pGM`BGz@UjCa@tFMpBOnCMrBMdCIhBQtEEnAKnCEvBKpDIrEExDAdA?`@GpFEpGKvMCbC?ZEpFCjCEpDGnDEvBCjB?JCpACtBAXCzIG~DM`FY|GSfEs@rKSjDGdAMhBMfBIbA[|DEt@QfCCh@]bFWzDInASrC[~EU`FMfEGjBGlBAr@InDIpFE|F?`@AbF?hBB~DB`DBbCHpDJhEJjDTzFPrDPdDLnBT`DTtC^jEh@pFt@lGFj@r@pFj@rDr@pEBRbAtFx@bEr@fDzBjKf@~BzAdHl@pCd@|BjAtFlAxGp@jEr@bF^rCj@dF\\hDPpBXlDNnBV`EJnBDz@JtB@NHhCNbFFpCHtFNhLN~LN~MLhKJlJ@j@PlODlE@xF?vC?dDApCIxGGzEQbHE`BQ~EUnFSnDEp@WjEK|A]~Ek@zGOdBYjCo@dG{@fHcAnHIh@W`BCLe@xC_ApFq@lDa@rBqAjGeAtEaAxDoAxEW`AYbAsAzE{@zCq@hCUbAQh@u@hDo@zC}@`Fq@~D{@dGYlBi@pEQzAm@zF]jEy@lMYdHOfEK|DG|ECjG?v@?zD@t@DpEDhDNxIHrBRhFVjFh@`Iz@lMdAnORhCd@~GXjEPrDFfCFlC?`GYjPUdEi@fH}AxLy@rEyAxGADiBbG_BhEaCpF_AdBwAdCyHhMiEdHkHtLsGrKu@nAAB_C~DcBnDiApC{@~BeAtCgAzDcBvGiArFy@`Fi@hEq@hGg@rGSvDQ~Ea@dOAz@Cz@MzEMbHOlEOnHCz@CdA_@rUGxHGzLClIAzI@`G@nHBdJ@xGBtEB~EFbMBdE@z@@|@DnC@b@JrGT`IT`H`@zH\\pF^lGFfAHnARvDDnANbEHhDB~BB`B@nB?fAAhDC~ACdBE~AAhAGnBGfBQpDIfAGhAKlAGv@Eb@Gn@O~Ac@xDKbAo@dEe@tCOv@m@~CUfAeAtEk@xBe@~Am@pBm@jBk@`Bo@zAs@fBw@hBi@bAw@`Ba@v@Wf@A@i@bAy@~Ag@~@iAzBgA`Cg@fAa@|@uA|Ci@jAq@`Bu@lBo@zAoBhFwAzDAFQf@aCbH[|@g@bBkApDmBxGaArDQn@q@dCgAjEUv@_@`BsAxFYpACLMl@CF{AhHeB~IUnA_AhF]zB]lBALIh@Mv@Mv@k@nDy@zFo@`Fg@`E]vCa@~D[xCQlBO|ACVAJALGx@?FYfDAPm@fIc@~GO`DOtCKvBCl@[|GYtHMpDs@xP]rIMdDCv@_Bv`@Ex@_I~pBKtBm@|OGzAMlCY~GWfFEx@WrEEj@GfAo@xKa@xFa@vFIpAOhBUxC[lDMfB]~Dw@lJu@~IQpBUhCUrCc@hF]`EYzDWhDKbBEz@APUzDGzAMzCYlGCl@SrE]vIU~EH\\?D@DAJCjAEvBIfDKlEIlEIrDAx@GnFGrFAbG?tB?fC?zB@dAHzKFhEBf@DzBHzDJfDFnBPpETzEPrDPlDRpDNvCLpCRvELbFD`BDrABxBBvBBpE@hA?fA@hB?h@CjF?n@KtIAr@IjDKtDCr@I|BUjFUvDOxBg@lGe@zGOfCMdCO|CObEKfDKpEGnCCpBCpCAfB?|@Ar@?lEBfHBjCFvEHxDFjCPvE\\rI`@pJ`@lK\\hJF~BFjBP|FP|GDhADvB@B@n@BbA?BBbA^nSHzEFvEHtFDjEDfFB`E@FBrEBbDDrCJxEHnCNnDFnA@\\B\\Fx@RfDPbCTjCLlADf@P~A^dDn@~E`@lCz@dFz@lEz@|Dr@|Cv@vCz@vCfApD~@pCt@pBpBrFdBnE`AbCJVrA~CFN~@tBTj@@?lCdGxBnExAvCrCrFfBbDlBfDp@jAp@fAlB|CrAtB~FxIfDtE|@jAZb@Zb@fAxAtAlBhCzD`B~BlA~AdB|CjDpGh@hAfAzBlAjCbBxDlAnCrBdFvCzHZz@dDrJlDvLh@lBd@dBPr@Rp@f@jB|@~DfAxEfAfFh@jCR`AX|ABNLv@r@~D\\dBd@nCz@zEDVrAbHxArHv@|DNt@d@|BxAxGd@pB`@lBh@zBr@xCjApE|CtL~DpNdAlDnC`J|B|GRp@Tn@X|@fF~NtD|JTl@^`Az@vBtBfFn@vAVj@vDvI\\x@HNN\\rD`I`AvBTd@|AlDnCbHb@bAHTBHBDt@lBhBlFbAxCvCfJdBfGVdAf@fBjBrHlCvLvBrKb@|Bt@tDZ~AJl@p@xDv@nELt@Lt@Lv@XbBv@nEfAjHbAdHd@pDL~@BPjC|RD`@hA`KvArNzA~Nx@~IHx@B\\DZFz@j@tGB\\@FDXXtD^|EHfANtBNrBBNt@bLb@jIBf@d@zHJtBFz@d@bJLjCn@dMDz@~@rN\\lEHx@Fz@Fx@Fn@lA|MHv@Hx@Hx@nAnMpAlKFb@|AnL~@hGJv@|@dGDPLv@Lt@ZhBhAzFv@vDNt@Nt@TfAx@xDBHPr@~@fEz@fDDNXfADPXjAfBzGFVRr@p@`CZhA`@|ABFRp@|AtFBD|@~CZbA\\hAh@fBtAtEJ\\h@bBRp@Vv@jCjIv@~BL^lFxOTp@vA`EdAvC`AnCbAjC~A~Dh@pArAzCfAbCx@dB^v@xAxCBDfAvB|@dBb@t@x@xAnAzBr@jAn@dA~@|Av@nAl@z@dBfCvBxC`CrDnBfDpBnDhCfFdBtDfAfC^z@f@lAhArChB`FnAvDh@bBn@tBhBlGn@|Bz@pCf@zA`AvCj@~AVt@vAtD^|@h@hAf@rAx@jBtAxCjA|Bn@pAhBjDxArCz@fB|@lBnAxCv@tBXt@Zv@b@nA@Fn@nBd@vAd@`B^pAn@`C^xAR~@z@xDd@|B\\bB@F`@|BF^PbA^fCTbBLbATfB`@fD\\jDPlBJxARhCHlANnCH|AB\\NbDF`CD~A@p@DjBBhBBjC?rB@fC?j@?l@@xBDhI@hA@dBFdGDlDDxDBzBF|CBxBB|@DlBLpG@b@Bz@LhFJzDHjCHlCJpDJlCLpDNrDNvDTtERtEBb@HhBHpBHdCLnDHvDFrDDpDBbE?r@@vCAdCAjAAfBCrCCzAAjA?DCt@EbCE~AGdBErAKlCIdBGnBIpCKvEGpCCnBCjB?\\ErCCvE?jC?`C?zA?zA?f@@jADdE@rABjBD~A@jAFnBB`AFhB?LFbBDjABn@@PFhB`@hJHlB@f@DnA@\\F|AB~@Bz@DnAHnDB~A@^F~DBjA?`@DrCF~H@tD?`D?N?j@?~@?rDAlDCtCExEEfDA~@Ap@Ap@CzAOzHItCOzEOvEQvEIfBEbAI`BWnFSdD[vEMfBMdBIhAc@lFc@dFAPg@nFYrCIbAOtAQzAQ`Bg@fE]pCe@fDU`BCNw@rF[lBi@bDY~Aa@pBWpAe@zBKd@_@|AU~@CHQt@m@xBa@zAABOf@Sr@cBhFg@tAs@lBw@lB_@|@cA~By@fBmCjFkApB}AbCyBnDUb@eAhB]t@q@pAy@bBk@nAi@nAsAfDs@jBYx@g@zAq@pBc@tAc@vAK\\_@xAM`@]pAWhAYjAOn@Ml@Or@S`AI\\Q`AQ|@[dBa@`CYbBc@fCw@rEy@nEQ`AAJu@vDcApFYrA_@lBy@~Du@hDi@jCu@fD{@zDg@~Bu@`D}@|Ds@zCk@~Bu@zCk@|Bw@zCaAtDm@|BuDvNaA|Dc@fBA@Op@g@tB}@xDoAzF_@dBi@hCEVI\\SdA[~A[bB[~Ac@`C_@vBUpAq@bEW|Aa@jCObAId@ObAUzAIl@EZEZIf@MbAOdAKn@CPS|AOhAOdAUdBSdBOhAE`@M`AKbAGd@E\\KdACLIx@Kx@?@Iv@ALMdAQdBQfBKfAIbAWjCQlBObBIbAIdAOfBKlAKzAIhAInAKrAIvAK|AItAKhBIlAMfCCd@GdAKdBG~@InAGfACRKvAI`AIfAQfBQ`BSfBSdBMbAWhBe@`DY`BO~@QfA[zAc@|B_@hBk@`C]xAq@jC_AfD}@vCgAnD{@tCm@xBi@vBABi@zB}@|D]~Ae@vBMp@Mv@u@xDSlAg@xCm@zDa@vCCPWtBUbBm@vFc@pE[nDe@hGYtEKzBGx@A\\YbHG~AEnAGjCGlDEdECtEAx@?d@AlA?jDDvFB~CFxD@d@B`AJvDDzAHhCLlC?HDn@H~ANlCFjATfDDp@R`CNfBNfBb@hEd@lEd@lED`@RrBRrBRrBJdAd@hFNfB@HFn@LzABVXnD@DNjBPvBNxBPnBBZZfE\\zErAvQRpCVlDXrDDd@Fx@\\pEt@hKRhC\\rENlBx@xK|@fLPlCb@pF\\pEXrDHnAtAtQJhA@THz@h@~Gf@bH@DR~B\\tEXnETzDR~DJhCNlDBp@FjBJtCFlBLxF@p@FdDHtH?n@@~A@hBDjE?n@?r@HbQ?zB@vG?r@@pJ?`B@tD?jE?z@?V?b@ApD?xGAlCAtDAhA?l@?z@A|@?fDGpLAvB?p@EfGItIAdAAt@EtGGzDCxBA~AE|CAl@Az@CvBCz@KnHEtC?ZCpAAd@CbBElBEnCIjCIvCGhBMhCIjBKjBGhAUpDKvAEj@MhB_@jE{@hJKhA[pD]xEU|DS|DC`@Ex@Ez@EfAGjBCd@Cz@IlCKrFEnDADIjFStJCj@GfCGfBCz@EtAOjDGlAGnBIdBKhB?@Ex@El@?JMxBUlDEz@AR[rE_@dFYbD_@rEa@pEK~@Eb@CTIx@I~@YfCC\\a@tDOhAOxAc@fDg@jDc@dDg@jDk@vDk@hEWfBWxB_@vCm@nFg@zEI|@[bD]`Eq@jIEr@Gr@_@dG]dGOvCQlDObEMdDIlCGlBA\\IjDGlDKnHCfAC~CIbGA\\?^Cz@SfJ?HCp@GpBK~DMhDSdF_@rHA\\C\\Ez@Ex@C`@UfDCb@WfEe@fGe@fGE`@c@tE]xD_@rDKdAm@jFa@hDc@fDa@zCQpAk@lEKv@Gd@AHIr@o@zEq@pFo@nFs@jGa@tDCZ_@pDc@`Eg@hFSrBa@nE]pDS|BOjB[vD]pEYpDCZGx@Gx@AFKzAQjCWnDUlDQjCQnCOnCUtDI~AEz@CRUrEAHKpBCt@MpCKfBOjDAJInBGbBQrESlFMbEQvFQvFItDCfACz@Al@ItDEpDExDClEAdB?r@?F?nE?hB@nB@bA@pB@dA@tD?l@?~BA|BCzBElBGtBGzAK|BOfCMrBEh@E`@]lDIt@?Bo@dFYrBU|AWtAWtAa@pBm@jCy@hDg@hBi@fBo@nBe@nAUj@[x@Q`@_@|@a@bAUf@Yn@y@zAw@`BSZk@~@cA|AyAvBiBxBsBzBcAbAo@j@uF`Fq@l@kCbCeB|AKHML[VA@IF{ElEuApAgB`BsC|BqAv@GDgAp@yBxA{FdCyAj@aIpB{APwARw@La@FmB`@aB^yAp@{@f@WRq@j@k@f@e@h@cApA_A|Au@tAg@lAc@nA]bAQr@EJUbAYrAShAg@xDCPMvAIxAGjACrAEpBChBCdCAb@?F?@?FAh@OxKErDEdBGlAAVEz@CTGlAOjBCXQfBY|BIl@w@rFs@vEi@nDcAxGe@|C_AhG{B~Ns@tE]lBI\\Y`Bg@dCs@zC_@xA}AvFi@dBm@pBi@fBSl@_AfDSr@Sv@Mn@Mh@SbAY|AYdBaAlGCRm@~D]vBWzAUxAWdB[nBg@|CUbBG`@E`@SpAQvAMdAK~@KbAIfAIlAKdBIhBGfBAz@Az@Ax@A|@?h@?h@?z@@r@BhB@vBFnDBtCHxGBrADxD@b@JlI?@BhB@f@Bj@B`AHnAFz@Fj@Hn@Hh@@JLv@Jh@Jd@R`AL`@H\\L^JZL\\Zv@h@lAb@v@`@t@P\\dAjBnAzBx@zALTPXNXT`@~@hB~@fB`@z@f@dA^v@fAdCnA~CL\\N\\LZN`@Nb@JT`@jAJZPd@Tt@LZb@tAd@vAv@hCd@|Az@|Cd@dBvArFz@nDfBfId@~Bn@dDj@~Ct@zDP`Ab@vB^`B^pAf@~AFPDLNb@j@vANb@FLTb@BD`@z@rAbCDHT^JNT^PZf@z@FL~@jBdAfBnBdDnAzB`BrC@??@P\\RZhAjBBDnAtB~B`ExAbCx@vAVd@Xd@|ArCbBnD^|@Nb@^fAd@|ARv@b@dBRbARlAV|Ab@jDD^J~@RrBR|BNzBF|@JzAL`DBh@HbCDdB@lA@zA@bA?fA?n@AxDGrBIpCI|CEdBAt@?PArB@z@?lAFpDJnCLjCFhAHhAJbAJfAJdAJbALbALbAPdAP~@N`ARbABHNv@T`AR~@V~@Pr@Nd@Tv@L`@Xz@Xt@Xv@b@fARd@Zp@^v@NZ\\p@j@bAp@hA@@r@hAl@~@`AxAn@bAr@jA`@p@z@~AP^\\p@\\v@f@fAh@pAhAvC^hAd@nA^lAVz@ZdA^rA^vAVbAPz@^`BXtADVNr@PbAXbBV~A`@hCTxAZpBZvBZjBd@dDf@`Dx@pFh@fDd@`DXdBb@tCRpAHf@\\zBh@lD^fCf@bDV`BJl@Lv@N`AVzAX|A`@lBf@vB@BRp@?BX`Af@~Ab@jAr@jBh@nA@Bx@`Bn@lA~@|Af@t@JNbApAb@j@v@x@t@t@x@p@VVXTVPh@^\\RZRNHn@\\l@Xl@Xt@VTF|@XfAXjBb@^JbDt@tCj@rCd@h@Hb@F\\Ff@FvARtANf@FVBlBNhBLn@Db@BVBjBJbCJ|@FbADb@Bl@DvCNvCNtCPxBLV@b@Br@BbCLtBL`BHvCNx@Fp@F~BV~B\\rAXt@NTDpA\\xC~@v@V@?@@ZJlBt@~CxA|Az@dElChFdD`@VDBpKlHrAz@`@VbC|AbDzB`@V`An@zI~F`An@pCjBb@ZHF~AfApAz@nFpDn@d@fD|Af@NzBp@jC`@dBNnCJhEPbAFxANbALnAXbB^vC`AbChApBbAd@Zh@ZzBjBlCxBfAfApB~BPRJL~@nA|CbFzAjCjBvDbBtDhBpEtAxD`@pAdApDhB~GdBnHhAnG@BJx@rAvJ`BbOBRfDxYJv@hAtI`ClO`AxFh@`Dl@lDh@nCz@~DjAlFfApE~@vD\\pARr@HV~@lDdAhD`A~CxAhEfAbDL^DJL^FLfBzEjCxG`B|DtBpEpCxFvAtCDJR\\n@hAjArBlBbDfAvBv@bBn@vAv@dBv@jB`@bAFLt@jBx@vBd@pAp@lBl@jBN`@x@lCFPh@jBp@bCl@xBx@~CfAvEDLNt@FRj@jCfA|Fx@pEHj@n@~D^nCr@zFZ~BF`@BTTvAN`AVdB`@|Bj@zCb@~B^dBp@zC~@fEb@jBl@dCt@~CZrARr@BJl@bCv@tCnAtEf@jBPp@v@pCl@tBn@|Bl@rB@BPl@b@tAf@bBd@vAd@vAx@bCRl@Rn@Tp@FPv@~BBFt@|BhAlD`@tARp@Ld@X|@J`@X`ARr@V`Ax@zC~@tDj@~Bn@jCDLt@`Dj@lCBNJd@d@xBHd@d@~Bt@fEj@bD@Dx@fFv@xEp@rEl@hEl@pETjBZfCTjB~AfO|@pIh@dFj@lFTpCJjAFv@TvCLpBRrCZxF@RDz@JfCNtDFfBNlGDnCBbC@\\B|GBfG?t@AvGI`HE`CCtAAz@ARMlES~GSjEEx@AZKxAEz@Gz@C^c@~Gi@lGe@bFGl@Eh@SbB_@hDa@fD_@jDa@lDKfAQfBUxBWvCOhBWxCU|CIdAMpBEl@AJGx@Ep@QxCA`@Gx@KvBIvAOhDOzDCn@KpDKdDGrCKnEEtBIpFEtDCvCAhDAh@?pC?bF?`A?nF?|@?z@?~C@|D?rF@nD@bC?L?rCBnDBpBHlEBr@FlBHlCLrCXfGRtCPhCJdAFx@BRNbBd@nE\\vCX`CFX^rCPfA?@f@vCn@nDp@~CFZt@fDr@jDXrANx@H`@`@vBp@lDd@pCj@bDPlARrAZ|Br@pFL`AL`ANxAr@xGj@vGLrA\\jE\\~EDf@@ZJxAJlBHbAHtATfCTfCFp@Hv@@FZnCZ`CVhBN`A?BLr@Lt@F\\^rBDPRbA\\zA@DLn@T`Af@pBn@`CV|@^|A?@d@tBf@dCBLLt@DNh@|CVzADZBRLz@Hp@Jz@NpAJ~@NxANnBH~@LfB@X@NFx@LlC?RFxADzAFnB@r@BdC@lB?dA?v@?hBAbBCtAEzBGbCErAGrAKrBGlAKzASdC]`EKdAQfBQlBMbBUlCQfCQnCOdCKnBGrAKrBI`B?BEhACh@Cz@?BI`CIvCAn@EbCCvAAf@CzAC|BArAA~BApC?xA?z@?L?xABpC@dB@pBDhCBrBJjEJxDL~DPdEPtDPjDNxC\\pF\\lETbCdAnK\\rC@LHh@jBbNxBdNNr@nAnG`AnE|BlJj@xBt@pChBjGDLL`@rAbEPj@@D|BpGjAtCv@rBxBdFzGnNZl@dCjEvAbCn@lA^p@xBrEbA|BbAhCz@zBdBbF`@tAfBhGnBpIj@rCjAtGv@lFNnAHn@R|AJz@^pDVjCPbC^jFZjFVzEd@`IVfFt@dNXpFJrBh@~ILtBTpDDdAFv@?DDv@NvB\\lFf@zGp@jHHr@ZvCd@xDBVX~BRtAj@dEBNRlAv@lFPdA@BTrARpAF\\\\bBp@jD\\`Bv@vDd@pBFZR|@r@pCv@zCZhAv@pCp@fC^tAT~@v@`DXjAxA`Hp@hDz@hF?@RjARpAZ`C\\`C?BVbBbAdIhAbKLpABJn@vFR`B^bCn@vFPzATdCBN`@lGTxEHzBNrH@`BDbBDnC@vABzAFhBBr@BhAHbCNrGNfHFlG@pBBpB@lC?tIErQCzAKxHU`Ma@lNQpEo@dMo@|KG~@c@~FGz@Gx@M`Bc@dFwAnOo@rF_BlNsAzMa@`FiA~O[rGSvEEnACz@KzDQ|GKxGEvGAtE@hHB`E@x@@z@B|BFlDJbFB~@B`ABn@D`BF|AFvAL`DPfDTnEXvEBn@Dz@^fH^jHHzBBz@^pKHfCX|G?JJpDRfIPbMZ~TJzHFxBNhFTrGn@vLLzAPzBVdDXvDn@zGVfCpBrP^bCz@pF?@Lt@j@`DLx@jApGBJJh@z@lEfA~GLv@fA~GdAbI?BtApMXhDZlDBLDj@b@pG@RJhBTdEBp@RzEZ|KVjMNtI@f@@RHrDDzAXzKp@pR?DHtBDz@LlCf@pJj@nIT~CFr@XfD`@fEFx@@Bx@zHp@xF`B~Lx@fGPpAHl@@HNjAbBvLhAnIHl@@H~ArL~@jHd@hDh@`El@lEf@pDb@xCVxAZlBj@~CZ`Bd@~Bj@hCn@vCBHNr@^xAj@`C^|Ah@|Bf@|BZ|Ad@~Bd@bCl@|Cb@dC`@bC^`Cn@jEJr@Jv@DZT`BFf@h@hER`BXfCLnAVhCVtCLrAL|ABVB`@H`AHpARnCJ|AHrADx@FdAHhBPnDJjCD~@Bz@FlBLbFNpF@l@Bf@@^Bp@@j@RdHDbBXhKTzHDzATvHNzENxKH|GB`LA`F?fBCvEAb@Ar@?|@EpCCrAK~EQfHQ|E?FCx@Ez@EzASlEIpAGrAQxCMdBWrDSjC[pDQxB]zD]~Ce@pEYfCAJUdBUfB_A`HIj@o@fEi@`Do@dEa@lCa@`Dk@nE]zCYxCGf@SrBCTCb@O`BYzDa@lGQzCWhFKhCMpDEzAE|BGrC?^Az@C~AAb@CrD?hB?zC@pJ?dE?R?f@CfCAjBEtEIfEMfEEdBEjASpEQnDY|E[hFu@zIu@lH_@nD_@dDStBSrBmAnL]fD]pDUrCCPEf@OdCUxCWvEMnCATObEOfEIvBK|CKnDKlCIzBU~G_@dKUxGYhIMhDOpDEhAOrDSjEYrFSpDSfDM~BK~BGx@UrE]xG]bGSvDYrFa@`IK|AIlB]hGQlCGhACd@CRMdB_@nEIhA_@rDc@~Dc@tDo@fFiAtIc@bDm@hE]fCc@~CYlBYdB]~BiApHCPMv@{@hFe@xC_@hCStAMv@Kp@_@vCa@~C[dC_@hDWhCc@hEo@rHo@`IMvAMvAI|@WbCYnCa@`D]fCWfB_@~BWbBc@~BYdBKf@c@vBo@~CQt@K`@Kb@cAbEk@zBSr@Sp@]nAiChIw@tBgAvCe@hAQd@EFe@jAy@jB}@lBuAtCUj@Wl@w@lBmBbFu@pB_AnCo@hB]`A]`AqAjE_AdDc@xASt@g@lB[hA_@xAQr@Qr@[pAw@jDWfAUhA{AtG{@|DAFo@vCAF_ArEkAdGKj@iAlGm@rDg@zC]xBU|Ak@bEE`@c@fD]hCe@`Em@tFo@jGEf@Ix@[pDa@lF[jE_@|FStD[fGOzD?TO|CItBAPOjEInDGpCI`EE~CExCAfDAhAAnBCtJIfKS|JCnAEjDC|BE`DE|BQpNCzAE|CCbC?f@IjFGhDAz@K`FEtCQ|HGrCKlFIpBMxEm@xUIxDKlDIjDKrDIjCAj@QzFKtDATE`BM~EWvJCx@C~@UrIMpDQtF[zKCjAQpGQ~FKzDI`DO~HMbHKhHC|DGbKAvCAz@ArCA`JB~IDnK@`CF~FP`M?Nr@rb@@z@DxBNbKNjKHlELvF@PJrD@LPnE@N`@rINbCTlDd@rGNjBf@dFb@jEB\\d@fEFh@h@fEh@hEj@hF^rDRbBVhCTfCThCRhCXjDVjDTjDTlDNjCRnDX~F?@Dx@PnEJtC@VNvEDtBHbDJpFLxHFdDFtPB|GBdL@fB?tBF~M?`B@jAHzP@dB?PDrKF|KBtF@dDFjOBfC@lBFhFJnEFlCZtJL`C@NBj@FbAL`CNlCHhA^hFFr@Ft@BPRbCl@lGTtBHp@xAbLZ`CDVPnAD^\\zBj@nDr@`Eh@tCDPNt@\\fBZvAr@bDf@xBxFxUjBxHb@dBjBxHPr@~@vDnAhFf@pB~AbH|BvJTj@FNRp@b@tARl@JXLVFJJLLJRLLFHBD@L@LA@?NANCRI~@s@h@c@HILEPC`@e@Z]BAbAoA|A}AfBqB|BeC\\_@Z]hBoB~A_BdDsDNSJOBIH]BK?C?C@C?A?C?C?C?A@E@C@C@E?CBC@C@C@A@A@??A@ADEDEDAFCD?D?F@DBDBDDDFBFBHBF@J@H@J?HATBP@HDr@@PDJDPRb@r@jB|B~FN`@tBvFBN`BfE`@hABJRp@DJTz@VdATfAh@|CJz@Hp@HjAB^HN@VVdDLxEL~DLtBD~@APTxCtAzNl@vGFx@Fh@LzAVxDHzA?H@LFHFpDArBEvBC~@CbBSrCC`@SrBIl@U~Ak@jCwAfHi@dCuAxGUnAEVWvAKj@SpAIZM|@G`@WdBSjA_@dCCTEn@?@IbBGdACf@FvADBBDBBBD@FBD@F@F?F@D?D?F?DAD?FADAFADCDAFCBCDCBEB[bBCv@OpECd@SlEO|BQlBGp@CZQtBC\\i@xFIn@]`DQvB?Pg@bF_@nDK`AGf@M|@i@nEIh@s@pEe@|CYnBKr@ADIPQpAg@dDc@~CIl@WvBMhAWrCShCG|@ARCZAl@YfGQ|AUhAI`@EJEPWp@S`@Wf@CFkAjBS`@MVAh@?N?J@J@PJL@HJN`@^JJx@r@LJr@j@v@t@Td@Xl@b@z@`A~BTh@JP^r@^j@z@vALRb@l@LXHLVd@`@x@r@zA@BR`@R\\jAdBbB|BdCjDHHFDJNNRFHDFBDBD@DBDBFFNBJFNJ\\p@xBHZDHBJBHBH@F?BFVFZ@JHf@BT@H?FB|ABpB?R@D?R@P@P@J?D@JB`@P?FAJANEVEFCLGVMPIl@k@b@m@Tg@HQFMDKBK?A@@"
+                                        ],
+                                        "start": {
+                                                "lat": 53.34731129999999,
+                                                "lng": -6.256792099999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.2738799,
+                                                "lng": -9.044700299999999
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Coach Station (Fairgreen Rd) 1",
+                                                        "time": 1596851100
+                                                },
+                                                "dep": {
+                                                        "name": "Dublin City South, Burgh Quay, stop 339",
+                                                        "time": 1596842100
+                                                },
+                                                "headsign": "Galway Coach Stn, stop 511201",
+                                                "operator": "GoBus",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "directions": [
+                                                "Head <b>northwest</b> on <b>Fairgreen Rd</b>",
+                                                "Turn <b>left</b>",
+                                                "Turn <b>left</b>"
+                                        ],
+                                        "distance": 128,
+                                        "duration": 93,
+                                        "html_instructions": "Walk to Galway Bus Station, stop 555041",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "y`ddIhpev@?@CJEJGLIPUf@",
+                                                "kbddIjsev@hA~CN^",
+                                                "q_ddIjyev@BG"
+                                        ],
+                                        "start": {
+                                                "lat": 53.27388699999999,
+                                                "lng": -9.0446929
+                                        },
+                                        "stop": {
+                                                "lat": 53.2736654,
+                                                "lng": -9.046096499999999
+                                        }
+                                },
+                                {
+                                        "distance": 146950,
+                                        "duration": 8700,
+                                        "html_instructions": "Bus towards Galway Bus Station - Derry (Magee Campus Strand Road)",
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "i_ddIdyev@GFFNBL?L?RyAtFK`@EJ}@tAa@l@GJCDo@bAQJCBC?C@C?AACASMISMWKOMOkAwAyBaC}@s@m@g@}@{@{@}@gA_Be@o@MQIKACYe@_CuEi@y@oCeEe@w@kAuB{AiDYmAOk@cAeEk@cCWaAOYIUGMEOQYA@A?A@A?A??@A?A?AAA?A??AA?AAA??AAA?AAA?AA??A?AAA?A?CAA?A?A?A?A?A?A?A?A?A?A?A@A?A?A?A@A?AO_@Qi@Ia@]u@{BoEQWq@aAiAqAo@s@SSqBgCIMo@eAg@w@]w@Ui@Um@Wu@Mi@I[K_@Su@WmAS}@Mm@Ia@]_BOu@Kc@eA}ES_AGYOq@c@qBs@iDeAsGu@mECGKe@Mc@CGIWQc@GMWk@m@sAs@qA]m@gAwBS]g@gAYq@U[OWQSQUUe@Ua@IQGKCCSQ_@UGGaAq@OK[Wq@g@m@a@MMe@_@UQYWOOSSa@c@_@c@U[]a@Y[KOQQQSSWg@m@OSe@m@EG]c@w@gAaAyAi@g@_@i@i@y@s@aA]k@S[OU[e@W]m@}@y@qAMSW_@g@y@OY[i@Qa@Oa@Yq@e@sAa@kAIe@q@oB]cA[u@[q@m@iAMSu@gA_@k@uAgBY]oA_BeDeEcC_DuAqBoAuBo@eAQ[m@kAQ]y@cBsAaDu@cBi@mAQc@KUg@gAeAgCQe@Sm@Y_A_@uAg@iByA_GW{@gAiDwBgGaAoCc@iA_@_Ai@kAcAyB[i@wCcFcAcBaCeE{@uAKMQSi@k@a@a@Y[a@[s@e@eBaA_Ae@QIw@c@]S[We@_@_@_@u@w@EEcAuAk@}@OUg@eASc@{@uBQi@eA_DYw@EISg@e@iAk@mAg@_A}@aBqBsCIMcC_DmBeCaBuBW_@SSe@o@c@o@k@w@u@kAcAaBcA_BYe@w@qAsBiDUa@kAqBi@{@qCwEgAmBiAmBOSg@y@eAiBy@kAeByCoBcDIOQWkB}CyAaCKUeAcBWa@_@a@{ByCoAyAi@g@kA{@o@_@gAs@_As@o@k@U]}@oAw@_BKY[}@g@iB{@_E_@aBe@yBI]_BaGi@eBw@aC]cA_@}@o@{Ag@eA_@u@Yg@MUWc@IKqAqBgDiEqCiDm@u@]g@k@}@{@wAiAwBe@{@Yc@MWu@sAGMg@_A_@q@QWGK}@mA[_@eAwAmAmB_BwBk@s@Y[aAcAsB{AQSe@Yc@UoAq@[Oi@ScA[qA[yAYk@Mk@Ks@Mg@Ma@OYOUSWWWYMOQOSUsA{AyAyAeBcBwCiCuBmBoDkDu@u@i@k@k@s@k@w@}@wAeByCsAsBk@{@OI[]yB_CyAyA][WUo@i@{@y@c@c@MSQOaC}BsDiDu@q@qBkBi@i@mG_GQEi@i@_DyC{@w@{@y@w@o@qA{@i@Q{@[w@Ws@SOEMGMO}Ac@y@Yy@UICWImBm@mFeBAAcA[eA]kCy@mDkAcC}@}@[{C}@uMkEiC}@wAa@O?oG{BmBg@mHaCKKwFgB{Bq@qBk@aAUiG{AsDcAICc@MwJwCeHsBgEoAsHyBaEkAm@QICa@K_Cq@WI]KuDiAuRwFkJmC}Aa@s@Uq@SuAa@k@Ok@KYEu@Ic@Cs@Es@AmAA}CB{CFc@@eFFqA@qA@k@?i@?uAEEAAAEGC?mAEaAKw@MeASsBk@c@KgBq@eA_@aA]MGy@Wo@SyAg@wAc@m@S]AsCy@wDsAqBq@s@YSQi@OyBu@OGcEwAsAa@aA]sBu@uAa@kC{@wBu@aBm@GCsAc@eAa@qAc@sC{@qC_AqDsAyCaASIcA[a@Mc@Mi@SgAa@wAi@EAo@UgAe@{Ae@}E_BYKs@Us@QeASe@Ec@AQAk@@s@Fq@JuCh@gB\\c@JaBZ_GnAa@HWDWPkFjAA@qAZ]JoBj@gA\\uBZeE|@sAVkE|@_@F_APY?aB\\aH~ASFOBaGrAqCl@gAVg@JiDr@kCf@u@RaDp@_KlBaB`@e@^{Dv@qDp@SDg@J_APy@J_@Bc@D{@FiCJw@Gi@@_AAcBC}@@kA?yDGwC@S?cFAqC?e@?sD?iAAeA@kA?_B?qACgCCkCAi@AgJ@y@LqC?aCBeBBwDCWGiJ?uE?gA?oEC}BA}BAs@?cAAkLM_@A{FKC?mEGm@AuBGwBIk@AaAGyACk@?o@@mBE}CCS?oCAkA?eB?gBAwA?aBAe@Ac@?s@Co@Ae@AeAAgDIaDEcCCmBAI?c@Ai@?iAA{@Ei@Ka@O_@U_@YKCCAEC]a@g@o@OSKQQ_@OY[gAW_AQ{@EYIi@Gg@Ea@CWA]A_@Ac@A}@@g@@i@Bg@Be@B_@@WBUB[Jw@BOFOD_@z@}ITiDPwDB_@FsBBkB?eBCq@Ai@GuAIgA?CKcAM{@gBsHkCmLa@}Aa@iAYs@]o@mA_Bo@k@kAo@QEWKIA_@EoBMwBU[IeEgAq@Ok@OaA[y@]_CcAeAm@w@c@GCWQ}@i@e@[i@YSIQG{@Q}ASEAuC[]IOEc@O_Ag@k@YSMWQGEuAgA}@s@[[k@o@]e@OGA??A]m@EGQ]Ym@c@iAYeAc@sBW_Bc@iEMsAKy@g@aEKo@KUMUE?EAEAEACCECCEEEAGCGCIAIAIAE?C?I?I?I?G@G@G@G@GBE@EF_ABo@?o@C[AWAKGiAa@{EG{@SiCEg@Gs@i@{C_A{EA[Q{@UqAsB}Is@yC_@eB]_Bm@}B{AkGIe@UiAE_@_@aCMiBOaBIaAO{AQcAAKc@uCEWG]OeBEYScBK_@GSISMYMSEKYi@]o@OSUSLi@Lc@F[Nq@N_AF[Dg@Fu@Bs@FcADe@Jk@@CPw@X_AB{@?i@Ae@Eg@Gu@QiAMg@GSCGCGMQo@y@UYA@gDmD{BqCaDuB_AJ_@y@aCeIgAwDq@{CMa@e@u@aBeBsAoAa@m@c@y@yAyDSSSIcCWsAk@y@m@_A}@iCsCaFyFuDwEgDwE{K{PcAuAUh@uCbJ}@hD{@`EcAzF_Kpm@ui@iRwCy@mEu@qwAuNgKu@aCIuIH}Nf@iCOgB]kRuFmAi@yA}@qCgCaAsAiFuI_JkL_BwAy@e@w@[qB[iCJcA\\gAf@k@`@eBlBqAfCa@dAg@~AUdAy@lGm@~Fo@tDwAdF_E|LqBpEmBjDwAnB{DbFy@tAgB|DcDbJaDrHmElJwKjVcD~GkCtE_FnHwBnCuB|ByDrDiEhDwFbEkBdByAvAyAbB}E~G_DxFwCtGiB~EkOvc@sBvF_BvD{CpFsArBqCrDeW|[{`@vh@yBhCiHpHwDjDiElDgAfAMR_@r@e@`BMz@Y`FWrA{J~VgAxCc@xAiAdFuCxQg@vBa@fAk@dAoA~AqCxBaGbEoBfByAdBk@x@gBdDcHlNoBpDuA|AsAdAgCbCy@hAq@jAs@`Bu@jCiKbf@oCxLs@nBqEzIcNz\\[j@i@l@cAx@aPxJgCfBiA~@eCfC{ChEkAnByAtCkC|GaAtBw@tAa@d@u@p@{Ad@_BHuCAsAUk@SgHeDuBy@cBQcBIgHOgBB}BPoC|@kF`C_JrCmLnE_]vLiKzDm[vKoA|@c@n@mBpDi@p@qBjB@Ba@^aB|AyCrCg@b@YV}@v@oAhAaBzA_EtDgB`BgA`AqAlA_@\\_FrEiC~B}BvBoCfCaCxBe@`@UTIF}AxAIHUTiBbBsAjAq@l@}AhAo@d@a@TQLEByA|@{@b@}@b@mAh@oAf@mBr@yCfAQFuBr@oDrAcExAgBj@iBp@mExA{Bv@q@TSHeDhAoBp@_A\\sDnAmAd@{@ZWHk@T{Aj@kAd@a@Rc@RmBx@_@V_B|@q@`@{@f@wBtAmCdBeBhA}@p@aBhAsB~AGBiAx@y@l@oAx@C@_BbAq@b@oBpA}BxAgC|AeBdAsAz@sAv@cB`AORcAl@aAh@s@Zy@`@kAd@kAd@y@V}Ah@sBn@cB^KBY@qAZ[Fc@Hc@Hw@NiAPo@HK@WBYBu@HaBNsAFa@Bi@By@B@~@?f@AZ?PCNEPCNABITSb@Q^iA|BwBnDkAnBe@t@MPsApB{@vA}@pAo@v@EFUZIH}@bA}AtAURIH_BzAk@j@KNW\\a@j@CBcAt@_@\\oCdCl@tE@HXhCBNJdA^fEDh@e@SqAk@s@]@@fDpA[sC_AoJi@mDWiCw@}FwAiMiA{I]qBq@aBoAmB_DeEc@}@KAGKE[Da@TKHBJLj@HnDa@z@Qb@{@FSDy@E]_@m@qAc@kFcCkE_C}FyDwFoEw{@gu@sFiE}CuBoDuBiGsCmGyBiGyA}\\kHwe@mK_N_E_H_CkLoEcH}CiFeCkMuG_DgBsNiJwEeD{LiJsKeJ{OiO}EkFeBaBqPaSuIcL{LiQgiAwgB_BkCuFiKwD{HnCsFjBwBnBmAfAAbB\\nBhAjA^nGxD|@XFSJGJ?JJFj@lAf@?@?AmAg@ENMJM?MMCi@}@YoGyDkA_@oBiAcB]gA@oBlAkBvBoCrFa\\up@uUef@cEuHsC{EsE}GwHoJkEqEsEiEkQsQoDmE}@oAuB}CaDmFyAuCaCeFyDqJ_AmCsNid@gC{HcRkn@mBwFaAcCeC{FyBgEyAiCkBuCkI{L{BsC{EkFcB_B}DeDeFqDeGiDkAe@uAYwAMqBBqHxA_MtCwDTcBGkBQiRuE{JwAeQqDwC}@kK{EwAe@_Ca@}CI}IlA{ABkD]wA]yAq@yA}@aCwBuFqFsKiJsBqBeAwAA??@U]S[oBuC{@oAu@mAe@o@q@cAQWQUMWc@o@S_@MUOWUc@Q]Q_@M[KWIOKYGQKMe@qAK][cAIYK_@Kc@_@cBMq@e@cC}@{E]iBAWI_@S{@Sy@I]GUI[Uu@M_@EO_@iAg@}AiAmD}A_FK[cAcDuAmEIUk@gBo@oBq@{B}AcFY}@}ByHqAkEW{@Uy@WaAU}@S}@UaAScA[{AIc@QaAQ_AQeAKo@Mw@OaAGe@MaAUeBKgAGi@SaBUoBSaBEc@oA_LKcAMgAQuAWaCWyBAKw@wGQgBa@kD[iCEe@McAUkBSiBUcBGc@Ga@OeAQ}@SeAQaAOk@Oo@WaAa@yAMe@qBeHa@wAW{@IYQi@Sm@Oa@MQIQS]KSKQU]KOIIKOKKOSUSKMMKUQQK_Ag@_@MmBm@MIUG{@Ok@KmCg@a@G]Ii@Ig@KSEi@K}@OSEk@Kg@KWEgB]gDo@uCi@{Ds@SEUEi@Im@Ge@GgBSwAO{@Kk@G]Eu@IqAQWCqEg@k@Ge@Ge@GWESEUESCSEk@Mi@MSGSESGi@O}@[{@[SKg@Sg@Sy@_@WMc@UWOe@Wk@]g@[w@i@i@]eCiB{C}B_@[y@o@e@]QOMKw@k@u@i@WQc@YyA_AOKe@Wc@SKGaA]QG_@I[IUEQCYEm@G[CSCmAIk@Eo@EYAm@EOAc@EE?]C_@Cu@Gq@EKA_@AC?e@Ca@C]E[Go@K_@IMC_@Ki@Om@Ug@QOG]O_@QUK[QK?A?CAWQSKYQYSUOa@YYScApEa@lBU|@Uj@Ud@]l@wAhBW\\y@hAOP_@r@q@bB_@dA_@`BI^O|@QzAW`DCn@Ab@AV?Z@jAFhBHfBJxARjCFv@LtA\\fDf@~FB\\NtBBXDp@VvCx@`KFz@d@tFb@`F`@xE~@rLb@lFdAxM?A@?@A@?@?@?@A?@@?@?@?@@@?@@@@?@@@@@@@?@@@?B?@@@?Bn@q@`@c@PWJYb@kAVsAJeABm@?c@?Q?MCy@Ck@[oFYmF?C@E?AEENUVMI{DL[\\KRD@?RVJb@NtCx@lPIx@Qf@ML{AI@POlB[rB]nAc@`AoA~@?d@GVMJOAMOGW@[HSLMy@kIwAaQeJohA]}EI_CAcDFmCP}BnAmG`B{DrAqBrCqDv@{Bl@iC~@eFmTqPgHiFkJoHqA{@wJmEoJ}CwAQuAG}@LiAV}FxCcBr@yA^{XzEeBl@cB~@{EvDuHdFsDbEkBxAaAd@_BVaB@iK[wBTwBt@qJxDyDjBk@Z}GbGkAr@kAXiAJiAA}Ba@gFmACXILMFMEIQCY@K_IeAcECmJZAb@IPMDMCISC]sDFgAEsKaAeCGkBLgATqBr@uD`A_LzBJxBDnAK@w@Hi@C|AgA@ADM@HDj@SFIBSHg@N_@FqA@w@B_AA]AOA_@EO?cB?kA@}B?sA?i@CG@S?K?MAIAMAYCi@Gw@Oe@M_@Kk@Qe@Qu@[WMCEGISK}@i@c@W_@Yy@q@YUsAiAk@g@}@u@w@o@]YWS_@[qAgAgA_Am@g@eByAiA_AsAiA{@s@gBwAwBgBkCyBmAaAo@k@wAkAg@_@qAgAkA_AwAgASOe@[u@e@g@][UoAo@m@]g@UoCsA{@a@o@[eD}Au@]qEyBkBcAs@_@gBcAOKmAu@EEqBqAwCoBeAu@_BeA]U{@i@cAm@cAm@yBkAe@W_Ag@cAi@c@S}@a@aAe@YMiAg@yBaA{FeCyB_A{BcAy@a@sAo@g@WSKmAq@q@_@qBkAsAu@]SgAm@{@e@OImAq@QKMCWM}@g@_B}@}BoAQIWOQKe@YwBmA[OaBeAUOuA{@iBkA_BaAAASO{A_Au@e@g@][Se@[UYq@a@OMiBoAaAm@qEkCm@]u@e@yA}@IEaBaA_Ai@YQSMOKOMOQOOQUQUeAuAY_@Y]o@{@e@m@oAaBi@s@_@g@aDiEaAsAcAuA}@kAk@w@y@gAe@q@g@s@q@}@q@_Au@cAo@y@g@q@a@i@[a@e@q@gA{AwAmB_AoAW]Y]a@i@_@a@Y[SUq@s@[Wa@YWOCACAQI_@MYGIAQCO?UAa@?uABsBDs@B{AD}@Bo@ByBHu@DmAFWBi@Be@Dc@D_@Da@Fw@LUDq@L_@Fy@P{@Rs@NsAZi@Lm@Je@Lc@J_E`ASDgJ|BcB^aBd@u@RoEnAgCp@oG~A{Ct@gAT]HUDM@U@MHk@AW?_@ESCc@KUGWOUOWQ[Y_@_@QSMSUa@IMISMWKWK[Oa@Ia@K]G[Gc@?AIm@Ko@Gg@OyASaCcBkR}@iK[iDI{@Is@Ii@Kg@Qk@Um@s@}A[o@KWEKoCwFq@}Ae@gA]}@m@eBUu@Mg@K_@GUEYMq@WiBSyAGYG_@YwA{@yDMi@Me@IYM[IMGKIOOQIK[[eAgAi@e@q@k@{@w@c@e@m@k@]]EEQOOKoAw@QIQM]UQM][]YwDmDq@q@oBoBYUWSMIWMe@UUGOGSEc@I_@IOEWOQMSOAAQSIOUa@Si@IWm@_BIS]w@Yq@OW{C_GSc@KYK]Me@OUGIIIEEIGuAgAKIeBuBc@g@e@w@Uc@Uc@KOEEA?AAGAI@Ok@I]g@wAi@wAa@sAUy@S{@Q{@EQEWKu@GYGSKa@IYM]MWiAsBYk@Wc@mBeEq@{AQ_@wAkDo@eBKYoA{DkFkOm@eBUs@Ug@i@kAmAgCYk@iA}Ba@w@o@sAe@u@Ye@SYa@i@w@aAWYg@g@e@e@e@a@_@YWS{AeAqA}@{@e@eDcB{@e@sE}BEAyAu@}Aq@cBo@}CkAkAc@a@Mc@OsHgC}Bw@gA_@g@OaBi@uAc@{@Uo@QaAWmEcA{Bg@q@QcAa@mBy@gBu@m@YiBy@iAg@_@OQG]K]EYEY?Q?W?G@[@G@QBUFODYJm@Ve@VwAr@sAn@w@\\e@Pi@Nu@Pk@J]Di@B_@?S?]CWCWESGYGUIWIWMkAm@i@[i@[WWWUSSY]W]Ua@Q[?A[i@w@{A_@y@Yu@K]YeAMe@Ig@ACG[CWEUUcBKu@KgAImAEw@EcBAs@EwB?ACaCAiBAsC?}DAe@A}@C[Es@CYEYSwA_@aCm@oDs@kEa@aC{BgN[aBg@sC]cCe@cDk@eEg@oDOeAc@wC{@_GUaBCMEg@Cc@Ck@Ag@?o@@}ADw@H_BFqAB_@JsBJcBH}AFyAFiBB}A?iACqAQiCQ{@o@iD_@kBc@yBe@{Be@_CqAeGKi@yBaKkBsIOu@wByJyBuJ_D_NK_@k@{B}@wCaBeFyCaJ}CyJ]cAoAiEmAgE}@gD]kAa@{AwAeFu@mCMe@eAuDc@}ASs@o@{BaA{CGUy@aCkBqFy@_Cy@yBo@kBM_@u@wB{@cCs@sBe@uAGOs@qBeA{Ce@uAu@sBw@_CkAeDg@}Ac@mAOe@c@qAs@aCeAgDaA}CiAoDeAkDGMSq@o@uBgAgDi@gBsBwG}AeFc@aBc@sBo@cDw@oDa@yBm@cDs@iEm@oDKo@]kBg@_Dg@wCUmAe@cBmDeK_HiSmAgDu@}Bi@}Am@aBo@gBGSe@sAu@eBq@oAu@wAu@wAYg@Yg@q@qAq@qAo@oAa@aASi@u@uC_@}Ac@gBe@cBa@uA_@uACG_@oAa@wA_@mA]aAi@sAKUq@_B]w@Se@CIo@aBo@uBo@oB_@aAUg@e@aAq@yAUi@Qc@[cASy@O_AKeAGmAC{A@g@?_A@}A@_B?cBEmAEe@Ea@AOGe@Ia@Mm@Mm@W}@Uq@[}@s@mBu@sBy@wBe@mAe@sAa@uAYoACUG[Iu@ScDMmDS_GScHC_@G{BGuCa@cLGeAEq@CSE_@Gc@EWIYESEOISa@mA{@iBO_@s@wAq@oAc@q@OQs@w@o@o@[]U[]c@MS_@u@]y@M_@M[a@iA_@}@aAwB}@sB]q@o@sAc@aASa@Se@wA{CMU{@iBg@iA_@u@Se@a@}@g@iASi@Qg@Qk@Qo@Mk@WcAQq@Us@Yu@Q_@Yc@QUc@i@i@g@y@y@u@s@cAaAq@k@MKi@]s@]s@]w@e@a@Wq@k@YWo@w@_BeB}@eAyAaBoAyA_CkCm@y@wAsBy@gA[[][[S_@Sc@O_@Ie@GmBSoAMo@GcBOqAIsAIyBOm@Gc@Oq@]WU]UU[_@e@Ya@_AyAQYwA{BgC_E{@{A[{@m@_B]gAW}@k@}B[_Ba@uCUwBs@gGc@sD[sCQmAc@sCUmAMm@Kg@Ki@Oo@Ok@CI]oA_@iAcAqCk@uAeBcE}CmHsA}CoBwEWm@Qa@{BqFmAsCUi@]w@[o@Sa@S]c@u@_@k@c@o@q@u@WWg@e@WSg@_@uA}@wAw@c@Wa@U_@SQKwA{@a@Wu@g@iB_Bo@m@kAqAs@_A{AeC[g@_@m@mBcDsBmDg@{@u@oAy@sAwHqMKS[i@OWuAaCoAwBEI[i@Yg@cAeBqAyBKS[g@IOiCmEsA_CqA{B_@q@e@{@g@gA]u@o@cBq@qB_@oAc@wAs@qCMk@Mq@SaAS_AaAsGm@{Eq@yE{@sGcAcHg@mDUaBWsBMw@g@wDsCgTa@yCUaBSwAQmAkB}MGIACEKI[GSSe@CAACAACCACACACAE]IUGUEe@AeA?oAAO?c@Ac@?oDB}FXeCRa@Dg@JUJ_@TMDABADABC@ABABA@CBC@C@C@E?C?C?EACAGEA??AA??AAAAAq@O]BkAV{Dz@qAb@iAXiBn@i@PYLQDMFSH]LMDyEvBaCfAu@`@mAv@_@V[Va@ZA@i@d@QRq@p@wB~BmBvB}@bA}AbBUT]^QPu@l@w@j@?@i@^{@d@k@XqAl@m@VoA^sBp@qBn@c@N{Ad@aCt@uBp@yAb@_Bf@A@_@LqAb@}@`@}@b@s@`@o@b@SNg@\\q@j@URyAzAEB}BpCo@t@oB`CsAtAgBxAcBpAgAt@SNMHuA`Ak@`@e@XsAt@y@^eAb@y@TA?aATeAPk@FC?m@DG@oB@wAEi@Eg@Iu@Ma@Io@Ow@UkBi@eCo@cCo@yCq@UEA?m@M_Di@EAc@Ic@G_@GAAc@EgBUuC[kCQc@CeBOcCO_AEaAAM?A?o@AqBHgD`@yAHoADS?S?u@AWAaAGq@Gy@Ki@KeAWi@OgAa@YKc@Qy@_@cAc@eAg@_@Qw@]w@_@_Ac@e@Wg@YWQe@[QM]We@_@[Ya@_@_@a@c@c@a@e@CCc@g@a@i@u@_As@}@SWe@k@gB_CcAqAi@q@_AmAaBsBMQUYGIy@eAuAeByAiBgAyAqAaB{AqBsAgByAiBw@kA[e@_@m@QYa@u@e@}@CEYm@Yk@[u@[w@i@uAg@sAk@uAg@sAk@qAo@mAo@iAs@eAu@_Au@{@c@c@i@e@OMi@c@[UuCoBwB{AiD{BaAo@eAq@}@g@o@]k@Ym@YeBw@aC_Ak@Sw@U{@WuA_@k@Mq@Oa@I}@OqASWEi@Ii@GYEy@GWCqAGk@C}@Ck@AaAAi@?m@?Q?Q@o@@_AD_ADiAHG?[DM@uANoAPm@Hi@Jg@JMBa@HMDUDe@J_AV_AX}@Xi@Pg@RYJ_@Lk@Ve@Ro@ZqB~@i@VgBz@QHsBbAqAj@_A^e@P]L_@Ji@Nk@N{@Ri@HcAPe@FA?i@FwAJwBJoBJa@BoBLyDRo@Bi@@MB_@BGJCDCBCBE@E@C@E?EACAEACCCECECECEAGCG?GAIQ_@GOEGKIMI]Mi@Se@Sg@Yc@Ug@U]O_@KUG]IWCI?SAUAI?I?W@WBe@FIByBj@DlAsBjAyEnDMcA?CMu@_B|@"
+                                        ],
+                                        "start": {
+                                                "lat": 53.2736548,
+                                                "lng": -9.0461112
+                                        },
+                                        "stop": {
+                                                "lat": 54.2720255,
+                                                "lng": -8.481893699999999
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Sligo Bus Station, stop 555081",
+                                                        "time": 1596871500
+                                                },
+                                                "dep": {
+                                                        "name": "Galway Bus Station, stop 555041",
+                                                        "time": 1596862800
+                                                },
+                                                "headsign": "Galway Bus Station - Derry (Magee Campus Strand Road)",
+                                                "operator": "Bus \u00c9ireann",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "directions": [
+                                                "Head <b>west</b> toward <b>Lord Edward St</b>/<wbr/><b>R292</b>",
+                                                "Slight <b>left</b> onto <b>Lord Edward St</b>/<wbr/><b>R292</b>",
+                                                "Turn <b>left</b> onto <b>N4</b>"
+                                        ],
+                                        "distance": 864,
+                                        "duration": 667,
+                                        "html_instructions": "Walk to Primary Care Centre, Barrack St, Rathquarter, Sligo, Ireland",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "w~fjIttwr@?r@?R@HBLBHDD@DFDFBF?HAHCFCLQBG@E@E?K?G?GAOA]?a@?G?E@IDO",
+                                                "w{fjIprwr@g@mDGg@",
+                                                "g}fjIzkwr@k@AcAKu@KGA}@OqAUWE[IOEMGMI_@UYYQQOSSWMSEIc@s@Yg@g@y@[i@IQg@cAYm@GQKWMa@Mc@IUAGSg@MSGKYg@_@g@c@i@SUII"
+                                        ],
+                                        "start": {
+                                                "lat": 54.27196300000001,
+                                                "lng": -8.4821872
+                                        },
+                                        "stop": {
+                                                "lat": 54.27660969999999,
+                                                "lng": -8.476087099999999
+                                        }
+                                }
+                        ],
+                        "transit_index": [
+                                1,
+                                3,
+                                5
+                        ]
+                }
+        ],
+        "status": "OK"
+}

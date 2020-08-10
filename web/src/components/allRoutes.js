@@ -1,29 +1,32 @@
 import React, { useState } from "react";
 import Route from "./route";
 import { Col, Timeline, Row } from "antd";
+import ReactHtmlParser from "react-html-parser";
 
 import DirectionsBusIcon from "@material-ui/icons/DirectionsBus";
 import DirectionsWalkIcon from "@material-ui/icons/DirectionsWalk";
 import TramIcon from "@material-ui/icons/Tram";
 import { ClockCircleOutlined } from "@ant-design/icons";
+import { Divider } from "antd";
 
 const AllRoutes = ({ tripTimes, setDirections }) => {
   const [index, setIndex] = useState(0);
-  console.log(tripTimes);
-
+  const [showMore, setShowMore] = useState(false);
   return (
     <div>
-      {tripTimes.length < 1 && <p>Choose a source and destination</p>}
+      {tripTimes.length < 1 && <h2>Choose a source and destination</h2>}
       <Row>
         <Col flex={1}>
           {tripTimes.length > 0 &&
             tripTimes.map((dueTime, i) => (
+              // make cards for each alternative route
               <Route
                 key={i}
                 tripTime={dueTime}
                 setDirections={setDirections}
                 setIndex={setIndex}
-                index={i}
+                index={index}
+                i={i}
               />
             ))}
           <br />
@@ -41,31 +44,35 @@ const AllRoutes = ({ tripTimes, setDirections }) => {
                     new Date(step.time).getMinutes()
                   }
                   color={
+                    // blue if transit, green if walking
                     tripTimes[index].transit_index.includes(i)
                       ? "blue"
                       : "green"
                   }
                 >
                   <p>
-                    {i < 1 ? tripTimes[index].start.address : ""}
+                    {
+                      // first show the start address
+                      i < 1 ? tripTimes[index].start.address : ""
+                    }
 
-                    {tripTimes[index].transit_index.includes(i) &
-                    !tripTimes[index].transit_index.includes(i - 1) &
-                    (i > 0)
-                      ? step.transit.dep.name
-                      : ""}
+                    {
+                      // if this step is transit, else nothing
+                      tripTimes[index].transit_index.includes(i) & (i > 0)
+                        ? step.transit.dep.name
+                        : ""
+                    }
 
-                    {tripTimes[index].transit_index.includes(i) &
-                    tripTimes[index].transit_index.includes(i - 1)
-                      ? step.transit.dep.name
-                      : ""}
-
-                    {!tripTimes[index].transit_index.includes(i) &
-                    tripTimes[index].transit_index.includes(i - 1)
-                      ? tripTimes[index].steps[i - 1].transit.arr.name
-                      : ""}
+                    {
+                      // if this step isnt transit and the last was show previous arrival name, else nothing
+                      !tripTimes[index].transit_index.includes(i) &
+                      tripTimes[index].transit_index.includes(i - 1)
+                        ? tripTimes[index].steps[i - 1].transit.arr.name
+                        : ""
+                    }
                   </p>
                   <p>
+                    {/* The inside */}
                     {tripTimes[index].transit_index.includes(i) ? (
                       step.transit.type === "BUS" ? (
                         <DirectionsBusIcon style={{ color: "blue" }} />
@@ -75,18 +82,27 @@ const AllRoutes = ({ tripTimes, setDirections }) => {
                     ) : (
                       ""
                     )}
-                    {tripTimes[index].transit_index.includes(i)
-                      ? step.transit.route
-                      : ""}
-
-                    {!tripTimes[index].transit_index.includes(i) ? (
-                      <DirectionsWalkIcon style={{ color: "blue" }} />
+                    {tripTimes[index].transit_index.includes(i) ? (
+                      step.transit.route
                     ) : (
-                      ""
+                      <div>
+                        <DirectionsWalkIcon
+                          onClick={() => setShowMore(!showMore)}
+                          style={{ color: "blue" }}
+                        />
+                        {showMore &&
+                          step.directions.map((direction) => (
+                            <p>
+                              {ReactHtmlParser(direction)}
+                              <Divider />
+                            </p>
+                          ))}
+                      </div>
                     )}
                   </p>
                 </Timeline.Item>
               ))}
+              {/* Destination timeline element */}
               <Timeline.Item
                 label={
                   new Date(tripTimes[index].end.time * 1000).getHours() +

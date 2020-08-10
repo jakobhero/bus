@@ -15,10 +15,9 @@ import "../css/fav.css";
 import Tooltip from "@material-ui/core/Tooltip";
 
 const gridStyle = {
-  width: "25%",
-  height: "150px",
+  height: "160px",
   textAlign: "center",
-  minWidth: "150px",
+  maxWidth: "50vw",
 };
 
 const Favourites = ({
@@ -30,9 +29,11 @@ const Favourites = ({
   state,
   favStops,
   setFavStops,
+  setSearchVal,
 }) => {
   function handleClick(stopid, stopName) {
     setRealTime(stopid, stopName);
+    setStopsForMap([]);
   }
 
   function handleDelete(stopid) {
@@ -40,27 +41,25 @@ const Favourites = ({
     setFavStops({ fullname: getStopNames(), stopsids: getStopNums() });
   }
 
-  function handleClickAdd(Val) {
+  function handleClickAdd(val) {
     // transfer to the map tab, shows the address and near by bus stops
     // once click the address in the favourites tab
+    setSearchVal(getAddressByVal(val));
     let newFields = { ...state };
-    let test = {};
-    test["val"] = getAddressByVal(Val);
-    test["lat"] = parseFloat(getAddressByVal(Val + "Lat"));
-    test["lng"] = parseFloat(getAddressByVal(Val + "Lng"));
-    newFields["source"] = test;
+    let newSource = {
+      val: getAddressByVal(val),
+      lat: parseFloat(getAddressByVal(val + "Lat")),
+      lng: parseFloat(getAddressByVal(val + "Lng")),
+    };
+    newFields["source"] = newSource;
     newFields["destination"] = "";
     newFields["time"] = "";
     clearMap();
     axios
       .get(
-        "/api/nearestneighbor?lat=" +
-          getAddressByVal(Val + "Lat") +
-          "&lng=" +
-          getAddressByVal(Val + "Lng")
+        "/api/nearestneighbor?lat=" + newSource.lat + "&lng=" + newSource.lng
       )
       .then((res) => {
-        console.log(res);
         if (res.statusText === "OK") {
           setStopsForMap(res.data.stops);
           setActiveKey("map");
@@ -68,7 +67,6 @@ const Favourites = ({
       })
       .catch(console.log);
     setState(newFields);
-    console.log("new field for fav", newFields);
   }
 
   return (
@@ -79,7 +77,12 @@ const Favourites = ({
           headStyle={{ backgroundColor: "#1b55db", color: "white" }}
         >
           {favStops.fullname.map((item, index) => (
-            <Card.Grid style={gridStyle} hoverable className="stopsCard">
+            <Card.Grid
+              key={index}
+              style={gridStyle}
+              hoverable
+              className="stopsCard"
+            >
               <CardContent>
                 <Typography>{item}</Typography>
                 <Typography>{favStops.stopsids[index]}</Typography>

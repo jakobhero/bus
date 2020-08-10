@@ -5,13 +5,15 @@ import { Table, Modal, Radio } from "antd";
 import "antd/dist/antd.css";
 import { HistoryOutlined } from "@ant-design/icons";
 import { setCookie, delCookie } from "./cookies";
+import Tooltip from "@material-ui/core/Tooltip";
 
 import "../css/fav.css";
 
 import StarIcon from "@material-ui/icons/Star";
 import StarBorderOutlinedIcon from "@material-ui/icons/StarBorderOutlined";
+import Refresh from "@material-ui/icons/Refresh";
 
-const RealTimeInfo = ({ realTimeData, favStops, setFavStops }) => {
+const RealTimeInfo = ({ realTimeData, favStops, setFavStops, setRealTime }) => {
   // generate content of real-time tab
   const [visible, setVisible] = useState(false);
   const [state, setState] = useState({});
@@ -19,6 +21,7 @@ const RealTimeInfo = ({ realTimeData, favStops, setFavStops }) => {
   const stopid = realTimeData.stopid;
   const fullname = realTimeData.fullname;
   realTimeData = realTimeData.data;
+  // This will default to false until the data is loaded in, this the below if statement will correct this
   const flgIcon = favStops.stopsids.includes(stopid);
   const [icoStatus, seticoStatus] = useState(flgIcon);
   if (flgIcon !== icoStatus) {
@@ -33,18 +36,17 @@ const RealTimeInfo = ({ realTimeData, favStops, setFavStops }) => {
     return arr;
   }
 
-  const icoStatusData = (e) => {
+  const iconStatusData = (e) => {
     // adding/deleting cookies
     seticoStatus(!icoStatus);
-    if (flgIcon) {
+    if (icoStatus) {
       delCookie(stopid);
       setFavStops({
         fullname: removeItemOnce(favStops.fullname, fullname),
         stopsids: removeItemOnce(favStops.stopsids, stopid),
       });
     } else {
-      setCookie(stopid, stopid);
-      console.log(favStops.fullname, fullname);
+      setCookie(stopid, fullname);
       favStops.fullname.push(fullname);
       favStops.stopsids.push(stopid);
       setFavStops({
@@ -55,6 +57,7 @@ const RealTimeInfo = ({ realTimeData, favStops, setFavStops }) => {
   };
 
   const columns = [
+    // Set up for table
     {
       title: "Route",
       dataIndex: "route",
@@ -111,15 +114,37 @@ const RealTimeInfo = ({ realTimeData, favStops, setFavStops }) => {
 
   return (
     <div className="realTime">
-      <h2>
-        {realTimeData ? `Stop ${stopid} (${fullname})` : "Select a bus stop"}
-      </h2>
-      {realTimeData &&
-        (icoStatus ? (
-          <StarIcon onClick={(e) => icoStatusData()} />
-        ) : (
-          <StarBorderOutlinedIcon onClick={(e) => icoStatusData()} />
-        ))}
+      <div className="Title">
+        <h2>
+          {realTimeData ? `Stop ${stopid} (${fullname})` : "Select a bus stop"}
+        </h2>
+        {realTimeData && (
+          <div>
+            <Tooltip className="tooltip" title="Refresh">
+              <Refresh
+                className="buttons left"
+                fontSize="large"
+                onClick={() => setRealTime(stopid, fullname)}
+              />
+            </Tooltip>
+            <Tooltip className="tooltip" title="Toggle Favourite">
+              {icoStatus ? (
+                <StarIcon
+                  className="buttons right"
+                  fontSize="large"
+                  onClick={(e) => iconStatusData()}
+                />
+              ) : (
+                <StarBorderOutlinedIcon
+                  className="buttons right"
+                  fontSize="large"
+                  onClick={(e) => iconStatusData()}
+                />
+              )}
+            </Tooltip>
+          </div>
+        )}
+      </div>
       <Table
         dataSource={realTimeData}
         columns={columns}
