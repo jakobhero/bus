@@ -66,13 +66,16 @@ const App = () => {
     setBusIndex([]);
   };
 
-  const getStopsByCoords = (lat, lng) => {
+  const getStopsByCoords = (lat, lng, local = false) => {
     clearMap();
     axios
       .get("/api/nearestneighbor?lat=" + lat + "&lng=" + lng)
       .then((res) => {
         if (res.statusText === "OK") {
-          setState({});
+          if (local) {
+            setState({});
+          }
+
           setStopsForMap(res.data.stops);
           setActiveKey("map");
         }

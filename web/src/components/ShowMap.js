@@ -55,7 +55,8 @@ function Locate({ panTo, getStopsByCoords }) {
               });
               getStopsByCoords(
                 position.coords.latitude,
-                position.coords.longitude
+                position.coords.longitude,
+                true
               );
             },
             () => null,
@@ -321,10 +322,12 @@ function ShowMap({
             <div>
               <h2>{selected.fullname}</h2>
               <h4>{`Stop ${selected.stopid}`}</h4>
-              {Object.keys(selected.lines).map((route) => (
+              {/* <DirectionsBusIcon style={{ color: "blue" }} /> */}
+              {Object.keys(selected.lines).map((route, idx) => (
                 <span>
                   <DirectionsBusIcon style={{ color: "blue" }} />
-                  {route}
+                  <strong>{route}</strong>
+                  {idx > 0 && idx % 5 === 0 && <br />}
                 </span>
               ))}
               <br />

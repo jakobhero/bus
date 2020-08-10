@@ -116,7 +116,7 @@ const RealTimeInfo = ({ realTimeData, favStops, setFavStops, setRealTime }) => {
     <div className="realTime">
       <div className="Title">
         <h2>
-          {realTimeData ? `Stop ${stopid} (${fullname})` : "Select a bus stop"}
+          {realTimeData ? `${fullname} (Stop ${stopid})` : "Select a bus stop"}
         </h2>
         {realTimeData && (
           <div>
