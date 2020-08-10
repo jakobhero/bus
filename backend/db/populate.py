@@ -2,11 +2,14 @@ from config import config
 from sqlalchemy import create_engine
 import pandas as pd
 
+
 def pop_leavetimes(leavetimes_df):
     """populates the leavetimes table with data in leavetimes df."""
     count=0
     for chunk in leavetimes_df:
         count+=1
+        if count<=115:
+            continue
         chunk.to_sql("leavetimes",con=engine,if_exists="append",chunksize=10000,index=False)
         print(f"Finished populating chunk {count}.")
 
