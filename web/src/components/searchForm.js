@@ -186,7 +186,7 @@ const SearchForm = ({
       <div className="mainForm">
         <BorderWrapper
           borderColour="#1b55db"
-          borderWidth="2px"
+          borderWidth="3px"
           borderRadius="15px"
           borderType="solid"
           innerPadding="20px"

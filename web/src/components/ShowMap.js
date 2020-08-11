@@ -25,6 +25,8 @@ import Work from "@material-ui/icons/Work";
 import WorkOutlined from "@material-ui/icons/WorkOutline";
 import DirectionsBusIcon from "@material-ui/icons/DirectionsBus";
 
+import { CompassOutlined } from "@ant-design/icons";
+
 import ReactWeather from "react-open-weather";
 //Optional include of the default css styles
 import "react-open-weather/lib/css/ReactWeather.css";
@@ -65,12 +67,7 @@ function Locate({ panTo, getStopsByCoords }) {
           );
         }}
       >
-        <i
-          className="fa fa-compass"
-          id="innerLocate"
-          aria-hidden="true"
-          style={{ fontSize: "35px" }}
-        />
+        <CompassOutlined style={{ fontSize: "34px" }} />
       </div>
     </Tooltip>
   );
