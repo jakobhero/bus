@@ -23,7 +23,6 @@ import Home from "@material-ui/icons/Home";
 import HomeOutlined from "@material-ui/icons/HomeOutlined";
 import Work from "@material-ui/icons/Work";
 import WorkOutlined from "@material-ui/icons/WorkOutline";
-import DirectionsBusIcon from "@material-ui/icons/DirectionsBus";
 
 import { CompassOutlined } from "@ant-design/icons";
 
@@ -322,13 +321,32 @@ function ShowMap({
               <h2>{selected.fullname}</h2>
               <h4>{`Stop ${selected.stopid}`}</h4>
               {/* <DirectionsBusIcon style={{ color: "blue" }} /> */}
+              <br />
               {Object.keys(selected.lines).map((route, idx) => (
                 <span>
-                  <DirectionsBusIcon style={{ color: "blue" }} />
-                  <strong>{route}</strong>
-                  {idx > 0 && idx % 5 === 0 && <br />}
+                  {/* <DirectionsBusIcon style={{ color: "blue" }} /> */}
+                  <strong
+                    style={{
+                      borderStyle: "groove",
+                      padding: "3px",
+                      margin: "3px",
+                      marginBottom: "3px",
+                      // borderColor: "#1b55db",
+                      backgroundColor: "#fea100",
+                    }}
+                  >
+                    {route}
+                  </strong>
+
+                  {idx > 0 && idx % 5 === 0 && (
+                    <div>
+                      <br />
+                      <br />
+                    </div>
+                  )}
                 </span>
               ))}
+              <br />
               <br />
               <Tooltip className="tooltip" title="Real Time">
                 <Button
