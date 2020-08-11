@@ -164,6 +164,7 @@ if __name__=='__main__':
         ax = sns.barplot(x=dummy_columns, y=fs.scores_,palette="Blues_d")
         ax.set_xticklabels(ax.get_xticklabels(), rotation=90, ha="right")
         plt.savefig("img/"+line+"_"+str(direction)+"_cat.png")
+        plt.close()
 
         #calculate correlation for numerical features
         numeric=X_train.columns[(X_train.dtypes=="int64") | (X_train.dtypes=="float64")]
@@ -173,6 +174,7 @@ if __name__=='__main__':
         plt.figure(figsize=(16,9))
         sns.heatmap(corr,xticklabels=corr.columns,yticklabels=corr.columns,linewidth=.5,cmap="YlGnBu")
         plt.savefig("img/"+line+"_"+str(direction)+"_num.png")
+        plt.close()
 
         #assemble dataframe for modelling
         high_corr=corr["dur_a"][(corr["dur_a"]>=0.5) | (corr["dur_a"]<=-0.5)]
