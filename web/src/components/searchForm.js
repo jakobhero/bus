@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { forwardRef, useState } from "react";
 import PlacesAutocomplete from "./SearchV2";
 import DirectionsIcon from "@material-ui/icons/Directions";
 import SwapVert from "@material-ui/icons/SwapVert";
@@ -7,6 +7,8 @@ import "react-datepicker/dist/react-datepicker.css";
 import BorderWrapper from "react-border-wrapper";
 import "../css/search.css";
 import Tooltip from "@material-ui/core/Tooltip";
+import { SearchOutlined } from "@ant-design/icons";
+import Watch from "@material-ui/icons/WatchLaterOutlined";
 
 import { Button } from "antd";
 
@@ -19,7 +21,17 @@ const DatePickerFunc = ({ handleChange }) => {
     setStartDate(date);
     handleChange({ date }, "time");
   };
-
+  const ref = React.createRef();
+  const CustomDateInput = forwardRef(({ onClick, value }, ref) => (
+    <input
+      onClick={onClick}
+      value={value}
+      onChange={onClick}
+      ref={ref}
+      className="dateInput"
+      style={{ width: "100%" }}
+    />
+  ));
   return (
     <DatePicker
       selected={startDate}
@@ -27,7 +39,8 @@ const DatePickerFunc = ({ handleChange }) => {
       withPortal
       timeIntervals={15}
       showTimeSelect
-      dateFormat="MMMM d, yyyy h:mm aa"
+      dateFormat="d MMMM h:mm aa"
+      customInput={<CustomDateInput ref={ref} />}
     />
   );
 };
@@ -71,7 +84,6 @@ const SearchForm = ({
     let temp = newFields.destination;
     newFields.destination = newFields.source;
     newFields.source = temp;
-    console.log(newFields);
     setSearchValD(searchValS);
     setSearchValS(searchValD);
     setFieldsValues(newFields);
@@ -91,10 +103,6 @@ const SearchForm = ({
         newFields.source = { val: searchValS };
       }
     }
-
-    console.log(newFields);
-    console.log(searchValS);
-
     if (newFields.source.val === "") {
       // No source
       alert("Please enter an Origin");
@@ -178,7 +186,7 @@ const SearchForm = ({
       <div className="mainForm">
         <BorderWrapper
           borderColour="#1b55db"
-          borderWidth="2px"
+          borderWidth="3px"
           borderRadius="15px"
           borderType="solid"
           innerPadding="20px"
@@ -203,7 +211,6 @@ const SearchForm = ({
                 onClick={handleDirectionsClick}
               />
             </Tooltip>
-            <br />
           </div>
           {showDestination && (
             <div>
@@ -221,13 +228,26 @@ const SearchForm = ({
                     className="directionsButton"
                   />
                 </Tooltip>
-                <br />
               </div>
-              <DatePickerFunc handleChange={handleChange} id={"time"} />
+              <div className="search">
+                <DatePickerFunc handleChange={handleChange} id={"time"} />
+                <Watch className="directionsButton" />
+              </div>
             </div>
           )}
-          <Button style={{ margin: 20 }} type="submit" onClick={handleSubmit}>
-            Submit
+
+          <Button
+            icon={<SearchOutlined />}
+            type="submit"
+            onClick={handleSubmit}
+            size="large"
+            style={{
+              margin: 20,
+              backgroundColor: "#1b55db",
+              color: "white",
+            }}
+          >
+            Search
           </Button>
         </BorderWrapper>
       </div>

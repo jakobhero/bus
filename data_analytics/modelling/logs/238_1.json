@@ -1,0 +1,168 @@
+{
+    "rows": {
+        "start": 103386,
+        "route_filter": -4936,
+        "nan_filter": -2484,
+        "negative_dur": -29,
+        "outliers": -1418,
+        "end": 94519
+    },
+    "scr": 0.9023629068212216,
+    "stats": {
+        "1": {
+            "dur_mean": 0.0,
+            "dur_std": 0.0
+        },
+        "2": {
+            "dur_mean": 124.2413560844185,
+            "dur_std": 103.05094959745485
+        },
+        "3": {
+            "dur_mean": 180.29604672057502,
+            "dur_std": 107.03669323246237
+        },
+        "4": {
+            "dur_mean": 235.9245283018868,
+            "dur_std": 111.33267858311817
+        },
+        "5": {
+            "dur_mean": 308.6561096136568,
+            "dur_std": 117.56914293677193
+        },
+        "6": {
+            "dur_mean": 360.9851551956815,
+            "dur_std": 118.52087191680488
+        },
+        "7": {
+            "dur_mean": 398.3054994388328,
+            "dur_std": 125.9913141025657
+        },
+        "8": {
+            "dur_mean": 517.497513562387,
+            "dur_std": 134.77036680453796
+        },
+        "9": {
+            "dur_mean": 561.9997749774977,
+            "dur_std": 138.88674530550557
+        },
+        "10": {
+            "dur_mean": 633.0336951605608,
+            "dur_std": 142.79616617978147
+        },
+        "11": {
+            "dur_mean": 676.658448314861,
+            "dur_std": 146.41259670678718
+        },
+        "12": {
+            "dur_mean": 715.4715025906736,
+            "dur_std": 151.3944274999104
+        },
+        "13": {
+            "dur_mean": 757.3394185260311,
+            "dur_std": 153.65852849892622
+        },
+        "14": {
+            "dur_mean": 797.4034218820351,
+            "dur_std": 157.7721665380529
+        },
+        "15": {
+            "dur_mean": 881.6468602295746,
+            "dur_std": 169.7289406970807
+        },
+        "16": {
+            "dur_mean": 1077.1447191011237,
+            "dur_std": 209.6319333833013
+        },
+        "17": {
+            "dur_mean": 1282.9015028901733,
+            "dur_std": 271.6186193634051
+        },
+        "18": {
+            "dur_mean": 1411.2149853085211,
+            "dur_std": 282.57872104735355
+        },
+        "19": {
+            "dur_mean": 1523.0479249011858,
+            "dur_std": 290.41548021693694
+        },
+        "20": {
+            "dur_mean": 1554.3781166787703,
+            "dur_std": 296.63914593517416
+        },
+        "21": {
+            "dur_mean": 1653.1615964954976,
+            "dur_std": 305.147660355172
+        },
+        "22": {
+            "dur_mean": 1697.415675806843,
+            "dur_std": 315.31495309834787
+        }
+    },
+    "modelling": {
+        "XGBoost": {
+            "time": 11.64699649810791,
+            "r_2": 0.9612284949600594,
+            "mse": 11157.76776875401,
+            "rmse": 105.63033545697945,
+            "mae": 68.07816215789121
+        },
+        "Benchmark": {
+            "r_2": 0.8877987439018464,
+            "mse": 32289.57858654253,
+            "rmse": 179.69301206931374,
+            "mae": 128.6173508252222
+        }
+    },
+    "features": [
+        "weather_description_broken clouds",
+        "weather_description_drizzle",
+        "weather_description_few clouds",
+        "weather_description_fog",
+        "weather_description_light intensity drizzle",
+        "weather_description_light intensity drizzle rain",
+        "weather_description_light intensity shower rain",
+        "weather_description_light rain",
+        "weather_description_light shower snow",
+        "weather_description_mist",
+        "weather_description_moderate rain",
+        "weather_description_overcast clouds",
+        "weather_description_proximity shower rain",
+        "weather_description_scattered clouds",
+        "weather_description_sky is clear",
+        "weather_description_smoke",
+        "weekday_1",
+        "weekday_2",
+        "weekday_3",
+        "weekday_4",
+        "weekday_5",
+        "weekday_6",
+        "month_2",
+        "month_3",
+        "month_4",
+        "month_5",
+        "month_6",
+        "month_7",
+        "month_8",
+        "month_9",
+        "month_10",
+        "month_11",
+        "month_12",
+        "hour_8",
+        "hour_9",
+        "hour_10",
+        "hour_11",
+        "hour_12",
+        "hour_13",
+        "hour_14",
+        "hour_15",
+        "hour_16",
+        "hour_17",
+        "hour_18",
+        "hour_19",
+        "hour_20",
+        "hour_21",
+        "holiday_1",
+        "progr_number",
+        "dur_s"
+    ]
+}

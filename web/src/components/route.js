@@ -45,7 +45,7 @@ const Route = ({ tripTime, setDirections, setIndex, index, i }) => {
       onClick={handleClick}
       hoverable
       size={index === i ? "default" : "small"}
-      bodyStyle={{ backgroundColor: index === i ? "whitesmoke" : "" }}
+      bodyStyle={{ backgroundColor: index === i ? "#fea100" : "" }}
     >
       <span>
         {departTime}

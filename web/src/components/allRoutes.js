@@ -9,12 +9,22 @@ import TramIcon from "@material-ui/icons/Tram";
 import { ClockCircleOutlined } from "@ant-design/icons";
 import { Divider } from "antd";
 
-const AllRoutes = ({ tripTimes, setDirections }) => {
-  const [index, setIndex] = useState(0);
+const AllRoutes = ({ tripTimes, setDirections, index, setIndex }) => {
   const [showMore, setShowMore] = useState(false);
   return (
     <div>
-      {tripTimes.length < 1 && <h2>Choose a source and destination</h2>}
+      {tripTimes.length < 1 && (
+        <div>
+          <h2>Choose a source and destination</h2>
+          <img
+            src="./bus.svg"
+            alt="bus"
+            width="10%"
+            height="10%"
+            style={{ marginRight: "10px" }}
+          />
+        </div>
+      )}
       <Row>
         <Col flex={1}>
           {tripTimes.length > 0 &&

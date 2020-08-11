@@ -23,12 +23,12 @@ import Home from "@material-ui/icons/Home";
 import HomeOutlined from "@material-ui/icons/HomeOutlined";
 import Work from "@material-ui/icons/Work";
 import WorkOutlined from "@material-ui/icons/WorkOutline";
-import DirectionsBusIcon from "@material-ui/icons/DirectionsBus";
+
+import { CompassOutlined } from "@ant-design/icons";
 
 import ReactWeather from "react-open-weather";
 //Optional include of the default css styles
 import "react-open-weather/lib/css/ReactWeather.css";
-import axios from "axios";
 import "../css/map.css";
 
 // https://www.youtube.com/watch?v=SySVBV_jcCM
@@ -66,12 +66,7 @@ function Locate({ panTo, getStopsByCoords }) {
           );
         }}
       >
-        <i
-          className="fa fa-compass"
-          id="innerLocate"
-          aria-hidden="true"
-          style={{ fontSize: "35px" }}
-        />
+        <CompassOutlined style={{ fontSize: "34px" }} />
       </div>
     </Tooltip>
   );
@@ -160,23 +155,26 @@ function ShowMap({
     setSelected(null);
   };
 
-  const directionsBusMarker = (lat, lng) => {
-    axios
-      .get("/api/nearestneighbor?lat=" + lat + "&lng=" + lng + "&k=1")
-      .then((res) => {
-        if (res.statusText === "OK") {
-          setSelected(res.data.stops[0]);
-        }
-      })
-      .catch(console.log);
-  };
-
   // Setting bounds for map to zoom and pan to include all markers, special case if only one marker to avoid over zooming
   let bounds = new window.google.maps.LatLngBounds();
 
+  if (directions.length > 0) {
+    for (var i = 0; i < directions.length; i++) {
+      for (var j = 0; j < directions[i].length; j++) {
+        for (var k = 0; k < directions[i][j].length; k++) {
+          var myLatLng = new window.google.maps.LatLng(
+            directions[i][j][k].lat,
+            directions[i][j][k].lng
+          );
+          bounds.extend(myLatLng);
+        }
+      }
+    }
+  }
+
   if (stops.length > 0) {
-    for (var i = 0; i < stops.length; i++) {
-      var myLatLng = new window.google.maps.LatLng(stops[i].lat, stops[i].lng);
+    for (i = 0; i < stops.length; i++) {
+      myLatLng = new window.google.maps.LatLng(stops[i].lat, stops[i].lng);
       bounds.extend(myLatLng);
     }
     if (stops.length > 1) {
@@ -323,13 +321,32 @@ function ShowMap({
               <h2>{selected.fullname}</h2>
               <h4>{`Stop ${selected.stopid}`}</h4>
               {/* <DirectionsBusIcon style={{ color: "blue" }} /> */}
+              <br />
               {Object.keys(selected.lines).map((route, idx) => (
                 <span>
-                  <DirectionsBusIcon style={{ color: "blue" }} />
-                  <strong>{route}</strong>
-                  {idx > 0 && idx % 5 === 0 && <br />}
+                  {/* <DirectionsBusIcon style={{ color: "blue" }} /> */}
+                  <strong
+                    style={{
+                      borderStyle: "groove",
+                      padding: "3px",
+                      margin: "3px",
+                      marginBottom: "3px",
+                      // borderColor: "#1b55db",
+                      backgroundColor: "#fea100",
+                    }}
+                  >
+                    {route}
+                  </strong>
+
+                  {idx > 0 && idx % 5 === 0 && (
+                    <div>
+                      <br />
+                      <br />
+                    </div>
+                  )}
                 </span>
               ))}
+              <br />
               <br />
               <Tooltip className="tooltip" title="Real Time">
                 <Button
@@ -376,16 +393,13 @@ function ShowMap({
         at the first waypoint. */}
         {/* Shows stops for luas routes aswell must fix */}
         {directions.map((marker, index) =>
-          marker.map((mrk) => (
-            <div key={(mrk[0].lat - mrk[0].lng) * (index + 1)}>
+          marker.map((mrk, kindex) => (
+            <div key={kindex + "_" + index}>
               {busIndex.includes(index) &&
                 [1, mrk.length - 1].map((idx) => (
                   <Marker
                     key={mrk[idx].lat - mrk[idx].lng}
                     position={{ lat: mrk[idx].lat, lng: mrk[idx].lng }}
-                    onClick={() =>
-                      directionsBusMarker(mrk[idx].lat, mrk[idx].lng)
-                    }
                     icon={{
                       url: `./bus_1.svg`,
                       origin: new window.google.maps.Point(0, 0),

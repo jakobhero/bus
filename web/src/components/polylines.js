@@ -1,4 +1,5 @@
 const decode = (encoded) => {
+  //taken from medium
   var points = [];
   var index = 0,
     len = encoded.length;
