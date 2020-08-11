@@ -1,4 +1,4 @@
-import pandas as pd, numpy as np, holidays, seaborn as sns, matplotlib.pyplot as plt, time, xgboost as xgb, json, pickle, sys
+import pandas as pd, numpy as np, holidays, seaborn as sns, matplotlib.pyplot as plt, time, xgboost as xgb, json, pickle, sys, os
 from sqlalchemy import create_engine
 from datetime import datetime
 
@@ -26,19 +26,19 @@ def daystamp_converter(time):
 
 if __name__=='__main__':
     #check provided arguments and matches them with project member
-    argvs=sys.argv
-    if(len(argvs)<=1 or argvs[1].lower() not in ["yuqian","callum","jakob"]):
-        print("Please provide your first name as command line argument when running the Script.")
-        quit()
-    name=argvs[1].lower()
+    # argvs=sys.argv
+    # if(len(argvs)<=1 or argvs[1].lower() not in ["yuqian","callum","jakob"]):
+    #     print("Please provide your first name as command line argument when running the Script.")
+    #     quit()
+    # name=argvs[1].lower()
     
     #read in the assignments of the models which were computed in pipeline_automation.ipynb
     with open('assignment.json') as json_file:
         assignment = json.load(json_file)
     
     #match assignments with command line argument.
-    models=assignment[name]
-    # models=assignment["yuqian"]+assignment["mohamed"]+assignment["jakob"]
+    #models=assignment[name]
+    models=assignment["yuqian"]+assignment["callum"]+assignment["jakob"]
 
     #create sql alchemy engine
     config=config()
@@ -56,6 +56,9 @@ if __name__=='__main__':
         #For more details on the modelling procedure, please refer to pipeline_test.ipynb.
         line,direction=model[:2]
         count+=1
+        if os.path.isfile("pickle/"+line+"_"+str(direction)+".sav"):
+            print(f"Skipping model {count}/{length} for ({line},{direction}) as it already exists.")
+            continue
         print(f"Training model {count}/{length} for ({line},{direction}).")
         #assemble sql query.
         sql=("SELECT lt.daystamp, lt.progr_number, lt.stoppoint_id,lt.arrival_time_p,lt.arrival_time_a,"
@@ -166,6 +169,14 @@ if __name__=='__main__':
         plt.savefig("img/"+line+"_"+str(direction)+"_cat.png")
         plt.close()
 
+        #dump f values into logs
+        f_values={}
+        for column,f_value in zip(dummy_columns,fs.scores_):
+            f_values[column]=f_value
+        logs["feature_eval"]={
+            "f_values":f_values
+}
+
         #calculate correlation for numerical features
         numeric=X_train.columns[(X_train.dtypes=="int64") | (X_train.dtypes=="float64")]
         corr=pd.concat([X_train[numeric], y], axis=1).corr()
@@ -176,9 +187,11 @@ if __name__=='__main__':
         plt.savefig("img/"+line+"_"+str(direction)+"_num.png")
         plt.close()
 
+        #dump correlations with target variable into logs
+        logs["feature_eval"]["correlations"]=corr.dur_a.drop(["dur_a"]).to_dict()
+
         #assemble dataframe for modelling
-        high_corr=corr["dur_a"][(corr["dur_a"]>=0.5) | (corr["dur_a"]<=-0.5)]
-        numeric=high_corr.drop(["dur_a"]).index
+        numeric=["progr_number","dur_s","humidity"]
         X=pd.concat([pd.get_dummies(X[categorical].drop(["weather_main"],axis=1),drop_first=True),df_clean[numeric]],axis=1)
         y=df_clean["dur_a"]
         X=X.reset_index(drop=True)
