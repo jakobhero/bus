@@ -224,4 +224,3 @@ if __name__=='__main__':
         with open ("pickle/"+line+"_"+str(direction)+".sav", "wb") as pickle_file:
             pickle.dump(xgb_reg,pickle_file)
         print(f"Finished training model {count}/{length} for ({line},{direction}) in {(time.time()-start_time)/60:.1f} mins.")
-        break
