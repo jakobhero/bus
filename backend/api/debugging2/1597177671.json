@@ -1,0 +1,674 @@
+{
+        "connections": [
+                {
+                        "db_index": [
+                                1,
+                                3
+                        ],
+                        "distance": 16604,
+                        "duration": 3302,
+                        "end": {
+                                "address": "58 Seafield Rd E, Northside, Dublin 3, D03 EV96, Ireland",
+                                "location": {
+                                        "lat": 53.3640384,
+                                        "lng": -6.195306599999999
+                                },
+                                "time": 1597181640
+                        },
+                        "start": {
+                                "address": "Clonskeagh, Bird Avenue, Friarland, Dublin, Co. Dublin, Ireland",
+                                "location": {
+                                        "lat": 53.30512119999999,
+                                        "lng": -6.236070799999999
+                                },
+                                "time": 1597178338
+                        },
+                        "steps": [
+                                {
+                                        "directions": [
+                                                "Head <b>southeast</b> on <b>Roebuck Rd</b>/<wbr/><b>R825</b> toward <b>Rosemount Cres</b><div style=\"font-size:0.9em\">Destination will be on the right</div>"
+                                        ],
+                                        "distance": 78,
+                                        "duration": 56,
+                                        "html_instructions": "Walk to Clonskeagh, Roebuck Road (White Oak Est)",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "_djdIl~`e@p@y@dAcA"
+                                        ],
+                                        "start": {
+                                                "lat": 53.30512119999999,
+                                                "lng": -6.236070799999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.3045237,
+                                                "lng": -6.2354438
+                                        }
+                                },
+                                {
+                                        "distance": 6730,
+                                        "duration": 1154,
+                                        "html_instructions": "Bus towards St Pappin's Rd",
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "}_jdIl{`e@K]yAzAyAlBDN\\tADXBlASKsCcBqAH}EUq@?k@J[LIB@R?@?AFUKDw@ZkB|@c@RcAj@EBm@XC@e@Rg@Pc@L_@JaBXkANy@Lo@Ho@HUDC@OBWDUD[Di@A[EoAWuCq@q@Ok@My@UQGcBgAQCIAIAG?O@MFGBKFGHMLKNGJGN]|@GP[dAM`@CHUt@eAbDGLsA~BABmBpCaAzAKNY^IJuAfBEF]f@Wd@u@dBa@v@CFGJi@dA}@zAkApBcAhBQ\\Wd@[l@e@bAe@lAS`@[r@O\\e@bASb@Q^a@|@c@hAENKVEL[|@KXMb@Y|@ENITUv@Oj@i@`CYnAAJSv@o@tB_@vAQd@Wm@a@gAoAsDAAeAsCe@eASi@G_@SmAISaCsFe@w@o@_AsAqBYe@QYc@w@KQW[i@w@Ur@KZMZA@Yx@AJ?BABIVK\\Of@Kb@AJG`@_@zDM~@Mn@On@K\\?B]~@U`@Ud@U\\Y^MNMLa@Xu@f@SHEBC@C@c@PGD_@PaAn@KDSASNIFEBIFaAjAc@d@g@j@IHONONSRsBdCw@v@QPe@d@[\\i@f@g@h@m@p@FVGWOP[^EDkAnA_@h@KVEHEFIX[Si@_@KGy@i@YScAs@SQwB{A[Y[YGACAE?G?MDGBED?@EFCFGVEXAD]pBI`@GPUv@i@jDWnAYjAqAWu@Ow@Q?GYGs@Mr@LqMaC[dC[xBIV[VWAg@Mu@@QBkAz@aBwAs@CsAFC?DH[@M?w@Ay@?y@C]CU?KBA@IBe@R[LMDMDSF}Br@IB]JKFI@mA`@SFkC|@{Af@aEtAa@NBR"
+                                        ],
+                                        "start": {
+                                                "lat": 53.30447299999999,
+                                                "lng": -6.235591599999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.3513532,
+                                                "lng": -6.2611607
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "O'Connell St Upper",
+                                                        "time": 1597179549
+                                                },
+                                                "dep": {
+                                                        "name": "Clonskeagh, Roebuck Road (White Oak Est)",
+                                                        "time": 1597178395
+                                                },
+                                                "headsign": "St Pappin's Rd",
+                                                "operator": "Dublin Bus",
+                                                "route": "11",
+                                                "source": "GOOGLE",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "directions": [
+                                                "Head <b>south</b> on <b>O'Connell Street Upper</b> toward <b>N Earl St</b>",
+                                                "Continue onto <b>O'Connell Street Lower</b>",
+                                                "Turn <b>left</b> toward <b>O'Connell Street Lower</b>",
+                                                "Turn <b>right</b> onto <b>O'Connell Street Lower</b>",
+                                                "Turn <b>left</b> onto <b>Abbey Street Lower</b><div style=\"font-size:0.9em\">Destination will be on the left</div>"
+                                        ],
+                                        "distance": 539,
+                                        "duration": 394,
+                                        "html_instructions": "Walk to Abbey Street, stop 7591",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "_esdIpzee@^M`EuAzAg@",
+                                                "a{rdIdvee@jC}@RGlAa@HA",
+                                                "isrdIzree@?O?AAMAA?M",
+                                                "msrdIjqee@RE",
+                                                "yrrdIdqee@Cc@Em@Ee@UgBUeDWuC"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3513592,
+                                                "lng": -6.2610516
+                                        },
+                                        "stop": {
+                                                "lat": 53.34887450000001,
+                                                "lng": -6.2568481
+                                        }
+                                },
+                                {
+                                        "distance": 9216,
+                                        "duration": 1109,
+                                        "html_instructions": "Bus towards Castle Ave",
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "uurdIn`ee@FC[iDYwCE]Ca@AS?A@I?E?OBUEUGUCQO_AEWE_@CYC[?eCB_ABa@@_@?a@AQEYIWEUSg@YWYYKIAAIEm@_@QKICyAs@u@_@ICGCCCe@Sw@g@e@YKGCCQOEEKK{@w@y@aAg@k@QQQW_@g@EGKMWYcAkAm@q@o@q@GG_@a@MMa@e@]c@QQSQW_@c@k@u@cAACU[Wa@Ya@[i@Ye@OWQYKQMUEG_@m@KQGOYg@ACMSWe@o@gAOWKQKUg@}@QY]m@Q[CCOUe@u@QYU[IKEGGGIIGIOQe@i@YU[_@[a@[a@e@g@kAkA[]s@o@o@u@MOIIMOa@g@]c@mAyAe@m@yAiBc@i@IIa@g@OQEi@Ke@UgAGYIc@i@iCQ{@u@yDQ_AWuAO{@Ks@Ko@EYCYEi@C_@AEAc@EaAASAUCy@Ce@Ee@FgA@IHoBPiELgBHsA@CHqAP_CDa@NuADc@Z{CViBPuAB_@VcAH}@Dk@HeABc@LqBDeADm@Bo@Bc@Dc@Bg@Fg@LiAHm@Ji@j@kD@ELi@F]f@_CH_@r@cCh@_BFQ\\gA@CDOVy@VgATeAPy@Nq@Ns@BMV}ALy@@IHg@N{ALsD@g@Be@Bu@DyAD_CBq@@_AFyB?g@@e@?c@A_@GuD?e@CeACiCC}A?W?q@?o@@m@Bw@D_AJmAHu@b@qED[NwANoBH_ALeBPgDHsA@U@QV}BVoAF]@IFUPo@Po@t@kBHQ^_A`@}ATaCDe@Fw@@S@[?I@o@Aa@?OCUKeBO{AGi@SsBMsACUO_BEi@Ic@[sAc@_B_@_BYmACOYcBQsAWuBE]QcBY{BO_AWgAa@_BUy@[kAK_@k@oBo@uByAyE_@kAYs@O_@[m@IQWe@iCgEi@w@wA{Bg@w@eA{Aw@iAaAwAaCoDqB}Cy@oA_@k@oCiEGNADi@zAWr@[`AM^CJCHGRQp@Qv@YnAQt@ABS`A_@hB_@fBYvAOx@Or@AH?@AFIh@AJ?DAD?DCLId@SbAGVcAzDI\\Qt@CPCTCTCTKnAALAJ?J?H?F@D?B@B?BBD@DBBBBBBD@DBLDfC~@~@\\z@\\tAf@vCdA`A^nAh@PHJJFHHPFLDPDPFf@@LALYnFc@pIS`DpAJjBL`@DzGd@lAHC`@Ev@?JKfDIhAEr@Ep@Ep@M|BGz@Er@Cf@Cz@Ch@?LARA\\AZAl@CvAGtCItDgAC?P"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3489114,
+                                                "lng": -6.2568793
+                                        },
+                                        "stop": {
+                                                "lat": 53.3644068,
+                                                "lng": -6.1953694
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Vernon Avenue, stop 1763",
+                                                        "time": 1597181609
+                                                },
+                                                "dep": {
+                                                        "name": "Abbey Street, stop 7591",
+                                                        "time": 1597180500
+                                                },
+                                                "headsign": "Castle Ave",
+                                                "operator": "Dublin Bus",
+                                                "route": "130",
+                                                "source": "GOOGLE",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "directions": [
+                                                null
+                                        ],
+                                        "distance": 41,
+                                        "duration": 28,
+                                        "html_instructions": "Walk to 58 Seafield Rd E, Northside, Dublin 3, D03 EV96, Ireland",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "qvudId`yd@hAO"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3644071,
+                                                "lng": -6.1953866
+                                        },
+                                        "stop": {
+                                                "lat": 53.3640384,
+                                                "lng": -6.195306599999999
+                                        }
+                                }
+                        ],
+                        "transit_index": [
+                                1,
+                                3
+                        ]
+                },
+                {
+                        "db_index": [
+                                1,
+                                3
+                        ],
+                        "distance": 18262,
+                        "duration": 4140,
+                        "end": {
+                                "address": "58 Seafield Rd E, Northside, Dublin 3, D03 EV96, Ireland",
+                                "location": {
+                                        "lat": 53.3640384,
+                                        "lng": -6.195306599999999
+                                },
+                                "time": 1597182840
+                        },
+                        "start": {
+                                "address": "Clonskeagh, Bird Avenue, Friarland, Dublin, Co. Dublin, Ireland",
+                                "location": {
+                                        "lat": 53.30517039999999,
+                                        "lng": -6.235952999999999
+                                },
+                                "time": 1597178700
+                        },
+                        "steps": [
+                                {
+                                        "distance": 2517,
+                                        "duration": 240,
+                                        "html_instructions": "Bus towards Rialto - Blackrock",
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "idjdIt}`e@HVp@y@hAgA\\[r@}@^i@^g@Ve@JSPYNWNSHKHMRSNM@AJIHGLEXIBgA@EFmBDw@Bw@@MFaBFsADo@BYHq@lAmKBUF_@@KDW@MHg@D[@KBIDWDOBKBIBIBIFMBI@CJUJURc@Xo@LWJSZq@N_@\\u@HOHSFOFUDKBKDSF[DWD]BQ@O?S@U@W?[?W@W?S@WD_@@OD[DUDQBKBMDMHS@EJUDITe@HQJQJ]BKBIBODQBO@OB[DU@UB[Fk@H_AJcAFk@Ee@CU?GAGM}@Wm@?CM]CIMa@Qm@m@oBUq@Ok@[aAo@uBK]Mc@Y{@Ss@[cAMc@M_@Ma@K]Uw@ISWaAOc@]kAIUc@{AMa@c@uACM[aAOg@IWi@gBeAiDKYMa@K]g@cBa@p@u@lAwEpHk@|@[h@EHKNHP"
+                                        ],
+                                        "start": {
+                                                "lat": 53.30517039999999,
+                                                "lng": -6.235952999999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.305526,
+                                                "lng": -6.2116124
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Belfield, Seafiled Road",
+                                                        "time": 1597178940
+                                                },
+                                                "dep": {
+                                                        "name": "Clonskeagh, Bird Avenue",
+                                                        "time": 1597178700
+                                                },
+                                                "headsign": "Rialto - Blackrock",
+                                                "operator": "Go-Ahead",
+                                                "route": "17",
+                                                "source": "GOOGLE",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "distance": 5997,
+                                        "duration": 859,
+                                        "html_instructions": "Bus towards Phoenix Pk",
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "qfjdIpe|d@IQ_BfCmArBu@nAu@tAYf@?TADAFIRu@fBm@dB_DdJq@lB{@dCYj@KPa@x@INMRMTi@~@_@h@y@jA]\\YXYRKHSFM@GAKHi@`@IFk@^yA`ACB_An@{@j@s@h@[Z[V[`@A@c@p@q@jAUf@Sh@Of@Oj@WdAEPMp@[jA?B]hAMh@KZELo@fBSd@Uf@Uf@o@dAOXm@z@UZ[`@QXs@dA_@f@yAxByA`CmB`DGJy@pAILSZg@v@IJCF[h@]n@KRu@t@A@EDQHQXg@p@OPKNCB}AzBEFk@x@Yj@q@fAKLGJw@nA[h@GJ_@n@OXIPIROj@Q~BI^O^IRMXOTCFS^]p@Ub@{ArBINGFMRGHIJQT[^c@l@u@hAYb@aBbCGHGHm@z@W`@QTOTKRe@v@A@uApBIJUXy@fAc@j@m@x@s@fAi@t@c@v@CHITELITK\\GNW`A?@Mf@Wx@EPMd@Od@YdASr@Ur@KZMZA@Yx@AJ?BABIVK\\Of@Kb@AJG`@_@zDM~@Mn@On@K\\?B]~@U`@Ud@U\\Y^MNMLa@Xu@f@SHEBC@C@c@PGD_@PaAn@KDSASNIFEBIFaAjAc@d@g@j@IHONONSRsBdCw@v@QPe@d@[\\i@f@g@h@m@p@FVGWOP[^EDkAnA_@h@KVEHEFIX[Si@_@KGy@i@YScAs@SQwB{A[Y[YGACAE?G?MDGBED?@EFCFGVEXAD]pBI`@GPUv@i@jDWnAYjAqAWu@Ow@Q?EkNkC[dC[xBIV[VWAg@Mu@@QBkAz@aBwAs@CsAFC?Db@"
+                                        ],
+                                        "start": {
+                                                "lat": 53.305526,
+                                                "lng": -6.2116124
+                                        },
+                                        "stop": {
+                                                "lat": 53.3456223,
+                                                "lng": -6.259291999999999
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Dublin City South, Westmoreland Street",
+                                                        "time": 1597180342
+                                                },
+                                                "dep": {
+                                                        "name": "Belfield, Seafiled Road",
+                                                        "time": 1597179483
+                                                },
+                                                "headsign": "Phoenix Pk",
+                                                "operator": "Dublin Bus",
+                                                "route": "46a",
+                                                "source": "GOOGLE",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "directions": [
+                                                "Head <b>north</b> on <b>Westmoreland St</b> toward <b>Fleet St</b><div style=\"font-size:0.9em\">May be closed at certain times or days</div>",
+                                                "Turn <b>right</b> onto <b>Burgh Quay</b>/<wbr/><b>R105</b>/<wbr/><b>R138</b><div style=\"font-size:0.9em\">Continue to follow Burgh Quay/<wbr/>R105</div>",
+                                                "Turn <b>left</b> onto <b>Rosie Hackett Bridge</b>",
+                                                "Continue onto <b>Marlborough St</b>",
+                                                "Turn <b>right</b> onto <b>Abbey Street Lower</b><div style=\"font-size:0.9em\">Destination will be on the left</div>"
+                                        ],
+                                        "distance": 491,
+                                        "duration": 395,
+                                        "html_instructions": "Walk to Abbey Street, stop 7591",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "cardIvnee@[@M?w@Ay@?y@C]CU?",
+                                                "mirdInnee@CWGg@QyA_@mCEWC]E]",
+                                                "{krdIrbee@_BP[D",
+                                                "wordIjcee@ODs@RMDw@NG@K@",
+                                                "utrdI~dee@WuC"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3456243,
+                                                "lng": -6.2591626
+                                        },
+                                        "stop": {
+                                                "lat": 53.34887450000001,
+                                                "lng": -6.2568481
+                                        }
+                                },
+                                {
+                                        "distance": 9216,
+                                        "duration": 1109,
+                                        "html_instructions": "Bus towards Castle Ave",
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "uurdIn`ee@FC[iDYwCE]Ca@AS?A@I?E?OBUEUGUCQO_AEWE_@CYC[?eCB_ABa@@_@?a@AQEYIWEUSg@YWYYKIAAIEm@_@QKICyAs@u@_@ICGCCCe@Sw@g@e@YKGCCQOEEKK{@w@y@aAg@k@QQQW_@g@EGKMWYcAkAm@q@o@q@GG_@a@MMa@e@]c@QQSQW_@c@k@u@cAACU[Wa@Ya@[i@Ye@OWQYKQMUEG_@m@KQGOYg@ACMSWe@o@gAOWKQKUg@}@QY]m@Q[CCOUe@u@QYU[IKEGGGIIGIOQe@i@YU[_@[a@[a@e@g@kAkA[]s@o@o@u@MOIIMOa@g@]c@mAyAe@m@yAiBc@i@IIa@g@OQEi@Ke@UgAGYIc@i@iCQ{@u@yDQ_AWuAO{@Ks@Ko@EYCYEi@C_@AEAc@EaAASAUCy@Ce@Ee@FgA@IHoBPiELgBHsA@CHqAP_CDa@NuADc@Z{CViBPuAB_@VcAH}@Dk@HeABc@LqBDeADm@Bo@Bc@Dc@Bg@Fg@LiAHm@Ji@j@kD@ELi@F]f@_CH_@r@cCh@_BFQ\\gA@CDOVy@VgATeAPy@Nq@Ns@BMV}ALy@@IHg@N{ALsD@g@Be@Bu@DyAD_CBq@@_AFyB?g@@e@?c@A_@GuD?e@CeACiCC}A?W?q@?o@@m@Bw@D_AJmAHu@b@qED[NwANoBH_ALeBPgDHsA@U@QV}BVoAF]@IFUPo@Po@t@kBHQ^_A`@}ATaCDe@Fw@@S@[?I@o@Aa@?OCUKeBO{AGi@SsBMsACUO_BEi@Ic@[sAc@_B_@_BYmACOYcBQsAWuBE]QcBY{BO_AWgAa@_BUy@[kAK_@k@oBo@uByAyE_@kAYs@O_@[m@IQWe@iCgEi@w@wA{Bg@w@eA{Aw@iAaAwAaCoDqB}Cy@oA_@k@oCiEGNADi@zAWr@[`AM^CJCHGRQp@Qv@YnAQt@ABS`A_@hB_@fBYvAOx@Or@AH?@AFIh@AJ?DAD?DCLId@SbAGVcAzDI\\Qt@CPCTCTCTKnAALAJ?J?H?F@D?B@B?BBD@DBBBBBBD@DBLDfC~@~@\\z@\\tAf@vCdA`A^nAh@PHJJFHHPFLDPDPFf@@LALYnFc@pIS`DpAJjBL`@DzGd@lAHC`@Ev@?JKfDIhAEr@Ep@Ep@M|BGz@Er@Cf@Cz@Ch@?LARA\\AZAl@CvAGtCItDgAC?P"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3489114,
+                                                "lng": -6.2568793
+                                        },
+                                        "stop": {
+                                                "lat": 53.3644068,
+                                                "lng": -6.1953694
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Vernon Avenue, stop 1763",
+                                                        "time": 1597182809
+                                                },
+                                                "dep": {
+                                                        "name": "Abbey Street, stop 7591",
+                                                        "time": 1597181700
+                                                },
+                                                "headsign": "Castle Ave",
+                                                "operator": "Dublin Bus",
+                                                "route": "130",
+                                                "source": "GOOGLE",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "directions": [
+                                                null
+                                        ],
+                                        "distance": 41,
+                                        "duration": 28,
+                                        "html_instructions": "Walk to 58 Seafield Rd E, Northside, Dublin 3, D03 EV96, Ireland",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "qvudId`yd@hAO"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3644071,
+                                                "lng": -6.1953866
+                                        },
+                                        "stop": {
+                                                "lat": 53.3640384,
+                                                "lng": -6.195306599999999
+                                        }
+                                }
+                        ],
+                        "transit_index": [
+                                0,
+                                1,
+                                3
+                        ]
+                },
+                {
+                        "db_index": [
+                                1,
+                                3
+                        ],
+                        "distance": 18644,
+                        "duration": 3813,
+                        "end": {
+                                "address": "58 Seafield Rd E, Northside, Dublin 3, D03 EV96, Ireland",
+                                "location": {
+                                        "lat": 53.3640384,
+                                        "lng": -6.195306599999999
+                                },
+                                "time": 1597182840
+                        },
+                        "start": {
+                                "address": "Clonskeagh, Bird Avenue, Friarland, Dublin, Co. Dublin, Ireland",
+                                "location": {
+                                        "lat": 53.30512119999999,
+                                        "lng": -6.236070799999999
+                                },
+                                "time": 1597179027
+                        },
+                        "steps": [
+                                {
+                                        "directions": [
+                                                "Head <b>northwest</b> on <b>Roebuck Rd</b>/<wbr/><b>R825</b> toward <b>Gledswood Dr</b>",
+                                                "Turn <b>left</b> onto <b>Gledswood Dr</b>",
+                                                "Turn <b>left</b> onto <b>Bird Ave</b>",
+                                                "Turn <b>right</b> onto <b>Dundrum Rd</b>/<wbr/><b>R117</b><div style=\"font-size:0.9em\">Destination will be on the left</div>"
+                                        ],
+                                        "distance": 757,
+                                        "duration": 571,
+                                        "html_instructions": "Walk to Millmount Terrace, stop 2896",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "_djdIl~`e@q@x@MN",
+                                                "_fjdIv`ae@Lr@Jj@FXBV?F?F?F?JEN",
+                                                "_ejdI|fae@HP@F@F?L@L?T?Z?rB?nB@pA?jL?VArD?tEAzG@fB",
+                                                "odjdItzbe@_ARUF]Jg@JC?"
+                                        ],
+                                        "start": {
+                                                "lat": 53.30512119999999,
+                                                "lng": -6.236070799999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.3060007,
+                                                "lng": -6.2459712
+                                        }
+                                },
+                                {
+                                        "distance": 8091,
+                                        "duration": 1212,
+                                        "html_instructions": "Bus towards DCU",
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "mijdIx|be@AOi@JwATgARqAViAPSD}@JQ@YBg@BwA?C?w@Cc@BOBOFi@\\[\\KNCDGFINKPINGPSp@K\\AFKZI^o@MGC[GOEoA]e@KaAO_@Ia@MOEEAECOKo@m@MMGEECMGOG]MSKIEMGUQaCsAq@]{@c@c@[{@q@gAm@]OQG[MYKa@Uq@a@{@Q[IYGUKQMOSUa@c@oAgAeD_AmBOIGCMCIAI?O@K@uAfBEF]f@Wd@u@dBa@v@CFGJi@dA}@zAkApBcAhBQ\\Wd@[l@e@bAe@lAS`@[r@O\\e@bASb@Q^a@|@c@hAENKVEL[|@KXMb@Y|@ENITUv@Oj@i@`CYnAAJSv@o@tB_@vAQd@_@hAIPGPGRKTQ^SXONgAhAc@d@OPe@j@KREFCFQ\\MVQd@?@KXWpAGXETEVYvAG\\GJGJEBUNODA?WH]Hk@LkAZm@Na@LMDMFWJm@XEBOJ]Rk@^[Vi@b@k@d@_@\\MNEFCDILGJGJm@`AKPOXMV]j@o@hA[f@[h@g@z@QXIN]f@EHGHGJ[^UZMTQZHvAJbBDzAc@Lq@J{ATMGGAMICcBAo@Gy@C_@C]AUIaAEUCGCIAAAAEAC?E@SB?K?IVoL@_APeJ[Iu@a@e@YKGs@c@GECAw@_@CAuAo@y@a@EAq@[[Si@_@KGy@i@YScAs@SQwB{A[Y[YGACAE?G?MDGBED?@EFCFGVEXAD]pBI`@GPUv@i@jDWnAYjAqAWu@Ow@Q?EmAWuAYXmE|@aKqCmAuBy@`@uDVgBDmAQoBg@yB@u@PcAFy@OWkHuD?A?A[OGCQKS?I@G@IDGFILG`@OjAm@rEKr@Ej@SlBQ~AOnACCkApKyBFD{EJoEnDZgAfKe@rDU~BC|@GhBz@lDDd@?z@Oh@k@@?J[@M?w@Ay@?y@C]CU?KBA@IBe@R[LMDMDSF}Br@IB]JKFI@mA`@SFkC|@{Af@aEtAa@NBR"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3059934,
+                                                "lng": -6.246048
+                                        },
+                                        "stop": {
+                                                "lat": 53.3513532,
+                                                "lng": -6.2611607
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "O'Connell St Upper",
+                                                        "time": 1597180812
+                                                },
+                                                "dep": {
+                                                        "name": "Millmount Terrace, stop 2896",
+                                                        "time": 1597179600
+                                                },
+                                                "headsign": "DCU",
+                                                "operator": "Dublin Bus",
+                                                "route": "44",
+                                                "source": "GOOGLE",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "directions": [
+                                                "Head <b>south</b> on <b>O'Connell Street Upper</b> toward <b>N Earl St</b>",
+                                                "Continue onto <b>O'Connell Street Lower</b>",
+                                                "Turn <b>left</b> toward <b>O'Connell Street Lower</b>",
+                                                "Turn <b>right</b> onto <b>O'Connell Street Lower</b>",
+                                                "Turn <b>left</b> onto <b>Abbey Street Lower</b><div style=\"font-size:0.9em\">Destination will be on the left</div>"
+                                        ],
+                                        "distance": 539,
+                                        "duration": 394,
+                                        "html_instructions": "Walk to Abbey Street, stop 7591",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "_esdIpzee@^M`EuAzAg@",
+                                                "a{rdIdvee@jC}@RGlAa@HA",
+                                                "isrdIzree@?O?AAMAA?M",
+                                                "msrdIjqee@RE",
+                                                "yrrdIdqee@Cc@Em@Ee@UgBUeDWuC"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3513592,
+                                                "lng": -6.2610516
+                                        },
+                                        "stop": {
+                                                "lat": 53.34887450000001,
+                                                "lng": -6.2568481
+                                        }
+                                },
+                                {
+                                        "distance": 9216,
+                                        "duration": 1109,
+                                        "html_instructions": "Bus towards Castle Ave",
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "uurdIn`ee@FC[iDYwCE]Ca@AS?A@I?E?OBUEUGUCQO_AEWE_@CYC[?eCB_ABa@@_@?a@AQEYIWEUSg@YWYYKIAAIEm@_@QKICyAs@u@_@ICGCCCe@Sw@g@e@YKGCCQOEEKK{@w@y@aAg@k@QQQW_@g@EGKMWYcAkAm@q@o@q@GG_@a@MMa@e@]c@QQSQW_@c@k@u@cAACU[Wa@Ya@[i@Ye@OWQYKQMUEG_@m@KQGOYg@ACMSWe@o@gAOWKQKUg@}@QY]m@Q[CCOUe@u@QYU[IKEGGGIIGIOQe@i@YU[_@[a@[a@e@g@kAkA[]s@o@o@u@MOIIMOa@g@]c@mAyAe@m@yAiBc@i@IIa@g@OQEi@Ke@UgAGYIc@i@iCQ{@u@yDQ_AWuAO{@Ks@Ko@EYCYEi@C_@AEAc@EaAASAUCy@Ce@Ee@FgA@IHoBPiELgBHsA@CHqAP_CDa@NuADc@Z{CViBPuAB_@VcAH}@Dk@HeABc@LqBDeADm@Bo@Bc@Dc@Bg@Fg@LiAHm@Ji@j@kD@ELi@F]f@_CH_@r@cCh@_BFQ\\gA@CDOVy@VgATeAPy@Nq@Ns@BMV}ALy@@IHg@N{ALsD@g@Be@Bu@DyAD_CBq@@_AFyB?g@@e@?c@A_@GuD?e@CeACiCC}A?W?q@?o@@m@Bw@D_AJmAHu@b@qED[NwANoBH_ALeBPgDHsA@U@QV}BVoAF]@IFUPo@Po@t@kBHQ^_A`@}ATaCDe@Fw@@S@[?I@o@Aa@?OCUKeBO{AGi@SsBMsACUO_BEi@Ic@[sAc@_B_@_BYmACOYcBQsAWuBE]QcBY{BO_AWgAa@_BUy@[kAK_@k@oBo@uByAyE_@kAYs@O_@[m@IQWe@iCgEi@w@wA{Bg@w@eA{Aw@iAaAwAaCoDqB}Cy@oA_@k@oCiEGNADi@zAWr@[`AM^CJCHGRQp@Qv@YnAQt@ABS`A_@hB_@fBYvAOx@Or@AH?@AFIh@AJ?DAD?DCLId@SbAGVcAzDI\\Qt@CPCTCTCTKnAALAJ?J?H?F@D?B@B?BBD@DBBBBBBD@DBLDfC~@~@\\z@\\tAf@vCdA`A^nAh@PHJJFHHPFLDPDPFf@@LALYnFc@pIS`DpAJjBL`@DzGd@lAHC`@Ev@?JKfDIhAEr@Ep@Ep@M|BGz@Er@Cf@Cz@Ch@?LARA\\AZAl@CvAGtCItDgAC?P"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3489114,
+                                                "lng": -6.2568793
+                                        },
+                                        "stop": {
+                                                "lat": 53.3644068,
+                                                "lng": -6.1953694
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Vernon Avenue, stop 1763",
+                                                        "time": 1597182809
+                                                },
+                                                "dep": {
+                                                        "name": "Abbey Street, stop 7591",
+                                                        "time": 1597181700
+                                                },
+                                                "headsign": "Castle Ave",
+                                                "operator": "Dublin Bus",
+                                                "route": "130",
+                                                "source": "GOOGLE",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "directions": [
+                                                null
+                                        ],
+                                        "distance": 41,
+                                        "duration": 28,
+                                        "html_instructions": "Walk to 58 Seafield Rd E, Northside, Dublin 3, D03 EV96, Ireland",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "qvudId`yd@hAO"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3644071,
+                                                "lng": -6.1953866
+                                        },
+                                        "stop": {
+                                                "lat": 53.3640384,
+                                                "lng": -6.195306599999999
+                                        }
+                                }
+                        ],
+                        "transit_index": [
+                                1,
+                                3
+                        ]
+                },
+                {
+                        "db_index": [
+                                1,
+                                3
+                        ],
+                        "distance": 17938,
+                        "duration": 3314,
+                        "end": {
+                                "address": "58 Seafield Rd E, Northside, Dublin 3, D03 EV96, Ireland",
+                                "location": {
+                                        "lat": 53.3640384,
+                                        "lng": -6.195306599999999
+                                },
+                                "time": 1597184040
+                        },
+                        "start": {
+                                "address": "Clonskeagh, Bird Avenue, Friarland, Dublin, Co. Dublin, Ireland",
+                                "location": {
+                                        "lat": 53.30512119999999,
+                                        "lng": -6.236070799999999
+                                },
+                                "time": 1597180726
+                        },
+                        "steps": [
+                                {
+                                        "directions": [
+                                                "Head <b>northwest</b> on <b>Roebuck Rd</b>/<wbr/><b>R825</b> toward <b>Gledswood Dr</b>",
+                                                "Turn <b>left</b> onto <b>Gledswood Dr</b>",
+                                                "Turn <b>left</b> onto <b>Bird Ave</b>",
+                                                "Turn <b>right</b> onto <b>Dundrum Rd</b>/<wbr/><b>R117</b><div style=\"font-size:0.9em\">Destination will be on the left</div>"
+                                        ],
+                                        "distance": 757,
+                                        "duration": 571,
+                                        "html_instructions": "Walk to Millmount Terrace, stop 2896",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "_djdIl~`e@q@x@MN",
+                                                "_fjdIv`ae@Lr@Jj@FXBV?F?F?F?JEN",
+                                                "_ejdI|fae@HP@F@F?L@L?T?Z?rB?nB@pA?jL?VArD?tEAzG@fB",
+                                                "odjdItzbe@_ARUF]Jg@JC?"
+                                        ],
+                                        "start": {
+                                                "lat": 53.30512119999999,
+                                                "lng": -6.236070799999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.3060007,
+                                                "lng": -6.2459712
+                                        }
+                                },
+                                {
+                                        "distance": 7699,
+                                        "duration": 1023,
+                                        "html_instructions": "Bus towards Eden Quay",
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "mijdIx|be@AOi@JwATgARqAViAPSD}@JQ@YBg@BwA?C?w@Cc@BOBOFi@\\[\\KNCDGFINKPINGPSp@K\\AFKZI^o@MGC[GOEoA]e@KaAO_@Ia@MOEEAECOKo@m@MMGEECMGOG]MSKIEMGUQaCsAq@]{@c@c@[{@q@gAm@]OQG[MYKa@Uq@a@{@Q[IYGUKQMOSUa@c@oAgAeD_AmBOIGCMCIAI?O@K@uAfBEF]f@Wd@u@dBa@v@CFGJi@dA}@zAkApBcAhBQ\\Wd@[l@e@bAe@lAS`@[r@O\\e@bASb@Q^a@|@c@hAENKVEL[|@KXMb@Y|@ENITUv@Oj@i@`CYnAAJSv@o@tB_@vAQd@_@hAIPGPGRKTQ^SXONgAhAc@d@OPe@j@KREFCFQ\\MVQd@?@KXWpAGXETEVYvAG\\GJGJEBUNODA?WH]Hk@LkAZm@Na@LMDMFWJm@XEBOJ]Rk@^[Vi@b@k@d@_@\\MNEFCDILGJGJm@`AKPOXMV]j@o@hA[f@[h@g@z@QXIN]f@EHGHGJ[^UZMTQZHvAJbBDzAc@Lq@J{ATMGGAMICcBAo@Gy@C_@C]AUIaAEUCGCIAAAAEAC?E@SB?K?IVoL@_APeJ[Iu@a@e@YKGs@c@GECAw@_@CAuAo@y@a@EAq@[[Si@_@KGy@i@YScAs@SQwB{A[Y[YGACAE?G?MDGBED?@EFCFGVEXAD]pBI`@GPUv@i@jDWnAYjAqAWu@Ow@Q?EmAWuAYXmE|@aKqCmAuBy@`@uDVgBDmAQoBg@yB@u@PcAFy@OWkHuD?A?A[OGCQKS?I@G@IDGFILG`@OjAm@rEKr@Ej@SlBQ~AOnACCkApKyBFD{EJoEnDZgAfK_AF{E?wHs@FfBPlB`BtN"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3059934,
+                                                "lng": -6.246048
+                                        },
+                                        "stop": {
+                                                "lat": 53.3476535,
+                                                "lng": -6.2584979
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Eden Quay, stop 303",
+                                                        "time": 1597182322
+                                                },
+                                                "dep": {
+                                                        "name": "Millmount Terrace, stop 2896",
+                                                        "time": 1597181299
+                                                },
+                                                "headsign": "Eden Quay",
+                                                "operator": "Dublin Bus",
+                                                "route": "61",
+                                                "source": "GOOGLE",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "directions": [
+                                                "Head <b>east</b> on <b>Eden Quay</b>/<wbr/><b>R105</b> toward <b>Rosie Hackett Bridge</b>",
+                                                "Turn <b>left</b> onto <b>Marlborough St</b>",
+                                                "Turn <b>right</b> onto <b>Abbey Street Lower</b><div style=\"font-size:0.9em\">Destination will be on the left</div>"
+                                        ],
+                                        "distance": 225,
+                                        "duration": 173,
+                                        "html_instructions": "Walk to Abbey Street, stop 7591",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "gnrdIzjee@c@oDGg@CW",
+                                                "wordIjcee@ODs@RMDw@NG@K@",
+                                                "utrdI~dee@WuC"
+                                        ],
+                                        "start": {
+                                                "lat": 53.34771749999999,
+                                                "lng": -6.2585354
+                                        },
+                                        "stop": {
+                                                "lat": 53.34887450000001,
+                                                "lng": -6.2568481
+                                        }
+                                },
+                                {
+                                        "distance": 9216,
+                                        "duration": 1109,
+                                        "html_instructions": "Bus towards Castle Ave",
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "uurdIn`ee@FC[iDYwCE]Ca@AS?A@I?E?OBUEUGUCQO_AEWE_@CYC[?eCB_ABa@@_@?a@AQEYIWEUSg@YWYYKIAAIEm@_@QKICyAs@u@_@ICGCCCe@Sw@g@e@YKGCCQOEEKK{@w@y@aAg@k@QQQW_@g@EGKMWYcAkAm@q@o@q@GG_@a@MMa@e@]c@QQSQW_@c@k@u@cAACU[Wa@Ya@[i@Ye@OWQYKQMUEG_@m@KQGOYg@ACMSWe@o@gAOWKQKUg@}@QY]m@Q[CCOUe@u@QYU[IKEGGGIIGIOQe@i@YU[_@[a@[a@e@g@kAkA[]s@o@o@u@MOIIMOa@g@]c@mAyAe@m@yAiBc@i@IIa@g@OQEi@Ke@UgAGYIc@i@iCQ{@u@yDQ_AWuAO{@Ks@Ko@EYCYEi@C_@AEAc@EaAASAUCy@Ce@Ee@FgA@IHoBPiELgBHsA@CHqAP_CDa@NuADc@Z{CViBPuAB_@VcAH}@Dk@HeABc@LqBDeADm@Bo@Bc@Dc@Bg@Fg@LiAHm@Ji@j@kD@ELi@F]f@_CH_@r@cCh@_BFQ\\gA@CDOVy@VgATeAPy@Nq@Ns@BMV}ALy@@IHg@N{ALsD@g@Be@Bu@DyAD_CBq@@_AFyB?g@@e@?c@A_@GuD?e@CeACiCC}A?W?q@?o@@m@Bw@D_AJmAHu@b@qED[NwANoBH_ALeBPgDHsA@U@QV}BVoAF]@IFUPo@Po@t@kBHQ^_A`@}ATaCDe@Fw@@S@[?I@o@Aa@?OCUKeBO{AGi@SsBMsACUO_BEi@Ic@[sAc@_B_@_BYmACOYcBQsAWuBE]QcBY{BO_AWgAa@_BUy@[kAK_@k@oBo@uByAyE_@kAYs@O_@[m@IQWe@iCgEi@w@wA{Bg@w@eA{Aw@iAaAwAaCoDqB}Cy@oA_@k@oCiEGNADi@zAWr@[`AM^CJCHGRQp@Qv@YnAQt@ABS`A_@hB_@fBYvAOx@Or@AH?@AFIh@AJ?DAD?DCLId@SbAGVcAzDI\\Qt@CPCTCTCTKnAALAJ?J?H?F@D?B@B?BBD@DBBBBBBD@DBLDfC~@~@\\z@\\tAf@vCdA`A^nAh@PHJJFHHPFLDPDPFf@@LALYnFc@pIS`DpAJjBL`@DzGd@lAHC`@Ev@?JKfDIhAEr@Ep@Ep@M|BGz@Er@Cf@Cz@Ch@?LARA\\AZAl@CvAGtCItDgAC?P"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3489114,
+                                                "lng": -6.2568793
+                                        },
+                                        "stop": {
+                                                "lat": 53.3644068,
+                                                "lng": -6.1953694
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Vernon Avenue, stop 1763",
+                                                        "time": 1597184009
+                                                },
+                                                "dep": {
+                                                        "name": "Abbey Street, stop 7591",
+                                                        "time": 1597182900
+                                                },
+                                                "headsign": "Castle Ave",
+                                                "operator": "Dublin Bus",
+                                                "route": "130",
+                                                "source": "GOOGLE",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "directions": [
+                                                null
+                                        ],
+                                        "distance": 41,
+                                        "duration": 28,
+                                        "html_instructions": "Walk to 58 Seafield Rd E, Northside, Dublin 3, D03 EV96, Ireland",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "qvudId`yd@hAO"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3644071,
+                                                "lng": -6.1953866
+                                        },
+                                        "stop": {
+                                                "lat": 53.3640384,
+                                                "lng": -6.195306599999999
+                                        }
+                                }
+                        ],
+                        "transit_index": [
+                                1,
+                                3
+                        ]
+                }
+        ],
+        "status": "OK"
+}
