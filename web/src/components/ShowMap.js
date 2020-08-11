@@ -227,12 +227,14 @@ function ShowMap({
         </Tooltip>
 
         {otherRoute.length > 1 && (
-          <div className="switch2 mapUI">
-            <Replay
-              className="Switch"
-              onClick={() => setOherRouteBool(!otherRouteBool)}
-            ></Replay>
-          </div>
+          <Tooltip className="tooltip" title="Change Direction">
+            <div className="switch2 mapUI">
+              <Replay
+                className="Switch"
+                onClick={() => setOherRouteBool(!otherRouteBool)}
+              ></Replay>
+            </div>
+          </Tooltip>
         )}
         {source && otherRoute.length < 1 && stops.length > 1 && (
           // only appears if location is entered not for stops or route
