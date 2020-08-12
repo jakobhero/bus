@@ -1,4 +1,4 @@
-import json, requests, datetime, numpy as np, time, pickle
+import json, requests, datetime, numpy as np, pandas as pd, time, pickle, holidays
 from sklearn.neighbors import KDTree
 from flask_restful import Resource, Api, reqparse
 from sqlalchemy.types import String
@@ -19,6 +19,7 @@ features = None
 weather = None
 forecast = None
 routes = {}
+holidays_IE=holidays.Ireland()
 
 class TestWeather(Resource):
     """will replace current behaviour when the prediction is not in the 48 hour forecast window of OWM."""
@@ -36,16 +37,7 @@ class TestWeather(Resource):
         for row in Weather.query.filter(Weather.month==dt.month,Weather.hour==dt.hour).all():
             weather_descriptions.append(row.weather_description)
             humidities.append(row.humidity)
-        return {
-            "weather_description":{
-                "data":weather_descriptions,
-                "mode":mode(weather_descriptions)
-            },
-            "humidity":{
-                "data":humidities,
-                "mean":round(mean(humidities))
-            }
-        }
+        return mode[weather_descriptions],round(mean(humidities))
 
 class Test(Resource):
     def get(self):
@@ -76,7 +68,7 @@ class Test(Resource):
                 while(True):
                     curr = t_start[index]
                     prediction = get_prediction(
-                        curr["start_time"], curr["duration"], curr["route_id"], curr["direction"])
+                        curr["start_time"],int(midnight.timestamp())+curr["start_time"], curr["duration"], curr["route_id"], curr["direction"])
                     # TODO replace the time with what's specified in the request
                     if int(midnight.timestamp())+curr["start_time"]+prediction < leg["start"]["time"]:
                         break
@@ -90,7 +82,7 @@ class Test(Resource):
                 t_stop=match_trip(start["trip_id"],leg["stop"]["id"])
                 print(f"stop info for leg ({i,j}):")
                 print(t_stop)
-                prediction=get_prediction(start["start_time"],t_stop["duration"],leg["route"],leg["direction"])
+                prediction=get_prediction(start["start_time"],int(midnight.timestamp())+start["start_time"],t_stop["duration"],leg["route"],leg["direction"])
                 t_stop["duration_p"]=prediction
                 t_stop["dep_p"]=start["start_time"]+prediction
                 
@@ -395,7 +387,7 @@ class Directions(Resource):
                 while(True):
                     curr = t_start[index]
                     prediction = get_prediction(
-                        curr["start_time"], curr["duration"], curr["route_id"], curr["direction"])
+                        curr["start_time"],int(midnight.timestamp())+curr["start_time"],curr["duration"], curr["route_id"], curr["direction"])
                     # TODO replace the time with what's specified in the request
                     if int(midnight.timestamp())+curr["start_time"]+prediction < leg["start"]["time"]:
                         break
@@ -407,7 +399,7 @@ class Directions(Resource):
                 start["dep_p"]=start["start_time"]+prediction
 
                 t_stop=match_trip(start["trip_id"],leg["stop"]["id"])
-                prediction=get_prediction(start["start_time"],t_stop["duration"],leg["route"],leg["direction"])
+                prediction=get_prediction(start["start_time"],int(midnight.timestamp())+start["start_time"],t_stop["duration"],leg["route"],leg["direction"])
                 t_stop["duration_p"]=prediction
                 t_stop["dep_p"]=start["start_time"]+prediction
                 
@@ -697,9 +689,10 @@ def match_trip(trip_id, stop_id):
         "duration": result.cum_dur
     }
 
-def get_prediction(timestamp, duration, route_id, direction):
+def get_prediction(timestamp, datetimestamp, duration, route_id, direction):
     global features
     global models
+    global holidays_IE
 
     if features == None:
         load_features()
@@ -713,20 +706,26 @@ def get_prediction(timestamp, duration, route_id, direction):
     model=models[model_name]
 
     #retrieve feature sets for line and direction
-    feature_set=features[str(route_id)][str(direction)]["actual"]
+    feature_set=features[str(route_id)][str(direction)]
             
     #retrieve time input
     dt=datetime.datetime.fromtimestamp(timestamp)
     wd,m,h=dt.weekday(),dt.month,dt.hour
+    if datetime.datetime.fromtimestamp(datetimestamp) in holidays_IE:
+        holiday=1
+    else:
+        holiday=0
 
     #retrieve weather input
-    temp,weather=get_weather(timestamp)
+    humidity,weather=get_weather(datetimestamp)
             
     #transform input for actual duration prediction
-    model_input=model_input_create(temp,duration,weather,wd,m,h,feature_set)
+    model_input=model_input_create(humidity,duration,weather,wd,m,h,holiday,feature_set)
             
     #predict the actual duration of the trip
-    prediction=model.predict([model_input])
+    input_df=pd.DataFrame(model_input).T
+    input_df.columns=feature_set
+    prediction=model.predict(input_df)
     return round(prediction[0])       
 
 def load_features():
@@ -801,8 +800,8 @@ def get_weather(timestamp):
         if weather==None or abs(now-weather["dt"])>=(15*60):
             update_weather()
             # print("Weather is loaded/updated.")
-        #return tuple of (temperature,weather description)
-        return weather["main"]["temp"],weather["weather"][0]["main"]
+        #return tuple of (humidity,weather description)
+        return weather["main"]["humidity"],weather["weather"][0]["description"]
 
     #if the timestamp for the prediction is within 48 hours of the current hour, use OWM forecast
     hour_delta=round(timestamp//3600)-now//3600 #calculate the difference of hour stamps
@@ -813,42 +812,55 @@ def get_weather(timestamp):
             #check whether timestamp value is covered by cached forecast
             if 0<=hours_away<48:
                 fc_row=forecast[hours_away]
-                #return tuple of (temperature,weather description)
-                return fc_row["temp"],fc_row["weather"][0]["main"]
+                #return tuple of (humidity,weather description)
+                return fc_row["humidity"],fc_row["weather"][0]["description"]
         #update forecast if no cache exists or timestamp value is not covered but latest cached forecast.
         update_forecast()
-        # print("Forecast is loaded.")
         fc_row=forecast[hour_delta]
-        #return tuple of (temperature,weather description)
-        return fc_row["temp"],fc_row["weather"][0]["main"]
+        #return tuple of (humidity,weather description)
+        return fc_row["humidity"],fc_row["weather"][0]["description"]
     #TO DO: weather handling if it isn't near current time or within 48 hour forecast window
     else:
-        # for now, we just return the current weather (suboptimal)
-        if weather == None or abs(now-weather["dt"]) >= (15*60):
-            update_weather()
-        # return tuple of (temperature,weather description)
-        return weather["main"]["temp"], weather["weather"][0]["main"]
+        # return mode of weather description and mean of humidity of historical weather data in the same month and same time of day
+        dt=datetime.datetime.fromtimestamp(timestamp)
+        weather_descriptions=[]
+        humidities=[]
+        #query weather data for month and hour of timestamp
+        for row in Weather.query.filter(Weather.month==dt.month,Weather.hour==dt.hour).all():
+            weather_descriptions.append(row.weather_description)
+            humidities.append(row.humidity)
+        print(f"Updating weather based on historical data for month {dt.month} and hour {dt.hour}.")
+        print(f"The mean of humidities is {mean(humidities)}.\nThe mode of weather descriptions is {mode(weather_descriptions)}.")
+        return round(mean(humidities)),mode(weather_descriptions)
 
-def model_input_create(temp,dur_s,weather,weekday,month,hour,feature_set):
-    """Transforms necessary data for predictor in appropriate format for model."""
-    
-    def ordinal_match(value,cardinality):
-        """Transforms ordinal feature in format suitable for modelling by retrieving the
-        cardinality of the binary encoded feature of the model and then
-        setting the correct column "one-hot"."""
-        response=[0]*len(cardinality)
-        try:
-            response[cardinality.index(value)]=1
-        except:
-            # print(f"Could not match {str(value)}.")
-            pass
-        return response
-    
-    weather_input=ordinal_match(weather,feature_set["weather"])
-    wd_input=wd_input=ordinal_match(weekday,feature_set["weekday"])
-    month_input=ordinal_match(month,feature_set["month"])
-    hour_input=ordinal_match(hour,feature_set["hour"])
-    return [temp,dur_s]+weather_input+wd_input+month_input+hour_input
+def model_input_create(humidity,dur_s,weather_description,weekday,month,hour,holiday,feature_set):
+    """transforms input data to array suitable for modelling."""
+    response=[0]*len(feature_set) #create response array
+    #add weather description feature
+    weather_string="weather_description_"+weather_description
+    if weather_string in feature_set:
+        response[feature_set.index(weather_string)]=1
+    #add weekday feature
+    weekday_string="weekday_"+str(weekday)
+    if weekday_string in feature_set:
+        response[feature_set.index(weekday_string)]=1
+    #add month feature
+    month_string="month_"+str(month)
+    if month_string in feature_set:
+        response[feature_set.index(month_string)]=1
+    #add hour feature
+    hour_string="hour_"+str(hour)
+    if hour_string in feature_set:
+        response[feature_set.index(hour_string)]=1
+    #add holiday feature
+    holiday_string="holiday_"+str(holiday)
+    if holiday_string in feature_set:
+        response[feature_set.index(holiday_string)]=1
+    #add the timetable duration
+    response[feature_set.index("dur_s")]=dur_s
+    #add the humidity
+    response[feature_set.index("humidity")]=humidity
+    return response   
 
 api.add_resource(Directions, '/api/directions', endpoint='direction')
 api.add_resource(NearestNeighbor, '/api/nearestneighbor', endpoint='nearestneighbor')
