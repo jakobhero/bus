@@ -18,7 +18,7 @@ import DirectionsBusIcon from "@material-ui/icons/DirectionsBus";
 import Tooltip from "@material-ui/core/Tooltip";
 import { findPoly } from "./components/polylines.js";
 import { getStopNames, getStopNums } from "./components/cookies";
-import { TwitterTimelineEmbed } from "react-twitter-embed";
+// import { TwitterTimelineEmbed } from "react-twitter-embed";
 
 import CookieConsent from "react-cookie-consent";
 
@@ -279,7 +279,7 @@ const App = () => {
               setRealTime={setRealTime}
             ></RealTimeInfo>
           </TabPane>
-          <TabPane tab="News" key="news">
+          {/* <TabPane tab="News" key="news">
             <div className="news">
               <TwitterTimelineEmbed
                 sourceType="profile"
@@ -287,7 +287,7 @@ const App = () => {
                 options={{ height: "30vw" }}
               />
             </div>
-          </TabPane>
+          </TabPane> */}
         </Tabs>
       </Page>
     </div>
