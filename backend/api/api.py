@@ -829,8 +829,6 @@ def get_weather(timestamp):
         for row in Weather.query.filter(Weather.month==dt.month,Weather.hour==dt.hour).all():
             weather_descriptions.append(row.weather_description)
             humidities.append(row.humidity)
-        print(f"Updating weather based on historical data for month {dt.month} and hour {dt.hour}.")
-        print(f"The mean of humidities is {mean(humidities)}.\nThe mode of weather descriptions is {mode(weather_descriptions)}.")
         return round(mean(humidities)),mode(weather_descriptions)
 
 def model_input_create(humidity,dur_s,weather_description,weekday,month,hour,holiday,feature_set):
