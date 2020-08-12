@@ -1,5 +1,6 @@
 import "./css/App.css";
 import React, { useState } from "react";
+import Page from "react-page-loading";
 import SearchForm from "./components/searchForm";
 
 import ShowMap from "./components/ShowMap";
@@ -181,91 +182,97 @@ const App = () => {
   };
   return (
     <div className="App">
-      <SearchForm
-        handleSubmitApp={handleSubmitApp}
-        searchValD={searchValD}
-        searchValS={searchValS}
-        setSearchValD={setSearchValD}
-        setSearchValS={setSearchValS}
-      />
-      <Tabs
-        style={{ margin: 10 }}
-        onChange={changeActiveTab}
-        activeKey={activeKey}
-        size={"large"}
-        animated={{ inkBar: true, tabPane: true }}
-      >
-        <TabPane tab="Map" key="map">
-          <ShowMap
-            source={state.source}
-            destination={state.destination}
-            stops={stopsForMap}
-            setRealTime={setRealTime}
-            otherRoute={otherRoute}
-            directions={directions}
-            busIndex={busIndex}
-            getStopsByCoords={getStopsByCoords}
-            favStops={favStops}
-            setFavStops={setFavStops}
-          />
-        </TabPane>
-
-        <TabPane tab="Connections" key="connections">
-          {tripTimes.length > 0 && (
-            <Tooltip title="Sort by arrival time">
-              <Button style={{ margin: 20 }} type="submit" onClick={sortTime}>
-                <AccessTimeIcon></AccessTimeIcon>
-                <SortIcon></SortIcon>
-              </Button>
-            </Tooltip>
-          )}
-          {tripTimes.length > 0 && (
-            <Tooltip title="Sort by bus changes">
-              <Button style={{ margin: 20 }} type="submit" onClick={sortSteps}>
-                <DirectionsBusIcon></DirectionsBusIcon>
-                <SortIcon></SortIcon>
-              </Button>
-            </Tooltip>
-          )}
-          <AllRoutes
-            tripTimes={tripTimes}
-            setDirections={setDirections}
-            index={index}
-            setIndex={setIndex}
-          ></AllRoutes>
-        </TabPane>
-
-        <TabPane tab="Favourites" key="favourites">
-          <Favourites
-            setRealTime={setRealTime}
-            clearMap={clearMap}
-            setStopsForMap={setStopsForMap}
-            setActiveKey={setActiveKey}
-            setState={setState}
-            state={state}
-            favStops={favStops}
-            setFavStops={setFavStops}
-            setSearchVal={setSearchValS}
-          />
-        </TabPane>
-        <TabPane tab="Real Time" key="realTime">
-          <RealTimeInfo
-            realTimeData={realTimeData}
-            favStops={favStops}
-            setFavStops={setFavStops}
-            setRealTime={setRealTime}
-          ></RealTimeInfo>
-        </TabPane>
-        <TabPane tab="News" key="news">
-          <div className="news">
-            <TwitterTimelineEmbed
-              sourceType="profile"
-              screenName="dublinbusnews"
-              options={{ height: "30vw" }}
+      <Page loader={"bar"} color={"#1b55db"} size={15}>
+        <SearchForm
+          handleSubmitApp={handleSubmitApp}
+          searchValD={searchValD}
+          searchValS={searchValS}
+          setSearchValD={setSearchValD}
+          setSearchValS={setSearchValS}
+        />
+        <Tabs
+          style={{ margin: 10 }}
+          onChange={changeActiveTab}
+          activeKey={activeKey}
+          size={"large"}
+          animated={{ inkBar: true, tabPane: true }}
+        >
+          <TabPane tab="Map" key="map">
+            <ShowMap
+              source={state.source}
+              destination={state.destination}
+              stops={stopsForMap}
+              setRealTime={setRealTime}
+              otherRoute={otherRoute}
+              directions={directions}
+              busIndex={busIndex}
+              getStopsByCoords={getStopsByCoords}
+              favStops={favStops}
+              setFavStops={setFavStops}
             />
-          </div>
-        </TabPane>
-      </Tabs>
+          </TabPane>
+
+          <TabPane tab="Connections" key="connections">
+            {tripTimes.length > 0 && (
+              <Tooltip title="Sort by arrival time">
+                <Button style={{ margin: 20 }} type="submit" onClick={sortTime}>
+                  <AccessTimeIcon></AccessTimeIcon>
+                  <SortIcon></SortIcon>
+                </Button>
+              </Tooltip>
+            )}
+            {tripTimes.length > 0 && (
+              <Tooltip title="Sort by bus changes">
+                <Button
+                  style={{ margin: 20 }}
+                  type="submit"
+                  onClick={sortSteps}
+                >
+                  <DirectionsBusIcon></DirectionsBusIcon>
+                  <SortIcon></SortIcon>
+                </Button>
+              </Tooltip>
+            )}
+            <AllRoutes
+              tripTimes={tripTimes}
+              setDirections={setDirections}
+              index={index}
+              setIndex={setIndex}
+            ></AllRoutes>
+          </TabPane>
+
+          <TabPane tab="Favourites" key="favourites">
+            <Favourites
+              setRealTime={setRealTime}
+              clearMap={clearMap}
+              setStopsForMap={setStopsForMap}
+              setActiveKey={setActiveKey}
+              setState={setState}
+              state={state}
+              favStops={favStops}
+              setFavStops={setFavStops}
+              setSearchVal={setSearchValS}
+            />
+          </TabPane>
+          <TabPane tab="Real Time" key="realTime">
+            <RealTimeInfo
+              realTimeData={realTimeData}
+              favStops={favStops}
+              setFavStops={setFavStops}
+              setRealTime={setRealTime}
+            ></RealTimeInfo>
+          </TabPane>
+          <TabPane tab="News" key="news">
+            <div className="news">
+              <TwitterTimelineEmbed
+                sourceType="profile"
+                screenName="dublinbusnews"
+                options={{ height: "30vw" }}
+              />
+            </div>
+          </TabPane>
+        </Tabs>
+      </Page>
     </div>
   );
 };

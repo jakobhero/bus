@@ -1,0 +1,521 @@
+{
+        "connections": [
+                {
+                        "db_index": [
+                                1
+                        ],
+                        "distance": 6737,
+                        "duration": 2151,
+                        "end": {
+                                "address": "Houses 38-40, Dublin, Ireland",
+                                "location": {
+                                        "lat": 53.3438025,
+                                        "lng": -6.2547698
+                                },
+                                "time": 1597160701
+                        },
+                        "start": {
+                                "address": "UCD Sports Centre, Belfield, Dublin, Ireland",
+                                "location": {
+                                        "lat": 53.30799820000001,
+                                        "lng": -6.228392299999999
+                                },
+                                "time": 1597158550
+                        },
+                        "steps": [
+                                {
+                                        "directions": [
+                                                "Head <b>east</b>",
+                                                "Turn <b>left</b><div style=\"font-size:0.9em\">Go through 1 roundabout</div>",
+                                                "Turn <b>right</b>",
+                                                "Turn <b>left</b>",
+                                                "Turn <b>left</b>",
+                                                "Slight <b>right</b>",
+                                                "Slight <b>left</b>",
+                                                "Turn <b>right</b>",
+                                                "Turn <b>right</b>",
+                                                "Turn <b>left</b><div style=\"font-size:0.9em\">Destination will be on the left</div>"
+                                        ],
+                                        "distance": 856,
+                                        "duration": 610,
+                                        "html_instructions": "Walk to UCD N11 Entrance, stop 768",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "_vjdIln_e@?a@CM?O?OBa@@U?E?C@I?K@A\\m@DIJ?",
+                                                "itjdIjg_e@D_ADkAHg@BW?A?AA??A?AA??A?A?A?A?A?A?A?A@??A?A@AGY@gABq@L{B?SRwCLuB",
+                                                "arjdInn~d@HB",
+                                                "wqjdIrn~d@dBgF",
+                                                "qnjdIjg~d@qAaBKO[Uc@Gi@MKEQC",
+                                                "wujdIbb~d@wAyB",
+                                                "oxjdIh~}d@q@?",
+                                                "azjdIh~}d@AGKQIMYe@CGOUKOMUQ]",
+                                                "s}jdIxx}d@HYDK",
+                                                "c}jdIrw}d@UmASw@CM"
+                                        ],
+                                        "start": {
+                                                "lat": 53.30799820000001,
+                                                "lng": -6.228392299999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.3093741,
+                                                "lng": -6.218879299999999
+                                        }
+                                },
+                                {
+                                        "distance": 5342,
+                                        "duration": 1147,
+                                        "html_instructions": "Bus towards Phoenix Pk",
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "y~jdI~r}d@GMMRMTi@~@_@h@y@jA]\\YXYRKHSFM@GAKHi@`@IFk@^yA`ACB_An@{@j@s@h@[Z[V[`@A@c@p@q@jAUf@Sh@Of@Oj@WdAEPMp@[jA?B]hAMh@KZELo@fBSd@Uf@Uf@o@dAOXm@z@UZ[`@QXs@dA_@f@yAxByA`CmB`DGJy@pAILSZg@v@IJCF[h@]n@KRu@t@A@EDQHQXg@p@OPKNCB}AzBEFk@x@Yj@q@fAKLGJw@nA[h@GJ_@n@OXIPIROj@Q~BI^O^IRMXOTCFS^]p@Ub@{ArBINGFMRGHIJQT[^c@l@u@hAYb@aBbCGHGHm@z@W`@QTOTKRe@v@A@uApBIJUXy@fAc@j@m@x@s@fAi@t@c@v@CHITELITK\\GNW`A?@Mf@Wx@EPMd@Od@YdASr@Ur@KZMZA@Yx@AJ?BABIVK\\Of@Kb@AJG`@_@zDM~@Mn@On@K\\?B]~@U`@Ud@U\\Y^MNMLa@Xu@f@SHEBC@C@c@PGD_@PaAn@KDSASNIFEBIFaAjAc@d@g@j@IHONONSRsBdCw@v@QPe@d@[\\i@f@g@h@m@p@FVGWOP[^EDkAnA_@h@KVEHEFIX[Si@_@KGy@i@YScAs@SQwB{A[Y[YGACAE?G?MDGBED?@EFCFGVEXAD]pBI`@GPUv@i@jDWnAYjAqAWu@Ow@Q?EkNkC[dC[xBIV[VWAg@Mu@@QBkAz@aBwAs@CsAFC?Db@"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3094124,
+                                                "lng": -6.218878399999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.3456223,
+                                                "lng": -6.259291999999999
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Dublin City South, Westmoreland Street",
+                                                        "time": 1597160308
+                                                },
+                                                "dep": {
+                                                        "name": "UCD N11 Entrance, stop 768",
+                                                        "time": 1597159161
+                                                },
+                                                "headsign": "Phoenix Pk",
+                                                "operator": "Dublin Bus",
+                                                "route": "46a",
+                                                "source": "GOOGLE",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "directions": [
+                                                "Head <b>south</b> on <b>Westmoreland St</b> toward <b>College St</b><div style=\"font-size:0.9em\">Parts of this road may be closed at certain times or days</div>",
+                                                "Continue onto <b>College Green</b>/<wbr/><b>R137</b>",
+                                                "Turn <b>left</b> toward <b>College Green</b>/<wbr/><b>R137</b>",
+                                                "Turn <b>left</b> onto <b>College Green</b>/<wbr/><b>R137</b>",
+                                                "Turn <b>left</b> onto <b>College Green</b>/<wbr/><b>R138</b><div style=\"font-size:0.9em\">Closed Mon\u2013Fri 7:00 \u2013 10:00 AM</div>",
+                                                "Turn <b>right</b>",
+                                                "Turn <b>right</b>",
+                                                "Turn <b>left</b>",
+                                                "Turn <b>right</b><div style=\"font-size:0.9em\">Destination will be on the left</div>"
+                                        ],
+                                        "distance": 539,
+                                        "duration": 393,
+                                        "html_instructions": "Walk to Houses 38-40, Dublin, Ireland",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "cardIvnee@x@?d@BN?RF",
+                                                "_}qdIboee@`@RFDFFFJDNBHFR@F",
+                                                "qzqdIfree@HEDAFELE",
+                                                "kyqdIrqee@IY",
+                                                "uyqdIxpee@I?",
+                                                "_zqdIxpee@@]?m@@gABiBB_C",
+                                                "syqdIzdee@~@F",
+                                                "swqdIbeee@@g@HuEDkAHsF",
+                                                "wvqdIdsde@^B"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3456243,
+                                                "lng": -6.2591626
+                                        },
+                                        "stop": {
+                                                "lat": 53.3438025,
+                                                "lng": -6.2547698
+                                        }
+                                }
+                        ],
+                        "transit_index": [
+                                1
+                        ]
+                },
+                {
+                        "db_index": [
+                                1
+                        ],
+                        "distance": 7431,
+                        "duration": 2113,
+                        "end": {
+                                "address": "Houses 38-40, Dublin, Ireland",
+                                "location": {
+                                        "lat": 53.3438025,
+                                        "lng": -6.2547698
+                                },
+                                "time": 1597160801
+                        },
+                        "start": {
+                                "address": "UCD Sports Centre, Belfield, Dublin, Ireland",
+                                "location": {
+                                        "lat": 53.30799820000001,
+                                        "lng": -6.228392299999999
+                                },
+                                "time": 1597158688
+                        },
+                        "steps": [
+                                {
+                                        "directions": [
+                                                "Head <b>east</b>",
+                                                "Turn <b>left</b><div style=\"font-size:0.9em\">Go through 1 roundabout</div>",
+                                                "Turn <b>right</b>",
+                                                "Turn <b>left</b>",
+                                                "Turn <b>left</b>",
+                                                "Slight <b>right</b>",
+                                                "Slight <b>left</b>",
+                                                "Turn <b>right</b>",
+                                                "Turn <b>right</b>",
+                                                "Turn <b>left</b><div style=\"font-size:0.9em\">Destination will be on the left</div>"
+                                        ],
+                                        "distance": 856,
+                                        "duration": 610,
+                                        "html_instructions": "Walk to UCD N11 Entrance, stop 768",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "_vjdIln_e@?a@CM?O?OBa@@U?E?C@I?K@A\\m@DIJ?",
+                                                "itjdIjg_e@D_ADkAHg@BW?A?AA??A?AA??A?A?A?A?A?A?A?A@??A?A@AGY@gABq@L{B?SRwCLuB",
+                                                "arjdInn~d@HB",
+                                                "wqjdIrn~d@dBgF",
+                                                "qnjdIjg~d@qAaBKO[Uc@Gi@MKEQC",
+                                                "wujdIbb~d@wAyB",
+                                                "oxjdIh~}d@q@?",
+                                                "azjdIh~}d@AGKQIMYe@CGOUKOMUQ]",
+                                                "s}jdIxx}d@HYDK",
+                                                "c}jdIrw}d@UmASw@CM"
+                                        ],
+                                        "start": {
+                                                "lat": 53.30799820000001,
+                                                "lng": -6.228392299999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.3093741,
+                                                "lng": -6.218879299999999
+                                        }
+                                },
+                                {
+                                        "distance": 5967,
+                                        "duration": 1023,
+                                        "html_instructions": "Bus towards Maynooth",
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "y~jdI~r}d@GMMRMTi@~@_@h@y@jA]\\YXYRKHSFM@GAKHi@`@IFk@^yA`ACB_An@{@j@s@h@[Z[V[`@A@c@p@q@jAUf@Sh@Of@Oj@WdAEPMp@[jA?B]hAMh@KZELo@fBSd@Uf@Uf@o@dAOXm@z@UZ[`@QXs@dA_@f@yAxByA`CmB`DGJy@pAILSZg@v@IJCF[h@]n@KRu@t@A@EDQHQXg@p@OPKNCB}AzBEFk@x@Yj@q@fAKLGJw@nA[h@GJ_@n@OXIPIROj@Q~BI^O^IRMXOTCFS^]p@Ub@{ArBINGFMRGHIJQT[^c@l@u@hAYb@aBbCGHGHm@z@W`@QTOTKRe@v@A@uApBIJUXy@fAc@j@m@x@s@fAi@t@c@v@CHITELITK\\GNW`A?@Mf@uAy@UIOEk@UuHcCaA]i@Os@WcDgAIAuAe@SGQEiA_@CJc@bBi@dBITA@sAjCg@t@EFSl@ILkBnBORKLm@bAaA~AOTg@bAaAfBOXS^MRMXQ\\O\\Kb@y@~C}@~CAFMd@CL?DA@?F?H?Hf@h@d@`@RPr@l@JJlB`BhAfAFDhAdAv@n@\\VDBJLHRf@jB@LDLZvAH^[\\i@f@g@h@m@p@FVGWOP[^EDkAnA_@h@KVEHEFIX[Si@_@KGy@i@YScAs@SQwB{A[Y[YGACAE?G?MDGBED?@EFCFGVEXAD]pBI`@GPK^@DyA`IYLmE_AiCg@XmE|@aKqCmAuBy@d@mE@CMI"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3094124,
+                                                "lng": -6.218878399999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.3420371,
+                                                "lng": -6.2534749
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "National Gallery, stop 7585",
+                                                        "time": 1597160322
+                                                },
+                                                "dep": {
+                                                        "name": "UCD N11 Entrance, stop 768",
+                                                        "time": 1597159299
+                                                },
+                                                "headsign": "Maynooth",
+                                                "operator": "Dublin Bus",
+                                                "route": "67x",
+                                                "source": "GOOGLE",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "directions": [
+                                                "Head <b>west</b> on <b>Leinster St S</b>/<wbr/><b>R138</b> toward <b>Leinster Ln</b><div style=\"font-size:0.9em\">Continue to follow R138</div>",
+                                                "Turn <b>right</b> at <b>Dawson St</b>",
+                                                "Turn <b>right</b><div style=\"font-size:0.9em\">Take the stairs</div>",
+                                                "Turn <b>left</b><div style=\"font-size:0.9em\">Destination will be on the right</div>"
+                                        ],
+                                        "distance": 608,
+                                        "duration": 459,
+                                        "html_instructions": "Walk to Houses 38-40, Dublin, Ireland",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "kjqdIlkde@CVg@tDi@bEE`@YvBEZQjAA@EVMz@Ir@GNI\\",
+                                                "kpqdIxeee@QIECEACC[W[YU?e@A]C",
+                                                "_vqdIlcee@DqEB_A?q@@E@CBAJ?@?@ABC?[DmC",
+                                                "stqdIlsde@c@C"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3419761,
+                                                "lng": -6.253508099999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.3438025,
+                                                "lng": -6.2547698
+                                        }
+                                }
+                        ],
+                        "transit_index": [
+                                1
+                        ]
+                },
+                {
+                        "db_index": [
+                                1
+                        ],
+                        "distance": 6716,
+                        "duration": 2190,
+                        "end": {
+                                "address": "Houses 38-40, Dublin, Ireland",
+                                "location": {
+                                        "lat": 53.3438025,
+                                        "lng": -6.2547698
+                                },
+                                "time": 1597160928
+                        },
+                        "start": {
+                                "address": "UCD Sports Centre, Belfield, Dublin, Ireland",
+                                "location": {
+                                        "lat": 53.30799820000001,
+                                        "lng": -6.228392299999999
+                                },
+                                "time": 1597158738
+                        },
+                        "steps": [
+                                {
+                                        "directions": [
+                                                "Head <b>east</b>",
+                                                "Turn <b>left</b><div style=\"font-size:0.9em\">Go through 1 roundabout</div>",
+                                                "Turn <b>right</b>",
+                                                "Turn <b>left</b>",
+                                                "Turn <b>left</b>",
+                                                "Slight <b>right</b>",
+                                                "Slight <b>left</b>",
+                                                "Turn <b>right</b>",
+                                                "Turn <b>right</b>",
+                                                "Turn <b>left</b><div style=\"font-size:0.9em\">Destination will be on the left</div>"
+                                        ],
+                                        "distance": 856,
+                                        "duration": 610,
+                                        "html_instructions": "Walk to UCD N11 Entrance, stop 768",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "_vjdIln_e@?a@CM?O?OBa@@U?E?C@I?K@A\\m@DIJ?",
+                                                "itjdIjg_e@D_ADkAHg@BW?A?AA??A?AA??A?A?A?A?A?A?A?A@??A?A@AGY@gABq@L{B?SRwCLuB",
+                                                "arjdInn~d@HB",
+                                                "wqjdIrn~d@dBgF",
+                                                "qnjdIjg~d@qAaBKO[Uc@Gi@MKEQC",
+                                                "wujdIbb~d@wAyB",
+                                                "oxjdIh~}d@q@?",
+                                                "azjdIh~}d@AGKQIMYe@CGOUKOMUQ]",
+                                                "s}jdIxx}d@HYDK",
+                                                "c}jdIrw}d@UmASw@CM"
+                                        ],
+                                        "start": {
+                                                "lat": 53.30799820000001,
+                                                "lng": -6.228392299999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.3093741,
+                                                "lng": -6.218879299999999
+                                        }
+                                },
+                                {
+                                        "distance": 5227,
+                                        "duration": 1100,
+                                        "html_instructions": "Bus towards Heuston Station",
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "y~jdI~r}d@GMMRMTi@~@_@h@y@jA]\\YXYRKHSFM@GAKHi@`@IFk@^yA`ACB_An@{@j@s@h@[Z[V[`@A@c@p@q@jAUf@Sh@Of@Oj@WdAEPMp@[jA?B]hAMh@KZELo@fBSd@Uf@Uf@o@dAOXm@z@UZ[`@QXs@dA_@f@yAxByA`CmB`DGJy@pAILSZg@v@IJCF[h@]n@KRu@t@A@EDQHQXg@p@OPKNCB}AzBEFk@x@Yj@q@fAKLGJw@nA[h@GJ_@n@OXIPIROj@Q~BI^O^IRMXOTCFS^]p@Ub@{ArBINGFMRGHIJQT[^c@l@u@hAYb@aBbCGHGHm@z@W`@QTOTKRe@v@A@uApBIJUXy@fAc@j@m@x@s@fAi@t@c@v@CHITELITK\\GNW`A?@Mf@Wx@EPMd@Od@YdASr@Ur@KZMZA@Yx@AJ?BABIVK\\Of@Kb@AJG`@_@zDM~@Mn@On@K\\?B]~@U`@Ud@U\\Y^MNMLa@Xu@f@SHEBC@C@c@PGD_@PaAn@KDSASNIFEBIFaAjAc@d@g@j@IHONONSRsBdCw@v@QPe@d@[\\i@f@g@h@m@p@FVGWOP[^EDkAnA_@h@KVEHEFIX[Si@_@KGy@i@YScAs@SQwB{A[Y[YGACAE?G?MDGBED?@EFCFGVEXAD]pBI`@GPUv@i@jDWnAYjAqAWu@Ow@Q?EcDq@XmE|@aKqCmAuBy@`@uDPmABWMC"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3094124,
+                                                "lng": -6.218878399999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.3419626,
+                                                "lng": -6.253126099999999
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Clare Street",
+                                                        "time": 1597160449
+                                                },
+                                                "dep": {
+                                                        "name": "UCD N11 Entrance, stop 768",
+                                                        "time": 1597159349
+                                                },
+                                                "headsign": "Heuston Station",
+                                                "operator": "Dublin Bus",
+                                                "route": "145",
+                                                "source": "GOOGLE",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "directions": [
+                                                "Head <b>west</b> on <b>Leinster St S</b>/<wbr/><b>R138</b> toward <b>Leinster Ln</b><div style=\"font-size:0.9em\">Continue to follow R138</div>",
+                                                "Turn <b>right</b> at <b>Dawson St</b>",
+                                                "Turn <b>right</b><div style=\"font-size:0.9em\">Take the stairs</div>",
+                                                "Turn <b>left</b><div style=\"font-size:0.9em\">Destination will be on the right</div>"
+                                        ],
+                                        "distance": 633,
+                                        "duration": 478,
+                                        "html_instructions": "Walk to Houses 38-40, Dublin, Ireland",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "}iqdIfide@Q|Ag@tDi@bEE`@YvBEZQjAA@EVMz@Ir@GNI\\",
+                                                "kpqdIxeee@QIECEACC[W[YU?e@A]C",
+                                                "_vqdIlcee@DqEB_A?q@@E@CBAJ?@?@ABC?[DmC",
+                                                "stqdIlsde@c@C"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3419081,
+                                                "lng": -6.253157499999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.3438025,
+                                                "lng": -6.2547698
+                                        }
+                                }
+                        ],
+                        "transit_index": [
+                                1
+                        ]
+                },
+                {
+                        "db_index": [
+                                1
+                        ],
+                        "distance": 6737,
+                        "duration": 2151,
+                        "end": {
+                                "address": "Houses 38-40, Dublin, Ireland",
+                                "location": {
+                                        "lat": 53.3438025,
+                                        "lng": -6.2547698
+                                },
+                                "time": 1597161241
+                        },
+                        "start": {
+                                "address": "UCD Sports Centre, Belfield, Dublin, Ireland",
+                                "location": {
+                                        "lat": 53.30799820000001,
+                                        "lng": -6.228392299999999
+                                },
+                                "time": 1597159090
+                        },
+                        "steps": [
+                                {
+                                        "directions": [
+                                                "Head <b>east</b>",
+                                                "Turn <b>left</b><div style=\"font-size:0.9em\">Go through 1 roundabout</div>",
+                                                "Turn <b>right</b>",
+                                                "Turn <b>left</b>",
+                                                "Turn <b>left</b>",
+                                                "Slight <b>right</b>",
+                                                "Slight <b>left</b>",
+                                                "Turn <b>right</b>",
+                                                "Turn <b>right</b>",
+                                                "Turn <b>left</b><div style=\"font-size:0.9em\">Destination will be on the left</div>"
+                                        ],
+                                        "distance": 856,
+                                        "duration": 610,
+                                        "html_instructions": "Walk to UCD N11 Entrance, stop 768",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "_vjdIln_e@?a@CM?O?OBa@@U?E?C@I?K@A\\m@DIJ?",
+                                                "itjdIjg_e@D_ADkAHg@BW?A?AA??A?AA??A?A?A?A?A?A?A?A@??A?A@AGY@gABq@L{B?SRwCLuB",
+                                                "arjdInn~d@HB",
+                                                "wqjdIrn~d@dBgF",
+                                                "qnjdIjg~d@qAaBKO[Uc@Gi@MKEQC",
+                                                "wujdIbb~d@wAyB",
+                                                "oxjdIh~}d@q@?",
+                                                "azjdIh~}d@AGKQIMYe@CGOUKOMUQ]",
+                                                "s}jdIxx}d@HYDK",
+                                                "c}jdIrw}d@UmASw@CM"
+                                        ],
+                                        "start": {
+                                                "lat": 53.30799820000001,
+                                                "lng": -6.228392299999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.3093741,
+                                                "lng": -6.218879299999999
+                                        }
+                                },
+                                {
+                                        "distance": 5342,
+                                        "duration": 1147,
+                                        "html_instructions": "Bus towards Phoenix Pk",
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "y~jdI~r}d@GMMRMTi@~@_@h@y@jA]\\YXYRKHSFM@GAKHi@`@IFk@^yA`ACB_An@{@j@s@h@[Z[V[`@A@c@p@q@jAUf@Sh@Of@Oj@WdAEPMp@[jA?B]hAMh@KZELo@fBSd@Uf@Uf@o@dAOXm@z@UZ[`@QXs@dA_@f@yAxByA`CmB`DGJy@pAILSZg@v@IJCF[h@]n@KRu@t@A@EDQHQXg@p@OPKNCB}AzBEFk@x@Yj@q@fAKLGJw@nA[h@GJ_@n@OXIPIROj@Q~BI^O^IRMXOTCFS^]p@Ub@{ArBINGFMRGHIJQT[^c@l@u@hAYb@aBbCGHGHm@z@W`@QTOTKRe@v@A@uApBIJUXy@fAc@j@m@x@s@fAi@t@c@v@CHITELITK\\GNW`A?@Mf@Wx@EPMd@Od@YdASr@Ur@KZMZA@Yx@AJ?BABIVK\\Of@Kb@AJG`@_@zDM~@Mn@On@K\\?B]~@U`@Ud@U\\Y^MNMLa@Xu@f@SHEBC@C@c@PGD_@PaAn@KDSASNIFEBIFaAjAc@d@g@j@IHONONSRsBdCw@v@QPe@d@[\\i@f@g@h@m@p@FVGWOP[^EDkAnA_@h@KVEHEFIX[Si@_@KGy@i@YScAs@SQwB{A[Y[YGACAE?G?MDGBED?@EFCFGVEXAD]pBI`@GPUv@i@jDWnAYjAqAWu@Ow@Q?EkNkC[dC[xBIV[VWAg@Mu@@QBkAz@aBwAs@CsAFC?Db@"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3094124,
+                                                "lng": -6.218878399999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.3456223,
+                                                "lng": -6.259291999999999
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Dublin City South, Westmoreland Street",
+                                                        "time": 1597160848
+                                                },
+                                                "dep": {
+                                                        "name": "UCD N11 Entrance, stop 768",
+                                                        "time": 1597159701
+                                                },
+                                                "headsign": "Phoenix Pk",
+                                                "operator": "Dublin Bus",
+                                                "route": "46a",
+                                                "source": "GOOGLE",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "directions": [
+                                                "Head <b>south</b> on <b>Westmoreland St</b> toward <b>College St</b><div style=\"font-size:0.9em\">Parts of this road may be closed at certain times or days</div>",
+                                                "Continue onto <b>College Green</b>/<wbr/><b>R137</b>",
+                                                "Turn <b>left</b> toward <b>College Green</b>/<wbr/><b>R137</b>",
+                                                "Turn <b>left</b> onto <b>College Green</b>/<wbr/><b>R137</b>",
+                                                "Turn <b>left</b> onto <b>College Green</b>/<wbr/><b>R138</b><div style=\"font-size:0.9em\">Closed Mon\u2013Fri 7:00 \u2013 10:00 AM</div>",
+                                                "Turn <b>right</b>",
+                                                "Turn <b>right</b>",
+                                                "Turn <b>left</b>",
+                                                "Turn <b>right</b><div style=\"font-size:0.9em\">Destination will be on the left</div>"
+                                        ],
+                                        "distance": 539,
+                                        "duration": 393,
+                                        "html_instructions": "Walk to Houses 38-40, Dublin, Ireland",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "cardIvnee@x@?d@BN?RF",
+                                                "_}qdIboee@`@RFDFFFJDNBHFR@F",
+                                                "qzqdIfree@HEDAFELE",
+                                                "kyqdIrqee@IY",
+                                                "uyqdIxpee@I?",
+                                                "_zqdIxpee@@]?m@@gABiBB_C",
+                                                "syqdIzdee@~@F",
+                                                "swqdIbeee@@g@HuEDkAHsF",
+                                                "wvqdIdsde@^B"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3456243,
+                                                "lng": -6.2591626
+                                        },
+                                        "stop": {
+                                                "lat": 53.3438025,
+                                                "lng": -6.2547698
+                                        }
+                                }
+                        ],
+                        "transit_index": [
+                                1
+                        ]
+                }
+        ],
+        "status": "OK"
+}

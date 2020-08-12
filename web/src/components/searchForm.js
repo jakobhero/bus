@@ -38,9 +38,10 @@ const DatePickerFunc = ({ handleChange }) => {
       onChange={handleSelect}
       withPortal
       timeIntervals={15}
-      showTimeSelect
       dateFormat="d MMMM h:mm aa"
       customInput={<CustomDateInput ref={ref} />}
+      minDate={new Date()}
+      showTimeSelect
     />
   );
 };
@@ -64,7 +65,10 @@ const SearchForm = ({
     let newFields = { ...fieldsValues };
     if (fieldId === "time") {
       //converting to unix
-      newFields[fieldId] = new Date(value.date).getTime();
+      newFields[fieldId] =
+        new Date(value.date).getTime() < new Date().getTime()
+          ? new Date().getTime()
+          : new Date(value.date).getTime();
     } else {
       newFields[fieldId] = value;
     }
@@ -173,11 +177,7 @@ const SearchForm = ({
 
   const icon = (
     <div style={{ width: "50px" }}>
-      <img
-        style={{ width: "50px" }}
-        src={"./bus.svg"}
-        alt="react border wrapper logo"
-      />
+      <img style={{ width: "50px" }} src={"./bus.svg"} alt="bus logo" />
     </div>
   );
 
