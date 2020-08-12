@@ -41,21 +41,17 @@ class TestWeather(Resource):
 
 class Test(Resource):
     def get(self):
-        with open('api/debugging2/1596807571.json', 'r') as data:
+        with open('api/debugging2/1597271823.json', 'r') as data:
             directions = json.load(data)
 
-        with open('api/debugging3/1596807571.json', 'r') as data:
+        with open('api/debugging3/1597271823.json', 'r') as data:
             model_info = json.load(data)
 
         for i in range(len(model_info)):
             for j in range(len(model_info[i])):
                 leg = model_info[i][j]
-                print(f"Model info for leg ({i,j}):")
-                print(leg)
                 t_start = find_trip(
                     leg["start"]["time"], leg["start"]["id"], leg["route"], leg["direction"])
-                print(f"Start info for leg({i,j}):")
-                print(t_start)
                 if len(t_start) == 0:
                     print("Error: Couldn't find a bus with the following parameters:")
                     print(leg["start"]["time"], leg["start"]
@@ -67,9 +63,10 @@ class Test(Resource):
                 # find the latest bus that doesn't depart prior to our set time
                 while(True):
                     curr = t_start[index]
-                    prediction = get_prediction(
-                        curr["start_time"],int(midnight.timestamp())+curr["start_time"], curr["duration"], curr["route_id"], curr["direction"])
-                    # TODO replace the time with what's specified in the request
+                    print(curr)
+                    print(f'Model Parameters start:{[curr["start_time"],int(midnight.timestamp())+curr["start_time"],curr["duration"], curr["route_id"], curr["direction"]]}')
+                    prediction = get_prediction(int(midnight.timestamp())+curr["start_time"], curr["duration"], curr["route_id"], curr["direction"], curr["progr_number"])
+                    print(f"Prediction for 0-Start stop: {prediction}.")
                     if int(midnight.timestamp())+curr["start_time"]+prediction < leg["start"]["time"]:
                         break
                     index += 1
@@ -80,9 +77,9 @@ class Test(Resource):
                 start["dep_p"]=start["start_time"]+prediction
                 
                 t_stop=match_trip(start["trip_id"],leg["stop"]["id"])
-                print(f"stop info for leg ({i,j}):")
-                print(t_stop)
-                prediction=get_prediction(start["start_time"],int(midnight.timestamp())+start["start_time"],t_stop["duration"],leg["route"],leg["direction"])
+                print(f'Model Parameters stop:{[start["start_time"],int(midnight.timestamp())+start["start_time"],t_stop["duration"],leg["route"],leg["direction"]]}')
+                prediction=get_prediction(int(midnight.timestamp())+start["start_time"],t_stop["duration"],leg["route"],leg["direction"], t_stop["progr_number"])
+                print(f"Prediction for 0-Stop stop: {prediction}.")
                 t_stop["duration_p"]=prediction
                 t_stop["dep_p"]=start["start_time"]+prediction
                 
@@ -386,8 +383,7 @@ class Directions(Resource):
                 # find the latest bus that doesn't depart prior to our set time
                 while(True):
                     curr = t_start[index]
-                    prediction = get_prediction(
-                        curr["start_time"],int(midnight.timestamp())+curr["start_time"],curr["duration"], curr["route_id"], curr["direction"])
+                    prediction = get_prediction(int(midnight.timestamp())+curr["start_time"],curr["duration"], curr["route_id"], curr["direction"], curr["progr_number"])
                     # TODO replace the time with what's specified in the request
                     if int(midnight.timestamp())+curr["start_time"]+prediction < leg["start"]["time"]:
                         break
@@ -399,7 +395,7 @@ class Directions(Resource):
                 start["dep_p"]=start["start_time"]+prediction
 
                 t_stop=match_trip(start["trip_id"],leg["stop"]["id"])
-                prediction=get_prediction(start["start_time"],int(midnight.timestamp())+start["start_time"],t_stop["duration"],leg["route"],leg["direction"])
+                prediction=get_prediction(int(midnight.timestamp())+start["start_time"],t_stop["duration"],leg["route"],leg["direction"], t_stop["progr_number"])
                 t_stop["duration_p"]=prediction
                 t_stop["dep_p"]=start["start_time"]+prediction
                 
@@ -672,7 +668,8 @@ def find_trip(time, stop_id, route_id, direction):
             "dep_time": times.dep,
             "duration": times.cum_dur,
             "route_id": trips.route_id,
-            "direction": trips.direction
+            "direction": trips.direction,
+            "progr_number":times.progr_number
         })
     return response
 
@@ -689,7 +686,7 @@ def match_trip(trip_id, stop_id):
         "duration": result.cum_dur
     }
 
-def get_prediction(timestamp, datetimestamp, duration, route_id, direction):
+def get_prediction(datetimestamp, duration, route_id, direction, progr_number):
     global features
     global models
     global holidays_IE
@@ -709,9 +706,9 @@ def get_prediction(timestamp, datetimestamp, duration, route_id, direction):
     feature_set=features[str(route_id)][str(direction)]
             
     #retrieve time input
-    dt=datetime.datetime.fromtimestamp(timestamp)
+    dt=datetime.datetime.fromtimestamp(datetimestamp)
     wd,m,h=dt.weekday(),dt.month,dt.hour
-    if datetime.datetime.fromtimestamp(datetimestamp) in holidays_IE:
+    if dt in holidays_IE:
         holiday=1
     else:
         holiday=0
@@ -720,11 +717,11 @@ def get_prediction(timestamp, datetimestamp, duration, route_id, direction):
     humidity,weather=get_weather(datetimestamp)
             
     #transform input for actual duration prediction
-    model_input=model_input_create(humidity,duration,weather,wd,m,h,holiday,feature_set)
-            
+    model_input=model_input_create(humidity,duration,progr_number,weather,wd,m,h,holiday,feature_set)    
     #predict the actual duration of the trip
     input_df=pd.DataFrame(model_input).T
     input_df.columns=feature_set
+    input_df.to_csv("test.csv")
     prediction=model.predict(input_df)
     return round(prediction[0])       
 
@@ -831,7 +828,7 @@ def get_weather(timestamp):
             humidities.append(row.humidity)
         return round(mean(humidities)),mode(weather_descriptions)
 
-def model_input_create(humidity,dur_s,weather_description,weekday,month,hour,holiday,feature_set):
+def model_input_create(humidity,dur_s,progr_number,weather_description,weekday,month,hour,holiday,feature_set):
     """transforms input data to array suitable for modelling."""
     response=[0]*len(feature_set) #create response array
     #add weather description feature
@@ -858,6 +855,7 @@ def model_input_create(humidity,dur_s,weather_description,weekday,month,hour,hol
     response[feature_set.index("dur_s")]=dur_s
     #add the humidity
     response[feature_set.index("humidity")]=humidity
+    response[feature_set.index("progr_number")]=progr_number
     return response   
 
 api.add_resource(Directions, '/api/directions', endpoint='direction')
