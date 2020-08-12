@@ -1,0 +1,334 @@
+{
+    "rows": {
+        "start": 384216,
+        "route_filter": -12561,
+        "nan_filter": -8265,
+        "negative_dur": -46,
+        "outliers": -3304,
+        "end": 360040
+    },
+    "scr": 0.9630854582310893,
+    "stats": {
+        "1": {
+            "dur_mean": 0.0,
+            "dur_std": 0.0
+        },
+        "2": {
+            "dur_mean": 92.13347593582888,
+            "dur_std": 35.45490843063929
+        },
+        "3": {
+            "dur_mean": 134.7164705882353,
+            "dur_std": 47.81454323551333
+        },
+        "4": {
+            "dur_mean": 218.171517226621,
+            "dur_std": 60.183921831929275
+        },
+        "5": {
+            "dur_mean": 274.7018088408434,
+            "dur_std": 66.76502798334985
+        },
+        "6": {
+            "dur_mean": 302.2735079433233,
+            "dur_std": 70.70160402553248
+        },
+        "7": {
+            "dur_mean": 351.5138186901817,
+            "dur_std": 74.81179150819875
+        },
+        "8": {
+            "dur_mean": 370.9187271554504,
+            "dur_std": 78.78140442125725
+        },
+        "9": {
+            "dur_mean": 394.79898957325594,
+            "dur_std": 81.62754911098367
+        },
+        "10": {
+            "dur_mean": 439.6052376333657,
+            "dur_std": 87.8309514223121
+        },
+        "11": {
+            "dur_mean": 456.5466206747871,
+            "dur_std": 91.16369700389797
+        },
+        "12": {
+            "dur_mean": 491.94415696420873,
+            "dur_std": 96.1002537354173
+        },
+        "13": {
+            "dur_mean": 539.7993537964459,
+            "dur_std": 103.0279580796929
+        },
+        "14": {
+            "dur_mean": 564.6644807568265,
+            "dur_std": 107.87567948288635
+        },
+        "15": {
+            "dur_mean": 607.7876800688024,
+            "dur_std": 114.60738159351953
+        },
+        "16": {
+            "dur_mean": 662.9171974522293,
+            "dur_std": 119.87418793873725
+        },
+        "17": {
+            "dur_mean": 693.9325212892098,
+            "dur_std": 125.33892033294887
+        },
+        "18": {
+            "dur_mean": 743.1072082749704,
+            "dur_std": 132.4593709373284
+        },
+        "19": {
+            "dur_mean": 770.1022629310345,
+            "dur_std": 137.07949601004907
+        },
+        "20": {
+            "dur_mean": 804.8355603448276,
+            "dur_std": 141.8223096873897
+        },
+        "21": {
+            "dur_mean": 836.1324068088774,
+            "dur_std": 151.46837384836073
+        },
+        "22": {
+            "dur_mean": 919.3021358806483,
+            "dur_std": 185.72567354692393
+        },
+        "23": {
+            "dur_mean": 947.9548856104341,
+            "dur_std": 193.69550753110968
+        },
+        "24": {
+            "dur_mean": 1005.8617078123331,
+            "dur_std": 202.91460152478237
+        },
+        "25": {
+            "dur_mean": 1054.6686972320188,
+            "dur_std": 212.64333167820237
+        },
+        "26": {
+            "dur_mean": 1131.6455060382602,
+            "dur_std": 226.03216984912717
+        },
+        "27": {
+            "dur_mean": 1170.4138520735357,
+            "dur_std": 232.64952515940578
+        },
+        "28": {
+            "dur_mean": 1200.1652415562205,
+            "dur_std": 237.99376735874662
+        },
+        "29": {
+            "dur_mean": 1243.5924540401882,
+            "dur_std": 245.69624301104813
+        },
+        "30": {
+            "dur_mean": 1329.740320855615,
+            "dur_std": 258.1974229955194
+        },
+        "31": {
+            "dur_mean": 1375.709442840338,
+            "dur_std": 266.6955967820031
+        },
+        "32": {
+            "dur_mean": 1423.4629946524065,
+            "dur_std": 276.1403596046846
+        },
+        "33": {
+            "dur_mean": 1480.9547593582888,
+            "dur_std": 287.76269360741827
+        },
+        "34": {
+            "dur_mean": 1523.4322677215866,
+            "dur_std": 295.7072995880955
+        },
+        "35": {
+            "dur_mean": 1568.8185220831997,
+            "dur_std": 307.60056449256894
+        },
+        "36": {
+            "dur_mean": 1631.0132591958939,
+            "dur_std": 318.77264899784416
+        },
+        "37": {
+            "dur_mean": 1662.6465996578272,
+            "dur_std": 332.000240134637
+        },
+        "38": {
+            "dur_mean": 1774.5019288469782,
+            "dur_std": 347.7668949160917
+        },
+        "39": {
+            "dur_mean": 2082.0303533842916,
+            "dur_std": 381.25142605003646
+        }
+    },
+    "feature_eval": {
+        "f_values": {
+            "weather_main_Clouds": 23.24128159620492,
+            "weather_main_Drizzle": 1.0208682519654273,
+            "weather_main_Fog": 11.199594180447502,
+            "weather_main_Mist": 0.011982436357936643,
+            "weather_main_Rain": 0.6985359119341542,
+            "weather_main_Smoke": 0.23116156505908916,
+            "weather_main_Snow": 23.37544266450915,
+            "weather_description_broken clouds": 19.247452453002435,
+            "weather_description_drizzle": 0.24985480102580704,
+            "weather_description_few clouds": 0.31909601959178546,
+            "weather_description_fog": 11.199594180447502,
+            "weather_description_heavy intensity rain": 1.6538207485050196,
+            "weather_description_light intensity drizzle": 1.1736661594110227,
+            "weather_description_light intensity drizzle rain": 0.16393638193015267,
+            "weather_description_light intensity shower rain": 0.5021168319804927,
+            "weather_description_light rain": 1.930699414859786,
+            "weather_description_light shower snow": 18.905266812166346,
+            "weather_description_light snow": 30.193954603041366,
+            "weather_description_mist": 0.011982436357936643,
+            "weather_description_moderate rain": 5.8321881068637085,
+            "weather_description_overcast clouds": 6.086614515214961,
+            "weather_description_proximity shower rain": 0.38241117038035793,
+            "weather_description_rain and drizzle": 10.501481789869082,
+            "weather_description_scattered clouds": 0.12575830798509818,
+            "weather_description_shower rain": 4.162983377502829,
+            "weather_description_sky is clear": 77.7981305869126,
+            "weather_description_smoke": 0.23116156505908916,
+            "weekday_1": 0.9757628813455356,
+            "weekday_2": 30.865375890185497,
+            "weekday_3": 137.56951055453123,
+            "weekday_4": 174.16595275614503,
+            "weekday_5": 116.13306523032261,
+            "weekday_6": 447.11461430656,
+            "month_2": 0.027309001322125874,
+            "month_3": 0.12112593820191014,
+            "month_4": 16.462202440568326,
+            "month_5": 8.319481748537603,
+            "month_6": 1.0198024933205376,
+            "month_7": 13.805971946481607,
+            "month_8": 0.49818122983003965,
+            "month_9": 0.7543129762264528,
+            "month_10": 23.6043941995031,
+            "month_11": 3.9803172097785575,
+            "month_12": 13.07776810069441,
+            "hour_6": 362.55708710364314,
+            "hour_7": 86.63503562011304,
+            "hour_8": 1813.4121189737232,
+            "hour_9": 664.3309538030758,
+            "hour_10": 28.9002282858281,
+            "hour_11": 250.6661120932681,
+            "hour_12": 31.390030562475317,
+            "hour_13": 88.72310511484916,
+            "hour_14": 622.3105226178333,
+            "hour_15": 1.6261085836561406,
+            "hour_16": 0.00268235336636844,
+            "hour_17": 152.62932434157605,
+            "hour_18": 251.2132788038245,
+            "hour_19": 1229.8768403880085,
+            "hour_20": 35.42880702272941,
+            "hour_21": 590.9047529984407,
+            "hour_22": 1220.6418254943317,
+            "hour_23": 2396.769083946127,
+            "holiday_1": 190.73241231779105
+        },
+        "correlations": {
+            "daystamp": 0.01205725621539701,
+            "progr_number": 0.9350664623492583,
+            "arr_p": -0.13282292082204195,
+            "arr_a": -0.12897316539382392,
+            "dep_p": -0.13282292082204195,
+            "dep_a": -0.12892733489975358,
+            "end_p": -0.15980338811558403,
+            "start_p": -0.1609828706200189,
+            "start_a": -0.16080312024913132,
+            "temp": 0.00881617100511879,
+            "feels_like": 0.002452851748755856,
+            "temp_min": 0.009860273681094585,
+            "temp_max": 0.004122399829208066,
+            "pressure": 0.0003300255444290495,
+            "humidity": -0.01731076939859239,
+            "wind_speed": 0.015717495835579687,
+            "wind_deg": 0.009299899437044625,
+            "clouds_all": 0.006493893474207053,
+            "dt": 0.011806264536395323,
+            "dur_s": 0.9675842436152005
+        }
+    },
+    "modelling": {
+        "XGBoost": {
+            "time": 51.74280858039856,
+            "r_2": 0.9620470520536591,
+            "mse": 11465.788356842757,
+            "rmse": 107.0784215276017,
+            "mae": 74.00930024326615
+        },
+        "Benchmark": {
+            "r_2": 0.9099431173722112,
+            "mse": 27206.665414953895,
+            "rmse": 164.94443129416007,
+            "mae": 116.4191312076436
+        }
+    },
+    "features": [
+        "weather_description_broken clouds",
+        "weather_description_drizzle",
+        "weather_description_few clouds",
+        "weather_description_fog",
+        "weather_description_heavy intensity rain",
+        "weather_description_light intensity drizzle",
+        "weather_description_light intensity drizzle rain",
+        "weather_description_light intensity shower rain",
+        "weather_description_light rain",
+        "weather_description_light shower snow",
+        "weather_description_light snow",
+        "weather_description_mist",
+        "weather_description_moderate rain",
+        "weather_description_overcast clouds",
+        "weather_description_proximity shower rain",
+        "weather_description_rain and drizzle",
+        "weather_description_scattered clouds",
+        "weather_description_shower rain",
+        "weather_description_sky is clear",
+        "weather_description_smoke",
+        "weekday_1",
+        "weekday_2",
+        "weekday_3",
+        "weekday_4",
+        "weekday_5",
+        "weekday_6",
+        "month_2",
+        "month_3",
+        "month_4",
+        "month_5",
+        "month_6",
+        "month_7",
+        "month_8",
+        "month_9",
+        "month_10",
+        "month_11",
+        "month_12",
+        "hour_6",
+        "hour_7",
+        "hour_8",
+        "hour_9",
+        "hour_10",
+        "hour_11",
+        "hour_12",
+        "hour_13",
+        "hour_14",
+        "hour_15",
+        "hour_16",
+        "hour_17",
+        "hour_18",
+        "hour_19",
+        "hour_20",
+        "hour_21",
+        "hour_22",
+        "hour_23",
+        "holiday_1",
+        "progr_number",
+        "dur_s",
+        "humidity"
+    ]
+}
