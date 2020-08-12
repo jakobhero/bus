@@ -2,9 +2,10 @@ import json, requests, datetime, numpy as np, time, pickle
 from sklearn.neighbors import KDTree
 from flask_restful import Resource, Api, reqparse
 from sqlalchemy.types import String
+from statistics import mode, mean
 
 from sqlalchemy import cast
-from .models import Stops as StopsModel, StopsRoute as SRModel, GTFS_trips, GTFS_times, GTFS_stops, db
+from .models import Stops as StopsModel, StopsRoute as SRModel, GTFS_trips, GTFS_times, GTFS_stops, Weather, db
 from .config import Config
 
 
@@ -19,20 +20,50 @@ weather = None
 forecast = None
 routes = {}
 
+class TestWeather(Resource):
+    """will replace current behaviour when the prediction is not in the 48 hour forecast window of OWM."""
+    def get(self):
+        parser = reqparse.RequestParser()
+        parser.add_argument('time', type=int) 
+        frontend_params = parser.parse_args()
+        if frontend_params["time"]==None:
+            time=datetime.datetime.now().timestamp()
+        else:
+            time=frontend_params["time"]
+        dt=datetime.datetime.fromtimestamp(time)
+        weather_descriptions=[]
+        humidities=[]
+        for row in Weather.query.filter(Weather.month==dt.month,Weather.hour==dt.hour).all():
+            weather_descriptions.append(row.weather_description)
+            humidities.append(row.humidity)
+        return {
+            "weather_description":{
+                "data":weather_descriptions,
+                "mode":mode(weather_descriptions)
+            },
+            "humidity":{
+                "data":humidities,
+                "mean":round(mean(humidities))
+            }
+        }
 
 class Test(Resource):
     def get(self):
-        with open('api/debugging2/1596651176.json', 'r') as data:
+        with open('api/debugging2/1596807571.json', 'r') as data:
             directions = json.load(data)
 
-        with open('api/debugging3/1596651176.json', 'r') as data:
+        with open('api/debugging3/1596807571.json', 'r') as data:
             model_info = json.load(data)
 
         for i in range(len(model_info)):
             for j in range(len(model_info[i])):
                 leg = model_info[i][j]
+                print(f"Model info for leg ({i,j}):")
+                print(leg)
                 t_start = find_trip(
                     leg["start"]["time"], leg["start"]["id"], leg["route"], leg["direction"])
+                print(f"Start info for leg({i,j}):")
+                print(t_start)
                 if len(t_start) == 0:
                     print("Error: Couldn't find a bus with the following parameters:")
                     print(leg["start"]["time"], leg["start"]
@@ -55,8 +86,10 @@ class Test(Resource):
                 start=t_start[max(0,index-1)]
                 start["duration_p"]=prediction
                 start["dep_p"]=start["start_time"]+prediction
-
+                
                 t_stop=match_trip(start["trip_id"],leg["stop"]["id"])
+                print(f"stop info for leg ({i,j}):")
+                print(t_stop)
                 prediction=get_prediction(start["start_time"],t_stop["duration"],leg["route"],leg["direction"])
                 t_stop["duration_p"]=prediction
                 t_stop["dep_p"]=start["start_time"]+prediction
@@ -818,14 +851,13 @@ def model_input_create(temp,dur_s,weather,weekday,month,hour,feature_set):
     return [temp,dur_s]+weather_input+wd_input+month_input+hour_input
 
 api.add_resource(Directions, '/api/directions', endpoint='direction')
-api.add_resource(NearestNeighbor, '/api/nearestneighbor',
-                 endpoint='nearestneighbor')
+api.add_resource(NearestNeighbor, '/api/nearestneighbor', endpoint='nearestneighbor')
 api.add_resource(realTime, '/api/realtime', endpoint='realtime')
 api.add_resource(routeInfo, '/api/routeinfo', endpoint='routeinfo')
 api.add_resource(Stops, '/api/stops', endpoint='stops')
-
 api.add_resource(Leapcard, '/api/leapcard', endpoint='leapcard')
 
-
 api.add_resource(Test, '/test', endpoint='test')
+api.add_resource(TestWeather, '/testweather', endpoint='testweather')
+
 

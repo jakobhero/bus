@@ -54,7 +54,9 @@ weather = Table(
     Column('weather_id', SmallInteger),
     Column('weather_main', String),
     Column('weather_description', String),
-    Column('weather_icon', String)
+    Column('weather_icon', String),
+    Column('month', SmallInteger),
+    Column('hour', SmallInteger)
 )
 
 stop_route_match= Table(

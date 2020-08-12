@@ -49,4 +49,22 @@ class GTFS_times(db.Model):
     cum_dur=db.Column(db.BigInteger)
     trip=db.relationship(GTFS_trips, backref='times',lazy=True)
     stop=db.relationship(GTFS_stops, backref='times',lazy=True)
+
+class Weather(db.Model):
+    __tablename__="weather"
+    daytime=db.Column(db.BigInteger, primary_key=True,nullable=False)
+    temp=db.Column(db.FLOAT)
+    feels_like=db.Column(db.FLOAT)
+    temp_min=db.Column(db.FLOAT)
+    temp_max=db.Column(db.FLOAT)
+    pressure=db.Column(db.SmallInteger)
+    humidity=db.Column(db.SmallInteger)
+    wind_speed=db.Column(db.FLOAT)
+    wind_deg=db.Column(db.SmallInteger)
+    clouds_all=db.Column(db.SmallInteger)
+    weather_id=db.Column(db.SmallInteger)
+    weather_main=db.Column(db.String)
+    weather_description=db.Column(db.String)
+    month=db.Column(db.SmallInteger)
+    hour=db.Column(db.SmallInteger)
     
