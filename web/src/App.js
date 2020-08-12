@@ -20,6 +20,8 @@ import { findPoly } from "./components/polylines.js";
 import { getStopNames, getStopNums } from "./components/cookies";
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 
+import CookieConsent from "react-cookie-consent";
+
 const { TabPane } = Tabs;
 
 const App = () => {
@@ -183,6 +185,21 @@ const App = () => {
   return (
     <div className="App">
       <Page loader={"bar"} color={"#1b55db"} size={15}>
+        <CookieConsent
+          location="top"
+          buttonText="Accept"
+          cookieName="acceptCookies"
+          style={{ background: "#2B373B" }}
+          buttonStyle={{
+            color: "#4e503b",
+            fontSize: "13px",
+            fontWeight: "bold",
+          }}
+          overlay
+          sameSite={"strict"}
+        >
+          This website uses cookies to enhance the user experience.{" "}
+        </CookieConsent>
         <SearchForm
           handleSubmitApp={handleSubmitApp}
           searchValD={searchValD}
