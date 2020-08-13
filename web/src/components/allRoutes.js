@@ -5,15 +5,28 @@ import ReactHtmlParser from "react-html-parser";
 
 import DirectionsBusIcon from "@material-ui/icons/DirectionsBus";
 import DirectionsWalkIcon from "@material-ui/icons/DirectionsWalk";
+
 import TramIcon from "@material-ui/icons/Tram";
-import { ClockCircleOutlined } from "@ant-design/icons";
+import { ExpandAltOutlined, ClockCircleOutlined } from "@ant-design/icons";
 import { Divider } from "antd";
 
 const AllRoutes = ({ tripTimes, setDirections, index, setIndex }) => {
   const [showMore, setShowMore] = useState(false);
   return (
     <div>
-      {tripTimes.length < 1 && (
+      {tripTimes === null && (
+        <div>
+          <h2>No Results Found</h2>
+          <img
+            src="./bus.svg"
+            alt="bus"
+            width="10%"
+            height="10%"
+            style={{ marginRight: "10px" }}
+          />
+        </div>
+      )}
+      {tripTimes !== null && tripTimes.length < 1 && (
         <div>
           <h2>Choose a source and destination</h2>
           <img
@@ -27,7 +40,8 @@ const AllRoutes = ({ tripTimes, setDirections, index, setIndex }) => {
       )}
       <Row>
         <Col flex={1}>
-          {tripTimes.length > 0 &&
+          {tripTimes !== null &&
+            tripTimes.length > 0 &&
             tripTimes.map((dueTime, i) => (
               // make cards for each alternative route
               <Route
@@ -41,7 +55,7 @@ const AllRoutes = ({ tripTimes, setDirections, index, setIndex }) => {
             ))}
           <br />
         </Col>
-        {tripTimes.length > 0 && (
+        {tripTimes !== null && tripTimes.length > 0 && (
           <Col flex={4}>
             <Timeline mode={"left"}>
               {tripTimes[index].steps.map((step, i) => (
@@ -60,7 +74,7 @@ const AllRoutes = ({ tripTimes, setDirections, index, setIndex }) => {
                       : "green"
                   }
                 >
-                  <p>
+                  <div>
                     {
                       // first show the start address
                       i < 1 ? tripTimes[index].start.address : ""
@@ -80,8 +94,8 @@ const AllRoutes = ({ tripTimes, setDirections, index, setIndex }) => {
                         ? tripTimes[index].steps[i - 1].transit.arr.name
                         : ""
                     }
-                  </p>
-                  <p>
+                  </div>
+                  <div>
                     {/* The inside */}
                     {tripTimes[index].transit_index.includes(i) ? (
                       step.transit.type === "BUS" ? (
@@ -96,9 +110,10 @@ const AllRoutes = ({ tripTimes, setDirections, index, setIndex }) => {
                       step.transit.route
                     ) : (
                       <div>
-                        <DirectionsWalkIcon
+                        <DirectionsWalkIcon style={{ color: "blue" }} />
+                        <ExpandAltOutlined
+                          style={{ fontSize: "25px", marginLeft: "30px" }}
                           onClick={() => setShowMore(!showMore)}
-                          style={{ color: "blue" }}
                         />
                         {showMore &&
                           step.directions.map((direction) => (
@@ -109,7 +124,7 @@ const AllRoutes = ({ tripTimes, setDirections, index, setIndex }) => {
                           ))}
                       </div>
                     )}
-                  </p>
+                  </div>
                 </Timeline.Item>
               ))}
               {/* Destination timeline element */}
