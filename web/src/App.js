@@ -18,7 +18,9 @@ import DirectionsBusIcon from "@material-ui/icons/DirectionsBus";
 import Tooltip from "@material-ui/core/Tooltip";
 import { findPoly } from "./components/polylines.js";
 import { getStopNames, getStopNums } from "./components/cookies";
-import { TwitterTimelineEmbed } from "react-twitter-embed";
+// import { TwitterTimelineEmbed } from "react-twitter-embed";
+
+import CookieConsent from "react-cookie-consent";
 
 const { TabPane } = Tabs;
 
@@ -183,6 +185,21 @@ const App = () => {
   return (
     <div className="App">
       <Page loader={"bar"} color={"#1b55db"} size={15}>
+        <CookieConsent
+          location="top"
+          buttonText="Accept"
+          cookieName="acceptCookies"
+          style={{ background: "#2B373B" }}
+          buttonStyle={{
+            color: "#4e503b",
+            fontSize: "13px",
+            fontWeight: "bold",
+          }}
+          overlay
+          sameSite={"strict"}
+        >
+          This website uses cookies to enhance the user experience.{" "}
+        </CookieConsent>
         <SearchForm
           handleSubmitApp={handleSubmitApp}
           searchValD={searchValD}
@@ -262,7 +279,7 @@ const App = () => {
               setRealTime={setRealTime}
             ></RealTimeInfo>
           </TabPane>
-          <TabPane tab="News" key="news">
+          {/* <TabPane tab="News" key="news">
             <div className="news">
               <TwitterTimelineEmbed
                 sourceType="profile"
@@ -270,7 +287,7 @@ const App = () => {
                 options={{ height: "30vw" }}
               />
             </div>
-          </TabPane>
+          </TabPane> */}
         </Tabs>
       </Page>
     </div>
