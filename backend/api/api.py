@@ -368,6 +368,8 @@ class Directions(Resource):
 
             for j in range(len(model_input[i])):
                 leg = model_input[i][j]
+                if leg==None:
+                    continue
                 t_start = find_trip(
                     leg["start"]["time"], leg["start"]["id"], leg["route"], leg["direction"])
                 if len(t_start) == 0:
@@ -414,9 +416,10 @@ class Directions(Resource):
                 #check if there are more dublin bus journeys on this connection
                 if j<(len(model_input[i])-1):
                     #add the delta of predicted arrival and scheduled arrival to the start of the next bus journey
-                    p_delta=t_stop["dep_p"]-t_stop["dep_time"]
-                    model_input[i][j+1]["start"]["time"]+=p_delta
-                    model_input[i][j+1]["stop"]["time"]+=p_delta
+                    if model_input[i][j+1]!=None:
+                        p_delta=t_stop["dep_p"]-t_stop["dep_time"]
+                        model_input[i][j+1]["start"]["time"]+=p_delta
+                        model_input[i][j+1]["stop"]["time"]+=p_delta
                 #if the current is the last journey, modify the final time
                 else:
                     later_travel = 0  # time it takes to get from final bus stop to destination
