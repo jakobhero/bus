@@ -140,10 +140,13 @@ const App = () => {
             Math.round(time / 1000)
         )
         .then((res) => {
+          console.log(res);
           if (res.data.status === "OK") {
             setTripTimes(res.data.connections);
             setDirections(findPoly(res.data.connections[0]));
             setBusIndex(res.data.connections[0].transit_index);
+          } else {
+            setTripTimes(null);
           }
         })
         .catch(console.log);
@@ -230,7 +233,7 @@ const App = () => {
           </TabPane>
 
           <TabPane tab="Connections" key="connections">
-            {tripTimes.length > 0 && (
+            {tripTimes !== null && tripTimes.length > 0 && (
               <Tooltip title="Sort by arrival time">
                 <Button style={{ margin: 20 }} type="submit" onClick={sortTime}>
                   <AccessTimeIcon></AccessTimeIcon>
@@ -238,7 +241,7 @@ const App = () => {
                 </Button>
               </Tooltip>
             )}
-            {tripTimes.length > 0 && (
+            {tripTimes !== null && tripTimes.length > 0 && (
               <Tooltip title="Sort by bus changes">
                 <Button
                   style={{ margin: 20 }}
