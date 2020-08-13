@@ -1,0 +1,549 @@
+{
+        "connections": [
+                {
+                        "db_index": [
+                                1,
+                                2
+                        ],
+                        "distance": 6825,
+                        "duration": 2298,
+                        "end": {
+                                "address": "Home Farm Road, Drumcondra, Dublin, Co. Dublin, Ireland",
+                                "location": {
+                                        "lat": 53.3755477,
+                                        "lng": -6.2618651
+                                },
+                                "time": 1597329016
+                        },
+                        "start": {
+                                "address": "St Luke's Avenue, stop 2312, The Liberties, Dublin 8, Co. Dublin, Ireland",
+                                "location": {
+                                        "lat": 53.3388789,
+                                        "lng": -6.275484199999999
+                                },
+                                "time": 1597326718
+                        },
+                        "steps": [
+                                {
+                                        "directions": [
+                                                null
+                                        ],
+                                        "distance": 28,
+                                        "duration": 20,
+                                        "html_instructions": "Walk to Newmarket Street, stop 5099",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "_wpdIvthe@KrA"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3388789,
+                                                "lng": -6.275484199999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.3389424,
+                                                "lng": -6.275900699999999
+                                        }
+                                },
+                                {
+                                        "distance": 914,
+                                        "duration": 205,
+                                        "html_instructions": "Bus towards Clare Hall",
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "uwpdIhwhe@RA?OMyAMg@MYu@}@x@iHLo@Lw@yAQQCc@Mg@SUKOEMCKAW@{@FG@C?K@M?e@@eAGg@?c@?M?[Ae@ASCA?MEs@e@s@c@ICMIC_@IkAGo@?E?SKo@E[EQGQMWKKIGIEKGUICKAIUiBKD"
+                                        ],
+                                        "start": {
+                                                "lat": 53.33899299999999,
+                                                "lng": -6.2758939
+                                        },
+                                        "stop": {
+                                                "lat": 53.3438036,
+                                                "lng": -6.269414299999999
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Lord Edward Street, stop 2002",
+                                                        "time": 1597326943
+                                                },
+                                                "dep": {
+                                                        "name": "Newmarket Street, stop 5099",
+                                                        "time": 1597326738
+                                                },
+                                                "headsign": "Clare Hall",
+                                                "operator": "Dublin Bus",
+                                                "route": "27",
+                                                "source": "GOOGLE",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "distance": 5545,
+                                        "duration": 1451,
+                                        "html_instructions": "Bus towards Harristown",
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "wuqdIxnge@JE]wC]}CEe@IsAEoACgAA_@?U?s@?yB?eB?eA?g@C{AC{AAiAAaAASI]Ak@AeACe@?MCe@ACGs@Cc@?EKcBAo@?[ESGc@AGGSCIEOGKGGGEa@SSGO?e@Cy@?[@M?w@Ay@?y@C]CU?KBA@IBe@R[LMDMDSF}Br@IB]JKFI@mA`@SFkC|@{Af@kC|@u@VmA`@aA\\UHm@R]NOFH^~@pCPZR\\R\\]r@U`@iArBsArBa@n@_BnCu@tAEFKTCFOj@k@~BmAqAII_@_@OOYWw@q@m@e@a@]s@g@MKw@u@EC{@y@o@m@a@a@MMG?CAA?EEOOk@i@q@{@SWY_@KOg@u@g@q@EEk@s@II[_@]_@gAeAeAcAKImAkA_@a@{@y@YWaA_Am@g@IGOKKGKECCMIII_@[GIc@]o@m@_@[aA{@KMIGKIIKAA_A}@[[i@i@IKCCACGQIGQKQMOMWSyAiAy@m@i@a@k@]oAu@IEA@PHEEo@[WMYMYIQCA?g@I]CE?_@Cs@A_@@OAQAKEQEECy@[GCWIGCSIO@a@Ia@QOI{@e@w@a@]Q}@g@GE[QYMUMc@Uk@YQKSKMGg@YSMIGAAEIAAi@]]SSKq@c@]SECk@a@_Ag@QIKGYMSKUI]QMGi@W{@][Qw@e@WQ[UYSG?A?AAGEg@_@_@Ww@m@WQWxAKx@EVM|@s@bFO~@m@rFEVOzA[rCKbA[xCc@bEO~AS~BSfBOpAGt@Kr@WrCSvBEA"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3438036,
+                                                "lng": -6.269414299999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.3780271,
+                                                "lng": -6.261592100000001
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Lambay Road, stop 89",
+                                                        "time": 1597328784
+                                                },
+                                                "dep": {
+                                                        "name": "Lord Edward Street, stop 2002",
+                                                        "time": 1597327333
+                                                },
+                                                "headsign": "Harristown",
+                                                "operator": "Dublin Bus",
+                                                "route": "13",
+                                                "source": "GOOGLE",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "directions": [
+                                                "Head <b>east</b> on <b>Griffith Ave</b>/<wbr/><b>R102</b> toward <b>Lambay Rd</b>",
+                                                "Turn <b>right</b> onto <b>Lambay Rd</b>",
+                                                "Turn <b>left</b> onto <b>Home Farm Rd</b>"
+                                        ],
+                                        "distance": 338,
+                                        "duration": 232,
+                                        "html_instructions": "Walk to Home Farm Road, Drumcondra, Dublin, Co. Dublin, Ireland",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "okxdI~}ee@RwB",
+                                                "{jxdIfzee@bM`G",
+                                                "w|wdIhbfe@PsA"
+                                        ],
+                                        "start": {
+                                                "lat": 53.37800259999999,
+                                                "lng": -6.2616032
+                                        },
+                                        "stop": {
+                                                "lat": 53.3755477,
+                                                "lng": -6.2618651
+                                        }
+                                }
+                        ],
+                        "transit_index": [
+                                1,
+                                2
+                        ]
+                },
+                {
+                        "db_index": [
+                                1
+                        ],
+                        "distance": 6728,
+                        "duration": 2325,
+                        "end": {
+                                "address": "Home Farm Road, Drumcondra, Dublin, Co. Dublin, Ireland",
+                                "location": {
+                                        "lat": 53.3755477,
+                                        "lng": -6.2618651
+                                },
+                                "time": 1597329016
+                        },
+                        "start": {
+                                "address": "St Luke's Avenue, stop 2312, The Liberties, Dublin 8, Co. Dublin, Ireland",
+                                "location": {
+                                        "lat": 53.3389387,
+                                        "lng": -6.2755102
+                                },
+                                "time": 1597326691
+                        },
+                        "steps": [
+                                {
+                                        "directions": [
+                                                "Head <b>east</b> on <b>St Luke's Ave</b>/<wbr/><b>R110</b> toward <b>The Coombe</b>",
+                                                "Turn <b>right</b> onto <b>The Coombe</b>/<wbr/><b>R110</b>",
+                                                "Turn <b>left</b> onto <b>Patrick St</b>/<wbr/><b>R137</b><div style=\"font-size:0.9em\">Continue to follow R137</div>",
+                                                "Turn <b>right</b> onto <b>Christchurch Pl</b>/<wbr/><b>R137</b><div style=\"font-size:0.9em\">Continue to follow R137</div>",
+                                                "Turn <b>right</b> onto <b>Lord Edward St</b>/<wbr/><b>R137</b><div style=\"font-size:0.9em\">Destination will be on the left</div>"
+                                        ],
+                                        "distance": 845,
+                                        "duration": 642,
+                                        "html_instructions": "Walk to Lord Edward Street, stop 2002",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "kwpdI|the@AMCQEOEOEMMUYYAAYY",
+                                                "gzpdIbphe@XgCHk@Fu@Ho@BODWCYAS?MCMGS",
+                                                "yxpdIbche@UCKA[Gc@Mg@SUKOEMCKAW@{@FG@C?K@M?e@@eAGg@?c@?M?[Ae@ASCOEs@e@s@c@IC",
+                                                "{oqdIf~ge@@K?[MeAG]Ia@EQKo@E[EQGQMWKKIGIEKGUI",
+                                                "otqdIrrge@EOUoB"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3389387,
+                                                "lng": -6.2755102
+                                        },
+                                        "stop": {
+                                                "lat": 53.3437389,
+                                                "lng": -6.269377
+                                        }
+                                },
+                                {
+                                        "distance": 5545,
+                                        "duration": 1451,
+                                        "html_instructions": "Bus towards Harristown",
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "wuqdIxnge@JE]wC]}CEe@IsAEoACgAA_@?U?s@?yB?eB?eA?g@C{AC{AAiAAaAASI]Ak@AeACe@?MCe@ACGs@Cc@?EKcBAo@?[ESGc@AGGSCIEOGKGGGEa@SSGO?e@Cy@?[@M?w@Ay@?y@C]CU?KBA@IBe@R[LMDMDSF}Br@IB]JKFI@mA`@SFkC|@{Af@kC|@u@VmA`@aA\\UHm@R]NOFH^~@pCPZR\\R\\]r@U`@iArBsArBa@n@_BnCu@tAEFKTCFOj@k@~BmAqAII_@_@OOYWw@q@m@e@a@]s@g@MKw@u@EC{@y@o@m@a@a@MMG?CAA?EEOOk@i@q@{@SWY_@KOg@u@g@q@EEk@s@II[_@]_@gAeAeAcAKImAkA_@a@{@y@YWaA_Am@g@IGOKKGKECCMIII_@[GIc@]o@m@_@[aA{@KMIGKIIKAA_A}@[[i@i@IKCCACGQIGQKQMOMWSyAiAy@m@i@a@k@]oAu@IEA@PHEEo@[WMYMYIQCA?g@I]CE?_@Cs@A_@@OAQAKEQEECy@[GCWIGCSIO@a@Ia@QOI{@e@w@a@]Q}@g@GE[QYMUMc@Uk@YQKSKMGg@YSMIGAAEIAAi@]]SSKq@c@]SECk@a@_Ag@QIKGYMSKUI]QMGi@W{@][Qw@e@WQ[UYSG?A?AAGEg@_@_@Ww@m@WQWxAKx@EVM|@s@bFO~@m@rFEVOzA[rCKbA[xCc@bEO~AS~BSfBOpAGt@Kr@WrCSvBEA"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3438036,
+                                                "lng": -6.269414299999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.3780271,
+                                                "lng": -6.261592100000001
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Lambay Road, stop 89",
+                                                        "time": 1597328784
+                                                },
+                                                "dep": {
+                                                        "name": "Lord Edward Street, stop 2002",
+                                                        "time": 1597327333
+                                                },
+                                                "headsign": "Harristown",
+                                                "operator": "Dublin Bus",
+                                                "route": "13",
+                                                "source": "GOOGLE",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "directions": [
+                                                "Head <b>east</b> on <b>Griffith Ave</b>/<wbr/><b>R102</b> toward <b>Lambay Rd</b>",
+                                                "Turn <b>right</b> onto <b>Lambay Rd</b>",
+                                                "Turn <b>left</b> onto <b>Home Farm Rd</b>"
+                                        ],
+                                        "distance": 338,
+                                        "duration": 232,
+                                        "html_instructions": "Walk to Home Farm Road, Drumcondra, Dublin, Co. Dublin, Ireland",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "okxdI~}ee@RwB",
+                                                "{jxdIfzee@bM`G",
+                                                "w|wdIhbfe@PsA"
+                                        ],
+                                        "start": {
+                                                "lat": 53.37800259999999,
+                                                "lng": -6.2616032
+                                        },
+                                        "stop": {
+                                                "lat": 53.3755477,
+                                                "lng": -6.2618651
+                                        }
+                                }
+                        ],
+                        "transit_index": [
+                                1
+                        ]
+                },
+                {
+                        "db_index": [
+                                1,
+                                3
+                        ],
+                        "distance": 6807,
+                        "duration": 2287,
+                        "end": {
+                                "address": "Home Farm Road, Drumcondra, Dublin, Co. Dublin, Ireland",
+                                "location": {
+                                        "lat": 53.3755477,
+                                        "lng": -6.2618651
+                                },
+                                "time": 1597329203
+                        },
+                        "start": {
+                                "address": "St Luke's Avenue, stop 2312, The Liberties, Dublin 8, Co. Dublin, Ireland",
+                                "location": {
+                                        "lat": 53.3388789,
+                                        "lng": -6.275484199999999
+                                },
+                                "time": 1597326916
+                        },
+                        "steps": [
+                                {
+                                        "directions": [
+                                                null
+                                        ],
+                                        "distance": 28,
+                                        "duration": 20,
+                                        "html_instructions": "Walk to Newmarket Street, stop 5099",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "_wpdIvthe@KrA"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3388789,
+                                                "lng": -6.275484199999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.3389424,
+                                                "lng": -6.275900699999999
+                                        }
+                                },
+                                {
+                                        "distance": 1352,
+                                        "duration": 346,
+                                        "html_instructions": "Bus towards Ringsend Road",
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "uwpdIhwhe@RA?OMyAMg@MYu@}@x@iHLo@Lw@yAQQCc@Mg@SUKOEMCKAW@{@FG@C?K@M?e@@eAGg@?c@?M?[Ae@ASCA?MEs@e@s@c@ICMIC_@IkAGo@?E?SKo@E[EQGQMWKKIGIEKGUICKAIUiB]wC]}CEe@IsAEoACgAA_@?U?s@?yB?eB?eA?g@C{AC{AAiA?QM@"
+                                        ],
+                                        "start": {
+                                                "lat": 53.33899299999999,
+                                                "lng": -6.2758939
+                                        },
+                                        "stop": {
+                                                "lat": 53.3443047,
+                                                "lng": -6.2628894
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Temple Bar, Central Bank",
+                                                        "time": 1597327282
+                                                },
+                                                "dep": {
+                                                        "name": "Newmarket Street, stop 5099",
+                                                        "time": 1597326936
+                                                },
+                                                "headsign": "Ringsend Road",
+                                                "operator": "Dublin Bus",
+                                                "route": "77a",
+                                                "source": "GOOGLE",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "directions": [
+                                                "Head <b>east</b> on <b>Dame St</b>/<wbr/><b>R137</b> toward <b>Trinity St</b><div style=\"font-size:0.9em\">Continue to follow R137</div><div style=\"font-size:0.9em\">Parts of this road are closed Mon\u2013Fri 7:00 AM \u2013 7:00 PM</div>",
+                                                "Continue onto <b>Westmoreland St</b><div style=\"font-size:0.9em\">May be closed at certain times or days</div><div style=\"font-size:0.9em\">Destination will be on the left</div>"
+                                        ],
+                                        "distance": 348,
+                                        "duration": 253,
+                                        "html_instructions": "Walk to Dublin City South, Westmoreland Street",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "mxqdIdffe@Au@ASI]Ak@AeACe@?MCe@Iw@Cc@?EKcBAo@?[ESGg@IWCIEOGKGGGEa@SSGO?e@C",
+                                                "i_rdIvnee@y@?"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3442331,
+                                                "lng": -6.262905099999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.3456243,
+                                                "lng": -6.2591626
+                                        }
+                                },
+                                {
+                                        "distance": 4819,
+                                        "duration": 1151,
+                                        "html_instructions": "Bus towards Ikea",
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "cardIpoee@?Y[@M?w@Ay@?y@C]CU?KBA@IBe@R[LMDMDSF}Br@IB]JKFI@mA`@SFkC|@{Af@kC|@u@VmA`@aA\\UHm@R]NOFH^~@pCPZR\\R\\]r@U`@iArBaAzAs@fA_BnCu@tAEFKTCFOj@k@~Ba@vAI`@ETCLAHCTC^CRe@|Bq@lBANMbAEh@@@e@lECr@@n@Hv@\\lAV\\\\Rh@LVd@?@Pp@@~@wAd@e@BiHX?L?b@jHi@?AqAHI?K@aCTg@DG@E?CCAAAEEa@q@?G?MAU?EAUAaCUOAe@ESCYEQC]Ia@Mo@WOEMGQKg@WWMMGGCIEIAICSAcAAc@@uADy@Bg@@Y?_@@_BBY?Q?EAIAKCWEQG]M]Mc@QGC{@_@]MIC[Kq@Wk@USEMAIAA?C?]Ec@C]AOAKAWCm@?UAc@@MBQFMFKDKDOFYLe@T{@n@c@\\aAr@MCECCGISJiBJqA@O?CD[PmABWJg@QIeBu@iAq@SKEA[Qe@[g@]CAcAs@aAe@UMUKo@a@MKKKYYOQGISk@S]S[QW}BuCmAaBSW]a@CC[_@_@_@IGKGMC[IO?I@m@?M?MASAWCa@EWCsA]YG{EeBgA]AP"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3456223,
+                                                "lng": -6.259291999999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.3756588,
+                                                "lng": -6.2649953
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Na Fianna GAA Club, stop 150",
+                                                        "time": 1597329009
+                                                },
+                                                "dep": {
+                                                        "name": "Dublin City South, Westmoreland Street",
+                                                        "time": 1597327858
+                                                },
+                                                "headsign": "Ikea",
+                                                "operator": "Dublin Bus",
+                                                "route": "155",
+                                                "source": "GOOGLE",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "directions": [
+                                                "Head <b>north</b> on <b>St Mobhi Rd</b>/<wbr/><b>R108</b> toward <b>Home Farm Rd</b>",
+                                                "Turn <b>right</b> onto <b>Home Farm Rd</b>"
+                                        ],
+                                        "distance": 260,
+                                        "duration": 194,
+                                        "html_instructions": "Walk to Home Farm Road, Drumcondra, Dublin, Co. Dublin, Ireland",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "y|wdItrfe@GC{@Ye@O",
+                                                "c`xdIfqfe@`@{ChAaIPsA"
+                                        ],
+                                        "start": {
+                                                "lat": 53.37564589999999,
+                                                "lng": -6.264911400000001
+                                        },
+                                        "stop": {
+                                                "lat": 53.3755477,
+                                                "lng": -6.2618651
+                                        }
+                                }
+                        ],
+                        "transit_index": [
+                                1,
+                                3
+                        ]
+                },
+                {
+                        "db_index": [
+                                0,
+                                2
+                        ],
+                        "distance": 6750,
+                        "duration": 2328,
+                        "end": {
+                                "address": "Home Farm Road, Drumcondra, Dublin, Co. Dublin, Ireland",
+                                "location": {
+                                        "lat": 53.3755477,
+                                        "lng": -6.2618651
+                                },
+                                "time": 1597329772
+                        },
+                        "start": {
+                                "address": "St Luke's Avenue, stop 2312, The Liberties, Dublin 8, Co. Dublin, Ireland",
+                                "location": {
+                                        "lat": 53.3388807,
+                                        "lng": -6.275411699999999
+                                },
+                                "time": 1597327444
+                        },
+                        "steps": [
+                                {
+                                        "distance": 1329,
+                                        "duration": 288,
+                                        "html_instructions": "Bus towards Hawkins Street",
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "_wpdIhthe@oBwALs@x@iHLo@Lw@yAQQCc@Mg@SUKOEMCKAW@{@FG@C?K@M?e@@eAGg@?c@?M?[Ae@ASCA?MEs@e@s@c@ICMIC_@IkAGo@?E?SKo@E[EQGQMWKKIGIEKGUICKAIs@aGIy@ScBEe@IsAEoACgAA_@?U?s@?yB?eB?eA?g@C{AC{AAiA?QM@"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3388807,
+                                                "lng": -6.275411699999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.3443047,
+                                                "lng": -6.2628894
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Temple Bar, Central Bank",
+                                                        "time": 1597327732
+                                                },
+                                                "dep": {
+                                                        "name": "Dean Street, stop 7413",
+                                                        "time": 1597327444
+                                                },
+                                                "headsign": "Hawkins Street",
+                                                "operator": "Dublin Bus",
+                                                "route": "150",
+                                                "source": "GOOGLE",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "directions": [
+                                                "Head <b>east</b> on <b>Dame St</b>/<wbr/><b>R137</b> toward <b>Trinity St</b><div style=\"font-size:0.9em\">Continue to follow R137</div><div style=\"font-size:0.9em\">Destination will be on the left</div>"
+                                        ],
+                                        "distance": 105,
+                                        "duration": 78,
+                                        "html_instructions": "Walk to College Green, stop 1359",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "mxqdIdffe@Au@ASI]Ak@AeACe@?MCe@AA"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3442331,
+                                                "lng": -6.262905099999999
+                                        },
+                                        "stop": {
+                                                "lat": 53.3443651,
+                                                "lng": -6.2613635
+                                        }
+                                },
+                                {
+                                        "distance": 5056,
+                                        "duration": 1307,
+                                        "html_instructions": "Bus towards Charlestown",
+                                        "mode": "TRANSIT",
+                                        "polyline": [
+                                                "oyqdIp|ee@DCGs@Cc@?EKcBAo@?[ESGc@AGGSCIEOGKGGGEa@SSGO?e@Cy@?[@M?w@Ay@?y@C]CU?KBA@IBe@R[LMDMDSF}Br@IB]JKFI@mA`@SFkC|@{Af@kC|@u@VmA`@aA\\UHm@R]NOFH^~@pCPZR\\R\\]r@U`@iArB]f@wAzB_BnCu@tAEFKTCFOj@k@~Ba@vAI`@ETCLAHCTC^CRe@|Bq@lBANMbAEh@@@e@lECr@@n@Hv@\\lAV\\\\Rh@LVd@?@Pp@@~@wAd@e@BiHX?L?b@jHi@?AqAHI?K@aCTg@DG@E?CCAAAEEa@q@?G?MAU?EAUAaCUOAe@ESCYEQC]Ia@Mo@WOEMGQKg@WWMMGGCIEIAICSAcAAc@@uADy@Bg@@Y?_@@_BBY?Q?EAIAKCWEQG]M]Mc@QGC{@_@]MIC[Kq@Wk@USEMAIAA?C?]Ec@C]AOAKAWCm@?UAc@@MBQFMFKDKDOFYLe@T{@n@c@\\aAr@MCECCGISJiBJqA@O?CD[PmABWJg@QIeBu@iAq@SKEA[Qe@[g@]CAcAs@aAe@UMUKo@a@MKKKYYOQGISk@S]S[QW}BuCmAaBSW]a@CC[_@_@_@IGKGMC[IO?I@m@?M?MASAWCa@EWCsA]YG{EeBgA]AP"
+                                        ],
+                                        "start": {
+                                                "lat": 53.3443994,
+                                                "lng": -6.2613686
+                                        },
+                                        "stop": {
+                                                "lat": 53.3756588,
+                                                "lng": -6.2649953
+                                        },
+                                        "transit": {
+                                                "arr": {
+                                                        "name": "Na Fianna GAA Club, stop 150",
+                                                        "time": 1597329578
+                                                },
+                                                "dep": {
+                                                        "name": "College Green, stop 1359",
+                                                        "time": 1597328271
+                                                },
+                                                "headsign": "Charlestown",
+                                                "operator": "Dublin Bus",
+                                                "route": "9",
+                                                "source": "GOOGLE",
+                                                "type": "BUS"
+                                        }
+                                },
+                                {
+                                        "directions": [
+                                                "Head <b>north</b> on <b>St Mobhi Rd</b>/<wbr/><b>R108</b> toward <b>Home Farm Rd</b>",
+                                                "Turn <b>right</b> onto <b>Home Farm Rd</b>"
+                                        ],
+                                        "distance": 260,
+                                        "duration": 194,
+                                        "html_instructions": "Walk to Home Farm Road, Drumcondra, Dublin, Co. Dublin, Ireland",
+                                        "mode": "WALKING",
+                                        "polyline": [
+                                                "y|wdItrfe@GC{@Ye@O",
+                                                "c`xdIfqfe@`@{ChAaIPsA"
+                                        ],
+                                        "start": {
+                                                "lat": 53.37564589999999,
+                                                "lng": -6.264911400000001
+                                        },
+                                        "stop": {
+                                                "lat": 53.3755477,
+                                                "lng": -6.2618651
+                                        }
+                                }
+                        ],
+                        "transit_index": [
+                                0,
+                                2
+                        ]
+                }
+        ],
+        "status": "OK"
+}
