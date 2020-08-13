@@ -353,6 +353,9 @@ class Directions(Resource):
             json.dump(model_input, outfile, sort_keys=True, indent=8)
 
         for i in range(len(model_input)):
+            #if no model was matched, move on to next prediction
+            if model_input[i]==[None]:
+                continue
             connection = res["connections"][i]
             # if there is no dublin bus ride on the connection, move along to next connection
             if len(connection["db_index"]) == 0:
@@ -409,7 +412,7 @@ class Directions(Resource):
                     connection["start"]["time"]=start["dep_p"]-prior_travel
                 
                 #check if there are more dublin bus journeys on this connection
-                if j<len(model_input[i])-1:
+                if j<(len(model_input[i])-1):
                     #add the delta of predicted arrival and scheduled arrival to the start of the next bus journey
                     p_delta=t_stop["dep_p"]-t_stop["dep_time"]
                     model_input[i][j+1]["start"]["time"]+=p_delta
@@ -724,7 +727,6 @@ def get_prediction(datetimestamp, duration, route_id, direction, progr_number):
     #predict the actual duration of the trip
     input_df=pd.DataFrame(model_input).T
     input_df.columns=feature_set
-    input_df.to_csv("test.csv")
     prediction=model.predict(input_df)
     return round(prediction[0])       
 
