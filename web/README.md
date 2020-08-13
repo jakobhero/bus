@@ -79,5 +79,5 @@ To run this project, install it locally using npm:
 
 ## Demo
 
-<img src="/Demo/demo.gif" alt="Demo Gif"
+<img src="./Demo/demo.gif" alt="Demo Gif"
 	title="Demo"/>
