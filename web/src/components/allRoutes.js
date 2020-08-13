@@ -5,8 +5,9 @@ import ReactHtmlParser from "react-html-parser";
 
 import DirectionsBusIcon from "@material-ui/icons/DirectionsBus";
 import DirectionsWalkIcon from "@material-ui/icons/DirectionsWalk";
+
 import TramIcon from "@material-ui/icons/Tram";
-import { ClockCircleOutlined } from "@ant-design/icons";
+import { ExpandAltOutlined, ClockCircleOutlined } from "@ant-design/icons";
 import { Divider } from "antd";
 
 const AllRoutes = ({ tripTimes, setDirections, index, setIndex }) => {
@@ -96,9 +97,10 @@ const AllRoutes = ({ tripTimes, setDirections, index, setIndex }) => {
                       step.transit.route
                     ) : (
                       <div>
-                        <DirectionsWalkIcon
+                        <DirectionsWalkIcon style={{ color: "blue" }} />
+                        <ExpandAltOutlined
+                          style={{ fontSize: "25px", marginLeft: "30px" }}
                           onClick={() => setShowMore(!showMore)}
-                          style={{ color: "blue" }}
                         />
                         {showMore &&
                           step.directions.map((direction) => (
