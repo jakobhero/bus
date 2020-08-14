@@ -368,71 +368,74 @@ class Directions(Resource):
                 model_input[i][0]["start"]["time"] = params["departure_time"]+prior_travel
 
             for j in range(len(model_input[i])):
-                leg = model_input[i][j]
-                if leg==None:
-                    continue
-                t_start = find_trip(
-                    leg["start"]["time"], leg["start"]["id"], leg["route"], leg["direction"])
-                print(f"Logs for Bus journey{i,j}.")
-                print("Suitable start trips according to the schedule are:")
-                print(t_start)
-                if len(t_start) == 0:
-                    print("Error: Couldn't find a bus with the following parameters:")
-                    print(leg["start"]["time"], leg["start"]
-                          ["id"], leg["route"], leg["direction"])
-                    break
-                index = 0
-                midnight = datetime.datetime.fromtimestamp(leg["start"]["time"]).replace(
-                    hour=0, minute=0, second=0, microsecond=0)
-                # find the latest bus that doesn't depart prior to our set time
-                while(True):
-                    curr = t_start[index]
-                    prediction = get_prediction(int(midnight.timestamp())+curr["start_time"],curr["duration"], curr["route_id"], curr["direction"], curr["progr_number"])
-                    if int(midnight.timestamp())+curr["start_time"]+prediction < leg["start"]["time"]:
+                try: #if the handling of unforeseen data throws an error, skip this bus ride and move on to next.
+                    leg = model_input[i][j]
+                    if leg==None:
+                        continue
+                    t_start = find_trip(
+                        leg["start"]["time"], leg["start"]["id"], leg["route"], leg["direction"])
+                    print(f"Logs for Bus journey{i,j}.")
+                    print("Suitable start trips according to the schedule are:")
+                    print(t_start)
+                    if len(t_start) == 0:
+                        print("Error: Couldn't find a bus with the following parameters:")
+                        print(leg["start"]["time"], leg["start"]
+                            ["id"], leg["route"], leg["direction"])
                         break
-                    index += 1
-                    if index == len(t_start):
-                        break
-                print(f"The index of the bus that fits the start time according to our prediction is: {max(0,index-1)}.")
-                start=t_start[max(0,index-1)]
-                start["duration_p"]=prediction
-                print("The matched dictionary is:")
-                print(start)
-                start["dep_p"]=start["start_time"]+prediction
-                t_stop=match_trip(start["trip_id"],leg["stop"]["id"])
-                prediction=get_prediction(int(midnight.timestamp())+start["start_time"],t_stop["duration"],leg["route"],leg["direction"], t_stop["progr_number"])
-                t_stop["duration_p"]=prediction
-                t_stop["dep_p"]=start["start_time"]+prediction
-                
-                #correct the values of the results of the directions parser
-                bus_travel=connection["steps"][connection["db_index"][j]]
-                bus_travel["duration"]=t_stop["duration_p"]-start["duration_p"]
-                bus_travel["transit"]["arr"]["time"]=int(midnight.timestamp())+t_stop["dep_p"]
-                bus_travel["transit"]["dep"]["time"]=int(midnight.timestamp())+start["dep_p"]
-                bus_travel["transit"]["source"]="TFI HOOLIGANS"
-                bus_travel["transit"]["arr"]["delta"]=t_stop["dep_p"]-t_stop["dep_time"]
-                bus_travel["transit"]["dep"]["delta"]=start["dep_p"]-start["dep_time"]
+                    index = 0
+                    midnight = datetime.datetime.fromtimestamp(leg["start"]["time"]).replace(
+                        hour=0, minute=0, second=0, microsecond=0)
+                    # find the latest bus that doesn't depart prior to our set time
+                    while(True):
+                        curr = t_start[index]
+                        prediction = get_prediction(int(midnight.timestamp())+curr["start_time"],curr["duration"], curr["route_id"], curr["direction"], curr["progr_number"])
+                        if int(midnight.timestamp())+curr["start_time"]+prediction < leg["start"]["time"]:
+                            break
+                        index += 1
+                        if index == len(t_start):
+                            break
+                    print(f"The index of the bus that fits the start time according to our prediction is: {max(0,index-1)}.")
+                    start=t_start[max(0,index-1)]
+                    start["duration_p"]=prediction
+                    print("The matched dictionary is:")
+                    print(start)
+                    start["dep_p"]=start["start_time"]+prediction
+                    t_stop=match_trip(start["trip_id"],leg["stop"]["id"])
+                    prediction=get_prediction(int(midnight.timestamp())+start["start_time"],t_stop["duration"],leg["route"],leg["direction"], t_stop["progr_number"])
+                    t_stop["duration_p"]=prediction
+                    t_stop["dep_p"]=start["start_time"]+prediction
+                    
+                    #correct the values of the results of the directions parser
+                    bus_travel=connection["steps"][connection["db_index"][j]]
+                    bus_travel["duration"]=t_stop["duration_p"]-start["duration_p"]
+                    bus_travel["transit"]["arr"]["time"]=int(midnight.timestamp())+t_stop["dep_p"]
+                    bus_travel["transit"]["dep"]["time"]=int(midnight.timestamp())+start["dep_p"]
+                    bus_travel["transit"]["source"]="TFI HOOLIGANS"
+                    bus_travel["transit"]["arr"]["delta"]=t_stop["dep_p"]-t_stop["dep_time"]
+                    bus_travel["transit"]["dep"]["delta"]=start["dep_p"]-start["dep_time"]
 
-                
-                #modify start time if the current bus ride is the first on the connection
-                if j==0:
-                    connection["start"]["time"]=start["dep_p"]-prior_travel
-                
-                #check if there are more dublin bus journeys on this connection
-                if j<(len(model_input[i])-1):
-                    #add the delta of predicted arrival and scheduled arrival to the start of the next bus journey
-                    if model_input[i][j+1]!=None:
-                        p_delta=t_stop["dep_p"]-t_stop["dep_time"]
-                        model_input[i][j+1]["start"]["time"]+=p_delta
-                        model_input[i][j+1]["stop"]["time"]+=p_delta
-                #if the current is the last journey, modify the final time
-                else:
-                    later_travel = 0  # time it takes to get from final bus stop to destination
-                    for k in range(connection["db_index"][j]+1, len(connection["steps"])):
-                        later_travel += connection["steps"][k]["duration"]
-                    connection["end"]["time"] = t_stop["dep_p"]+later_travel
-                    connection["duration"] = connection["end"]["time"] - \
-                        connection["start"]["time"]
+                    
+                    #modify start time if the current bus ride is the first on the connection
+                    if j==0:
+                        connection["start"]["time"]=start["dep_p"]-prior_travel
+                    
+                    #check if there are more dublin bus journeys on this connection
+                    if j<(len(model_input[i])-1):
+                        #add the delta of predicted arrival and scheduled arrival to the start of the next bus journey
+                        if model_input[i][j+1]!=None:
+                            p_delta=t_stop["dep_p"]-t_stop["dep_time"]
+                            model_input[i][j+1]["start"]["time"]+=p_delta
+                            model_input[i][j+1]["stop"]["time"]+=p_delta
+                    #if the current is the last journey, modify the final time
+                    else:
+                        later_travel = 0  # time it takes to get from final bus stop to destination
+                        for k in range(connection["db_index"][j]+1, len(connection["steps"])):
+                            later_travel += connection["steps"][k]["duration"]
+                        connection["end"]["time"] = t_stop["dep_p"]+later_travel
+                        connection["duration"] = connection["end"]["time"] - \
+                            connection["start"]["time"]
+                except:
+                    continue
         return res
 
 
@@ -508,12 +511,14 @@ def directions_parser(directions, time):
                     "source": "GOOGLE"
                 }
 
+                #db_index helps to quickly find dublin bus journeys in the response
                 if transit["operator"] in ["Dublin Bus", "Go-Ahead"]:
                     if transit["operator"] == "Dublin Bus":
                         db_index.append(index)
                     transit["route"] = step["transit_details"]["line"]["short_name"]
                 if transit["operator"] == "Luas":
                     transit["route"] = step["transit_details"]["line"]["name"]
+                #transit_index helps to quickly find any transit journey in the response
                 transit_index.append(index)
                 polyline = []
                 polyline.append(step["polyline"]["points"])
@@ -563,6 +568,7 @@ def build_tree():
         build_stops_dict()
 
     stops = []
+    #coords holds the coordinates of all stops in a format that is compatible with KD trees (np array)
     coords = np.empty([0, 2])
     for stop in StopsModel.query.all():
         stops.append({
