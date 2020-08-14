@@ -45,7 +45,7 @@ class PythonOrgSearch(unittest.TestCase):
         # As a user I want to see real time information for a stop so that I don’t miss or don’t wait too long for a bus.  
         driver = self.driver
         driver.get('localhost:3000');
-        time.sleep(500)
+        time.sleep(5)
         RealTime_mode = driver.find_element(By.XPATH, '//*[@id="rc-tabs-0-tab-realTime"]')
         RealTime_mode.click()
         print("Test ok - Real Time")
