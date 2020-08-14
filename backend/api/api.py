@@ -372,6 +372,9 @@ class Directions(Resource):
                     continue
                 t_start = find_trip(
                     leg["start"]["time"], leg["start"]["id"], leg["route"], leg["direction"])
+                print(f"Logs for Bus journey{i,j}.")
+                print("Suitable start trips according to the schedule are:")
+                print(t_start)
                 if len(t_start) == 0:
                     print("Error: Couldn't find a bus with the following parameters:")
                     print(leg["start"]["time"], leg["start"]
@@ -384,16 +387,17 @@ class Directions(Resource):
                 while(True):
                     curr = t_start[index]
                     prediction = get_prediction(int(midnight.timestamp())+curr["start_time"],curr["duration"], curr["route_id"], curr["direction"], curr["progr_number"])
-                    # TODO replace the time with what's specified in the request
                     if int(midnight.timestamp())+curr["start_time"]+prediction < leg["start"]["time"]:
                         break
                     index += 1
                     if index == len(t_start):
                         break
+                print(f"The index of the bus that fits the start time according to our prediction is: {max(0,index-1)}.")
                 start=t_start[max(0,index-1)]
                 start["duration_p"]=prediction
+                print("The matched dictionary is:")
+                print(start)
                 start["dep_p"]=start["start_time"]+prediction
-
                 t_stop=match_trip(start["trip_id"],leg["stop"]["id"])
                 prediction=get_prediction(int(midnight.timestamp())+start["start_time"],t_stop["duration"],leg["route"],leg["direction"], t_stop["progr_number"])
                 t_stop["duration_p"]=prediction
