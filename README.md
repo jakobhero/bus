@@ -8,9 +8,9 @@
 
 ## General info
 
-This project involves analysing historic Dublin Bus data and weather data in order to create dynamic travel time estimates. Based on data analysis of historic Dublin Bus data, a system which when presented with any bus route, departure time, the day of the week, current weather condition, produces an accurate estimate of travel time for the complete route and sections of the route.
+The problem we aim to address with this project is providing accurate travel time estimates for Dublin Bus journeys. Therefore the aim of this project is to analyse historic Dublin Bus and weather data in order to create dynamic travel time estimates. Based on the data analysis, a system which when presented with any start and end point, departure time, and weather condition is created that will produce an accurate estimate of travel time for the complete route and sections of the route.
 
-This project also involves providing an easy to use and powerful interface for users to request travel time estimates using buses based on the models provided by our backend. Along with travel time estimates; complementary features such as Real Time Information, Favourites etc are provided.
+This project also involves providing an easy to use and powerful interface for users to request travel time estimates. Our main goal for this interface is for its design to be as user focused as possible and for it to provide many complementary features.
 
 ## Technologies
 
@@ -22,25 +22,21 @@ Project is created with:
   - React-google-maps/api
   - Ant Design
   - Material - UI
+- Backend
+  - Python 3.7+
+  - PostgreSQL
 
 ## Setup
 
-To run this project, install it locally using npm:
+To run this project, Fork or Clone this repository 'git clone https://github.com/jakobhero/bus.git'
 
-1. Fork or Clone this repository 'git clone https://github.com/jakobhero/bus.git'
-1. Install Node 12.16.2
-1. Enter the `web` directory and run `npm install`.
-1. Start the client app by running `npm start`, and wait for the app to start up. (`Starting the development server...` is not the final line).
-1. Finally, navigate to [localhost:3000](http://localhost:3000) in your browser - you should see a styled page.
+- [Backend](backend/README.md)
+- [Frontend](web/README.md)
 
 ## Deployment
 
 The webapp is currently deployed at https://ipa-003.ucd.ie/.
 The webserver uses is Nginx, which is used is conjunction with gunicorn to run the backend server.
-
-##### Note:
-
-Https is a requirement for user location functionality and caching is enabled for 1 year.
 
 ## Demo
 
