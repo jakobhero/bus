@@ -1,0 +1,585 @@
+{
+    "connections": [
+        {
+            "distance": 4739,
+            "duration": 1849,
+            "db_index": [
+                1
+            ],
+            "transit_index": [
+                1,
+                3
+            ],
+            "steps": [
+                {
+                    "distance": 109,
+                    "duration": 77,
+                    "start": {
+                        "lat": 53.3486857,
+                        "lng": -6.282002599999999
+                    },
+                    "stop": {
+                        "lat": 53.3477145,
+                        "lng": -6.2822356
+                    },
+                    "mode": "WALKING",
+                    "html_instructions": "Walk to Blackhall Place, stop 1715",
+                    "polyline": [
+                        "itrdIn}ie@TDp@FH@b@H`@F\\HLB"
+                    ],
+                    "directions": [
+                        "Head <b>south</b> on <b>Blackhall Pl</b>/<wbr/><b>R804</b>/<wbr/><b>R805</b> toward <b>Oxmantown Ln</b><div style=\"font-size:0.9em\">Destination will be on the left</div>"
+                    ]
+                },
+                {
+                    "distance": 1858,
+                    "duration": 999,
+                    "start": {
+                        "lat": 53.34770409999999,
+                        "lng": -6.2821238
+                    },
+                    "stop": {
+                        "lat": 53.3465812,
+                        "lng": -6.2581256
+                    },
+                    "mode": "TRANSIT",
+                    "html_instructions": "Bus towards UCD",
+                    "polyline": [
+                        "cnrdIf~ie@CXfDx@B_@j@wKfAgJLeA\\yCXsC?CDi@Ba@N_CFcAF}@Dq@HmA?GDcADaBB}@?k@@a@?Y?wAEmBCm@AWCe@IiA?CKwA?IEs@Ee@OqBAWC]M_BOuBC[EkBCsAQwEGy@Ew@?MCq@IqAGo@QoAQuACMCQm@iEc@}CAEOgAIc@e@wCQaAQ}@AQIe@NEHIFCz@]JGJERGJGLOJOVe@NW?AKU"
+                    ],
+                    "transit": {
+                        "dep": {
+                            "name": "Blackhall Place, stop 1715",
+                            "time": 1597426678,
+                            "delta": 374
+                        },
+                        "arr": {
+                            "name": "D'Olier Street",
+                            "time": 1597427677,
+                            "delta": 740
+                        },
+                        "headsign": "UCD",
+                        "type": "BUS",
+                        "operator": "Dublin Bus",
+                        "source": "TFI HOOLIGANS",
+                        "route": "39a"
+                    }
+                },
+                {
+                    "distance": 380,
+                    "duration": 298,
+                    "start": {
+                        "lat": 53.3465171,
+                        "lng": -6.2582432
+                    },
+                    "stop": {
+                        "lat": 53.3474515,
+                        "lng": -6.2542274
+                    },
+                    "mode": "WALKING",
+                    "html_instructions": "Walk to Tara St",
+                    "polyline": [
+                        "wfrdI~hee@?@OVWd@KNMNKFSF",
+                        "yirdInlee@QyA_@mCEWC]E]QwAIyACoA@eA?s@@_ABoA@{@?M"
+                    ],
+                    "directions": [
+                        "Head <b>northwest</b> on <b>D'Olier Street</b> toward <b>Aston Quay</b>/<wbr/><b>R105</b>/<wbr/><b>R148</b>",
+                        "Turn <b>right</b> onto <b>Burgh Quay</b>/<wbr/><b>R105</b>/<wbr/><b>R138</b><div style=\"font-size:0.9em\">Continue to follow R105</div><div style=\"font-size:0.9em\">Destination will be on the right</div>"
+                    ]
+                },
+                {
+                    "distance": 2311,
+                    "duration": 420,
+                    "start": {
+                        "lat": 53.34711739999999,
+                        "lng": -6.2542285
+                    },
+                    "stop": {
+                        "lat": 53.33379739999999,
+                        "lng": -6.2286454
+                    },
+                    "mode": "TRANSIT",
+                    "html_instructions": "Train towards Greystones",
+                    "polyline": [
+                        "ojrdI|ode@BLNINMTOh@g@NQHIX_@^i@^g@JOFIHIDGNSHIRWRURUPSLOd@k@V[h@m@V[RUNSFMX_@LUN[Vo@FMNc@@CLg@J]R_AF[BIf@mDLw@Lw@?Af@eDd@gDFa@Hk@^kBVuAReALi@FSDSDOPy@Pq@TeAJa@BEVgAHYd@eBd@eBLc@Lc@J[J]V{@L]Xy@dA{Cf@yAZy@hAiD@AHUNc@Na@LWXq@Re@DKHYPa@DMJULYVq@b@eAb@cA^y@DId@aAj@kAJQRa@Xg@DIb@w@`@o@HOZi@d@u@HMZe@LSd@s@^g@\\e@`CgDbAyAhD_Fv@qABECI"
+                    ],
+                    "transit": {
+                        "dep": {
+                            "name": "Tara St",
+                            "time": 1597428060
+                        },
+                        "arr": {
+                            "name": "Lansdowne Road",
+                            "time": 1597428480
+                        },
+                        "headsign": "Greystones",
+                        "type": "HEAVY_RAIL",
+                        "operator": "Irish Rail",
+                        "source": "GOOGLE"
+                    }
+                },
+                {
+                    "distance": 81,
+                    "duration": 55,
+                    "start": {
+                        "lat": 53.3340769,
+                        "lng": -6.2292201
+                    },
+                    "stop": {
+                        "lat": 53.3341694,
+                        "lng": -6.2280089
+                    },
+                    "mode": "WALKING",
+                    "html_instructions": "Walk to Lansdowne Rd, Dublin 4, Ireland",
+                    "polyline": [
+                        "_yodIrs_e@?OAK?OAS?QC{@A]C_@AQAS"
+                    ],
+                    "directions": [
+                        "Head <b>east</b> on <b>Lansdowne Rd</b><div style=\"font-size:0.9em\">Destination will be on the left</div>"
+                    ]
+                }
+            ],
+            "start": {
+                "address": "Blackhall Pl, Northside, Dublin, Ireland",
+                "location": {
+                    "lat": 53.3486857,
+                    "lng": -6.282002599999999
+                },
+                "time": 67001
+            },
+            "end": {
+                "address": "Lansdowne Rd, Dublin 4, Ireland",
+                "location": {
+                    "lat": 53.3341694,
+                    "lng": -6.2280089
+                },
+                "time": 68850
+            }
+        },
+        {
+            "distance": 5626,
+            "duration": 2083,
+            "db_index": [],
+            "transit_index": [
+                1,
+                3
+            ],
+            "steps": [
+                {
+                    "distance": 443,
+                    "duration": 321,
+                    "start": {
+                        "lat": 53.3486857,
+                        "lng": -6.282002599999999
+                    },
+                    "stop": {
+                        "lat": 53.3470233,
+                        "lng": -6.277794999999999
+                    },
+                    "mode": "WALKING",
+                    "html_instructions": "Walk to Smithfield",
+                    "polyline": [
+                        "itrdIn}ie@H{AB]JsCNaD",
+                        "_srdI~oie@rATdAL",
+                        "enrdIbqie@H}BFcC@K@G?]@u@",
+                        "mmrdIxeie@|@JRDD@HB",
+                        "kjrdIpfie@?SB]Jy@"
+                    ],
+                    "directions": [
+                        "Head <b>east</b> on <b>Blackhall St</b> toward <b>Paul St</b>",
+                        "Turn <b>right</b> onto <b>Queen St</b>/<wbr/><b>R804</b>/<wbr/><b>R805</b>",
+                        "Turn <b>left</b> onto <b>Haymarket</b>",
+                        "Turn <b>right</b> onto <b>Smithfield</b>",
+                        "Turn <b>left</b> onto <b>Phoenix St N</b><div style=\"font-size:0.9em\">Destination will be on the left</div>"
+                    ]
+                },
+                {
+                    "distance": 1847,
+                    "duration": 548,
+                    "start": {
+                        "lat": 53.3470962,
+                        "lng": -6.2777904
+                    },
+                    "stop": {
+                        "lat": 53.3500855,
+                        "lng": -6.251450699999999
+                    },
+                    "mode": "TRANSIT",
+                    "html_instructions": "Tram towards The Point",
+                    "polyline": [
+                        "kjrdIdcie@KABc@BsA@i@?cI?Q?QB]F_ALwAFu@Bg@FeAJsB@_@?Y?[AUS{C[}FUiD]yECk@C_ACi@Gk@Gq@C_@CYQ{BOmBw@oJEy@]_GKkBi@eKCi@Es@GcAW}COoBk@aGk@uFCOCQEOCMI[GWa@aCCYCU?OC{@Cg@ASCQCKIKOKcAi@IGGKCGCGCS?O?K@M@O?ELu@D[BB"
+                    ],
+                    "transit": {
+                        "dep": {
+                            "name": "Smithfield",
+                            "time": 1597426775
+                        },
+                        "arr": {
+                            "name": "Bus\u00e1ras Luas Stop",
+                            "time": 1597427323
+                        },
+                        "headsign": "The Point",
+                        "type": "TRAM",
+                        "operator": "Luas",
+                        "source": "GOOGLE",
+                        "route": "Red Line"
+                    }
+                },
+                {
+                    "distance": 246,
+                    "duration": 182,
+                    "start": {
+                        "lat": 53.3500149,
+                        "lng": -6.2515081
+                    },
+                    "stop": {
+                        "lat": 53.3515264,
+                        "lng": -6.2496782
+                    },
+                    "mode": "WALKING",
+                    "html_instructions": "Walk to Connolly Station",
+                    "polyline": [
+                        "q|rdI|~ce@ZiB",
+                        "u{rdIr{ce@MIIGm@_@QKICyAs@u@_@ICGCCCe@Sa@W",
+                        "_fsdIdtce@AU"
+                    ],
+                    "directions": [
+                        "Head <b>southeast</b> on <b>Store St</b> toward <b>Amiens St</b>/<wbr/><b>R105</b>",
+                        "Turn <b>left</b> onto <b>Amiens St</b>/<wbr/><b>R105</b><div style=\"font-size:0.9em\">Destination will be on the right</div>",
+                        "Take entrance <span class=\"location\">Main Entrance</span>"
+                    ]
+                },
+                {
+                    "distance": 3009,
+                    "duration": 600,
+                    "start": {
+                        "lat": 53.3515264,
+                        "lng": -6.2496782
+                    },
+                    "stop": {
+                        "lat": 53.33379739999999,
+                        "lng": -6.2286454
+                    },
+                    "mode": "TRANSIT",
+                    "html_instructions": "Train towards Greystones",
+                    "polyline": [
+                        "afsdInsce@cA~AFPN\\DJV|@Th@Vj@Pb@n@xARh@jAjCHRP^P^N\\NT^f@^f@^d@HHJLVRb@V`@TXHTHXFXDF@F?D@V@D@J?NA@?RAZALARC\\GXGBCVKHCRIVONINMTOh@g@NQHIX_@^i@^g@JOFIHIDGNSHIRWRURUPSLOd@k@V[h@m@V[RUNSFMX_@LUN[Vo@FMNc@@CLg@J]R_AF[BIf@mDLw@Lw@?Af@eDd@gDFa@Hk@^kBVuAReALi@FSDSDOPy@Pq@TeAJa@BEVgAHYd@eBd@eBLc@Lc@J[J]V{@L]Xy@dA{Cf@yAZy@hAiD@AHUNc@Na@LWXq@Re@DKHYPa@DMJULYVq@b@eAb@cA^y@DId@aAj@kAJQRa@Xg@DIb@w@`@o@HOZi@d@u@HMZe@LSd@s@^g@\\e@`CgDbAyAhD_Fv@qABECI"
+                    ],
+                    "transit": {
+                        "dep": {
+                            "name": "Connolly Station",
+                            "time": 1597427880
+                        },
+                        "arr": {
+                            "name": "Lansdowne Road",
+                            "time": 1597428480
+                        },
+                        "headsign": "Greystones",
+                        "type": "HEAVY_RAIL",
+                        "operator": "Irish Rail",
+                        "source": "GOOGLE"
+                    }
+                },
+                {
+                    "distance": 81,
+                    "duration": 55,
+                    "start": {
+                        "lat": 53.3340769,
+                        "lng": -6.2292201
+                    },
+                    "stop": {
+                        "lat": 53.3341694,
+                        "lng": -6.2280089
+                    },
+                    "mode": "WALKING",
+                    "html_instructions": "Walk to Lansdowne Rd, Dublin 4, Ireland",
+                    "polyline": [
+                        "_yodIrs_e@?OAK?OAS?QC{@A]C_@AQAS"
+                    ],
+                    "directions": [
+                        "Head <b>east</b> on <b>Lansdowne Rd</b><div style=\"font-size:0.9em\">Destination will be on the left</div>"
+                    ]
+                }
+            ],
+            "start": {
+                "address": "Blackhall Pl, Northside, Dublin, Ireland",
+                "location": {
+                    "lat": 53.3486857,
+                    "lng": -6.282002599999999
+                },
+                "time": 1597426453
+            },
+            "end": {
+                "address": "Lansdowne Rd, Dublin 4, Ireland",
+                "location": {
+                    "lat": 53.3341694,
+                    "lng": -6.2280089
+                },
+                "time": 1597428536
+            }
+        },
+        {
+            "distance": 5373,
+            "duration": 2755,
+            "db_index": [
+                1
+            ],
+            "transit_index": [
+                1
+            ],
+            "steps": [
+                {
+                    "distance": 109,
+                    "duration": 77,
+                    "start": {
+                        "lat": 53.3486857,
+                        "lng": -6.282002599999999
+                    },
+                    "stop": {
+                        "lat": 53.3477145,
+                        "lng": -6.2822356
+                    },
+                    "mode": "WALKING",
+                    "html_instructions": "Walk to Blackhall Place, stop 1715",
+                    "polyline": [
+                        "itrdIn}ie@TDp@FH@b@H`@F\\HLB"
+                    ],
+                    "directions": [
+                        "Head <b>south</b> on <b>Blackhall Pl</b>/<wbr/><b>R804</b>/<wbr/><b>R805</b> toward <b>Oxmantown Ln</b><div style=\"font-size:0.9em\">Destination will be on the left</div>"
+                    ]
+                },
+                {
+                    "distance": 4052,
+                    "duration": 1786,
+                    "start": {
+                        "lat": 53.34770409999999,
+                        "lng": -6.2821238
+                    },
+                    "stop": {
+                        "lat": 53.3336717,
+                        "lng": -6.244462
+                    },
+                    "mode": "TRANSIT",
+                    "html_instructions": "Bus towards UCD",
+                    "polyline": [
+                        "cnrdIf~ie@CXfDx@B_@j@wKfAgJLeA\\yCXsC?CDi@Ba@N_CFcAF}@Dq@HmA?GDcADaBB}@?k@@a@?Y?wAEmBCm@AWCe@IiA?CKwA?IEs@Ee@OqBAWC]M_BOuBC[EkBCsAQwEGy@Ew@?MCq@IqAGo@QoAQuACMCQm@iEc@}CAEOgAIc@e@wCQaAQ}@AQIe@NEHIFCz@]JGJERGJGLOJOVe@NW?Ah@}@P[HQPY\\i@FIDCBA@?B?B?D@B@DDDF@FHRBL@JFZNp@Lh@Lh@HJTn@^t@PV\\ZLJHFFBXPH?ROROLGJEPEJAJAr@BV@X@@?DABCDCBCDEBEFMFe@TaCD[@MBS?ED[FYBGDKHs@N{@BW@APkA@GBSXwBDa@h@cE\\NjBz@hClAb@R~At@h@X\\NZPx@h@JFlA~@^}BTqAF_@F[N}@Lo@T{AXaBBOf@qC?CDWJ}@LaABSNkADi@@MF]DWLe@@Ex@gD\\sAZeAJe@R_@Xi@JUFKDM@AJQNWfAqBb@y@FKd@{@JQZg@PUf@o@LQtAaBTWJMZQDGf@u@rAkCEI"
+                    ],
+                    "transit": {
+                        "dep": {
+                            "name": "Blackhall Place, stop 1715",
+                            "time": 1597426678,
+                            "delta": 374
+                        },
+                        "arr": {
+                            "name": "Dublin City South, Upper Baggot Street",
+                            "time": 1597428464,
+                            "delta": 983
+                        },
+                        "headsign": "UCD",
+                        "type": "BUS",
+                        "operator": "Dublin Bus",
+                        "source": "TFI HOOLIGANS",
+                        "route": "39a"
+                    }
+                },
+                {
+                    "distance": 1212,
+                    "duration": 892,
+                    "start": {
+                        "lat": 53.3336406,
+                        "lng": -6.244514199999999
+                    },
+                    "stop": {
+                        "lat": 53.3341694,
+                        "lng": -6.2280089
+                    },
+                    "mode": "WALKING",
+                    "html_instructions": "Walk to Lansdowne Rd, Dublin 4, Ireland",
+                    "polyline": [
+                        "gvodIdsbe@@AHUh@eBb@cBBKPw@`@}ALk@?IHm@Fa@HmAJyBBw@Dg@RoDFoAN{CFkAFmAF}@@URqDHgA?G?MAKCOEMCIAGEGCGIK",
+                        "wmodI`z`e@YN",
+                        "qnodIpz`e@c@wACIsAwDGSk@iBy@cCc@sAKe@Is@WgHGuBAWAQAU?KCy@AK?OAS?QC{@A]C_@AQAS"
+                    ],
+                    "directions": [
+                        "Head <b>southeast</b> on <b>Baggot Street Upper</b>/<wbr/><b>R816</b> toward <b>Waterloo Rd</b><div style=\"font-size:0.9em\">Continue to follow R816</div>",
+                        "Turn <b>left</b> onto <b>Northumberland Rd</b>/<wbr/><b>R118</b>",
+                        "Turn <b>right</b> onto <b>Lansdowne Rd</b><div style=\"font-size:0.9em\">Destination will be on the left</div>"
+                    ]
+                }
+            ],
+            "start": {
+                "address": "Blackhall Pl, Northside, Dublin, Ireland",
+                "location": {
+                    "lat": 53.3486857,
+                    "lng": -6.282002599999999
+                },
+                "time": 67001
+            },
+            "end": {
+                "address": "Lansdowne Rd, Dublin 4, Ireland",
+                "location": {
+                    "lat": 53.3341694,
+                    "lng": -6.2280089
+                },
+                "time": 69756
+            }
+        },
+        {
+            "distance": 4739,
+            "duration": 1435,
+            "db_index": [
+                1
+            ],
+            "transit_index": [
+                1,
+                3
+            ],
+            "steps": [
+                {
+                    "distance": 109,
+                    "duration": 77,
+                    "start": {
+                        "lat": 53.3486857,
+                        "lng": -6.282002599999999
+                    },
+                    "stop": {
+                        "lat": 53.3477145,
+                        "lng": -6.2822356
+                    },
+                    "mode": "WALKING",
+                    "html_instructions": "Walk to Blackhall Place, stop 1715",
+                    "polyline": [
+                        "itrdIn}ie@TDp@FH@b@H`@F\\HLB"
+                    ],
+                    "directions": [
+                        "Head <b>south</b> on <b>Blackhall Pl</b>/<wbr/><b>R804</b>/<wbr/><b>R805</b> toward <b>Oxmantown Ln</b><div style=\"font-size:0.9em\">Destination will be on the left</div>"
+                    ]
+                },
+                {
+                    "distance": 1858,
+                    "duration": 525,
+                    "start": {
+                        "lat": 53.34770409999999,
+                        "lng": -6.2821238
+                    },
+                    "stop": {
+                        "lat": 53.3465812,
+                        "lng": -6.2581256
+                    },
+                    "mode": "TRANSIT",
+                    "html_instructions": "Bus towards Burlington Road",
+                    "polyline": [
+                        "cnrdIf~ie@CXfDx@B_@j@wKfAgJLeA\\yCXsC?CDi@Ba@N_CFcAF}@Dq@HmA?GDcADaBB}@?k@@a@?Y?wAEmBCm@AWCe@IiA?CKwA?IEs@Ee@OqBAWC]M_BOuBC[EkBCsAQwEGy@Ew@?MCq@IqAGo@QoAQuACMCQm@iEc@}CAEOgAIc@e@wCQaAQ}@AQIe@NEHIFCz@]JGJERGJGLOJOVe@NW?AKU"
+                    ],
+                    "transit": {
+                        "dep": {
+                            "name": "Blackhall Place, stop 1715",
+                            "time": 1597427885,
+                            "delta": 771
+                        },
+                        "arr": {
+                            "name": "D'Olier Street",
+                            "time": 1597428410,
+                            "delta": 739
+                        },
+                        "headsign": "Burlington Road",
+                        "type": "BUS",
+                        "operator": "Dublin Bus",
+                        "source": "TFI HOOLIGANS",
+                        "route": "39"
+                    }
+                },
+                {
+                    "distance": 380,
+                    "duration": 298,
+                    "start": {
+                        "lat": 53.3465171,
+                        "lng": -6.2582432
+                    },
+                    "stop": {
+                        "lat": 53.3474515,
+                        "lng": -6.2542274
+                    },
+                    "mode": "WALKING",
+                    "html_instructions": "Walk to Tara St",
+                    "polyline": [
+                        "wfrdI~hee@?@OVWd@KNMNKFSF",
+                        "yirdInlee@QyA_@mCEWC]E]QwAIyACoA@eA?s@@_ABoA@{@?M"
+                    ],
+                    "directions": [
+                        "Head <b>northwest</b> on <b>D'Olier Street</b> toward <b>Aston Quay</b>/<wbr/><b>R105</b>/<wbr/><b>R148</b>",
+                        "Turn <b>right</b> onto <b>Burgh Quay</b>/<wbr/><b>R105</b>/<wbr/><b>R138</b><div style=\"font-size:0.9em\">Continue to follow R105</div><div style=\"font-size:0.9em\">Destination will be on the right</div>"
+                    ]
+                },
+                {
+                    "distance": 2311,
+                    "duration": 480,
+                    "start": {
+                        "lat": 53.34711739999999,
+                        "lng": -6.2542285
+                    },
+                    "stop": {
+                        "lat": 53.33379739999999,
+                        "lng": -6.2286454
+                    },
+                    "mode": "TRANSIT",
+                    "html_instructions": "Train towards Bray Daly",
+                    "polyline": [
+                        "ojrdI|ode@BLNINMTOh@g@NQHIX_@^i@^g@JOFIHIDGNSHIRWRURUPSLOd@k@V[h@m@V[RUNSFMX_@LUN[Vo@FMNc@@CLg@J]R_AF[BIf@mDLw@Lw@?Af@eDd@gDFa@Hk@^kBVuAReALi@FSDSDOPy@Pq@TeAJa@BEVgAHYd@eBd@eBLc@Lc@J[J]V{@L]Xy@dA{Cf@yAZy@hAiD@AHUNc@Na@LWXq@Re@DKHYPa@DMJULYVq@b@eAb@cA^y@DId@aAj@kAJQRa@Xg@DIb@w@`@o@HOZi@d@u@HMZe@LSd@s@^g@\\e@`CgDbAyAhD_Fv@qABECI"
+                    ],
+                    "transit": {
+                        "dep": {
+                            "name": "Tara St",
+                            "time": 1597428660
+                        },
+                        "arr": {
+                            "name": "Lansdowne Road",
+                            "time": 1597429140
+                        },
+                        "headsign": "Bray Daly",
+                        "type": "HEAVY_RAIL",
+                        "operator": "Irish Rail",
+                        "source": "GOOGLE"
+                    }
+                },
+                {
+                    "distance": 81,
+                    "duration": 55,
+                    "start": {
+                        "lat": 53.3340769,
+                        "lng": -6.2292201
+                    },
+                    "stop": {
+                        "lat": 53.3341694,
+                        "lng": -6.2280089
+                    },
+                    "mode": "WALKING",
+                    "html_instructions": "Walk to Lansdowne Rd, Dublin 4, Ireland",
+                    "polyline": [
+                        "_yodIrs_e@?OAK?OAS?QC{@A]C_@AQAS"
+                    ],
+                    "directions": [
+                        "Head <b>east</b> on <b>Lansdowne Rd</b><div style=\"font-size:0.9em\">Destination will be on the left</div>"
+                    ]
+                }
+            ],
+            "start": {
+                "address": "Blackhall Pl, Northside, Dublin, Ireland",
+                "location": {
+                    "lat": 53.3486857,
+                    "lng": -6.282002599999999
+                },
+                "time": 68208
+            },
+            "end": {
+                "address": "Lansdowne Rd, Dublin 4, Ireland",
+                "location": {
+                    "lat": 53.3341694,
+                    "lng": -6.2280089
+                },
+                "time": 69643
+            }
+        }
+    ],
+    "status": "OK"
+}

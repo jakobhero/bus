@@ -1,3 +1,5 @@
+# Frontend
+
 ## Table of contents
 
 - [General info](#general-info)
@@ -8,7 +10,7 @@
 
 ## General info
 
-This project involves providing an easy to use and powerful interface for users to request travel time estimates using Dublin bus based on the models provided by our backend. Along with travel time estimates, complimentary features such as Real Time Information, Favourites etc are provided.
+This project involves providing an easy to use and powerful interface for users to request travel time estimates using Dublin bus based on the models provided by our backend. Along with travel time estimates, complementary features such as Real Time Information and Favourites are provided.
 
 ## Technologies
 

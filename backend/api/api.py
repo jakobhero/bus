@@ -89,7 +89,8 @@ class NearestNeighbor(Resource):
             return {"stops": stops, "status": "OK"}
 
         k = 20  # set default value for nearest neighbors to be returned
-
+        
+        print(frontend_params["k"])
         if frontend_params["k"] != None:
             k = frontend_params["k"]
 
