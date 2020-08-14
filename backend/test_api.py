@@ -122,11 +122,14 @@ class test_api(unittest.TestCase):
         self.assertEqual(response.json["status"],"OK")
 
         #check that the first dublin bus journey on each connection is not before the specified time
+        print("\nTest that the journey times line up with the specified time")
+        print("")
         for connection in response.json["connections"]:
             if len(connection["db_index"])==0:
                 continue
             transit_info=connection["steps"][connection["db_index"][0]]["transit"]
             db_journey_start=transit_info["dep"]["time"]
+            print(f"tomorrow: {tomorrow}\njourney start: {db_journey_start}\n")
             self.assertTrue(tomorrow<=db_journey_start)
 
 if __name__=='__main__':

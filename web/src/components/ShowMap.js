@@ -41,7 +41,7 @@ const centre = {
   lat: 53.35014,
   lng: -6.266155,
 };
-function Locate({ panTo, getStopsByCoords }) {
+function Locate({ panTo, getStopsByCoords, setOherRouteBool }) {
   return (
     <Tooltip className="tooltip" title="Current Location">
       <div
@@ -58,6 +58,7 @@ function Locate({ panTo, getStopsByCoords }) {
                 position.coords.longitude,
                 true
               );
+              setOherRouteBool(false);
             },
             () => null,
             {
@@ -213,7 +214,11 @@ function ShowMap({
         onLoad={onMapLoad}
         onClick={onMapClick}
       >
-        <Locate panTo={panTo} getStopsByCoords={getStopsByCoords} />
+        <Locate
+          panTo={panTo}
+          getStopsByCoords={getStopsByCoords}
+          setOherRouteBool={setOherRouteBool}
+        />
         <Tooltip className="tooltip" title="Tourist mode">
           <div className="switch1 mapUI">
             <Switch
@@ -227,12 +232,14 @@ function ShowMap({
         </Tooltip>
 
         {otherRoute.length > 1 && (
-          <div className="switch2 mapUI">
-            <Replay
-              className="Switch"
-              onClick={() => setOherRouteBool(!otherRouteBool)}
-            ></Replay>
-          </div>
+          <Tooltip className="tooltip" title="Change Direction">
+            <div className="switch2 mapUI">
+              <Replay
+                className="Switch"
+                onClick={() => setOherRouteBool(!otherRouteBool)}
+              ></Replay>
+            </div>
+          </Tooltip>
         )}
         {source && otherRoute.length < 1 && stops.length > 1 && (
           // only appears if location is entered not for stops or route

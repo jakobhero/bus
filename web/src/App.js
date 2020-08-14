@@ -1,5 +1,6 @@
 import "./css/App.css";
 import React, { useState } from "react";
+import Page from "react-page-loading";
 import SearchForm from "./components/searchForm";
 
 import ShowMap from "./components/ShowMap";
@@ -17,7 +18,9 @@ import DirectionsBusIcon from "@material-ui/icons/DirectionsBus";
 import Tooltip from "@material-ui/core/Tooltip";
 import { findPoly } from "./components/polylines.js";
 import { getStopNames, getStopNums } from "./components/cookies";
-import { TwitterTimelineEmbed } from "react-twitter-embed";
+// import { TwitterTimelineEmbed } from "react-twitter-embed";
+
+import CookieConsent from "react-cookie-consent";
 
 const { TabPane } = Tabs;
 
@@ -141,6 +144,8 @@ const App = () => {
             setTripTimes(res.data.connections);
             setDirections(findPoly(res.data.connections[0]));
             setBusIndex(res.data.connections[0].transit_index);
+          } else {
+            setTripTimes(null);
           }
         })
         .catch(console.log);
@@ -181,91 +186,112 @@ const App = () => {
   };
   return (
     <div className="App">
-      <SearchForm
-        handleSubmitApp={handleSubmitApp}
-        searchValD={searchValD}
-        searchValS={searchValS}
-        setSearchValD={setSearchValD}
-        setSearchValS={setSearchValS}
-      />
-      <Tabs
-        style={{ margin: 10 }}
-        onChange={changeActiveTab}
-        activeKey={activeKey}
-        size={"large"}
-        animated={{ inkBar: true, tabPane: true }}
-      >
-        <TabPane tab="Map" key="map">
-          <ShowMap
-            source={state.source}
-            destination={state.destination}
-            stops={stopsForMap}
-            setRealTime={setRealTime}
-            otherRoute={otherRoute}
-            directions={directions}
-            busIndex={busIndex}
-            getStopsByCoords={getStopsByCoords}
-            favStops={favStops}
-            setFavStops={setFavStops}
-          />
-        </TabPane>
-
-        <TabPane tab="Connections" key="connections">
-          {tripTimes.length > 0 && (
-            <Tooltip title="Sort by arrival time">
-              <Button style={{ margin: 20 }} type="submit" onClick={sortTime}>
-                <AccessTimeIcon></AccessTimeIcon>
-                <SortIcon></SortIcon>
-              </Button>
-            </Tooltip>
-          )}
-          {tripTimes.length > 0 && (
-            <Tooltip title="Sort by bus changes">
-              <Button style={{ margin: 20 }} type="submit" onClick={sortSteps}>
-                <DirectionsBusIcon></DirectionsBusIcon>
-                <SortIcon></SortIcon>
-              </Button>
-            </Tooltip>
-          )}
-          <AllRoutes
-            tripTimes={tripTimes}
-            setDirections={setDirections}
-            index={index}
-            setIndex={setIndex}
-          ></AllRoutes>
-        </TabPane>
-
-        <TabPane tab="Favourites" key="favourites">
-          <Favourites
-            setRealTime={setRealTime}
-            clearMap={clearMap}
-            setStopsForMap={setStopsForMap}
-            setActiveKey={setActiveKey}
-            setState={setState}
-            state={state}
-            favStops={favStops}
-            setFavStops={setFavStops}
-            setSearchVal={setSearchValS}
-          />
-        </TabPane>
-        <TabPane tab="Real Time" key="realTime">
-          <RealTimeInfo
-            realTimeData={realTimeData}
-            favStops={favStops}
-            setFavStops={setFavStops}
-            setRealTime={setRealTime}
-          ></RealTimeInfo>
-        </TabPane>
-        <TabPane tab="News" key="news">
-          <div className="news">
-            <TwitterTimelineEmbed
-              sourceType="profile"
-              screenName="dublinbusnews"
-              options={{ height: "30vw" }}
+      <Page loader={"bar"} color={"#1b55db"} size={15}>
+        <CookieConsent
+          location="top"
+          buttonText="Accept"
+          cookieName="acceptCookies"
+          style={{ background: "#2B373B" }}
+          buttonStyle={{
+            color: "#4e503b",
+            fontSize: "13px",
+            fontWeight: "bold",
+          }}
+          overlay
+          sameSite={"strict"}
+        >
+          This website uses cookies to enhance the user experience.{" "}
+        </CookieConsent>
+        <SearchForm
+          handleSubmitApp={handleSubmitApp}
+          searchValD={searchValD}
+          searchValS={searchValS}
+          setSearchValD={setSearchValD}
+          setSearchValS={setSearchValS}
+        />
+        <Tabs
+          style={{ margin: 10 }}
+          onChange={changeActiveTab}
+          activeKey={activeKey}
+          size={"large"}
+          animated={{ inkBar: true, tabPane: true }}
+        >
+          <TabPane tab="Map" key="map">
+            <ShowMap
+              source={state.source}
+              destination={state.destination}
+              stops={stopsForMap}
+              setRealTime={setRealTime}
+              otherRoute={otherRoute}
+              directions={directions}
+              busIndex={busIndex}
+              getStopsByCoords={getStopsByCoords}
+              favStops={favStops}
+              setFavStops={setFavStops}
             />
-          </div>
-        </TabPane>
-      </Tabs>
+          </TabPane>
+
+          <TabPane tab="Connections" key="connections">
+            {tripTimes !== null && tripTimes.length > 0 && (
+              <Tooltip title="Sort by arrival time">
+                <Button style={{ margin: 20 }} type="submit" onClick={sortTime}>
+                  <AccessTimeIcon></AccessTimeIcon>
+                  <SortIcon></SortIcon>
+                </Button>
+              </Tooltip>
+            )}
+            {tripTimes !== null && tripTimes.length > 0 && (
+              <Tooltip title="Sort by bus changes">
+                <Button
+                  style={{ margin: 20 }}
+                  type="submit"
+                  onClick={sortSteps}
+                >
+                  <DirectionsBusIcon></DirectionsBusIcon>
+                  <SortIcon></SortIcon>
+                </Button>
+              </Tooltip>
+            )}
+            <AllRoutes
+              tripTimes={tripTimes}
+              setDirections={setDirections}
+              index={index}
+              setIndex={setIndex}
+            ></AllRoutes>
+          </TabPane>
+
+          <TabPane tab="Favourites" key="favourites">
+            <Favourites
+              setRealTime={setRealTime}
+              clearMap={clearMap}
+              setStopsForMap={setStopsForMap}
+              setActiveKey={setActiveKey}
+              setState={setState}
+              state={state}
+              favStops={favStops}
+              setFavStops={setFavStops}
+              setSearchVal={setSearchValS}
+            />
+          </TabPane>
+          <TabPane tab="Real Time" key="realTime">
+            <RealTimeInfo
+              realTimeData={realTimeData}
+              favStops={favStops}
+              setFavStops={setFavStops}
+              setRealTime={setRealTime}
+            ></RealTimeInfo>
+          </TabPane>
+          {/* <TabPane tab="News" key="news">
+            <div className="news">
+              <TwitterTimelineEmbed
+                sourceType="profile"
+                screenName="dublinbusnews"
+                options={{ height: "30vw" }}
+              />
+            </div>
+          </TabPane> */}
+        </Tabs>
+      </Page>
     </div>
   );
 };

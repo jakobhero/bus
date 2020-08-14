@@ -22,11 +22,13 @@
     "react": "^16.13.1",
     "react-app-rewired": "^2.1.6",
     "react-border-wrapper": "^1.0.3",
+    "react-cookie-consent": "^5.1.3",
     "react-datepicker": "^3.0.0",
     "react-dom": "^16.13.1",
     "react-html-parser": "^2.0.2",
     "react-icons-weather": "^1.0.5",
     "react-open-weather": "0.5.2",
+    "react-page-loading": "^1.0.2",
     "react-scripts": "3.4.1",
     "react-switch": "^5.0.1",
     "react-test-renderer": "^16.13.1",
@@ -56,8 +58,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://127.0.0.1:5000",
-  "devDependencies": {
-    "riteway": "^6.1.2"
-  }
+  "proxy": "http://127.0.0.1:5000"
 }

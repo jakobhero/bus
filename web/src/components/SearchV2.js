@@ -70,7 +70,7 @@ const PlacesAutocomplete = ({
           route_data.push({ route_id: route_id, key: key });
           count += 1;
         }
-        if (count > 2) {
+        if (count > 4) {
           break;
         }
       }

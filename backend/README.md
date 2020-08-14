@@ -1,7 +1,7 @@
 # Backend
 The Backend of the Dublin Bus App is built in Flask and serves as an API to provide data pertinent to the stops, routes, real-time information and direction information of Dublin Bus rides.
 ## Prerequisites
-Before you begin, the following requirements must be met:
+Before you can start with the installation of the Dublin Bus Backend, the following requirements must be met:
 * You have installed the latest version of Python
 * You have installed the latest version of PostgreSQL
 ## Installing The Dublin Bus Backend
