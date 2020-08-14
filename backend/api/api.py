@@ -364,7 +364,8 @@ class Directions(Resource):
             prior_travel = 0  # time it takes to get to first bus
             for j in range(connection["db_index"][0]):
                 prior_travel += connection["steps"][j]["duration"]
-            model_input[i][0]["start"]["time"] = params["departure_time"]+prior_travel
+            if model_input[i][0]!=None:
+                model_input[i][0]["start"]["time"] = params["departure_time"]+prior_travel
 
             for j in range(len(model_input[i])):
                 leg = model_input[i][j]
