@@ -3,7 +3,7 @@
 - [General info](#general-info)
 - [Technologies](#technologies)
 - [Setup](#setup)
-- [Features](#features)
+- [Deployment](#deployment)
 - [Demo](#demo)
 
 ## General info
