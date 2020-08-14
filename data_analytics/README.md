@@ -1,0 +1,7 @@
+# Data Analytics
+This folder contains workbooks, scripts, and data created to master the analytical aspects of the Dublin Bus Web Application. **It is not a necessary component to run the web application and serves solely documentation and research purposes.** The directory is organized as follows:
+* `/data_understanding` features various workbooks that explore a multitude of aspects of Dublin Bus data
+* `/kdtrees` explores the data structure KD Tree (aka k-dimensional tree) and its potential application for a Dublin Bus nearest neighbor stop search
+* `/modelling` contains the documentation of our CRISP-DM process in the form of various notebooks. `modelling/1.0` represents an early prototype that we abandoned during Sprint 3 due to a critical shortcoming of the approach. `modelling/2.0` is the updated process, which was used for deployment
+* `/modelling_db` contains scripts to clean the data used for modelling, create a a relational schema and populate a PostgreSQL database with it. **As confidential data was used for the modelling, we neither provide the original data, nor instructions how to install the modelling database**
+* `/requirement_elicitation` contains notebooks and data that were generated during our requirement elicitation process. We scraped the Google Play store for customer reviews on popular European transport apps to analyze the users' priorities for a mobility app
