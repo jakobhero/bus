@@ -1,0 +1,224 @@
+{
+    "rows": {
+        "start": 135076,
+        "route_filter": 0,
+        "nan_filter": -256,
+        "negative_dur": 0,
+        "outliers": -1772,
+        "end": 133048
+    },
+    "scr": 0.7988929889298892,
+    "stats": {
+        "1": {
+            "dur_mean": 0.0,
+            "dur_std": 0.0
+        },
+        "2": {
+            "dur_mean": 166.80243644067798,
+            "dur_std": 76.50529933181271
+        },
+        "3": {
+            "dur_mean": 218.96102863202546,
+            "dur_std": 87.88418295208396
+        },
+        "4": {
+            "dur_mean": 339.99285714285713,
+            "dur_std": 111.51671142480241
+        },
+        "5": {
+            "dur_mean": 371.2371625198518,
+            "dur_std": 115.99998117277546
+        },
+        "6": {
+            "dur_mean": 413.3023009785771,
+            "dur_std": 118.89208288616607
+        },
+        "7": {
+            "dur_mean": 451.09614368726886,
+            "dur_std": 130.77400010206242
+        },
+        "8": {
+            "dur_mean": 564.0959048877147,
+            "dur_std": 156.87390590449738
+        },
+        "9": {
+            "dur_mean": 668.5395607303519,
+            "dur_std": 167.3970159266638
+        },
+        "10": {
+            "dur_mean": 747.7215323645971,
+            "dur_std": 183.57575189756076
+        },
+        "11": {
+            "dur_mean": 790.094319682959,
+            "dur_std": 193.50541325709017
+        },
+        "12": {
+            "dur_mean": 833.797147385103,
+            "dur_std": 199.06256805282706
+        },
+        "13": {
+            "dur_mean": 959.0385631273111,
+            "dur_std": 211.90313854239466
+        },
+        "14": {
+            "dur_mean": 1161.8485648300891,
+            "dur_std": 234.1836234006589
+        },
+        "15": {
+            "dur_mean": 1177.4543053354464,
+            "dur_std": 241.13655837983512
+        },
+        "16": {
+            "dur_mean": 1234.449168207024,
+            "dur_std": 246.980659380442
+        },
+        "17": {
+            "dur_mean": 1276.3754951148667,
+            "dur_std": 250.88835616642515
+        },
+        "18": {
+            "dur_mean": 1397.4218172213418,
+            "dur_std": 268.63902174615043
+        },
+        "19": {
+            "dur_mean": 1440.0221870047544,
+            "dur_std": 275.1436699939245
+        },
+        "20": {
+            "dur_mean": 1533.3063919704173,
+            "dur_std": 284.780337413526
+        },
+        "21": {
+            "dur_mean": 1570.1890678637444,
+            "dur_std": 287.6497789078028
+        },
+        "22": {
+            "dur_mean": 1610.664906258252,
+            "dur_std": 293.7638572856491
+        },
+        "23": {
+            "dur_mean": 1673.024551214361,
+            "dur_std": 308.14847497462785
+        },
+        "24": {
+            "dur_mean": 1744.5636219640971,
+            "dur_std": 316.75559691537165
+        },
+        "25": {
+            "dur_mean": 1827.3980942297512,
+            "dur_std": 323.7839052206355
+        },
+        "26": {
+            "dur_mean": 1910.2604552673372,
+            "dur_std": 333.84688572184297
+        },
+        "27": {
+            "dur_mean": 1964.141154661017,
+            "dur_std": 338.3851427564391
+        },
+        "28": {
+            "dur_mean": 2011.0312334568555,
+            "dur_std": 342.93771749643713
+        },
+        "29": {
+            "dur_mean": 2032.114927344782,
+            "dur_std": 345.2388512767955
+        },
+        "30": {
+            "dur_mean": 2089.112813738441,
+            "dur_std": 352.67653011117943
+        },
+        "31": {
+            "dur_mean": 2155.106000528681,
+            "dur_std": 362.8500660201641
+        },
+        "32": {
+            "dur_mean": 2173.4430346286017,
+            "dur_std": 364.3126702452256
+        },
+        "33": {
+            "dur_mean": 2195.7118688871265,
+            "dur_std": 366.06619844484715
+        },
+        "34": {
+            "dur_mean": 2243.5576414595453,
+            "dur_std": 369.12293344962467
+        },
+        "35": {
+            "dur_mean": 2289.324966974901,
+            "dur_std": 392.01295858205094
+        },
+        "36": {
+            "dur_mean": 2410.5618654822333,
+            "dur_std": 480.4660826704721
+        }
+    },
+    "modelling": {
+        "XGBoost": {
+            "time": 34.408735036849976,
+            "r_2": 0.9618507721213779,
+            "mse": 21416.510474177627,
+            "rmse": 146.3438091419573,
+            "mae": 100.32023949917995
+        },
+        "Benchmark": {
+            "r_2": 0.907330901103164,
+            "mse": 52023.300012025735,
+            "rmse": 228.0861679541873,
+            "mae": 160.38611628885815
+        }
+    },
+    "features": [
+        "weather_description_broken clouds",
+        "weather_description_drizzle",
+        "weather_description_few clouds",
+        "weather_description_fog",
+        "weather_description_light intensity drizzle",
+        "weather_description_light intensity drizzle rain",
+        "weather_description_light intensity shower rain",
+        "weather_description_light rain",
+        "weather_description_light shower snow",
+        "weather_description_light snow",
+        "weather_description_mist",
+        "weather_description_moderate rain",
+        "weather_description_overcast clouds",
+        "weather_description_proximity shower rain",
+        "weather_description_scattered clouds",
+        "weather_description_sky is clear",
+        "weather_description_smoke",
+        "weekday_1",
+        "weekday_2",
+        "weekday_3",
+        "weekday_4",
+        "weekday_5",
+        "weekday_6",
+        "month_2",
+        "month_3",
+        "month_4",
+        "month_5",
+        "month_6",
+        "month_7",
+        "month_8",
+        "month_9",
+        "month_10",
+        "month_11",
+        "month_12",
+        "hour_9",
+        "hour_10",
+        "hour_11",
+        "hour_12",
+        "hour_13",
+        "hour_14",
+        "hour_15",
+        "hour_16",
+        "hour_17",
+        "hour_18",
+        "hour_19",
+        "hour_20",
+        "hour_21",
+        "holiday_1",
+        "progr_number",
+        "dur_s"
+    ]
+}
