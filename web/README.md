@@ -27,6 +27,7 @@ To run this project, install it locally using npm:
 1. Fork or Clone this repository 'git clone https://github.com/jakobhero/bus.git'
 1. Install Node 12.16.2
 1. Enter the `web` directory and run `npm install`.
+1. Enter your GOOGLE API Key in index.html and your OWM API Key twice in ShowMap.js
 1. Start the client app by running `npm start`, and wait for the app to start up. (`Starting the development server...` is not the final line).
 1. Finally, navigate to [localhost:3000](http://localhost:3000) in your browser - you should see a styled page.
 

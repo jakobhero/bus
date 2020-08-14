@@ -33,6 +33,11 @@ To run this project, Fork or Clone this repository 'git clone https://github.com
 - [Backend](backend/README.md)
 - [Frontend](web/README.md)
 
+## Architecture
+
+<img src="./testing/Architecture.png" alt="Demo Gif"
+	title="Demo"/>
+
 ## Deployment
 
 The webapp is currently deployed at https://ipa-003.ucd.ie/.

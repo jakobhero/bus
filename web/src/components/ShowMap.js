@@ -90,7 +90,6 @@ function ShowMap({
   const [touristModeBool, setTouristModeBool] = React.useState(false);
   const [otherRouteBool, setOherRouteBool] = React.useState(false);
   const [visible, setVisible] = useState(false);
-
   const mapRef = React.useRef();
   const onMapLoad = React.useCallback((map) => {
     mapRef.current = map;
@@ -291,7 +290,7 @@ function ShowMap({
               >
                 <ReactWeather
                   forecast="today"
-                  apikey="7ad07aac9b0943040a4abdd2c23dfc4e"
+                  apikey={API_KEY}
                   type="geo"
                   lat={address.lat.toString()}
                   lon={address.lng.toString()}
@@ -338,7 +337,6 @@ function ShowMap({
                       padding: "3px",
                       margin: "3px",
                       marginBottom: "3px",
-                      // borderColor: "#1b55db",
                       backgroundColor: "#fea100",
                     }}
                   >
@@ -378,7 +376,7 @@ function ShowMap({
               >
                 <ReactWeather
                   forecast="today"
-                  apikey="7ad07aac9b0943040a4abdd2c23dfc4e"
+                  apikey={API_KEY}
                   type="geo"
                   lat={selected.lat.toString()}
                   lon={selected.lng.toString()}
