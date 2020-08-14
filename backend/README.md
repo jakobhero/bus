@@ -18,24 +18,8 @@ OWM_KEY=your_key
 * Enable the Google Directions API for you key
 * Create the PostgreSQL database with the specifications provided in db/database.ini
 * Move into the database folder with `cd db`
-* Make sure you have the following datasets stored in backend/db/data:
-	* `rt_leavetimes_DB_2018.txt` and `rt_trips_DB_2018.txt` from Dublin Bus. **Note that these two datasets are only authorized for confidential use to members of this project and shall not leave the UCD server.**
-	* `2018_historic_weather.csv` from the [Open Weather Map API](https://home.openweathermap.org/history_bulks/new) (a bulk for the metric weather data for Dublin, Ireland from 1 Jan 2018 to 31 Dec 2018 costs $10 as of 7 Aug 2020)
-	* The latest GTFS data from [Transitfeeds](http://transitfeeds.com/p/transport-for-ireland/782/latest/download). Make sure the datasets `trips.txt`, `routes.txt`, `stops.txt` and `stop_times.txt` exist in the path `gtfs/raw`
-* Populate the database with the data used for Modelling with these commands (note that the leavetimes and trips data is confidential data authorized to be used on the UCD server of the contributors only and thus cannot be shared with the general public):
-```
-python clean_leavetimes.py
-python clean_trips.py
-python clean_weather.py
-python create.py
-python populate.py
-```
-* Populate the database with the data used for Static Timetables with these commands:
-```
-python gtfs_clean.py
-python gtfs_create.py
-python gtfs_populate.py
-```
+* Create the DB Schema by running `python app_db_create.py`
+* Populate the DB by running `python app_db_populate.py`
 * Move back into the backend root with `cd ..`
 * Run `python app.py` to start up the backend
 ## Using the Dublin Bus Backend

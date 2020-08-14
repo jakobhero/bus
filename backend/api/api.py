@@ -1,17 +1,9 @@
-import json
-import requests
-import datetime
-import numpy as np
-import pandas as pd
-import time
-import pickle
-import holidays
+import json, requests, datetime, numpy as np, pandas as pd, time, pickle, holidays
 from sklearn.neighbors import KDTree
 from flask_restful import Resource, Api, reqparse
 from sqlalchemy.types import String
-from statistics import mode, mean
-
 from sqlalchemy import cast
+from statistics import mode, mean
 from .models import Stops as StopsModel, StopsRoute as SRModel, GTFS_trips, GTFS_times, GTFS_stops, Weather, db
 from .config import Config
 
@@ -27,106 +19,6 @@ weather = None
 forecast = None
 routes = {}
 holidays_IE = holidays.Ireland()
-
-
-class TestWeather(Resource):
-    """will replace current behaviour when the prediction is not in the 48 hour forecast window of OWM."""
-
-    def get(self):
-        parser = reqparse.RequestParser()
-        parser.add_argument('time', type=int)
-        frontend_params = parser.parse_args()
-        if frontend_params["time"] == None:
-            time = datetime.datetime.now().timestamp()
-        else:
-            time = frontend_params["time"]
-        dt = datetime.datetime.fromtimestamp(time)
-        weather_descriptions = []
-        humidities = []
-        for row in Weather.query.filter(Weather.month == dt.month, Weather.hour == dt.hour).all():
-            weather_descriptions.append(row.weather_description)
-            humidities.append(row.humidity)
-        return mode[weather_descriptions], round(mean(humidities))
-
-
-class Test(Resource):
-    def get(self):
-        with open('api/debugging2/1597271823.json', 'r') as data:
-            directions = json.load(data)
-
-        with open('api/debugging3/1597271823.json', 'r') as data:
-            model_info = json.load(data)
-
-        for i in range(len(model_info)):
-            for j in range(len(model_info[i])):
-                leg = model_info[i][j]
-                t_start = find_trip(
-                    leg["start"]["time"], leg["start"]["id"], leg["route"], leg["direction"])
-                if len(t_start) == 0:
-                    print("Error: Couldn't find a bus with the following parameters:")
-                    print(leg["start"]["time"], leg["start"]
-                          ["id"], leg["route"], leg["direction"])
-                    break
-                index = 0
-                midnight = datetime.datetime.fromtimestamp(leg["start"]["time"]).replace(
-                    hour=0, minute=0, second=0, microsecond=0)
-                # find the latest bus that doesn't depart prior to our set time
-                while(True):
-                    curr = t_start[index]
-                    print(curr)
-                    print(f'Model Parameters start:{[curr["start_time"],int(midnight.timestamp())+curr["start_time"],curr["duration"], curr["route_id"], curr["direction"]]}')
-                    prediction = get_prediction(int(midnight.timestamp())+curr["start_time"], curr["duration"], curr["route_id"], curr["direction"], curr["progr_number"])
-                    print(f"Prediction for 0-Start stop: {prediction}.")
-                    if int(midnight.timestamp())+curr["start_time"]+prediction < leg["start"]["time"]:
-                        break
-                    index += 1
-                    if index == len(t_start):
-                        break
-                start=t_start[max(0,index-1)]
-                start["duration_p"]=prediction
-                start["dep_p"]=start["start_time"]+prediction
-                
-                t_stop=match_trip(start["trip_id"],leg["stop"]["id"])
-                print(f'Model Parameters stop:{[start["start_time"],int(midnight.timestamp())+start["start_time"],t_stop["duration"],leg["route"],leg["direction"]]}')
-                prediction=get_prediction(int(midnight.timestamp())+start["start_time"],t_stop["duration"],leg["route"],leg["direction"], t_stop["progr_number"])
-                print(f"Prediction for 0-Stop stop: {prediction}.")
-                t_stop["duration_p"]=prediction
-                t_stop["dep_p"]=start["start_time"]+prediction
-                
-                #correct the values of directions
-                connection=directions["connections"][i]
-                bus_travel=connection["steps"][connection["db_index"][j]]
-                bus_travel["duration"]=t_stop["duration_p"]-start["duration_p"]
-                bus_travel["transit"]["arr"]["time"]=midnight.timestamp()+t_stop["dep_p"]
-                bus_travel["transit"]["dep"]["time"]=midnight.timestamp()+start["dep_p"]
-                bus_travel["transit"]["source"]="TFI HOOLIGANS"
-                bus_travel["transit"]["arr"]["delta"]=t_stop["dep_p"]-t_stop["dep_time"]
-                bus_travel["transit"]["dep"]["delta"]=start["dep_p"]-start["dep_time"]
-
-                
-                #modify start time if the current bus ride is the first on the connection
-                if j==0:
-                    prior_travel=0 #time it takes to get to first bus
-                    for k in range(connection["db_index"][j]):
-                        prior_travel += connection["steps"][k]["duration"]
-                    connection["start"]["time"] = start["dep_p"]-prior_travel
-
-                # check if there are more dublin bus journeys on this connection
-                if j < len(model_info[i])-1:
-                    # add the delta of predicted arrival and scheduled arrival to the start of the next bus journey
-                    p_delta = t_stop["dep_p"]-t_stop["dep_time"]
-                    model_info[i][j+1]["start"]["time"] += p_delta
-                    model_info[i][j+1]["stop"]["time"] += p_delta
-                # if the current is the last journey, modify the final time
-                else:
-                    later_travel = 0  # time it takes to get from final bus stop to destination
-                    for k in range(connection["db_index"][j]+1, len(connection["steps"])):
-                        later_travel += connection["steps"][k]["duration"]
-                    connection["end"]["time"] = t_stop["dep_p"]+later_travel
-                    connection["duration"] = connection["end"]["time"] - \
-                        connection["start"]["time"]
-        return directions
-
 
 class Stops(Resource):
     """API Endpoint for Dublin Bus stop information. Returns all stops that contain specified substring in either
@@ -319,20 +211,8 @@ class Directions(Resource):
         req = requests.get(url, params=params)
         res = req.json()
 
-        # NEXT BLOCK ONLY FOR DEVELOPMENT PURPOSES
-        # store results for debugging purposes
-        now = str(int(datetime.datetime.now().timestamp()))
-        with open('api/debugging/'+now+'.json', 'w') as outfile:
-            json.dump(res, outfile, sort_keys=True, indent=8)
-
         # process response
         res = directions_parser(res, params["departure_time"])
-
-        # NEXT BLOCK ONLY FOR DEVELOPMENT PURPOSES
-        # store results for debugging purposes
-        now = str(int(datetime.datetime.now().timestamp()))
-        with open('api/debugging2/'+now+'.json', 'w') as outfile:
-            json.dump(res, outfile, sort_keys=True, indent=8)
 
         if res["status"] != "OK":
             return res
@@ -346,11 +226,6 @@ class Directions(Resource):
                 route = connection["steps"][index]
                 model_input_row.append(find_model(route))
             model_input.append(model_input_row)
-
-        # NEXT BLOCK ONLY FOR DEVELOPMENT PURPOSES
-        # store results for debugging purposes
-        with open('api/debugging3/'+now+'.json', 'w') as outfile:
-            json.dump(model_input, outfile, sort_keys=True, indent=8)
 
         for i in range(len(model_input)):
             #if no model was matched, move on to next prediction
@@ -374,9 +249,6 @@ class Directions(Resource):
                         continue
                     t_start = find_trip(
                         leg["start"]["time"], leg["start"]["id"], leg["route"], leg["direction"])
-                    print(f"Logs for Bus journey{i,j}.")
-                    print("Suitable start trips according to the schedule are:")
-                    print(t_start)
                     if len(t_start) == 0:
                         print("Error: Couldn't find a bus with the following parameters:")
                         print(leg["start"]["time"], leg["start"]
@@ -394,11 +266,8 @@ class Directions(Resource):
                         index += 1
                         if index == len(t_start):
                             break
-                    print(f"The index of the bus that fits the start time according to our prediction is: {max(0,index-1)}.")
                     start=t_start[max(0,index-1)]
                     start["duration_p"]=prediction
-                    print("The matched dictionary is:")
-                    print(start)
                     start["dep_p"]=start["start_time"]+prediction
                     t_stop=match_trip(start["trip_id"],leg["stop"]["id"])
                     prediction=get_prediction(int(midnight.timestamp())+start["start_time"],t_stop["duration"],leg["route"],leg["direction"], t_stop["progr_number"])
@@ -587,7 +456,6 @@ def nearest_stations(target, stops, k):
     # calculate the nearest neighbours
     if tree == None:
         build_tree()
-        # print("KD-Tree is built.")
     nearest_dist, nearest_ind = tree.query(target, k=k)
 
     # populate response with rows from stops specified by calculated indices
@@ -623,7 +491,6 @@ def find_model(route):
             start_info = start_stations[start]["lines"][route]
             for stop in stop_index:
                 stop_info = stop_stations[stop]["lines"][route]
-                #print(f"Trying to match route {route}:{start_info} with {route}:{stop_info}.")
                 for direction in start_info:
                     if direction in stop_info:
                         if start_info[direction] < stop_info[direction]:
@@ -640,7 +507,6 @@ def find_model(route):
 
     if stops == None:
         build_tree()
-        # print("KD-Tree is built.")
 
     # set the coordinates of the starting and destination stop as suggested by google
     google_start = [[route["start"]["lat"], route["start"]["lng"]]]
@@ -653,8 +519,6 @@ def find_model(route):
     # check which stations in the closest stops match up with google route
     start_index = route_matcher(start_stations, google_route)
     stop_index = route_matcher(stop_stations, google_route)
-    #print(f"Detected options in start are {start_index}.")
-    #print(f"Detected options in start are {stop_index}.")
     # find a connection of the google route between two stops in the station data
     response = route_verifier(
         start_stations, stop_stations, start_index, stop_index, google_route)
@@ -707,19 +571,19 @@ def match_trip(trip_id, stop_id):
     }
 
 def get_prediction(datetimestamp, duration, route_id, direction, progr_number):
+    """transforms data from input into format expected by predictive model, passes it to model and returns prediction."""
     global features
     global models
     global holidays_IE
 
+    #features dict is used to what feature each model expects.
     if features == None:
         load_features()
-        # print("Features are loaded.")
 
     # load model
     model_name = route_id+"_"+str(direction)
     if model_name not in models:
         load_model(model_name)
-        # print(f"Model for route {route_id}, direction {direction} loaded.")
     model=models[model_name]
 
     #retrieve feature sets for line and direction
@@ -748,7 +612,7 @@ def load_features():
     """function loads global variable features, which holds the feature sets for each model, from json file."""
     global features
 
-    with open('features.json') as json_file:
+    with open('preds/features.json') as json_file:
         features = json.load(json_file)
 
 
@@ -761,6 +625,7 @@ def load_model(model_name):
 
 
 def build_stops_dict():
+    """function populates global variable stops_dict with information on the routes served by each stop."""
     global stops_dict
     stops_dict = {}
     for stop in SRModel.query.all():
@@ -818,7 +683,6 @@ def get_weather(timestamp):
         # update the weather if the cached value is older than 15 mins.
         if weather == None or abs(now-weather["dt"]) >= (15*60):
             update_weather()
-            # print("Weather is loaded/updated.")
         # return tuple of (humidity,weather description)
         return weather["main"]["humidity"], weather["weather"][0]["description"]
 
@@ -839,7 +703,6 @@ def get_weather(timestamp):
         fc_row = forecast[hour_delta]
         # return tuple of (humidity,weather description)
         return fc_row["humidity"], fc_row["weather"][0]["description"]
-    # TO DO: weather handling if it isn't near current time or within 48 hour forecast window
     else:
         # return mode of weather description and mean of humidity of historical weather data in the same month and same time of day
         dt = datetime.datetime.fromtimestamp(timestamp)
@@ -882,13 +745,10 @@ def model_input_create(humidity,dur_s,progr_number,weather_description,weekday,m
     response[feature_set.index("progr_number")]=progr_number
     return response   
 
+#define endpoints
 api.add_resource(Directions, '/api/directions', endpoint='direction')
 api.add_resource(NearestNeighbor, '/api/nearestneighbor',
                  endpoint='nearestneighbor')
 api.add_resource(realTime, '/api/realtime', endpoint='realtime')
 api.add_resource(routeInfo, '/api/routeinfo', endpoint='routeinfo')
 api.add_resource(Stops, '/api/stops', endpoint='stops')
-
-
-api.add_resource(Test, '/test', endpoint='test')
-api.add_resource(TestWeather, '/testweather', endpoint='testweather')
